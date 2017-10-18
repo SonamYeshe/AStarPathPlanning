@@ -22,31 +22,10 @@ GNU General Public License v3.0
 Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
 
 ## Dependencies
-This path planning component receives the real-world model including the obstacle information from the environment setup component and deliver the smallest cost path to the trajectory planning component to generate the velocity and acceleration information, and finally deliver them to the motion control component to realize the movement. 
+1. eclipse CDT IDE (4.7).
 
 ## Backlog google spreadsheet
 https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1j3ytA1mPyvJpSjNRXjjnHxmMqRgYix9c8MPspWwJh78/edit?usp=sharing
-
-## Standard install via command-line
-```
-git clone --recursive https://github.com/SonamYeshe/AStarPathPlanning.git
-cd <path to repository>
-mkdir build
-cd build
-cmake ..
-make
-Run tests: ./test/cpp-test
-Run program: ./app/shell-app
-```
-
-## Building for code coverage 
-```
-sudo apt-get install lcov
-cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
-make
-make code_coverage
-```
-This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
 
 ## Working with Eclipse IDE ##
 

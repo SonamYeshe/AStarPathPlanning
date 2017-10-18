@@ -1,6 +1,6 @@
 /**
- *  @file       test.cpp
- *  @brief      sample test for the dummy
+ *  @file       AStarPathPlanningTest.cpp
+ *  @brief      unit test for the A* algorithm
  *  @details
  *  @author     Jiawei Ge(SonamYeshe)
  *  @copyright  GNU Public License 2017 Jiawei Ge
