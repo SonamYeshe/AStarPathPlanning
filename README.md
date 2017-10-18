@@ -114,6 +114,10 @@ perspetive view (or Windows->Perspective->Open Perspective->C/C++).
 
     ../cpplint.py --extensions=h,hpp,cpp $( find . -name *.h -or -name *.hpp -or -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
 
+- doxygen 
+
+    Simply run $ doxygen my_proj.conf in a new terminal under repo to update the doxygen documentation.
+
 - Google C++ Sytle
 
     To include and use Google C++ Style formatter in Eclipse
