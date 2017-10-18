@@ -1,15 +1,23 @@
-/*
- * AStarPathFinder.h
- *
- *  Created on: Oct 17, 2017
- *      Author: viki
+/**
+ *  @file main.cpp
+ *  @brief
+ *  @details
+ *  @author     Jiawei Ge(SonamYeshe)
+ *  @copyright  GNU Public License 2017 Jiawei Ge
  */
 
-#ifndef INCLUDE_ASTARPATHFINDER_H_
-#define INCLUDE_ASTARPATHFINDER_H_
+#ifndef ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_ASTARPATHFINDER_H_
+#define ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_ASTARPATHFINDER_H_
 #include <Node.h>
 #include <vector>
 #include <set>
+
+/**
+ *  @brief AStarPathFinder
+ *  @param start, goal, neighbor for the point positions
+ *  @param map is the given surroundings
+ */
+
 class AStarPathFinder {
  public:
   AStarPathFinder();
@@ -23,4 +31,4 @@ class AStarPathFinder {
   double calHeuristicCost(Node neighbor, Node goal);
 };
 
-#endif /* INCLUDE_ASTARPATHFINDER_H_ */
+#endif  // ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_ASTARPATHFINDER_H_"

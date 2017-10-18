@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['random',['random',['../classtesting_1_1internal_1_1UnitTestImpl.html#ab3b45b5eb4d583219a3602011ea44347',1,'testing::internal::UnitTestImpl::random()'],['../classtesting_1_1internal_1_1Random.html#a6e112be5e7cce00551f6383025f69460',1,'testing::internal::Random::Random()']]],
+  ['random',['Random',['../classtesting_1_1internal_1_1Random.html#a6e112be5e7cce00551f6383025f69460',1,'testing::internal::Random::Random()'],['../classtesting_1_1internal_1_1UnitTestImpl.html#ab3b45b5eb4d583219a3602011ea44347',1,'testing::internal::UnitTestImpl::random()']]],
   ['random_5fseed',['random_seed',['../classtesting_1_1UnitTest.html#a6fa3161a230329e07fc31a339b682a20',1,'testing::UnitTest::random_seed()'],['../classtesting_1_1internal_1_1UnitTestImpl.html#a8ec59a7ab3bad96bccde98ce85ffc864',1,'testing::internal::UnitTestImpl::random_seed()']]],
   ['randomize',['Randomize',['../classtesting_1_1internal_1_1MatchMatrix.html#aff1f0ae748f4a5c96117c0f27b493ac6',1,'testing::internal::MatchMatrix']]],
   ['randomseed',['RandomSeed',['../structtesting_1_1Flags.html#a695cd8b8ab44df5eaa371bacded78c05',1,'testing::Flags']]],
@@ -24,7 +24,7 @@ var searchData=
   ['registerowner',['RegisterOwner',['../classtesting_1_1internal_1_1UntypedFunctionMockerBase.html#a0cd3dd14b92c714eab690c9597f32ffd',1,'testing::internal::UntypedFunctionMockerBase']]],
   ['registerparameterizedtests',['RegisterParameterizedTests',['../classtesting_1_1internal_1_1UnitTestImpl.html#af84d2515f1a272a8783f00a3e8c0aff8',1,'testing::internal::UnitTestImpl']]],
   ['reinterpretbits',['ReinterpretBits',['../classtesting_1_1internal_1_1FloatingPoint.html#ac551f793522e54fbd8a25acb79eac5b1',1,'testing::internal::FloatingPoint']]],
-  ['release',['Release',['../classtesting_1_1TestEventListeners.html#a038c9fa1975f84d6f3d25b52bc7bccdd',1,'testing::TestEventListeners::Release()'],['../classtesting_1_1internal_1_1TestEventRepeater.html#ac77a3d127e4726e11694e4ee9cf3b793',1,'testing::internal::TestEventRepeater::Release()'],['../classtesting_1_1internal_1_1scoped__ptr.html#a7a4f3e568d81a5d8bcb5f8d6bf5130b1',1,'testing::internal::scoped_ptr::release()']]],
+  ['release',['release',['../classtesting_1_1internal_1_1scoped__ptr.html#a7a4f3e568d81a5d8bcb5f8d6bf5130b1',1,'testing::internal::scoped_ptr::release()'],['../classtesting_1_1TestEventListeners.html#a038c9fa1975f84d6f3d25b52bc7bccdd',1,'testing::TestEventListeners::Release()'],['../classtesting_1_1internal_1_1TestEventRepeater.html#ac77a3d127e4726e11694e4ee9cf3b793',1,'testing::internal::TestEventRepeater::Release()']]],
   ['removedirectoryname',['RemoveDirectoryName',['../classtesting_1_1internal_1_1FilePath.html#a2852e5a759ff2e2620c7317b8121d757',1,'testing::internal::FilePath']]],
   ['removeextension',['RemoveExtension',['../classtesting_1_1internal_1_1FilePath.html#ab2a25cc916c111597b94d006aa973c3d',1,'testing::internal::FilePath']]],
   ['removefilename',['RemoveFileName',['../classtesting_1_1internal_1_1FilePath.html#aed3abcd0b8a7f6ed1ff0e7743ef8bf1e',1,'testing::internal::FilePath']]],

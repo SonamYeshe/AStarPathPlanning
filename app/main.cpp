@@ -11,12 +11,14 @@
 #include <lib.hpp>
 #include <Node.h>
 #include <memory>
+#include <vector>
+
 int main() {
   Node start(0, 0);
   Node goal(3, 3);
 
-//std::shared_ptr<Node> start = std::make_shared<Node>(0,0);
-  // std::shared_ptr<Node> goal = std::make_shared<Node> (3,3);
+  //  std::shared_ptr<Node> start = std::make_shared<Node>(0,0);
+  //  std::shared_ptr<Node> goal = std::make_shared<Node> (3,3);
 
   std::vector<std::vector<int>> map = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0,
       0, 0 }, { 0, 0, 0, 0 } };
@@ -24,7 +26,7 @@ int main() {
   std::vector < Node > path = ASPF.findPath(start, goal, map);
 
   for (auto node : path) {
-    //std::cout << 1 << std::endl;
+    //  std::cout << 1 << std::endl;
     std::cout << node.getX() << node.getY() << std::endl;
   }
 

@@ -5,7 +5,7 @@
 \item 
 \hyperlink{classtesting_1_1gmock__matchers__test_1_1DivisibleByImpl_aab5d8d383a8cbf112fe087c4f0f3f699}{Divisible\+By\+Impl} (int a\+\_\+divider)
 \item 
-{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classtesting_1_1gmock__matchers__test_1_1DivisibleByImpl_a7f2368362416d0e527f6ac0790003d69}{Match\+And\+Explain} (const T \&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classtesting_1_1gmock__matchers__test_1_1DivisibleByImpl_a7f2368362416d0e527f6ac0790003d69}{Match\+And\+Explain} (const T \&n, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
 \item 
 void \hyperlink{classtesting_1_1gmock__matchers__test_1_1DivisibleByImpl_a6dd6430816067c5f787eb2e722c59181}{Describe\+To} (ostream $\ast$os) const 
 \item 
@@ -80,9 +80,9 @@ int \hyperlink{classtesting_1_1gmock__matchers__test_1_1DivisibleByImpl_ac1ecf78
 
 \begin{DoxyCode}
 3969                                                                         \{
-3970     *listener << \textcolor{stringliteral}{"which is "} << (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} % divider\_) << \textcolor{stringliteral}{" modulo "}
+3970     *listener << \textcolor{stringliteral}{"which is "} << (n % divider\_) << \textcolor{stringliteral}{" modulo "}
 3971               << divider\_;
-3972     \textcolor{keywordflow}{return} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} % divider\_) == 0;
+3972     \textcolor{keywordflow}{return} (n % divider\_) == 0;
 3973   \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Divisible\+By\+Impl@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Divisible\+By\+Impl}!set\+\_\+divider@{set\+\_\+divider}}

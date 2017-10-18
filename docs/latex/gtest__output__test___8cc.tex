@@ -4,8 +4,7 @@
 {\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}src/gtest-\/internal-\/inl.\+h\char`\"{}}\\*
 {\ttfamily \#include $<$stdlib.\+h$>$}\\*
-Include dependency graph for gtest\+\_\+output\+\_\+test\+\_\+.\+cc\+:
-\nopagebreak
+Include dependency graph for gtest\+\_\+output\+\_\+test\+\_\+.\+cc\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -82,9 +81,9 @@ void \hyperlink{gtest__output__test___8cc_a14e796981ca8d3c71dbd2b839c1ce784}{Try
 \item 
 \hyperlink{gtest__output__test___8cc_ad9bbf46060935b29c42d3116ddbc3566}{T\+E\+ST} (Logging\+Test, Interleaving\+Logging\+And\+Assertions)
 \item 
-void \hyperlink{gtest__output__test___8cc_a7e222b468bbde7215ce826f10993e746}{Sub\+Without\+Trace} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+void \hyperlink{gtest__output__test___8cc_a7e222b468bbde7215ce826f10993e746}{Sub\+Without\+Trace} (int n)
 \item 
-void \hyperlink{gtest__output__test___8cc_a543ee38e0824e47113bb12c3277e09ae}{Sub\+With\+Trace} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+void \hyperlink{gtest__output__test___8cc_a543ee38e0824e47113bb12c3277e09ae}{Sub\+With\+Trace} (int n)
 \item 
 \hyperlink{gtest__output__test___8cc_a82f82f6a7caa426cccf8d20113f897c0}{T\+E\+ST} (S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Obeys\+Scopes)
 \item 
@@ -301,8 +300,8 @@ int \hyperlink{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{glob
 
 \begin{DoxyCode}
 167                             \{
-168   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
-169   \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(2, \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
+168   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, n);
+169   \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(2, n);
 170 \}
 \end{DoxyCode}
 \index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!Sub\+With\+Trace@{Sub\+With\+Trace}}
@@ -315,9 +314,9 @@ int \hyperlink{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{glob
 
 \begin{DoxyCode}
 173                          \{
-174   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\hyperlink{classtesting_1_1Message}{testing::Message}() << \textcolor{stringliteral}{"n = "} << \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
+174   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\hyperlink{classtesting_1_1Message}{testing::Message}() << \textcolor{stringliteral}{"n = "} << n);
 175 
-176   \hyperlink{gtest__output__test___8cc_a7e222b468bbde7215ce826f10993e746}{SubWithoutTrace}(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
+176   \hyperlink{gtest__output__test___8cc_a7e222b468bbde7215ce826f10993e746}{SubWithoutTrace}(n);
 177 \}
 \end{DoxyCode}
 \index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
@@ -658,8 +657,8 @@ int \hyperlink{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{glob
 
 \begin{DoxyCode}
 606                                                             \{
-607   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = 0;
-608   \textcolor{keyword}{static} \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+607   \textcolor{keywordtype}{int} m = 0;
+608   \textcolor{keyword}{static} \textcolor{keywordtype}{int} n;
 609   n = 1;
 610   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{
 611     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(m, n) << \textcolor{stringliteral}{"Expected non-fatal failure."};
@@ -778,7 +777,7 @@ int \hyperlink{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{glob
 
 \begin{DoxyCode}
 685                                                                \{
-686   \textcolor{keyword}{static} \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+686   \textcolor{keyword}{static} \textcolor{keywordtype}{int} n;
 687   n = 1;
 688   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\{
 689     \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(0, n) << \textcolor{stringliteral}{"Expected fatal failure."};

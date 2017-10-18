@@ -20,7 +20,6 @@ var searchData=
   ['close_5fto_5fnegative_5fzero_5f',['close_to_negative_zero_',['../classtesting_1_1gmock__matchers__test_1_1FloatingPointTest.html#a641f5e223c25b6d6fb108b322acaa39d',1,'testing::gmock_matchers_test::FloatingPointTest']]],
   ['close_5fto_5fone_5f',['close_to_one_',['../classtesting_1_1gmock__matchers__test_1_1FloatingPointTest.html#a34c97dc5dc07ea62764de87fdd8b7764',1,'testing::gmock_matchers_test::FloatingPointTest']]],
   ['close_5fto_5fpositive_5fzero_5f',['close_to_positive_zero_',['../classtesting_1_1gmock__matchers__test_1_1FloatingPointTest.html#a750555206ab9d5959d6dc84f8a760c57',1,'testing::gmock_matchers_test::FloatingPointTest']]],
-  ['closed_5fnodes_5fmap',['closed_nodes_map',['../app_2main_8cpp.html#abac1e5763d6a9a4aabda8df7acbb01fa',1,'main.cpp']]],
   ['code',['code',['../classpump_1_1ForNode.html#afdb5f4f2a3bc772bbc6ea777dfde898e',1,'pump::ForNode']]],
   ['color_5fenv_5fvar',['COLOR_ENV_VAR',['../namespacegtest__color__test.html#aa6deaa7da27bcc115fe666abad13419c',1,'gtest_color_test']]],
   ['color_5fflag',['COLOR_FLAG',['../namespacegtest__color__test.html#af5818cea608c0551909fefbeaf0edf20',1,'gtest_color_test']]],

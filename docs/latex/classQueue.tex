@@ -69,7 +69,7 @@ E $\ast$ \hyperlink{classQueue_a434d465001c3078e999f7a89a8af84c0}{Dequeue} ()
 83                \{
 84     \textcolor{keywordflow}{if} (size\_ > 0) \{
 85       \textcolor{comment}{// 1. Deletes every node.}
-86       \hyperlink{classQueueNode}{QueueNode<E>}* \hyperlink{classnode}{node} = head\_;
+86       \hyperlink{classQueueNode}{QueueNode<E>}* node = head\_;
 87       \hyperlink{classQueueNode}{QueueNode<E>}* \hyperlink{namespacecpp_1_1ast_a39ad8261fef5e0a7c1c17c510541b66f}{next} = node->\hyperlink{classQueueNode_a8a9fdf488da06533360999ef85db56ea}{next}();
 88       \textcolor{keywordflow}{for} (; ;) \{
 89         \textcolor{keyword}{delete} node;
@@ -188,9 +188,8 @@ E $\ast$ \hyperlink{classQueue_a434d465001c3078e999f7a89a8af84c0}{Dequeue} ()
 \begin{DoxyCode}
 153                                \{
 154     \hyperlink{classQueue}{Queue}* new\_queue = \textcolor{keyword}{new} \hyperlink{classQueue_ab09891e54b51dc677ee6efb350687ae4}{Queue}();
-155     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \hyperlink{classQueueNode}{QueueNode<E>}* \hyperlink{classnode}{node} = head\_; \hyperlink{classnode}{node} != NULL; 
-      \hyperlink{classnode}{node} = \hyperlink{classnode}{node}->next\_) \{
-156       new\_queue->\hyperlink{classQueue_abaa2e7175457307bca74f5562cbdaaa9}{Enqueue}(\textcolor{keyword}{function}(\hyperlink{classnode}{node}->element()));
+155     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \hyperlink{classQueueNode}{QueueNode<E>}* node = head\_; node != NULL; node = node->next\_) \{
+156       new\_queue->\hyperlink{classQueue_abaa2e7175457307bca74f5562cbdaaa9}{Enqueue}(\textcolor{keyword}{function}(node->element()));
 157     \}
 158 
 159     \textcolor{keywordflow}{return} new\_queue;

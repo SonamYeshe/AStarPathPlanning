@@ -97,60 +97,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>unit test for the A* algorithm  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="gtest_8h_source.html">gtest/gtest.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="AStarPathFinder_8h_source.html">AStarPathFinder.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Node_8h_source.html">Node.h</a>&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for AStarPathPlanningTest.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="AStarPathPlanningTest_8cpp__incl.png" border="0" usemap="#test_2AStarPathPlanningTest_8cpp" alt=""/></div>
 <map name="test_2AStarPathPlanningTest_8cpp" id="test_2AStarPathPlanningTest_8cpp">
-<area shape="rect" id="node2" href="gtest_8h.html" title="gtest/gtest.h" alt="" coords="1067,80,1162,107"/>
-<area shape="rect" id="node6" href="gtest-internal_8h.html" title="gtest/internal/gtest\l&#45;internal.h" alt="" coords="795,497,925,539"/>
-<area shape="rect" id="node31" href="gtest-message_8h.html" title="gtest/gtest&#45;message.h" alt="" coords="1000,594,1152,621"/>
-<area shape="rect" id="node32" href="gtest-string_8h.html" title="gtest/internal/gtest\l&#45;string.h" alt="" coords="795,676,925,717"/>
-<area shape="rect" id="node35" href="gtest-death-test_8h.html" title="gtest/gtest&#45;death&#45;test.h" alt="" coords="717,237,875,263"/>
-<area shape="rect" id="node37" href="gtest-param-test_8h.html" title="gtest/gtest&#45;param&#45;test.h" alt="" coords="1826,155,1987,181"/>
-<area shape="rect" id="node42" href="gtest-printers_8h.html" title="gtest/gtest&#45;printers.h" alt="" coords="1245,415,1387,442"/>
-<area shape="rect" id="node45" href="gtest__prod_8h.html" title="gtest/gtest_prod.h" alt="" coords="2249,155,2375,181"/>
-<area shape="rect" id="node46" href="gtest-test-part_8h.html" title="gtest/gtest&#45;test&#45;part.h" alt="" coords="75,415,221,442"/>
-<area shape="rect" id="node48" href="gtest-typed-test_8h.html" title="gtest/gtest&#45;typed&#45;test.h" alt="" coords="1573,505,1731,531"/>
-<area shape="rect" id="node49" href="gtest__pred__impl_8h.html" title="gtest/gtest_pred_impl.h" alt="" coords="2399,155,2558,181"/>
-<area shape="rect" id="node7" href="gtest-port_8h.html" title="gtest/internal/gtest\l&#45;port.h" alt="" coords="1467,765,1597,807"/>
-<area shape="rect" id="node33" href="gtest-filepath_8h.html" title="gtest/internal/gtest\l&#45;filepath.h" alt="" coords="795,587,925,628"/>
-<area shape="rect" id="node34" href="gtest-type-util_8h.html" title="gtest/internal/gtest\l&#45;type&#45;util.h" alt="" coords="1429,587,1560,628"/>
-<area shape="rect" id="node20" href="gtest-port-arch_8h.html" title="gtest/internal/gtest\l&#45;port&#45;arch.h" alt="" coords="933,855,1064,896"/>
-<area shape="rect" id="node21" href="custom_2gtest-port_8h.html" title="gtest/internal/custom\l/gtest&#45;port.h" alt="" coords="1088,855,1232,896"/>
-<area shape="rect" id="node26" href="gtest-tuple_8h.html" title="gtest/internal/gtest\l&#45;tuple.h" alt="" coords="2089,855,2220,896"/>
-<area shape="rect" id="node36" href="gtest-death-test-internal_8h.html" title="gtest/internal/gtest\l&#45;death&#45;test&#45;internal.h" alt="" coords="725,408,867,449"/>
-<area shape="rect" id="node38" href="gtest-param-util_8h.html" title="gtest/internal/gtest\l&#45;param&#45;util.h" alt="" coords="1784,319,1915,360"/>
-<area shape="rect" id="node44" href="gtest-param-util-generated_8h.html" title="gtest/internal/gtest\l&#45;param&#45;util&#45;generated.h" alt="" coords="1887,229,2041,271"/>
-<area shape="rect" id="node40" href="gtest-linked__ptr_8h.html" title="gtest/internal/gtest\l&#45;linked_ptr.h" alt="" coords="2197,676,2328,717"/>
-<area shape="rect" id="node43" href="internal_2custom_2gtest-printers_8h.html" title="gtest/internal/custom\l/gtest&#45;printers.h" alt="" coords="1109,497,1253,539"/>
+<area shape="rect" id="node2" href="gtest_8h.html" title="gtest/gtest.h" alt="" coords="1445,80,1540,107"/>
+<area shape="rect" id="node48" href="AStarPathFinder_8h.html" title="AStarPathFinder.h" alt="" coords="2528,80,2657,107"/>
+<area shape="rect" id="node49" href="Node_8h.html" title="Node.h" alt="" coords="2733,155,2797,181"/>
+<area shape="rect" id="node6" href="gtest-internal_8h.html" title="gtest/internal/gtest\l&#45;internal.h" alt="" coords="1351,497,1482,539"/>
+<area shape="rect" id="node31" href="gtest-message_8h.html" title="gtest/gtest&#45;message.h" alt="" coords="649,594,801,621"/>
+<area shape="rect" id="node32" href="gtest-string_8h.html" title="gtest/internal/gtest\l&#45;string.h" alt="" coords="1334,676,1465,717"/>
+<area shape="rect" id="node35" href="gtest-death-test_8h.html" title="gtest/gtest&#45;death&#45;test.h" alt="" coords="462,237,619,263"/>
+<area shape="rect" id="node37" href="gtest-param-test_8h.html" title="gtest/gtest&#45;param&#45;test.h" alt="" coords="840,155,1001,181"/>
+<area shape="rect" id="node40" href="gtest-printers_8h.html" title="gtest/gtest&#45;printers.h" alt="" coords="1736,415,1879,442"/>
+<area shape="rect" id="node43" href="gtest__prod_8h.html" title="gtest/gtest_prod.h" alt="" coords="1556,155,1683,181"/>
+<area shape="rect" id="node44" href="gtest-test-part_8h.html" title="gtest/gtest&#45;test&#45;part.h" alt="" coords="2177,415,2323,442"/>
+<area shape="rect" id="node46" href="gtest-typed-test_8h.html" title="gtest/gtest&#45;typed&#45;test.h" alt="" coords="598,505,755,531"/>
+<area shape="rect" id="node47" href="gtest__pred__impl_8h.html" title="gtest/gtest_pred_impl.h" alt="" coords="1707,155,1865,181"/>
+<area shape="rect" id="node7" href="gtest-port_8h.html" title="gtest/internal/gtest\l&#45;port.h" alt="" coords="986,765,1117,807"/>
+<area shape="rect" id="node33" href="gtest-filepath_8h.html" title="gtest/internal/gtest\l&#45;filepath.h" alt="" coords="1334,587,1465,628"/>
+<area shape="rect" id="node34" href="gtest-type-util_8h.html" title="gtest/internal/gtest\l&#45;type&#45;util.h" alt="" coords="926,587,1057,628"/>
+<area shape="rect" id="node20" href="gtest-port-arch_8h.html" title="gtest/internal/gtest\l&#45;port&#45;arch.h" alt="" coords="694,855,825,896"/>
+<area shape="rect" id="node21" href="custom_2gtest-port_8h.html" title="gtest/internal/custom\l/gtest&#45;port.h" alt="" coords="849,855,993,896"/>
+<area shape="rect" id="node26" href="gtest-tuple_8h.html" title="gtest/internal/gtest\l&#45;tuple.h" alt="" coords="1533,855,1663,896"/>
+<area shape="rect" id="node36" href="gtest-death-test-internal_8h.html" title="gtest/internal/gtest\l&#45;death&#45;test&#45;internal.h" alt="" coords="614,408,755,449"/>
+<area shape="rect" id="node38" href="gtest-param-util_8h.html" title="gtest/internal/gtest\l&#45;param&#45;util.h" alt="" coords="1265,319,1395,360"/>
+<area shape="rect" id="node42" href="gtest-param-util-generated_8h.html" title="gtest/internal/gtest\l&#45;param&#45;util&#45;generated.h" alt="" coords="902,229,1057,271"/>
+<area shape="rect" id="node41" href="internal_2custom_2gtest-printers_8h.html" title="gtest/internal/custom\l/gtest&#45;printers.h" alt="" coords="1921,497,2065,539"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aca626e3237f15041ec99533c9d36c660"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AStarPathPlanningTest_8cpp.html#aca626e3237f15041ec99533c9d36c660">TEST</a> (<a class="el" href="lib_8hpp.html#a100d09f9a57d44745299c28c63c98745">dummy</a>, should_pass)</td></tr>
-<tr class="separator:aca626e3237f15041ec99533c9d36c660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae121b9ddd9ead7f336c788840e44b5a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AStarPathPlanningTest_8cpp.html#ae121b9ddd9ead7f336c788840e44b5a9">TEST</a> (<a class="el" href="classAStarPathFinder.html">AStarPathFinder</a>, CanFindPath)</td></tr>
+<tr class="separator:ae121b9ddd9ead7f336c788840e44b5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>unit test for the A* algorithm </p>
 <dl class="section author"><dt>Author</dt><dd>Jiawei Ge(SonamYeshe) </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>GNU Public License 2017 Jiawei Ge </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aca626e3237f15041ec99533c9d36c660"></a>
+<a class="anchor" id="ae121b9ddd9ead7f336c788840e44b5a9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">TEST </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="lib_8hpp.html#a100d09f9a57d44745299c28c63c98745">dummy</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classAStarPathFinder.html">AStarPathFinder</a>&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">should_pass&#160;</td>
+          <td class="paramtype">CanFindPath&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -160,7 +165,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                         {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="gtest_8h.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a>(1, 1);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div><div class="ttc" id="gtest_8h_html_a4159019abda84f5366acdb7604ff220a"><div class="ttname"><a href="gtest_8h.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a></div><div class="ttdeci">#define EXPECT_EQ(val1, val2)</div><div class="ttdef"><b>Definition:</b> gtest.h:1922</div></div>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                                   {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classNode.html">Node</a> start(0, 0);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <a class="code" href="classNode.html">Node</a> goal(2, 2);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  std::vector&lt;std::vector&lt;int&gt;&gt; map = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      0, 0, 0 } };</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="classAStarPathFinder.html">AStarPathFinder</a> ASPF;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  std::vector&lt;Node&gt; path = ASPF.<a class="code" href="classAStarPathFinder.html#a04a5e2e2aae800b324607ecaa0d8248a">findPath</a>(start, goal, map);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordflow">for</span> (std::size_t <a class="code" href="gtest__output__test__golden__lin_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> = 0; <a class="code" href="gtest__output__test__golden__lin_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a> != path.size(); ++<a class="code" href="gtest__output__test__golden__lin_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>) {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classNode.html">Node</a> node = path[<a class="code" href="gtest__output__test__golden__lin_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>];</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="gtest_8h.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a>(node.<a class="code" href="classNode.html#aa45b6294ee8c7aafdf5a1450f879c598">getX</a>(), <a class="code" href="gtest__output__test__golden__lin_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="gtest_8h.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a>(node.<a class="code" href="classNode.html#a81610ad138e2ac2cca79603032aaafc1">getY</a>(), <a class="code" href="gtest__output__test__golden__lin_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a>);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="ttc" id="classNode_html_a81610ad138e2ac2cca79603032aaafc1"><div class="ttname"><a href="classNode.html#a81610ad138e2ac2cca79603032aaafc1">Node::getY</a></div><div class="ttdeci">int getY() const </div><div class="ttdef"><b>Definition:</b> Node.cpp:36</div></div>
+<div class="ttc" id="classNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdoc">AStarPathFinder. </div><div class="ttdef"><b>Definition:</b> Node.h:19</div></div>
+<div class="ttc" id="classAStarPathFinder_html_a04a5e2e2aae800b324607ecaa0d8248a"><div class="ttname"><a href="classAStarPathFinder.html#a04a5e2e2aae800b324607ecaa0d8248a">AStarPathFinder::findPath</a></div><div class="ttdeci">std::vector&lt; Node &gt; findPath(Node start, Node goal, const std::vector&lt; std::vector&lt; int &gt;&gt; map)</div><div class="ttdef"><b>Definition:</b> AStarPathFinder.cpp:23</div></div>
+<div class="ttc" id="classNode_html_aa45b6294ee8c7aafdf5a1450f879c598"><div class="ttname"><a href="classNode.html#aa45b6294ee8c7aafdf5a1450f879c598">Node::getX</a></div><div class="ttdeci">int getX() const </div><div class="ttdef"><b>Definition:</b> Node.cpp:32</div></div>
+<div class="ttc" id="gtest__output__test__golden__lin_8txt_html_a7e98b8a17c0aad30ba64d47b74e2a6c1"><div class="ttname"><a href="gtest__output__test__golden__lin_8txt.html#a7e98b8a17c0aad30ba64d47b74e2a6c1">i</a></div><div class="ttdeci">i</div><div class="ttdef"><b>Definition:</b> gtest_output_test_golden_lin.txt:83</div></div>
+<div class="ttc" id="classAStarPathFinder_html"><div class="ttname"><a href="classAStarPathFinder.html">AStarPathFinder</a></div><div class="ttdoc">AStarPathFinder. </div><div class="ttdef"><b>Definition:</b> AStarPathFinder.h:21</div></div>
+<div class="ttc" id="gtest_8h_html_a4159019abda84f5366acdb7604ff220a"><div class="ttname"><a href="gtest_8h.html#a4159019abda84f5366acdb7604ff220a">EXPECT_EQ</a></div><div class="ttdeci">#define EXPECT_EQ(val1, val2)</div><div class="ttdef"><b>Definition:</b> gtest.h:1922</div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -6,6 +6,10 @@ unit test for the A$\ast$ algorithm
 
 
 {\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$A\+Star\+Path\+Finder.\+h$>$}\\*
+{\ttfamily \#include $<$Node.\+h$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
 Include dependency graph for A\+Star\+Path\+Planning\+Test.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -17,7 +21,7 @@ Include dependency graph for A\+Star\+Path\+Planning\+Test.\+cpp\+:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{AStarPathPlanningTest_8cpp_aca626e3237f15041ec99533c9d36c660}{T\+E\+ST} (\hyperlink{lib_8hpp_a100d09f9a57d44745299c28c63c98745}{dummy}, should\+\_\+pass)
+\hyperlink{AStarPathPlanningTest_8cpp_ae121b9ddd9ead7f336c788840e44b5a9}{T\+E\+ST} (\hyperlink{classAStarPathFinder}{A\+Star\+Path\+Finder}, Can\+Find\+Path)
 \end{DoxyCompactItemize}
 
 
@@ -35,15 +39,27 @@ G\+NU Public License 2017 Jiawei Ge
 \subsection{Function Documentation}
 \index{A\+Star\+Path\+Planning\+Test.\+cpp@{A\+Star\+Path\+Planning\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
 \index{T\+E\+ST@{T\+E\+ST}!A\+Star\+Path\+Planning\+Test.\+cpp@{A\+Star\+Path\+Planning\+Test.\+cpp}}
-\subsubsection[{\texorpdfstring{T\+E\+S\+T(dummy, should\+\_\+pass)}{TEST(dummy, should_pass)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+A\+Star\+Path\+Finder, Can\+Find\+Path)}{TEST(AStarPathFinder, CanFindPath)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
 \begin{DoxyParamCaption}
-\item[{{\bf dummy}}]{, }
-\item[{should\+\_\+pass}]{}
+\item[{{\bf A\+Star\+Path\+Finder}}]{, }
+\item[{Can\+Find\+Path}]{}
 \end{DoxyParamCaption}
-)}\hypertarget{AStarPathPlanningTest_8cpp_aca626e3237f15041ec99533c9d36c660}{}\label{AStarPathPlanningTest_8cpp_aca626e3237f15041ec99533c9d36c660}
+)}\hypertarget{AStarPathPlanningTest_8cpp_ae121b9ddd9ead7f336c788840e44b5a9}{}\label{AStarPathPlanningTest_8cpp_ae121b9ddd9ead7f336c788840e44b5a9}
 
 \begin{DoxyCode}
-11                          \{
-12   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, 1);
-13 \}
+15                                    \{
+16   \hyperlink{classNode}{Node} start(0, 0);
+17   \hyperlink{classNode}{Node} goal(2, 2);
+18 
+19   std::vector<std::vector<int>> map = \{ \{ 0, 0, 0 \}, \{ 0, 0, 0 \}, \{ 0, 0, 0 \}, \{
+20       0, 0, 0 \} \};
+21   \hyperlink{classAStarPathFinder}{AStarPathFinder} ASPF;
+22   std::vector<Node> path = ASPF.\hyperlink{classAStarPathFinder_a04a5e2e2aae800b324607ecaa0d8248a}{findPath}(start, goal, map);
+23 
+24   \textcolor{keywordflow}{for} (std::size\_t \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} != path.size(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+25     \hyperlink{classNode}{Node} node = path[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}];
+26     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(node.\hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX}(), \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+27     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(node.\hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY}(), \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+28   \}
+29 \}
 \end{DoxyCode}

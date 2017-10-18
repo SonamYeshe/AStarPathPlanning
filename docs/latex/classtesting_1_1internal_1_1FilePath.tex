@@ -121,8 +121,8 @@ static \hyperlink{classtesting_1_1internal_1_1FilePath}{File\+Path} \hyperlink{c
 200                                                               \{
 201   \textcolor{keywordflow}{if} (directory.IsEmpty())
 202     \textcolor{keywordflow}{return} relative\_path;
-203   \textcolor{keyword}{const} \hyperlink{classtesting_1_1internal_1_1FilePath_a3504a51accbca78a52fe586133ea5499}{FilePath} \hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir}(directory.RemoveTrailingPathSeparator());
-204   \textcolor{keywordflow}{return} \hyperlink{classtesting_1_1internal_1_1FilePath_a3504a51accbca78a52fe586133ea5499}{FilePath}(\hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir}.string() + \hyperlink{namespacetesting_1_1internal_afcd71adaa9d1e6df7b282a17fc48125c}{kPathSeparator} + relative\_path.string());
+203   \textcolor{keyword}{const} \hyperlink{classtesting_1_1internal_1_1FilePath_a3504a51accbca78a52fe586133ea5499}{FilePath} dir(directory.RemoveTrailingPathSeparator());
+204   \textcolor{keywordflow}{return} \hyperlink{classtesting_1_1internal_1_1FilePath_a3504a51accbca78a52fe586133ea5499}{FilePath}(dir.string() + \hyperlink{namespacetesting_1_1internal_afcd71adaa9d1e6df7b282a17fc48125c}{kPathSeparator} + relative\_path.string());
 205 \}
 \end{DoxyCode}
 \index{testing\+::internal\+::\+File\+Path@{testing\+::internal\+::\+File\+Path}!Create\+Directories\+Recursively@{Create\+Directories\+Recursively}}
@@ -430,7 +430,7 @@ static \hyperlink{classtesting_1_1internal_1_1FilePath}{File\+Path} \hyperlink{c
 \begin{DoxyCode}
 166                                         \{
 167   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} last\_sep = FindLastPathSeparator();
-168   \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string} \hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir};
+168   \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string} dir;
 169   \textcolor{keywordflow}{if} (last\_sep) \{
 170     dir = \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string}(\hyperlink{classtesting_1_1internal_1_1FilePath_a85297234dac0acd936632dff8634c2b9}{c\_str}(), last\_sep + 1 - \hyperlink{classtesting_1_1internal_1_1FilePath_a85297234dac0acd936632dff8634c2b9}{c\_str}());
 171   \} \textcolor{keywordflow}{else} \{

@@ -1,7 +1,6 @@
 var searchData=
 [
   ['one_5fbits_5f',['one_bits_',['../classtesting_1_1gmock__matchers__test_1_1FloatingPointTest.html#ae26de8492d307d2b4c30f6b952d9a412',1,'testing::gmock_matchers_test::FloatingPointTest']]],
-  ['open_5fnodes_5fmap',['open_nodes_map',['../app_2main_8cpp.html#a9abc0e197588a5f052e9fba18d062326',1,'main.cpp']]],
   ['opener',['opener',['../classupload_1_1AbstractRpcServer.html#aa931446476e0e86f3ade7fef0a0aea5a',1,'upload::AbstractRpcServer']]],
   ['opening_5fstring',['opening_string',['../namespaceversiongenerate.html#a88cc36d80d757546e04817490ebb0640',1,'versiongenerate']]],
   ['optional_5fwhite_5fspaces_5fregex',['OPTIONAL_WHITE_SPACES_REGEX',['../namespacepump.html#a81f03eaffd2c0f4c6a453a0b179e51ca',1,'pump']]],

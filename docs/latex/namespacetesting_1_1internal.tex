@@ -1218,7 +1218,7 @@ void \hyperlink{namespacetesting_1_1internal_aa013dc1d62981cbad93c2fffa0192921}{
 \item 
 {\footnotesize template$<$typename Raw\+Type $>$ }\\\hyperlink{classtesting_1_1AssertionResult}{Assertion\+Result} \hyperlink{namespacetesting_1_1internal_a17b52b6b1f81f6dcad5cc4d12e5173a6}{Floating\+Point\+LE} (const char $\ast$expr1, const char $\ast$expr2, Raw\+Type val1, Raw\+Type val2)
 \item 
-\hyperlink{namespacetesting_1_1internal_a40d4fffcd2bf56f18b1c380615aa85e3}{U\+Int32} \hyperlink{namespacetesting_1_1internal_a2c54b453387aa8a18f2f3e09f10b5a7d}{Chop\+Low\+Bits} (\hyperlink{namespacetesting_1_1internal_a40d4fffcd2bf56f18b1c380615aa85e3}{U\+Int32} $\ast$bits, int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\hyperlink{namespacetesting_1_1internal_a40d4fffcd2bf56f18b1c380615aa85e3}{U\+Int32} \hyperlink{namespacetesting_1_1internal_a2c54b453387aa8a18f2f3e09f10b5a7d}{Chop\+Low\+Bits} (\hyperlink{namespacetesting_1_1internal_a40d4fffcd2bf56f18b1c380615aa85e3}{U\+Int32} $\ast$bits, int n)
 \item 
 bool \hyperlink{namespacetesting_1_1internal_a681895f8cc32286211be9889da107394}{Is\+Utf16\+Surrogate\+Pair} (wchar\+\_\+t first, wchar\+\_\+t second)
 \item 
@@ -1367,7 +1367,7 @@ const char \hyperlink{namespacetesting_1_1internal_a32051e2574562b548be3e26a52ea
 \item 
 const char \hyperlink{namespacetesting_1_1internal_a8572303d929880adf30db00952e1c45d}{k\+Internal\+Run\+Death\+Test\+Flag} \mbox{[}$\,$\mbox{]} = \char`\"{}internal\+\_\+run\+\_\+death\+\_\+test\char`\"{}
 \item 
-\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+} const char \hyperlink{namespacetesting_1_1internal_abb38528ca6a45df265b19f5ccb3d16d9}{k\+Stack\+Trace\+Marker} \mbox{[}$\,$\mbox{]} = \char`\"{}\textbackslash{}n\+Stack \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{trace\+:\textbackslash{}n}\char`\"{}
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+} const char \hyperlink{namespacetesting_1_1internal_abb38528ca6a45df265b19f5ccb3d16d9}{k\+Stack\+Trace\+Marker} \mbox{[}$\,$\mbox{]} = \char`\"{}\textbackslash{}n\+Stack trace\+:\textbackslash{}n\char`\"{}
 \item 
 class \hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+} \hyperlink{classtesting_1_1internal_1_1ScopedTrace}{testing\+::internal\+::\+Scoped\+Trace} \hyperlink{namespacetesting_1_1internal_a581ac897511489c75a06aa328dcfb62f}{G\+T\+E\+S\+T\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+}
 \item 
@@ -1903,8 +1903,8 @@ k\+Other\hypertarget{namespacetesting_1_1internal_aa8747bda20137c9aa7f846dee830e
 
 \begin{DoxyCode}
 1747                                                \{
-1748   \textcolor{keyword}{const} \hyperlink{namespacetesting_1_1internal_a40d4fffcd2bf56f18b1c380615aa85e3}{UInt32} low\_bits = *bits & ((\textcolor{keyword}{static\_cast<}\hyperlink{namespacetesting_1_1internal_a40d4fffcd2bf56f18b1c380615aa85e3}{UInt32}\textcolor{keyword}{>}(1) << \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}) - 1);
-1749   *bits >>= \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+1748   \textcolor{keyword}{const} \hyperlink{namespacetesting_1_1internal_a40d4fffcd2bf56f18b1c380615aa85e3}{UInt32} low\_bits = *bits & ((\textcolor{keyword}{static\_cast<}\hyperlink{namespacetesting_1_1internal_a40d4fffcd2bf56f18b1c380615aa85e3}{UInt32}\textcolor{keyword}{>}(1) << n) - 1);
+1749   *bits >>= n;
 1750   \textcolor{keywordflow}{return} low\_bits;
 1751 \}
 \end{DoxyCode}
@@ -7217,7 +7217,7 @@ k\+Other\hypertarget{namespacetesting_1_1internal_aa8747bda20137c9aa7f846dee830e
 \subsubsection[{\texorpdfstring{k\+Stack\+Trace\+Depth\+Flag}{kStackTraceDepthFlag}}]{\setlength{\rightskip}{0pt plus 5cm}const char testing\+::internal\+::k\+Stack\+Trace\+Depth\+Flag\mbox{[}$\,$\mbox{]} = \char`\"{}stack\+\_\+trace\+\_\+depth\char`\"{}}\hypertarget{namespacetesting_1_1internal_ad6f90e66d431ca3a9084408878c2cc77}{}\label{namespacetesting_1_1internal_ad6f90e66d431ca3a9084408878c2cc77}
 \index{testing\+::internal@{testing\+::internal}!k\+Stack\+Trace\+Marker@{k\+Stack\+Trace\+Marker}}
 \index{k\+Stack\+Trace\+Marker@{k\+Stack\+Trace\+Marker}!testing\+::internal@{testing\+::internal}}
-\subsubsection[{\texorpdfstring{k\+Stack\+Trace\+Marker}{kStackTraceMarker}}]{\setlength{\rightskip}{0pt plus 5cm}const char testing\+::internal\+::k\+Stack\+Trace\+Marker = \char`\"{}\textbackslash{}n\+Stack {\bf trace\+:\textbackslash{}n}\char`\"{}}\hypertarget{namespacetesting_1_1internal_abb38528ca6a45df265b19f5ccb3d16d9}{}\label{namespacetesting_1_1internal_abb38528ca6a45df265b19f5ccb3d16d9}
+\subsubsection[{\texorpdfstring{k\+Stack\+Trace\+Marker}{kStackTraceMarker}}]{\setlength{\rightskip}{0pt plus 5cm}const char testing\+::internal\+::k\+Stack\+Trace\+Marker = \char`\"{}\textbackslash{}n\+Stack trace\+:\textbackslash{}n\char`\"{}}\hypertarget{namespacetesting_1_1internal_abb38528ca6a45df265b19f5ccb3d16d9}{}\label{namespacetesting_1_1internal_abb38528ca6a45df265b19f5ccb3d16d9}
 \index{testing\+::internal@{testing\+::internal}!k\+Std\+Err\+Fileno@{k\+Std\+Err\+Fileno}}
 \index{k\+Std\+Err\+Fileno@{k\+Std\+Err\+Fileno}!testing\+::internal@{testing\+::internal}}
 \subsubsection[{\texorpdfstring{k\+Std\+Err\+Fileno}{kStdErrFileno}}]{\setlength{\rightskip}{0pt plus 5cm}const int testing\+::internal\+::k\+Std\+Err\+Fileno = S\+T\+D\+E\+R\+R\+\_\+\+F\+I\+L\+E\+NO}\hypertarget{namespacetesting_1_1internal_a747eccfdbdee3ff8af3bedc476a57c85}{}\label{namespacetesting_1_1internal_a747eccfdbdee3ff8af3bedc476a57c85}

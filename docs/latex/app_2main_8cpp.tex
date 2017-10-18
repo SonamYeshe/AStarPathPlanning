@@ -1,11 +1,11 @@
 \hypertarget{app_2main_8cpp}{}\section{app/main.cpp File Reference}
 \label{app_2main_8cpp}\index{app/main.\+cpp@{app/main.\+cpp}}
+{\ttfamily \#include $<$A\+Star\+Path\+Finder.\+h$>$}\\*
 {\ttfamily \#include $<$iostream$>$}\\*
-{\ttfamily \#include $<$iomanip$>$}\\*
-{\ttfamily \#include $<$queue$>$}\\*
-{\ttfamily \#include $<$string$>$}\\*
-{\ttfamily \#include $<$math.\+h$>$}\\*
-{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$lib.\+hpp$>$}\\*
+{\ttfamily \#include $<$Node.\+h$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
 Include dependency graph for main.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -14,40 +14,10 @@ Include dependency graph for main.\+cpp\+:
 \includegraphics[width=350pt]{app_2main_8cpp__incl}
 \end{center}
 \end{figure}
-\subsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \hyperlink{classnode}{node}
-\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \hyperlink{app_2main_8cpp_ad3974cba3906e66921a7e9c819f3ef9c}{operator$<$} (const \hyperlink{classnode}{node} \&a, const \hyperlink{classnode}{node} \&b)
-\item 
-string \hyperlink{app_2main_8cpp_a2c12ba6065c1abddfcc567dffb72c3f2}{path\+Find} (const int \&x\+Start, const int \&y\+Start, const int \&x\+Finish, const int \&y\+Finish)
-\item 
 int \hyperlink{app_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
-\end{DoxyCompactItemize}
-\subsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-const int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 60
-\item 
-const int \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = 60
-\item 
-static int \hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map} \mbox{[}\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}\mbox{]}\mbox{[}\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}\mbox{]}
-\item 
-static int \hyperlink{app_2main_8cpp_abac1e5763d6a9a4aabda8df7acbb01fa}{closed\+\_\+nodes\+\_\+map} \mbox{[}\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}\mbox{]}\mbox{[}\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}\mbox{]}
-\item 
-static int \hyperlink{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}{open\+\_\+nodes\+\_\+map} \mbox{[}\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}\mbox{]}\mbox{[}\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}\mbox{]}
-\item 
-static int \hyperlink{app_2main_8cpp_a525d3b01141dff858d538577639c9e7f}{dir\+\_\+map} \mbox{[}\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}\mbox{]}\mbox{[}\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}\mbox{]}
-\item 
-const int \hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir} = 8
-\item 
-static int \hyperlink{app_2main_8cpp_a761c65b66591ac65183e5ffed951441c}{dx} \mbox{[}\hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir}\mbox{]} = \{ 1, 1, 0, -\/1, -\/1, -\/1, 0, 1 \}
-\item 
-static int \hyperlink{app_2main_8cpp_a24219188071780eff3646de098152cfa}{dy} \mbox{[}\hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir}\mbox{]} = \{ 0, 1, 1, 1, 0, -\/1, -\/1, -\/1 \}
 \end{DoxyCompactItemize}
 
 
@@ -61,297 +31,23 @@ static int \hyperlink{app_2main_8cpp_a24219188071780eff3646de098152cfa}{dy} \mbo
 )}\hypertarget{app_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{app_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
 
 \begin{DoxyCode}
-211            \{
-212   srand(time(NULL));
-213 
-214   \textcolor{comment}{// create empty map}
-215   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}; y++) \{
-216     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}; x++)
-217       \hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][y] = 0;
-218   \}
-219 
-220   \textcolor{comment}{// fillout the map matrix with a '+' pattern}
-221   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 8; x < \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} * 7 / 8; x++) \{
-222     \hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][m / 2] = 1;
-223   \}
-224   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = m / 8; y < m * 7 / 8; y++) \{
-225     \hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 2][y] = 1;
-226   \}
-227 
-228   \textcolor{comment}{// randomly select start and finish locations}
-229   \textcolor{keywordtype}{int} xA, yA, xB, yB;
-230   \textcolor{keywordflow}{switch} (rand() % 8) \{
-231     \textcolor{keywordflow}{case} 0:
-232       xA = 0;
-233       yA = 0;
-234       xB = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} - 1;
-235       yB = m - 1;
-236       \textcolor{keywordflow}{break};
-237     \textcolor{keywordflow}{case} 1:
-238       xA = 0;
-239       yA = m - 1;
-240       xB = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} - 1;
-241       yB = 0;
-242       \textcolor{keywordflow}{break};
-243     \textcolor{keywordflow}{case} 2:
-244       xA = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 2 - 1;
-245       yA = m / 2 - 1;
-246       xB = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 2 + 1;
-247       yB = m / 2 + 1;
-248       \textcolor{keywordflow}{break};
-249     \textcolor{keywordflow}{case} 3:
-250       xA = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 2 - 1;
-251       yA = m / 2 + 1;
-252       xB = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 2 + 1;
-253       yB = m / 2 - 1;
-254       \textcolor{keywordflow}{break};
-255     \textcolor{keywordflow}{case} 4:
-256       xA = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 2 - 1;
-257       yA = 0;
-258       xB = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 2 + 1;
-259       yB = m - 1;
-260       \textcolor{keywordflow}{break};
-261     \textcolor{keywordflow}{case} 5:
-262       xA = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 2 + 1;
-263       yA = m - 1;
-264       xB = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} / 2 - 1;
-265       yB = 0;
-266       \textcolor{keywordflow}{break};
-267     \textcolor{keywordflow}{case} 6:
-268       xA = 0;
-269       yA = m / 2 - 1;
-270       xB = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} - 1;
-271       yB = m / 2 + 1;
-272       \textcolor{keywordflow}{break};
-273     \textcolor{keywordflow}{case} 7:
-274       xA = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} - 1;
-275       yA = m / 2 + 1;
-276       xB = 0;
-277       yB = m / 2 - 1;
-278       \textcolor{keywordflow}{break};
-279   \}
-280 
-281   cout << \textcolor{stringliteral}{"Map Size (X,Y): "} << \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} << \textcolor{stringliteral}{","} << m << endl;
-282   cout << \textcolor{stringliteral}{"Start: "} << xA << \textcolor{stringliteral}{","} << yA << endl;
-283   cout << \textcolor{stringliteral}{"Finish: "} << xB << \textcolor{stringliteral}{","} << yB << endl;
-284   \textcolor{comment}{// get the route}
-285   clock\_t start = clock();
-286   \textcolor{keywordtype}{string} route = \hyperlink{app_2main_8cpp_a2c12ba6065c1abddfcc567dffb72c3f2}{pathFind}(xA, yA, xB, yB);
-287   \textcolor{keywordflow}{if} (route == \textcolor{stringliteral}{""})
-288     cout << \textcolor{stringliteral}{"An empty route generated!"} << endl;
-289   clock\_t end = clock();
-290   \textcolor{keywordtype}{double} time\_elapsed = double(end - start);
-291   cout << \textcolor{stringliteral}{"Time to calculate the route (ms): "} << time\_elapsed << endl;
-292   cout << \textcolor{stringliteral}{"Route:"} << endl;
-293   cout << route << endl << endl;
-294 
-295   \textcolor{comment}{// follow the route on the map and display it}
-296   \textcolor{keywordflow}{if} (route.length() > 0) \{
-297     \textcolor{keywordtype}{int} j;
-298     \textcolor{keywordtype}{char} c;
-299     \textcolor{keywordtype}{int} x = xA;
-300     \textcolor{keywordtype}{int} y = yA;
-301     \hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][y] = 2;
-302     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} < route.length(); \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}++) \{
-303       c = route.at(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
-304       j = atoi(&c);
-305       x = x + \hyperlink{app_2main_8cpp_a761c65b66591ac65183e5ffed951441c}{dx}[j];
-306       y = y + \hyperlink{app_2main_8cpp_a24219188071780eff3646de098152cfa}{dy}[j];
-307       \hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][y] = 3;
-308     \}
-309     \hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][y] = 4;
-310 
-311     \textcolor{comment}{// display the map with the route}
-312     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}; y++) \{
-313       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}; x++)
-314         \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][y] == 0)
-315           cout << \textcolor{stringliteral}{"."};
-316         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][y] == 1)
-317           cout << \textcolor{stringliteral}{"O"};  \textcolor{comment}{//obstacle}
-318         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][y] == 2)
-319           cout << \textcolor{stringliteral}{"S"};  \textcolor{comment}{//start}
-320         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][y] == 3)
-321           cout << \textcolor{stringliteral}{"R"};  \textcolor{comment}{//route}
-322         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[x][y] == 4)
-323           cout << \textcolor{stringliteral}{"F"};  \textcolor{comment}{//finish}
-324       cout << endl;
-325     \}
-326   \}
-327   getchar();  \textcolor{comment}{// wait for a (Enter) keypress}
-328   \textcolor{keywordflow}{return} (0);
-329 \}
+16            \{
+17   \hyperlink{classNode}{Node} start(0, 0);
+18   \hyperlink{classNode}{Node} goal(3, 3);
+19 
+20   \textcolor{comment}{//  std::shared\_ptr<Node> start = std::make\_shared<Node>(0,0);}
+21   \textcolor{comment}{//  std::shared\_ptr<Node> goal = std::make\_shared<Node> (3,3);}
+22 
+23   std::vector<std::vector<int>> map = \{ \{ 0, 0, 0, 0 \}, \{ 0, 0, 0, 0 \}, \{ 0, 0,
+24       0, 0 \}, \{ 0, 0, 0, 0 \} \};
+25   \hyperlink{classAStarPathFinder}{AStarPathFinder} ASPF;
+26   std::vector < Node > path = ASPF.\hyperlink{classAStarPathFinder_a04a5e2e2aae800b324607ecaa0d8248a}{findPath}(start, goal, map);
+27 
+28   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} node : path) \{
+29     \textcolor{comment}{//  std::cout << 1 << std::endl;}
+30     std::cout << node.getX() << node.getY() << std::endl;
+31   \}
+32 
+33   \textcolor{keywordflow}{return} 0;
+34 \}
 \end{DoxyCode}
-\index{app/main.\+cpp@{app/main.\+cpp}!operator$<$@{operator$<$}}
-\index{operator$<$@{operator$<$}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{operator$<$(const node \&a, const node \&b)}{operator<(const node &a, const node &b)}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$<$ (
-\begin{DoxyParamCaption}
-\item[{const {\bf node} \&}]{a, }
-\item[{const {\bf node} \&}]{b}
-\end{DoxyParamCaption}
-)}\hypertarget{app_2main_8cpp_ad3974cba3906e66921a7e9c819f3ef9c}{}\label{app_2main_8cpp_ad3974cba3906e66921a7e9c819f3ef9c}
-
-\begin{DoxyCode}
-91                                                \{
-92   \textcolor{keywordflow}{return} a.\hyperlink{classnode_afebf5ef7f94fa7554890f03e97686de7}{getPriority}() > b.\hyperlink{classnode_afebf5ef7f94fa7554890f03e97686de7}{getPriority}();
-93 \}
-\end{DoxyCode}
-\index{app/main.\+cpp@{app/main.\+cpp}!path\+Find@{path\+Find}}
-\index{path\+Find@{path\+Find}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{path\+Find(const int \&x\+Start, const int \&y\+Start, const int \&x\+Finish, const int \&y\+Finish)}{pathFind(const int &xStart, const int &yStart, const int &xFinish, const int &yFinish)}}]{\setlength{\rightskip}{0pt plus 5cm}string path\+Find (
-\begin{DoxyParamCaption}
-\item[{const int \&}]{x\+Start, }
-\item[{const int \&}]{y\+Start, }
-\item[{const int \&}]{x\+Finish, }
-\item[{const int \&}]{y\+Finish}
-\end{DoxyParamCaption}
-)}\hypertarget{app_2main_8cpp_a2c12ba6065c1abddfcc567dffb72c3f2}{}\label{app_2main_8cpp_a2c12ba6065c1abddfcc567dffb72c3f2}
-
-\begin{DoxyCode}
-98                                      \{
-99   \textcolor{keyword}{static} priority\_queue<node> pq[2];  \textcolor{comment}{// list of open (not-yet-tried) nodes}
-100   \textcolor{keyword}{static} \textcolor{keywordtype}{int} pqi;  \textcolor{comment}{// pq index}
-101   \textcolor{keyword}{static} \hyperlink{classnode}{node}* n0;
-102   \textcolor{keyword}{static} \hyperlink{classnode}{node}* m0;
-103   \textcolor{keyword}{static} \textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}, j, x, y, xdx, ydy;
-104   \textcolor{keyword}{static} \textcolor{keywordtype}{char} c;
-105   pqi = 0;
-106 
-107   \textcolor{comment}{// reset the node maps}
-108   \textcolor{keywordflow}{for} (y = 0; y < \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}; y++) \{
-109     \textcolor{keywordflow}{for} (x = 0; x < \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}; x++) \{
-110       \hyperlink{app_2main_8cpp_abac1e5763d6a9a4aabda8df7acbb01fa}{closed\_nodes\_map}[x][y] = 0;
-111       \hyperlink{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}{open\_nodes\_map}[x][y] = 0;
-112     \}
-113   \}
-114 
-115   \textcolor{comment}{// create the start node and push into list of open nodes}
-116   n0 = \textcolor{keyword}{new} \hyperlink{classnode}{node}(xStart, yStart, 0, 0);
-117   n0->\hyperlink{classnode_ad51b92de008bd5107a7b55cc61fc497b}{updatePriority}(xFinish, yFinish);
-118   pq[pqi].push(*n0);
-119   \hyperlink{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}{open\_nodes\_map}[x][y] = n0->\hyperlink{classnode_afebf5ef7f94fa7554890f03e97686de7}{getPriority}();  \textcolor{comment}{// mark it on the open nodes map}
-120 
-121   \textcolor{comment}{// A* search}
-122   \textcolor{keywordflow}{while} (!pq[pqi].empty()) \{
-123     \textcolor{comment}{// get the current node w/ the highest priority}
-124     \textcolor{comment}{// from the list of open nodes}
-125     n0 = \textcolor{keyword}{new} \hyperlink{classnode}{node}(pq[pqi].top().getxPos(), pq[pqi].top().getyPos(),
-126                   pq[pqi].top().getLevel(), pq[pqi].top().getPriority());
-127 
-128     x = n0->\hyperlink{classnode_a419596f9858640ee6d04b69b616b7cd2}{getxPos}();
-129     y = n0->\hyperlink{classnode_a3b5d135d5e5eac9211a9478ea9803ae7}{getyPos}();
-130 
-131     pq[pqi].pop();  \textcolor{comment}{// remove the node from the open list}
-132     \hyperlink{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}{open\_nodes\_map}[x][y] = 0;
-133     \textcolor{comment}{// mark it on the closed nodes map}
-134     \hyperlink{app_2main_8cpp_abac1e5763d6a9a4aabda8df7acbb01fa}{closed\_nodes\_map}[x][y] = 1;
-135 
-136     \textcolor{comment}{// quit searching when the goal state is reached}
-137     \textcolor{comment}{//if((*n0).estimate(xFinish, yFinish) == 0)}
-138     \textcolor{keywordflow}{if} (x == xFinish && y == yFinish) \{
-139       \textcolor{comment}{// generate the path from finish to start}
-140       \textcolor{comment}{// by following the directions}
-141       \textcolor{keywordtype}{string} path = \textcolor{stringliteral}{""};
-142       \textcolor{keywordflow}{while} (!(x == xStart && y == yStart)) \{
-143         j = \hyperlink{app_2main_8cpp_a525d3b01141dff858d538577639c9e7f}{dir\_map}[x][y];
-144         c = \textcolor{charliteral}{'0'} + (j + \hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir} / 2) % \hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir};
-145         path = c + path;
-146         x += \hyperlink{app_2main_8cpp_a761c65b66591ac65183e5ffed951441c}{dx}[j];
-147         y += \hyperlink{app_2main_8cpp_a24219188071780eff3646de098152cfa}{dy}[j];
-148       \}
-149 
-150       \textcolor{comment}{// garbage collection}
-151       \textcolor{keyword}{delete} n0;
-152       \textcolor{comment}{// empty the leftover nodes}
-153       \textcolor{keywordflow}{while} (!pq[pqi].empty())
-154         pq[pqi].pop();
-155       \textcolor{keywordflow}{return} path;
-156     \}
-157 
-158     \textcolor{comment}{// generate moves (child nodes) in all possible directions}
-159     \textcolor{keywordflow}{for} (i = 0; i < \hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir}; i++) \{
-160       xdx = x + \hyperlink{app_2main_8cpp_a761c65b66591ac65183e5ffed951441c}{dx}[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}];
-161       ydy = y + \hyperlink{app_2main_8cpp_a24219188071780eff3646de098152cfa}{dy}[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}];
-162 
-163       \textcolor{keywordflow}{if} (!(xdx < 0 || xdx > \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} - 1 || ydy < 0 || ydy > m - 1
-164           || \hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}[xdx][ydy] == 1 || \hyperlink{app_2main_8cpp_abac1e5763d6a9a4aabda8df7acbb01fa}{closed\_nodes\_map}[xdx][ydy] == 1)) \{
-165         \textcolor{comment}{// generate a child node}
-166         m0 = \textcolor{keyword}{new} \hyperlink{classnode}{node}(xdx, ydy, n0->\hyperlink{classnode_a78c66d7badca074b6b34ec7eca4ab106}{getLevel}(), n0->\hyperlink{classnode_afebf5ef7f94fa7554890f03e97686de7}{getPriority}());
-167         m0->\hyperlink{classnode_a04a186013c42fb942b6da90d2e98d4ed}{nextLevel}(i);
-168         m0->\hyperlink{classnode_ad51b92de008bd5107a7b55cc61fc497b}{updatePriority}(xFinish, yFinish);
-169 
-170         \textcolor{comment}{// if it is not in the open list then add into that}
-171         \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}{open\_nodes\_map}[xdx][ydy] == 0) \{
-172           \hyperlink{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}{open\_nodes\_map}[xdx][ydy] = m0->\hyperlink{classnode_afebf5ef7f94fa7554890f03e97686de7}{getPriority}();
-173           pq[pqi].push(*m0);
-174           \textcolor{comment}{// mark its parent node direction}
-175           \hyperlink{app_2main_8cpp_a525d3b01141dff858d538577639c9e7f}{dir\_map}[xdx][ydy] = (i + dir / 2) % dir;
-176         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}{open\_nodes\_map}[xdx][ydy] > m0->\hyperlink{classnode_afebf5ef7f94fa7554890f03e97686de7}{getPriority}()) \{
-177           \textcolor{comment}{// update the priority info}
-178           \hyperlink{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}{open\_nodes\_map}[xdx][ydy] = m0->\hyperlink{classnode_afebf5ef7f94fa7554890f03e97686de7}{getPriority}();
-179           \textcolor{comment}{// update the parent direction info}
-180           \hyperlink{app_2main_8cpp_a525d3b01141dff858d538577639c9e7f}{dir\_map}[xdx][ydy] = (i + dir / 2) % dir;
-181 
-182           \textcolor{comment}{// replace the node}
-183           \textcolor{comment}{// by emptying one pq to the other one}
-184           \textcolor{comment}{// except the node to be replaced will be ignored}
-185           \textcolor{comment}{// and the new node will be pushed in instead}
-186           \textcolor{keywordflow}{while} (!(pq[pqi].top().getxPos() == xdx
-187               && pq[pqi].top().getyPos() == ydy)) \{
-188             pq[1 - pqi].push(pq[pqi].top());
-189             pq[pqi].pop();
-190           \}
-191           pq[pqi].pop();  \textcolor{comment}{// remove the wanted node}
-192 
-193           \textcolor{comment}{// empty the larger size pq to the smaller one}
-194           \textcolor{keywordflow}{if} (pq[pqi].size() > pq[1 - pqi].size())
-195             pqi = 1 - pqi;
-196           \textcolor{keywordflow}{while} (!pq[pqi].empty()) \{
-197             pq[1 - pqi].push(pq[pqi].top());
-198             pq[pqi].pop();
-199           \}
-200           pqi = 1 - pqi;
-201           pq[pqi].push(*m0);  \textcolor{comment}{// add the better node instead}
-202         \} \textcolor{keywordflow}{else}
-203           \textcolor{keyword}{delete} m0;  \textcolor{comment}{// garbage collection}
-204       \}
-205     \}
-206     \textcolor{keyword}{delete} n0;  \textcolor{comment}{// garbage collection}
-207   \}
-208   \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};  \textcolor{comment}{// no route found}
-209 \}
-\end{DoxyCode}
-
-
-\subsection{Variable Documentation}
-\index{app/main.\+cpp@{app/main.\+cpp}!closed\+\_\+nodes\+\_\+map@{closed\+\_\+nodes\+\_\+map}}
-\index{closed\+\_\+nodes\+\_\+map@{closed\+\_\+nodes\+\_\+map}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{closed\+\_\+nodes\+\_\+map}{closed_nodes_map}}]{\setlength{\rightskip}{0pt plus 5cm}int closed\+\_\+nodes\+\_\+map\mbox{[}{\bf n}\mbox{]}\mbox{[}{\bf m}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{app_2main_8cpp_abac1e5763d6a9a4aabda8df7acbb01fa}{}\label{app_2main_8cpp_abac1e5763d6a9a4aabda8df7acbb01fa}
-\index{app/main.\+cpp@{app/main.\+cpp}!dir@{dir}}
-\index{dir@{dir}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{dir}{dir}}]{\setlength{\rightskip}{0pt plus 5cm}const int dir = 8}\hypertarget{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{}\label{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}
-\index{app/main.\+cpp@{app/main.\+cpp}!dir\+\_\+map@{dir\+\_\+map}}
-\index{dir\+\_\+map@{dir\+\_\+map}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{dir\+\_\+map}{dir_map}}]{\setlength{\rightskip}{0pt plus 5cm}int dir\+\_\+map\mbox{[}{\bf n}\mbox{]}\mbox{[}{\bf m}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{app_2main_8cpp_a525d3b01141dff858d538577639c9e7f}{}\label{app_2main_8cpp_a525d3b01141dff858d538577639c9e7f}
-\index{app/main.\+cpp@{app/main.\+cpp}!dx@{dx}}
-\index{dx@{dx}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{dx}{dx}}]{\setlength{\rightskip}{0pt plus 5cm}int dx\mbox{[}{\bf dir}\mbox{]} = \{ 1, 1, 0, -\/1, -\/1, -\/1, 0, 1 \}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{app_2main_8cpp_a761c65b66591ac65183e5ffed951441c}{}\label{app_2main_8cpp_a761c65b66591ac65183e5ffed951441c}
-\index{app/main.\+cpp@{app/main.\+cpp}!dy@{dy}}
-\index{dy@{dy}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{dy}{dy}}]{\setlength{\rightskip}{0pt plus 5cm}int dy\mbox{[}{\bf dir}\mbox{]} = \{ 0, 1, 1, 1, 0, -\/1, -\/1, -\/1 \}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{app_2main_8cpp_a24219188071780eff3646de098152cfa}{}\label{app_2main_8cpp_a24219188071780eff3646de098152cfa}
-\index{app/main.\+cpp@{app/main.\+cpp}!m@{m}}
-\index{m@{m}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{m}{m}}]{\setlength{\rightskip}{0pt plus 5cm}const int m = 60}\hypertarget{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{}\label{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}
-\index{app/main.\+cpp@{app/main.\+cpp}!map@{map}}
-\index{map@{map}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{map}{map}}]{\setlength{\rightskip}{0pt plus 5cm}int map\mbox{[}{\bf n}\mbox{]}\mbox{[}{\bf m}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{}\label{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}
-\index{app/main.\+cpp@{app/main.\+cpp}!n@{n}}
-\index{n@{n}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{n}{n}}]{\setlength{\rightskip}{0pt plus 5cm}const int n = 60}\hypertarget{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{}\label{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}
-
-\begin{DoxyParams}{Parameters}
-{\em } & \\
-\hline
-\end{DoxyParams}
-\index{app/main.\+cpp@{app/main.\+cpp}!open\+\_\+nodes\+\_\+map@{open\+\_\+nodes\+\_\+map}}
-\index{open\+\_\+nodes\+\_\+map@{open\+\_\+nodes\+\_\+map}!app/main.\+cpp@{app/main.\+cpp}}
-\subsubsection[{\texorpdfstring{open\+\_\+nodes\+\_\+map}{open_nodes_map}}]{\setlength{\rightskip}{0pt plus 5cm}int open\+\_\+nodes\+\_\+map\mbox{[}{\bf n}\mbox{]}\mbox{[}{\bf m}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}{}\label{app_2main_8cpp_a9abc0e197588a5f052e9fba18d062326}

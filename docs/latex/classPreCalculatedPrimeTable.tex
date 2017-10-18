@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for Pre\+Calculated\+Prime\+Table\+:
-\nopagebreak
+Inheritance diagram for Pre\+Calculated\+Prime\+Table\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for Pre\+Calculated\+Prime\+Table\+:
 \end{figure}
 
 
-Collaboration diagram for Pre\+Calculated\+Prime\+Table\+:
-\nopagebreak
+Collaboration diagram for Pre\+Calculated\+Prime\+Table\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,7 +29,7 @@ Collaboration diagram for Pre\+Calculated\+Prime\+Table\+:
 \item 
 virtual \hyperlink{classPreCalculatedPrimeTable_a6ceab295f80dbe2766b8d4f54138bbc4}{$\sim$\+Pre\+Calculated\+Prime\+Table} ()
 \item 
-virtual bool \hyperlink{classPreCalculatedPrimeTable_ae3d0da99f18f4b57d8d63ecebfd65106}{Is\+Prime} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}) const 
+virtual bool \hyperlink{classPreCalculatedPrimeTable_ae3d0da99f18f4b57d8d63ecebfd65106}{Is\+Prime} (int n) const 
 \item 
 virtual int \hyperlink{classPreCalculatedPrimeTable_a405c77ebe22cd11d7782ea264502ed39}{Get\+Next\+Prime} (int p) const 
 \end{DoxyCompactItemize}
@@ -79,8 +77,8 @@ Implements \hyperlink{classPrimeTable_ae537c939f56617d8937d57bbbae3ab30}{Prime\+
 
 \begin{DoxyCode}
 93                                         \{
-94     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = p + 1; \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} < is\_prime\_size\_; \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}++) \{
-95       \textcolor{keywordflow}{if} (is\_prime\_[\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}]) \textcolor{keywordflow}{return} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+94     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} n = p + 1; n < is\_prime\_size\_; n++) \{
+95       \textcolor{keywordflow}{if} (is\_prime\_[n]) \textcolor{keywordflow}{return} n;
 96     \}
 97 
 98     \textcolor{keywordflow}{return} -1;
@@ -100,7 +98,7 @@ Implements \hyperlink{classPrimeTable_a2ab9243364ded0c51541f641b2df362a}{Prime\+
 
 \begin{DoxyCode}
 89                                     \{
-90     \textcolor{keywordflow}{return} 0 <= \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} && \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} < is\_prime\_size\_ && is\_prime\_[\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}];
+90     \textcolor{keywordflow}{return} 0 <= n && n < is\_prime\_size\_ && is\_prime\_[n];
 91   \}
 \end{DoxyCode}
 

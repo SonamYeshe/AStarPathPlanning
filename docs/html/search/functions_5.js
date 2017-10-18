@@ -26,7 +26,6 @@ var searchData=
   ['eqfailure',['EqFailure',['../namespacetesting_1_1internal.html#a08725846ff184d3e79bcf5be4df19157',1,'testing::internal']]],
   ['eqmatcher',['EqMatcher',['../classtesting_1_1internal_1_1EqMatcher.html#a9051e33bc31f413a3c958d04cc090b46',1,'testing::internal::EqMatcher']]],
   ['errorexit',['ErrorExit',['../namespaceupload.html#adea53186a1d73e92cc839b7c35c2c044',1,'upload']]],
-  ['estimate',['estimate',['../classnode.html#a137e1298b41dd5dbf6afc5015ac1b489',1,'node']]],
   ['evalexp',['EvalExp',['../classpump_1_1Env.html#a29fa1ceb1f7c22e8e982133f4808317f',1,'pump::Env']]],
   ['eventforwardingenabled',['EventForwardingEnabled',['../classtesting_1_1internal_1_1TestEventListenersAccessor.html#a4a7522557045cb55eb037dc61429d71c',1,'testing::internal::TestEventListenersAccessor']]],
   ['eventrecordinglistener',['EventRecordingListener',['../classtesting_1_1internal_1_1EventRecordingListener.html#a7b0254c15d6b8468e1441ee572fee707',1,'testing::internal::EventRecordingListener']]],

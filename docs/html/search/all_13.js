@@ -1,7 +1,7 @@
 var searchData=
 [
   ['random',['Random',['../classtesting_1_1internal_1_1Random.html',1,'testing::internal']]],
-  ['random',['random',['../classtesting_1_1internal_1_1UnitTestImpl.html#ab3b45b5eb4d583219a3602011ea44347',1,'testing::internal::UnitTestImpl::random()'],['../classtesting_1_1internal_1_1Random.html#a6e112be5e7cce00551f6383025f69460',1,'testing::internal::Random::Random()']]],
+  ['random',['Random',['../classtesting_1_1internal_1_1Random.html#a6e112be5e7cce00551f6383025f69460',1,'testing::internal::Random::Random()'],['../classtesting_1_1internal_1_1UnitTestImpl.html#ab3b45b5eb4d583219a3602011ea44347',1,'testing::internal::UnitTestImpl::random()']]],
   ['random_5fseed',['random_seed',['../structtesting_1_1Flags.html#a4728bce63433f711205fd7b427e57f1b',1,'testing::Flags::random_seed()'],['../classtesting_1_1UnitTest.html#a6fa3161a230329e07fc31a339b682a20',1,'testing::UnitTest::random_seed()'],['../classtesting_1_1internal_1_1UnitTestImpl.html#a8ec59a7ab3bad96bccde98ce85ffc864',1,'testing::internal::UnitTestImpl::random_seed()']]],
   ['randomize',['Randomize',['../classtesting_1_1internal_1_1MatchMatrix.html#aff1f0ae748f4a5c96117c0f27b493ac6',1,'testing::internal::MatchMatrix']]],
   ['randomseed',['RandomSeed',['../structtesting_1_1Flags.html#a695cd8b8ab44df5eaa371bacded78c05',1,'testing::Flags']]],
@@ -46,7 +46,7 @@ var searchData=
   ['reinterpretbits',['ReinterpretBits',['../classtesting_1_1internal_1_1FloatingPoint.html#ac551f793522e54fbd8a25acb79eac5b1',1,'testing::internal::FloatingPoint']]],
   ['relationtosourcecopy',['RelationToSourceCopy',['../structtesting_1_1internal_1_1RelationToSourceCopy.html',1,'testing::internal']]],
   ['relationtosourcereference',['RelationToSourceReference',['../structtesting_1_1internal_1_1RelationToSourceReference.html',1,'testing::internal']]],
-  ['release',['Release',['../classtesting_1_1TestEventListeners.html#a038c9fa1975f84d6f3d25b52bc7bccdd',1,'testing::TestEventListeners::Release()'],['../classtesting_1_1internal_1_1TestEventRepeater.html#ac77a3d127e4726e11694e4ee9cf3b793',1,'testing::internal::TestEventRepeater::Release()'],['../classtesting_1_1internal_1_1scoped__ptr.html#a7a4f3e568d81a5d8bcb5f8d6bf5130b1',1,'testing::internal::scoped_ptr::release()']]],
+  ['release',['release',['../classtesting_1_1internal_1_1scoped__ptr.html#a7a4f3e568d81a5d8bcb5f8d6bf5130b1',1,'testing::internal::scoped_ptr::release()'],['../classtesting_1_1TestEventListeners.html#a038c9fa1975f84d6f3d25b52bc7bccdd',1,'testing::TestEventListeners::Release()'],['../classtesting_1_1internal_1_1TestEventRepeater.html#ac77a3d127e4726e11694e4ee9cf3b793',1,'testing::internal::TestEventRepeater::Release()']]],
   ['release_5fdocs',['release_docs',['../namespacerelease__docs.html',1,'']]],
   ['release_5fdocs_2epy',['release_docs.py',['../release__docs_8py.html',1,'']]],
   ['remove_5freference',['remove_reference',['../structtesting_1_1internal_1_1remove__reference.html',1,'testing::internal']]],
@@ -73,7 +73,7 @@ var searchData=
   ['removetrailingpathseparator',['RemoveTrailingPathSeparator',['../classtesting_1_1internal_1_1FilePath.html#a952e1b2a9909cdeaf25de5fcdf069b3a',1,'testing::internal::FilePath']]],
   ['removetypeinfodetails',['RemoveTypeInfoDetails',['../namespacegtest__output__test.html#addbdacea2fbdaacb3a0328425b3218c9',1,'gtest_output_test']]],
   ['removeunsupportedtests',['RemoveUnsupportedTests',['../classgtest__output__test_1_1GTestOutputTest.html#a63f62268f795adfc5ca91514dbec2873',1,'gtest_output_test::GTestOutputTest']]],
-  ['repeat',['Repeat',['../structtesting_1_1Flags.html#a19d47e87d77a18ef4fa8a85b74e25956',1,'testing::Flags::Repeat(Int32 repeat)'],['../structtesting_1_1Flags.html#a61614dd07f97f6e04d27c004ff15195e',1,'testing::Flags::repeat()']]],
+  ['repeat',['repeat',['../structtesting_1_1Flags.html#a61614dd07f97f6e04d27c004ff15195e',1,'testing::Flags::repeat()'],['../structtesting_1_1Flags.html#a19d47e87d77a18ef4fa8a85b74e25956',1,'testing::Flags::Repeat(Int32 repeat)']]],
   ['repeated_5faction',['repeated_action',['../classtesting_1_1internal_1_1TypedExpectation.html#a3af1ffccd9d897297fb19762b1551dec',1,'testing::internal::TypedExpectation']]],
   ['repeated_5faction_5fspecified_5f',['repeated_action_specified_',['../classtesting_1_1internal_1_1ExpectationBase.html#abecd382b79252ffc0779d51e058b681c',1,'testing::internal::ExpectationBase']]],
   ['repeatflag',['RepeatFlag',['../namespacegtest__shuffle__test.html#a193f6cd2eeb35e7925dca6d8f72f75d3',1,'gtest_shuffle_test']]],

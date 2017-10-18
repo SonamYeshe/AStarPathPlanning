@@ -1,0 +1,306 @@
+\hypertarget{classNode}{}\section{Node Class Reference}
+\label{classNode}\index{Node@{Node}}
+
+
+\hyperlink{classAStarPathFinder}{A\+Star\+Path\+Finder}.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode_ad7a34779cad45d997bfd6d3d8043c75f}{Node} ()
+\item 
+\hyperlink{classNode_a23a19f53dfbb18fec58cdac90de3d144}{Node} (int x, int y)
+\item 
+virtual \hyperlink{classNode_aa0840c3cb5c7159be6d992adecd2097c}{$\sim$\+Node} ()
+\item 
+int \hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX} () const 
+\item 
+int \hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY} () const 
+\item 
+double \hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getf\+Score} () const 
+\item 
+double \hyperlink{classNode_a6d96ac905adeaa43c9ec4cef44f5617b}{getg\+Score} () const 
+\item 
+double \hyperlink{classNode_a04d718022d49c317f12ecbe2829642e7}{geth\+Score} () const 
+\item 
+void \hyperlink{classNode_a5c3c70e327b9e358435ef1689eeb81b0}{setf\+Score} (double f\+Score)
+\item 
+void \hyperlink{classNode_a00e41993c05f5bfc5db6d98a58680c51}{setg\+Score} (double g\+Score)
+\item 
+void \hyperlink{classNode_afc359dbe960036d705b2d68a697a416e}{seth\+Score} (double h\+Score)
+\item 
+void \hyperlink{classNode_a4c4c80be951d7b2a08b7b061cc9add13}{set\+Parent} (const \hyperlink{classNode}{Node} \&parent)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classNode_a707ec5f7e95ba42c15c263adc1ee70fe}{get\+Parent} () const 
+\item 
+bool \hyperlink{classNode_a33836aa8a9e679df56237e2cbff64475}{operator==} (const \hyperlink{classNode}{Node} \&that) const 
+\item 
+bool \hyperlink{classNode_a28321fd17adb733e76052d31065de894}{operator$<$} (const \hyperlink{classNode}{Node} \&that) const 
+\item 
+bool \hyperlink{classNode_a960471106e7e4de5904149a9a3ada920}{operator!=} (const \hyperlink{classNode}{Node} \&that) const 
+\item 
+bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const \hyperlink{classNode}{Node} \&a, const \hyperlink{classNode}{Node} \&b) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classAStarPathFinder}{A\+Star\+Path\+Finder}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x,y} & to present the location \\
+\hline
+{\em f\+Score,g\+Score,h\+Score} & are the algorithm for the a$\ast$ \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node()}{Node()}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+::\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_ad7a34779cad45d997bfd6d3d8043c75f}{}\label{classNode_ad7a34779cad45d997bfd6d3d8043c75f}
+
+\begin{DoxyCode}
+13            \{
+14   this->x = -1;
+15   this->y = -1;
+16   this->fScore = std::numeric\_limits<double>::max();
+17   this->gScore = std::numeric\_limits<double>::max();
+18   this->hScore = std::numeric\_limits<double>::max();
+19 \}
+\end{DoxyCode}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node(int x, int y)}{Node(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a23a19f53dfbb18fec58cdac90de3d144}{}\label{classNode_a23a19f53dfbb18fec58cdac90de3d144}
+
+\begin{DoxyCode}
+24                        \{
+25   this->x = x;
+26   this->y = y;
+27   this->fScore = std::numeric\_limits<double>::max();
+28   this->gScore = std::numeric\_limits<double>::max();
+29   this->hScore = std::numeric\_limits<double>::max();
+30 \}
+\end{DoxyCode}
+\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{$\sim$\+Node()}{~Node()}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+::$\sim$\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classNode_aa0840c3cb5c7159be6d992adecd2097c}{}\label{classNode_aa0840c3cb5c7159be6d992adecd2097c}
+
+\begin{DoxyCode}
+21             \{
+22 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Node@{Node}!getf\+Score@{getf\+Score}}
+\index{getf\+Score@{getf\+Score}!Node@{Node}}
+\subsubsection[{\texorpdfstring{getf\+Score() const }{getfScore() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Node\+::getf\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_af2d1b4d63492be819be4566bf23c2215}{}\label{classNode_af2d1b4d63492be819be4566bf23c2215}
+
+\begin{DoxyCode}
+40                              \{
+41   \textcolor{keywordflow}{return} this->fScore;
+42 \}
+\end{DoxyCode}
+\index{Node@{Node}!getg\+Score@{getg\+Score}}
+\index{getg\+Score@{getg\+Score}!Node@{Node}}
+\subsubsection[{\texorpdfstring{getg\+Score() const }{getgScore() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Node\+::getg\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a6d96ac905adeaa43c9ec4cef44f5617b}{}\label{classNode_a6d96ac905adeaa43c9ec4cef44f5617b}
+
+\begin{DoxyCode}
+44                              \{
+45   \textcolor{keywordflow}{return} this->gScore;
+46 \}
+\end{DoxyCode}
+\index{Node@{Node}!geth\+Score@{geth\+Score}}
+\index{geth\+Score@{geth\+Score}!Node@{Node}}
+\subsubsection[{\texorpdfstring{geth\+Score() const }{gethScore() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Node\+::geth\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a04d718022d49c317f12ecbe2829642e7}{}\label{classNode_a04d718022d49c317f12ecbe2829642e7}
+
+\begin{DoxyCode}
+48                              \{
+49   \textcolor{keywordflow}{return} this->hScore;
+50 \}
+\end{DoxyCode}
+\index{Node@{Node}!get\+Parent@{get\+Parent}}
+\index{get\+Parent@{get\+Parent}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+Parent() const }{getParent() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Node} $>$ Node\+::get\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a707ec5f7e95ba42c15c263adc1ee70fe}{}\label{classNode_a707ec5f7e95ba42c15c263adc1ee70fe}
+
+\begin{DoxyCode}
+68                                           \{
+69   \textcolor{keywordflow}{return} this->parent;
+70 \}
+\end{DoxyCode}
+\index{Node@{Node}!getX@{getX}}
+\index{getX@{getX}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+X() const }{getX() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::getX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{}\label{classNode_aa45b6294ee8c7aafdf5a1450f879c598}
+
+\begin{DoxyCode}
+32                      \{
+33   \textcolor{keywordflow}{return} this->x;
+34 \}
+\end{DoxyCode}
+\index{Node@{Node}!getY@{getY}}
+\index{getY@{getY}!Node@{Node}}
+\subsubsection[{\texorpdfstring{get\+Y() const }{getY() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::getY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a81610ad138e2ac2cca79603032aaafc1}{}\label{classNode_a81610ad138e2ac2cca79603032aaafc1}
+
+\begin{DoxyCode}
+36                      \{
+37   \textcolor{keywordflow}{return} this->y;
+38 \}
+\end{DoxyCode}
+\index{Node@{Node}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Node@{Node}}
+\subsubsection[{\texorpdfstring{operator"!=(const Node \&that) const }{operator!=(const Node &that) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{that}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a960471106e7e4de5904149a9a3ada920}{}\label{classNode_a960471106e7e4de5904149a9a3ada920}
+
+\begin{DoxyCode}
+82                                              \{
+83   \textcolor{keywordflow}{if} (this->x != that.x || this->y != that.y)
+84     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+85   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+86 \}
+\end{DoxyCode}
+\index{Node@{Node}!operator()@{operator()}}
+\index{operator()@{operator()}!Node@{Node}}
+\subsubsection[{\texorpdfstring{operator()(const Node \&a, const Node \&b) const }{operator()(const Node &a, const Node &b) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{a, }
+\item[{const {\bf Node} \&}]{b}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a98fe48fa4761cda6ebc90080635f66e6}{}\label{classNode_a98fe48fa4761cda6ebc90080635f66e6}
+
+\begin{DoxyCode}
+88                                                          \{
+89   \textcolor{keywordflow}{return} a.\hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getfScore}() < b.\hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getfScore}();
+90 \}
+\end{DoxyCode}
+\index{Node@{Node}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Node@{Node}}
+\subsubsection[{\texorpdfstring{operator$<$(const Node \&that) const }{operator<(const Node &that) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{that}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a28321fd17adb733e76052d31065de894}{}\label{classNode_a28321fd17adb733e76052d31065de894}
+
+\begin{DoxyCode}
+78                                             \{
+79   \textcolor{keywordflow}{return} this->fScore < that.\hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getfScore}();
+80 \}
+\end{DoxyCode}
+\index{Node@{Node}!operator==@{operator==}}
+\index{operator==@{operator==}!Node@{Node}}
+\subsubsection[{\texorpdfstring{operator==(const Node \&that) const }{operator==(const Node &that) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{that}
+\end{DoxyParamCaption}
+) const}\hypertarget{classNode_a33836aa8a9e679df56237e2cbff64475}{}\label{classNode_a33836aa8a9e679df56237e2cbff64475}
+
+\begin{DoxyCode}
+72                                              \{
+73   \textcolor{keywordflow}{if} (this->x == that.x && this->y == that.y)
+74     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+75   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+76 \}
+\end{DoxyCode}
+\index{Node@{Node}!setf\+Score@{setf\+Score}}
+\index{setf\+Score@{setf\+Score}!Node@{Node}}
+\subsubsection[{\texorpdfstring{setf\+Score(double f\+Score)}{setfScore(double fScore)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::setf\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{f\+Score}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a5c3c70e327b9e358435ef1689eeb81b0}{}\label{classNode_a5c3c70e327b9e358435ef1689eeb81b0}
+
+\begin{DoxyCode}
+52                                   \{
+53   this->fScore = fScore;
+54 \}
+\end{DoxyCode}
+\index{Node@{Node}!setg\+Score@{setg\+Score}}
+\index{setg\+Score@{setg\+Score}!Node@{Node}}
+\subsubsection[{\texorpdfstring{setg\+Score(double g\+Score)}{setgScore(double gScore)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::setg\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{g\+Score}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a00e41993c05f5bfc5db6d98a58680c51}{}\label{classNode_a00e41993c05f5bfc5db6d98a58680c51}
+
+\begin{DoxyCode}
+56                                   \{
+57   this->gScore = gScore;
+58 \}
+\end{DoxyCode}
+\index{Node@{Node}!seth\+Score@{seth\+Score}}
+\index{seth\+Score@{seth\+Score}!Node@{Node}}
+\subsubsection[{\texorpdfstring{seth\+Score(double h\+Score)}{sethScore(double hScore)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::seth\+Score (
+\begin{DoxyParamCaption}
+\item[{double}]{h\+Score}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_afc359dbe960036d705b2d68a697a416e}{}\label{classNode_afc359dbe960036d705b2d68a697a416e}
+
+\begin{DoxyCode}
+60                                   \{
+61   this->hScore = hScore;
+62 \}
+\end{DoxyCode}
+\index{Node@{Node}!set\+Parent@{set\+Parent}}
+\index{set\+Parent@{set\+Parent}!Node@{Node}}
+\subsubsection[{\texorpdfstring{set\+Parent(const Node \&parent)}{setParent(const Node &parent)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Parent (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{parent}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a4c4c80be951d7b2a08b7b061cc9add13}{}\label{classNode_a4c4c80be951d7b2a08b7b061cc9add13}
+
+\begin{DoxyCode}
+64                                        \{
+65   this->parent = std::make\_shared<Node>(parent.\hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX}(), parent.\hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY}());
+66 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Node_8h}{Node.\+h}\item 
+app/\hyperlink{Node_8cpp}{Node.\+cpp}\end{DoxyCompactItemize}

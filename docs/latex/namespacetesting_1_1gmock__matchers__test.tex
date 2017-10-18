@@ -91,15 +91,15 @@ typedef \hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTes
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classtesting_1_1Matcher}{Matcher}$<$ int $>$ \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{Greater\+Than} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\hyperlink{classtesting_1_1Matcher}{Matcher}$<$ int $>$ \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{Greater\+Than} (int n)
 \item 
 string \hyperlink{namespacetesting_1_1gmock__matchers__test_a5d48d2ef7ca374de369c5f0a30e32343}{Of\+Type} (const string \&type\+\_\+name)
 \item 
-{\footnotesize template$<$typename T $>$ }\\string \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe} (const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ T $>$ \&\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m})
+{\footnotesize template$<$typename T $>$ }\\string \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe} (const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ T $>$ \&m)
 \item 
-{\footnotesize template$<$typename T $>$ }\\string \hyperlink{namespacetesting_1_1gmock__matchers__test_afbc8022da5a58aa467ec414ab3e90908}{Describe\+Negation} (const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ T $>$ \&\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m})
+{\footnotesize template$<$typename T $>$ }\\string \hyperlink{namespacetesting_1_1gmock__matchers__test_afbc8022da5a58aa467ec414ab3e90908}{Describe\+Negation} (const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ T $>$ \&m)
 \item 
-{\footnotesize template$<$typename Matcher\+Type , typename Value $>$ }\\string \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain} (const Matcher\+Type \&\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}, const \hyperlink{namespacetesting_ae44c50a3a7f0a46f05c8a0b0592b4a62}{Value} \&x)
+{\footnotesize template$<$typename Matcher\+Type , typename Value $>$ }\\string \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain} (const Matcher\+Type \&m, const \hyperlink{namespacetesting_ae44c50a3a7f0a46f05c8a0b0592b4a62}{Value} \&x)
 \item 
 \hyperlink{namespacetesting_1_1gmock__matchers__test_a7bc21ec910c3861034d1336fecfcc260}{T\+E\+ST} (Match\+Result\+Listener\+Test, Streaming\+Works)
 \item 
@@ -359,7 +359,7 @@ bool \hyperlink{namespacetesting_1_1gmock__matchers__test_a4b9f261a3b98ba0e0bca2
 \item 
 \hyperlink{namespacetesting_1_1gmock__matchers__test_a46849e0c019e331f830ed91137fa417a}{T\+E\+ST} (Not\+Test, Not\+Matcher\+Safely\+Casts\+Monomorphic\+Matchers)
 \item 
-void \hyperlink{namespacetesting_1_1gmock__matchers__test_a51d8731c3824a6acdaa594645dd46779}{All\+Of\+Matches} (int num, const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ int $>$ \&\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m})
+void \hyperlink{namespacetesting_1_1gmock__matchers__test_a51d8731c3824a6acdaa594645dd46779}{All\+Of\+Matches} (int num, const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ int $>$ \&m)
 \item 
 \hyperlink{namespacetesting_1_1gmock__matchers__test_a7714d041eb2dd2e233db7f175fedef5a}{T\+E\+ST} (All\+Of\+Test, Matches\+When\+All\+Match)
 \item 
@@ -371,7 +371,7 @@ void \hyperlink{namespacetesting_1_1gmock__matchers__test_a51d8731c3824a6acdaa59
 \item 
 \hyperlink{namespacetesting_1_1gmock__matchers__test_a2b9f4a791dd4f1fb9f8a1400883a5db4}{T\+E\+ST} (All\+Of\+Test, Explains\+Result)
 \item 
-void \hyperlink{namespacetesting_1_1gmock__matchers__test_aa4e9deb0a98413e62516451e7c060c7a}{Any\+Of\+Matches} (int num, const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ int $>$ \&\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m})
+void \hyperlink{namespacetesting_1_1gmock__matchers__test_aa4e9deb0a98413e62516451e7c060c7a}{Any\+Of\+Matches} (int num, const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ int $>$ \&m)
 \item 
 \hyperlink{namespacetesting_1_1gmock__matchers__test_a4949d40a1ac77182274189c21848af00}{T\+E\+ST} (Any\+Of\+Test, Matches\+When\+Any\+Matches)
 \item 
@@ -385,7 +385,7 @@ void \hyperlink{namespacetesting_1_1gmock__matchers__test_aa4e9deb0a98413e625164
 \item 
 int \hyperlink{namespacetesting_1_1gmock__matchers__test_a70e728cf67d0224c3ebb9eb8959cc39d}{Is\+Positive} (double x)
 \item 
-bool \hyperlink{namespacetesting_1_1gmock__matchers__test_abdce9daf2e3d3721d68f76680129f03b}{References\+Foo\+And\+Is\+Zero} (const int \&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+bool \hyperlink{namespacetesting_1_1gmock__matchers__test_abdce9daf2e3d3721d68f76680129f03b}{References\+Foo\+And\+Is\+Zero} (const int \&n)
 \item 
 \hyperlink{namespacetesting_1_1gmock__matchers__test_ab7761562a8ffea67a485f3f649f6430a}{T\+E\+ST} (Truly\+Test, Matches\+What\+Satisfies\+The\+Predicate)
 \item 
@@ -601,11 +601,11 @@ const string \& \hyperlink{namespacetesting_1_1gmock__matchers__test_a5fdf1ecaf8
 \item 
 \hyperlink{namespacetesting_1_1gmock__matchers__test_a976290e53e319b06c51a94f7e450d765}{T\+E\+ST} (Result\+Of\+Test, Works\+For\+Polymorphic\+Functors)
 \item 
-const int $\ast$ \hyperlink{namespacetesting_1_1gmock__matchers__test_af3164fc302e0b727c1eb745bdeb959f6}{Referencing\+Function} (const int \&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+const int $\ast$ \hyperlink{namespacetesting_1_1gmock__matchers__test_af3164fc302e0b727c1eb745bdeb959f6}{Referencing\+Function} (const int \&n)
 \item 
 \hyperlink{namespacetesting_1_1gmock__matchers__test_a00ee08657c9e9e0c306be7b84cd2848c}{T\+E\+ST} (Result\+Of\+Test, Works\+For\+Referencing\+Callables)
 \item 
-\hyperlink{classtesting_1_1PolymorphicMatcher}{Polymorphic\+Matcher}$<$ \hyperlink{classtesting_1_1gmock__matchers__test_1_1DivisibleByImpl}{Divisible\+By\+Impl} $>$ \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{Divisible\+By} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\hyperlink{classtesting_1_1PolymorphicMatcher}{Polymorphic\+Matcher}$<$ \hyperlink{classtesting_1_1gmock__matchers__test_1_1DivisibleByImpl}{Divisible\+By\+Impl} $>$ \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{Divisible\+By} (int n)
 \item 
 \hyperlink{namespacetesting_1_1gmock__matchers__test_aa9a60a406d9f495de8c8552abf577dd1}{T\+E\+ST} (Explain\+Match\+Result\+Test, All\+Of\+\_\+\+False\+\_\+\+False)
 \item 
@@ -868,12 +868,12 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2046                                                   \{
-2047   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}));
-2048   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.Matches(0));
+2047   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
+2048   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(0));
 2049   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 1; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} <= num; ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
-2050     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.Matches(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}));
+2050     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}));
 2051   \}
-2052   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.Matches(num + 1));
+2052   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(num + 1));
 2053 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!Any\+Of\+Matches@{Any\+Of\+Matches}}
@@ -887,12 +887,12 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2244                                                   \{
-2245   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}));
-2246   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.Matches(0));
+2245   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
+2246   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(0));
 2247   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 1; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} <= num; ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
-2248     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.Matches(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}));
+2248     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}));
 2249   \}
-2250   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.Matches(num + 1));
+2250   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(num + 1));
 2251 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!Describe@{Describe}}
@@ -906,7 +906,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 202                                      \{
 203   stringstream ss;
-204   \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.DescribeTo(&ss);
+204   m.DescribeTo(&ss);
 205   \textcolor{keywordflow}{return} ss.str();
 206 \}
 \end{DoxyCode}
@@ -921,7 +921,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 210                                              \{
 211   stringstream ss;
-212   \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.DescribeNegationTo(&ss);
+212   m.DescribeNegationTo(&ss);
 213   \textcolor{keywordflow}{return} ss.str();
 214 \}
 \end{DoxyCode}
@@ -935,7 +935,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3990                                                        \{
-3991   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a667ca94f190ec2e17ee2fbfdb7d3da04}{MakePolymorphicMatcher}(DivisibleByImpl(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}));
+3991   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a667ca94f190ec2e17ee2fbfdb7d3da04}{MakePolymorphicMatcher}(DivisibleByImpl(n));
 3992 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!Double\+Function@{Double\+Function}}
@@ -977,7 +977,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 218                                                      \{
 219   StringMatchResultListener listener;
-220   \hyperlink{namespacetesting_a6d5fbd5104dafc63bf705dafbcb5ce18}{ExplainMatchResult}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}, x, &listener);
+220   \hyperlink{namespacetesting_a6d5fbd5104dafc63bf705dafbcb5ce18}{ExplainMatchResult}(m, x, &listener);
 221   \textcolor{keywordflow}{return} listener.str();
 222 \}
 \end{DoxyCode}
@@ -1004,7 +1004,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 188                                 \{
-189   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a37fd8029ac00e60952440a3d9cca8166}{MakeMatcher}(\textcolor{keyword}{new} GreaterThanMatcher(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}));
+189   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a37fd8029ac00e60952440a3d9cca8166}{MakeMatcher}(\textcolor{keyword}{new} GreaterThanMatcher(n));
 190 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+P@{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+P}}
@@ -1262,7 +1262,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2456                                           \{
-2457   \textcolor{keywordflow}{return} (&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} == &\hyperlink{namespacefoo}{foo}) && (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} == 0);
+2457   \textcolor{keywordflow}{return} (&n == &\hyperlink{namespacefoo}{foo}) && (n == 0);
 2458 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!Referencing\+Function@{Referencing\+Function}}
@@ -1274,7 +1274,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 )}\hypertarget{namespacetesting_1_1gmock__matchers__test_af3164fc302e0b727c1eb745bdeb959f6}{}\label{namespacetesting_1_1gmock__matchers__test_af3164fc302e0b727c1eb745bdeb959f6}
 
 \begin{DoxyCode}
-3944 \{ \textcolor{keywordflow}{return} &\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}; \}
+3944 \{ \textcolor{keywordflow}{return} &n; \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!Ref\+Uncopyable\+Function@{Ref\+Uncopyable\+Function}}
 \index{Ref\+Uncopyable\+Function@{Ref\+Uncopyable\+Function}!testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}}
@@ -1372,7 +1372,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 274                                                               \{
-275   EvenMatcherImpl \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+275   EvenMatcherImpl m;
 276 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!T\+E\+ST@{T\+E\+ST}}
@@ -1386,7 +1386,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 299                                                         \{
-300   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a37fd8029ac00e60952440a3d9cca8166}{MakeMatcher}(\textcolor{keyword}{new} NewEvenMatcherImpl);
+300   Matcher<int> m = \hyperlink{namespacetesting_a37fd8029ac00e60952440a3d9cca8166}{MakeMatcher}(\textcolor{keyword}{new} NewEvenMatcherImpl);
 301   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(2));
 302   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(3));
 303   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"value % 2 == 0"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, 2));
@@ -1404,7 +1404,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 308                                            \{
-309   Matcher<double> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+309   Matcher<double> m;
 310 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!T\+E\+ST@{T\+E\+ST}}
@@ -1419,9 +1419,9 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 313                                                         \{
 314   \textcolor{keyword}{const} MatcherInterface<int>* impl = \textcolor{keyword}{new} EvenMatcherImpl;
-315   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}(impl);
-316   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.Matches(4));
-317   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.Matches(5));
+315   Matcher<int> m(impl);
+316   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(4));
+317   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(5));
 318 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!T\+E\+ST@{T\+E\+ST}}
@@ -1453,7 +1453,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 328                                                       \{
 329   Matcher<int*> m1 = NULL;
 330   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m1.Matches(NULL));
-331   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
+331   \textcolor{keywordtype}{int} n = 0;
 332   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m1.Matches(&n));
 333 \}
 \end{DoxyCode}
@@ -1505,7 +1505,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 356                                    \{
-357   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(0);
+357   Matcher<int> m = \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(0);
 358   StringMatchResultListener listener1;
 359   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.MatchAndExplain(42, &listener1));
 360   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which is 42 more than 0"}, listener1.str());
@@ -1567,7 +1567,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 432                                                              \{
 433   \textcolor{keyword}{const} MatcherInterface<int>* dummy\_impl = NULL;
-434   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a37fd8029ac00e60952440a3d9cca8166}{MakeMatcher}(dummy\_impl);
+434   Matcher<int> m = \hyperlink{namespacetesting_a37fd8029ac00e60952440a3d9cca8166}{MakeMatcher}(dummy\_impl);
 435 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!T\+E\+ST@{T\+E\+ST}}
@@ -1641,7 +1641,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 530                                               \{
-531   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = MatcherCast<int>(\hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(5));
+531   Matcher<int> m = MatcherCast<int>(\hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(5));
 532   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(5));
 533   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(6));
 534 \}
@@ -1735,7 +1735,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 595                                                    \{
 596   Matcher<int> m1 = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(0);
 597   Matcher<int&> m2 = MatcherCast<int&>(m1);
-598   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
+598   \textcolor{keywordtype}{int} n = 0;
 599   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m2.Matches(n));
 600   n = 1;
 601   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m2.Matches(n));
@@ -1769,7 +1769,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 630                                                    \{
-631   Matcher<ConvertibleFromAny> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = MatcherCast<ConvertibleFromAny>(1);
+631   Matcher<ConvertibleFromAny> m = MatcherCast<ConvertibleFromAny>(1);
 632   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(ConvertibleFromAny(1)));
 633   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(ConvertibleFromAny(2)));
 634 \}
@@ -1785,7 +1785,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 636                                               \{
-637   Matcher<ConvertibleFromAny> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} =
+637   Matcher<ConvertibleFromAny> m =
 638       MatcherCast<ConvertibleFromAny>(\hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(ConvertibleFromAny(1)));
 639   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(ConvertibleFromAny(1)));
 640   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(ConvertibleFromAny(2)));
@@ -1802,8 +1802,8 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 652                                         \{
-653   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 42;
-654   Matcher<IntReferenceWrapper> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = MatcherCast<IntReferenceWrapper>(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
+653   \textcolor{keywordtype}{int} n = 42;
+654   Matcher<IntReferenceWrapper> m = MatcherCast<IntReferenceWrapper>(n);
 655   \textcolor{comment}{// Verify that the matcher holds a reference to n, not to its temporary copy.}
 656   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(n));
 657 \}
@@ -1879,7 +1879,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 712                                                          \{
-713   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
+713   \textcolor{keywordtype}{int} n = 0;
 714   Matcher<const int&> m1 = \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(n);
 715   Matcher<int&> m2 = SafeMatcherCast<int&>(m1);
 716   \textcolor{keywordtype}{int} n1 = 0;
@@ -1917,7 +1917,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 730                                                        \{
 731   Matcher<int> m1 = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(0);
 732   Matcher<int&> m2 = SafeMatcherCast<int&>(m1);
-733   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
+733   \textcolor{keywordtype}{int} n = 0;
 734   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m2.Matches(n));
 735   n = 1;
 736   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m2.Matches(n));
@@ -1951,7 +1951,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 747                                                        \{
-748   Matcher<ConvertibleFromAny> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = SafeMatcherCast<ConvertibleFromAny>(1);
+748   Matcher<ConvertibleFromAny> m = SafeMatcherCast<ConvertibleFromAny>(1);
 749   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(ConvertibleFromAny(1)));
 750   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(ConvertibleFromAny(2)));
 751 \}
@@ -1967,7 +1967,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 753                                                   \{
-754   Matcher<ConvertibleFromAny> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} =
+754   Matcher<ConvertibleFromAny> m =
 755       SafeMatcherCast<ConvertibleFromAny>(\hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(ConvertibleFromAny(1)));
 756   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(ConvertibleFromAny(1)));
 757   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(ConvertibleFromAny(2)));
@@ -1984,8 +1984,8 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 760                                             \{
-761   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 42;
-762   Matcher<IntReferenceWrapper> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = SafeMatcherCast<IntReferenceWrapper>(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
+761   \textcolor{keywordtype}{int} n = 42;
+762   Matcher<IntReferenceWrapper> m = SafeMatcherCast<IntReferenceWrapper>(n);
 763   \textcolor{comment}{// Verify that the matcher holds a reference to n, not to its temporary copy.}
 764   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(n));
 765 \}
@@ -2155,7 +2155,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 848                                       \{
-849   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_};
+849   Matcher<int> m = \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_};
 850   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is anything"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 851 \}
 \end{DoxyCode}
@@ -2190,7 +2190,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 879                               \{
-880   Matcher<Unprintable> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(Unprintable());
+880   Matcher<Unprintable> m = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(Unprintable());
 881   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is equal to 1-byte object <61>"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 882 \}
 \end{DoxyCode}
@@ -2292,7 +2292,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 941                               \{
-942   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(5);
+942   Matcher<int> m = \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(5);
 943   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is >= 5"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 944 \}
 \end{DoxyCode}
@@ -2324,7 +2324,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 955                               \{
-956   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}(5);
+956   Matcher<int> m = \hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}(5);
 957   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is > 5"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 958 \}
 \end{DoxyCode}
@@ -2356,7 +2356,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 969                               \{
-970   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(5);
+970   Matcher<int> m = \hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(5);
 971   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is <= 5"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 972 \}
 \end{DoxyCode}
@@ -2388,7 +2388,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 983                               \{
-984   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}(5);
+984   Matcher<int> m = \hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}(5);
 985   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is < 5"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 986 \}
 \end{DoxyCode}
@@ -2420,7 +2420,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 997                               \{
-998   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_afe42d41d5171234cb9da5da27faeb7e8}{Ne}(5);
+998   Matcher<int> m = \hyperlink{namespacetesting_afe42d41d5171234cb9da5da27faeb7e8}{Ne}(5);
 999   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"isn't equal to 5"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1000 \}
 \end{DoxyCode}
@@ -2437,7 +2437,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 1003                                      \{
 1004   Matcher<int*> m1 = \hyperlink{namespacetesting_a56ffb1a169c14ce585fc5bed32add2db}{IsNull}();
 1005   \textcolor{keywordtype}{int}* p1 = NULL;
-1006   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
+1006   \textcolor{keywordtype}{int} n = 0;
 1007   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m1.Matches(p1));
 1008   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m1.Matches(&n));
 1009 
@@ -2473,7 +2473,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1031                             \{
-1032   \textcolor{keyword}{const} Matcher<linked\_ptr<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a56ffb1a169c14ce585fc5bed32add2db}{IsNull}();
+1032   \textcolor{keyword}{const} Matcher<linked\_ptr<int> > m = \hyperlink{namespacetesting_a56ffb1a169c14ce585fc5bed32add2db}{IsNull}();
 1033   \textcolor{keyword}{const} linked\_ptr<int> null\_p;
 1034   \textcolor{keyword}{const} linked\_ptr<int> non\_null\_p(\textcolor{keyword}{new} \textcolor{keywordtype}{int});
 1035 
@@ -2492,7 +2492,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1040                                             \{
-1041   \textcolor{keyword}{const} Matcher<const linked\_ptr<double>&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a56ffb1a169c14ce585fc5bed32add2db}{IsNull}();
+1041   \textcolor{keyword}{const} Matcher<const linked\_ptr<double>&> m = \hyperlink{namespacetesting_a56ffb1a169c14ce585fc5bed32add2db}{IsNull}();
 1042   \textcolor{keyword}{const} linked\_ptr<double> null\_p;
 1043   \textcolor{keyword}{const} linked\_ptr<double> non\_null\_p(\textcolor{keyword}{new} \textcolor{keywordtype}{double});
 1044 
@@ -2511,7 +2511,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1059                                   \{
-1060   Matcher<int*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a56ffb1a169c14ce585fc5bed32add2db}{IsNull}();
+1060   Matcher<int*> m = \hyperlink{namespacetesting_a56ffb1a169c14ce585fc5bed32add2db}{IsNull}();
 1061   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is NULL"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1062   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"isn't NULL"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_afbc8022da5a58aa467ec414ab3e90908}{DescribeNegation}(m));
 1063 \}
@@ -2529,7 +2529,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 1066                                          \{
 1067   Matcher<int*> m1 = \hyperlink{namespacetesting_a39d1f92b53b8b2a0b6db6a22ac146416}{NotNull}();
 1068   \textcolor{keywordtype}{int}* p1 = NULL;
-1069   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
+1069   \textcolor{keywordtype}{int} n = 0;
 1070   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m1.Matches(p1));
 1071   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m1.Matches(&n));
 1072 
@@ -2550,7 +2550,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1079                              \{
-1080   \textcolor{keyword}{const} Matcher<linked\_ptr<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a39d1f92b53b8b2a0b6db6a22ac146416}{NotNull}();
+1080   \textcolor{keyword}{const} Matcher<linked\_ptr<int> > m = \hyperlink{namespacetesting_a39d1f92b53b8b2a0b6db6a22ac146416}{NotNull}();
 1081   \textcolor{keyword}{const} linked\_ptr<int> null\_p;
 1082   \textcolor{keyword}{const} linked\_ptr<int> non\_null\_p(\textcolor{keyword}{new} \textcolor{keywordtype}{int});
 1083 
@@ -2569,7 +2569,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1088                                              \{
-1089   \textcolor{keyword}{const} Matcher<const linked\_ptr<double>&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a39d1f92b53b8b2a0b6db6a22ac146416}{NotNull}();
+1089   \textcolor{keyword}{const} Matcher<const linked\_ptr<double>&> m = \hyperlink{namespacetesting_a39d1f92b53b8b2a0b6db6a22ac146416}{NotNull}();
 1090   \textcolor{keyword}{const} linked\_ptr<double> null\_p;
 1091   \textcolor{keyword}{const} linked\_ptr<double> non\_null\_p(\textcolor{keyword}{new} \textcolor{keywordtype}{double});
 1092 
@@ -2588,7 +2588,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1107                                    \{
-1108   Matcher<int*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a39d1f92b53b8b2a0b6db6a22ac146416}{NotNull}();
+1108   Matcher<int*> m = \hyperlink{namespacetesting_a39d1f92b53b8b2a0b6db6a22ac146416}{NotNull}();
 1109   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"isn't NULL"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1110 \}
 \end{DoxyCode}
@@ -2605,7 +2605,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 1114                                    \{
 1115   \textcolor{keywordtype}{int} a = 0;
 1116   \textcolor{keywordtype}{int} b = 0;
-1117   Matcher<int&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(a);
+1117   Matcher<int&> m = \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(a);
 1118   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(a));
 1119   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(b));
 1120 \}
@@ -2621,8 +2621,8 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1123                                \{
-1124   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 5;
-1125   Matcher<int&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(n);
+1124   \textcolor{keywordtype}{int} n = 5;
+1125   Matcher<int&> m = \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(n);
 1126   stringstream ss;
 1127   ss << \textcolor{stringliteral}{"references the variable @"} << &n << \textcolor{stringliteral}{" 5"};
 1128   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{keywordtype}{string}(ss.str()), \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
@@ -2641,7 +2641,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 1133                                                    \{
 1134   \textcolor{keywordtype}{int} a = 0;
 1135   \textcolor{keywordtype}{int} b = 0;
-1136   Matcher<const int&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(a);
+1136   Matcher<const int&> m = \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(a);
 1137   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(a));
 1138   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(b));
 1139 \}
@@ -2681,11 +2681,11 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1159                               \{
-1160   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
+1160   \textcolor{keywordtype}{int} n = 0;
 1161   \hyperlink{gmock-matchers_8h_ac31e206123aa702e1152bb2735b31409}{EXPECT\_THAT}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(Matcher<const int&>(\hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(n)), n),
 1162               \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"which is located @"}));
 1163 
-1164   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = 0;
+1164   \textcolor{keywordtype}{int} m = 0;
 1165   \hyperlink{gmock-matchers_8h_ac31e206123aa702e1152bb2735b31409}{EXPECT\_THAT}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(Matcher<const int&>(\hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(n)), m),
 1166               \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"which is located @"}));
 1167 \}
@@ -2701,7 +2701,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1171                                     \{
-1172   Matcher<const char*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a154de81376ae7d584c6e5a619b45fb09}{StrEq}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"Hello"}));
+1172   Matcher<const char*> m = \hyperlink{namespacetesting_a154de81376ae7d584c6e5a619b45fb09}{StrEq}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"Hello"}));
 1173   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\textcolor{stringliteral}{"Hello"}));
 1174   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\textcolor{stringliteral}{"hello"}));
 1175   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(NULL));
@@ -2722,7 +2722,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1182                                  \{
-1183   Matcher<string> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a154de81376ae7d584c6e5a619b45fb09}{StrEq}(\textcolor{stringliteral}{"Hi-\(\backslash\)'\(\backslash\)"?\(\backslash\)\(\backslash\)\(\backslash\)a\(\backslash\)b\(\backslash\)f\(\backslash\)n\(\backslash\)r\(\backslash\)t\(\backslash\)v\(\backslash\)xD3"});
+1183   Matcher<string> m = \hyperlink{namespacetesting_a154de81376ae7d584c6e5a619b45fb09}{StrEq}(\textcolor{stringliteral}{"Hi-\(\backslash\)'\(\backslash\)"?\(\backslash\)\(\backslash\)\(\backslash\)a\(\backslash\)b\(\backslash\)f\(\backslash\)n\(\backslash\)r\(\backslash\)t\(\backslash\)v\(\backslash\)xD3"});
 1184   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is equal to \(\backslash\)"Hi-\(\backslash\)'\(\backslash\)\(\backslash\)\(\backslash\)"?\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)a\(\backslash\)\(\backslash\)b\(\backslash\)\(\backslash\)f\(\backslash\)\(\backslash\)n\(\backslash\)\(\backslash\)r\(\backslash\)\(\backslash\)t\(\backslash\)\(\backslash\)v\(\backslash\)\(\backslash\)xD3\(\backslash\)""},
 1185       \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1186 
@@ -2746,7 +2746,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1196                                       \{
-1197   Matcher<const char*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a6f6b8af3d19cb969df0eb995c47a14d2}{StrNe}(\textcolor{stringliteral}{"Hello"});
+1197   Matcher<const char*> m = \hyperlink{namespacetesting_a6f6b8af3d19cb969df0eb995c47a14d2}{StrNe}(\textcolor{stringliteral}{"Hello"});
 1198   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\textcolor{stringliteral}{""}));
 1199   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(NULL));
 1200   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\textcolor{stringliteral}{"Hello"}));
@@ -2767,7 +2767,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1207                                  \{
-1208   Matcher<const char*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a6f6b8af3d19cb969df0eb995c47a14d2}{StrNe}(\textcolor{stringliteral}{"Hi"});
+1208   Matcher<const char*> m = \hyperlink{namespacetesting_a6f6b8af3d19cb969df0eb995c47a14d2}{StrNe}(\textcolor{stringliteral}{"Hi"});
 1209   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"isn't equal to \(\backslash\)"Hi\(\backslash\)""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1210 \}
 \end{DoxyCode}
@@ -2782,7 +2782,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1212                                                     \{
-1213   Matcher<const char*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_addbdb8c0902ab09cade24fa6db7c0073}{StrCaseEq}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"Hello"}));
+1213   Matcher<const char*> m = \hyperlink{namespacetesting_addbdb8c0902ab09cade24fa6db7c0073}{StrCaseEq}(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"Hello"}));
 1214   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\textcolor{stringliteral}{"Hello"}));
 1215   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\textcolor{stringliteral}{"hello"}));
 1216   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\textcolor{stringliteral}{"Hi"}));
@@ -2839,7 +2839,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1249                                      \{
-1250   Matcher<string> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_addbdb8c0902ab09cade24fa6db7c0073}{StrCaseEq}(\textcolor{stringliteral}{"Hi"});
+1250   Matcher<string> m = \hyperlink{namespacetesting_addbdb8c0902ab09cade24fa6db7c0073}{StrCaseEq}(\textcolor{stringliteral}{"Hi"});
 1251   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is equal to (ignoring case) \(\backslash\)"Hi\(\backslash\)""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1252 \}
 \end{DoxyCode}
@@ -2854,7 +2854,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1254                                                       \{
-1255   Matcher<const char*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a9596fd67bdd5df195bc54382f91a1906}{StrCaseNe}(\textcolor{stringliteral}{"Hello"});
+1255   Matcher<const char*> m = \hyperlink{namespacetesting_a9596fd67bdd5df195bc54382f91a1906}{StrCaseNe}(\textcolor{stringliteral}{"Hello"});
 1256   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\textcolor{stringliteral}{"Hi"}));
 1257   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(NULL));
 1258   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\textcolor{stringliteral}{"Hello"}));
@@ -2876,7 +2876,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1266                                      \{
-1267   Matcher<const char*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a9596fd67bdd5df195bc54382f91a1906}{StrCaseNe}(\textcolor{stringliteral}{"Hi"});
+1267   Matcher<const char*> m = \hyperlink{namespacetesting_a9596fd67bdd5df195bc54382f91a1906}{StrCaseNe}(\textcolor{stringliteral}{"Hi"});
 1268   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"isn't equal to (ignoring case) \(\backslash\)"Hi\(\backslash\)""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1269 \}
 \end{DoxyCode}
@@ -2933,7 +2933,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1296                                      \{
-1297   Matcher<string> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a7d27682e38d57eea81ba145a2772e1c7}{HasSubstr}(\textcolor{stringliteral}{"foo\(\backslash\)n\(\backslash\)""});
+1297   Matcher<string> m = \hyperlink{namespacetesting_a7d27682e38d57eea81ba145a2772e1c7}{HasSubstr}(\textcolor{stringliteral}{"foo\(\backslash\)n\(\backslash\)""});
 1298   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"has substring \(\backslash\)"foo\(\backslash\)\(\backslash\)n\(\backslash\)\(\backslash\)\(\backslash\)"\(\backslash\)""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1299 \}
 \end{DoxyCode}
@@ -2948,7 +2948,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1301                                \{
-1302   Matcher<const pair<std::string, int>&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a6212e76b542f4ffd3079de59092a826a}{Key}(\textcolor{stringliteral}{"foo"});
+1302   Matcher<const pair<std::string, int>&> m = \hyperlink{namespacetesting_a6212e76b542f4ffd3079de59092a826a}{Key}(\textcolor{stringliteral}{"foo"});
 1303   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"has a key that is equal to \(\backslash\)"foo\(\backslash\)""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1304   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"doesn't have a key that is equal to \(\backslash\)"foo\(\backslash\)""}, 
       \hyperlink{namespacetesting_1_1gmock__matchers__test_afbc8022da5a58aa467ec414ab3e90908}{DescribeNegation}(m));
@@ -2965,7 +2965,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1307                               \{
-1308   Matcher<pair<int, bool> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a6212e76b542f4ffd3079de59092a826a}{Key}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(10));
+1308   Matcher<pair<int, bool> > m = \hyperlink{namespacetesting_a6212e76b542f4ffd3079de59092a826a}{Key}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(10));
 1309   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"whose first field is a value which is 5 less than 10"},
 1310             \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, make\_pair(5, \textcolor{keyword}{true})));
 1311   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"whose first field is a value which is 5 more than 10"},
@@ -3111,7 +3111,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 1381                                         \{
 1382   \textcolor{comment}{// If neither field matches, Pair() should explain about the first}
 1383   \textcolor{comment}{// field.}
-1384   \textcolor{keyword}{const} Matcher<pair<int, int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_ac7520de8af26d3085513eeeb68561889}{Pair}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(0), 
+1384   \textcolor{keyword}{const} Matcher<pair<int, int> > m = \hyperlink{namespacetesting_ac7520de8af26d3085513eeeb68561889}{Pair}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(0), 
       \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(0));
 1385   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"whose first field does not match, which is 1 less than 0"},
 1386             \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, make\_pair(-1, -2)));
@@ -3253,7 +3253,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1476                                       \{
-1477   Matcher<const std::string> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"Hi"});
+1477   Matcher<const std::string> m = \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"Hi"});
 1478   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"starts with \(\backslash\)"Hi\(\backslash\)""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1479 \}
 \end{DoxyCode}
@@ -3292,7 +3292,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1497                                     \{
-1498   Matcher<const std::string> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_aec11c4e418a835ca2c0c3cbdb29b28ba}{EndsWith}(\textcolor{stringliteral}{"Hi"});
+1498   Matcher<const std::string> m = \hyperlink{namespacetesting_aec11c4e418a835ca2c0c3cbdb29b28ba}{EndsWith}(\textcolor{stringliteral}{"Hi"});
 1499   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"ends with \(\backslash\)"Hi\(\backslash\)""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1500 \}
 \end{DoxyCode}
@@ -3387,7 +3387,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1934                                      \{
-1935   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}();
+1935   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}();
 1936   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 5)));
 1937   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 6)));
 1938 \}
@@ -3403,7 +3403,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1941                                \{
-1942   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}();
+1942   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}();
 1943   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"are an equal pair"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1944 \}
 \end{DoxyCode}
@@ -3418,7 +3418,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1948                                                   \{
-1949   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}();
+1949   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}();
 1950   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 4)));
 1951   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 5)));
 1952   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 6)));
@@ -3435,7 +3435,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1956                                \{
-1957   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}();
+1957   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}();
 1958   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"are a pair where the first >= the second"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1959 \}
 \end{DoxyCode}
@@ -3450,7 +3450,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1963                                            \{
-1964   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}();
+1964   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}();
 1965   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 4)));
 1966   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 5)));
 1967   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 6)));
@@ -3467,7 +3467,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1971                                \{
-1972   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}();
+1972   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}();
 1973   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"are a pair where the first > the second"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1974 \}
 \end{DoxyCode}
@@ -3482,7 +3482,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1978                                                \{
-1979   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}();
+1979   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}();
 1980   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 6)));
 1981   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 5)));
 1982   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 4)));
@@ -3499,7 +3499,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1986                                \{
-1987   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}();
+1987   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}();
 1988   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"are a pair where the first <= the second"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 1989 \}
 \end{DoxyCode}
@@ -3514,7 +3514,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 1993                                         \{
-1994   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}();
+1994   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}();
 1995   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 6)));
 1996   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 5)));
 1997   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 4)));
@@ -3531,7 +3531,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2001                                \{
-2002   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}();
+2002   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}();
 2003   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"are a pair where the first < the second"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 2004 \}
 \end{DoxyCode}
@@ -3546,7 +3546,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2008                                        \{
-2009   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_afe42d41d5171234cb9da5da27faeb7e8}{Ne}();
+2009   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_afe42d41d5171234cb9da5da27faeb7e8}{Ne}();
 2010   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 6)));
 2011   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 4)));
 2012   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8b82c859cd28da9e7f7d4c6091a3165c}{Tuple2}(5L, 5)));
@@ -3563,7 +3563,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2016                                \{
-2017   Matcher<const Tuple2&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_afe42d41d5171234cb9da5da27faeb7e8}{Ne}();
+2017   Matcher<const Tuple2&> m = \hyperlink{namespacetesting_afe42d41d5171234cb9da5da27faeb7e8}{Ne}();
 2018   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"are an unequal pair"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 2019 \}
 \end{DoxyCode}
@@ -3578,7 +3578,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2022                               \{
-2023   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+2023   Matcher<int> m;
 2024   m = \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(\hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(2));
 2025   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(3));
 2026   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(2));
@@ -3595,7 +3595,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2030                                \{
-2031   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(\hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(5));
+2031   Matcher<int> m = \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(\hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(5));
 2032   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"isn't equal to 5"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 2033 \}
 \end{DoxyCode}
@@ -3613,7 +3613,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 2037   \textcolor{comment}{// greater\_than\_5 is a monomorphic matcher.}
 2038   Matcher<int> greater\_than\_5 = \hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}(5);
 2039 
-2040   Matcher<const int&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(greater\_than\_5);
+2040   Matcher<const int&> m = \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(greater\_than\_5);
 2041   Matcher<int&> m2 = \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(greater\_than\_5);
 2042   Matcher<int&> m3 = \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(m);
 2043 \}
@@ -3629,7 +3629,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2057                                      \{
-2058   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+2058   Matcher<int> m;
 2059   m = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(2), \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(1));
 2060   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(1));
 2061   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(2));
@@ -3688,7 +3688,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2124                                  \{
-2125   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+2125   Matcher<int> m;
 2126   m = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(2), \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(1));
 2127   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"(is <= 2) and (is >= 1)"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 2128 
@@ -3727,7 +3727,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2154                                      \{
-2155   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+2155   Matcher<int> m;
 2156   m = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(2), \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(1));
 2157   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"(isn't <= 2) or "}
 2158             \textcolor{stringliteral}{"(isn't >= 1)"},
@@ -3772,7 +3772,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 2188   Matcher<int> greater\_than\_5 = \hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}(5);
 2189   Matcher<int> less\_than\_10 = \hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}(10);
 2190 
-2191   Matcher<const int&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(greater\_than\_5, less\_than\_10);
+2191   Matcher<const int&> m = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(greater\_than\_5, less\_than\_10);
 2192   Matcher<int&> m2 = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(greater\_than\_5, less\_than\_10);
 2193   Matcher<int&> m3 = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(greater\_than\_5, m2);
 2194 
@@ -3792,7 +3792,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2200                                 \{
-2201   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+2201   Matcher<int> m;
 2202 
 2203   \textcolor{comment}{// Successful match.  Both matchers need to explain.  The second}
 2204   \textcolor{comment}{// matcher doesn't give an explanation, so only the first matcher's}
@@ -3846,7 +3846,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2255                                        \{
-2256   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+2256   Matcher<int> m;
 2257   m = \hyperlink{namespacetesting_a81cfefd9f75cdce827d5bc873cf73aac}{AnyOf}(\hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(1), \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(3));
 2258   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(1));
 2259   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(4));
@@ -3897,7 +3897,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2315                                  \{
-2316   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+2316   Matcher<int> m;
 2317   m = \hyperlink{namespacetesting_a81cfefd9f75cdce827d5bc873cf73aac}{AnyOf}(\hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(1), \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(3));
 2318   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"(is <= 1) or (is >= 3)"},
 2319             \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
@@ -3934,7 +3934,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2343                                      \{
-2344   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+2344   Matcher<int> m;
 2345   m = \hyperlink{namespacetesting_a81cfefd9f75cdce827d5bc873cf73aac}{AnyOf}(\hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(1), \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(3));
 2346   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"(isn't <= 1) and (isn't >= 3)"},
 2347             \hyperlink{namespacetesting_1_1gmock__matchers__test_afbc8022da5a58aa467ec414ab3e90908}{DescribeNegation}(m));
@@ -3975,7 +3975,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 2373   Matcher<int> greater\_than\_5 = \hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}(5);
 2374   Matcher<int> less\_than\_10 = \hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}(10);
 2375 
-2376   Matcher<const int&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a81cfefd9f75cdce827d5bc873cf73aac}{AnyOf}(greater\_than\_5, less\_than\_10);
+2376   Matcher<const int&> m = \hyperlink{namespacetesting_a81cfefd9f75cdce827d5bc873cf73aac}{AnyOf}(greater\_than\_5, less\_than\_10);
 2377   Matcher<int&> m2 = \hyperlink{namespacetesting_a81cfefd9f75cdce827d5bc873cf73aac}{AnyOf}(greater\_than\_5, less\_than\_10);
 2378   Matcher<int&> m3 = \hyperlink{namespacetesting_a81cfefd9f75cdce827d5bc873cf73aac}{AnyOf}(greater\_than\_5, m2);
 2379 
@@ -3995,7 +3995,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2385                                 \{
-2386   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+2386   Matcher<int> m;
 2387 
 2388   \textcolor{comment}{// Failed match.  Both matchers need to explain.  The second}
 2389   \textcolor{comment}{// matcher doesn't give an explanation, so only the first matcher's}
@@ -4049,7 +4049,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2462                                                   \{
-2463   Matcher<double> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a70e728cf67d0224c3ebb9eb8959cc39d}{IsPositive});
+2463   Matcher<double> m = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a70e728cf67d0224c3ebb9eb8959cc39d}{IsPositive});
 2464   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(2.0));
 2465   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(-1.5));
 2466 \}
@@ -4065,7 +4065,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2469                                       \{
-2470   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(IsGreaterThan(5));
+2470   Matcher<int> m = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(IsGreaterThan(5));
 2471   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(6));
 2472   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(4));
 2473 \}
@@ -4081,7 +4081,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2492                                                            \{
-2493   Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a248045bc57c8bad87b7d185b5c292f60}{IsNotZero});
+2493   Matcher<int> m = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a248045bc57c8bad87b7d185b5c292f60}{IsNotZero});
 2494   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(1));
 2495   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(0));
 2496 \}
@@ -4097,7 +4097,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2499                                  \{
-2500   Matcher<double> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a70e728cf67d0224c3ebb9eb8959cc39d}{IsPositive});
+2500   Matcher<double> m = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a70e728cf67d0224c3ebb9eb8959cc39d}{IsPositive});
 2501   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"satisfies the given predicate"},
 2502             \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 2503 \}
@@ -4113,9 +4113,9 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2507                                         \{
-2508   Matcher<const int&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_abdce9daf2e3d3721d68f76680129f03b}{ReferencesFooAndIsZero});
+2508   Matcher<const int&> m = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_abdce9daf2e3d3721d68f76680129f03b}{ReferencesFooAndIsZero});
 2509   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(\hyperlink{namespacefoo}{foo}));
-2510   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
+2510   \textcolor{keywordtype}{int} n = 0;
 2511   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(n));
 2512 \}
 \end{DoxyCode}
@@ -4145,9 +4145,9 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 2523                                          \{
-2524   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = 0, \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
-2525   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_ad53b509ae9cd51040d67f668f99702ae}{Matches}(\hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}), \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(0)))(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}));
-2526   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{namespacetesting_ad53b509ae9cd51040d67f668f99702ae}{Matches}(\hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(m))(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}));
+2524   \textcolor{keywordtype}{int} m = 0, n = 0;
+2525   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_ad53b509ae9cd51040d67f668f99702ae}{Matches}(\hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(n), \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(0)))(n));
+2526   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{namespacetesting_ad53b509ae9cd51040d67f668f99702ae}{Matches}(\hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(m))(n));
 2527 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!T\+E\+ST@{T\+E\+ST}}
@@ -4196,7 +4196,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 2547   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_ae44c50a3a7f0a46f05c8a0b0592b4a62}{Value}(0, is\_zero));
 2548   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{namespacetesting_ae44c50a3a7f0a46f05c8a0b0592b4a62}{Value}(\textcolor{charliteral}{'a'}, is\_zero));
 2549 
-2550   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 0;
+2550   \textcolor{keywordtype}{int} n = 0;
 2551   \textcolor{keyword}{const} Matcher<const int&> ref\_n = \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(n);
 2552   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_ae44c50a3a7f0a46f05c8a0b0592b4a62}{Value}(n, ref\_n));
 2553   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{namespacetesting_ae44c50a3a7f0a46f05c8a0b0592b4a62}{Value}(1, ref\_n));
@@ -4343,7 +4343,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 2631                                                            \{
 2632   \textcolor{comment}{// 'n' must be static as it is used in an EXPECT\_FATAL\_FAILURE(),}
 2633   \textcolor{comment}{// which cannot reference auto variables.}
-2634   \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};  \textcolor{comment}{// NOLINT}
+2634   \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} n;  \textcolor{comment}{// NOLINT}
 2635   n = 5;
 2636 
 2637   \textcolor{comment}{// VC++ prior to version 8.0 SP1 has a bug where it will not see any}
@@ -4378,7 +4378,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 2656                                                    \{
 2657   \textcolor{comment}{// We use a static variable here as EXPECT\_FATAL\_FAILURE() cannot}
 2658   \textcolor{comment}{// reference auto variables.}
-2659   \textcolor{keyword}{static} \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+2659   \textcolor{keyword}{static} \textcolor{keywordtype}{int} n;
 2660   n = 0;
 2661   \hyperlink{gmock-matchers_8h_ac31e206123aa702e1152bb2735b31409}{EXPECT\_THAT}(n, \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(7), \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(n)));
 2662   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\hyperlink{gmock-matchers_8h_a41d888579850c16583baea33ee8d057e}{ASSERT\_THAT}(n, ::
@@ -4430,9 +4430,9 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3142                               \{
-3143   \textcolor{keyword}{const} Matcher<int*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3143   \textcolor{keyword}{const} Matcher<int*> m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3144 
-3145   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 1;
+3145   \textcolor{keywordtype}{int} n = 1;
 3146   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(&n));
 3147   n = -1;
 3148   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(&n));
@@ -4450,7 +4450,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3152                                      \{
-3153   \textcolor{keyword}{const} Matcher<const double*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3153   \textcolor{keyword}{const} Matcher<const double*> m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3154 
 3155   \textcolor{keywordtype}{double} x = 1;
 3156   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(&x));
@@ -4470,9 +4470,9 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3162                                               \{
-3163   \textcolor{keyword}{const} Matcher<int* const &> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3163   \textcolor{keyword}{const} Matcher<int* const &> m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3164 
-3165   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 1;
+3165   \textcolor{keywordtype}{int} n = 1;
 3166   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(&n));
 3167   n = -1;
 3168   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(&n));
@@ -4490,7 +4490,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3172                                                  \{
-3173   \textcolor{keyword}{const} Matcher<double* &> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3173   \textcolor{keyword}{const} Matcher<double* &> m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3174 
 3175   \textcolor{keywordtype}{double} x = 1.0;
 3176   \textcolor{keywordtype}{double}* p = &x;
@@ -4512,7 +4512,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3304                                                      \{
-3305   \textcolor{keyword}{const} Matcher< ConstPropagatingPtr<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}(5));
+3305   \textcolor{keyword}{const} Matcher< ConstPropagatingPtr<int> > m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}(5));
 3306   \textcolor{keywordtype}{int} three = 3;
 3307   \textcolor{keyword}{const} ConstPropagatingPtr<int> co(&three);
 3308   ConstPropagatingPtr<int> o(&three);
@@ -4534,7 +4534,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3316                                     \{
-3317   \textcolor{keyword}{const} Matcher<const char*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_});
+3317   \textcolor{keyword}{const} Matcher<const char*> m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_});
 3318   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(NULL));
 3319 \}
 \end{DoxyCode}
@@ -4549,9 +4549,9 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3322                                         \{
-3323   \textcolor{keyword}{const} Matcher<int*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(5);
+3323   \textcolor{keyword}{const} Matcher<int*> m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(5);
 3324 
-3325   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 5;
+3325   \textcolor{keywordtype}{int} n = 5;
 3326   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(&n));
 3327   n = -1;
 3328   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(&n));
@@ -4569,7 +4569,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3332                                    \{
-3333   \textcolor{keyword}{const} Matcher<int*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}(3));
+3333   \textcolor{keyword}{const} Matcher<int*> m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}(3));
 3334   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"points to a value that is > 3"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 3335   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"does not point to a value that is > 3"},
 3336             \hyperlink{namespacetesting_1_1gmock__matchers__test_afbc8022da5a58aa467ec414ab3e90908}{DescribeNegation}(m));
@@ -4586,12 +4586,12 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3339                                          \{
-3340   \textcolor{keyword}{const} Matcher<const string*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"Hi"}));
+3340   \textcolor{keyword}{const} Matcher<const string*> m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"Hi"}));
 3341 
 3342   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, static\_cast<const string*>(NULL)));
 3343 
 3344   \textcolor{keyword}{const} Matcher<long*> m2 = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(1));  \textcolor{comment}{// NOLINT}
-3345   \textcolor{keywordtype}{long} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 3;  \textcolor{comment}{// NOLINT}
+3345   \textcolor{keywordtype}{long} n = 3;  \textcolor{comment}{// NOLINT}
 3346   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which points to 3"} + \hyperlink{namespacetesting_1_1gmock__matchers__test_a5d48d2ef7ca374de369c5f0a30e32343}{OfType}(\textcolor{stringliteral}{"long"}) + \textcolor{stringliteral}{", which is 2 more than 1"},
 3347             \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m2, &n));
 3348 \}
@@ -4607,8 +4607,8 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3350                                          \{
-3351   \textcolor{keyword}{const} Matcher<int*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(0);
-3352   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 42;
+3351   \textcolor{keyword}{const} Matcher<int*> m = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(0);
+3352   \textcolor{keywordtype}{int} n = 42;
 3353   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which points to 42"} + \hyperlink{namespacetesting_1_1gmock__matchers__test_a5d48d2ef7ca374de369c5f0a30e32343}{OfType}(\textcolor{stringliteral}{"int"}), \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, &n));
 3354 \}
 \end{DoxyCode}
@@ -4623,7 +4623,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3401                                        \{
-3402   Matcher<AStruct> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3402   Matcher<AStruct> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3403 
 3404   AStruct a;
 3405   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(a));
@@ -4644,7 +4644,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 3411                                     \{
 3412   AStruct a;
 3413 
-3414   Matcher<AStruct> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::y, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0.0));
+3414   Matcher<AStruct> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::y, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0.0));
 3415   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(a));
 3416   m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::y, \hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(0.0));
 3417   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(a));
@@ -4663,7 +4663,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 3421                                          \{
 3422   AStruct a;
 3423 
-3424   Matcher<AStruct> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::z, \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a7c429b4fa8a7835724d9e28033e908b2}{ValueIsPositive}));
+3424   Matcher<AStruct> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::z, \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a7c429b4fa8a7835724d9e28033e908b2}{ValueIsPositive}));
 3425   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(a));
 3426   m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::z, \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(\hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(\hyperlink{namespacetesting_1_1gmock__matchers__test_a7c429b4fa8a7835724d9e28033e908b2}{ValueIsPositive})));
 3427   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(a));
@@ -4681,7 +4681,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 3431                                       \{
 3432   \textcolor{comment}{// Matching against NULL.}
-3433   Matcher<AStruct> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::p, static\_cast<const char*>(NULL));
+3433   Matcher<AStruct> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::p, static\_cast<const char*>(NULL));
 3434   AStruct a;
 3435   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(a));
 3436   a.p = \textcolor{stringliteral}{"hi"};
@@ -4706,7 +4706,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3448                                        \{
-3449   Matcher<const AStruct&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3449   Matcher<const AStruct&> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3450 
 3451   AStruct a;
 3452   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(a));
@@ -4727,7 +4727,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 3459                                            \{
 3460   \textcolor{comment}{// Note that the matcher expects DerivedStruct but we say AStruct}
 3461   \textcolor{comment}{// inside Field().}
-3462   Matcher<const DerivedStruct&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3462   Matcher<const DerivedStruct&> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3463 
 3464   DerivedStruct d;
 3465   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(d));
@@ -4747,7 +4747,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 3472                                                \{
 3473   \textcolor{comment}{// The field is an int, but the inner matcher expects a signed char.}
-3474   Matcher<const AStruct&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x,
+3474   Matcher<const AStruct&> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x,
 3475                                     Matcher<signed char>(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0)));
 3476 
 3477   AStruct a;
@@ -4767,7 +4767,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3484                                  \{
-3485   Matcher<const AStruct&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3485   Matcher<const AStruct&> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3486 
 3487   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is an object whose given field is >= 0"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 3488   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is an object whose given field isn't >= 0"}, 
@@ -4785,7 +4785,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3492                                        \{
-3493   Matcher<const AStruct&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3493   Matcher<const AStruct&> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3494 
 3495   AStruct a;
 3496   a.x = 1;
@@ -4808,7 +4808,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3506                                                   \{
-3507   Matcher<const AStruct*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3507   Matcher<const AStruct*> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3508 
 3509   AStruct a;
 3510   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(&a));
@@ -4827,7 +4827,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3516                                                      \{
-3517   Matcher<AStruct*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3517   Matcher<AStruct*> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3518 
 3519   AStruct a;
 3520   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(&a));
@@ -4846,7 +4846,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3526                                                            \{
-3527   Matcher<AStruct* const&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3527   Matcher<AStruct* const&> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3528 
 3529   AStruct a;
 3530   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(&a));
@@ -4865,7 +4865,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3536                                             \{
-3537   Matcher<const AStruct*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_});
+3537   Matcher<const AStruct*> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_});
 3538   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(NULL));
 3539 \}
 \end{DoxyCode}
@@ -4882,7 +4882,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 3543                                                      \{
 3544   \textcolor{comment}{// Note that the matcher expects DerivedStruct but we say AStruct}
 3545   \textcolor{comment}{// inside Field().}
-3546   Matcher<DerivedStruct*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3546   Matcher<DerivedStruct*> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3547 
 3548   DerivedStruct d;
 3549   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(&d));
@@ -4901,7 +4901,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3555                                            \{
-3556   Matcher<const AStruct*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3556   Matcher<const AStruct*> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3557 
 3558   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is an object whose given field is >= 0"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 3559   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is an object whose given field isn't >= 0"}, 
@@ -4919,7 +4919,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3563                                                  \{
-3564   Matcher<const AStruct*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3564   Matcher<const AStruct*> m = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&AStruct::x, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3565 
 3566   AStruct a;
 3567   a.x = 1;
@@ -4943,7 +4943,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3613                                                  \{
-3614   Matcher<const AClass&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3614   Matcher<const AClass&> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3615 
 3616   AClass a;
 3617   a.set\_n(1);
@@ -4964,7 +4964,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3626                                                      \{
-3627   Matcher<const AClass&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::s, \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"hi"}));
+3627   Matcher<const AClass&> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::s, \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"hi"}));
 3628 
 3629   AClass a;
 3630   a.set\_s(\textcolor{stringliteral}{"hill"});
@@ -4988,7 +4988,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 3640   \textcolor{keywordtype}{double} x = 0.0;
 3641   AClass a;
 3642 
-3643   Matcher<const AClass&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::x, \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(x));
+3643   Matcher<const AClass&> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::x, \hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(x));
 3644   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(a));
 3645 
 3646   m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::x, \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(\hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(x)));
@@ -5006,7 +5006,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3652                                             \{
-3653   Matcher<AClass> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::s, \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"hi"}));
+3653   Matcher<AClass> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::s, \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"hi"}));
 3654 
 3655   AClass a;
 3656   a.set\_s(\textcolor{stringliteral}{"hill"});
@@ -5029,7 +5029,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 3665                                               \{
 3666   \textcolor{comment}{// The matcher expects a DerivedClass, but inside the Property() we}
 3667   \textcolor{comment}{// say AClass.}
-3668   Matcher<const DerivedClass&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3668   Matcher<const DerivedClass&> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3669 
 3670   DerivedClass d;
 3671   d.set\_n(1);
@@ -5051,7 +5051,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 3680                                                   \{
 3681   \textcolor{comment}{// n() returns an int but the inner matcher expects a signed char.}
-3682   Matcher<const AClass&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n},
+3682   Matcher<const AClass&> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n,
 3683                                       Matcher<signed char>(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0)));
 3684 
 3685   AClass a;
@@ -5071,7 +5071,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3692                                     \{
-3693   Matcher<const AClass&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3693   Matcher<const AClass&> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3694 
 3695   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is an object whose given property is >= 0"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 3696   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is an object whose given property isn't >= 0"},
@@ -5089,13 +5089,13 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3701                                           \{
-3702   Matcher<const AClass&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3702   Matcher<const AClass&> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3703 
 3704   AClass a;
 3705   a.set\_n(1);
 3706   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"whose given property is 1"} + \hyperlink{namespacetesting_1_1gmock__matchers__test_a5d48d2ef7ca374de369c5f0a30e32343}{OfType}(\textcolor{stringliteral}{"int"}), \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, a));
 3707 
-3708   m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(0));
+3708   m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(0));
 3709   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(
 3710       \textcolor{stringliteral}{"whose given property is 1"} + \hyperlink{namespacetesting_1_1gmock__matchers__test_a5d48d2ef7ca374de369c5f0a30e32343}{OfType}(\textcolor{stringliteral}{"int"}) + \textcolor{stringliteral}{", which is 1 more than 0"},
 3711       \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, a));
@@ -5112,7 +5112,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3715                                                      \{
-3716   Matcher<const AClass*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3716   Matcher<const AClass*> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3717 
 3718   AClass a;
 3719   a.set\_n(1);
@@ -5133,7 +5133,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3727                                                         \{
-3728   Matcher<AClass*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::s, \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"hi"}));
+3728   Matcher<AClass*> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::s, \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"hi"}));
 3729 
 3730   AClass a;
 3731   a.set\_s(\textcolor{stringliteral}{"hill"});
@@ -5154,7 +5154,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3740                                                               \{
-3741   Matcher<AClass* const&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::s, \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"hi"}));
+3741   Matcher<AClass* const&> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::s, \hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"hi"}));
 3742 
 3743   AClass a;
 3744   a.set\_s(\textcolor{stringliteral}{"hill"});
@@ -5175,7 +5175,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3752                                                                   \{
-3753   Matcher<const AClass*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::x, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_});
+3753   Matcher<const AClass*> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::x, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_});
 3754   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(NULL));
 3755 \}
 \end{DoxyCode}
@@ -5192,7 +5192,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 3759                                                         \{
 3760   \textcolor{comment}{// The matcher expects a DerivedClass, but inside the Property() we}
 3761   \textcolor{comment}{// say AClass.}
-3762   Matcher<const DerivedClass*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3762   Matcher<const DerivedClass*> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3763 
 3764   DerivedClass d;
 3765   d.set\_n(1);
@@ -5213,7 +5213,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3773                                               \{
-3774   Matcher<const AClass*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3774   Matcher<const AClass*> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3775 
 3776   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is an object whose given property is >= 0"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 3777   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is an object whose given property isn't >= 0"},
@@ -5231,7 +5231,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3782                                                     \{
-3783   Matcher<const AClass*> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
+3783   Matcher<const AClass*> m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0));
 3784 
 3785   AClass a;
 3786   a.set\_n(1);
@@ -5240,7 +5240,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 3789       \textcolor{stringliteral}{"which points to an object whose given property is 1"} + \hyperlink{namespacetesting_1_1gmock__matchers__test_a5d48d2ef7ca374de369c5f0a30e32343}{OfType}(\textcolor{stringliteral}{"int"}),
 3790       \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, &a));
 3791 
-3792   m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{AClass::n}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(0));
+3792   m = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&AClass::n, \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(0));
 3793   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which points to an object whose given property is 1"} +
 3794             \hyperlink{namespacetesting_1_1gmock__matchers__test_a5d48d2ef7ca374de369c5f0a30e32343}{OfType}(\textcolor{stringliteral}{"int"}) + \textcolor{stringliteral}{", which is 1 more than 0"},
 3795             \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, &a));
@@ -5472,7 +5472,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3951                                                  \{
-3952   \textcolor{keyword}{const} \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 1;
+3952   \textcolor{keyword}{const} \textcolor{keywordtype}{int} n = 1;
 3953   \textcolor{keyword}{const} \textcolor{keywordtype}{int} n2 = 1;
 3954   Matcher<const int&> matcher2 = \hyperlink{namespacetesting_aaadb51dd383baa95f123ab891d4f8a5f}{ResultOf}(\hyperlink{namespacetesting_1_1gmock__matchers__test_af3164fc302e0b727c1eb745bdeb959f6}{ReferencingFunction}, 
       \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(&n));
@@ -5495,7 +5495,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 3996                                                 \{
-3997   \textcolor{keyword}{const} Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(4), \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(3));
+3997   \textcolor{keyword}{const} Matcher<int> m = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(4), \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(3));
 3998   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which is 1 modulo 4"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, 5));
 3999 \}
 \end{DoxyCode}
@@ -5510,7 +5510,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4003                                                \{
-4004   \textcolor{keyword}{const} Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(4), \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(3));
+4004   \textcolor{keyword}{const} Matcher<int> m = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(4), \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(3));
 4005   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which is 2 modulo 4"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, 6));
 4006 \}
 \end{DoxyCode}
@@ -5525,7 +5525,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4010                                                \{
-4011   \textcolor{keyword}{const} Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(1), \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(3));
+4011   \textcolor{keyword}{const} Matcher<int> m = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(1), \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(3));
 4012   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which is 2 modulo 3"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, 5));
 4013 \}
 \end{DoxyCode}
@@ -5540,7 +5540,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4017                                               \{
-4018   \textcolor{keyword}{const} Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(2), \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(3));
+4018   \textcolor{keyword}{const} Matcher<int> m = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(2), \hyperlink{namespacetesting_1_1gmock__matchers__test_ac5b1fd3b6a8141c7e83ef6040ed4630f}{DivisibleBy}(3));
 4019   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which is 0 modulo 2, and which is 0 modulo 3"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, 6));
 4020 \}
 \end{DoxyCode}
@@ -5555,7 +5555,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4022                                                 \{
-4023   \textcolor{keyword}{const} Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(2), \hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(3));
+4023   \textcolor{keyword}{const} Matcher<int> m = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(2), \hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(3));
 4024   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, 2));
 4025 \}
 \end{DoxyCode}
@@ -5570,7 +5570,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4027                                                    \{
-4028   \textcolor{keyword}{const} Matcher<int> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(5);
+4028   \textcolor{keyword}{const} Matcher<int> m = \hyperlink{namespacetesting_1_1gmock__matchers__test_a8cf8614a7c9adc8fb00e8af04895f97c}{GreaterThan}(5);
 4029   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which is 1 more than 5"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, 6));
 4030 \}
 \end{DoxyCode}
@@ -5586,7 +5586,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 4055                                                        \{
 4056   \textcolor{keyword}{const} NotCopyable const\_value1(1);
-4057   \textcolor{keyword}{const} Matcher<const NotCopyable&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(\hyperlink{namespacetesting_aaee6d42dcd69de6e7a1459c5c71222c3}{ByRef}(const\_value1));
+4057   \textcolor{keyword}{const} Matcher<const NotCopyable&> m = \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(\hyperlink{namespacetesting_aaee6d42dcd69de6e7a1459c5c71222c3}{ByRef}(const\_value1));
 4058 
 4059   \textcolor{keyword}{const} NotCopyable n1(1), n2(2);
 4060   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(n1));
@@ -5605,7 +5605,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 4064                                                   \{
 4065   NotCopyable value2(2);
-4066   \textcolor{keyword}{const} Matcher<NotCopyable&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(\hyperlink{namespacetesting_aaee6d42dcd69de6e7a1459c5c71222c3}{ByRef}(value2));
+4066   \textcolor{keyword}{const} Matcher<NotCopyable&> m = \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(\hyperlink{namespacetesting_aaee6d42dcd69de6e7a1459c5c71222c3}{ByRef}(value2));
 4067 
 4068   NotCopyable n1(1), n2(2);
 4069   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(n1));
@@ -5661,7 +5661,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4091                                    \{
-4092   Matcher<vector<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = IsEmpty();
+4092   Matcher<vector<int> > m = IsEmpty();
 4093   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"is empty"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 4094   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"isn't empty"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_afbc8022da5a58aa467ec414ab3e90908}{DescribeNegation}(m));
 4095 \}
@@ -5677,7 +5677,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4097                                   \{
-4098   Matcher<vector<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = IsEmpty();
+4098   Matcher<vector<int> > m = IsEmpty();
 4099   vector<int> container;
 4100   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, container));
 4101   container.push\_back(0);
@@ -5740,7 +5740,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 4129                                       \{
 4130   vector<int> container;
-4131   Matcher<const vector<int>&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_acd5e215558f95f1393c048a6d496060d}{SizeIs}(1);
+4131   Matcher<const vector<int>&> m = \hyperlink{namespacetesting_acd5e215558f95f1393c048a6d496060d}{SizeIs}(1);
 4132   \hyperlink{gmock-matchers_8h_ac31e206123aa702e1152bb2735b31409}{EXPECT\_THAT}(container, \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(m));
 4133   container.push\_back(0);
 4134   \hyperlink{gmock-matchers_8h_ac31e206123aa702e1152bb2735b31409}{EXPECT\_THAT}(container, m);
@@ -5757,7 +5757,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4137                                   \{
-4138   Matcher<vector<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_acd5e215558f95f1393c048a6d496060d}{SizeIs}(2);
+4138   Matcher<vector<int> > m = \hyperlink{namespacetesting_acd5e215558f95f1393c048a6d496060d}{SizeIs}(2);
 4139   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"size is equal to 2"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 4140   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"size isn't equal to 2"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_afbc8022da5a58aa467ec414ab3e90908}{DescribeNegation}(m));
 4141 \}
@@ -5807,7 +5807,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 4241   \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} test\_vals[] = \{2, 1, 5\};
 4242   vector<int> my\_set(vals, vals + 6);
 4243   vector<int> test\_set(test\_vals, test\_vals + 3);
-4244   \textcolor{keyword}{const} Matcher<vector<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_set);
+4244   \textcolor{keyword}{const} Matcher<vector<int> > m = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_set);
 4245   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(test\_set));
 4246   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which doesn't have these expected elements: 3, 8"},
 4247             \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, test\_set));
@@ -5828,7 +5828,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 4254   \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} test\_vals[] = \{1, 2, 92, 3, 5, 8, 46\};
 4255   list<size\_t> my\_set(vals, vals + 6);
 4256   list<size\_t> test\_set(test\_vals, test\_vals + 7);
-4257   \textcolor{keyword}{const} Matcher<const list<size\_t>&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_set);
+4257   \textcolor{keyword}{const} Matcher<const list<size\_t>&> m = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_set);
 4258   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(test\_set));
 4259   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which has these unexpected elements: 92, 46"},
 4260             \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, test\_set));
@@ -5849,7 +5849,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 4266   \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} test\_vals[] = \{1, 2, 3, 92, 46\};
 4267   list<size\_t> my\_set(vals, vals + 6);
 4268   list<size\_t> test\_set(test\_vals, test\_vals + 5);
-4269   \textcolor{keyword}{const} Matcher<const list<size\_t> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_set);
+4269   \textcolor{keyword}{const} Matcher<const list<size\_t> > m = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_set);
 4270   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(test\_set));
 4271   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"which has these unexpected elements: 92, 46,\(\backslash\)n"}
 4272             \textcolor{stringliteral}{"and doesn't have these expected elements: 5, 8"},
@@ -5871,7 +5871,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 4280   \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} test\_vals[] = \{1, 2, 3, 5, 8\};
 4281   vector<int> my\_set(vals, vals + 6);
 4282   vector<int> test\_set(test\_vals, test\_vals + 5);
-4283   \textcolor{keyword}{const} Matcher<vector<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_set);
+4283   \textcolor{keyword}{const} Matcher<vector<int> > m = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_set);
 4284   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(my\_set));
 4285   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(test\_set));
 4286   \textcolor{comment}{// There is nothing to report when both sets contain all the same values.}
@@ -5897,7 +5897,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 4298   test\_map[0] = \textcolor{stringliteral}{"aa"};
 4299   test\_map[1] = \textcolor{stringliteral}{"b"};
 4300 
-4301   \textcolor{keyword}{const} Matcher<const map<int, std::string>&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_map);
+4301   \textcolor{keyword}{const} Matcher<const map<int, std::string>&> m = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(my\_map);
 4302   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(my\_map));
 4303   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(test\_map));
 4304 
@@ -5995,7 +5995,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 4354     \{\textcolor{stringliteral}{"bye"}, \textcolor{stringliteral}{"see you"}, \textcolor{stringliteral}{"ciao"}\}
 4355   \};
 4356 
-4357   \textcolor{keyword}{const} Matcher<const std::string(&)[2][3]> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(a2);
+4357   \textcolor{keyword}{const} Matcher<const std::string(&)[2][3]> m = \hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(a2);
 4358   \hyperlink{gmock-matchers_8h_ac31e206123aa702e1152bb2735b31409}{EXPECT\_THAT}(a1, m);
 4359 
 4360   a2[0][0] = \textcolor{stringliteral}{"ha"};
@@ -6095,7 +6095,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4402                                         \{
-4403   \textcolor{keyword}{const} Matcher<vector<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_af74dfcde9ed88d79cf69dfda049078a3}{WhenSortedBy}(less<int>(), 
+4403   \textcolor{keyword}{const} Matcher<vector<int> > m = \hyperlink{namespacetesting_af74dfcde9ed88d79cf69dfda049078a3}{WhenSortedBy}(less<int>(), 
       \hyperlink{namespacetesting_a79cf4ae694bf8231dcf283b325405f27}{ElementsAre}(1, 2));
 4404   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"(when sorted) has 2 elements where\(\backslash\)n"}
 4405             \textcolor{stringliteral}{"element #0 is equal to 1,\(\backslash\)n"}
@@ -6302,7 +6302,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 4603                                               \{
-4604   Matcher<vector<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a122739b5b6bd9f993f26800dafdb4cc3}{BeginEndDistanceIs}(2);
+4604   Matcher<vector<int> > m = \hyperlink{namespacetesting_a122739b5b6bd9f993f26800dafdb4cc3}{BeginEndDistanceIs}(2);
 4605   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"distance between begin() and end() is equal to 2"}, 
       \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 4606   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"distance between begin() and end() isn't equal to 2"},
@@ -6728,12 +6728,12 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 5283                                                    \{
-5284   PolymorphicMatcher<DivisibleByImpl> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}(DivisibleByImpl(42));
-5285   DivisibleByImpl& impl = \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.mutable\_impl();
+5284   PolymorphicMatcher<DivisibleByImpl> m(DivisibleByImpl(42));
+5285   DivisibleByImpl& impl = m.mutable\_impl();
 5286   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(42, impl.divider());
 5287 
 5288   impl.set\_divider(0);
-5289   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.mutable\_impl().divider());
+5289   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, m.mutable\_impl().divider());
 5290 \}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+matchers\+\_\+test@{testing\+::gmock\+\_\+matchers\+\_\+test}!T\+E\+ST@{T\+E\+ST}}
@@ -6747,8 +6747,8 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 5293                                             \{
-5294   \textcolor{keyword}{const} PolymorphicMatcher<DivisibleByImpl> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}(DivisibleByImpl(42));
-5295   \textcolor{keyword}{const} DivisibleByImpl& impl = \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}.impl();
+5294   \textcolor{keyword}{const} PolymorphicMatcher<DivisibleByImpl> m(DivisibleByImpl(42));
+5295   \textcolor{keyword}{const} DivisibleByImpl& impl = m.impl();
 5296   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(42, impl.divider());
 5297 \}
 \end{DoxyCode}
@@ -6802,10 +6802,10 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 5325                                              \{
 5326   set<int> a;  \textcolor{comment}{// empty}
 5327 
-5328   Matcher<set<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a42743c985b1e02dc373ab7517ca1e740}{Each}(2);
+5328   Matcher<set<int> > m = \hyperlink{namespacetesting_a42743c985b1e02dc373ab7517ca1e740}{Each}(2);
 5329   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(m, a));
 5330 
-5331   Matcher<const int(&)[1]> \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = \hyperlink{namespacetesting_a42743c985b1e02dc373ab7517ca1e740}{Each}(1);  \textcolor{comment}{// NOLINT}
+5331   Matcher<const int(&)[1]> n = \hyperlink{namespacetesting_a42743c985b1e02dc373ab7517ca1e740}{Each}(1);  \textcolor{comment}{// NOLINT}
 5332 
 5333   \textcolor{keyword}{const} \textcolor{keywordtype}{int} b[1] = \{1\};
 5334   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{""}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a6215aeb6213a03f4233924ef1c74d968}{Explain}(n, b));
@@ -6835,7 +6835,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 
 \begin{DoxyCode}
 5350                                          \{
-5351   Matcher<vector<int> > \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a42743c985b1e02dc373ab7517ca1e740}{Each}(1);
+5351   Matcher<vector<int> > m = \hyperlink{namespacetesting_a42743c985b1e02dc373ab7517ca1e740}{Each}(1);
 5352   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"only contains elements that is equal to 1"}, \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
 5353 
 5354   Matcher<vector<int> > m2 = \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(m);
@@ -6948,7 +6948,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 5439   rhs.push\_back(1);
 5440   rhs.push\_back(2);
 5441   rhs.push\_back(3);
-5442   \textcolor{keyword}{const} Matcher<const vector<int>&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a51ee81f6f1723f7a7aff0429b1d76ec1}{Pointwise}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ace0a8f64b108c7a9c32c2cac15185461}{IsHalfOf}(), rhs);
+5442   \textcolor{keyword}{const} Matcher<const vector<int>&> m = \hyperlink{namespacetesting_a51ee81f6f1723f7a7aff0429b1d76ec1}{Pointwise}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ace0a8f64b108c7a9c32c2cac15185461}{IsHalfOf}(), rhs);
 5443   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{stringliteral}{"contains 3 values, where each value and its corresponding value "}
 5444             \textcolor{stringliteral}{"in \{ 1, 2, 3 \} are a pair where the first is half of the second"},
 5445             \hyperlink{namespacetesting_1_1gmock__matchers__test_a36ae44e4f6c8e9fe3fe9162132503717}{Describe}(m));
@@ -6974,7 +6974,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 5455   rhs.push\_back(4);
 5456 
 5457   \textcolor{keywordtype}{int} lhs[] = \{1, 2\};
-5458   \textcolor{keyword}{const} Matcher<const int (&)[2]> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a51ee81f6f1723f7a7aff0429b1d76ec1}{Pointwise}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ace0a8f64b108c7a9c32c2cac15185461}{IsHalfOf}(), rhs);
+5458   \textcolor{keyword}{const} Matcher<const int (&)[2]> m = \hyperlink{namespacetesting_a51ee81f6f1723f7a7aff0429b1d76ec1}{Pointwise}(\hyperlink{namespacetesting_1_1gmock__matchers__test_ace0a8f64b108c7a9c32c2cac15185461}{IsHalfOf}(), rhs);
 5459   \hyperlink{gmock-matchers_8h_ac31e206123aa702e1152bb2735b31409}{EXPECT\_THAT}(lhs, m);
 5460 
 5461   \textcolor{comment}{// Changing rhs now shouldn't affect m, which made a copy of rhs.}
@@ -7118,7 +7118,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 5539   rhs.push\_back(1);
 5540   rhs.push\_back(2);
 5541   rhs.push\_back(3);
-5542   \textcolor{keyword}{const} Matcher<const vector<int>&> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a3e800c56ae70a6d9955077a75d4971f1}{UnorderedPointwise}(
+5542   \textcolor{keyword}{const} Matcher<const vector<int>&> m = \hyperlink{namespacetesting_a3e800c56ae70a6d9955077a75d4971f1}{UnorderedPointwise}(
       \hyperlink{namespacetesting_1_1gmock__matchers__test_ace0a8f64b108c7a9c32c2cac15185461}{IsHalfOf}(), rhs);
 5543   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(
 5544       \textcolor{stringliteral}{"has 3 elements and there exists some permutation of elements such "}
@@ -7156,7 +7156,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 5566   rhs.push\_back(4);
 5567 
 5568   \textcolor{keywordtype}{int} lhs[] = \{2, 1\};
-5569   \textcolor{keyword}{const} Matcher<const int (&)[2]> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a3e800c56ae70a6d9955077a75d4971f1}{UnorderedPointwise}(
+5569   \textcolor{keyword}{const} Matcher<const int (&)[2]> m = \hyperlink{namespacetesting_a3e800c56ae70a6d9955077a75d4971f1}{UnorderedPointwise}(
       \hyperlink{namespacetesting_1_1gmock__matchers__test_ace0a8f64b108c7a9c32c2cac15185461}{IsHalfOf}(), rhs);
 5570   \hyperlink{gmock-matchers_8h_ac31e206123aa702e1152bb2735b31409}{EXPECT\_THAT}(lhs, m);
 5571 
@@ -7340,7 +7340,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 2910                                          \{
 2911   \textcolor{comment}{// FloatEq never matches NaN.}
-2912   Matcher<float> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_ac75507edb7998957b48fb17a9b8a020b}{FloatEq}(nan1\_);
+2912   Matcher<float> m = \hyperlink{namespacetesting_ac75507edb7998957b48fb17a9b8a020b}{FloatEq}(nan1\_);
 2913   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(nan1\_));
 2914   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(nan2\_));
 2915   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(1.0));
@@ -7358,7 +7358,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 2918                                                   \{
 2919   \textcolor{comment}{// NanSensitiveFloatEq will match NaN.}
-2920   Matcher<float> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_ab3653439a654b85bdccff46d1436670d}{NanSensitiveFloatEq}(nan1\_);
+2920   Matcher<float> m = \hyperlink{namespacetesting_ab3653439a654b85bdccff46d1436670d}{NanSensitiveFloatEq}(nan1\_);
 2921   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(nan1\_));
 2922   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(nan2\_));
 2923   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(1.0));
@@ -7504,7 +7504,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 2998                                                \{
 2999   \textcolor{comment}{// FloatNear never matches NaN.}
-3000   Matcher<float> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a933a78452dd1770669bed758f35ff250}{FloatNear}(ParentType::nan1\_, 0.1f);
+3000   Matcher<float> m = \hyperlink{namespacetesting_a933a78452dd1770669bed758f35ff250}{FloatNear}(ParentType::nan1\_, 0.1f);
 3001   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(nan1\_));
 3002   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(nan2\_));
 3003   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(1.0));
@@ -7522,7 +7522,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 3006                                                         \{
 3007   \textcolor{comment}{// NanSensitiveFloatNear will match NaN.}
-3008   Matcher<float> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a347ebf0075ca9470e71e8ac468c9818f}{NanSensitiveFloatNear}(nan1\_, 0.1f);
+3008   Matcher<float> m = \hyperlink{namespacetesting_a347ebf0075ca9470e71e8ac468c9818f}{NanSensitiveFloatNear}(nan1\_, 0.1f);
 3009   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(nan1\_));
 3010   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(nan2\_));
 3011   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(1.0));
@@ -7568,7 +7568,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 3025                                            \{
 3026   \textcolor{comment}{// DoubleEq never matches NaN.}
-3027   Matcher<double> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a1f49f9d97f03bfa4db26888f03486a9f}{DoubleEq}(nan1\_);
+3027   Matcher<double> m = \hyperlink{namespacetesting_a1f49f9d97f03bfa4db26888f03486a9f}{DoubleEq}(nan1\_);
 3028   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(nan1\_));
 3029   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(nan2\_));
 3030   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(1.0));
@@ -7586,7 +7586,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 3033                                                     \{
 3034   \textcolor{comment}{// NanSensitiveDoubleEq will match NaN.}
-3035   Matcher<double> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_aa83ee35256fd90033f615ef640245525}{NanSensitiveDoubleEq}(nan1\_);
+3035   Matcher<double> m = \hyperlink{namespacetesting_aa83ee35256fd90033f615ef640245525}{NanSensitiveDoubleEq}(nan1\_);
 3036   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(nan1\_));
 3037   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(nan2\_));
 3038   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(1.0));
@@ -7755,7 +7755,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 3126                                                  \{
 3127   \textcolor{comment}{// DoubleNear never matches NaN.}
-3128   Matcher<double> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_aaee08ecb6815ef8398bbcb4e56d56d44}{DoubleNear}(ParentType::nan1\_, 0.1);
+3128   Matcher<double> m = \hyperlink{namespacetesting_aaee08ecb6815ef8398bbcb4e56d56d44}{DoubleNear}(ParentType::nan1\_, 0.1);
 3129   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(nan1\_));
 3130   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(nan2\_));
 3131   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(1.0));
@@ -7773,7 +7773,7 @@ const int \hyperlink{namespacetesting_1_1gmock__matchers__test_a3536e68112ffbb1f
 \begin{DoxyCode}
 3134                                                           \{
 3135   \textcolor{comment}{// NanSensitiveDoubleNear will match NaN.}
-3136   Matcher<double> \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a3caa8177ef48150d0dde3a54b0961f7f}{NanSensitiveDoubleNear}(nan1\_, 0.1);
+3136   Matcher<double> m = \hyperlink{namespacetesting_a3caa8177ef48150d0dde3a54b0961f7f}{NanSensitiveDoubleNear}(nan1\_, 0.1);
 3137   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(nan1\_));
 3138   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.Matches(nan2\_));
 3139   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.Matches(1.0));

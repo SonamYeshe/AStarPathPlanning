@@ -7,8 +7,8 @@ var searchData=
   ['nematcher',['NeMatcher',['../classtesting_1_1internal_1_1NeMatcher.html',1,'testing::internal']]],
   ['newevenmatcherimpl',['NewEvenMatcherImpl',['../classtesting_1_1gmock__matchers__test_1_1NewEvenMatcherImpl.html',1,'testing::gmock_matchers_test']]],
   ['nicemock',['NiceMock',['../classtesting_1_1NiceMock.html',1,'testing']]],
+  ['node',['Node',['../classNode.html',1,'']]],
   ['node',['Node',['../classcpp_1_1ast_1_1Node.html',1,'cpp::ast']]],
-  ['node',['node',['../classnode.html',1,'']]],
   ['nodefaultcontructor',['NoDefaultContructor',['../classtesting_1_1internal_1_1NoDefaultContructor.html',1,'testing::internal']]],
   ['noncontainer',['NonContainer',['../classNonContainer.html',1,'']]],
   ['nonfatalfailureinfixtureconstructortest',['NonFatalFailureInFixtureConstructorTest',['../classNonFatalFailureInFixtureConstructorTest.html',1,'']]],
@@ -18,6 +18,6 @@ var searchData=
   ['notmatcherimpl',['NotMatcherImpl',['../classtesting_1_1internal_1_1NotMatcherImpl.html',1,'testing::internal']]],
   ['notnullmatcher',['NotNullMatcher',['../classtesting_1_1internal_1_1NotNullMatcher.html',1,'testing::internal']]],
   ['nullaryconstructorclass',['NullaryConstructorClass',['../classtesting_1_1gmock__generated__actions__test_1_1NullaryConstructorClass.html',1,'testing::gmock_generated_actions_test']]],
-  ['nullaryfunctor',['NullaryFunctor',['../classtesting_1_1gmock__generated__actions__test_1_1NullaryFunctor.html',1,'testing::gmock_generated_actions_test']]],
-  ['nullaryfunctor',['NullaryFunctor',['../classtesting_1_1gmock__more__actions__test_1_1NullaryFunctor.html',1,'testing::gmock_more_actions_test']]]
+  ['nullaryfunctor',['NullaryFunctor',['../classtesting_1_1gmock__more__actions__test_1_1NullaryFunctor.html',1,'testing::gmock_more_actions_test']]],
+  ['nullaryfunctor',['NullaryFunctor',['../classtesting_1_1gmock__generated__actions__test_1_1NullaryFunctor.html',1,'testing::gmock_generated_actions_test']]]
 ];

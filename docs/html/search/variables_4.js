@@ -10,11 +10,7 @@ var searchData=
   ['default_5fgtest_5froot_5fdir',['DEFAULT_GTEST_ROOT_DIR',['../namespacefuse__gtest__files.html#a68085bdb2912baa7e71d2b3eb37b05c9',1,'fuse_gtest_files']]],
   ['definition',['definition',['../classcpp_1_1ast_1_1Define.html#a0c636652dfeb2f15e62793afea1153c9',1,'cpp::ast::Define']]],
   ['dest',['dest',['../namespaceupload.html#a770d9c7b49b1fede80de6078d5e49af7',1,'upload']]],
-  ['dir',['dir',['../app_2main_8cpp.html#a1029bef95cd6f5393d98c23a33550e15',1,'main.cpp']]],
-  ['dir_5fmap',['dir_map',['../app_2main_8cpp.html#a525d3b01141dff858d538577639c9e7f',1,'main.cpp']]],
   ['disabled_5ftests',['DISABLED_TESTS',['../namespacegtest__filter__unittest.html#affe760ab1e8c4c7b61566076c37c1d69',1,'gtest_filter_unittest']]],
   ['dot_5fdot_5fregex',['DOT_DOT_REGEX',['../namespacepump.html#a45644ad738e584ec754f6d9f45fe693c',1,'pump']]],
-  ['dummy_5f',['dummy_',['../classtesting_1_1internal_1_1TypeIdHelper.html#a372268b1520d965d0bdf01ebad3d270e',1,'testing::internal::TypeIdHelper']]],
-  ['dx',['dx',['../app_2main_8cpp.html#a761c65b66591ac65183e5ffed951441c',1,'main.cpp']]],
-  ['dy',['dy',['../app_2main_8cpp.html#a24219188071780eff3646de098152cfa',1,'main.cpp']]]
+  ['dummy_5f',['dummy_',['../classtesting_1_1internal_1_1TypeIdHelper.html#a372268b1520d965d0bdf01ebad3d270e',1,'testing::internal::TypeIdHelper']]]
 ];

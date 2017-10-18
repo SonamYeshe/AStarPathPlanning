@@ -57,9 +57,10 @@ var searchData=
   ['argsmatcher',['ArgsMatcher',['../classtesting_1_1internal_1_1ArgsMatcher.html',1,'testing::internal']]],
   ['argsmatcherimpl',['ArgsMatcherImpl',['../classtesting_1_1internal_1_1ArgsMatcherImpl.html',1,'testing::internal']]],
   ['asserthelper',['AssertHelper',['../classtesting_1_1internal_1_1AssertHelper.html',1,'testing::internal']]],
-  ['assertionresult',['AssertionResult',['../classmy__namespace_1_1testing_1_1AssertionResult.html',1,'my_namespace::testing']]],
   ['assertionresult',['AssertionResult',['../classtesting_1_1AssertionResult.html',1,'testing']]],
+  ['assertionresult',['AssertionResult',['../classmy__namespace_1_1testing_1_1AssertionResult.html',1,'my_namespace::testing']]],
   ['assignaction',['AssignAction',['../classtesting_1_1internal_1_1AssignAction.html',1,'testing::internal']]],
+  ['astarpathfinder',['AStarPathFinder',['../classAStarPathFinder.html',1,'']]],
   ['astbuilder',['AstBuilder',['../classcpp_1_1ast_1_1AstBuilder.html',1,'cpp::ast']]],
   ['astruct',['AStruct',['../structtesting_1_1gmock__matchers__test_1_1AStruct.html',1,'testing::gmock_matchers_test']]]
 ];

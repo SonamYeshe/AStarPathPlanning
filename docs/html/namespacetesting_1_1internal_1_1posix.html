@@ -112,13 +112,13 @@ Functions</h2></td></tr>
 <tr class="separator:a1ef2385a7f8e4c706054da35967e76bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e352884793a65ae8be144676f1a9136"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1posix.html#a8e352884793a65ae8be144676f1a9136">StrDup</a> (const char *src)</td></tr>
 <tr class="separator:a8e352884793a65ae8be144676f1a9136"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbad5d4ea5b73fd1765f5f760642932a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1posix.html#acbad5d4ea5b73fd1765f5f760642932a">RmDir</a> (const char *<a class="el" href="app_2main_8cpp.html#a1029bef95cd6f5393d98c23a33550e15">dir</a>)</td></tr>
+<tr class="memitem:acbad5d4ea5b73fd1765f5f760642932a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1posix.html#acbad5d4ea5b73fd1765f5f760642932a">RmDir</a> (const char *dir)</td></tr>
 <tr class="separator:acbad5d4ea5b73fd1765f5f760642932a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0d04ed5baeed28353fa38742748a421"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1posix.html#af0d04ed5baeed28353fa38742748a421">IsDir</a> (const <a class="el" href="namespacetesting_1_1internal_1_1posix.html#a8eb9f08d3af29941c2d2a964cfff3ecb">StatStruct</a> &amp;st)</td></tr>
 <tr class="separator:af0d04ed5baeed28353fa38742748a421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36fca815713332e5c6dc92c98b6b2574"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1posix.html#a36fca815713332e5c6dc92c98b6b2574">StrNCpy</a> (char *dest, const char *src, size_t <a class="el" href="app_2main_8cpp.html#acfc02ec89670db29251fda6a66602ce2">n</a>)</td></tr>
+<tr class="memitem:a36fca815713332e5c6dc92c98b6b2574"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1posix.html#a36fca815713332e5c6dc92c98b6b2574">StrNCpy</a> (char *dest, const char *src, size_t n)</td></tr>
 <tr class="separator:a36fca815713332e5c6dc92c98b6b2574"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ddc8a4fc6bb21da372307485591a212"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1posix.html#a1ddc8a4fc6bb21da372307485591a212">ChDir</a> (const char *<a class="el" href="app_2main_8cpp.html#a1029bef95cd6f5393d98c23a33550e15">dir</a>)</td></tr>
+<tr class="memitem:a1ddc8a4fc6bb21da372307485591a212"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1posix.html#a1ddc8a4fc6bb21da372307485591a212">ChDir</a> (const char *dir)</td></tr>
 <tr class="separator:a1ddc8a4fc6bb21da372307485591a212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4042201dcc4932641d484e7ddf94de7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gmock__output__test__golden_8txt.html#ab12dc6c67167ae2f0af132bdd8c2955e">FILE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1posix.html#a4042201dcc4932641d484e7ddf94de7d">FOpen</a> (const char *path, const char *mode)</td></tr>
 <tr class="separator:a4042201dcc4932641d484e7ddf94de7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,8 +199,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;{ <span class="keywordflow">return</span> chdir(<a class="code" href="app_2main_8cpp.html#a1029bef95cd6f5393d98c23a33550e15">dir</a>); }</div><div class="ttc" id="app_2main_8cpp_html_a1029bef95cd6f5393d98c23a33550e15"><div class="ttname"><a href="app_2main_8cpp.html#a1029bef95cd6f5393d98c23a33550e15">dir</a></div><div class="ttdeci">const int dir</div><div class="ttdef"><b>Definition:</b> main.cpp:27</div></div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;{ <span class="keywordflow">return</span> chdir(dir); }</div></div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a15e5b8f2a535ef1b2529b85b861e4846"></a>
@@ -517,8 +516,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;{ <span class="keywordflow">return</span> rmdir(<a class="code" href="app_2main_8cpp.html#a1029bef95cd6f5393d98c23a33550e15">dir</a>); }</div><div class="ttc" id="app_2main_8cpp_html_a1029bef95cd6f5393d98c23a33550e15"><div class="ttname"><a href="app_2main_8cpp.html#a1029bef95cd6f5393d98c23a33550e15">dir</a></div><div class="ttdeci">const int dir</div><div class="ttdef"><b>Definition:</b> main.cpp:27</div></div>
-</div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;{ <span class="keywordflow">return</span> rmdir(dir); }</div></div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2b87b7ff647a128614daf50667eb9304"></a>
@@ -674,8 +672,7 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;                                                                  {</div><div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;  <span class="keywordflow">return</span> strncpy(<a class="code" href="namespaceupload.html#a770d9c7b49b1fede80de6078d5e49af7">dest</a>, src, <a class="code" href="app_2main_8cpp.html#acfc02ec89670db29251fda6a66602ce2">n</a>);</div><div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;}</div><div class="ttc" id="namespaceupload_html_a770d9c7b49b1fede80de6078d5e49af7"><div class="ttname"><a href="namespaceupload.html#a770d9c7b49b1fede80de6078d5e49af7">upload.dest</a></div><div class="ttdeci">dest</div><div class="ttdef"><b>Definition:</b> upload.py:394</div></div>
-<div class="ttc" id="app_2main_8cpp_html_acfc02ec89670db29251fda6a66602ce2"><div class="ttname"><a href="app_2main_8cpp.html#acfc02ec89670db29251fda6a66602ce2">n</a></div><div class="ttdeci">const int n</div><div class="ttdef"><b>Definition:</b> main.cpp:21</div></div>
+<div class="fragment"><div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;                                                                  {</div><div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;  <span class="keywordflow">return</span> strncpy(<a class="code" href="namespaceupload.html#a770d9c7b49b1fede80de6078d5e49af7">dest</a>, src, n);</div><div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;}</div><div class="ttc" id="namespaceupload_html_a770d9c7b49b1fede80de6078d5e49af7"><div class="ttname"><a href="namespaceupload.html#a770d9c7b49b1fede80de6078d5e49af7">upload.dest</a></div><div class="ttdeci">dest</div><div class="ttdef"><b>Definition:</b> upload.py:394</div></div>
 </div><!-- fragment -->
 </div>
 </div>

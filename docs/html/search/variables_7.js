@@ -37,6 +37,6 @@ var searchData=
   ['gtest_5fprogram_5fname',['GTEST_PROGRAM_NAME',['../namespacegtest__xml__output__unittest.html#ab89cc5b402310ef67bcaf38fa5017461',1,'gtest_xml_output_unittest']]],
   ['gtest_5fprogram_5fpath',['GTEST_PROGRAM_PATH',['../namespacegtest__xml__output__unittest.html#a8c4cf6e9b6a184278a1b2759e5eaec6b',1,'gtest_xml_output_unittest']]],
   ['gtest_5fspi_5fh_5fseed',['GTEST_SPI_H_SEED',['../namespacefuse__gtest__files.html#a891d03ce9cfe3577cb4c193f9544f17f',1,'fuse_gtest_files']]],
-  ['gtest_5ftests_5futil_5fdir',['gtest_tests_util_dir',['../namespacegmock__test__utils.html#af6d94170502149e7f99cfa73ddc13c00',1,'gmock_test_utils.gtest_tests_util_dir()'],['../namespacegmock__test__utils.html#ae7ee9324ba489b3cbd99c5e26006eba9',1,'gmock_test_utils.GTEST_TESTS_UTIL_DIR()']]],
+  ['gtest_5ftests_5futil_5fdir',['GTEST_TESTS_UTIL_DIR',['../namespacegmock__test__utils.html#ae7ee9324ba489b3cbd99c5e26006eba9',1,'gmock_test_utils.GTEST_TESTS_UTIL_DIR()'],['../namespacegmock__test__utils.html#af6d94170502149e7f99cfa73ddc13c00',1,'gmock_test_utils.gtest_tests_util_dir()']]],
   ['gtest_5funversioned_5fwikis',['GTEST_UNVERSIONED_WIKIS',['../namespacerelease__docs.html#aaeabb8c74d9db7a4b2f3c66e8f1a04ee',1,'release_docs']]]
 ];

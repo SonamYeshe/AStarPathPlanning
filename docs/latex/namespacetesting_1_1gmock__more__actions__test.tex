@@ -20,7 +20,7 @@ class \hyperlink{classtesting_1_1gmock__more__actions__test_1_1VoidNullaryFuncto
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-short \hyperlink{namespacetesting_1_1gmock__more__actions__test_a00503d3168f1123e314c0d42b7e10b88}{Short} (short \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+short \hyperlink{namespacetesting_1_1gmock__more__actions__test_a00503d3168f1123e314c0d42b7e10b88}{Short} (short n)
 \item 
 char \hyperlink{namespacetesting_1_1gmock__more__actions__test_af69e6906d734a99d60480e4291891d66}{Char} (char ch)
 \item 
@@ -40,7 +40,7 @@ bool \hyperlink{namespacetesting_1_1gmock__more__actions__test_ae2d3dddc96f56571
 \item 
 string \hyperlink{namespacetesting_1_1gmock__more__actions__test_ac0099e2d9f40351252df31feda822b71}{By\+Non\+Const\+Ref} (string \&s)
 \item 
-const char $\ast$ \hyperlink{namespacetesting_1_1gmock__more__actions__test_a853c9f048674a60798b930750b74a1df}{Binary} (const char $\ast$input, short \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+const char $\ast$ \hyperlink{namespacetesting_1_1gmock__more__actions__test_a853c9f048674a60798b930750b74a1df}{Binary} (const char $\ast$input, short n)
 \item 
 void \hyperlink{namespacetesting_1_1gmock__more__actions__test_aec71bd163ae67ec97e073bd13a4ac039}{Void\+Binary} (int, char)
 \item 
@@ -188,7 +188,7 @@ const double \hyperlink{namespacetesting_1_1gmock__more__actions__test_a73552112
 )}\hypertarget{namespacetesting_1_1gmock__more__actions__test_a853c9f048674a60798b930750b74a1df}{}\label{namespacetesting_1_1gmock__more__actions__test_a853c9f048674a60798b930750b74a1df}
 
 \begin{DoxyCode}
-108 \{ \textcolor{keywordflow}{return} input + \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}; \}  \textcolor{comment}{// NOLINT}
+108 \{ \textcolor{keywordflow}{return} input + n; \}  \textcolor{comment}{// NOLINT}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+more\+\_\+actions\+\_\+test@{testing\+::gmock\+\_\+more\+\_\+actions\+\_\+test}!By\+Const\+Ref@{By\+Const\+Ref}}
 \index{By\+Const\+Ref@{By\+Const\+Ref}!testing\+::gmock\+\_\+more\+\_\+actions\+\_\+test@{testing\+::gmock\+\_\+more\+\_\+actions\+\_\+test}}
@@ -409,7 +409,7 @@ const double \hyperlink{namespacetesting_1_1gmock__more__actions__test_a73552112
 )\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{namespacetesting_1_1gmock__more__actions__test_a00503d3168f1123e314c0d42b7e10b88}{}\label{namespacetesting_1_1gmock__more__actions__test_a00503d3168f1123e314c0d42b7e10b88}
 
 \begin{DoxyCode}
-72 \{ \textcolor{keywordflow}{return} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}; \}  \textcolor{comment}{// NOLINT}
+72 \{ \textcolor{keywordflow}{return} n; \}  \textcolor{comment}{// NOLINT}
 \end{DoxyCode}
 \index{testing\+::gmock\+\_\+more\+\_\+actions\+\_\+test@{testing\+::gmock\+\_\+more\+\_\+actions\+\_\+test}!Sum\+Of4@{Sum\+Of4}}
 \index{Sum\+Of4@{Sum\+Of4}!testing\+::gmock\+\_\+more\+\_\+actions\+\_\+test@{testing\+::gmock\+\_\+more\+\_\+actions\+\_\+test}}
@@ -1254,8 +1254,8 @@ const double \hyperlink{namespacetesting_1_1gmock__more__actions__test_a73552112
 623   \textcolor{keywordtype}{int} numbers[] = \{ 1, 2, 3 \};
 624   Action<MyFunction> a = SetArrayArgument<1>(numbers, numbers + 3);
 625 
-626   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}[4] = \{\};
-627   \textcolor{keywordtype}{int}* pn = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+626   \textcolor{keywordtype}{int} n[4] = \{\};
+627   \textcolor{keywordtype}{int}* pn = n;
 628   \textcolor{keywordtype}{char} ch[4] = \{\};
 629   \textcolor{keywordtype}{char}* pch = ch;
 630   a.Perform(\hyperlink{namespacestd_1_1tr1_af7e12a0f5b5791b5b7c49a5a17b85359}{make\_tuple}(\textcolor{keyword}{true}, pn, pch));
@@ -1299,8 +1299,8 @@ const double \hyperlink{namespacetesting_1_1gmock__more__actions__test_a73552112
 659   \textcolor{keywordtype}{int} numbers[] = \{ 1, 2, 3 \};
 660   Action<MyFunction> a = SetArrayArgument<1>(numbers, numbers);
 661 
-662   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}[4] = \{\};
-663   \textcolor{keywordtype}{int}* pn = \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+662   \textcolor{keywordtype}{int} n[4] = \{\};
+663   \textcolor{keywordtype}{int}* pn = n;
 664   a.Perform(\hyperlink{namespacestd_1_1tr1_af7e12a0f5b5791b5b7c49a5a17b85359}{make\_tuple}(\textcolor{keyword}{true}, pn));
 665   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, n[0]);
 666   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, n[1]);
@@ -1363,7 +1363,7 @@ const double \hyperlink{namespacetesting_1_1gmock__more__actions__test_a73552112
 
 \begin{DoxyCode}
 698                                \{
-699   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 42;
+699   \textcolor{keywordtype}{int} n = 42;
 700   \textcolor{keyword}{const} Action<int()> a = ReturnPointee(&n);
 701   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(42, a.Perform(\hyperlink{namespacestd_1_1tr1_af7e12a0f5b5791b5b7c49a5a17b85359}{make\_tuple}()));
 702 

@@ -2,8 +2,7 @@
 \label{sample3__unittest_8cc}\index{vendor/googletest/googletest/samples/sample3\+\_\+unittest.\+cc@{vendor/googletest/googletest/samples/sample3\+\_\+unittest.\+cc}}
 {\ttfamily \#include \char`\"{}sample3-\/inl.\+h\char`\"{}}\\*
 {\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
-Include dependency graph for sample3\+\_\+unittest.\+cc\+:
-\nopagebreak
+Include dependency graph for sample3\+\_\+unittest.\+cc\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -53,20 +52,20 @@ class \hyperlink{classQueueTest}{Queue\+Test}
 
 \begin{DoxyCode}
 129                            \{
-130   \textcolor{keywordtype}{int} * \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = q0\_.Dequeue();
+130   \textcolor{keywordtype}{int} * n = q0\_.Dequeue();
 131   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(n == NULL);
 132 
 133   n = q1\_.Dequeue();
 134   \hyperlink{gtest_8h_ae9244bfbda562e8b798789b001993fa5}{ASSERT\_TRUE}(n != NULL);
 135   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, *n);
 136   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0u, q1\_.Size());
-137   \textcolor{keyword}{delete} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+137   \textcolor{keyword}{delete} n;
 138 
 139   n = q2\_.Dequeue();
 140   \hyperlink{gtest_8h_ae9244bfbda562e8b798789b001993fa5}{ASSERT\_TRUE}(n != NULL);
 141   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(2, *n);
 142   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1u, q2\_.Size());
-143   \textcolor{keyword}{delete} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+143   \textcolor{keyword}{delete} n;
 144 \}
 \end{DoxyCode}
 \index{sample3\+\_\+unittest.\+cc@{sample3\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}

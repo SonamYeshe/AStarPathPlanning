@@ -1,0 +1,231 @@
+\hypertarget{classAStarPathFinder}{}\section{A\+Star\+Path\+Finder Class Reference}
+\label{classAStarPathFinder}\index{A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}}
+
+
+\hyperlink{classAStarPathFinder}{A\+Star\+Path\+Finder}.  
+
+
+
+
+{\ttfamily \#include $<$A\+Star\+Path\+Finder.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAStarPathFinder_adfae926e32955b2c3e43909ad7961a9a}{A\+Star\+Path\+Finder} ()
+\item 
+virtual \hyperlink{classAStarPathFinder_a3b92e1a0571086969027599fc2a488e5}{$\sim$\+A\+Star\+Path\+Finder} ()
+\item 
+std\+::vector$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classAStarPathFinder_a04a5e2e2aae800b324607ecaa0d8248a}{find\+Path} (\hyperlink{classNode}{Node} start, \hyperlink{classNode}{Node} goal, const std\+::vector$<$ std\+::vector$<$ int $>$$>$ map)
+\item 
+std\+::vector$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classAStarPathFinder_a9c4397d6069006adb6218b027858859e}{get\+Neighbor\+Nodes} (\hyperlink{classNode}{Node} cur)
+\item 
+bool \hyperlink{classAStarPathFinder_ade77a8c0b187355d2553cd42b128c2ae}{is\+Valid} (\hyperlink{classNode}{Node} node, std\+::vector$<$ std\+::vector$<$ int $>$$>$ map)
+\item 
+std\+::vector$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classAStarPathFinder_aef2b14372e6756807849abf96fa5c058}{construct\+Path} (\hyperlink{classNode}{Node} start, \hyperlink{classNode}{Node} goal)
+\item 
+double \hyperlink{classAStarPathFinder_ae5e628981264bd57b8e30e9aade75d3f}{cal\+Heuristic\+Cost} (\hyperlink{classNode}{Node} neighbor, \hyperlink{classNode}{Node} goal)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classAStarPathFinder}{A\+Star\+Path\+Finder}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start,goal,neighbor} & for the point positions \\
+\hline
+{\em map} & is the given surroundings \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}!A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}}
+\index{A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}!A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}}
+\subsubsection[{\texorpdfstring{A\+Star\+Path\+Finder()}{AStarPathFinder()}}]{\setlength{\rightskip}{0pt plus 5cm}A\+Star\+Path\+Finder\+::\+A\+Star\+Path\+Finder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAStarPathFinder_adfae926e32955b2c3e43909ad7961a9a}{}\label{classAStarPathFinder_adfae926e32955b2c3e43909ad7961a9a}
+
+\begin{DoxyCode}
+17                                  \{
+18 \}
+\end{DoxyCode}
+\index{A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}!````~A\+Star\+Path\+Finder@{$\sim$\+A\+Star\+Path\+Finder}}
+\index{````~A\+Star\+Path\+Finder@{$\sim$\+A\+Star\+Path\+Finder}!A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}}
+\subsubsection[{\texorpdfstring{$\sim$\+A\+Star\+Path\+Finder()}{~AStarPathFinder()}}]{\setlength{\rightskip}{0pt plus 5cm}A\+Star\+Path\+Finder\+::$\sim$\+A\+Star\+Path\+Finder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classAStarPathFinder_a3b92e1a0571086969027599fc2a488e5}{}\label{classAStarPathFinder_a3b92e1a0571086969027599fc2a488e5}
+
+\begin{DoxyCode}
+20                                   \{
+21 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}!cal\+Heuristic\+Cost@{cal\+Heuristic\+Cost}}
+\index{cal\+Heuristic\+Cost@{cal\+Heuristic\+Cost}!A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}}
+\subsubsection[{\texorpdfstring{cal\+Heuristic\+Cost(\+Node neighbor, Node goal)}{calHeuristicCost(Node neighbor, Node goal)}}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Star\+Path\+Finder\+::cal\+Heuristic\+Cost (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}}]{neighbor, }
+\item[{{\bf Node}}]{goal}
+\end{DoxyParamCaption}
+)}\hypertarget{classAStarPathFinder_ae5e628981264bd57b8e30e9aade75d3f}{}\label{classAStarPathFinder_ae5e628981264bd57b8e30e9aade75d3f}
+
+\begin{DoxyCode}
+120                                                                  \{
+121   \textcolor{keywordtype}{int} x1 = neighbor.\hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX}();
+122   \textcolor{keywordtype}{int} y1 = neighbor.\hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY}();
+123   \textcolor{keywordtype}{int} x2 = goal.\hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX}();
+124   \textcolor{keywordtype}{int} y2 = goal.\hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY}();
+125 
+126   \textcolor{keywordflow}{return} sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+127 \}
+\end{DoxyCode}
+\index{A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}!construct\+Path@{construct\+Path}}
+\index{construct\+Path@{construct\+Path}!A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}}
+\subsubsection[{\texorpdfstring{construct\+Path(\+Node start, Node goal)}{constructPath(Node start, Node goal)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Node} $>$ A\+Star\+Path\+Finder\+::construct\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}}]{start, }
+\item[{{\bf Node}}]{goal}
+\end{DoxyParamCaption}
+)}\hypertarget{classAStarPathFinder_aef2b14372e6756807849abf96fa5c058}{}\label{classAStarPathFinder_aef2b14372e6756807849abf96fa5c058}
+
+\begin{DoxyCode}
+109                                                                     \{
+110   std::vector<Node> path;
+111   \hyperlink{classNode}{Node} cur = goal;
+112   \textcolor{keywordflow}{while} (cur != start) \{
+113     path.insert(path.begin(), cur);
+114     cur = *(cur.\hyperlink{classNode_a707ec5f7e95ba42c15c263adc1ee70fe}{getParent}());
+115   \}
+116   path.insert(path.begin(), start);
+117   \textcolor{keywordflow}{return} path;
+118 \}
+\end{DoxyCode}
+\index{A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}!find\+Path@{find\+Path}}
+\index{find\+Path@{find\+Path}!A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}}
+\subsubsection[{\texorpdfstring{find\+Path(\+Node start, Node goal, const std\+::vector$<$ std\+::vector$<$ int $>$$>$ map)}{findPath(Node start, Node goal, const std::vector< std::vector< int >> map)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Node} $>$ A\+Star\+Path\+Finder\+::find\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}}]{start, }
+\item[{{\bf Node}}]{goal, }
+\item[{const std\+::vector$<$ std\+::vector$<$ int $>$$>$}]{map}
+\end{DoxyParamCaption}
+)}\hypertarget{classAStarPathFinder_a04a5e2e2aae800b324607ecaa0d8248a}{}\label{classAStarPathFinder_a04a5e2e2aae800b324607ecaa0d8248a}
+
+\begin{DoxyCode}
+24                                                                            \{
+25   \textcolor{keywordtype}{int} row = map.size();
+26   \textcolor{keywordtype}{int} col = map[0].size();
+27   \textcolor{keywordtype}{int} closedMap[row - 1][col - 1] = \{ \{ 0 \} \};
+28   \textcolor{keywordtype}{int} openMap[row - 1][col - 1] = \{ \{ 0 \} \};
+29   \textcolor{comment}{//  an ordered set}
+30   std::vector<Node> openSet;
+31   openSet.push\_back(start);
+32   openMap[start.\hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX}()][start.\hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY}()] = 1;
+33   \textcolor{keywordflow}{while} (!openSet.empty()) \{
+34     std::sort(openSet.begin(), openSet.end());
+35     \hyperlink{classNode}{Node} cur = *openSet.begin();
+36     \textcolor{comment}{//  std::cout << cur.getX() << cur.getY() <<std::endl;}
+37     openSet.erase(openSet.begin());
+38     openMap[cur.getX()][cur.getY()] = 0;
+39     \textcolor{keywordflow}{if} (cur == goal)
+40       \textcolor{keywordflow}{return} \hyperlink{classAStarPathFinder_aef2b14372e6756807849abf96fa5c058}{constructPath}(start, cur);
+41 
+42     closedMap[cur.getX()][cur.getY()] = 1;
+43     std::vector<Node> neighbors = \hyperlink{classAStarPathFinder_a9c4397d6069006adb6218b027858859e}{getNeighborNodes}(cur);
+44 
+45     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} neighbor : neighbors) \{
+46       \textcolor{comment}{//  std::cout << "neighbor: "<<neighbor.getX()}
+47       \textcolor{comment}{//  << neighbor.getY() <<std::endl;}
+48       \textcolor{keyword}{const} \textcolor{keywordtype}{bool} alreadyVisited = closedMap[neighbor.getX()][neighbor.getY()]
+49           == 1;
+50       \textcolor{keyword}{const} \textcolor{keywordtype}{bool} alreadyOpen = openMap[neighbor.getX()][neighbor.getY()] == 1;
+51       \textcolor{keyword}{const} \textcolor{keywordtype}{bool} validNode = \hyperlink{classAStarPathFinder_ade77a8c0b187355d2553cd42b128c2ae}{isValid}(neighbor, map);
+52 
+53       \textcolor{keywordflow}{if} (alreadyVisited || !validNode)
+54         \textcolor{keywordflow}{continue};
+55       \textcolor{keywordflow}{if} (!alreadyOpen)
+56         openSet.push\_back(neighbor);
+57 
+58       \textcolor{keywordtype}{double} gScore = cur.getgScore() + 1.0;
+59       \textcolor{keywordtype}{double} hScore = \hyperlink{classAStarPathFinder_ae5e628981264bd57b8e30e9aade75d3f}{calHeuristicCost}(neighbor, goal);
+60       \textcolor{keywordtype}{double} fScore = gScore + hScore;
+61 
+62       \textcolor{keywordflow}{if} (fScore < neighbor.getfScore()) \{
+63         neighbor.setParent(cur);
+64         neighbor.setgScore(gScore);
+65         neighbor.setfScore(fScore);
+66       \}
+67     \}
+68   \}
+69 
+70   std::vector<Node> path;
+71   \textcolor{keywordflow}{return} path;
+72 \}
+\end{DoxyCode}
+\index{A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}!get\+Neighbor\+Nodes@{get\+Neighbor\+Nodes}}
+\index{get\+Neighbor\+Nodes@{get\+Neighbor\+Nodes}!A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}}
+\subsubsection[{\texorpdfstring{get\+Neighbor\+Nodes(\+Node cur)}{getNeighborNodes(Node cur)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Node} $>$ A\+Star\+Path\+Finder\+::get\+Neighbor\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}}]{cur}
+\end{DoxyParamCaption}
+)}\hypertarget{classAStarPathFinder_a9c4397d6069006adb6218b027858859e}{}\label{classAStarPathFinder_a9c4397d6069006adb6218b027858859e}
+
+\begin{DoxyCode}
+74                                                           \{
+75   std::vector<Node> neighbors;
+76   \textcolor{keywordtype}{int} x = cur.\hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX}();
+77   \textcolor{keywordtype}{int} y = cur.\hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY}();
+78   \hyperlink{classNode}{Node} neighbor1(x - 1, y - 1);
+79   \hyperlink{classNode}{Node} neighbor2(x, y - 1);
+80   \hyperlink{classNode}{Node} neighbor3(x + 1, y - 1);
+81   \hyperlink{classNode}{Node} neighbor4(x - 1, y);
+82   \hyperlink{classNode}{Node} neighbor5(x + 1, y);
+83   \hyperlink{classNode}{Node} neighbor6(x - 1, y + 1);
+84   \hyperlink{classNode}{Node} neighbor7(x, y + 1);
+85   \hyperlink{classNode}{Node} neighbor8(x + 1, y + 1);
+86   neighbors.push\_back(neighbor1);
+87   neighbors.push\_back(neighbor2);
+88   neighbors.push\_back(neighbor3);
+89   neighbors.push\_back(neighbor4);
+90   neighbors.push\_back(neighbor5);
+91   neighbors.push\_back(neighbor6);
+92   neighbors.push\_back(neighbor7);
+93   neighbors.push\_back(neighbor8);
+94 
+95   \textcolor{keywordflow}{return} neighbors;
+96 \}
+\end{DoxyCode}
+\index{A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!A\+Star\+Path\+Finder@{A\+Star\+Path\+Finder}}
+\subsubsection[{\texorpdfstring{is\+Valid(\+Node node, std\+::vector$<$ std\+::vector$<$ int $>$$>$ map)}{isValid(Node node, std::vector< std::vector< int >> map)}}]{\setlength{\rightskip}{0pt plus 5cm}bool A\+Star\+Path\+Finder\+::is\+Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}}]{node, }
+\item[{std\+::vector$<$ std\+::vector$<$ int $>$$>$}]{map}
+\end{DoxyParamCaption}
+)}\hypertarget{classAStarPathFinder_ade77a8c0b187355d2553cd42b128c2ae}{}\label{classAStarPathFinder_ade77a8c0b187355d2553cd42b128c2ae}
+
+\begin{DoxyCode}
+98                                                                       \{
+99   \textcolor{keywordtype}{int} xLen = map.size();
+100   \textcolor{keywordtype}{int} yLen = map[0].size();
+101   node.\hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX}();
+102   \textcolor{keywordtype}{int} x = node.\hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX}();
+103   \textcolor{keywordtype}{int} y = node.\hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY}();
+104   \textcolor{keywordflow}{if} (x >= 0 && x < xLen && y >= 0 && y < yLen)
+105     \textcolor{keywordflow}{return} map[x][y] == 0;
+106   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+107 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{AStarPathFinder_8h}{A\+Star\+Path\+Finder.\+h}\item 
+app/\hyperlink{AStarPathFinder_8cpp}{A\+Star\+Path\+Finder.\+cpp}\end{DoxyCompactItemize}

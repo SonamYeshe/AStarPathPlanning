@@ -1,8 +1,9 @@
-/*
- * AStarPathFinder.cpp
- *
- *  Created on: Oct 17, 2017
- *      Author: viki
+/**
+ *  @file main.cpp
+ *  @brief
+ *  @details
+ *  @author     Jiawei Ge(SonamYeshe)
+ *  @copyright  GNU Public License 2017 Jiawei Ge
  */
 
 #include <AStarPathFinder.h>
@@ -11,30 +12,28 @@
 #include <set>
 #include <cmath>
 #include <algorithm>
-AStarPathFinder::AStarPathFinder() {
-  // TODO Auto-generated constructor stub
+#include <vector>
 
+AStarPathFinder::AStarPathFinder() {
 }
 
 AStarPathFinder::~AStarPathFinder() {
-  // TODO Auto-generated destructor stub
 }
 
 std::vector<Node> AStarPathFinder::findPath(Node start, Node goal,
                                             std::vector<std::vector<int>> map) {
-  // TODO Auto-generated constructor stub
   int row = map.size();
   int col = map[0].size();
   int closedMap[row - 1][col - 1] = { { 0 } };
   int openMap[row - 1][col - 1] = { { 0 } };
-  //an ordered set
+  //  an ordered set
   std::vector<Node> openSet;
   openSet.push_back(start);
   openMap[start.getX()][start.getY()] = 1;
   while (!openSet.empty()) {
     std::sort(openSet.begin(), openSet.end());
     Node cur = *openSet.begin();
-    //std::cout << cur.getX() << cur.getY() <<std::endl;
+    //  std::cout << cur.getX() << cur.getY() <<std::endl;
     openSet.erase(openSet.begin());
     openMap[cur.getX()][cur.getY()] = 0;
     if (cur == goal)
@@ -44,7 +43,8 @@ std::vector<Node> AStarPathFinder::findPath(Node start, Node goal,
     std::vector<Node> neighbors = getNeighborNodes(cur);
 
     for (auto neighbor : neighbors) {
-      //std::cout << "neighbor: "<<neighbor.getX() << neighbor.getY() <<std::endl;
+      //  std::cout << "neighbor: "<<neighbor.getX()
+      //  << neighbor.getY() <<std::endl;
       const bool alreadyVisited = closedMap[neighbor.getX()][neighbor.getY()]
           == 1;
       const bool alreadyOpen = openMap[neighbor.getX()][neighbor.getY()] == 1;

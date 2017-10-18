@@ -6,8 +6,7 @@
 
 
 
-Inheritance diagram for testing\+:\+:internal\+:\+:Typed\+Expectation$<$ F $>$\+:
-\nopagebreak
+Inheritance diagram for testing\+:\+:internal\+:\+:Typed\+Expectation$<$ F $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,8 +15,7 @@ Inheritance diagram for testing\+:\+:internal\+:\+:Typed\+Expectation$<$ F $>$\+
 \end{figure}
 
 
-Collaboration diagram for testing\+:\+:internal\+:\+:Typed\+Expectation$<$ F $>$\+:
-\nopagebreak
+Collaboration diagram for testing\+:\+:internal\+:\+:Typed\+Expectation$<$ F $>$\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -36,15 +34,15 @@ typedef \hyperlink{structtesting_1_1internal_1_1Function}{Function}$<$ F $>$\+::
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classtesting_1_1internal_1_1TypedExpectation_a10bd0a8fa0db37215be42e1c61ccbc28}{Typed\+Expectation} (\hyperlink{classtesting_1_1internal_1_1FunctionMockerBase}{Function\+Mocker\+Base}$<$ F $>$ $\ast$owner, const char $\ast$a\+\_\+file, int a\+\_\+line, const \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{string} \&a\+\_\+source\+\_\+text, const \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a8f10e3906761cc5c10fa3561c6e8938e}{Argument\+Matcher\+Tuple} \&\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m})
+\hyperlink{classtesting_1_1internal_1_1TypedExpectation_a10bd0a8fa0db37215be42e1c61ccbc28}{Typed\+Expectation} (\hyperlink{classtesting_1_1internal_1_1FunctionMockerBase}{Function\+Mocker\+Base}$<$ F $>$ $\ast$owner, const char $\ast$a\+\_\+file, int a\+\_\+line, const \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{string} \&a\+\_\+source\+\_\+text, const \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a8f10e3906761cc5c10fa3561c6e8938e}{Argument\+Matcher\+Tuple} \&m)
 \item 
 virtual \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a4d73d7edd81f1b1418a33931fe728158}{$\sim$\+Typed\+Expectation} ()
 \item 
-\hyperlink{classtesting_1_1internal_1_1TypedExpectation}{Typed\+Expectation} \& \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a4b25ec3d051e8551f3e213214b31c714}{With} (const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ const \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a9a91379262d101f435809ba4556d14fa}{Argument\+Tuple} \& $>$ \&\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m})
+\hyperlink{classtesting_1_1internal_1_1TypedExpectation}{Typed\+Expectation} \& \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a4b25ec3d051e8551f3e213214b31c714}{With} (const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ const \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a9a91379262d101f435809ba4556d14fa}{Argument\+Tuple} \& $>$ \&m)
 \item 
 \hyperlink{classtesting_1_1internal_1_1TypedExpectation}{Typed\+Expectation} \& \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a9a4c34ee5c6e6adc880a22f61f33da57}{Times} (const \hyperlink{classtesting_1_1Cardinality}{Cardinality} \&a\+\_\+cardinality)
 \item 
-\hyperlink{classtesting_1_1internal_1_1TypedExpectation}{Typed\+Expectation} \& \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a92d56ee785d38ec8193aed2a0fcbccf0}{Times} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\hyperlink{classtesting_1_1internal_1_1TypedExpectation}{Typed\+Expectation} \& \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a92d56ee785d38ec8193aed2a0fcbccf0}{Times} (int n)
 \item 
 \hyperlink{classtesting_1_1internal_1_1TypedExpectation}{Typed\+Expectation} \& \hyperlink{classtesting_1_1internal_1_1TypedExpectation_ada9e9081a98435991310ac60483d1230}{In\+Sequence} (const \hyperlink{classtesting_1_1Sequence}{Sequence} \&s)
 \item 
@@ -116,7 +114,7 @@ virtual void \hyperlink{classtesting_1_1internal_1_1TypedExpectation_ab019251041
 \begin{DoxyCode}
 886       : \hyperlink{classtesting_1_1internal_1_1ExpectationBase_a8c82a7ecad5831a3ce5ce8cc56ae172d}{ExpectationBase}(a\_file, a\_line, a\_source\_text),
 887         owner\_(owner),
-888         matchers\_(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}),
+888         matchers\_(m),
 889         \textcolor{comment}{// By default, extra\_matcher\_ should match anything.  However,}
 890         \textcolor{comment}{// we cannot initialize it with \_ as that triggers a compiler}
 891         \textcolor{comment}{// bug in Symbian's C++ compiler (cannot decide between two}
@@ -418,7 +416,7 @@ Implements \hyperlink{classtesting_1_1internal_1_1ExpectationBase_a5ce4f648c7b11
 
 \begin{DoxyCode}
 931                                  \{
-932     \textcolor{keywordflow}{return} \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a9a4c34ee5c6e6adc880a22f61f33da57}{Times}(\hyperlink{namespacetesting_aa9b1b32ba9e8d3db8ac0af0fc8785c8d}{Exactly}(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}));
+932     \textcolor{keywordflow}{return} \hyperlink{classtesting_1_1internal_1_1TypedExpectation_a9a4c34ee5c6e6adc880a22f61f33da57}{Times}(\hyperlink{namespacetesting_aa9b1b32ba9e8d3db8ac0af0fc8785c8d}{Exactly}(n));
 933   \}
 \end{DoxyCode}
 \index{testing\+::internal\+::\+Typed\+Expectation@{testing\+::internal\+::\+Typed\+Expectation}!Will\+Once@{Will\+Once}}
@@ -500,7 +498,7 @@ Implements \hyperlink{classtesting_1_1internal_1_1ExpectationBase_a5ce4f648c7b11
 916     \}
 917     \hyperlink{classtesting_1_1internal_1_1ExpectationBase_a584f296e53b4cc002ddf5e65e44d72d9}{last\_clause\_} = \hyperlink{classtesting_1_1internal_1_1ExpectationBase_a450f34b979ec5814c91d4eab6b78cfc2a2a83fca10989c55ad16aafd2851ca139}{kWith};
 918 
-919     extra\_matcher\_ = \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+919     extra\_matcher\_ = m;
 920     \hyperlink{classtesting_1_1internal_1_1ExpectationBase_a34f599ac7ae4f1fb7567e0d4c9fadcba}{extra\_matcher\_specified\_} = \textcolor{keyword}{true};
 921     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
 922   \}

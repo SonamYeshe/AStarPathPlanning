@@ -1,14 +1,16 @@
-/*
- * Node.cpp
- *
- *  Created on: Oct 17, 2017
- *      Author: viki
+/**
+ *  @file main.cpp
+ *  @brief
+ *  @details
+ *  @author     Jiawei Ge(SonamYeshe)
+ *  @copyright  GNU Public License 2017 Jiawei Ge
  */
 
 #include <Node.h>
 #include <limits>
+#include <memory>
+
 Node::Node() {
-  // TODO Auto-generated constructor stub
   this->x = -1;
   this->y = -1;
   this->fScore = std::numeric_limits<double>::max();
@@ -17,8 +19,6 @@ Node::Node() {
 }
 
 Node::~Node() {
-  // TODO Auto-generated destructor stub
-
 }
 
 Node::Node(int x, int y) {

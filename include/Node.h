@@ -1,13 +1,21 @@
-/*
- * Node.h
- *
- *  Created on: Oct 17, 2017
- *      Author: viki
+/**
+ *  @file main.cpp
+ *  @brief
+ *  @details
+ *  @author     Jiawei Ge(SonamYeshe)
+ *  @copyright  GNU Public License 2017 Jiawei Ge
  */
 
-#ifndef INCLUDE_NODE_H_
-#define INCLUDE_NODE_H_
+#ifndef ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_NODE_H_
+#define ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_NODE_H_
 #include <memory>
+
+/**
+ *  @brief AStarPathFinder
+ *  @param x, y to present the location
+ *  @param fScore, gScore, hScore are the algorithm for the a*
+ */
+
 class Node {
  public:
   Node();
@@ -35,4 +43,4 @@ class Node {
   std::shared_ptr<Node> parent;
 };
 
-#endif /* INCLUDE_NODE_H_ */
+#endif  // ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_NODE_H_"
