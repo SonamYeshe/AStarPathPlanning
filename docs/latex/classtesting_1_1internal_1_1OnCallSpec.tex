@@ -1,0 +1,159 @@
+\hypertarget{classtesting_1_1internal_1_1OnCallSpec}{}\section{testing\+:\+:internal\+:\+:On\+Call\+Spec$<$ F $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1OnCallSpec}\index{testing\+::internal\+::\+On\+Call\+Spec$<$ F $>$@{testing\+::internal\+::\+On\+Call\+Spec$<$ F $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/spec-\/builders.\+h$>$}
+
+
+
+Inheritance diagram for testing\+:\+:internal\+:\+:On\+Call\+Spec$<$ F $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classtesting_1_1internal_1_1OnCallSpec__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:internal\+:\+:On\+Call\+Spec$<$ F $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classtesting_1_1internal_1_1OnCallSpec__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{structtesting_1_1internal_1_1Function}{Function}$<$ F $>$\+::\hyperlink{classtesting_1_1internal_1_1OnCallSpec_a70ffab8b915b7b48a90f5ce256da806f}{Argument\+Tuple} \hyperlink{classtesting_1_1internal_1_1OnCallSpec_a70ffab8b915b7b48a90f5ce256da806f}{Argument\+Tuple}
+\item 
+typedef \hyperlink{structtesting_1_1internal_1_1Function}{Function}$<$ F $>$\+::\hyperlink{classtesting_1_1internal_1_1OnCallSpec_a3240f159f0a9d8cda208bc256da35074}{Argument\+Matcher\+Tuple} \hyperlink{classtesting_1_1internal_1_1OnCallSpec_a3240f159f0a9d8cda208bc256da35074}{Argument\+Matcher\+Tuple}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1OnCallSpec_ac7077e8162a10714e463b64a3cc7d054}{On\+Call\+Spec} (const char $\ast$a\+\_\+file, int a\+\_\+line, const \hyperlink{classtesting_1_1internal_1_1OnCallSpec_a3240f159f0a9d8cda208bc256da35074}{Argument\+Matcher\+Tuple} \&matchers)
+\item 
+\hyperlink{classtesting_1_1internal_1_1OnCallSpec}{On\+Call\+Spec} \& \hyperlink{classtesting_1_1internal_1_1OnCallSpec_a2421cc9ac5c954a3a4c9275c35771bad}{With} (const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ const \hyperlink{classtesting_1_1internal_1_1OnCallSpec_a70ffab8b915b7b48a90f5ce256da806f}{Argument\+Tuple} \& $>$ \&\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m})
+\item 
+\hyperlink{classtesting_1_1internal_1_1OnCallSpec}{On\+Call\+Spec} \& \hyperlink{classtesting_1_1internal_1_1OnCallSpec_a1c6303bf46983f20f4d2a61752fa8663}{Will\+By\+Default} (const \hyperlink{classtesting_1_1Action}{Action}$<$ F $>$ \&action)
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1OnCallSpec_a98603357e18be6450cd2154853bea3f7}{Matches} (const \hyperlink{classtesting_1_1internal_1_1OnCallSpec_a70ffab8b915b7b48a90f5ce256da806f}{Argument\+Tuple} \&args) const 
+\item 
+const \hyperlink{classtesting_1_1Action}{Action}$<$ F $>$ \& \hyperlink{classtesting_1_1internal_1_1OnCallSpec_ad560cd3f669be59d1159a962c76ba9b7}{Get\+Action} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\index{testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}!Argument\+Matcher\+Tuple@{Argument\+Matcher\+Tuple}}
+\index{Argument\+Matcher\+Tuple@{Argument\+Matcher\+Tuple}!testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}}
+\subsubsection[{\texorpdfstring{Argument\+Matcher\+Tuple}{ArgumentMatcherTuple}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F$>$ typedef {\bf Function}$<$F$>$\+::{\bf Argument\+Matcher\+Tuple} {\bf testing\+::internal\+::\+On\+Call\+Spec}$<$ F $>$\+::{\bf Argument\+Matcher\+Tuple}}\hypertarget{classtesting_1_1internal_1_1OnCallSpec_a3240f159f0a9d8cda208bc256da35074}{}\label{classtesting_1_1internal_1_1OnCallSpec_a3240f159f0a9d8cda208bc256da35074}
+\index{testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}!Argument\+Tuple@{Argument\+Tuple}}
+\index{Argument\+Tuple@{Argument\+Tuple}!testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}}
+\subsubsection[{\texorpdfstring{Argument\+Tuple}{ArgumentTuple}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F$>$ typedef {\bf Function}$<$F$>$\+::{\bf Argument\+Tuple} {\bf testing\+::internal\+::\+On\+Call\+Spec}$<$ F $>$\+::{\bf Argument\+Tuple}}\hypertarget{classtesting_1_1internal_1_1OnCallSpec_a70ffab8b915b7b48a90f5ce256da806f}{}\label{classtesting_1_1internal_1_1OnCallSpec_a70ffab8b915b7b48a90f5ce256da806f}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}!On\+Call\+Spec@{On\+Call\+Spec}}
+\index{On\+Call\+Spec@{On\+Call\+Spec}!testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}}
+\subsubsection[{\texorpdfstring{On\+Call\+Spec(const char $\ast$a\+\_\+file, int a\+\_\+line, const Argument\+Matcher\+Tuple \&matchers)}{OnCallSpec(const char *a_file, int a_line, const ArgumentMatcherTuple &matchers)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F$>$ {\bf testing\+::internal\+::\+On\+Call\+Spec}$<$ F $>$\+::{\bf On\+Call\+Spec} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+file, }
+\item[{int}]{a\+\_\+line, }
+\item[{const {\bf Argument\+Matcher\+Tuple} \&}]{matchers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1OnCallSpec_ac7077e8162a10714e463b64a3cc7d054}{}\label{classtesting_1_1internal_1_1OnCallSpec_ac7077e8162a10714e463b64a3cc7d054}
+
+\begin{DoxyCode}
+294       : \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_afc5da72d536ad61e2d66de87b2b9bc50}{UntypedOnCallSpecBase}(a\_file, a\_line),
+295         matchers\_(matchers),
+296         \textcolor{comment}{// By default, extra\_matcher\_ should match anything.  However,}
+297         \textcolor{comment}{// we cannot initialize it with \_ as that triggers a compiler}
+298         \textcolor{comment}{// bug in Symbian's C++ compiler (cannot decide between two}
+299         \textcolor{comment}{// overloaded constructors of Matcher<const ArgumentTuple&>).}
+300         extra\_matcher\_(A<const ArgumentTuple&>()) \{
+301   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}!Get\+Action@{Get\+Action}}
+\index{Get\+Action@{Get\+Action}!testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}}
+\subsubsection[{\texorpdfstring{Get\+Action() const }{GetAction() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F$>$ const {\bf Action}$<$F$>$\& {\bf testing\+::internal\+::\+On\+Call\+Spec}$<$ F $>$\+::Get\+Action (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1OnCallSpec_ad560cd3f669be59d1159a962c76ba9b7}{}\label{classtesting_1_1internal_1_1OnCallSpec_ad560cd3f669be59d1159a962c76ba9b7}
+
+\begin{DoxyCode}
+334                                      \{
+335     \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_aa0eb811082c71f44a696a14f662b14b5}{AssertSpecProperty}(\hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_adb6d19adfeb5fde535d854aedbc5fb0f}{last\_clause\_} == 
+      \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_a78ebf16bfee40375e33a983f3100f354aeb25a21e1aa3dc4ca3a108b5533d7eed}{kWillByDefault},
+336                        \textcolor{stringliteral}{".WillByDefault() must appear exactly "}
+337                        \textcolor{stringliteral}{"once in an ON\_CALL()."});
+338     \textcolor{keywordflow}{return} action\_;
+339   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}!Matches@{Matches}}
+\index{Matches@{Matches}!testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}}
+\subsubsection[{\texorpdfstring{Matches(const Argument\+Tuple \&args) const }{Matches(const ArgumentTuple &args) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F$>$ bool {\bf testing\+::internal\+::\+On\+Call\+Spec}$<$ F $>$\+::Matches (
+\begin{DoxyParamCaption}
+\item[{const {\bf Argument\+Tuple} \&}]{args}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1OnCallSpec_a98603357e18be6450cd2154853bea3f7}{}\label{classtesting_1_1internal_1_1OnCallSpec_a98603357e18be6450cd2154853bea3f7}
+
+\begin{DoxyCode}
+329                                                 \{
+330     \textcolor{keywordflow}{return} \hyperlink{namespacetesting_1_1internal_a10095d1e1c99369200072b39d657ebc4}{TupleMatches}(matchers\_, args) && extra\_matcher\_.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(args);
+331   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}!Will\+By\+Default@{Will\+By\+Default}}
+\index{Will\+By\+Default@{Will\+By\+Default}!testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}}
+\subsubsection[{\texorpdfstring{Will\+By\+Default(const Action$<$ F $>$ \&action)}{WillByDefault(const Action< F > &action)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F$>$ {\bf On\+Call\+Spec}\& {\bf testing\+::internal\+::\+On\+Call\+Spec}$<$ F $>$\+::Will\+By\+Default (
+\begin{DoxyParamCaption}
+\item[{const {\bf Action}$<$ F $>$ \&}]{action}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1OnCallSpec_a1c6303bf46983f20f4d2a61752fa8663}{}\label{classtesting_1_1internal_1_1OnCallSpec_a1c6303bf46983f20f4d2a61752fa8663}
+
+\begin{DoxyCode}
+316                                                      \{
+317     \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_a9df045539c850fc4ba04d2ca02602335}{ExpectSpecProperty}(\hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_adb6d19adfeb5fde535d854aedbc5fb0f}{last\_clause\_} < 
+      \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_a78ebf16bfee40375e33a983f3100f354aeb25a21e1aa3dc4ca3a108b5533d7eed}{kWillByDefault},
+318                        \textcolor{stringliteral}{".WillByDefault() must appear "}
+319                        \textcolor{stringliteral}{"exactly once in an ON\_CALL()."});
+320     \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_adb6d19adfeb5fde535d854aedbc5fb0f}{last\_clause\_} = \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_a78ebf16bfee40375e33a983f3100f354aeb25a21e1aa3dc4ca3a108b5533d7eed}{kWillByDefault};
+321 
+322     \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_a9df045539c850fc4ba04d2ca02602335}{ExpectSpecProperty}(!\hyperlink{namespaceupload_a675d13c979f1c720866d22ed1736f580}{action}.IsDoDefault(),
+323                        \textcolor{stringliteral}{"DoDefault() cannot be used in ON\_CALL()."});
+324     action\_ = \hyperlink{namespaceupload_a675d13c979f1c720866d22ed1736f580}{action};
+325     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+326   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}!With@{With}}
+\index{With@{With}!testing\+::internal\+::\+On\+Call\+Spec@{testing\+::internal\+::\+On\+Call\+Spec}}
+\subsubsection[{\texorpdfstring{With(const Matcher$<$ const Argument\+Tuple \& $>$ \&m)}{With(const Matcher< const ArgumentTuple & > &m)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename F$>$ {\bf On\+Call\+Spec}\& {\bf testing\+::internal\+::\+On\+Call\+Spec}$<$ F $>$\+::With (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matcher}$<$ const {\bf Argument\+Tuple} \& $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1OnCallSpec_a2421cc9ac5c954a3a4c9275c35771bad}{}\label{classtesting_1_1internal_1_1OnCallSpec_a2421cc9ac5c954a3a4c9275c35771bad}
+
+\begin{DoxyCode}
+304                                                            \{
+305     \textcolor{comment}{// Makes sure this is called at most once.}
+306     \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_a9df045539c850fc4ba04d2ca02602335}{ExpectSpecProperty}(\hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_adb6d19adfeb5fde535d854aedbc5fb0f}{last\_clause\_} < \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_a78ebf16bfee40375e33a983f3100f354a451699b0beaaabb325f8eaf1c65a071d}{kWith},
+307                        \textcolor{stringliteral}{".With() cannot appear "}
+308                        \textcolor{stringliteral}{"more than once in an ON\_CALL()."});
+309     \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_adb6d19adfeb5fde535d854aedbc5fb0f}{last\_clause\_} = \hyperlink{classtesting_1_1internal_1_1UntypedOnCallSpecBase_a78ebf16bfee40375e33a983f3100f354a451699b0beaaabb325f8eaf1c65a071d}{kWith};
+310 
+311     extra\_matcher\_ = \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m};
+312     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+313   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-spec-builders_8h}{gmock-\/spec-\/builders.\+h}\end{DoxyCompactItemize}

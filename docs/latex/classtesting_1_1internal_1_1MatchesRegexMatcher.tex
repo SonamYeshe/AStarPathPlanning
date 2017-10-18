@@ -1,0 +1,104 @@
+\hypertarget{classtesting_1_1internal_1_1MatchesRegexMatcher}{}\section{testing\+:\+:internal\+:\+:Matches\+Regex\+Matcher Class Reference}
+\label{classtesting_1_1internal_1_1MatchesRegexMatcher}\index{testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1MatchesRegexMatcher_acce0beb9c72166b1c5771869cfebedd1}{Matches\+Regex\+Matcher} (const \hyperlink{classtesting_1_1internal_1_1RE}{RE} $\ast$regex, bool full\+\_\+match)
+\item 
+{\footnotesize template$<$typename Char\+Type $>$ }\\bool \hyperlink{classtesting_1_1internal_1_1MatchesRegexMatcher_a27a5146509e08a8d248cd7967bac7d41}{Match\+And\+Explain} (Char\+Type $\ast$s, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
+\item 
+{\footnotesize template$<$class Matchee\+String\+Type $>$ }\\bool \hyperlink{classtesting_1_1internal_1_1MatchesRegexMatcher_ad7796e8be6b651f8bdae704df7cc4f08}{Match\+And\+Explain} (const Matchee\+String\+Type \&s, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$) const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1MatchesRegexMatcher_ab95aa201f56b0d6d0300ac513b011759}{Describe\+To} (\+::std\+::ostream $\ast$os) const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1MatchesRegexMatcher_a3ed6b04a2ee7099c8f987c4a3a3ddfc5}{Describe\+Negation\+To} (\+::std\+::ostream $\ast$os) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}!Matches\+Regex\+Matcher@{Matches\+Regex\+Matcher}}
+\index{Matches\+Regex\+Matcher@{Matches\+Regex\+Matcher}!testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}}
+\subsubsection[{\texorpdfstring{Matches\+Regex\+Matcher(const R\+E $\ast$regex, bool full\+\_\+match)}{MatchesRegexMatcher(const RE *regex, bool full_match)}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::internal\+::\+Matches\+Regex\+Matcher\+::\+Matches\+Regex\+Matcher (
+\begin{DoxyParamCaption}
+\item[{const {\bf RE} $\ast$}]{regex, }
+\item[{bool}]{full\+\_\+match}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1MatchesRegexMatcher_acce0beb9c72166b1c5771869cfebedd1}{}\label{classtesting_1_1internal_1_1MatchesRegexMatcher_acce0beb9c72166b1c5771869cfebedd1}
+
+\begin{DoxyCode}
+1329       : regex\_(regex), full\_match\_(full\_match) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}!Describe\+Negation\+To@{Describe\+Negation\+To}}
+\index{Describe\+Negation\+To@{Describe\+Negation\+To}!testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}}
+\subsubsection[{\texorpdfstring{Describe\+Negation\+To(\+::std\+::ostream $\ast$os) const }{DescribeNegationTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}void testing\+::internal\+::\+Matches\+Regex\+Matcher\+::\+Describe\+Negation\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1MatchesRegexMatcher_a3ed6b04a2ee7099c8f987c4a3a3ddfc5}{}\label{classtesting_1_1internal_1_1MatchesRegexMatcher_a3ed6b04a2ee7099c8f987c4a3a3ddfc5}
+
+\begin{DoxyCode}
+1359                                                 \{
+1360     *os << \textcolor{stringliteral}{"doesn't "} << (full\_match\_ ? \textcolor{stringliteral}{"match"} : \textcolor{stringliteral}{"contain"})
+1361         << \textcolor{stringliteral}{" regular expression "};
+1362     \hyperlink{classtesting_1_1internal_1_1UniversalPrinter_a6a7d29444412467c14931bc55a046138}{UniversalPrinter<internal::string>::Print}(regex\_->pattern(), 
+      os);
+1363   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}!Describe\+To@{Describe\+To}}
+\index{Describe\+To@{Describe\+To}!testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}}
+\subsubsection[{\texorpdfstring{Describe\+To(\+::std\+::ostream $\ast$os) const }{DescribeTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}void testing\+::internal\+::\+Matches\+Regex\+Matcher\+::\+Describe\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1MatchesRegexMatcher_ab95aa201f56b0d6d0300ac513b011759}{}\label{classtesting_1_1internal_1_1MatchesRegexMatcher_ab95aa201f56b0d6d0300ac513b011759}
+
+\begin{DoxyCode}
+1353                                         \{
+1354     *os << (full\_match\_ ? \textcolor{stringliteral}{"matches"} : \textcolor{stringliteral}{"contains"})
+1355         << \textcolor{stringliteral}{" regular expression "};
+1356     \hyperlink{classtesting_1_1internal_1_1UniversalPrinter_a6a7d29444412467c14931bc55a046138}{UniversalPrinter<internal::string>::Print}(regex\_->pattern(), 
+      os);
+1357   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}!Match\+And\+Explain@{Match\+And\+Explain}}
+\index{Match\+And\+Explain@{Match\+And\+Explain}!testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}}
+\subsubsection[{\texorpdfstring{Match\+And\+Explain(\+Char\+Type $\ast$s, Match\+Result\+Listener $\ast$listener) const }{MatchAndExplain(CharType *s, MatchResultListener *listener) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char\+Type $>$ bool testing\+::internal\+::\+Matches\+Regex\+Matcher\+::\+Match\+And\+Explain (
+\begin{DoxyParamCaption}
+\item[{Char\+Type $\ast$}]{s, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1MatchesRegexMatcher_a27a5146509e08a8d248cd7967bac7d41}{}\label{classtesting_1_1internal_1_1MatchesRegexMatcher_a27a5146509e08a8d248cd7967bac7d41}
+
+\begin{DoxyCode}
+1337                                                                          \{
+1338     \textcolor{keywordflow}{return} s != NULL && \hyperlink{classtesting_1_1internal_1_1MatchesRegexMatcher_a27a5146509e08a8d248cd7967bac7d41}{MatchAndExplain}(\hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{internal::string}(s), listener);
+1339   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}!Match\+And\+Explain@{Match\+And\+Explain}}
+\index{Match\+And\+Explain@{Match\+And\+Explain}!testing\+::internal\+::\+Matches\+Regex\+Matcher@{testing\+::internal\+::\+Matches\+Regex\+Matcher}}
+\subsubsection[{\texorpdfstring{Match\+And\+Explain(const Matchee\+String\+Type \&s, Match\+Result\+Listener $\ast$) const }{MatchAndExplain(const MatcheeStringType &s, MatchResultListener *) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Matchee\+String\+Type $>$ bool testing\+::internal\+::\+Matches\+Regex\+Matcher\+::\+Match\+And\+Explain (
+\begin{DoxyParamCaption}
+\item[{const Matchee\+String\+Type \&}]{s, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1MatchesRegexMatcher_ad7796e8be6b651f8bdae704df7cc4f08}{}\label{classtesting_1_1internal_1_1MatchesRegexMatcher_ad7796e8be6b651f8bdae704df7cc4f08}
+
+\begin{DoxyCode}
+1347                                                      \{
+1348     \textcolor{keyword}{const} \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{internal::string}& s2(s);
+1349     \textcolor{keywordflow}{return} full\_match\_ ? \hyperlink{classtesting_1_1internal_1_1RE_aa79a950758d0f1d62f7762d1e9cefe86}{RE::FullMatch}(s2, *regex\_) :
+1350         RE::PartialMatch(s2, *regex\_);
+1351   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

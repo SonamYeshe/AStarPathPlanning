@@ -1,0 +1,72 @@
+\hypertarget{classFooEnvironment}{}\section{Foo\+Environment Class Reference}
+\label{classFooEnvironment}\index{Foo\+Environment@{Foo\+Environment}}
+
+
+Inheritance diagram for Foo\+Environment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classFooEnvironment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Foo\+Environment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classFooEnvironment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classFooEnvironment_a7db8d8b312805aff437ae8534132a56d}{Set\+Up} ()
+\item 
+virtual void \hyperlink{classFooEnvironment_a99a2c9df52106cce9e7a4bdda53df802}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Foo\+Environment@{Foo\+Environment}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Foo\+Environment@{Foo\+Environment}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Foo\+Environment\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classFooEnvironment_a7db8d8b312805aff437ae8534132a56d}{}\label{classFooEnvironment_a7db8d8b312805aff437ae8534132a56d}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Environment_a1bf8cafaa9d4eba9feb98655ee434eb3}{testing\+::\+Environment}.
+
+
+\begin{DoxyCode}
+997                        \{
+998     printf(\textcolor{stringliteral}{"%s"}, \textcolor{stringliteral}{"FooEnvironment::SetUp() called.\(\backslash\)n"});
+999   \}
+\end{DoxyCode}
+\index{Foo\+Environment@{Foo\+Environment}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!Foo\+Environment@{Foo\+Environment}}
+\subsubsection[{\texorpdfstring{Tear\+Down()}{TearDown()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Foo\+Environment\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classFooEnvironment_a99a2c9df52106cce9e7a4bdda53df802}{}\label{classFooEnvironment_a99a2c9df52106cce9e7a4bdda53df802}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Environment_a039bdaa705c46b9b88234cf4d3bb6254}{testing\+::\+Environment}.
+
+
+\begin{DoxyCode}
+1001                           \{
+1002     printf(\textcolor{stringliteral}{"%s"}, \textcolor{stringliteral}{"FooEnvironment::TearDown() called.\(\backslash\)n"});
+1003     \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"Expected fatal failure."};
+1004   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__output__test___8cc}{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}\end{DoxyCompactItemize}

@@ -1,0 +1,347 @@
+\hypertarget{classupload_1_1MercurialVCS}{}\section{upload.\+Mercurial\+V\+CS Class Reference}
+\label{classupload_1_1MercurialVCS}\index{upload.\+Mercurial\+V\+CS@{upload.\+Mercurial\+V\+CS}}
+
+
+Inheritance diagram for upload.\+Mercurial\+V\+CS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classupload_1_1MercurialVCS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for upload.\+Mercurial\+V\+CS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classupload_1_1MercurialVCS__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classupload_1_1MercurialVCS_a33890f442dedbb7d9fd45c08b5baed56}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options}, \hyperlink{classupload_1_1MercurialVCS_a219c1e0ab9ce864e3231913762ea489b}{repo\+\_\+dir})
+\item 
+def \hyperlink{classupload_1_1MercurialVCS_a6c05746012d8cd435c94ace1465671ef}{Generate\+Diff} (self, extra\+\_\+args)
+\item 
+def \hyperlink{classupload_1_1MercurialVCS_a6190899fb86cd09ad84cc5d4b0ebd2f3}{Get\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1MercurialVCS_a0cdc0cbe6ac4daab82f5f01e6ae2e670}{Get\+Base\+File} (self, filename)
+\item 
+def \hyperlink{classupload_1_1MercurialVCS_a33890f442dedbb7d9fd45c08b5baed56}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options}, \hyperlink{classupload_1_1MercurialVCS_a219c1e0ab9ce864e3231913762ea489b}{repo\+\_\+dir})
+\item 
+def \hyperlink{classupload_1_1MercurialVCS_a6c05746012d8cd435c94ace1465671ef}{Generate\+Diff} (self, extra\+\_\+args)
+\item 
+def \hyperlink{classupload_1_1MercurialVCS_a6190899fb86cd09ad84cc5d4b0ebd2f3}{Get\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1MercurialVCS_a0cdc0cbe6ac4daab82f5f01e6ae2e670}{Get\+Base\+File} (self, filename)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classupload_1_1MercurialVCS_a219c1e0ab9ce864e3231913762ea489b}{repo\+\_\+dir}
+\item 
+\hyperlink{classupload_1_1MercurialVCS_a0dad32e621f5523e3430d867184f0b42}{subdir}
+\item 
+\hyperlink{classupload_1_1MercurialVCS_a41faae7820d5a015f4a42476e5e4ab8c}{base\+\_\+rev}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Implementation of the VersionControlSystem interface for Mercurial.\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, options, repo\+\_\+dir)}{__init__(self, options, repo_dir)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Mercurial\+V\+C\+S.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{options, }
+\item[{}]{repo\+\_\+dir}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1MercurialVCS_a33890f442dedbb7d9fd45c08b5baed56}{}\label{classupload_1_1MercurialVCS_a33890f442dedbb7d9fd45c08b5baed56}
+
+\begin{DoxyCode}
+1045   \textcolor{keyword}{def }\_\_init\_\_(self, options, repo\_dir):
+1046     super(MercurialVCS, self).\_\_init\_\_(options)
+1047     \textcolor{comment}{# Absolute path to repository (we can be in a subdir)}
+1048     self.repo\_dir = os.path.normpath(repo\_dir)
+1049     \textcolor{comment}{# Compute the subdir}
+1050     cwd = os.path.normpath(os.getcwd())
+1051     \textcolor{keyword}{assert} cwd.startswith(self.repo\_dir)
+1052     self.subdir = cwd[len(self.repo\_dir):].lstrip(\textcolor{stringliteral}{r"\(\backslash\)/"})
+1053     \textcolor{keywordflow}{if} self.options.revision:
+1054       self.base\_rev = self.options.revision
+1055     \textcolor{keywordflow}{else}:
+1056       self.base\_rev = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"parent"}, \textcolor{stringliteral}{"-q"}]).split(\textcolor{stringliteral}{':'})[1].strip()
+1057 
+\end{DoxyCode}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, options, repo\+\_\+dir)}{__init__(self, options, repo_dir)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Mercurial\+V\+C\+S.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{options, }
+\item[{}]{repo\+\_\+dir}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1MercurialVCS_a33890f442dedbb7d9fd45c08b5baed56}{}\label{classupload_1_1MercurialVCS_a33890f442dedbb7d9fd45c08b5baed56}
+
+\begin{DoxyCode}
+1045   \textcolor{keyword}{def }\_\_init\_\_(self, options, repo\_dir):
+1046     super(MercurialVCS, self).\_\_init\_\_(options)
+1047     \textcolor{comment}{# Absolute path to repository (we can be in a subdir)}
+1048     self.repo\_dir = os.path.normpath(repo\_dir)
+1049     \textcolor{comment}{# Compute the subdir}
+1050     cwd = os.path.normpath(os.getcwd())
+1051     \textcolor{keyword}{assert} cwd.startswith(self.repo\_dir)
+1052     self.subdir = cwd[len(self.repo\_dir):].lstrip(\textcolor{stringliteral}{r"\(\backslash\)/"})
+1053     \textcolor{keywordflow}{if} self.options.revision:
+1054       self.base\_rev = self.options.revision
+1055     \textcolor{keywordflow}{else}:
+1056       self.base\_rev = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"parent"}, \textcolor{stringliteral}{"-q"}]).split(\textcolor{stringliteral}{':'})[1].strip()
+1057 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!Generate\+Diff@{Generate\+Diff}}
+\index{Generate\+Diff@{Generate\+Diff}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{Generate\+Diff(self, extra\+\_\+args)}{GenerateDiff(self, extra_args)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Mercurial\+V\+C\+S.\+Generate\+Diff (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{extra\+\_\+args}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1MercurialVCS_a6c05746012d8cd435c94ace1465671ef}{}\label{classupload_1_1MercurialVCS_a6c05746012d8cd435c94ace1465671ef}
+
+\begin{DoxyCode}
+1064   \textcolor{keyword}{def }GenerateDiff(self, extra\_args):
+1065     \textcolor{comment}{# If no file specified, restrict to the current subdir}
+1066     extra\_args = extra\_args \textcolor{keywordflow}{or} [\textcolor{stringliteral}{"."}]
+1067     cmd = [\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"diff"}, \textcolor{stringliteral}{"--git"}, \textcolor{stringliteral}{"-r"}, self.base\_rev] + extra\_args
+1068     data = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}(cmd, silent\_ok=\textcolor{keyword}{True})
+1069     svndiff = []
+1070     filecount = 0
+1071     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} data.splitlines():
+1072       m = re.match(\textcolor{stringliteral}{"diff --git a/(\(\backslash\)S+) b/(\(\backslash\)S+)"}, line)
+1073       \textcolor{keywordflow}{if} m:
+1074         \textcolor{comment}{# Modify line to make it look like as it comes from svn diff.}
+1075         \textcolor{comment}{# With this modification no changes on the server side are required}
+1076         \textcolor{comment}{# to make upload.py work with Mercurial repos.}
+1077         \textcolor{comment}{# NOTE: for proper handling of moved/copied files, we have to use}
+1078         \textcolor{comment}{# the second filename.}
+1079         filename = m.group(2)
+1080         svndiff.append(\textcolor{stringliteral}{"Index: %s"} % filename)
+1081         svndiff.append(\textcolor{stringliteral}{"="} * 67)
+1082         filecount += 1
+1083         logging.info(line)
+1084       \textcolor{keywordflow}{else}:
+1085         svndiff.append(line)
+1086     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} filecount:
+1087       \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"No valid patches found in output from hg diff"})
+1088     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"\(\backslash\)n"}.join(svndiff) + \textcolor{stringliteral}{"\(\backslash\)n"}
+1089 
+\end{DoxyCode}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!Generate\+Diff@{Generate\+Diff}}
+\index{Generate\+Diff@{Generate\+Diff}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{Generate\+Diff(self, extra\+\_\+args)}{GenerateDiff(self, extra_args)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Mercurial\+V\+C\+S.\+Generate\+Diff (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{extra\+\_\+args}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1MercurialVCS_a6c05746012d8cd435c94ace1465671ef}{}\label{classupload_1_1MercurialVCS_a6c05746012d8cd435c94ace1465671ef}
+
+\begin{DoxyCode}
+1064   \textcolor{keyword}{def }GenerateDiff(self, extra\_args):
+1065     \textcolor{comment}{# If no file specified, restrict to the current subdir}
+1066     extra\_args = extra\_args \textcolor{keywordflow}{or} [\textcolor{stringliteral}{"."}]
+1067     cmd = [\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"diff"}, \textcolor{stringliteral}{"--git"}, \textcolor{stringliteral}{"-r"}, self.base\_rev] + extra\_args
+1068     data = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}(cmd, silent\_ok=\textcolor{keyword}{True})
+1069     svndiff = []
+1070     filecount = 0
+1071     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} data.splitlines():
+1072       m = re.match(\textcolor{stringliteral}{"diff --git a/(\(\backslash\)S+) b/(\(\backslash\)S+)"}, line)
+1073       \textcolor{keywordflow}{if} m:
+1074         \textcolor{comment}{# Modify line to make it look like as it comes from svn diff.}
+1075         \textcolor{comment}{# With this modification no changes on the server side are required}
+1076         \textcolor{comment}{# to make upload.py work with Mercurial repos.}
+1077         \textcolor{comment}{# NOTE: for proper handling of moved/copied files, we have to use}
+1078         \textcolor{comment}{# the second filename.}
+1079         filename = m.group(2)
+1080         svndiff.append(\textcolor{stringliteral}{"Index: %s"} % filename)
+1081         svndiff.append(\textcolor{stringliteral}{"="} * 67)
+1082         filecount += 1
+1083         logging.info(line)
+1084       \textcolor{keywordflow}{else}:
+1085         svndiff.append(line)
+1086     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} filecount:
+1087       \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"No valid patches found in output from hg diff"})
+1088     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"\(\backslash\)n"}.join(svndiff) + \textcolor{stringliteral}{"\(\backslash\)n"}
+1089 
+\end{DoxyCode}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!Get\+Base\+File@{Get\+Base\+File}}
+\index{Get\+Base\+File@{Get\+Base\+File}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Base\+File(self, filename)}{GetBaseFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Mercurial\+V\+C\+S.\+Get\+Base\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1MercurialVCS_a0cdc0cbe6ac4daab82f5f01e6ae2e670}{}\label{classupload_1_1MercurialVCS_a0cdc0cbe6ac4daab82f5f01e6ae2e670}
+
+\begin{DoxyCode}
+1102   \textcolor{keyword}{def }GetBaseFile(self, filename):
+1103     \textcolor{comment}{# "hg status" and "hg cat" both take a path relative to the current subdir}
+1104     \textcolor{comment}{# rather than to the repo root, but "hg diff" has given us the full path}
+1105     \textcolor{comment}{# to the repo root.}
+1106     base\_content = \textcolor{stringliteral}{""}
+1107     new\_content = \textcolor{keywordtype}{None}
+1108     is\_binary = \textcolor{keyword}{False}
+1109     oldrelpath = relpath = self.\_GetRelPath(filename)
+1110     \textcolor{comment}{# "hg status -C" returns two lines for moved/copied files, one otherwise}
+1111     out = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"status"}, \textcolor{stringliteral}{"-C"}, \textcolor{stringliteral}{"--rev"}, self.base\_rev, relpath])
+1112     out = out.splitlines()
+1113     \textcolor{comment}{# HACK: strip error message about missing file/directory if it isn't in}
+1114     \textcolor{comment}{# the working copy}
+1115     \textcolor{keywordflow}{if} out[0].startswith(\textcolor{stringliteral}{'%s: '} % relpath):
+1116       out = out[1:]
+1117     \textcolor{keywordflow}{if} len(out) > 1:
+1118       \textcolor{comment}{# Moved/copied => considered as modified, use old filename to}
+1119       \textcolor{comment}{# retrieve base contents}
+1120       oldrelpath = out[1].strip()
+1121       status = \textcolor{stringliteral}{"M"}
+1122     \textcolor{keywordflow}{else}:
+1123       status, \_ = out[0].split(\textcolor{stringliteral}{' '}, 1)
+1124     \textcolor{keywordflow}{if} status != \textcolor{stringliteral}{"A"}:
+1125       base\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"cat"}, \textcolor{stringliteral}{"-r"}, self.base\_rev, oldrelpath],
+1126         silent\_ok=\textcolor{keyword}{True})
+1127       is\_binary = \textcolor{stringliteral}{"\(\backslash\)0"} \textcolor{keywordflow}{in} base\_content  \textcolor{comment}{# Mercurial's heuristic}
+1128     \textcolor{keywordflow}{if} status != \textcolor{stringliteral}{"R":}
+1129 \textcolor{stringliteral}{      new\_content = open(relpath, "rb"}).read()
+1130       is\_binary = is\_binary \textcolor{keywordflow}{or} \textcolor{stringliteral}{"\(\backslash\)0"} \textcolor{keywordflow}{in} new\_content
+1131     \textcolor{keywordflow}{if} is\_binary \textcolor{keywordflow}{and} base\_content:
+1132       \textcolor{comment}{# Fetch again without converting newlines}
+1133       base\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"cat"}, \textcolor{stringliteral}{"-r"}, self.base\_rev, oldrelpath],
+1134         silent\_ok=\textcolor{keyword}{True}, universal\_newlines=\textcolor{keyword}{False})
+1135     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} is\_binary \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} self.IsImage(relpath):
+1136       new\_content = \textcolor{keywordtype}{None}
+1137     \textcolor{keywordflow}{return} base\_content, new\_content, is\_binary, status
+1138 
+1139 
+1140 \textcolor{comment}{# NOTE: The SplitPatch function is duplicated in engine.py, keep them in sync.}
+\end{DoxyCode}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!Get\+Base\+File@{Get\+Base\+File}}
+\index{Get\+Base\+File@{Get\+Base\+File}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Base\+File(self, filename)}{GetBaseFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Mercurial\+V\+C\+S.\+Get\+Base\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1MercurialVCS_a0cdc0cbe6ac4daab82f5f01e6ae2e670}{}\label{classupload_1_1MercurialVCS_a0cdc0cbe6ac4daab82f5f01e6ae2e670}
+
+\begin{DoxyCode}
+1102   \textcolor{keyword}{def }GetBaseFile(self, filename):
+1103     \textcolor{comment}{# "hg status" and "hg cat" both take a path relative to the current subdir}
+1104     \textcolor{comment}{# rather than to the repo root, but "hg diff" has given us the full path}
+1105     \textcolor{comment}{# to the repo root.}
+1106     base\_content = \textcolor{stringliteral}{""}
+1107     new\_content = \textcolor{keywordtype}{None}
+1108     is\_binary = \textcolor{keyword}{False}
+1109     oldrelpath = relpath = self.\_GetRelPath(filename)
+1110     \textcolor{comment}{# "hg status -C" returns two lines for moved/copied files, one otherwise}
+1111     out = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"status"}, \textcolor{stringliteral}{"-C"}, \textcolor{stringliteral}{"--rev"}, self.base\_rev, relpath])
+1112     out = out.splitlines()
+1113     \textcolor{comment}{# HACK: strip error message about missing file/directory if it isn't in}
+1114     \textcolor{comment}{# the working copy}
+1115     \textcolor{keywordflow}{if} out[0].startswith(\textcolor{stringliteral}{'%s: '} % relpath):
+1116       out = out[1:]
+1117     \textcolor{keywordflow}{if} len(out) > 1:
+1118       \textcolor{comment}{# Moved/copied => considered as modified, use old filename to}
+1119       \textcolor{comment}{# retrieve base contents}
+1120       oldrelpath = out[1].strip()
+1121       status = \textcolor{stringliteral}{"M"}
+1122     \textcolor{keywordflow}{else}:
+1123       status, \_ = out[0].split(\textcolor{stringliteral}{' '}, 1)
+1124     \textcolor{keywordflow}{if} status != \textcolor{stringliteral}{"A"}:
+1125       base\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"cat"}, \textcolor{stringliteral}{"-r"}, self.base\_rev, oldrelpath],
+1126         silent\_ok=\textcolor{keyword}{True})
+1127       is\_binary = \textcolor{stringliteral}{"\(\backslash\)0"} \textcolor{keywordflow}{in} base\_content  \textcolor{comment}{# Mercurial's heuristic}
+1128     \textcolor{keywordflow}{if} status != \textcolor{stringliteral}{"R":}
+1129 \textcolor{stringliteral}{      new\_content = open(relpath, "rb"}).read()
+1130       is\_binary = is\_binary \textcolor{keywordflow}{or} \textcolor{stringliteral}{"\(\backslash\)0"} \textcolor{keywordflow}{in} new\_content
+1131     \textcolor{keywordflow}{if} is\_binary \textcolor{keywordflow}{and} base\_content:
+1132       \textcolor{comment}{# Fetch again without converting newlines}
+1133       base\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"cat"}, \textcolor{stringliteral}{"-r"}, self.base\_rev, oldrelpath],
+1134         silent\_ok=\textcolor{keyword}{True}, universal\_newlines=\textcolor{keyword}{False})
+1135     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} is\_binary \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} self.IsImage(relpath):
+1136       new\_content = \textcolor{keywordtype}{None}
+1137     \textcolor{keywordflow}{return} base\_content, new\_content, is\_binary, status
+1138 
+1139 
+1140 \textcolor{comment}{# NOTE: The SplitPatch function is duplicated in engine.py, keep them in sync.}
+\end{DoxyCode}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!Get\+Unknown\+Files@{Get\+Unknown\+Files}}
+\index{Get\+Unknown\+Files@{Get\+Unknown\+Files}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Unknown\+Files(self)}{GetUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Mercurial\+V\+C\+S.\+Get\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1MercurialVCS_a6190899fb86cd09ad84cc5d4b0ebd2f3}{}\label{classupload_1_1MercurialVCS_a6190899fb86cd09ad84cc5d4b0ebd2f3}
+\begin{DoxyVerb}Return a list of files unknown to the VCS.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+1090   \textcolor{keyword}{def }GetUnknownFiles(self):
+1091     \textcolor{stringliteral}{"""Return a list of files unknown to the VCS."""}
+1092     args = []
+1093     status = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"status"}, \textcolor{stringliteral}{"--rev"}, self.base\_rev, \textcolor{stringliteral}{"-u"}, \textcolor{stringliteral}{"."}],
+1094         silent\_ok=\textcolor{keyword}{True})
+1095     unknown\_files = []
+1096     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} status.splitlines():
+1097       st, fn = line.split(\textcolor{stringliteral}{" "}, 1)
+1098       \textcolor{keywordflow}{if} st == \textcolor{stringliteral}{"?"}:
+1099         unknown\_files.append(fn)
+1100     \textcolor{keywordflow}{return} unknown\_files
+1101 
+\end{DoxyCode}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!Get\+Unknown\+Files@{Get\+Unknown\+Files}}
+\index{Get\+Unknown\+Files@{Get\+Unknown\+Files}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Unknown\+Files(self)}{GetUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Mercurial\+V\+C\+S.\+Get\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1MercurialVCS_a6190899fb86cd09ad84cc5d4b0ebd2f3}{}\label{classupload_1_1MercurialVCS_a6190899fb86cd09ad84cc5d4b0ebd2f3}
+\begin{DoxyVerb}Return a list of files unknown to the VCS.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+1090   \textcolor{keyword}{def }GetUnknownFiles(self):
+1091     \textcolor{stringliteral}{"""Return a list of files unknown to the VCS."""}
+1092     args = []
+1093     status = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"status"}, \textcolor{stringliteral}{"--rev"}, self.base\_rev, \textcolor{stringliteral}{"-u"}, \textcolor{stringliteral}{"."}],
+1094         silent\_ok=\textcolor{keyword}{True})
+1095     unknown\_files = []
+1096     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} status.splitlines():
+1097       st, fn = line.split(\textcolor{stringliteral}{" "}, 1)
+1098       \textcolor{keywordflow}{if} st == \textcolor{stringliteral}{"?"}:
+1099         unknown\_files.append(fn)
+1100     \textcolor{keywordflow}{return} unknown\_files
+1101 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!base\+\_\+rev@{base\+\_\+rev}}
+\index{base\+\_\+rev@{base\+\_\+rev}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{base\+\_\+rev}{base_rev}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+Mercurial\+V\+C\+S.\+base\+\_\+rev}\hypertarget{classupload_1_1MercurialVCS_a41faae7820d5a015f4a42476e5e4ab8c}{}\label{classupload_1_1MercurialVCS_a41faae7820d5a015f4a42476e5e4ab8c}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!repo\+\_\+dir@{repo\+\_\+dir}}
+\index{repo\+\_\+dir@{repo\+\_\+dir}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{repo\+\_\+dir}{repo_dir}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+Mercurial\+V\+C\+S.\+repo\+\_\+dir}\hypertarget{classupload_1_1MercurialVCS_a219c1e0ab9ce864e3231913762ea489b}{}\label{classupload_1_1MercurialVCS_a219c1e0ab9ce864e3231913762ea489b}
+\index{upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}!subdir@{subdir}}
+\index{subdir@{subdir}!upload\+::\+Mercurial\+V\+CS@{upload\+::\+Mercurial\+V\+CS}}
+\subsubsection[{\texorpdfstring{subdir}{subdir}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+Mercurial\+V\+C\+S.\+subdir}\hypertarget{classupload_1_1MercurialVCS_a0dad32e621f5523e3430d867184f0b42}{}\label{classupload_1_1MercurialVCS_a0dad32e621f5523e3430d867184f0b42}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/scripts/\hyperlink{googlemock_2scripts_2upload_8py}{upload.\+py}\end{DoxyCompactItemize}

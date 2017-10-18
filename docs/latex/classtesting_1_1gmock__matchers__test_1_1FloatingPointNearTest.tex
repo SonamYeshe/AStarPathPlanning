@@ -1,0 +1,134 @@
+\hypertarget{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest}{}\section{testing\+:\+:gmock\+\_\+matchers\+\_\+test\+:\+:Floating\+Point\+Near\+Test$<$ Raw\+Type $>$ Class Template Reference}
+\label{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest}\index{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test$<$ Raw\+Type $>$@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test$<$ Raw\+Type $>$}}
+
+
+Inheritance diagram for testing\+:\+:gmock\+\_\+matchers\+\_\+test\+:\+:Floating\+Point\+Near\+Test$<$ Raw\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:gmock\+\_\+matchers\+\_\+test\+:\+:Floating\+Point\+Near\+Test$<$ Raw\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest}{Floating\+Point\+Test}$<$ Raw\+Type $>$ \hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest_ac767d2bf3e518d1e7cf9dfafc76cc53a}{Parent\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest_a712b564197ab76f58d345c5e3e73955d}{Test\+Near\+Matches} (\hyperlink{classtesting_1_1internal_1_1FloatingEqMatcher}{testing\+::internal\+::\+Floating\+Eq\+Matcher}$<$ Raw\+Type $>$($\ast$matcher\+\_\+maker)(Raw\+Type, Raw\+Type))
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\index{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test}!Parent\+Type@{Parent\+Type}}
+\index{Parent\+Type@{Parent\+Type}!testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test}}
+\subsubsection[{\texorpdfstring{Parent\+Type}{ParentType}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Raw\+Type $>$ typedef {\bf Floating\+Point\+Test}$<$Raw\+Type$>$ {\bf testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test}$<$ Raw\+Type $>$\+::{\bf Parent\+Type}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest_ac767d2bf3e518d1e7cf9dfafc76cc53a}{}\label{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest_ac767d2bf3e518d1e7cf9dfafc76cc53a}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test}!Test\+Near\+Matches@{Test\+Near\+Matches}}
+\index{Test\+Near\+Matches@{Test\+Near\+Matches}!testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test}}
+\subsubsection[{\texorpdfstring{Test\+Near\+Matches(testing\+::internal\+::\+Floating\+Eq\+Matcher$<$ Raw\+Type $>$($\ast$matcher\+\_\+maker)(\+Raw\+Type, Raw\+Type))}{TestNearMatches(testing::internal::FloatingEqMatcher< RawType >(*matcher_maker)(RawType, RawType))}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Raw\+Type $>$ void {\bf testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Floating\+Point\+Near\+Test}$<$ Raw\+Type $>$\+::Test\+Near\+Matches (
+\begin{DoxyParamCaption}
+\item[{{\bf testing\+::internal\+::\+Floating\+Eq\+Matcher}$<$ Raw\+Type $>$($\ast$)(Raw\+Type, Raw\+Type)}]{matcher\+\_\+maker}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest_a712b564197ab76f58d345c5e3e73955d}{}\label{classtesting_1_1gmock__matchers__test_1_1FloatingPointNearTest_a712b564197ab76f58d345c5e3e73955d}
+
+\begin{DoxyCode}
+2825                                               \{
+2826     Matcher<RawType> m1 = matcher\_maker(0.0, 0.0);
+2827     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m1.Matches(0.0));
+2828     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m1.Matches(-0.0));
+2829     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m1.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a750555206ab9d5959d6dc84f8a760c57}{ParentType::close\_to\_positive\_zero\_}
+      ));
+2830     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m1.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a641f5e223c25b6d6fb108b322acaa39d}{ParentType::close\_to\_negative\_zero\_}
+      ));
+2831     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m1.Matches(1.0));
+2832 
+2833     Matcher<RawType> m2 = matcher\_maker(0.0, 1.0);
+2834     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m2.Matches(0.0));
+2835     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m2.Matches(-0.0));
+2836     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m2.Matches(1.0));
+2837     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m2.Matches(-1.0));
+2838     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m2.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a34c97dc5dc07ea62764de87fdd8b7764}{ParentType::close\_to\_one\_}));
+2839     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m2.Matches(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a34c97dc5dc07ea62764de87fdd8b7764}{ParentType::close\_to\_one\_}));
+2840 
+2841     \textcolor{comment}{// Check that inf matches inf, regardless of the of the specified max}
+2842     \textcolor{comment}{// absolute error.}
+2843     Matcher<RawType> m3 = matcher\_maker(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a21d8a019a6365ddff80e301a6163f43f}{ParentType::infinity\_}, 0.0);
+2844     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m3.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a21d8a019a6365ddff80e301a6163f43f}{ParentType::infinity\_}));
+2845     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m3.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a6fc8ac2030f4883e1c84da3a21bbb7c3}{ParentType::close\_to\_infinity\_}));
+2846     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m3.Matches(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a21d8a019a6365ddff80e301a6163f43f}{ParentType::infinity\_}));
+2847 
+2848     Matcher<RawType> m4 = matcher\_maker(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a21d8a019a6365ddff80e301a6163f43f}{ParentType::infinity\_}, 0.0);
+2849     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m4.Matches(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a21d8a019a6365ddff80e301a6163f43f}{ParentType::infinity\_}));
+2850     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m4.Matches(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a6fc8ac2030f4883e1c84da3a21bbb7c3}{ParentType::close\_to\_infinity\_}));
+2851     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m4.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a21d8a019a6365ddff80e301a6163f43f}{ParentType::infinity\_}));
+2852 
+2853     \textcolor{comment}{// Test various overflow scenarios.}
+2854     Matcher<RawType> m5 = matcher\_maker(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}, 
+      \hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_});
+2855     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m5.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}));
+2856     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m5.Matches(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}));
+2857 
+2858     Matcher<RawType> m6 = matcher\_maker(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}, 
+      \hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_});
+2859     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m6.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}));
+2860     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m6.Matches(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}));
+2861 
+2862     Matcher<RawType> m7 = matcher\_maker(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}, 0);
+2863     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m7.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}));
+2864     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m7.Matches(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}));
+2865 
+2866     Matcher<RawType> m8 = matcher\_maker(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}, 0);
+2867     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m8.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}));
+2868     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m8.Matches(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}));
+2869 
+2870     \textcolor{comment}{// The difference between max() and -max() normally overflows to infinity,}
+2871     \textcolor{comment}{// but it should still match if the max\_abs\_error is also infinity.}
+2872     Matcher<RawType> m9 = matcher\_maker(
+2873         \hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}, \hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a21d8a019a6365ddff80e301a6163f43f}{ParentType::infinity\_});
+2874     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m8.Matches(-\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a17b9dd56136b64fa7210bfe024d88c30}{ParentType::max\_}));
+2875 
+2876     \textcolor{comment}{// matcher\_maker can produce a Matcher<const RawType&>, which is needed in}
+2877     \textcolor{comment}{// some cases.}
+2878     Matcher<const RawType&> m10 = matcher\_maker(0.0, 1.0);
+2879     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m10.Matches(-0.0));
+2880     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m10.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a750555206ab9d5959d6dc84f8a760c57}{ParentType::close\_to\_positive\_zero\_}
+      ));
+2881     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m10.Matches(\hyperlink{classtesting_1_1gmock__matchers__test_1_1FloatingPointTest_a34c97dc5dc07ea62764de87fdd8b7764}{ParentType::close\_to\_one\_}));
+2882 
+2883     \textcolor{comment}{// matcher\_maker can produce a Matcher<RawType&>, which is needed in some}
+2884     \textcolor{comment}{// cases.}
+2885     Matcher<RawType&> m11 = matcher\_maker(0.0, 1.0);
+2886     RawType x = 0.0;
+2887     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m11.Matches(x));
+2888     x = 1.0f;
+2889     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m11.Matches(x));
+2890     x = -1.0f;
+2891     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m11.Matches(x));
+2892     x = 1.1f;
+2893     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m11.Matches(x));
+2894     x = -1.1f;
+2895     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m11.Matches(x));
+2896   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/test/\hyperlink{gmock-matchers__test_8cc}{gmock-\/matchers\+\_\+test.\+cc}\end{DoxyCompactItemize}

@@ -1,0 +1,140 @@
+\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest}{}\section{gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test Class Reference}
+\label{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest}\index{gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test}}
+
+
+Inheritance diagram for gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a56550f293277d18c36e868a637fe1153}{set\+Up} (self)
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a49d1d410370ba8a3cfcc281eaadb5706}{tear\+Down} (self)
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a503d2fbc9cd782ae57ac4307d2db43e1}{Delete\+Files\+And\+Dir} (self)
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a034738bbc00ac46d00f183402c561228}{test\+Outfile1} (self)
+\item 
+def \hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a3c02687f092a482d0d0260c7ed94c618}{test\+Outfile2} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_aa5c31cd97047bc1d3060f4d27bc956a4}{output\+\_\+dir\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Unit test for Google Test's XML output functionality.\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}!Delete\+Files\+And\+Dir@{Delete\+Files\+And\+Dir}}
+\index{Delete\+Files\+And\+Dir@{Delete\+Files\+And\+Dir}!gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}}
+\subsubsection[{\texorpdfstring{Delete\+Files\+And\+Dir(self)}{DeleteFilesAndDir(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test.\+Delete\+Files\+And\+Dir (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a503d2fbc9cd782ae57ac4307d2db43e1}{}\label{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a503d2fbc9cd782ae57ac4307d2db43e1}
+
+\begin{DoxyCode}
+78   \textcolor{keyword}{def }DeleteFilesAndDir(self):
+79     \textcolor{keywordflow}{try}:
+80       os.remove(os.path.join(self.output\_dir\_, GTEST\_OUTPUT\_1\_TEST + \textcolor{stringliteral}{".xml"}))
+81     \textcolor{keywordflow}{except} os.error:
+82       \textcolor{keywordflow}{pass}
+83     \textcolor{keywordflow}{try}:
+84       os.remove(os.path.join(self.output\_dir\_, GTEST\_OUTPUT\_2\_TEST + \textcolor{stringliteral}{".xml"}))
+85     \textcolor{keywordflow}{except} os.error:
+86       \textcolor{keywordflow}{pass}
+87     \textcolor{keywordflow}{try}:
+88       os.rmdir(self.output\_dir\_)
+89     \textcolor{keywordflow}{except} os.error:
+90       \textcolor{keywordflow}{pass}
+91 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}!set\+Up@{set\+Up}}
+\index{set\+Up@{set\+Up}!gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}}
+\subsubsection[{\texorpdfstring{set\+Up(self)}{setUp(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test.\+set\+Up (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a56550f293277d18c36e868a637fe1153}{}\label{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a56550f293277d18c36e868a637fe1153}
+
+\begin{DoxyCode}
+67   \textcolor{keyword}{def }setUp(self):
+68     \textcolor{comment}{# We want the trailing '/' that the last "" provides in os.path.join, for}
+69     \textcolor{comment}{# telling Google Test to create an output directory instead of a single file}
+70     \textcolor{comment}{# for xml output.}
+71     self.output\_dir\_ = os.path.join(\hyperlink{namespacegtest__test__utils_a25987e1cd76e93068b2afe6bac909d12}{gtest\_test\_utils.GetTempDir}(),
+72                                     GTEST\_OUTPUT\_SUBDIR, \textcolor{stringliteral}{""})
+73     self.DeleteFilesAndDir()
+74 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}!tear\+Down@{tear\+Down}}
+\index{tear\+Down@{tear\+Down}!gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}}
+\subsubsection[{\texorpdfstring{tear\+Down(self)}{tearDown(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test.\+tear\+Down (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a49d1d410370ba8a3cfcc281eaadb5706}{}\label{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a49d1d410370ba8a3cfcc281eaadb5706}
+
+\begin{DoxyCode}
+75   \textcolor{keyword}{def }tearDown(self):
+76     self.DeleteFilesAndDir()
+77 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}!test\+Outfile1@{test\+Outfile1}}
+\index{test\+Outfile1@{test\+Outfile1}!gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}}
+\subsubsection[{\texorpdfstring{test\+Outfile1(self)}{testOutfile1(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test.\+test\+Outfile1 (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a034738bbc00ac46d00f183402c561228}{}\label{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a034738bbc00ac46d00f183402c561228}
+
+\begin{DoxyCode}
+92   \textcolor{keyword}{def }testOutfile1(self):
+93     self.\_TestOutFile(GTEST\_OUTPUT\_1\_TEST, EXPECTED\_XML\_1)
+94 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}!test\+Outfile2@{test\+Outfile2}}
+\index{test\+Outfile2@{test\+Outfile2}!gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}}
+\subsubsection[{\texorpdfstring{test\+Outfile2(self)}{testOutfile2(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test.\+test\+Outfile2 (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a3c02687f092a482d0d0260c7ed94c618}{}\label{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_a3c02687f092a482d0d0260c7ed94c618}
+
+\begin{DoxyCode}
+95   \textcolor{keyword}{def }testOutfile2(self):
+96     self.\_TestOutFile(GTEST\_OUTPUT\_2\_TEST, EXPECTED\_XML\_2)
+97 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}!output\+\_\+dir\+\_\+@{output\+\_\+dir\+\_\+}}
+\index{output\+\_\+dir\+\_\+@{output\+\_\+dir\+\_\+}!gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test@{gtest\+\_\+xml\+\_\+outfiles\+\_\+test\+::\+G\+Test\+X\+M\+L\+Out\+Files\+Test}}
+\subsubsection[{\texorpdfstring{output\+\_\+dir\+\_\+}{output_dir_}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+G\+Test\+X\+M\+L\+Out\+Files\+Test.\+output\+\_\+dir\+\_\+}\hypertarget{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_aa5c31cd97047bc1d3060f4d27bc956a4}{}\label{classgtest__xml__outfiles__test_1_1GTestXMLOutFilesTest_aa5c31cd97047bc1d3060f4d27bc956a4}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__xml__outfiles__test_8py}{gtest\+\_\+xml\+\_\+outfiles\+\_\+test.\+py}\end{DoxyCompactItemize}

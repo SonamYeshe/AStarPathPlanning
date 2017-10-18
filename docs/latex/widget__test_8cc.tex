@@ -1,0 +1,59 @@
+\hypertarget{widget__test_8cc}{}\section{vendor/googletest/googletest/xcode/\+Samples/\+Framework\+Sample/widget\+\_\+test.cc File Reference}
+\label{widget__test_8cc}\index{vendor/googletest/googletest/xcode/\+Samples/\+Framework\+Sample/widget\+\_\+test.\+cc@{vendor/googletest/googletest/xcode/\+Samples/\+Framework\+Sample/widget\+\_\+test.\+cc}}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$Widget/widget.\+h$>$}\\*
+Include dependency graph for widget\+\_\+test.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{widget__test_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{widget__test_8cc_a291536a26f617362e0c4b58941eeaead}{T\+E\+ST} (Widget\+Initializer\+Test, Test\+Constructor)
+\item 
+\hyperlink{widget__test_8cc_ab0b72ae0a336fd2a4470c6b5566cd8c0}{T\+E\+ST} (Widget\+Initializer\+Test, Test\+Conversion)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{widget\+\_\+test.\+cc@{widget\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!widget\+\_\+test.\+cc@{widget\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Widget\+Initializer\+Test, Test\+Constructor)}{TEST(WidgetInitializerTest, TestConstructor)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Widget\+Initializer\+Test}]{, }
+\item[{Test\+Constructor}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{widget__test_8cc_a291536a26f617362e0c4b58941eeaead}{}\label{widget__test_8cc_a291536a26f617362e0c4b58941eeaead}
+
+\begin{DoxyCode}
+45                                              \{
+46   \hyperlink{classWidget}{Widget} widget(1.0f, \textcolor{stringliteral}{"name"});
+47   \hyperlink{gtest_8h_a981e552322fb084042d02d6dfa9860ca}{EXPECT\_FLOAT\_EQ}(1.0f, widget.GetFloatValue());
+48   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string}(\textcolor{stringliteral}{"name"}), widget.GetStringValue());
+49 \}
+\end{DoxyCode}
+\index{widget\+\_\+test.\+cc@{widget\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!widget\+\_\+test.\+cc@{widget\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Widget\+Initializer\+Test, Test\+Conversion)}{TEST(WidgetInitializerTest, TestConversion)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Widget\+Initializer\+Test}]{, }
+\item[{Test\+Conversion}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{widget__test_8cc_ab0b72ae0a336fd2a4470c6b5566cd8c0}{}\label{widget__test_8cc_ab0b72ae0a336fd2a4470c6b5566cd8c0}
+
+\begin{DoxyCode}
+53                                             \{
+54   \hyperlink{classWidget}{Widget} widget(1.0f, \textcolor{stringliteral}{"name"});
+55   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, widget.GetIntValue());
+56 
+57   \textcolor{keywordtype}{size\_t} max\_size = 128;
+58   \textcolor{keywordtype}{char} buffer[max\_size];
+59   widget.GetCharPtrValue(buffer, max\_size);
+60   \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"name"}, buffer);
+61 \}
+\end{DoxyCode}

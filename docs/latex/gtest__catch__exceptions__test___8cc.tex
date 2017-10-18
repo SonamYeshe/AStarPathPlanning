@@ -1,0 +1,39 @@
+\hypertarget{gtest__catch__exceptions__test___8cc}{}\section{vendor/googletest/googletest/test/gtest\+\_\+catch\+\_\+exceptions\+\_\+test\+\_\+.cc File Reference}
+\label{gtest__catch__exceptions__test___8cc}\index{vendor/googletest/googletest/test/gtest\+\_\+catch\+\_\+exceptions\+\_\+test\+\_\+.\+cc@{vendor/googletest/googletest/test/gtest\+\_\+catch\+\_\+exceptions\+\_\+test\+\_\+.\+cc}}
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for gtest\+\_\+catch\+\_\+exceptions\+\_\+test\+\_\+.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest__catch__exceptions__test___8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gtest__catch__exceptions__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gtest\+\_\+catch\+\_\+exceptions\+\_\+test\+\_\+.\+cc@{gtest\+\_\+catch\+\_\+exceptions\+\_\+test\+\_\+.\+cc}!main@{main}}
+\index{main@{main}!gtest\+\_\+catch\+\_\+exceptions\+\_\+test\+\_\+.\+cc@{gtest\+\_\+catch\+\_\+exceptions\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__catch__exceptions__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gtest__catch__exceptions__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+305                                 \{
+306 \textcolor{preprocessor}{#if GTEST\_HAS\_EXCEPTIONS}
+307   std::set\_terminate(&\hyperlink{gtest__throw__on__failure__test___8cc_a478ad0386ef3cac98d230812ed07eeda}{TerminateHandler});
+308 \textcolor{preprocessor}{#endif}
+309   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{testing::InitGoogleTest}(&argc, argv);
+310   \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+311 \}
+\end{DoxyCode}

@@ -1,0 +1,181 @@
+\hypertarget{classtesting_1_1internal_1_1UnitTestOptions}{}\section{testing\+:\+:internal\+:\+:Unit\+Test\+Options Class Reference}
+\label{classtesting_1_1internal_1_1UnitTestOptions}\index{testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}}
+
+
+{\ttfamily \#include $<$gtest-\/internal-\/inl.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_ae7413a21296d885c6924650b51ac4f6d}{Get\+Output\+Format} ()
+\item 
+static std\+::string \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a993fb30ad66104158c8c0ac508daca3f}{Get\+Absolute\+Path\+To\+Output\+File} ()
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_af0235a2ee26dd6db21305e11d2358e4f}{Pattern\+Matches\+String} (const char $\ast$pattern, const char $\ast$str)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a9975b59cece94874b303421697e3bca6}{Filter\+Matches\+Test} (const std\+::string \&test\+\_\+case\+\_\+name, const std\+::string \&test\+\_\+name)
+\item 
+static bool \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a67fc0adaffbb8d320b92e42e05017e4e}{Matches\+Filter} (const std\+::string \&name, const char $\ast$filter)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}!Filter\+Matches\+Test@{Filter\+Matches\+Test}}
+\index{Filter\+Matches\+Test@{Filter\+Matches\+Test}!testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}}
+\subsubsection[{\texorpdfstring{Filter\+Matches\+Test(const std\+::string \&test\+\_\+case\+\_\+name, const std\+::string \&test\+\_\+name)}{FilterMatchesTest(const std::string &test_case_name, const std::string &test_name)}}]{\setlength{\rightskip}{0pt plus 5cm}bool testing\+::internal\+::\+Unit\+Test\+Options\+::\+Filter\+Matches\+Test (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{test\+\_\+case\+\_\+name, }
+\item[{const std\+::string \&}]{test\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a9975b59cece94874b303421697e3bca6}{}\label{classtesting_1_1internal_1_1UnitTestOptions_a9975b59cece94874b303421697e3bca6}
+
+\begin{DoxyCode}
+503                                                                     \{
+504   \textcolor{keyword}{const} \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string}& full\_name = test\_case\_name + \textcolor{stringliteral}{"."} + test\_name.c\_str();
+505 
+506   \textcolor{comment}{// Split --gtest\_filter at '-', if there is one, to separate into}
+507   \textcolor{comment}{// positive filter and negative filter portions}
+508   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} p = \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(filter).c\_str();
+509   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} dash = strchr(p, \textcolor{charliteral}{'-'});
+510   \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string} positive;
+511   \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string} negative;
+512   \textcolor{keywordflow}{if} (dash == NULL) \{
+513     positive = \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(filter).c\_str();  \textcolor{comment}{// Whole string is a positive filter}
+514     negative = \textcolor{stringliteral}{""};
+515   \} \textcolor{keywordflow}{else} \{
+516     positive = \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string}(p, dash);   \textcolor{comment}{// Everything up to the dash}
+517     negative = \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string}(dash + 1);  \textcolor{comment}{// Everything after the dash}
+518     \textcolor{keywordflow}{if} (positive.empty()) \{
+519       \textcolor{comment}{// Treat '-test1' as the same as '*-test1'}
+520       positive = \hyperlink{namespacetesting_a236f8612e4b148d8d989a311a30a4557}{kUniversalFilter};
+521     \}
+522   \}
+523 
+524   \textcolor{comment}{// A filter is a colon-separated list of patterns.  It matches a}
+525   \textcolor{comment}{// test if any pattern in it matches the test.}
+526   \textcolor{keywordflow}{return} (\hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a67fc0adaffbb8d320b92e42e05017e4e}{MatchesFilter}(full\_name, positive.c\_str()) &&
+527           !\hyperlink{classtesting_1_1internal_1_1UnitTestOptions_a67fc0adaffbb8d320b92e42e05017e4e}{MatchesFilter}(full\_name, negative.c\_str()));
+528 \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}!Get\+Absolute\+Path\+To\+Output\+File@{Get\+Absolute\+Path\+To\+Output\+File}}
+\index{Get\+Absolute\+Path\+To\+Output\+File@{Get\+Absolute\+Path\+To\+Output\+File}!testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}}
+\subsubsection[{\texorpdfstring{Get\+Absolute\+Path\+To\+Output\+File()}{GetAbsolutePathToOutputFile()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string testing\+::internal\+::\+Unit\+Test\+Options\+::\+Get\+Absolute\+Path\+To\+Output\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a993fb30ad66104158c8c0ac508daca3f}{}\label{classtesting_1_1internal_1_1UnitTestOptions_a993fb30ad66104158c8c0ac508daca3f}
+
+\begin{DoxyCode}
+426                                                        \{
+427   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} gtest\_output\_flag = \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(\hyperlink{namespacegmock__output__test_a4277f8598ba3835393fe82e82d09375d}{output}).c\_str();
+428   \textcolor{keywordflow}{if} (gtest\_output\_flag == NULL)
+429     \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};
+430 
+431   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} colon = strchr(gtest\_output\_flag, \textcolor{charliteral}{':'});
+432   \textcolor{keywordflow}{if} (colon == NULL)
+433     \textcolor{keywordflow}{return} \hyperlink{classtesting_1_1internal_1_1FilePath_ac9d57987f60ac43f0c57b89e333e531e}{internal::FilePath::ConcatPaths}(
+434         internal::FilePath(
+435             \hyperlink{classtesting_1_1UnitTest_a24192400b70b3b946746954e9574fb8e}{UnitTest::GetInstance}()->original\_working\_dir()),
+436         internal::FilePath(\hyperlink{namespacetesting_aa5a002b5bb3784c830b1c99aa2688f27}{kDefaultOutputFile})).\hyperlink{classtesting_1_1internal_1_1FilePath_a7c544a30af67e2da5ce7e625f8402818}{string}();
+437 
+438   internal::FilePath output\_name(colon + 1);
+439   \textcolor{keywordflow}{if} (!output\_name.IsAbsolutePath())
+440     \textcolor{comment}{// TODO(wan@google.com): on Windows \(\backslash\)some\(\backslash\)path is not an absolute}
+441     \textcolor{comment}{// path (as its meaning depends on the current drive), yet the}
+442     \textcolor{comment}{// following logic for turning it into an absolute path is wrong.}
+443     \textcolor{comment}{// Fix it.}
+444     output\_name = \hyperlink{classtesting_1_1internal_1_1FilePath_ac9d57987f60ac43f0c57b89e333e531e}{internal::FilePath::ConcatPaths}(
+445         internal::FilePath(\hyperlink{classtesting_1_1UnitTest_a24192400b70b3b946746954e9574fb8e}{UnitTest::GetInstance}()->original\_working\_dir()),
+446         internal::FilePath(colon + 1));
+447 
+448   \textcolor{keywordflow}{if} (!output\_name.IsDirectory())
+449     \textcolor{keywordflow}{return} output\_name.\hyperlink{classtesting_1_1internal_1_1FilePath_a7c544a30af67e2da5ce7e625f8402818}{string}();
+450 
+451   internal::FilePath result(\hyperlink{classtesting_1_1internal_1_1FilePath_a2280a77adb394cf80bb5f73fc292e8c8}{internal::FilePath::GenerateUniqueFileName}
+      (
+452       output\_name, \hyperlink{namespacetesting_1_1internal_a7a2bbf069f75bc99873976ad6fc356ad}{internal::GetCurrentExecutableName}(),
+453       \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_ae7413a21296d885c6924650b51ac4f6d}{GetOutputFormat}().c\_str()));
+454   \textcolor{keywordflow}{return} result.string();
+455 \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}!Get\+Output\+Format@{Get\+Output\+Format}}
+\index{Get\+Output\+Format@{Get\+Output\+Format}!testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}}
+\subsubsection[{\texorpdfstring{Get\+Output\+Format()}{GetOutputFormat()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string testing\+::internal\+::\+Unit\+Test\+Options\+::\+Get\+Output\+Format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_ae7413a21296d885c6924650b51ac4f6d}{}\label{classtesting_1_1internal_1_1UnitTestOptions_ae7413a21296d885c6924650b51ac4f6d}
+
+\begin{DoxyCode}
+414                                            \{
+415   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} gtest\_output\_flag = \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(\hyperlink{namespacegmock__output__test_a4277f8598ba3835393fe82e82d09375d}{output}).c\_str();
+416   \textcolor{keywordflow}{if} (gtest\_output\_flag == NULL) \textcolor{keywordflow}{return} \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string}(\textcolor{stringliteral}{""});
+417 
+418   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} colon = strchr(gtest\_output\_flag, \textcolor{charliteral}{':'});
+419   \textcolor{keywordflow}{return} (colon == NULL) ?
+420       \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string}(gtest\_output\_flag) :
+421       \hyperlink{namespacestd}{std}::\hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{string}(gtest\_output\_flag, colon - gtest\_output\_flag);
+422 \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}!Matches\+Filter@{Matches\+Filter}}
+\index{Matches\+Filter@{Matches\+Filter}!testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}}
+\subsubsection[{\texorpdfstring{Matches\+Filter(const std\+::string \&name, const char $\ast$filter)}{MatchesFilter(const std::string &name, const char *filter)}}]{\setlength{\rightskip}{0pt plus 5cm}bool testing\+::internal\+::\+Unit\+Test\+Options\+::\+Matches\+Filter (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{const char $\ast$}]{filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_a67fc0adaffbb8d320b92e42e05017e4e}{}\label{classtesting_1_1internal_1_1UnitTestOptions_a67fc0adaffbb8d320b92e42e05017e4e}
+
+\begin{DoxyCode}
+480                                                \{
+481   \textcolor{keyword}{const} \textcolor{keywordtype}{char} *cur\_pattern = filter;
+482   \textcolor{keywordflow}{for} (;;) \{
+483     \textcolor{keywordflow}{if} (\hyperlink{classtesting_1_1internal_1_1UnitTestOptions_af0235a2ee26dd6db21305e11d2358e4f}{PatternMatchesString}(cur\_pattern, name.c\_str())) \{
+484       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+485     \}
+486 
+487     \textcolor{comment}{// Finds the next pattern in the filter.}
+488     cur\_pattern = strchr(cur\_pattern, \textcolor{charliteral}{':'});
+489 
+490     \textcolor{comment}{// Returns if no more pattern can be found.}
+491     \textcolor{keywordflow}{if} (cur\_pattern == NULL) \{
+492       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+493     \}
+494 
+495     \textcolor{comment}{// Skips the pattern separater (the ':' character).}
+496     cur\_pattern++;
+497   \}
+498 \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}!Pattern\+Matches\+String@{Pattern\+Matches\+String}}
+\index{Pattern\+Matches\+String@{Pattern\+Matches\+String}!testing\+::internal\+::\+Unit\+Test\+Options@{testing\+::internal\+::\+Unit\+Test\+Options}}
+\subsubsection[{\texorpdfstring{Pattern\+Matches\+String(const char $\ast$pattern, const char $\ast$str)}{PatternMatchesString(const char *pattern, const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}bool testing\+::internal\+::\+Unit\+Test\+Options\+::\+Pattern\+Matches\+String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pattern, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UnitTestOptions_af0235a2ee26dd6db21305e11d2358e4f}{}\label{classtesting_1_1internal_1_1UnitTestOptions_af0235a2ee26dd6db21305e11d2358e4f}
+
+\begin{DoxyCode}
+463                                                             \{
+464   \textcolor{keywordflow}{switch} (*pattern) \{
+465     \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)0'}:
+466     \textcolor{keywordflow}{case} \textcolor{charliteral}{':'}:  \textcolor{comment}{// Either ':' or '\(\backslash\)0' marks the end of the pattern.}
+467       \textcolor{keywordflow}{return} *str == \textcolor{charliteral}{'\(\backslash\)0'};
+468     \textcolor{keywordflow}{case} \textcolor{charliteral}{'?'}:  \textcolor{comment}{// Matches any single character.}
+469       \textcolor{keywordflow}{return} *str != \textcolor{charliteral}{'\(\backslash\)0'} && \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_af0235a2ee26dd6db21305e11d2358e4f}{PatternMatchesString}(pattern + 1, str + 1);
+470     \textcolor{keywordflow}{case} \textcolor{charliteral}{'*'}:  \textcolor{comment}{// Matches any string (possibly empty) of characters.}
+471       \textcolor{keywordflow}{return} (*str != \textcolor{charliteral}{'\(\backslash\)0'} && \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_af0235a2ee26dd6db21305e11d2358e4f}{PatternMatchesString}(pattern, str + 1)) ||
+472           \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_af0235a2ee26dd6db21305e11d2358e4f}{PatternMatchesString}(pattern + 1, str);
+473     \textcolor{keywordflow}{default}:  \textcolor{comment}{// Non-special character.  Matches itself.}
+474       \textcolor{keywordflow}{return} *pattern == *str &&
+475           \hyperlink{classtesting_1_1internal_1_1UnitTestOptions_af0235a2ee26dd6db21305e11d2358e4f}{PatternMatchesString}(pattern + 1, str + 1);
+476   \}
+477 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/src/\hyperlink{gtest-internal-inl_8h}{gtest-\/internal-\/inl.\+h}\item 
+vendor/googletest/googletest/src/\hyperlink{gtest_8cc}{gtest.\+cc}\end{DoxyCompactItemize}

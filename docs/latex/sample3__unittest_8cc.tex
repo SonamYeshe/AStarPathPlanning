@@ -1,0 +1,87 @@
+\hypertarget{sample3__unittest_8cc}{}\section{vendor/googletest/googletest/samples/sample3\+\_\+unittest.cc File Reference}
+\label{sample3__unittest_8cc}\index{vendor/googletest/googletest/samples/sample3\+\_\+unittest.\+cc@{vendor/googletest/googletest/samples/sample3\+\_\+unittest.\+cc}}
+{\ttfamily \#include \char`\"{}sample3-\/inl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for sample3\+\_\+unittest.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sample3__unittest_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classQueueTest}{Queue\+Test}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sample3__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}{T\+E\+S\+T\+\_\+F} (\hyperlink{classQueueTest}{Queue\+Test}, Default\+Constructor)
+\item 
+\hyperlink{sample3__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}{T\+E\+S\+T\+\_\+F} (\hyperlink{classQueueTest}{Queue\+Test}, Dequeue)
+\item 
+\hyperlink{sample3__unittest_8cc_ab9369b85f03de6dbf56f77d255515c8c}{T\+E\+S\+T\+\_\+F} (\hyperlink{classQueueTest}{Queue\+Test}, Map)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sample3\+\_\+unittest.\+cc@{sample3\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!sample3\+\_\+unittest.\+cc@{sample3\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Queue\+Test, Default\+Constructor)}{TEST_F(QueueTest, DefaultConstructor)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Test}}]{, }
+\item[{Default\+Constructor}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample3__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}{}\label{sample3__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}
+
+\begin{DoxyCode}
+123                                       \{
+124   \textcolor{comment}{// You can access data in the test fixture here.}
+125   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0u, q0\_.Size());
+126 \}
+\end{DoxyCode}
+\index{sample3\+\_\+unittest.\+cc@{sample3\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!sample3\+\_\+unittest.\+cc@{sample3\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Queue\+Test, Dequeue)}{TEST_F(QueueTest, Dequeue)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Test}}]{, }
+\item[{Dequeue}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample3__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}{}\label{sample3__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}
+
+\begin{DoxyCode}
+129                            \{
+130   \textcolor{keywordtype}{int} * \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = q0\_.Dequeue();
+131   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(n == NULL);
+132 
+133   n = q1\_.Dequeue();
+134   \hyperlink{gtest_8h_ae9244bfbda562e8b798789b001993fa5}{ASSERT\_TRUE}(n != NULL);
+135   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, *n);
+136   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0u, q1\_.Size());
+137   \textcolor{keyword}{delete} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+138 
+139   n = q2\_.Dequeue();
+140   \hyperlink{gtest_8h_ae9244bfbda562e8b798789b001993fa5}{ASSERT\_TRUE}(n != NULL);
+141   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(2, *n);
+142   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1u, q2\_.Size());
+143   \textcolor{keyword}{delete} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+144 \}
+\end{DoxyCode}
+\index{sample3\+\_\+unittest.\+cc@{sample3\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!sample3\+\_\+unittest.\+cc@{sample3\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Queue\+Test, Map)}{TEST_F(QueueTest, Map)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Test}}]{, }
+\item[{Map}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample3__unittest_8cc_ab9369b85f03de6dbf56f77d255515c8c}{}\label{sample3__unittest_8cc_ab9369b85f03de6dbf56f77d255515c8c}
+
+\begin{DoxyCode}
+147                        \{
+148   MapTester(&q0\_);
+149   MapTester(&q1\_);
+150   MapTester(&q2\_);
+151 \}
+\end{DoxyCode}

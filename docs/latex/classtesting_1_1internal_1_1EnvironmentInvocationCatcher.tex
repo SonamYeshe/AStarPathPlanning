@@ -1,0 +1,72 @@
+\hypertarget{classtesting_1_1internal_1_1EnvironmentInvocationCatcher}{}\section{testing\+:\+:internal\+:\+:Environment\+Invocation\+Catcher Class Reference}
+\label{classtesting_1_1internal_1_1EnvironmentInvocationCatcher}\index{testing\+::internal\+::\+Environment\+Invocation\+Catcher@{testing\+::internal\+::\+Environment\+Invocation\+Catcher}}
+
+
+Inheritance diagram for testing\+:\+:internal\+:\+:Environment\+Invocation\+Catcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classtesting_1_1internal_1_1EnvironmentInvocationCatcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:internal\+:\+:Environment\+Invocation\+Catcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classtesting_1_1internal_1_1EnvironmentInvocationCatcher__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_a325365b0ecfa71a4a767d7a1817c9663}{Set\+Up} ()
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_afc89ee0a8e32e6746a89fcc1682f62e9}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Environment\+Invocation\+Catcher@{testing\+::internal\+::\+Environment\+Invocation\+Catcher}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!testing\+::internal\+::\+Environment\+Invocation\+Catcher@{testing\+::internal\+::\+Environment\+Invocation\+Catcher}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void testing\+::internal\+::\+Environment\+Invocation\+Catcher\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_a325365b0ecfa71a4a767d7a1817c9663}{}\label{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_a325365b0ecfa71a4a767d7a1817c9663}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Environment_a1bf8cafaa9d4eba9feb98655ee434eb3}{testing\+::\+Environment}.
+
+
+\begin{DoxyCode}
+130                        \{
+131     \hyperlink{gtest-listener__test_8cc_a32a264046f3603db11e6fcdaea5fb094}{g\_events}->push\_back(\textcolor{stringliteral}{"Environment::SetUp"});
+132   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Environment\+Invocation\+Catcher@{testing\+::internal\+::\+Environment\+Invocation\+Catcher}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!testing\+::internal\+::\+Environment\+Invocation\+Catcher@{testing\+::internal\+::\+Environment\+Invocation\+Catcher}}
+\subsubsection[{\texorpdfstring{Tear\+Down()}{TearDown()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void testing\+::internal\+::\+Environment\+Invocation\+Catcher\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_afc89ee0a8e32e6746a89fcc1682f62e9}{}\label{classtesting_1_1internal_1_1EnvironmentInvocationCatcher_afc89ee0a8e32e6746a89fcc1682f62e9}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Environment_a039bdaa705c46b9b88234cf4d3bb6254}{testing\+::\+Environment}.
+
+
+\begin{DoxyCode}
+134                           \{
+135     \hyperlink{gtest-listener__test_8cc_a32a264046f3603db11e6fcdaea5fb094}{g\_events}->push\_back(\textcolor{stringliteral}{"Environment::TearDown"});
+136   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest-listener__test_8cc}{gtest-\/listener\+\_\+test.\+cc}\end{DoxyCompactItemize}

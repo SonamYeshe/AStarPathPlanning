@@ -1,0 +1,55 @@
+\hypertarget{classtesting_1_1internal_1_1ReturnRefAction}{}\section{testing\+:\+:internal\+:\+:Return\+Ref\+Action$<$ T $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1ReturnRefAction}\index{testing\+::internal\+::\+Return\+Ref\+Action$<$ T $>$@{testing\+::internal\+::\+Return\+Ref\+Action$<$ T $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/actions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ReturnRefAction_a1384b1cd78f3069f0493e2302f143701}{Return\+Ref\+Action} (T \&ref)
+\item 
+{\footnotesize template$<$typename F $>$ }\\\hyperlink{classtesting_1_1internal_1_1ReturnRefAction_a7b0df67b47a9e973fd80f7e2f90ba1bc}{operator Action$<$ F $>$} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Return\+Ref\+Action@{testing\+::internal\+::\+Return\+Ref\+Action}!Return\+Ref\+Action@{Return\+Ref\+Action}}
+\index{Return\+Ref\+Action@{Return\+Ref\+Action}!testing\+::internal\+::\+Return\+Ref\+Action@{testing\+::internal\+::\+Return\+Ref\+Action}}
+\subsubsection[{\texorpdfstring{Return\+Ref\+Action(\+T \&ref)}{ReturnRefAction(T &ref)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf testing\+::internal\+::\+Return\+Ref\+Action}$<$ T $>$\+::{\bf Return\+Ref\+Action} (
+\begin{DoxyParamCaption}
+\item[{T \&}]{ref}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1ReturnRefAction_a1384b1cd78f3069f0493e2302f143701}{}\label{classtesting_1_1internal_1_1ReturnRefAction_a1384b1cd78f3069f0493e2302f143701}
+
+\begin{DoxyCode}
+657 : ref\_(ref) \{\}  \textcolor{comment}{// NOLINT}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Return\+Ref\+Action@{testing\+::internal\+::\+Return\+Ref\+Action}!operator Action$<$ F $>$@{operator Action$<$ F $>$}}
+\index{operator Action$<$ F $>$@{operator Action$<$ F $>$}!testing\+::internal\+::\+Return\+Ref\+Action@{testing\+::internal\+::\+Return\+Ref\+Action}}
+\subsubsection[{\texorpdfstring{operator Action$<$ F $>$() const }{operator Action< F >() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename F $>$ {\bf testing\+::internal\+::\+Return\+Ref\+Action}$<$ T $>$\+::operator {\bf Action}$<$ F $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1ReturnRefAction_a7b0df67b47a9e973fd80f7e2f90ba1bc}{}\label{classtesting_1_1internal_1_1ReturnRefAction_a7b0df67b47a9e973fd80f7e2f90ba1bc}
+
+\begin{DoxyCode}
+662                              \{
+663     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} Function<F>::Result Result;
+664     \textcolor{comment}{// Asserts that the function return type is a reference.  This}
+665     \textcolor{comment}{// catches the user error of using ReturnRef(x) when Return(x)}
+666     \textcolor{comment}{// should be used, and generates some helpful error message.}
+667     \hyperlink{gtest-port_8h_ae1f37dc71d5daa6fb49ca1b6047d4a8c}{GTEST\_COMPILE\_ASSERT\_}(
+      \hyperlink{structtesting_1_1internal_1_1bool__constant_a499fba6576296b04d99690a486424b32}{internal::is\_reference<Result>::value},
+668                           use\_Return\_instead\_of\_ReturnRef\_to\_return\_a\_value);
+669     \textcolor{keywordflow}{return} Action<F>(\textcolor{keyword}{new} Impl<F>(ref\_));
+670   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-actions_8h}{gmock-\/actions.\+h}\end{DoxyCompactItemize}

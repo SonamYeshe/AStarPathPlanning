@@ -1,0 +1,587 @@
+\hypertarget{classupload_1_1VersionControlSystem}{}\section{upload.\+Version\+Control\+System Class Reference}
+\label{classupload_1_1VersionControlSystem}\index{upload.\+Version\+Control\+System@{upload.\+Version\+Control\+System}}
+
+
+Inheritance diagram for upload.\+Version\+Control\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classupload_1_1VersionControlSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for upload.\+Version\+Control\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classupload_1_1VersionControlSystem__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_ace97e5785a2b40011404ae6fbb956ecf}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options})
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_aa5eb260c96e7016dab36b5fc136c9f49}{Generate\+Diff} (self, args)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_a56a60e56aa9aff3df4001d2f84cab884}{Get\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_ad2923d691a1b1047e9359c5b7c1c103f}{Check\+For\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_adfd9d4ecba422102233a2ba13e5bfaf5}{Get\+Base\+File} (self, filename)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_a812c3b3daf90c88b015fa4b26252e291}{Get\+Base\+Files} (self, diff)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_a7e334f967301b9e85e5a9c39f5036823}{Upload\+Base\+Files} (self, issue, rpc\+\_\+server, patch\+\_\+list, patchset, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options}, files)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_a846889ecd2ef40870b456ddb5b349e02}{Is\+Image} (self, filename)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_ace97e5785a2b40011404ae6fbb956ecf}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options})
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_aa5eb260c96e7016dab36b5fc136c9f49}{Generate\+Diff} (self, args)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_a56a60e56aa9aff3df4001d2f84cab884}{Get\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_ad2923d691a1b1047e9359c5b7c1c103f}{Check\+For\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_adfd9d4ecba422102233a2ba13e5bfaf5}{Get\+Base\+File} (self, filename)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_a812c3b3daf90c88b015fa4b26252e291}{Get\+Base\+Files} (self, diff)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_a7e334f967301b9e85e5a9c39f5036823}{Upload\+Base\+Files} (self, issue, rpc\+\_\+server, patch\+\_\+list, patchset, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options}, files)
+\item 
+def \hyperlink{classupload_1_1VersionControlSystem_a846889ecd2ef40870b456ddb5b349e02}{Is\+Image} (self, filename)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Abstract base class providing an interface to the VCS.\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, options)}{__init__(self, options)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_ace97e5785a2b40011404ae6fbb956ecf}{}\label{classupload_1_1VersionControlSystem_ace97e5785a2b40011404ae6fbb956ecf}
+\begin{DoxyVerb}Constructor.
+
+Args:
+  options: Command line options.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+591   \textcolor{keyword}{def }\_\_init\_\_(self, options):
+592     \textcolor{stringliteral}{"""Constructor.}
+593 \textcolor{stringliteral}{}
+594 \textcolor{stringliteral}{    Args:}
+595 \textcolor{stringliteral}{      options: Command line options.}
+596 \textcolor{stringliteral}{    """}
+597     self.options = options
+598 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, options)}{__init__(self, options)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_ace97e5785a2b40011404ae6fbb956ecf}{}\label{classupload_1_1VersionControlSystem_ace97e5785a2b40011404ae6fbb956ecf}
+\begin{DoxyVerb}Constructor.
+
+Args:
+  options: Command line options.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+591   \textcolor{keyword}{def }\_\_init\_\_(self, options):
+592     \textcolor{stringliteral}{"""Constructor.}
+593 \textcolor{stringliteral}{}
+594 \textcolor{stringliteral}{    Args:}
+595 \textcolor{stringliteral}{      options: Command line options.}
+596 \textcolor{stringliteral}{    """}
+597     self.options = options
+598 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Check\+For\+Unknown\+Files@{Check\+For\+Unknown\+Files}}
+\index{Check\+For\+Unknown\+Files@{Check\+For\+Unknown\+Files}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Check\+For\+Unknown\+Files(self)}{CheckForUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Check\+For\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_ad2923d691a1b1047e9359c5b7c1c103f}{}\label{classupload_1_1VersionControlSystem_ad2923d691a1b1047e9359c5b7c1c103f}
+\begin{DoxyVerb}Show an "are you sure?" prompt if there are unknown files.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+613   \textcolor{keyword}{def }CheckForUnknownFiles(self):
+614     \textcolor{stringliteral}{"""Show an "are you sure?" prompt if there are unknown files."""}
+615     unknown\_files = self.GetUnknownFiles()
+616     \textcolor{keywordflow}{if} unknown\_files:
+617       \textcolor{keywordflow}{print} \textcolor{stringliteral}{"The following files are not added to version control:"}
+618       \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} unknown\_files:
+619         \textcolor{keywordflow}{print} line
+620       prompt = \textcolor{stringliteral}{"Are you sure to continue?(y/N) "}
+621       answer = raw\_input(prompt).strip()
+622       \textcolor{keywordflow}{if} answer != \textcolor{stringliteral}{"y"}:
+623         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"User aborted"})
+624 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Check\+For\+Unknown\+Files@{Check\+For\+Unknown\+Files}}
+\index{Check\+For\+Unknown\+Files@{Check\+For\+Unknown\+Files}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Check\+For\+Unknown\+Files(self)}{CheckForUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Check\+For\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_ad2923d691a1b1047e9359c5b7c1c103f}{}\label{classupload_1_1VersionControlSystem_ad2923d691a1b1047e9359c5b7c1c103f}
+\begin{DoxyVerb}Show an "are you sure?" prompt if there are unknown files.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+613   \textcolor{keyword}{def }CheckForUnknownFiles(self):
+614     \textcolor{stringliteral}{"""Show an "are you sure?" prompt if there are unknown files."""}
+615     unknown\_files = self.GetUnknownFiles()
+616     \textcolor{keywordflow}{if} unknown\_files:
+617       \textcolor{keywordflow}{print} \textcolor{stringliteral}{"The following files are not added to version control:"}
+618       \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} unknown\_files:
+619         \textcolor{keywordflow}{print} line
+620       prompt = \textcolor{stringliteral}{"Are you sure to continue?(y/N) "}
+621       answer = raw\_input(prompt).strip()
+622       \textcolor{keywordflow}{if} answer != \textcolor{stringliteral}{"y"}:
+623         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"User aborted"})
+624 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Generate\+Diff@{Generate\+Diff}}
+\index{Generate\+Diff@{Generate\+Diff}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Generate\+Diff(self, args)}{GenerateDiff(self, args)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Generate\+Diff (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_aa5eb260c96e7016dab36b5fc136c9f49}{}\label{classupload_1_1VersionControlSystem_aa5eb260c96e7016dab36b5fc136c9f49}
+\begin{DoxyVerb}Return the current diff as a string.
+
+Args:
+  args: Extra arguments to pass to the diff command.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+599   \textcolor{keyword}{def }GenerateDiff(self, args):
+600     \textcolor{stringliteral}{"""Return the current diff as a string.}
+601 \textcolor{stringliteral}{}
+602 \textcolor{stringliteral}{    Args:}
+603 \textcolor{stringliteral}{      args: Extra arguments to pass to the diff command.}
+604 \textcolor{stringliteral}{    """}
+605     \textcolor{keywordflow}{raise} NotImplementedError(
+606         \textcolor{stringliteral}{"abstract method -- subclass %s must override"} % self.\_\_class\_\_)
+607 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Generate\+Diff@{Generate\+Diff}}
+\index{Generate\+Diff@{Generate\+Diff}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Generate\+Diff(self, args)}{GenerateDiff(self, args)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Generate\+Diff (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_aa5eb260c96e7016dab36b5fc136c9f49}{}\label{classupload_1_1VersionControlSystem_aa5eb260c96e7016dab36b5fc136c9f49}
+\begin{DoxyVerb}Return the current diff as a string.
+
+Args:
+  args: Extra arguments to pass to the diff command.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+599   \textcolor{keyword}{def }GenerateDiff(self, args):
+600     \textcolor{stringliteral}{"""Return the current diff as a string.}
+601 \textcolor{stringliteral}{}
+602 \textcolor{stringliteral}{    Args:}
+603 \textcolor{stringliteral}{      args: Extra arguments to pass to the diff command.}
+604 \textcolor{stringliteral}{    """}
+605     \textcolor{keywordflow}{raise} NotImplementedError(
+606         \textcolor{stringliteral}{"abstract method -- subclass %s must override"} % self.\_\_class\_\_)
+607 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Get\+Base\+File@{Get\+Base\+File}}
+\index{Get\+Base\+File@{Get\+Base\+File}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Get\+Base\+File(self, filename)}{GetBaseFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Get\+Base\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_adfd9d4ecba422102233a2ba13e5bfaf5}{}\label{classupload_1_1VersionControlSystem_adfd9d4ecba422102233a2ba13e5bfaf5}
+\begin{DoxyVerb}Get the content of the upstream version of a file.
+
+Returns:
+  A tuple (base_content, new_content, is_binary, status)
+base_content: The contents of the base file.
+new_content: For text files, this is empty.  For binary files, this is
+  the contents of the new file, since the diff output won't contain
+  information to reconstruct the current file.
+is_binary: True iff the file is binary.
+status: The status of the file.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+625   \textcolor{keyword}{def }GetBaseFile(self, filename):
+626     \textcolor{stringliteral}{"""Get the content of the upstream version of a file.}
+627 \textcolor{stringliteral}{}
+628 \textcolor{stringliteral}{    Returns:}
+629 \textcolor{stringliteral}{      A tuple (base\_content, new\_content, is\_binary, status)}
+630 \textcolor{stringliteral}{        base\_content: The contents of the base file.}
+631 \textcolor{stringliteral}{        new\_content: For text files, this is empty.  For binary files, this is}
+632 \textcolor{stringliteral}{          the contents of the new file, since the diff output won't contain}
+633 \textcolor{stringliteral}{          information to reconstruct the current file.}
+634 \textcolor{stringliteral}{        is\_binary: True iff the file is binary.}
+635 \textcolor{stringliteral}{        status: The status of the file.}
+636 \textcolor{stringliteral}{    """}
+637 
+638     \textcolor{keywordflow}{raise} NotImplementedError(
+639         \textcolor{stringliteral}{"abstract method -- subclass %s must override"} % self.\_\_class\_\_)
+640 
+641 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Get\+Base\+File@{Get\+Base\+File}}
+\index{Get\+Base\+File@{Get\+Base\+File}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Get\+Base\+File(self, filename)}{GetBaseFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Get\+Base\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_adfd9d4ecba422102233a2ba13e5bfaf5}{}\label{classupload_1_1VersionControlSystem_adfd9d4ecba422102233a2ba13e5bfaf5}
+\begin{DoxyVerb}Get the content of the upstream version of a file.
+
+Returns:
+  A tuple (base_content, new_content, is_binary, status)
+base_content: The contents of the base file.
+new_content: For text files, this is empty.  For binary files, this is
+  the contents of the new file, since the diff output won't contain
+  information to reconstruct the current file.
+is_binary: True iff the file is binary.
+status: The status of the file.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+625   \textcolor{keyword}{def }GetBaseFile(self, filename):
+626     \textcolor{stringliteral}{"""Get the content of the upstream version of a file.}
+627 \textcolor{stringliteral}{}
+628 \textcolor{stringliteral}{    Returns:}
+629 \textcolor{stringliteral}{      A tuple (base\_content, new\_content, is\_binary, status)}
+630 \textcolor{stringliteral}{        base\_content: The contents of the base file.}
+631 \textcolor{stringliteral}{        new\_content: For text files, this is empty.  For binary files, this is}
+632 \textcolor{stringliteral}{          the contents of the new file, since the diff output won't contain}
+633 \textcolor{stringliteral}{          information to reconstruct the current file.}
+634 \textcolor{stringliteral}{        is\_binary: True iff the file is binary.}
+635 \textcolor{stringliteral}{        status: The status of the file.}
+636 \textcolor{stringliteral}{    """}
+637 
+638     \textcolor{keywordflow}{raise} NotImplementedError(
+639         \textcolor{stringliteral}{"abstract method -- subclass %s must override"} % self.\_\_class\_\_)
+640 
+641 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Get\+Base\+Files@{Get\+Base\+Files}}
+\index{Get\+Base\+Files@{Get\+Base\+Files}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Get\+Base\+Files(self, diff)}{GetBaseFiles(self, diff)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Get\+Base\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{diff}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_a812c3b3daf90c88b015fa4b26252e291}{}\label{classupload_1_1VersionControlSystem_a812c3b3daf90c88b015fa4b26252e291}
+\begin{DoxyVerb}Helper that calls GetBase file for each file in the patch.
+
+Returns:
+  A dictionary that maps from filename to GetBaseFile's tuple.  Filenames
+  are retrieved based on lines that start with "Index:" or
+  "Property changes on:".
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+642   \textcolor{keyword}{def }GetBaseFiles(self, diff):
+643     \textcolor{stringliteral}{"""Helper that calls GetBase file for each file in the patch.}
+644 \textcolor{stringliteral}{}
+645 \textcolor{stringliteral}{    Returns:}
+646 \textcolor{stringliteral}{      A dictionary that maps from filename to GetBaseFile's tuple.  Filenames}
+647 \textcolor{stringliteral}{      are retrieved based on lines that start with "Index:" or}
+648 \textcolor{stringliteral}{      "Property changes on:".}
+649 \textcolor{stringliteral}{    """}
+650     files = \{\}
+651     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} diff.splitlines(\textcolor{keyword}{True}):
+652       \textcolor{keywordflow}{if} line.startswith(\textcolor{stringliteral}{'Index:'}) \textcolor{keywordflow}{or} line.startswith(\textcolor{stringliteral}{'Property changes on:'}):
+653         unused, filename = line.split(\textcolor{stringliteral}{':'}, 1)
+654         \textcolor{comment}{# On Windows if a file has property changes its filename uses '\(\backslash\)'}
+655         \textcolor{comment}{# instead of '/'.}
+656         filename = filename.strip().replace(\textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'}, \textcolor{stringliteral}{'/'})
+657         files[filename] = self.GetBaseFile(filename)
+658     \textcolor{keywordflow}{return} files
+659 
+660 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Get\+Base\+Files@{Get\+Base\+Files}}
+\index{Get\+Base\+Files@{Get\+Base\+Files}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Get\+Base\+Files(self, diff)}{GetBaseFiles(self, diff)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Get\+Base\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{diff}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_a812c3b3daf90c88b015fa4b26252e291}{}\label{classupload_1_1VersionControlSystem_a812c3b3daf90c88b015fa4b26252e291}
+\begin{DoxyVerb}Helper that calls GetBase file for each file in the patch.
+
+Returns:
+  A dictionary that maps from filename to GetBaseFile's tuple.  Filenames
+  are retrieved based on lines that start with "Index:" or
+  "Property changes on:".
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+642   \textcolor{keyword}{def }GetBaseFiles(self, diff):
+643     \textcolor{stringliteral}{"""Helper that calls GetBase file for each file in the patch.}
+644 \textcolor{stringliteral}{}
+645 \textcolor{stringliteral}{    Returns:}
+646 \textcolor{stringliteral}{      A dictionary that maps from filename to GetBaseFile's tuple.  Filenames}
+647 \textcolor{stringliteral}{      are retrieved based on lines that start with "Index:" or}
+648 \textcolor{stringliteral}{      "Property changes on:".}
+649 \textcolor{stringliteral}{    """}
+650     files = \{\}
+651     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} diff.splitlines(\textcolor{keyword}{True}):
+652       \textcolor{keywordflow}{if} line.startswith(\textcolor{stringliteral}{'Index:'}) \textcolor{keywordflow}{or} line.startswith(\textcolor{stringliteral}{'Property changes on:'}):
+653         unused, filename = line.split(\textcolor{stringliteral}{':'}, 1)
+654         \textcolor{comment}{# On Windows if a file has property changes its filename uses '\(\backslash\)'}
+655         \textcolor{comment}{# instead of '/'.}
+656         filename = filename.strip().replace(\textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'}, \textcolor{stringliteral}{'/'})
+657         files[filename] = self.GetBaseFile(filename)
+658     \textcolor{keywordflow}{return} files
+659 
+660 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Get\+Unknown\+Files@{Get\+Unknown\+Files}}
+\index{Get\+Unknown\+Files@{Get\+Unknown\+Files}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Get\+Unknown\+Files(self)}{GetUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Get\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_a56a60e56aa9aff3df4001d2f84cab884}{}\label{classupload_1_1VersionControlSystem_a56a60e56aa9aff3df4001d2f84cab884}
+\begin{DoxyVerb}Return a list of files unknown to the VCS.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+608   \textcolor{keyword}{def }GetUnknownFiles(self):
+609     \textcolor{stringliteral}{"""Return a list of files unknown to the VCS."""}
+610     \textcolor{keywordflow}{raise} NotImplementedError(
+611         \textcolor{stringliteral}{"abstract method -- subclass %s must override"} % self.\_\_class\_\_)
+612 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Get\+Unknown\+Files@{Get\+Unknown\+Files}}
+\index{Get\+Unknown\+Files@{Get\+Unknown\+Files}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Get\+Unknown\+Files(self)}{GetUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Get\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_a56a60e56aa9aff3df4001d2f84cab884}{}\label{classupload_1_1VersionControlSystem_a56a60e56aa9aff3df4001d2f84cab884}
+\begin{DoxyVerb}Return a list of files unknown to the VCS.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+608   \textcolor{keyword}{def }GetUnknownFiles(self):
+609     \textcolor{stringliteral}{"""Return a list of files unknown to the VCS."""}
+610     \textcolor{keywordflow}{raise} NotImplementedError(
+611         \textcolor{stringliteral}{"abstract method -- subclass %s must override"} % self.\_\_class\_\_)
+612 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Is\+Image@{Is\+Image}}
+\index{Is\+Image@{Is\+Image}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Is\+Image(self, filename)}{IsImage(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Is\+Image (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_a846889ecd2ef40870b456ddb5b349e02}{}\label{classupload_1_1VersionControlSystem_a846889ecd2ef40870b456ddb5b349e02}
+\begin{DoxyVerb}Returns true if the filename has an image extension.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+713   \textcolor{keyword}{def }IsImage(self, filename):
+714     \textcolor{stringliteral}{"""Returns true if the filename has an image extension."""}
+715     mimetype =  mimetypes.guess\_type(filename)[0]
+716     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} mimetype:
+717       \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+718     \textcolor{keywordflow}{return} mimetype.startswith(\textcolor{stringliteral}{"image/"})
+719 
+720 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Is\+Image@{Is\+Image}}
+\index{Is\+Image@{Is\+Image}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Is\+Image(self, filename)}{IsImage(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Is\+Image (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_a846889ecd2ef40870b456ddb5b349e02}{}\label{classupload_1_1VersionControlSystem_a846889ecd2ef40870b456ddb5b349e02}
+\begin{DoxyVerb}Returns true if the filename has an image extension.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+713   \textcolor{keyword}{def }IsImage(self, filename):
+714     \textcolor{stringliteral}{"""Returns true if the filename has an image extension."""}
+715     mimetype =  mimetypes.guess\_type(filename)[0]
+716     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} mimetype:
+717       \textcolor{keywordflow}{return} \textcolor{keyword}{False}
+718     \textcolor{keywordflow}{return} mimetype.startswith(\textcolor{stringliteral}{"image/"})
+719 
+720 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Upload\+Base\+Files@{Upload\+Base\+Files}}
+\index{Upload\+Base\+Files@{Upload\+Base\+Files}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Upload\+Base\+Files(self, issue, rpc\+\_\+server, patch\+\_\+list, patchset, options, files)}{UploadBaseFiles(self, issue, rpc_server, patch_list, patchset, options, files)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Upload\+Base\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{issue, }
+\item[{}]{rpc\+\_\+server, }
+\item[{}]{patch\+\_\+list, }
+\item[{}]{patchset, }
+\item[{}]{options, }
+\item[{}]{files}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_a7e334f967301b9e85e5a9c39f5036823}{}\label{classupload_1_1VersionControlSystem_a7e334f967301b9e85e5a9c39f5036823}
+\begin{DoxyVerb}Uploads the base files (and if necessary, the current ones as well).\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+662                       files):
+663     \textcolor{stringliteral}{"""Uploads the base files (and if necessary, the current ones as well)."""}
+664 
+665     \textcolor{keyword}{def }UploadFile(filename, file\_id, content, is\_binary, status, is\_base):
+666       \textcolor{stringliteral}{"""Uploads a file to the server."""}
+667       file\_too\_large = \textcolor{keyword}{False}
+668       \textcolor{keywordflow}{if} is\_base:
+669         type = \textcolor{stringliteral}{"base"}
+670       \textcolor{keywordflow}{else}:
+671         type = \textcolor{stringliteral}{"current"}
+672       \textcolor{keywordflow}{if} len(content) > MAX\_UPLOAD\_SIZE:
+673         \textcolor{keywordflow}{print} (\textcolor{stringliteral}{"Not uploading the %s file for %s because it's too large."} %
+674                (type, filename))
+675         file\_too\_large = \textcolor{keyword}{True}
+676         content = \textcolor{stringliteral}{""}
+677       checksum = md5.new(content).hexdigest()
+678       \textcolor{keywordflow}{if} options.verbose > 0 \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} file\_too\_large:
+679         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Uploading %s file for %s"} % (type, filename)
+680       url = \textcolor{stringliteral}{"/%d/upload\_content/%d/%d"} % (int(issue), int(patchset), file\_id)
+681       form\_fields = [(\textcolor{stringliteral}{"filename"}, filename),
+682                      (\textcolor{stringliteral}{"status"}, status),
+683                      (\textcolor{stringliteral}{"checksum"}, checksum),
+684                      (\textcolor{stringliteral}{"is\_binary"}, str(is\_binary)),
+685                      (\textcolor{stringliteral}{"is\_current"}, str(\textcolor{keywordflow}{not} is\_base)),
+686                     ]
+687       \textcolor{keywordflow}{if} file\_too\_large:
+688         form\_fields.append((\textcolor{stringliteral}{"file\_too\_large"}, \textcolor{stringliteral}{"1"}))
+689       \textcolor{keywordflow}{if} options.email:
+690         form\_fields.append((\textcolor{stringliteral}{"user"}, options.email))
+691       ctype, body = \hyperlink{namespaceupload_ae12985a2c860c124c502dd2099b702eb}{EncodeMultipartFormData}(form\_fields,
+692                                             [(\textcolor{stringliteral}{"data"}, filename, content)])
+693       response\_body = rpc\_server.Send(url, body,
+694                                       content\_type=ctype)
+695       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} response\_body.startswith(\textcolor{stringliteral}{"OK"}):
+696         \hyperlink{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{StatusUpdate}(\textcolor{stringliteral}{"  --> %s"} % response\_body)
+697         sys.exit(1)
+698 
+699     patches = dict()
+700     [patches.setdefault(v, k) \textcolor{keywordflow}{for} k, v \textcolor{keywordflow}{in} patch\_list]
+701     \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} patches.keys():
+702       base\_content, new\_content, is\_binary, status = files[filename]
+703       file\_id\_str = patches.get(filename)
+704       \textcolor{keywordflow}{if} file\_id\_str.find(\textcolor{stringliteral}{"nobase"}) != -1:
+705         base\_content = \textcolor{keywordtype}{None}
+706         file\_id\_str = file\_id\_str[file\_id\_str.rfind(\textcolor{stringliteral}{"\_"}) + 1:]
+707       file\_id = int(file\_id\_str)
+708       \textcolor{keywordflow}{if} base\_content != \textcolor{keywordtype}{None}:
+709         UploadFile(filename, file\_id, base\_content, is\_binary, status, \textcolor{keyword}{True})
+710       \textcolor{keywordflow}{if} new\_content != \textcolor{keywordtype}{None}:
+711         UploadFile(filename, file\_id, new\_content, is\_binary, status, \textcolor{keyword}{False})
+712 
+\end{DoxyCode}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!Upload\+Base\+Files@{Upload\+Base\+Files}}
+\index{Upload\+Base\+Files@{Upload\+Base\+Files}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{Upload\+Base\+Files(self, issue, rpc\+\_\+server, patch\+\_\+list, patchset, options, files)}{UploadBaseFiles(self, issue, rpc_server, patch_list, patchset, options, files)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Version\+Control\+System.\+Upload\+Base\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{issue, }
+\item[{}]{rpc\+\_\+server, }
+\item[{}]{patch\+\_\+list, }
+\item[{}]{patchset, }
+\item[{}]{options, }
+\item[{}]{files}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1VersionControlSystem_a7e334f967301b9e85e5a9c39f5036823}{}\label{classupload_1_1VersionControlSystem_a7e334f967301b9e85e5a9c39f5036823}
+\begin{DoxyVerb}Uploads the base files (and if necessary, the current ones as well).\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+662                       files):
+663     \textcolor{stringliteral}{"""Uploads the base files (and if necessary, the current ones as well)."""}
+664 
+665     \textcolor{keyword}{def }UploadFile(filename, file\_id, content, is\_binary, status, is\_base):
+666       \textcolor{stringliteral}{"""Uploads a file to the server."""}
+667       file\_too\_large = \textcolor{keyword}{False}
+668       \textcolor{keywordflow}{if} is\_base:
+669         type = \textcolor{stringliteral}{"base"}
+670       \textcolor{keywordflow}{else}:
+671         type = \textcolor{stringliteral}{"current"}
+672       \textcolor{keywordflow}{if} len(content) > MAX\_UPLOAD\_SIZE:
+673         \textcolor{keywordflow}{print} (\textcolor{stringliteral}{"Not uploading the %s file for %s because it's too large."} %
+674                (type, filename))
+675         file\_too\_large = \textcolor{keyword}{True}
+676         content = \textcolor{stringliteral}{""}
+677       checksum = md5.new(content).hexdigest()
+678       \textcolor{keywordflow}{if} options.verbose > 0 \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} file\_too\_large:
+679         \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Uploading %s file for %s"} % (type, filename)
+680       url = \textcolor{stringliteral}{"/%d/upload\_content/%d/%d"} % (int(issue), int(patchset), file\_id)
+681       form\_fields = [(\textcolor{stringliteral}{"filename"}, filename),
+682                      (\textcolor{stringliteral}{"status"}, status),
+683                      (\textcolor{stringliteral}{"checksum"}, checksum),
+684                      (\textcolor{stringliteral}{"is\_binary"}, str(is\_binary)),
+685                      (\textcolor{stringliteral}{"is\_current"}, str(\textcolor{keywordflow}{not} is\_base)),
+686                     ]
+687       \textcolor{keywordflow}{if} file\_too\_large:
+688         form\_fields.append((\textcolor{stringliteral}{"file\_too\_large"}, \textcolor{stringliteral}{"1"}))
+689       \textcolor{keywordflow}{if} options.email:
+690         form\_fields.append((\textcolor{stringliteral}{"user"}, options.email))
+691       ctype, body = \hyperlink{namespaceupload_ae12985a2c860c124c502dd2099b702eb}{EncodeMultipartFormData}(form\_fields,
+692                                             [(\textcolor{stringliteral}{"data"}, filename, content)])
+693       response\_body = rpc\_server.Send(url, body,
+694                                       content\_type=ctype)
+695       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} response\_body.startswith(\textcolor{stringliteral}{"OK"}):
+696         \hyperlink{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{StatusUpdate}(\textcolor{stringliteral}{"  --> %s"} % response\_body)
+697         sys.exit(1)
+698 
+699     patches = dict()
+700     [patches.setdefault(v, k) \textcolor{keywordflow}{for} k, v \textcolor{keywordflow}{in} patch\_list]
+701     \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} patches.keys():
+702       base\_content, new\_content, is\_binary, status = files[filename]
+703       file\_id\_str = patches.get(filename)
+704       \textcolor{keywordflow}{if} file\_id\_str.find(\textcolor{stringliteral}{"nobase"}) != -1:
+705         base\_content = \textcolor{keywordtype}{None}
+706         file\_id\_str = file\_id\_str[file\_id\_str.rfind(\textcolor{stringliteral}{"\_"}) + 1:]
+707       file\_id = int(file\_id\_str)
+708       \textcolor{keywordflow}{if} base\_content != \textcolor{keywordtype}{None}:
+709         UploadFile(filename, file\_id, base\_content, is\_binary, status, \textcolor{keyword}{True})
+710       \textcolor{keywordflow}{if} new\_content != \textcolor{keywordtype}{None}:
+711         UploadFile(filename, file\_id, new\_content, is\_binary, status, \textcolor{keyword}{False})
+712 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}!options@{options}}
+\index{options@{options}!upload\+::\+Version\+Control\+System@{upload\+::\+Version\+Control\+System}}
+\subsubsection[{\texorpdfstring{options}{options}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+Version\+Control\+System.\+options}\hypertarget{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{}\label{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/scripts/\hyperlink{googlemock_2scripts_2upload_8py}{upload.\+py}\end{DoxyCompactItemize}

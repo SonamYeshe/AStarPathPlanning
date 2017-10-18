@@ -1,0 +1,50 @@
+\hypertarget{namespacemy__namespace_1_1testing}{}\section{my\+\_\+namespace\+:\+:testing Namespace Reference}
+\label{namespacemy__namespace_1_1testing}\index{my\+\_\+namespace\+::testing@{my\+\_\+namespace\+::testing}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classmy__namespace_1_1testing_1_1AssertionResult}{Assertion\+Result}
+\item 
+class \hyperlink{classmy__namespace_1_1testing_1_1Message}{Message}
+\item 
+class \hyperlink{classmy__namespace_1_1testing_1_1Test}{Test}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacemy__namespace_1_1testing_ad673a1b79baca8e8c493774b2a4b0127}{T\+E\+ST} (Nested\+Testing\+Namespace\+Test, Success)
+\item 
+\hyperlink{namespacemy__namespace_1_1testing_aa568f6a68b9e42841f6da570ef62b623}{T\+E\+ST} (Nested\+Testing\+Namespace\+Test, Failure)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{my\+\_\+namespace\+::testing@{my\+\_\+namespace\+::testing}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!my\+\_\+namespace\+::testing@{my\+\_\+namespace\+::testing}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Nested\+Testing\+Namespace\+Test, Success)}{TEST(NestedTestingNamespaceTest, Success)}}]{\setlength{\rightskip}{0pt plus 5cm}my\+\_\+namespace\+::testing\+::\+T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Nested\+Testing\+Namespace\+Test}]{, }
+\item[{Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacemy__namespace_1_1testing_ad673a1b79baca8e8c493774b2a4b0127}{}\label{namespacemy__namespace_1_1testing_ad673a1b79baca8e8c493774b2a4b0127}
+
+\begin{DoxyCode}
+6580                                           \{
+6581   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, 1) << \textcolor{stringliteral}{"This shouldn't fail."};
+6582 \}
+\end{DoxyCode}
+\index{my\+\_\+namespace\+::testing@{my\+\_\+namespace\+::testing}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!my\+\_\+namespace\+::testing@{my\+\_\+namespace\+::testing}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Nested\+Testing\+Namespace\+Test, Failure)}{TEST(NestedTestingNamespaceTest, Failure)}}]{\setlength{\rightskip}{0pt plus 5cm}my\+\_\+namespace\+::testing\+::\+T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Nested\+Testing\+Namespace\+Test}]{, }
+\item[{Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacemy__namespace_1_1testing_aa568f6a68b9e42841f6da570ef62b623}{}\label{namespacemy__namespace_1_1testing_aa568f6a68b9e42841f6da570ef62b623}
+
+\begin{DoxyCode}
+6585                                           \{
+6586   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"This failure is expected."},
+6587                        \textcolor{stringliteral}{"This failure is expected."});
+6588 \}
+\end{DoxyCode}

@@ -1,0 +1,67 @@
+\hypertarget{namespacecpp_1_1gmock__class}{}\section{cpp.\+gmock\+\_\+class Namespace Reference}
+\label{namespacecpp_1_1gmock__class}\index{cpp.\+gmock\+\_\+class@{cpp.\+gmock\+\_\+class}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacecpp_1_1gmock__class_a8f99cfdd2b4f0a547d6585b1de78bac0}{main} (argv=sys.\+argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacecpp_1_1gmock__class_a2157e96eee0b4bf9ca6d195ab76f59c2}{set} = sets.\+Set
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cpp\+::gmock\+\_\+class@{cpp\+::gmock\+\_\+class}!main@{main}}
+\index{main@{main}!cpp\+::gmock\+\_\+class@{cpp\+::gmock\+\_\+class}}
+\subsubsection[{\texorpdfstring{main(argv=sys.\+argv)}{main(argv=sys.argv)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+gmock\+\_\+class.\+main (
+\begin{DoxyParamCaption}
+\item[{}]{argv = {\ttfamily sys.argv}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecpp_1_1gmock__class_a8f99cfdd2b4f0a547d6585b1de78bac0}{}\label{namespacecpp_1_1gmock__class_a8f99cfdd2b4f0a547d6585b1de78bac0}
+
+\begin{DoxyCode}
+190 \textcolor{keyword}{def }\hyperlink{namespacecpp_1_1gmock__class_a8f99cfdd2b4f0a547d6585b1de78bac0}{main}(argv=sys.argv):
+191   \textcolor{keywordflow}{if} len(argv) < 2:
+192     sys.stderr.write(\textcolor{stringliteral}{'Google Mock Class Generator v%s\(\backslash\)n\(\backslash\)n'} %
+193                      \textcolor{stringliteral}{'.'}.join(\hyperlink{app_2main_8cpp_a8f2b5a2f358cff079fbf01614064fbe5}{map}(str, \_VERSION)))
+194     sys.stderr.write(\_\_doc\_\_)
+195     \textcolor{keywordflow}{return} 1
+196 
+197   \textcolor{keyword}{global} \_INDENT
+198   \textcolor{keywordflow}{try}:
+199     \_INDENT = int(os.environ[\textcolor{stringliteral}{'INDENT'}])
+200   \textcolor{keywordflow}{except} KeyError:
+201     \textcolor{keywordflow}{pass}
+202   \textcolor{keywordflow}{except}:
+203     sys.stderr.write(\textcolor{stringliteral}{'Unable to use indent of %s\(\backslash\)n'} % os.environ.get(\textcolor{stringliteral}{'INDENT'}))
+204 
+205   filename = argv[1]
+206   desired\_class\_names = \textcolor{keywordtype}{None}  \textcolor{comment}{# None means all classes in the source file.}
+207   \textcolor{keywordflow}{if} len(argv) >= 3:
+208     desired\_class\_names = \hyperlink{namespacecpp_1_1gmock__class_a2157e96eee0b4bf9ca6d195ab76f59c2}{set}(argv[2:])
+209   source = utils.ReadFile(filename)
+210   \textcolor{keywordflow}{if} source \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+211     \textcolor{keywordflow}{return} 1
+212 
+213   builder = ast.BuilderFromSource(source, filename)
+214   \textcolor{keywordflow}{try}:
+215     entire\_ast = filter(\textcolor{keywordtype}{None}, builder.Generate())
+216   \textcolor{keywordflow}{except} KeyboardInterrupt:
+217     \textcolor{keywordflow}{return}
+218   \textcolor{keywordflow}{except}:
+219     \textcolor{comment}{# An error message was already printed since we couldn't parse.}
+220     sys.exit(1)
+221   \textcolor{keywordflow}{else}:
+222     lines = \_GenerateMocks(filename, source, entire\_ast, desired\_class\_names)
+223     sys.stdout.write(\textcolor{stringliteral}{'\(\backslash\)n'}.join(lines))
+224 
+225 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{cpp\+::gmock\+\_\+class@{cpp\+::gmock\+\_\+class}!set@{set}}
+\index{set@{set}!cpp\+::gmock\+\_\+class@{cpp\+::gmock\+\_\+class}}
+\subsubsection[{\texorpdfstring{set}{set}}]{\setlength{\rightskip}{0pt plus 5cm}cpp.\+gmock\+\_\+class.\+set = sets.\+Set}\hypertarget{namespacecpp_1_1gmock__class_a2157e96eee0b4bf9ca6d195ab76f59c2}{}\label{namespacecpp_1_1gmock__class_a2157e96eee0b4bf9ca6d195ab76f59c2}

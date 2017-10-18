@@ -1,0 +1,1143 @@
+\hypertarget{namespacepump}{}\section{pump Namespace Reference}
+\label{namespacepump}\index{pump@{pump}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpump_1_1CodeNode}{Code\+Node}
+\item 
+class \hyperlink{classpump_1_1Cursor}{Cursor}
+\item 
+class \hyperlink{classpump_1_1ElseNode}{Else\+Node}
+\item 
+class \hyperlink{classpump_1_1Env}{Env}
+\item 
+class \hyperlink{classpump_1_1ExpNode}{Exp\+Node}
+\item 
+class \hyperlink{classpump_1_1ForNode}{For\+Node}
+\item 
+class \hyperlink{classpump_1_1IfNode}{If\+Node}
+\item 
+class \hyperlink{classpump_1_1LiteralDollarNode}{Literal\+Dollar\+Node}
+\item 
+class \hyperlink{classpump_1_1Output}{Output}
+\item 
+class \hyperlink{classpump_1_1RangeNode}{Range\+Node}
+\item 
+class \hyperlink{classpump_1_1RawCodeNode}{Raw\+Code\+Node}
+\item 
+class \hyperlink{classpump_1_1Token}{Token}
+\item 
+class \hyperlink{classpump_1_1VarNode}{Var\+Node}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacepump_a38844b22bd5a51c098b07c2c36c5c5b3}{Eof} ()
+\item 
+def \hyperlink{namespacepump_a9353db466a97e632058887a77c3b26aa}{Starts\+With} (lines, pos, string)
+\item 
+def \hyperlink{namespacepump_af9f92ec64fe45399c7e051115a107ee7}{Find\+First\+In\+Line} (line, token\+\_\+table)
+\item 
+def \hyperlink{namespacepump_a08f2d05c192d11a134c008287bafef07}{Find\+First} (lines, token\+\_\+table, cursor)
+\item 
+def \hyperlink{namespacepump_a859edb180cfc24c24fabcfb4f2bedf9e}{Sub\+String} (lines, start, end)
+\item 
+def \hyperlink{namespacepump_a8c50cb40d65f26771c6f51eb265bb569}{Strip\+Meta\+Comments} (str)
+\item 
+def \hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{Make\+Token} (lines, start, end, token\+\_\+type)
+\item 
+def \hyperlink{namespacepump_a23761d99dd43d642e94d845218573035}{Parse\+Token} (lines, pos, regex, token\+\_\+type)
+\item 
+def \hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip} (lines, pos, regex)
+\item 
+def \hyperlink{namespacepump_a8935d04d89047866b07c59845e2d7d29}{Skip\+Until} (lines, pos, regex, token\+\_\+type)
+\item 
+def \hyperlink{namespacepump_ae094486db14ecec9347129c5f230042d}{Parse\+Exp\+Token\+In\+Parens} (lines, pos)
+\item 
+def \hyperlink{namespacepump_ae07150d94399cbe1661abe5929f921e0}{R\+Strip\+New\+Line\+From\+Token} (token)
+\item 
+def \hyperlink{namespacepump_aa383d59e8e2a9507a576fd4c6b68b6b7}{Tokenize\+Lines} (lines, pos)
+\item 
+def \hyperlink{namespacepump_aa42c23b1c914c0f86a94f2fa32999905}{Tokenize} (s)
+\item 
+def \hyperlink{namespacepump_a8e2ff118da88397e88ccf68ebcd2df79}{Pop\+Front} (a\+\_\+list)
+\item 
+def \hyperlink{namespacepump_a12c70577eb727526ac0ad17bf3b6c3a4}{Push\+Front} (a\+\_\+list, elem)
+\item 
+def \hyperlink{namespacepump_a45e1d5d5c1c188fc53eee8bd1e00e6b0}{Pop\+Token} (a\+\_\+list, token\+\_\+type=None)
+\item 
+def \hyperlink{namespacepump_ab12085e099ab4bd0cd968efdc435ec31}{Peek\+Token} (a\+\_\+list)
+\item 
+def \hyperlink{namespacepump_af62b08489d90e69d0577e82c98383ba7}{Parse\+Exp\+Node} (token)
+\item 
+def \hyperlink{namespacepump_ae40493525a993e81929c6905e329a406}{Parse\+Else\+Node} (tokens)
+\item 
+def \hyperlink{namespacepump_a5532710f334f026f80fc485decf5078e}{Parse\+Atomic\+Code\+Node} (tokens)
+\item 
+def \hyperlink{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{Parse\+Code\+Node} (tokens)
+\item 
+def \hyperlink{namespacepump_a56ac10a83a3a875d305c9aae71fc0549}{Parse\+To\+A\+ST} (pump\+\_\+src\+\_\+text)
+\item 
+def \hyperlink{namespacepump_a901e6abd34691a0d779178a615cc09c1}{Run\+Atomic\+Code} (env, \hyperlink{classnode}{node}, output)
+\item 
+def \hyperlink{namespacepump_ac6a714a44e28c2a19a1dfabeb9c9d4f1}{Run\+Code} (env, code\+\_\+node, output)
+\item 
+def \hyperlink{namespacepump_a417078b1d036b67756c47e5dc50324dc}{Is\+Single\+Line\+Comment} (cur\+\_\+line)
+\item 
+def \hyperlink{namespacepump_aa33101b01d5781710262f3b5dadd8bc8}{Is\+In\+Preprocessor\+Directive} (prev\+\_\+lines, cur\+\_\+line)
+\item 
+def \hyperlink{namespacepump_a73951c98652038351b1cd24291433e12}{Wrap\+Comment} (line, output)
+\item 
+def \hyperlink{namespacepump_a42502545a37fcd4513a0a7ac8ef3c0eb}{Wrap\+Code} (line, line\+\_\+concat, output)
+\item 
+def \hyperlink{namespacepump_a59e8ae06bae068d2d72df4f0340635d8}{Wrap\+Preprocessor\+Directive} (line, output)
+\item 
+def \hyperlink{namespacepump_a60723738cc38d8ced7e2cfecc72d8b11}{Wrap\+Plain\+Code} (line, output)
+\item 
+def \hyperlink{namespacepump_a707a3ff4514c89607e48a87589aed787}{Is\+Multi\+Line\+I\+W\+Y\+U\+Pragma} (line)
+\item 
+def \hyperlink{namespacepump_ac8a553b60dc83d100361a0e98d98451b}{Is\+Header\+Guard\+Include\+Or\+One\+Line\+I\+W\+Y\+U\+Pragma} (line)
+\item 
+def \hyperlink{namespacepump_a02427e2ddc80f0f408e27dfc3e38e702}{Wrap\+Long\+Line} (line, output)
+\item 
+def \hyperlink{namespacepump_a3456db8d85605892d670669c4e238cd7}{Beautify\+Code} (string)
+\item 
+def \hyperlink{namespacepump_a568fe53d1443489ac15bac4a0f9faf91}{Convert\+From\+Pump\+Source} (src\+\_\+text)
+\item 
+def \hyperlink{namespacepump_abcf26971f7bdbad77c2c168c110312df}{main} (argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{namespacepump_a132b35d1104c7f479aa21c345f413477}{T\+O\+K\+E\+N\+\_\+\+T\+A\+B\+LE}
+\item 
+\hyperlink{namespacepump_a8e008923b6c378b8d3df611fb07d6dda}{I\+D\+\_\+\+R\+E\+G\+EX} = re.\+compile(r\textquotesingle{}\mbox{[}\+\_\+A-\/Za-\/z\mbox{]}\textbackslash{}w$\ast$\textquotesingle{})
+\item 
+\hyperlink{namespacepump_a6397ed9bab62b5c6f60a6626f6b287e0}{E\+Q\+\_\+\+R\+E\+G\+EX} = re.\+compile(r\textquotesingle{}=\textquotesingle{})
+\item 
+\hyperlink{namespacepump_a4c1f68b32fcb8366051b574cf2e6aef1}{R\+E\+S\+T\+\_\+\+O\+F\+\_\+\+L\+I\+N\+E\+\_\+\+R\+E\+G\+EX} = re.\+compile(r\textquotesingle{}.$\ast$?(?=\$$\vert$\textbackslash{}\$\textbackslash{}\$)\textquotesingle{})
+\item 
+\hyperlink{namespacepump_a81f03eaffd2c0f4c6a453a0b179e51ca}{O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+S\+\_\+\+R\+E\+G\+EX} = re.\+compile(r\textquotesingle{}\textbackslash{}s$\ast$\textquotesingle{})
+\item 
+\hyperlink{namespacepump_a4ab1be351870f785a72d324bf56c8316}{W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+\_\+\+R\+E\+G\+EX} = re.\+compile(r\textquotesingle{}\textbackslash{}s\textquotesingle{})
+\item 
+\hyperlink{namespacepump_a45644ad738e584ec754f6d9f45fe693c}{D\+O\+T\+\_\+\+D\+O\+T\+\_\+\+R\+E\+G\+EX} = re.\+compile(r\textquotesingle{}\textbackslash{}.\textbackslash{}.\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{pump@{pump}!Beautify\+Code@{Beautify\+Code}}
+\index{Beautify\+Code@{Beautify\+Code}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Beautify\+Code(string)}{BeautifyCode(string)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Beautify\+Code (
+\begin{DoxyParamCaption}
+\item[{}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a3456db8d85605892d670669c4e238cd7}{}\label{namespacepump_a3456db8d85605892d670669c4e238cd7}
+
+\begin{DoxyCode}
+814 \textcolor{keyword}{def }\hyperlink{namespacepump_a3456db8d85605892d670669c4e238cd7}{BeautifyCode}(string):
+815   lines = string.splitlines()
+816   output = []
+817   \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} lines:
+818     \hyperlink{namespacepump_a02427e2ddc80f0f408e27dfc3e38e702}{WrapLongLine}(line, output)
+819   output2 = [line.rstrip() \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} output]
+820   \textcolor{keywordflow}{return} \textcolor{stringliteral}{'\(\backslash\)n'}.join(output2) + \textcolor{stringliteral}{'\(\backslash\)n'}
+821 
+822 
+\end{DoxyCode}
+\index{pump@{pump}!Convert\+From\+Pump\+Source@{Convert\+From\+Pump\+Source}}
+\index{Convert\+From\+Pump\+Source@{Convert\+From\+Pump\+Source}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Convert\+From\+Pump\+Source(src\+\_\+text)}{ConvertFromPumpSource(src_text)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Convert\+From\+Pump\+Source (
+\begin{DoxyParamCaption}
+\item[{}]{src\+\_\+text}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a568fe53d1443489ac15bac4a0f9faf91}{}\label{namespacepump_a568fe53d1443489ac15bac4a0f9faf91}
+\begin{DoxyVerb}Return the text generated from the given Pump source text.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+823 \textcolor{keyword}{def }\hyperlink{namespacepump_a568fe53d1443489ac15bac4a0f9faf91}{ConvertFromPumpSource}(src\_text):
+824   \textcolor{stringliteral}{"""Return the text generated from the given Pump source text."""}
+825   ast = \hyperlink{namespacepump_a56ac10a83a3a875d305c9aae71fc0549}{ParseToAST}(\hyperlink{namespacepump_a8c50cb40d65f26771c6f51eb265bb569}{StripMetaComments}(src\_text))
+826   output = Output()
+827   \hyperlink{namespacepump_ac6a714a44e28c2a19a1dfabeb9c9d4f1}{RunCode}(Env(), ast, output)
+828   \textcolor{keywordflow}{return} \hyperlink{namespacepump_a3456db8d85605892d670669c4e238cd7}{BeautifyCode}(output.string)
+829 
+830 
+\end{DoxyCode}
+\index{pump@{pump}!Eof@{Eof}}
+\index{Eof@{Eof}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Eof()}{Eof()}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Eof (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a38844b22bd5a51c098b07c2c36c5c5b3}{}\label{namespacepump_a38844b22bd5a51c098b07c2c36c5c5b3}
+\begin{DoxyVerb}Returns the special cursor to denote the end-of-file.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+132 \textcolor{keyword}{def }\hyperlink{namespacepump_a38844b22bd5a51c098b07c2c36c5c5b3}{Eof}():
+133   \textcolor{stringliteral}{"""Returns the special cursor to denote the end-of-file."""}
+134   \textcolor{keywordflow}{return} Cursor(-1, -1)
+135 
+136 
+\end{DoxyCode}
+\index{pump@{pump}!Find\+First@{Find\+First}}
+\index{Find\+First@{Find\+First}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Find\+First(lines, token\+\_\+table, cursor)}{FindFirst(lines, token_table, cursor)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Find\+First (
+\begin{DoxyParamCaption}
+\item[{}]{lines, }
+\item[{}]{token\+\_\+table, }
+\item[{}]{cursor}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a08f2d05c192d11a134c008287bafef07}{}\label{namespacepump_a08f2d05c192d11a134c008287bafef07}
+\begin{DoxyVerb}Finds the first occurrence of any string in strings in lines.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+186 \textcolor{keyword}{def }\hyperlink{namespacepump_a08f2d05c192d11a134c008287bafef07}{FindFirst}(lines, token\_table, cursor):
+187   \textcolor{stringliteral}{"""Finds the first occurrence of any string in strings in lines."""}
+188 
+189   start = cursor.Clone()
+190   cur\_line\_number = cursor.line
+191   \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} lines[start.line:]:
+192     \textcolor{keywordflow}{if} cur\_line\_number == start.line:
+193       line = line[start.column:]
+194     m = \hyperlink{namespacepump_af9f92ec64fe45399c7e051115a107ee7}{FindFirstInLine}(line, token\_table)
+195     \textcolor{keywordflow}{if} m:
+196       \textcolor{comment}{# We found a regex in line.}
+197       (start\_column, length, token\_type) = m
+198       \textcolor{keywordflow}{if} cur\_line\_number == start.line:
+199         start\_column += start.column
+200       found\_start = Cursor(cur\_line\_number, start\_column)
+201       found\_end = found\_start + length
+202       \textcolor{keywordflow}{return} \hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{MakeToken}(lines, found\_start, found\_end, token\_type)
+203     cur\_line\_number += 1
+204   \textcolor{comment}{# We failed to find str in lines}
+205   \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+206 
+207 
+\end{DoxyCode}
+\index{pump@{pump}!Find\+First\+In\+Line@{Find\+First\+In\+Line}}
+\index{Find\+First\+In\+Line@{Find\+First\+In\+Line}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Find\+First\+In\+Line(line, token\+\_\+table)}{FindFirstInLine(line, token_table)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Find\+First\+In\+Line (
+\begin{DoxyParamCaption}
+\item[{}]{line, }
+\item[{}]{token\+\_\+table}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_af9f92ec64fe45399c7e051115a107ee7}{}\label{namespacepump_af9f92ec64fe45399c7e051115a107ee7}
+
+\begin{DoxyCode}
+169 \textcolor{keyword}{def }\hyperlink{namespacepump_af9f92ec64fe45399c7e051115a107ee7}{FindFirstInLine}(line, token\_table):
+170   best\_match\_start = -1
+171   \textcolor{keywordflow}{for} (regex, token\_type) \textcolor{keywordflow}{in} token\_table:
+172     m = regex.search(line)
+173     \textcolor{keywordflow}{if} m:
+174       \textcolor{comment}{# We found regex in lines}
+175       \textcolor{keywordflow}{if} best\_match\_start < 0 \textcolor{keywordflow}{or} m.start() < best\_match\_start:
+176         best\_match\_start = m.start()
+177         best\_match\_length = m.end() - m.start()
+178         best\_match\_token\_type = token\_type
+179 
+180   \textcolor{keywordflow}{if} best\_match\_start < 0:
+181     \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+182 
+183   \textcolor{keywordflow}{return} (best\_match\_start, best\_match\_length, best\_match\_token\_type)
+184 
+185 
+\end{DoxyCode}
+\index{pump@{pump}!Is\+Header\+Guard\+Include\+Or\+One\+Line\+I\+W\+Y\+U\+Pragma@{Is\+Header\+Guard\+Include\+Or\+One\+Line\+I\+W\+Y\+U\+Pragma}}
+\index{Is\+Header\+Guard\+Include\+Or\+One\+Line\+I\+W\+Y\+U\+Pragma@{Is\+Header\+Guard\+Include\+Or\+One\+Line\+I\+W\+Y\+U\+Pragma}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Is\+Header\+Guard\+Include\+Or\+One\+Line\+I\+W\+Y\+U\+Pragma(line)}{IsHeaderGuardIncludeOrOneLineIWYUPragma(line)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Is\+Header\+Guard\+Include\+Or\+One\+Line\+I\+W\+Y\+U\+Pragma (
+\begin{DoxyParamCaption}
+\item[{}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_ac8a553b60dc83d100361a0e98d98451b}{}\label{namespacepump_ac8a553b60dc83d100361a0e98d98451b}
+
+\begin{DoxyCode}
+783 \textcolor{keyword}{def }\hyperlink{namespacepump_ac8a553b60dc83d100361a0e98d98451b}{IsHeaderGuardIncludeOrOneLineIWYUPragma}(line):
+784   \textcolor{keywordflow}{return} (re.match(\textcolor{stringliteral}{r'^#(ifndef|define|endif\(\backslash\)s*//)\(\backslash\)s*[\(\backslash\)w\_]+\(\backslash\)s*$'}, line) \textcolor{keywordflow}{or}
+785           re.match(\textcolor{stringliteral}{r'^#include\(\backslash\)s'}, line) \textcolor{keywordflow}{or}
+786           \textcolor{comment}{# Don't break IWYU pragmas, either; that causes iwyu.py problems.}
+787           re.search(\textcolor{stringliteral}{r'// IWYU pragma: '}, line))
+788 
+789 
+\end{DoxyCode}
+\index{pump@{pump}!Is\+In\+Preprocessor\+Directive@{Is\+In\+Preprocessor\+Directive}}
+\index{Is\+In\+Preprocessor\+Directive@{Is\+In\+Preprocessor\+Directive}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Is\+In\+Preprocessor\+Directive(prev\+\_\+lines, cur\+\_\+line)}{IsInPreprocessorDirective(prev_lines, cur_line)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Is\+In\+Preprocessor\+Directive (
+\begin{DoxyParamCaption}
+\item[{}]{prev\+\_\+lines, }
+\item[{}]{cur\+\_\+line}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_aa33101b01d5781710262f3b5dadd8bc8}{}\label{namespacepump_aa33101b01d5781710262f3b5dadd8bc8}
+
+\begin{DoxyCode}
+711 \textcolor{keyword}{def }\hyperlink{namespacepump_aa33101b01d5781710262f3b5dadd8bc8}{IsInPreprocessorDirective}(prev\_lines, cur\_line):
+712   \textcolor{keywordflow}{if} cur\_line.lstrip().startswith(\textcolor{stringliteral}{'#'}):
+713     \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+714   \textcolor{keywordflow}{return} prev\_lines \textcolor{keywordflow}{and} prev\_lines[-1].endswith(\textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'})
+715 
+716 
+\end{DoxyCode}
+\index{pump@{pump}!Is\+Multi\+Line\+I\+W\+Y\+U\+Pragma@{Is\+Multi\+Line\+I\+W\+Y\+U\+Pragma}}
+\index{Is\+Multi\+Line\+I\+W\+Y\+U\+Pragma@{Is\+Multi\+Line\+I\+W\+Y\+U\+Pragma}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Is\+Multi\+Line\+I\+W\+Y\+U\+Pragma(line)}{IsMultiLineIWYUPragma(line)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Is\+Multi\+Line\+I\+W\+Y\+U\+Pragma (
+\begin{DoxyParamCaption}
+\item[{}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a707a3ff4514c89607e48a87589aed787}{}\label{namespacepump_a707a3ff4514c89607e48a87589aed787}
+
+\begin{DoxyCode}
+779 \textcolor{keyword}{def }\hyperlink{namespacepump_a707a3ff4514c89607e48a87589aed787}{IsMultiLineIWYUPragma}(line):
+780   \textcolor{keywordflow}{return} re.search(\textcolor{stringliteral}{r'/\(\backslash\)* IWYU pragma: '}, line)
+781 
+782 
+\end{DoxyCode}
+\index{pump@{pump}!Is\+Single\+Line\+Comment@{Is\+Single\+Line\+Comment}}
+\index{Is\+Single\+Line\+Comment@{Is\+Single\+Line\+Comment}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Is\+Single\+Line\+Comment(cur\+\_\+line)}{IsSingleLineComment(cur_line)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Is\+Single\+Line\+Comment (
+\begin{DoxyParamCaption}
+\item[{}]{cur\+\_\+line}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a417078b1d036b67756c47e5dc50324dc}{}\label{namespacepump_a417078b1d036b67756c47e5dc50324dc}
+
+\begin{DoxyCode}
+707 \textcolor{keyword}{def }\hyperlink{namespacepump_a417078b1d036b67756c47e5dc50324dc}{IsSingleLineComment}(cur\_line):
+708   \textcolor{keywordflow}{return} \textcolor{stringliteral}{'//'} \textcolor{keywordflow}{in} cur\_line
+709 
+710 
+\end{DoxyCode}
+\index{pump@{pump}!main@{main}}
+\index{main@{main}!pump@{pump}}
+\subsubsection[{\texorpdfstring{main(argv)}{main(argv)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+main (
+\begin{DoxyParamCaption}
+\item[{}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_abcf26971f7bdbad77c2c168c110312df}{}\label{namespacepump_abcf26971f7bdbad77c2c168c110312df}
+
+\begin{DoxyCode}
+831 \textcolor{keyword}{def }\hyperlink{namespacepump_abcf26971f7bdbad77c2c168c110312df}{main}(argv):
+832   \textcolor{keywordflow}{if} len(argv) == 1:
+833     \textcolor{keywordflow}{print} \_\_doc\_\_
+834     sys.exit(1)
+835 
+836   file\_path = argv[-1]
+837   output\_str = \hyperlink{namespacepump_a568fe53d1443489ac15bac4a0f9faf91}{ConvertFromPumpSource}(file(file\_path, \textcolor{stringliteral}{'r').read())}
+838 \textcolor{stringliteral}{  }\textcolor{keywordflow}{if} file\_path.endswith(\textcolor{stringliteral}{'.pump'}):
+839     output\_file\_path = file\_path[:-5]
+840   \textcolor{keywordflow}{else}:
+841     output\_file\_path = \textcolor{stringliteral}{'-'}
+842   \textcolor{keywordflow}{if} output\_file\_path == \textcolor{stringliteral}{'-'}:
+843     \textcolor{keywordflow}{print} output\_str,
+844   \textcolor{keywordflow}{else}:
+845     output\_file = file(output\_file\_path, \textcolor{stringliteral}{'w'})
+846     output\_file.write(\textcolor{stringliteral}{'// This file was GENERATED by command:\(\backslash\)n'})
+847     output\_file.write(\textcolor{stringliteral}{'//     %s %s\(\backslash\)n'} %
+848                       (os.path.basename(\_\_file\_\_), os.path.basename(file\_path)))
+849     output\_file.write(\textcolor{stringliteral}{'// DO NOT EDIT BY HAND!!!\(\backslash\)n\(\backslash\)n'})
+850     output\_file.write(output\_str)
+851     output\_file.close()
+852 
+853 
+\end{DoxyCode}
+\index{pump@{pump}!Make\+Token@{Make\+Token}}
+\index{Make\+Token@{Make\+Token}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Make\+Token(lines, start, end, token\+\_\+type)}{MakeToken(lines, start, end, token_type)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Make\+Token (
+\begin{DoxyParamCaption}
+\item[{}]{lines, }
+\item[{}]{start, }
+\item[{}]{end, }
+\item[{}]{token\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{}\label{namespacepump_af96d60dc97b160f3a18e63857aabeef7}
+\begin{DoxyVerb}Creates a new instance of Token.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+237 \textcolor{keyword}{def }\hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{MakeToken}(lines, start, end, token\_type):
+238   \textcolor{stringliteral}{"""Creates a new instance of Token."""}
+239 
+240   \textcolor{keywordflow}{return} Token(start, end, \hyperlink{namespacepump_a859edb180cfc24c24fabcfb4f2bedf9e}{SubString}(lines, start, end), token\_type)
+241 
+242 
+\end{DoxyCode}
+\index{pump@{pump}!Parse\+Atomic\+Code\+Node@{Parse\+Atomic\+Code\+Node}}
+\index{Parse\+Atomic\+Code\+Node@{Parse\+Atomic\+Code\+Node}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Parse\+Atomic\+Code\+Node(tokens)}{ParseAtomicCodeNode(tokens)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Parse\+Atomic\+Code\+Node (
+\begin{DoxyParamCaption}
+\item[{}]{tokens}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a5532710f334f026f80fc485decf5078e}{}\label{namespacepump_a5532710f334f026f80fc485decf5078e}
+
+\begin{DoxyCode}
+503 \textcolor{keyword}{def }\hyperlink{namespacepump_a5532710f334f026f80fc485decf5078e}{ParseAtomicCodeNode}(tokens):
+504   \textcolor{keyword}{def }Pop(token\_type=None):
+505     \textcolor{keywordflow}{return} \hyperlink{namespacepump_a45e1d5d5c1c188fc53eee8bd1e00e6b0}{PopToken}(tokens, token\_type)
+506 
+507   head = \hyperlink{namespacepump_a8e2ff118da88397e88ccf68ebcd2df79}{PopFront}(tokens)
+508   t = head.token\_type
+509   \textcolor{keywordflow}{if} t == \textcolor{stringliteral}{'code'}:
+510     \textcolor{keywordflow}{return} RawCodeNode(head)
+511   \textcolor{keywordflow}{elif} t == \textcolor{stringliteral}{'$var'}:
+512     id\_token = Pop(\textcolor{stringliteral}{'id'})
+513     Pop(\textcolor{stringliteral}{'='})
+514     next = \hyperlink{namespacepump_ab12085e099ab4bd0cd968efdc435ec31}{PeekToken}(tokens)
+515     \textcolor{keywordflow}{if} next.token\_type == \textcolor{stringliteral}{'exp'}:
+516       exp\_token = Pop()
+517       \textcolor{keywordflow}{return} VarNode(id\_token, \hyperlink{namespacepump_af62b08489d90e69d0577e82c98383ba7}{ParseExpNode}(exp\_token))
+518     Pop(\textcolor{stringliteral}{'[['})
+519     code\_node = \hyperlink{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{ParseCodeNode}(tokens)
+520     Pop(\textcolor{stringliteral}{']]'})
+521     \textcolor{keywordflow}{return} VarNode(id\_token, code\_node)
+522   \textcolor{keywordflow}{elif} t == \textcolor{stringliteral}{'$for'}:
+523     id\_token = Pop(\textcolor{stringliteral}{'id'})
+524     next\_token = \hyperlink{namespacepump_ab12085e099ab4bd0cd968efdc435ec31}{PeekToken}(tokens)
+525     \textcolor{keywordflow}{if} next\_token.token\_type == \textcolor{stringliteral}{'code'}:
+526       sep\_token = next\_token
+527       Pop(\textcolor{stringliteral}{'code'})
+528     \textcolor{keywordflow}{else}:
+529       sep\_token = \textcolor{keywordtype}{None}
+530     Pop(\textcolor{stringliteral}{'[['})
+531     code\_node = \hyperlink{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{ParseCodeNode}(tokens)
+532     Pop(\textcolor{stringliteral}{']]'})
+533     \textcolor{keywordflow}{return} ForNode(id\_token, sep\_token, code\_node)
+534   \textcolor{keywordflow}{elif} t == \textcolor{stringliteral}{'$if'}:
+535     exp\_token = Pop(\textcolor{stringliteral}{'code'})
+536     Pop(\textcolor{stringliteral}{'[['})
+537     code\_node = \hyperlink{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{ParseCodeNode}(tokens)
+538     Pop(\textcolor{stringliteral}{']]'})
+539     else\_node = \hyperlink{namespacepump_ae40493525a993e81929c6905e329a406}{ParseElseNode}(tokens)
+540     \textcolor{keywordflow}{return} IfNode(\hyperlink{namespacepump_af62b08489d90e69d0577e82c98383ba7}{ParseExpNode}(exp\_token), code\_node, else\_node)
+541   \textcolor{keywordflow}{elif} t == \textcolor{stringliteral}{'$range'}:
+542     id\_token = Pop(\textcolor{stringliteral}{'id'})
+543     exp1\_token = Pop(\textcolor{stringliteral}{'exp'})
+544     Pop(\textcolor{stringliteral}{'..'})
+545     exp2\_token = Pop(\textcolor{stringliteral}{'exp'})
+546     \textcolor{keywordflow}{return} RangeNode(id\_token, \hyperlink{namespacepump_af62b08489d90e69d0577e82c98383ba7}{ParseExpNode}(exp1\_token),
+547                      \hyperlink{namespacepump_af62b08489d90e69d0577e82c98383ba7}{ParseExpNode}(exp2\_token))
+548   \textcolor{keywordflow}{elif} t == \textcolor{stringliteral}{'$id'}:
+549     \textcolor{keywordflow}{return} \hyperlink{namespacepump_af62b08489d90e69d0577e82c98383ba7}{ParseExpNode}(Token(head.start + 1, head.end, head.value[1:], \textcolor{stringliteral}{'id'}))
+550   \textcolor{keywordflow}{elif} t == \textcolor{stringliteral}{'$($)'}:
+551     \textcolor{keywordflow}{return} LiteralDollarNode(head)
+552   \textcolor{keywordflow}{elif} t == \textcolor{stringliteral}{'$'}:
+553     exp\_token = Pop(\textcolor{stringliteral}{'exp'})
+554     \textcolor{keywordflow}{return} \hyperlink{namespacepump_af62b08489d90e69d0577e82c98383ba7}{ParseExpNode}(exp\_token)
+555   \textcolor{keywordflow}{elif} t == \textcolor{stringliteral}{'[['}:
+556     code\_node = \hyperlink{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{ParseCodeNode}(tokens)
+557     Pop(\textcolor{stringliteral}{']]'})
+558     \textcolor{keywordflow}{return} code\_node
+559   \textcolor{keywordflow}{else}:
+560     \hyperlink{namespacepump_a12c70577eb727526ac0ad17bf3b6c3a4}{PushFront}(tokens, head)
+561     \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+562 
+563 
+\end{DoxyCode}
+\index{pump@{pump}!Parse\+Code\+Node@{Parse\+Code\+Node}}
+\index{Parse\+Code\+Node@{Parse\+Code\+Node}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Parse\+Code\+Node(tokens)}{ParseCodeNode(tokens)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Parse\+Code\+Node (
+\begin{DoxyParamCaption}
+\item[{}]{tokens}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{}\label{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}
+
+\begin{DoxyCode}
+564 \textcolor{keyword}{def }\hyperlink{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{ParseCodeNode}(tokens):
+565   atomic\_code\_list = []
+566   \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+567     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} tokens:
+568       \textcolor{keywordflow}{break}
+569     atomic\_code\_node = \hyperlink{namespacepump_a5532710f334f026f80fc485decf5078e}{ParseAtomicCodeNode}(tokens)
+570     \textcolor{keywordflow}{if} atomic\_code\_node:
+571       atomic\_code\_list.append(atomic\_code\_node)
+572     \textcolor{keywordflow}{else}:
+573       \textcolor{keywordflow}{break}
+574   \textcolor{keywordflow}{return} CodeNode(atomic\_code\_list)
+575 
+576 
+\end{DoxyCode}
+\index{pump@{pump}!Parse\+Else\+Node@{Parse\+Else\+Node}}
+\index{Parse\+Else\+Node@{Parse\+Else\+Node}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Parse\+Else\+Node(tokens)}{ParseElseNode(tokens)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Parse\+Else\+Node (
+\begin{DoxyParamCaption}
+\item[{}]{tokens}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_ae40493525a993e81929c6905e329a406}{}\label{namespacepump_ae40493525a993e81929c6905e329a406}
+
+\begin{DoxyCode}
+475 \textcolor{keyword}{def }\hyperlink{namespacepump_ae40493525a993e81929c6905e329a406}{ParseElseNode}(tokens):
+476   \textcolor{keyword}{def }Pop(token\_type=None):
+477     \textcolor{keywordflow}{return} \hyperlink{namespacepump_a45e1d5d5c1c188fc53eee8bd1e00e6b0}{PopToken}(tokens, token\_type)
+478 
+479   next = \hyperlink{namespacepump_ab12085e099ab4bd0cd968efdc435ec31}{PeekToken}(tokens)
+480   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} next:
+481     \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+482   \textcolor{keywordflow}{if} next.token\_type == \textcolor{stringliteral}{'$else'}:
+483     Pop(\textcolor{stringliteral}{'$else'})
+484     Pop(\textcolor{stringliteral}{'[['})
+485     code\_node = \hyperlink{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{ParseCodeNode}(tokens)
+486     Pop(\textcolor{stringliteral}{']]'})
+487     \textcolor{keywordflow}{return} code\_node
+488   \textcolor{keywordflow}{elif} next.token\_type == \textcolor{stringliteral}{'$elif'}:
+489     Pop(\textcolor{stringliteral}{'$elif'})
+490     exp = Pop(\textcolor{stringliteral}{'code'})
+491     Pop(\textcolor{stringliteral}{'[['})
+492     code\_node = \hyperlink{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{ParseCodeNode}(tokens)
+493     Pop(\textcolor{stringliteral}{']]'})
+494     inner\_else\_node = \hyperlink{namespacepump_ae40493525a993e81929c6905e329a406}{ParseElseNode}(tokens)
+495     \textcolor{keywordflow}{return} CodeNode([IfNode(\hyperlink{namespacepump_af62b08489d90e69d0577e82c98383ba7}{ParseExpNode}(exp), code\_node, inner\_else\_node)])
+496   \textcolor{keywordflow}{elif} \textcolor{keywordflow}{not} next.value.strip():
+497     Pop(\textcolor{stringliteral}{'code'})
+498     \textcolor{keywordflow}{return} \hyperlink{namespacepump_ae40493525a993e81929c6905e329a406}{ParseElseNode}(tokens)
+499   \textcolor{keywordflow}{else}:
+500     \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+501 
+502 
+\end{DoxyCode}
+\index{pump@{pump}!Parse\+Exp\+Node@{Parse\+Exp\+Node}}
+\index{Parse\+Exp\+Node@{Parse\+Exp\+Node}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Parse\+Exp\+Node(token)}{ParseExpNode(token)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Parse\+Exp\+Node (
+\begin{DoxyParamCaption}
+\item[{}]{token}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_af62b08489d90e69d0577e82c98383ba7}{}\label{namespacepump_af62b08489d90e69d0577e82c98383ba7}
+
+\begin{DoxyCode}
+470 \textcolor{keyword}{def }\hyperlink{namespacepump_af62b08489d90e69d0577e82c98383ba7}{ParseExpNode}(token):
+471   python\_exp = re.sub(\textcolor{stringliteral}{r'([\_A-Za-z]\(\backslash\)w*)'}, \textcolor{stringliteral}{r'self.GetValue("\(\backslash\)1")'}, token.value)
+472   \textcolor{keywordflow}{return} ExpNode(token, python\_exp)
+473 
+474 
+\end{DoxyCode}
+\index{pump@{pump}!Parse\+Exp\+Token\+In\+Parens@{Parse\+Exp\+Token\+In\+Parens}}
+\index{Parse\+Exp\+Token\+In\+Parens@{Parse\+Exp\+Token\+In\+Parens}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Parse\+Exp\+Token\+In\+Parens(lines, pos)}{ParseExpTokenInParens(lines, pos)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Parse\+Exp\+Token\+In\+Parens (
+\begin{DoxyParamCaption}
+\item[{}]{lines, }
+\item[{}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_ae094486db14ecec9347129c5f230042d}{}\label{namespacepump_ae094486db14ecec9347129c5f230042d}
+
+\begin{DoxyCode}
+281 \textcolor{keyword}{def }\hyperlink{namespacepump_ae094486db14ecec9347129c5f230042d}{ParseExpTokenInParens}(lines, pos):
+282   \textcolor{keyword}{def }ParseInParens(pos):
+283     pos = \hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip}(lines, pos, OPTIONAL\_WHITE\_SPACES\_REGEX)
+284     pos = \hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip}(lines, pos, \textcolor{stringliteral}{r'\(\backslash\)('})
+285     pos = Parse(pos)
+286     pos = \hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip}(lines, pos, \textcolor{stringliteral}{r'\(\backslash\))'})
+287     \textcolor{keywordflow}{return} pos
+288 
+289   \textcolor{keyword}{def }Parse(pos):
+290     pos = \hyperlink{namespacepump_a8935d04d89047866b07c59845e2d7d29}{SkipUntil}(lines, pos, \textcolor{stringliteral}{r'\(\backslash\)(|\(\backslash\))'}, \textcolor{stringliteral}{')'})
+291     \textcolor{keywordflow}{if} \hyperlink{namespacepump_a859edb180cfc24c24fabcfb4f2bedf9e}{SubString}(lines, pos, pos + 1) == \textcolor{stringliteral}{'('}:
+292       pos = Parse(pos + 1)
+293       pos = \hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip}(lines, pos, \textcolor{stringliteral}{r'\(\backslash\))'})
+294       \textcolor{keywordflow}{return} Parse(pos)
+295     \textcolor{keywordflow}{else}:
+296       \textcolor{keywordflow}{return} pos
+297 
+298   start = pos.Clone()
+299   pos = ParseInParens(pos)
+300   \textcolor{keywordflow}{return} \hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{MakeToken}(lines, start, pos, \textcolor{stringliteral}{'exp'})
+301 
+302 
+\end{DoxyCode}
+\index{pump@{pump}!Parse\+To\+A\+ST@{Parse\+To\+A\+ST}}
+\index{Parse\+To\+A\+ST@{Parse\+To\+A\+ST}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Parse\+To\+A\+S\+T(pump\+\_\+src\+\_\+text)}{ParseToAST(pump_src_text)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Parse\+To\+A\+ST (
+\begin{DoxyParamCaption}
+\item[{}]{pump\+\_\+src\+\_\+text}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a56ac10a83a3a875d305c9aae71fc0549}{}\label{namespacepump_a56ac10a83a3a875d305c9aae71fc0549}
+\begin{DoxyVerb}Convert the given Pump source text into an AST.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+577 \textcolor{keyword}{def }\hyperlink{namespacepump_a56ac10a83a3a875d305c9aae71fc0549}{ParseToAST}(pump\_src\_text):
+578   \textcolor{stringliteral}{"""Convert the given Pump source text into an AST."""}
+579   tokens = list(\hyperlink{namespacepump_aa42c23b1c914c0f86a94f2fa32999905}{Tokenize}(pump\_src\_text))
+580   code\_node = \hyperlink{namespacepump_aabbc064b8664abbe05618b3a0f5a6c38}{ParseCodeNode}(tokens)
+581   \textcolor{keywordflow}{return} code\_node
+582 
+583 
+\end{DoxyCode}
+\index{pump@{pump}!Parse\+Token@{Parse\+Token}}
+\index{Parse\+Token@{Parse\+Token}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Parse\+Token(lines, pos, regex, token\+\_\+type)}{ParseToken(lines, pos, regex, token_type)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Parse\+Token (
+\begin{DoxyParamCaption}
+\item[{}]{lines, }
+\item[{}]{pos, }
+\item[{}]{regex, }
+\item[{}]{token\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a23761d99dd43d642e94d845218573035}{}\label{namespacepump_a23761d99dd43d642e94d845218573035}
+
+\begin{DoxyCode}
+243 \textcolor{keyword}{def }\hyperlink{namespacepump_a23761d99dd43d642e94d845218573035}{ParseToken}(lines, pos, regex, token\_type):
+244   line = lines[pos.line][pos.column:]
+245   m = regex.search(line)
+246   \textcolor{keywordflow}{if} m \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} m.start():
+247     \textcolor{keywordflow}{return} \hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{MakeToken}(lines, pos, pos + m.end(), token\_type)
+248   \textcolor{keywordflow}{else}:
+249     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'ERROR: %s expected at %s.'} % (token\_type, pos)
+250     sys.exit(1)
+251 
+252 
+\end{DoxyCode}
+\index{pump@{pump}!Peek\+Token@{Peek\+Token}}
+\index{Peek\+Token@{Peek\+Token}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Peek\+Token(a\+\_\+list)}{PeekToken(a_list)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Peek\+Token (
+\begin{DoxyParamCaption}
+\item[{}]{a\+\_\+list}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_ab12085e099ab4bd0cd968efdc435ec31}{}\label{namespacepump_ab12085e099ab4bd0cd968efdc435ec31}
+
+\begin{DoxyCode}
+463 \textcolor{keyword}{def }\hyperlink{namespacepump_ab12085e099ab4bd0cd968efdc435ec31}{PeekToken}(a\_list):
+464   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} a\_list:
+465     \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+466 
+467   \textcolor{keywordflow}{return} a\_list[0]
+468 
+469 
+\end{DoxyCode}
+\index{pump@{pump}!Pop\+Front@{Pop\+Front}}
+\index{Pop\+Front@{Pop\+Front}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Pop\+Front(a\+\_\+list)}{PopFront(a_list)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Pop\+Front (
+\begin{DoxyParamCaption}
+\item[{}]{a\+\_\+list}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a8e2ff118da88397e88ccf68ebcd2df79}{}\label{namespacepump_a8e2ff118da88397e88ccf68ebcd2df79}
+
+\begin{DoxyCode}
+443 \textcolor{keyword}{def }\hyperlink{namespacepump_a8e2ff118da88397e88ccf68ebcd2df79}{PopFront}(a\_list):
+444   head = a\_list[0]
+445   a\_list[:1] = []
+446   \textcolor{keywordflow}{return} head
+447 
+448 
+\end{DoxyCode}
+\index{pump@{pump}!Pop\+Token@{Pop\+Token}}
+\index{Pop\+Token@{Pop\+Token}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Pop\+Token(a\+\_\+list, token\+\_\+type=\+None)}{PopToken(a_list, token_type=None)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Pop\+Token (
+\begin{DoxyParamCaption}
+\item[{}]{a\+\_\+list, }
+\item[{}]{token\+\_\+type = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a45e1d5d5c1c188fc53eee8bd1e00e6b0}{}\label{namespacepump_a45e1d5d5c1c188fc53eee8bd1e00e6b0}
+
+\begin{DoxyCode}
+453 \textcolor{keyword}{def }\hyperlink{namespacepump_a45e1d5d5c1c188fc53eee8bd1e00e6b0}{PopToken}(a\_list, token\_type=None):
+454   token = \hyperlink{namespacepump_a8e2ff118da88397e88ccf68ebcd2df79}{PopFront}(a\_list)
+455   \textcolor{keywordflow}{if} token\_type \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None} \textcolor{keywordflow}{and} token.token\_type != token\_type:
+456     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'ERROR: %s expected at %s'} % (token\_type, token.start)
+457     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'ERROR: %s found instead'} % (token,)
+458     sys.exit(1)
+459 
+460   \textcolor{keywordflow}{return} token
+461 
+462 
+\end{DoxyCode}
+\index{pump@{pump}!Push\+Front@{Push\+Front}}
+\index{Push\+Front@{Push\+Front}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Push\+Front(a\+\_\+list, elem)}{PushFront(a_list, elem)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Push\+Front (
+\begin{DoxyParamCaption}
+\item[{}]{a\+\_\+list, }
+\item[{}]{elem}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a12c70577eb727526ac0ad17bf3b6c3a4}{}\label{namespacepump_a12c70577eb727526ac0ad17bf3b6c3a4}
+
+\begin{DoxyCode}
+449 \textcolor{keyword}{def }\hyperlink{namespacepump_a12c70577eb727526ac0ad17bf3b6c3a4}{PushFront}(a\_list, elem):
+450   a\_list[:0] = [elem]
+451 
+452 
+\end{DoxyCode}
+\index{pump@{pump}!R\+Strip\+New\+Line\+From\+Token@{R\+Strip\+New\+Line\+From\+Token}}
+\index{R\+Strip\+New\+Line\+From\+Token@{R\+Strip\+New\+Line\+From\+Token}!pump@{pump}}
+\subsubsection[{\texorpdfstring{R\+Strip\+New\+Line\+From\+Token(token)}{RStripNewLineFromToken(token)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+R\+Strip\+New\+Line\+From\+Token (
+\begin{DoxyParamCaption}
+\item[{}]{token}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_ae07150d94399cbe1661abe5929f921e0}{}\label{namespacepump_ae07150d94399cbe1661abe5929f921e0}
+
+\begin{DoxyCode}
+303 \textcolor{keyword}{def }\hyperlink{namespacepump_ae07150d94399cbe1661abe5929f921e0}{RStripNewLineFromToken}(token):
+304   \textcolor{keywordflow}{if} token.value.endswith(\textcolor{stringliteral}{'\(\backslash\)n'}):
+305     \textcolor{keywordflow}{return} Token(token.start, token.end, token.value[:-1], token.token\_type)
+306   \textcolor{keywordflow}{else}:
+307     \textcolor{keywordflow}{return} token
+308 
+309 
+\end{DoxyCode}
+\index{pump@{pump}!Run\+Atomic\+Code@{Run\+Atomic\+Code}}
+\index{Run\+Atomic\+Code@{Run\+Atomic\+Code}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Run\+Atomic\+Code(env, node, output)}{RunAtomicCode(env, node, output)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Run\+Atomic\+Code (
+\begin{DoxyParamCaption}
+\item[{}]{env, }
+\item[{}]{node, }
+\item[{}]{output}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a901e6abd34691a0d779178a615cc09c1}{}\label{namespacepump_a901e6abd34691a0d779178a615cc09c1}
+
+\begin{DoxyCode}
+656 \textcolor{keyword}{def }\hyperlink{namespacepump_a901e6abd34691a0d779178a615cc09c1}{RunAtomicCode}(env, node, output):
+657   \textcolor{keywordflow}{if} isinstance(node, VarNode):
+658     identifier = node.identifier.value.strip()
+659     result = Output()
+660     \hyperlink{namespacepump_a901e6abd34691a0d779178a615cc09c1}{RunAtomicCode}(env.Clone(), node.atomic\_code, result)
+661     value = result.string
+662     env.PushVariable(identifier, value)
+663   \textcolor{keywordflow}{elif} isinstance(node, RangeNode):
+664     identifier = node.identifier.value.strip()
+665     lower = int(env.EvalExp(node.exp1))
+666     upper = int(env.EvalExp(node.exp2))
+667     env.PushRange(identifier, lower, upper)
+668   \textcolor{keywordflow}{elif} isinstance(node, ForNode):
+669     identifier = node.identifier.value.strip()
+670     \textcolor{keywordflow}{if} node.sep \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+671       sep = \textcolor{stringliteral}{''}
+672     \textcolor{keywordflow}{else}:
+673       sep = node.sep.value
+674     (lower, upper) = env.GetRange(identifier)
+675     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(lower, upper + 1):
+676       new\_env = env.Clone()
+677       new\_env.PushVariable(identifier, i)
+678       \hyperlink{namespacepump_ac6a714a44e28c2a19a1dfabeb9c9d4f1}{RunCode}(new\_env, node.code, output)
+679       \textcolor{keywordflow}{if} i != upper:
+680         output.Append(sep)
+681   \textcolor{keywordflow}{elif} isinstance(node, RawCodeNode):
+682     output.Append(node.raw\_code.value)
+683   \textcolor{keywordflow}{elif} isinstance(node, IfNode):
+684     cond = env.EvalExp(node.exp)
+685     \textcolor{keywordflow}{if} cond:
+686       \hyperlink{namespacepump_ac6a714a44e28c2a19a1dfabeb9c9d4f1}{RunCode}(env.Clone(), node.then\_branch, output)
+687     \textcolor{keywordflow}{elif} node.else\_branch \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+688       \hyperlink{namespacepump_ac6a714a44e28c2a19a1dfabeb9c9d4f1}{RunCode}(env.Clone(), node.else\_branch, output)
+689   \textcolor{keywordflow}{elif} isinstance(node, ExpNode):
+690     value = env.EvalExp(node)
+691     output.Append(\textcolor{stringliteral}{'%s'} % (value,))
+692   \textcolor{keywordflow}{elif} isinstance(node, LiteralDollarNode):
+693     output.Append(\textcolor{stringliteral}{'$'})
+694   \textcolor{keywordflow}{elif} isinstance(node, CodeNode):
+695     \hyperlink{namespacepump_ac6a714a44e28c2a19a1dfabeb9c9d4f1}{RunCode}(env.Clone(), node, output)
+696   \textcolor{keywordflow}{else}:
+697     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'BAD'}
+698     \textcolor{keywordflow}{print} node
+699     sys.exit(1)
+700 
+701 
+\end{DoxyCode}
+\index{pump@{pump}!Run\+Code@{Run\+Code}}
+\index{Run\+Code@{Run\+Code}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Run\+Code(env, code\+\_\+node, output)}{RunCode(env, code_node, output)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Run\+Code (
+\begin{DoxyParamCaption}
+\item[{}]{env, }
+\item[{}]{code\+\_\+node, }
+\item[{}]{output}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_ac6a714a44e28c2a19a1dfabeb9c9d4f1}{}\label{namespacepump_ac6a714a44e28c2a19a1dfabeb9c9d4f1}
+
+\begin{DoxyCode}
+702 \textcolor{keyword}{def }\hyperlink{namespacepump_ac6a714a44e28c2a19a1dfabeb9c9d4f1}{RunCode}(env, code\_node, output):
+703   \textcolor{keywordflow}{for} atomic\_code \textcolor{keywordflow}{in} code\_node.atomic\_code:
+704     \hyperlink{namespacepump_a901e6abd34691a0d779178a615cc09c1}{RunAtomicCode}(env, atomic\_code, output)
+705 
+706 
+\end{DoxyCode}
+\index{pump@{pump}!Skip@{Skip}}
+\index{Skip@{Skip}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Skip(lines, pos, regex)}{Skip(lines, pos, regex)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Skip (
+\begin{DoxyParamCaption}
+\item[{}]{lines, }
+\item[{}]{pos, }
+\item[{}]{regex}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{}\label{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}
+
+\begin{DoxyCode}
+261 \textcolor{keyword}{def }\hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip}(lines, pos, regex):
+262   line = lines[pos.line][pos.column:]
+263   m = re.search(regex, line)
+264   \textcolor{keywordflow}{if} m \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} m.start():
+265     \textcolor{keywordflow}{return} pos + m.end()
+266   \textcolor{keywordflow}{else}:
+267     \textcolor{keywordflow}{return} pos
+268 
+269 
+\end{DoxyCode}
+\index{pump@{pump}!Skip\+Until@{Skip\+Until}}
+\index{Skip\+Until@{Skip\+Until}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Skip\+Until(lines, pos, regex, token\+\_\+type)}{SkipUntil(lines, pos, regex, token_type)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Skip\+Until (
+\begin{DoxyParamCaption}
+\item[{}]{lines, }
+\item[{}]{pos, }
+\item[{}]{regex, }
+\item[{}]{token\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a8935d04d89047866b07c59845e2d7d29}{}\label{namespacepump_a8935d04d89047866b07c59845e2d7d29}
+
+\begin{DoxyCode}
+270 \textcolor{keyword}{def }\hyperlink{namespacepump_a8935d04d89047866b07c59845e2d7d29}{SkipUntil}(lines, pos, regex, token\_type):
+271   line = lines[pos.line][pos.column:]
+272   m = re.search(regex, line)
+273   \textcolor{keywordflow}{if} m:
+274     \textcolor{keywordflow}{return} pos + m.start()
+275   \textcolor{keywordflow}{else}:
+276     \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'ERROR: %s expected on line %s after column %s.'} %
+277            (token\_type, pos.line + 1, pos.column))
+278     sys.exit(1)
+279 
+280 
+\end{DoxyCode}
+\index{pump@{pump}!Starts\+With@{Starts\+With}}
+\index{Starts\+With@{Starts\+With}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Starts\+With(lines, pos, string)}{StartsWith(lines, pos, string)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Starts\+With (
+\begin{DoxyParamCaption}
+\item[{}]{lines, }
+\item[{}]{pos, }
+\item[{}]{string}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a9353db466a97e632058887a77c3b26aa}{}\label{namespacepump_a9353db466a97e632058887a77c3b26aa}
+\begin{DoxyVerb}Returns True iff the given position in lines starts with 'string'.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+163 \textcolor{keyword}{def }\hyperlink{namespacepump_a9353db466a97e632058887a77c3b26aa}{StartsWith}(lines, pos, string):
+164   \textcolor{stringliteral}{"""Returns True iff the given position in lines starts with 'string'."""}
+165 
+166   \textcolor{keywordflow}{return} lines[pos.line][pos.column:].startswith(string)
+167 
+168 
+\end{DoxyCode}
+\index{pump@{pump}!Strip\+Meta\+Comments@{Strip\+Meta\+Comments}}
+\index{Strip\+Meta\+Comments@{Strip\+Meta\+Comments}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Strip\+Meta\+Comments(str)}{StripMetaComments(str)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Strip\+Meta\+Comments (
+\begin{DoxyParamCaption}
+\item[{}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a8c50cb40d65f26771c6f51eb265bb569}{}\label{namespacepump_a8c50cb40d65f26771c6f51eb265bb569}
+\begin{DoxyVerb}Strip meta comments from each line in the given string.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+226 \textcolor{keyword}{def }\hyperlink{namespacepump_a8c50cb40d65f26771c6f51eb265bb569}{StripMetaComments}(str):
+227   \textcolor{stringliteral}{"""Strip meta comments from each line in the given string."""}
+228 
+229   \textcolor{comment}{# First, completely remove lines containing nothing but a meta}
+230   \textcolor{comment}{# comment, including the trailing \(\backslash\)n.}
+231   str = re.sub(\textcolor{stringliteral}{r'^\(\backslash\)s*\(\backslash\)$\(\backslash\)$.*\(\backslash\)n'}, \textcolor{stringliteral}{''}, str)
+232 
+233   \textcolor{comment}{# Then, remove meta comments from contentful lines.}
+234   \textcolor{keywordflow}{return} re.sub(\textcolor{stringliteral}{r'\(\backslash\)s*\(\backslash\)$\(\backslash\)$.*'}, \textcolor{stringliteral}{''}, str)
+235 
+236 
+\end{DoxyCode}
+\index{pump@{pump}!Sub\+String@{Sub\+String}}
+\index{Sub\+String@{Sub\+String}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Sub\+String(lines, start, end)}{SubString(lines, start, end)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Sub\+String (
+\begin{DoxyParamCaption}
+\item[{}]{lines, }
+\item[{}]{start, }
+\item[{}]{end}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a859edb180cfc24c24fabcfb4f2bedf9e}{}\label{namespacepump_a859edb180cfc24c24fabcfb4f2bedf9e}
+\begin{DoxyVerb}Returns a substring in lines.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+208 \textcolor{keyword}{def }\hyperlink{namespacepump_a859edb180cfc24c24fabcfb4f2bedf9e}{SubString}(lines, start, end):
+209   \textcolor{stringliteral}{"""Returns a substring in lines."""}
+210 
+211   \textcolor{keywordflow}{if} end == \hyperlink{namespacepump_a38844b22bd5a51c098b07c2c36c5c5b3}{Eof}():
+212     end = Cursor(len(lines) - 1, len(lines[-1]))
+213 
+214   \textcolor{keywordflow}{if} start >= end:
+215     \textcolor{keywordflow}{return} \textcolor{stringliteral}{''}
+216 
+217   \textcolor{keywordflow}{if} start.line == end.line:
+218     \textcolor{keywordflow}{return} lines[start.line][start.column:end.column]
+219 
+220   result\_lines = ([lines[start.line][start.column:]] +
+221                   lines[start.line + 1:end.line] +
+222                   [lines[end.line][:end.column]])
+223   \textcolor{keywordflow}{return} \textcolor{stringliteral}{''}.join(result\_lines)
+224 
+225 
+\end{DoxyCode}
+\index{pump@{pump}!Tokenize@{Tokenize}}
+\index{Tokenize@{Tokenize}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Tokenize(s)}{Tokenize(s)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Tokenize (
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_aa42c23b1c914c0f86a94f2fa32999905}{}\label{namespacepump_aa42c23b1c914c0f86a94f2fa32999905}
+\begin{DoxyVerb}A generator that yields the tokens in the given string.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+382 \textcolor{keyword}{def }\hyperlink{namespacepump_aa42c23b1c914c0f86a94f2fa32999905}{Tokenize}(s):
+383   \textcolor{stringliteral}{"""A generator that yields the tokens in the given string."""}
+384   \textcolor{keywordflow}{if} s != \textcolor{stringliteral}{''}:
+385     lines = s.splitlines(\textcolor{keyword}{True})
+386     \textcolor{keywordflow}{for} token \textcolor{keywordflow}{in} \hyperlink{namespacepump_aa383d59e8e2a9507a576fd4c6b68b6b7}{TokenizeLines}(lines, Cursor(0, 0)):
+387       \textcolor{keywordflow}{yield} token
+388 
+389 
+\end{DoxyCode}
+\index{pump@{pump}!Tokenize\+Lines@{Tokenize\+Lines}}
+\index{Tokenize\+Lines@{Tokenize\+Lines}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Tokenize\+Lines(lines, pos)}{TokenizeLines(lines, pos)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Tokenize\+Lines (
+\begin{DoxyParamCaption}
+\item[{}]{lines, }
+\item[{}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_aa383d59e8e2a9507a576fd4c6b68b6b7}{}\label{namespacepump_aa383d59e8e2a9507a576fd4c6b68b6b7}
+
+\begin{DoxyCode}
+310 \textcolor{keyword}{def }\hyperlink{namespacepump_aa383d59e8e2a9507a576fd4c6b68b6b7}{TokenizeLines}(lines, pos):
+311   \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+312     found = \hyperlink{namespacepump_a08f2d05c192d11a134c008287bafef07}{FindFirst}(lines, TOKEN\_TABLE, pos)
+313     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} found:
+314       \textcolor{keywordflow}{yield} \hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{MakeToken}(lines, pos, \hyperlink{namespacepump_a38844b22bd5a51c098b07c2c36c5c5b3}{Eof}(), \textcolor{stringliteral}{'code'})
+315       \textcolor{keywordflow}{return}
+316 
+317     \textcolor{keywordflow}{if} found.start == pos:
+318       prev\_token = \textcolor{keywordtype}{None}
+319       prev\_token\_rstripped = \textcolor{keywordtype}{None}
+320     \textcolor{keywordflow}{else}:
+321       prev\_token = \hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{MakeToken}(lines, pos, found.start, \textcolor{stringliteral}{'code'})
+322       prev\_token\_rstripped = \hyperlink{namespacepump_ae07150d94399cbe1661abe5929f921e0}{RStripNewLineFromToken}(prev\_token)
+323 
+324     \textcolor{keywordflow}{if} found.token\_type == \textcolor{stringliteral}{'$var'}:
+325       \textcolor{keywordflow}{if} prev\_token\_rstripped:
+326         \textcolor{keywordflow}{yield} prev\_token\_rstripped
+327       \textcolor{keywordflow}{yield} found
+328       id\_token = \hyperlink{namespacepump_a23761d99dd43d642e94d845218573035}{ParseToken}(lines, found.end, ID\_REGEX, \textcolor{stringliteral}{'id'})
+329       \textcolor{keywordflow}{yield} id\_token
+330       pos = \hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip}(lines, id\_token.end, OPTIONAL\_WHITE\_SPACES\_REGEX)
+331 
+332       eq\_token = \hyperlink{namespacepump_a23761d99dd43d642e94d845218573035}{ParseToken}(lines, pos, EQ\_REGEX, \textcolor{stringliteral}{'='})
+333       \textcolor{keywordflow}{yield} eq\_token
+334       pos = \hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip}(lines, eq\_token.end, \textcolor{stringliteral}{r'\(\backslash\)s*'})
+335 
+336       \textcolor{keywordflow}{if} \hyperlink{namespacepump_a859edb180cfc24c24fabcfb4f2bedf9e}{SubString}(lines, pos, pos + 2) != \textcolor{stringliteral}{'[['}:
+337         exp\_token = \hyperlink{namespacepump_a23761d99dd43d642e94d845218573035}{ParseToken}(lines, pos, REST\_OF\_LINE\_REGEX, \textcolor{stringliteral}{'exp'})
+338         \textcolor{keywordflow}{yield} exp\_token
+339         pos = Cursor(exp\_token.end.line + 1, 0)
+340     \textcolor{keywordflow}{elif} found.token\_type == \textcolor{stringliteral}{'$for'}:
+341       \textcolor{keywordflow}{if} prev\_token\_rstripped:
+342         \textcolor{keywordflow}{yield} prev\_token\_rstripped
+343       \textcolor{keywordflow}{yield} found
+344       id\_token = \hyperlink{namespacepump_a23761d99dd43d642e94d845218573035}{ParseToken}(lines, found.end, ID\_REGEX, \textcolor{stringliteral}{'id'})
+345       \textcolor{keywordflow}{yield} id\_token
+346       pos = \hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip}(lines, id\_token.end, WHITE\_SPACE\_REGEX)
+347     \textcolor{keywordflow}{elif} found.token\_type == \textcolor{stringliteral}{'$range'}:
+348       \textcolor{keywordflow}{if} prev\_token\_rstripped:
+349         \textcolor{keywordflow}{yield} prev\_token\_rstripped
+350       \textcolor{keywordflow}{yield} found
+351       id\_token = \hyperlink{namespacepump_a23761d99dd43d642e94d845218573035}{ParseToken}(lines, found.end, ID\_REGEX, \textcolor{stringliteral}{'id'})
+352       \textcolor{keywordflow}{yield} id\_token
+353       pos = \hyperlink{namespacepump_a869bd8932d9ee97f3a0e789abd05d590}{Skip}(lines, id\_token.end, OPTIONAL\_WHITE\_SPACES\_REGEX)
+354 
+355       dots\_pos = \hyperlink{namespacepump_a8935d04d89047866b07c59845e2d7d29}{SkipUntil}(lines, pos, DOT\_DOT\_REGEX, \textcolor{stringliteral}{'..'})
+356       \textcolor{keywordflow}{yield} \hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{MakeToken}(lines, pos, dots\_pos, \textcolor{stringliteral}{'exp'})
+357       \textcolor{keywordflow}{yield} \hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{MakeToken}(lines, dots\_pos, dots\_pos + 2, \textcolor{stringliteral}{'..'})
+358       pos = dots\_pos + 2
+359       new\_pos = Cursor(pos.line + 1, 0)
+360       \textcolor{keywordflow}{yield} \hyperlink{namespacepump_af96d60dc97b160f3a18e63857aabeef7}{MakeToken}(lines, pos, new\_pos, \textcolor{stringliteral}{'exp'})
+361       pos = new\_pos
+362     \textcolor{keywordflow}{elif} found.token\_type == \textcolor{stringliteral}{'$'}:
+363       \textcolor{keywordflow}{if} prev\_token:
+364         \textcolor{keywordflow}{yield} prev\_token
+365       \textcolor{keywordflow}{yield} found
+366       exp\_token = \hyperlink{namespacepump_ae094486db14ecec9347129c5f230042d}{ParseExpTokenInParens}(lines, found.end)
+367       \textcolor{keywordflow}{yield} exp\_token
+368       pos = exp\_token.end
+369     \textcolor{keywordflow}{elif} (found.token\_type == \textcolor{stringliteral}{']]'} \textcolor{keywordflow}{or} found.token\_type == \textcolor{stringliteral}{'$if'} \textcolor{keywordflow}{or}
+370           found.token\_type == \textcolor{stringliteral}{'$elif'} \textcolor{keywordflow}{or} found.token\_type == \textcolor{stringliteral}{'$else'}):
+371       \textcolor{keywordflow}{if} prev\_token\_rstripped:
+372         \textcolor{keywordflow}{yield} prev\_token\_rstripped
+373       \textcolor{keywordflow}{yield} found
+374       pos = found.end
+375     \textcolor{keywordflow}{else}:
+376       \textcolor{keywordflow}{if} prev\_token:
+377         \textcolor{keywordflow}{yield} prev\_token
+378       \textcolor{keywordflow}{yield} found
+379       pos = found.end
+380 
+381 
+\end{DoxyCode}
+\index{pump@{pump}!Wrap\+Code@{Wrap\+Code}}
+\index{Wrap\+Code@{Wrap\+Code}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Wrap\+Code(line, line\+\_\+concat, output)}{WrapCode(line, line_concat, output)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Wrap\+Code (
+\begin{DoxyParamCaption}
+\item[{}]{line, }
+\item[{}]{line\+\_\+concat, }
+\item[{}]{output}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a42502545a37fcd4513a0a7ac8ef3c0eb}{}\label{namespacepump_a42502545a37fcd4513a0a7ac8ef3c0eb}
+
+\begin{DoxyCode}
+741 \textcolor{keyword}{def }\hyperlink{namespacepump_a42502545a37fcd4513a0a7ac8ef3c0eb}{WrapCode}(line, line\_concat, output):
+742   indent = len(line) - len(line.lstrip())
+743   prefix = indent*\textcolor{stringliteral}{' '}  \textcolor{comment}{# Prefix of the current line}
+744   max\_len = 80 - indent - len(line\_concat)  \textcolor{comment}{# Maximum length of the current line}
+745   new\_prefix = prefix + 4*\textcolor{stringliteral}{' '}  \textcolor{comment}{# Prefix of a continuation line}
+746   new\_max\_len = max\_len - 4  \textcolor{comment}{# Maximum length of a continuation line}
+747   \textcolor{comment}{# Prefers to wrap a line after a ',' or ';'.}
+748   segs = [seg \textcolor{keywordflow}{for} seg \textcolor{keywordflow}{in} re.split(\textcolor{stringliteral}{r'([^,;]+[,;]?)'}, line.strip()) \textcolor{keywordflow}{if} seg != \textcolor{stringliteral}{''}]
+749   cur\_line = \textcolor{stringliteral}{''}  \textcolor{comment}{# The current line without leading spaces.}
+750   \textcolor{keywordflow}{for} seg \textcolor{keywordflow}{in} segs:
+751     \textcolor{comment}{# If the line is still too long, wrap at a space.}
+752     \textcolor{keywordflow}{while} cur\_line == \textcolor{stringliteral}{''} \textcolor{keywordflow}{and} len(seg.strip()) > max\_len:
+753       seg = seg.lstrip()
+754       split\_at = seg.rfind(\textcolor{stringliteral}{' '}, 0, max\_len)
+755       output.append(prefix + seg[:split\_at].strip() + line\_concat)
+756       seg = seg[split\_at + 1:]
+757       prefix = new\_prefix
+758       max\_len = new\_max\_len
+759 
+760     \textcolor{keywordflow}{if} len((cur\_line + seg).rstrip()) < max\_len:
+761       cur\_line = (cur\_line + seg).lstrip()
+762     \textcolor{keywordflow}{else}:
+763       output.append(prefix + cur\_line.rstrip() + line\_concat)
+764       prefix = new\_prefix
+765       max\_len = new\_max\_len
+766       cur\_line = seg.lstrip()
+767   \textcolor{keywordflow}{if} cur\_line.strip() != \textcolor{stringliteral}{''}:
+768     output.append(prefix + cur\_line.strip())
+769 
+770 
+\end{DoxyCode}
+\index{pump@{pump}!Wrap\+Comment@{Wrap\+Comment}}
+\index{Wrap\+Comment@{Wrap\+Comment}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Wrap\+Comment(line, output)}{WrapComment(line, output)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Wrap\+Comment (
+\begin{DoxyParamCaption}
+\item[{}]{line, }
+\item[{}]{output}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a73951c98652038351b1cd24291433e12}{}\label{namespacepump_a73951c98652038351b1cd24291433e12}
+
+\begin{DoxyCode}
+717 \textcolor{keyword}{def }\hyperlink{namespacepump_a73951c98652038351b1cd24291433e12}{WrapComment}(line, output):
+718   loc = line.find(\textcolor{stringliteral}{'//'})
+719   before\_comment = line[:loc].rstrip()
+720   \textcolor{keywordflow}{if} before\_comment == \textcolor{stringliteral}{''}:
+721     indent = loc
+722   \textcolor{keywordflow}{else}:
+723     output.append(before\_comment)
+724     indent = len(before\_comment) - len(before\_comment.lstrip())
+725   prefix = indent*\textcolor{stringliteral}{' '} + \textcolor{stringliteral}{'// '}
+726   max\_len = 80 - len(prefix)
+727   comment = line[loc + 2:].strip()
+728   segs = [seg \textcolor{keywordflow}{for} seg \textcolor{keywordflow}{in} re.split(\textcolor{stringliteral}{r'(\(\backslash\)w+\(\backslash\)W*)'}, comment) \textcolor{keywordflow}{if} seg != \textcolor{stringliteral}{''}]
+729   cur\_line = \textcolor{stringliteral}{''}
+730   \textcolor{keywordflow}{for} seg \textcolor{keywordflow}{in} segs:
+731     \textcolor{keywordflow}{if} len((cur\_line + seg).rstrip()) < max\_len:
+732       cur\_line += seg
+733     \textcolor{keywordflow}{else}:
+734       \textcolor{keywordflow}{if} cur\_line.strip() != \textcolor{stringliteral}{''}:
+735         output.append(prefix + cur\_line.rstrip())
+736       cur\_line = seg.lstrip()
+737   \textcolor{keywordflow}{if} cur\_line.strip() != \textcolor{stringliteral}{''}:
+738     output.append(prefix + cur\_line.strip())
+739 
+740 
+\end{DoxyCode}
+\index{pump@{pump}!Wrap\+Long\+Line@{Wrap\+Long\+Line}}
+\index{Wrap\+Long\+Line@{Wrap\+Long\+Line}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Wrap\+Long\+Line(line, output)}{WrapLongLine(line, output)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Wrap\+Long\+Line (
+\begin{DoxyParamCaption}
+\item[{}]{line, }
+\item[{}]{output}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a02427e2ddc80f0f408e27dfc3e38e702}{}\label{namespacepump_a02427e2ddc80f0f408e27dfc3e38e702}
+
+\begin{DoxyCode}
+790 \textcolor{keyword}{def }\hyperlink{namespacepump_a02427e2ddc80f0f408e27dfc3e38e702}{WrapLongLine}(line, output):
+791   line = line.rstrip()
+792   \textcolor{keywordflow}{if} len(line) <= 80:
+793     output.append(line)
+794   \textcolor{keywordflow}{elif} \hyperlink{namespacepump_a417078b1d036b67756c47e5dc50324dc}{IsSingleLineComment}(line):
+795     \textcolor{keywordflow}{if} \hyperlink{namespacepump_ac8a553b60dc83d100361a0e98d98451b}{IsHeaderGuardIncludeOrOneLineIWYUPragma}(line):
+796       \textcolor{comment}{# The style guide made an exception to allow long header guard lines,}
+797       \textcolor{comment}{# includes and IWYU pragmas.}
+798       output.append(line)
+799     \textcolor{keywordflow}{else}:
+800       \hyperlink{namespacepump_a73951c98652038351b1cd24291433e12}{WrapComment}(line, output)
+801   \textcolor{keywordflow}{elif} \hyperlink{namespacepump_aa33101b01d5781710262f3b5dadd8bc8}{IsInPreprocessorDirective}(output, line):
+802     \textcolor{keywordflow}{if} \hyperlink{namespacepump_ac8a553b60dc83d100361a0e98d98451b}{IsHeaderGuardIncludeOrOneLineIWYUPragma}(line):
+803       \textcolor{comment}{# The style guide made an exception to allow long header guard lines,}
+804       \textcolor{comment}{# includes and IWYU pragmas.}
+805       output.append(line)
+806     \textcolor{keywordflow}{else}:
+807       \hyperlink{namespacepump_a59e8ae06bae068d2d72df4f0340635d8}{WrapPreprocessorDirective}(line, output)
+808   \textcolor{keywordflow}{elif} \hyperlink{namespacepump_a707a3ff4514c89607e48a87589aed787}{IsMultiLineIWYUPragma}(line):
+809     output.append(line)
+810   \textcolor{keywordflow}{else}:
+811     \hyperlink{namespacepump_a60723738cc38d8ced7e2cfecc72d8b11}{WrapPlainCode}(line, output)
+812 
+813 
+\end{DoxyCode}
+\index{pump@{pump}!Wrap\+Plain\+Code@{Wrap\+Plain\+Code}}
+\index{Wrap\+Plain\+Code@{Wrap\+Plain\+Code}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Wrap\+Plain\+Code(line, output)}{WrapPlainCode(line, output)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Wrap\+Plain\+Code (
+\begin{DoxyParamCaption}
+\item[{}]{line, }
+\item[{}]{output}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a60723738cc38d8ced7e2cfecc72d8b11}{}\label{namespacepump_a60723738cc38d8ced7e2cfecc72d8b11}
+
+\begin{DoxyCode}
+775 \textcolor{keyword}{def }\hyperlink{namespacepump_a60723738cc38d8ced7e2cfecc72d8b11}{WrapPlainCode}(line, output):
+776   \hyperlink{namespacepump_a42502545a37fcd4513a0a7ac8ef3c0eb}{WrapCode}(line, \textcolor{stringliteral}{''}, output)
+777 
+778 
+\end{DoxyCode}
+\index{pump@{pump}!Wrap\+Preprocessor\+Directive@{Wrap\+Preprocessor\+Directive}}
+\index{Wrap\+Preprocessor\+Directive@{Wrap\+Preprocessor\+Directive}!pump@{pump}}
+\subsubsection[{\texorpdfstring{Wrap\+Preprocessor\+Directive(line, output)}{WrapPreprocessorDirective(line, output)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Wrap\+Preprocessor\+Directive (
+\begin{DoxyParamCaption}
+\item[{}]{line, }
+\item[{}]{output}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacepump_a59e8ae06bae068d2d72df4f0340635d8}{}\label{namespacepump_a59e8ae06bae068d2d72df4f0340635d8}
+
+\begin{DoxyCode}
+771 \textcolor{keyword}{def }\hyperlink{namespacepump_a59e8ae06bae068d2d72df4f0340635d8}{WrapPreprocessorDirective}(line, output):
+772   \hyperlink{namespacepump_a42502545a37fcd4513a0a7ac8ef3c0eb}{WrapCode}(line, \textcolor{stringliteral}{' \(\backslash\)\(\backslash\)'}, output)
+773 
+774 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{pump@{pump}!D\+O\+T\+\_\+\+D\+O\+T\+\_\+\+R\+E\+G\+EX@{D\+O\+T\+\_\+\+D\+O\+T\+\_\+\+R\+E\+G\+EX}}
+\index{D\+O\+T\+\_\+\+D\+O\+T\+\_\+\+R\+E\+G\+EX@{D\+O\+T\+\_\+\+D\+O\+T\+\_\+\+R\+E\+G\+EX}!pump@{pump}}
+\subsubsection[{\texorpdfstring{D\+O\+T\+\_\+\+D\+O\+T\+\_\+\+R\+E\+G\+EX}{DOT_DOT_REGEX}}]{\setlength{\rightskip}{0pt plus 5cm}pump.\+D\+O\+T\+\_\+\+D\+O\+T\+\_\+\+R\+E\+G\+EX = re.\+compile(r\textquotesingle{}\textbackslash{}.\textbackslash{}.\textquotesingle{})}\hypertarget{namespacepump_a45644ad738e584ec754f6d9f45fe693c}{}\label{namespacepump_a45644ad738e584ec754f6d9f45fe693c}
+\index{pump@{pump}!E\+Q\+\_\+\+R\+E\+G\+EX@{E\+Q\+\_\+\+R\+E\+G\+EX}}
+\index{E\+Q\+\_\+\+R\+E\+G\+EX@{E\+Q\+\_\+\+R\+E\+G\+EX}!pump@{pump}}
+\subsubsection[{\texorpdfstring{E\+Q\+\_\+\+R\+E\+G\+EX}{EQ_REGEX}}]{\setlength{\rightskip}{0pt plus 5cm}pump.\+E\+Q\+\_\+\+R\+E\+G\+EX = re.\+compile(r\textquotesingle{}=\textquotesingle{})}\hypertarget{namespacepump_a6397ed9bab62b5c6f60a6626f6b287e0}{}\label{namespacepump_a6397ed9bab62b5c6f60a6626f6b287e0}
+\index{pump@{pump}!I\+D\+\_\+\+R\+E\+G\+EX@{I\+D\+\_\+\+R\+E\+G\+EX}}
+\index{I\+D\+\_\+\+R\+E\+G\+EX@{I\+D\+\_\+\+R\+E\+G\+EX}!pump@{pump}}
+\subsubsection[{\texorpdfstring{I\+D\+\_\+\+R\+E\+G\+EX}{ID_REGEX}}]{\setlength{\rightskip}{0pt plus 5cm}pump.\+I\+D\+\_\+\+R\+E\+G\+EX = re.\+compile(r\textquotesingle{}\mbox{[}\+\_\+A-\/Za-\/z\mbox{]}\textbackslash{}w$\ast$\textquotesingle{})}\hypertarget{namespacepump_a8e008923b6c378b8d3df611fb07d6dda}{}\label{namespacepump_a8e008923b6c378b8d3df611fb07d6dda}
+\index{pump@{pump}!O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+S\+\_\+\+R\+E\+G\+EX@{O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+S\+\_\+\+R\+E\+G\+EX}}
+\index{O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+S\+\_\+\+R\+E\+G\+EX@{O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+S\+\_\+\+R\+E\+G\+EX}!pump@{pump}}
+\subsubsection[{\texorpdfstring{O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+S\+\_\+\+R\+E\+G\+EX}{OPTIONAL_WHITE_SPACES_REGEX}}]{\setlength{\rightskip}{0pt plus 5cm}pump.\+O\+P\+T\+I\+O\+N\+A\+L\+\_\+\+W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+S\+\_\+\+R\+E\+G\+EX = re.\+compile(r\textquotesingle{}\textbackslash{}s$\ast$\textquotesingle{})}\hypertarget{namespacepump_a81f03eaffd2c0f4c6a453a0b179e51ca}{}\label{namespacepump_a81f03eaffd2c0f4c6a453a0b179e51ca}
+\index{pump@{pump}!R\+E\+S\+T\+\_\+\+O\+F\+\_\+\+L\+I\+N\+E\+\_\+\+R\+E\+G\+EX@{R\+E\+S\+T\+\_\+\+O\+F\+\_\+\+L\+I\+N\+E\+\_\+\+R\+E\+G\+EX}}
+\index{R\+E\+S\+T\+\_\+\+O\+F\+\_\+\+L\+I\+N\+E\+\_\+\+R\+E\+G\+EX@{R\+E\+S\+T\+\_\+\+O\+F\+\_\+\+L\+I\+N\+E\+\_\+\+R\+E\+G\+EX}!pump@{pump}}
+\subsubsection[{\texorpdfstring{R\+E\+S\+T\+\_\+\+O\+F\+\_\+\+L\+I\+N\+E\+\_\+\+R\+E\+G\+EX}{REST_OF_LINE_REGEX}}]{\setlength{\rightskip}{0pt plus 5cm}pump.\+R\+E\+S\+T\+\_\+\+O\+F\+\_\+\+L\+I\+N\+E\+\_\+\+R\+E\+G\+EX = re.\+compile(r\textquotesingle{}.$\ast$?(?=\$$\vert$\textbackslash{}\$\textbackslash{}\$)\textquotesingle{})}\hypertarget{namespacepump_a4c1f68b32fcb8366051b574cf2e6aef1}{}\label{namespacepump_a4c1f68b32fcb8366051b574cf2e6aef1}
+\index{pump@{pump}!T\+O\+K\+E\+N\+\_\+\+T\+A\+B\+LE@{T\+O\+K\+E\+N\+\_\+\+T\+A\+B\+LE}}
+\index{T\+O\+K\+E\+N\+\_\+\+T\+A\+B\+LE@{T\+O\+K\+E\+N\+\_\+\+T\+A\+B\+LE}!pump@{pump}}
+\subsubsection[{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+T\+A\+B\+LE}{TOKEN_TABLE}}]{\setlength{\rightskip}{0pt plus 5cm}list pump.\+T\+O\+K\+E\+N\+\_\+\+T\+A\+B\+LE}\hypertarget{namespacepump_a132b35d1104c7f479aa21c345f413477}{}\label{namespacepump_a132b35d1104c7f479aa21c345f413477}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = [
+2     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)$var\(\backslash\)s+'}), \textcolor{stringliteral}{'$var'}),
+3     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)$elif\(\backslash\)s+'}), \textcolor{stringliteral}{'$elif'}),
+4     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)$else\(\backslash\)s+'}), \textcolor{stringliteral}{'$else'}),
+5     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)$for\(\backslash\)s+'}), \textcolor{stringliteral}{'$for'}),
+6     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)$if\(\backslash\)s+'}), \textcolor{stringliteral}{'$if'}),
+7     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)$range\(\backslash\)s+'}), \textcolor{stringliteral}{'$range'}),
+8     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)$[\_A-Za-z]\(\backslash\)w*'}), \textcolor{stringliteral}{'$id'}),
+9     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)$\(\backslash\)(\(\backslash\)$\(\backslash\))'}), \textcolor{stringliteral}{'$($)'}),
+10     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)$'}), \textcolor{stringliteral}{'$'}),
+11     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)[\(\backslash\)[\(\backslash\)n?'}), \textcolor{stringliteral}{'[['}),
+12     (re.compile(\textcolor{stringliteral}{r'\(\backslash\)]\(\backslash\)]\(\backslash\)n?'}), \textcolor{stringliteral}{']]'}),
+13     ]
+\end{DoxyCode}
+\index{pump@{pump}!W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+\_\+\+R\+E\+G\+EX@{W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+\_\+\+R\+E\+G\+EX}}
+\index{W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+\_\+\+R\+E\+G\+EX@{W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+\_\+\+R\+E\+G\+EX}!pump@{pump}}
+\subsubsection[{\texorpdfstring{W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+\_\+\+R\+E\+G\+EX}{WHITE_SPACE_REGEX}}]{\setlength{\rightskip}{0pt plus 5cm}pump.\+W\+H\+I\+T\+E\+\_\+\+S\+P\+A\+C\+E\+\_\+\+R\+E\+G\+EX = re.\+compile(r\textquotesingle{}\textbackslash{}s\textquotesingle{})}\hypertarget{namespacepump_a4ab1be351870f785a72d324bf56c8316}{}\label{namespacepump_a4ab1be351870f785a72d324bf56c8316}

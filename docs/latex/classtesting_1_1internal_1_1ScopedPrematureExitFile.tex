@@ -1,0 +1,53 @@
+\hypertarget{classtesting_1_1internal_1_1ScopedPrematureExitFile}{}\section{testing\+:\+:internal\+:\+:Scoped\+Premature\+Exit\+File Class Reference}
+\label{classtesting_1_1internal_1_1ScopedPrematureExitFile}\index{testing\+::internal\+::\+Scoped\+Premature\+Exit\+File@{testing\+::internal\+::\+Scoped\+Premature\+Exit\+File}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ScopedPrematureExitFile_ae520883b8a6984a864ce675acedff4a2}{Scoped\+Premature\+Exit\+File} (const char $\ast$premature\+\_\+exit\+\_\+filepath)
+\item 
+\hyperlink{classtesting_1_1internal_1_1ScopedPrematureExitFile_afa2ddc9bc1c2a90fd0dd82bb11fddc79}{$\sim$\+Scoped\+Premature\+Exit\+File} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Scoped\+Premature\+Exit\+File@{testing\+::internal\+::\+Scoped\+Premature\+Exit\+File}!Scoped\+Premature\+Exit\+File@{Scoped\+Premature\+Exit\+File}}
+\index{Scoped\+Premature\+Exit\+File@{Scoped\+Premature\+Exit\+File}!testing\+::internal\+::\+Scoped\+Premature\+Exit\+File@{testing\+::internal\+::\+Scoped\+Premature\+Exit\+File}}
+\subsubsection[{\texorpdfstring{Scoped\+Premature\+Exit\+File(const char $\ast$premature\+\_\+exit\+\_\+filepath)}{ScopedPrematureExitFile(const char *premature_exit_filepath)}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::internal\+::\+Scoped\+Premature\+Exit\+File\+::\+Scoped\+Premature\+Exit\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{premature\+\_\+exit\+\_\+filepath}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1ScopedPrematureExitFile_ae520883b8a6984a864ce675acedff4a2}{}\label{classtesting_1_1internal_1_1ScopedPrematureExitFile_ae520883b8a6984a864ce675acedff4a2}
+
+\begin{DoxyCode}
+3862       : premature\_exit\_filepath\_(premature\_exit\_filepath) \{
+3863     \textcolor{comment}{// If a path to the premature-exit file is specified...}
+3864     \textcolor{keywordflow}{if} (premature\_exit\_filepath != NULL && *premature\_exit\_filepath != \textcolor{charliteral}{'\(\backslash\)0'}) \{
+3865       \textcolor{comment}{// create the file with a single "0" character in it.  I/O}
+3866       \textcolor{comment}{// errors are ignored as there's nothing better we can do and we}
+3867       \textcolor{comment}{// don't want to fail the test because of this.}
+3868       \hyperlink{gmock__output__test__golden_8txt_ab12dc6c67167ae2f0af132bdd8c2955e}{FILE}* pfile = \hyperlink{namespacetesting_1_1internal_1_1posix_a4042201dcc4932641d484e7ddf94de7d}{posix::FOpen}(premature\_exit\_filepath, \textcolor{stringliteral}{"w"});
+3869       fwrite(\textcolor{stringliteral}{"0"}, 1, 1, pfile);
+3870       fclose(pfile);
+3871     \}
+3872   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Scoped\+Premature\+Exit\+File@{testing\+::internal\+::\+Scoped\+Premature\+Exit\+File}!````~Scoped\+Premature\+Exit\+File@{$\sim$\+Scoped\+Premature\+Exit\+File}}
+\index{````~Scoped\+Premature\+Exit\+File@{$\sim$\+Scoped\+Premature\+Exit\+File}!testing\+::internal\+::\+Scoped\+Premature\+Exit\+File@{testing\+::internal\+::\+Scoped\+Premature\+Exit\+File}}
+\subsubsection[{\texorpdfstring{$\sim$\+Scoped\+Premature\+Exit\+File()}{~ScopedPrematureExitFile()}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::internal\+::\+Scoped\+Premature\+Exit\+File\+::$\sim$\+Scoped\+Premature\+Exit\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1ScopedPrematureExitFile_afa2ddc9bc1c2a90fd0dd82bb11fddc79}{}\label{classtesting_1_1internal_1_1ScopedPrematureExitFile_afa2ddc9bc1c2a90fd0dd82bb11fddc79}
+
+\begin{DoxyCode}
+3874                              \{
+3875     \textcolor{keywordflow}{if} (premature\_exit\_filepath\_ != NULL && *premature\_exit\_filepath\_ != \textcolor{charliteral}{'\(\backslash\)0'}) \{
+3876       \textcolor{keyword}{remove}(premature\_exit\_filepath\_);
+3877     \}
+3878   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/src/\hyperlink{gtest_8cc}{gtest.\+cc}\end{DoxyCompactItemize}

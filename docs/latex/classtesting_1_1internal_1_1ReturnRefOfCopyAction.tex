@@ -1,0 +1,55 @@
+\hypertarget{classtesting_1_1internal_1_1ReturnRefOfCopyAction}{}\section{testing\+:\+:internal\+:\+:Return\+Ref\+Of\+Copy\+Action$<$ T $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1ReturnRefOfCopyAction}\index{testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action$<$ T $>$@{testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action$<$ T $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/actions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ReturnRefOfCopyAction_a073c18a8b50423b08f6603e860622839}{Return\+Ref\+Of\+Copy\+Action} (const T \&value)
+\item 
+{\footnotesize template$<$typename F $>$ }\\\hyperlink{classtesting_1_1internal_1_1ReturnRefOfCopyAction_a9d7625cff3c84eedcbbf8ad976d28814}{operator Action$<$ F $>$} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action@{testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action}!Return\+Ref\+Of\+Copy\+Action@{Return\+Ref\+Of\+Copy\+Action}}
+\index{Return\+Ref\+Of\+Copy\+Action@{Return\+Ref\+Of\+Copy\+Action}!testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action@{testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action}}
+\subsubsection[{\texorpdfstring{Return\+Ref\+Of\+Copy\+Action(const T \&value)}{ReturnRefOfCopyAction(const T &value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action}$<$ T $>$\+::{\bf Return\+Ref\+Of\+Copy\+Action} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1ReturnRefOfCopyAction_a073c18a8b50423b08f6603e860622839}{}\label{classtesting_1_1internal_1_1ReturnRefOfCopyAction_a073c18a8b50423b08f6603e860622839}
+
+\begin{DoxyCode}
+705 : value\_(value) \{\}  \textcolor{comment}{// NOLINT}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action@{testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action}!operator Action$<$ F $>$@{operator Action$<$ F $>$}}
+\index{operator Action$<$ F $>$@{operator Action$<$ F $>$}!testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action@{testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action}}
+\subsubsection[{\texorpdfstring{operator Action$<$ F $>$() const }{operator Action< F >() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename F $>$ {\bf testing\+::internal\+::\+Return\+Ref\+Of\+Copy\+Action}$<$ T $>$\+::operator {\bf Action}$<$ F $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1ReturnRefOfCopyAction_a9d7625cff3c84eedcbbf8ad976d28814}{}\label{classtesting_1_1internal_1_1ReturnRefOfCopyAction_a9d7625cff3c84eedcbbf8ad976d28814}
+
+\begin{DoxyCode}
+710                              \{
+711     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} Function<F>::Result Result;
+712     \textcolor{comment}{// Asserts that the function return type is a reference.  This}
+713     \textcolor{comment}{// catches the user error of using ReturnRefOfCopy(x) when Return(x)}
+714     \textcolor{comment}{// should be used, and generates some helpful error message.}
+715     \hyperlink{gtest-port_8h_ae1f37dc71d5daa6fb49ca1b6047d4a8c}{GTEST\_COMPILE\_ASSERT\_}(
+716         \hyperlink{structtesting_1_1internal_1_1bool__constant_a499fba6576296b04d99690a486424b32}{internal::is\_reference<Result>::value},
+717         use\_Return\_instead\_of\_ReturnRefOfCopy\_to\_return\_a\_value);
+718     \textcolor{keywordflow}{return} Action<F>(\textcolor{keyword}{new} Impl<F>(value\_));
+719   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-actions_8h}{gmock-\/actions.\+h}\end{DoxyCompactItemize}

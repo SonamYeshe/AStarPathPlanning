@@ -1,0 +1,72 @@
+\hypertarget{classBarEnvironment}{}\section{Bar\+Environment Class Reference}
+\label{classBarEnvironment}\index{Bar\+Environment@{Bar\+Environment}}
+
+
+Inheritance diagram for Bar\+Environment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classBarEnvironment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bar\+Environment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classBarEnvironment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classBarEnvironment_a88e17c5dd1dcea7a4538f2f3c6bf7bdd}{Set\+Up} ()
+\item 
+virtual void \hyperlink{classBarEnvironment_a384f951da72a2a18bb0c2b3506376b09}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Bar\+Environment@{Bar\+Environment}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Bar\+Environment@{Bar\+Environment}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Bar\+Environment\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classBarEnvironment_a88e17c5dd1dcea7a4538f2f3c6bf7bdd}{}\label{classBarEnvironment_a88e17c5dd1dcea7a4538f2f3c6bf7bdd}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Environment_a1bf8cafaa9d4eba9feb98655ee434eb3}{testing\+::\+Environment}.
+
+
+\begin{DoxyCode}
+1009                        \{
+1010     printf(\textcolor{stringliteral}{"%s"}, \textcolor{stringliteral}{"BarEnvironment::SetUp() called.\(\backslash\)n"});
+1011   \}
+\end{DoxyCode}
+\index{Bar\+Environment@{Bar\+Environment}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!Bar\+Environment@{Bar\+Environment}}
+\subsubsection[{\texorpdfstring{Tear\+Down()}{TearDown()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Bar\+Environment\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classBarEnvironment_a384f951da72a2a18bb0c2b3506376b09}{}\label{classBarEnvironment_a384f951da72a2a18bb0c2b3506376b09}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Environment_a039bdaa705c46b9b88234cf4d3bb6254}{testing\+::\+Environment}.
+
+
+\begin{DoxyCode}
+1013                           \{
+1014     printf(\textcolor{stringliteral}{"%s"}, \textcolor{stringliteral}{"BarEnvironment::TearDown() called.\(\backslash\)n"});
+1015     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected non-fatal failure."};
+1016   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__output__test___8cc}{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}\end{DoxyCompactItemize}

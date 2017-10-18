@@ -1,0 +1,89 @@
+\hypertarget{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher}{}\section{testing\+:\+:gmock\+\_\+matchers\+\_\+test\+:\+:Greater\+Than\+Matcher Class Reference}
+\label{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher}\index{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher}}
+
+
+Inheritance diagram for testing\+:\+:gmock\+\_\+matchers\+\_\+test\+:\+:Greater\+Than\+Matcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:gmock\+\_\+matchers\+\_\+test\+:\+:Greater\+Than\+Matcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher_a605c50137599a1dba0701bbd735bf1e8}{Greater\+Than\+Matcher} (int rhs)
+\item 
+virtual void \hyperlink{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher_a92cf6ff96d14a4c183961ae3ce848f37}{Describe\+To} (ostream $\ast$os) const 
+\item 
+virtual bool \hyperlink{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher_a2e7f2d786f9e202f40ea3317f29261db}{Match\+And\+Explain} (int lhs, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher}!Greater\+Than\+Matcher@{Greater\+Than\+Matcher}}
+\index{Greater\+Than\+Matcher@{Greater\+Than\+Matcher}!testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher}}
+\subsubsection[{\texorpdfstring{Greater\+Than\+Matcher(int rhs)}{GreaterThanMatcher(int rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher\+::\+Greater\+Than\+Matcher (
+\begin{DoxyParamCaption}
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher_a605c50137599a1dba0701bbd735bf1e8}{}\label{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher_a605c50137599a1dba0701bbd735bf1e8}
+
+\begin{DoxyCode}
+164 : rhs\_(rhs) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher}!Describe\+To@{Describe\+To}}
+\index{Describe\+To@{Describe\+To}!testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher}}
+\subsubsection[{\texorpdfstring{Describe\+To(ostream $\ast$os) const }{DescribeTo(ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual void testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher\+::\+Describe\+To (
+\begin{DoxyParamCaption}
+\item[{ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher_a92cf6ff96d14a4c183961ae3ce848f37}{}\label{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher_a92cf6ff96d14a4c183961ae3ce848f37}
+
+\begin{DoxyCode}
+166                                              \{
+167     *os << \textcolor{stringliteral}{"is > "} << rhs\_;
+168   \}
+\end{DoxyCode}
+\index{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher}!Match\+And\+Explain@{Match\+And\+Explain}}
+\index{Match\+And\+Explain@{Match\+And\+Explain}!testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher@{testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher}}
+\subsubsection[{\texorpdfstring{Match\+And\+Explain(int lhs, Match\+Result\+Listener $\ast$listener) const }{MatchAndExplain(int lhs, MatchResultListener *listener) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool testing\+::gmock\+\_\+matchers\+\_\+test\+::\+Greater\+Than\+Matcher\+::\+Match\+And\+Explain (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher_a2e7f2d786f9e202f40ea3317f29261db}{}\label{classtesting_1_1gmock__matchers__test_1_1GreaterThanMatcher_a2e7f2d786f9e202f40ea3317f29261db}
+
+\begin{DoxyCode}
+171                                                                     \{
+172     \textcolor{keyword}{const} \textcolor{keywordtype}{int} diff = lhs - rhs\_;
+173     \textcolor{keywordflow}{if} (diff > 0) \{
+174       *listener << \textcolor{stringliteral}{"which is "} << diff << \textcolor{stringliteral}{" more than "} << rhs\_;
+175     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (diff == 0) \{
+176       *listener << \textcolor{stringliteral}{"which is the same as "} << rhs\_;
+177     \} \textcolor{keywordflow}{else} \{
+178       *listener << \textcolor{stringliteral}{"which is "} << -diff << \textcolor{stringliteral}{" less than "} << rhs\_;
+179     \}
+180 
+181     \textcolor{keywordflow}{return} lhs > rhs\_;
+182   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/test/\hyperlink{gmock-matchers__test_8cc}{gmock-\/matchers\+\_\+test.\+cc}\end{DoxyCompactItemize}

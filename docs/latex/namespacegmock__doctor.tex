@@ -1,0 +1,95 @@
+\hypertarget{namespacegmock__doctor}{}\section{gmock\+\_\+doctor Namespace Reference}
+\label{namespacegmock__doctor}\index{gmock\+\_\+doctor@{gmock\+\_\+doctor}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegmock__doctor_a8b791ed6679a0135862ebb3e8c27b2b4}{Diagnose} (msg)
+\item 
+def \hyperlink{namespacegmock__doctor_a6eb6c47cf5a3a7c4266f473c0af6b82f}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gmock\+\_\+doctor@{gmock\+\_\+doctor}!Diagnose@{Diagnose}}
+\index{Diagnose@{Diagnose}!gmock\+\_\+doctor@{gmock\+\_\+doctor}}
+\subsubsection[{\texorpdfstring{Diagnose(msg)}{Diagnose(msg)}}]{\setlength{\rightskip}{0pt plus 5cm}def gmock\+\_\+doctor.\+Diagnose (
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegmock__doctor_a8b791ed6679a0135862ebb3e8c27b2b4}{}\label{namespacegmock__doctor_a8b791ed6679a0135862ebb3e8c27b2b4}
+\begin{DoxyVerb}Generates all possible diagnoses given the compiler error message.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+577 \textcolor{keyword}{def }\hyperlink{namespacegmock__doctor_a8b791ed6679a0135862ebb3e8c27b2b4}{Diagnose}(msg):
+578   \textcolor{stringliteral}{"""Generates all possible diagnoses given the compiler error message."""}
+579 
+580   msg = re.sub(\textcolor{stringliteral}{r'\(\backslash\)x1b\(\backslash\)[[^m]*m'}, \textcolor{stringliteral}{''}, msg)  \textcolor{comment}{# Strips all color formatting.}
+581   \textcolor{comment}{# Assuming the string is using the UTF-8 encoding, replaces the left and}
+582   \textcolor{comment}{# the right single quote characters with apostrophes.}
+583   msg = re.sub(\textcolor{stringliteral}{r'(\(\backslash\)xe2\(\backslash\)x80\(\backslash\)x98|\(\backslash\)xe2\(\backslash\)x80\(\backslash\)x99)'}, \textcolor{stringliteral}{"'"}, msg)
+584 
+585   diagnoses = []
+586   \textcolor{keywordflow}{for} diagnoser \textcolor{keywordflow}{in} \_DIAGNOSERS:
+587     \textcolor{keywordflow}{for} diag \textcolor{keywordflow}{in} diagnoser(msg):
+588       diagnosis = \textcolor{stringliteral}{'[%s - %s]\(\backslash\)n%s'} % diag
+589       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} diagnosis \textcolor{keywordflow}{in} diagnoses:
+590         diagnoses.append(diagnosis)
+591   \textcolor{keywordflow}{return} diagnoses
+592 
+593 
+\end{DoxyCode}
+\index{gmock\+\_\+doctor@{gmock\+\_\+doctor}!main@{main}}
+\index{main@{main}!gmock\+\_\+doctor@{gmock\+\_\+doctor}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}def gmock\+\_\+doctor.\+main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegmock__doctor_a6eb6c47cf5a3a7c4266f473c0af6b82f}{}\label{namespacegmock__doctor_a6eb6c47cf5a3a7c4266f473c0af6b82f}
+
+\begin{DoxyCode}
+594 \textcolor{keyword}{def }\hyperlink{namespacegmock__doctor_a6eb6c47cf5a3a7c4266f473c0af6b82f}{main}():
+595   \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'Google Mock Doctor v%s - '}
+596          \textcolor{stringliteral}{'diagnoses problems in code using Google Mock.'} % \_VERSION)
+597 
+598   \textcolor{keywordflow}{if} sys.stdin.isatty():
+599     \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'Please copy and paste the compiler errors here.  Press c-D when '}
+600            \textcolor{stringliteral}{'you are done:'})
+601   \textcolor{keywordflow}{else}:
+602     \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'Waiting for compiler errors on stdin . . .'})
+603 
+604   msg = sys.stdin.read().strip()
+605   diagnoses = \hyperlink{namespacegmock__doctor_a8b791ed6679a0135862ebb3e8c27b2b4}{Diagnose}(msg)
+606   count = len(diagnoses)
+607   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} count:
+608     \textcolor{keywordflow}{print} (\textcolor{stringliteral}{"""}
+609 \textcolor{stringliteral}{Your compiler complained:}
+610 \textcolor{stringliteral}{8<------------------------------------------------------------}
+611 \textcolor{stringliteral}{%s}
+612 \textcolor{stringliteral}{------------------------------------------------------------>8}
+613 \textcolor{stringliteral}{}
+614 \textcolor{stringliteral}{Uh-oh, I'm not smart enough to figure out what the problem is. :-(}
+615 \textcolor{stringliteral}{However...}
+616 \textcolor{stringliteral}{If you send your source code and the compiler's error messages to}
+617 \textcolor{stringliteral}{%s, you can be helped and I can get smarter --}
+618 \textcolor{stringliteral}{win-win for us!"""} % (msg, \_EMAIL))
+619   \textcolor{keywordflow}{else}:
+620     \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'------------------------------------------------------------'})
+621     \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'Your code appears to have the following'},)
+622     \textcolor{keywordflow}{if} count > 1:
+623       \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'%s diseases:'} % (count,))
+624     \textcolor{keywordflow}{else}:
+625       \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'disease:'})
+626     i = 0
+627     \textcolor{keywordflow}{for} d \textcolor{keywordflow}{in} diagnoses:
+628       i += 1
+629       \textcolor{keywordflow}{if} count > 1:
+630         \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'\(\backslash\)n#%s:'} % (i,))
+631       \textcolor{keywordflow}{print} (d)
+632     \textcolor{keywordflow}{print} (\textcolor{stringliteral}{"""}
+633 \textcolor{stringliteral}{How did I do?  If you think I'm wrong or unhelpful, please send your}
+634 \textcolor{stringliteral}{source code and the compiler's error messages to %s.}
+635 \textcolor{stringliteral}{Then you can be helped and I can get smarter -- I promise I won't be upset!"""} %
+636            \_EMAIL)
+637 
+638 
+\end{DoxyCode}

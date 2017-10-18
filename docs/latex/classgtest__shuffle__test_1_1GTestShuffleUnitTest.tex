@@ -1,0 +1,328 @@
+\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest}{}\section{gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test Class Reference}
+\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest}\index{gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test}}
+
+
+Inheritance diagram for gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classgtest__shuffle__test_1_1GTestShuffleUnitTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classgtest__shuffle__test_1_1GTestShuffleUnitTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_adf9841ae9c86eaafc3c3f7c9690c7bd8}{set\+Up} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_aafc33d6129c37043ef5c95dbe766a8db}{test\+Shuffle\+Preserves\+Number\+Of\+Tests} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a0ba25ee553b62281e16b6a28873abc01}{test\+Shuffle\+Changes\+Test\+Order} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a8a82320ea310d1e3660bef2efb665bd2}{test\+Shuffle\+Changes\+Test\+Case\+Order} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a7537baa50e9e14b430fb80eaf4ea18f6}{test\+Shuffle\+Does\+Not\+Repeat\+Test} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_aeea745f7ce2ab19a067c5cde6e083ba7}{test\+Shuffle\+Does\+Not\+Create\+New\+Test} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_ab9e25e62817f7cdbd32833f9b2be5794}{test\+Shuffle\+Includes\+All\+Tests} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a6fa91b262595e35bd3e9b52e188dc634}{test\+Shuffle\+Leaves\+Death\+Tests\+At\+Front} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a34bfc9696191f4c2782327e1e35ae902}{test\+Shuffle\+Does\+Not\+Interleave\+Test\+Cases} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a77b83a9870ad8d68524e1177f5320fb0}{test\+Shuffle\+Restores\+Order\+After\+Each\+Iteration} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_ada78bae27e0d82d07bd663d53a36552b}{test\+Shuffle\+Generates\+New\+Order\+In\+Each\+Iteration} (self)
+\item 
+def \hyperlink{classgtest__shuffle__test_1_1GTestShuffleUnitTest_abd33c5ef01ce6d1d025ebcc816d47c19}{test\+Shuffle\+Sharded\+Tests\+Preserves\+Partition} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Tests test shuffling.\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!set\+Up@{set\+Up}}
+\index{set\+Up@{set\+Up}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{set\+Up(self)}{setUp(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+set\+Up (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_adf9841ae9c86eaafc3c3f7c9690c7bd8}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_adf9841ae9c86eaafc3c3f7c9690c7bd8}
+
+\begin{DoxyCode}
+172   \textcolor{keyword}{def }setUp(self):
+173     \hyperlink{namespacegtest__shuffle__test_a51dcc55df3ebd76c676298ef9b4fea19}{CalculateTestLists}()
+174 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Changes\+Test\+Case\+Order@{test\+Shuffle\+Changes\+Test\+Case\+Order}}
+\index{test\+Shuffle\+Changes\+Test\+Case\+Order@{test\+Shuffle\+Changes\+Test\+Case\+Order}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Changes\+Test\+Case\+Order(self)}{testShuffleChangesTestCaseOrder(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Changes\+Test\+Case\+Order (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a8a82320ea310d1e3660bef2efb665bd2}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a8a82320ea310d1e3660bef2efb665bd2}
+
+\begin{DoxyCode}
+189   \textcolor{keyword}{def }testShuffleChangesTestCaseOrder(self):
+190     self.assert\_(\hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(SHUFFLED\_ALL\_TESTS) != \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(ALL\_TESTS),
+191                  \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(SHUFFLED\_ALL\_TESTS))
+192     self.assert\_(
+193         \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(SHUFFLED\_ACTIVE\_TESTS) != \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(ACTIVE\_TESTS),
+194         \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(SHUFFLED\_ACTIVE\_TESTS))
+195     self.assert\_(
+196         \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(SHUFFLED\_FILTERED\_TESTS) != \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(FILTERED\_TESTS),
+197         \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(SHUFFLED\_FILTERED\_TESTS))
+198     self.assert\_(
+199         \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(SHUFFLED\_SHARDED\_TESTS) != \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(SHARDED\_TESTS),
+200         \hyperlink{namespacegtest__shuffle__test_af5328e9cbee0e357d6abf16255df13f7}{GetTestCases}(SHUFFLED\_SHARDED\_TESTS))
+201 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Changes\+Test\+Order@{test\+Shuffle\+Changes\+Test\+Order}}
+\index{test\+Shuffle\+Changes\+Test\+Order@{test\+Shuffle\+Changes\+Test\+Order}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Changes\+Test\+Order(self)}{testShuffleChangesTestOrder(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Changes\+Test\+Order (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a0ba25ee553b62281e16b6a28873abc01}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a0ba25ee553b62281e16b6a28873abc01}
+
+\begin{DoxyCode}
+181   \textcolor{keyword}{def }testShuffleChangesTestOrder(self):
+182     self.assert\_(SHUFFLED\_ALL\_TESTS != ALL\_TESTS, SHUFFLED\_ALL\_TESTS)
+183     self.assert\_(SHUFFLED\_ACTIVE\_TESTS != ACTIVE\_TESTS, SHUFFLED\_ACTIVE\_TESTS)
+184     self.assert\_(SHUFFLED\_FILTERED\_TESTS != FILTERED\_TESTS,
+185                  SHUFFLED\_FILTERED\_TESTS)
+186     self.assert\_(SHUFFLED\_SHARDED\_TESTS != SHARDED\_TESTS,
+187                  SHUFFLED\_SHARDED\_TESTS)
+188 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Does\+Not\+Create\+New\+Test@{test\+Shuffle\+Does\+Not\+Create\+New\+Test}}
+\index{test\+Shuffle\+Does\+Not\+Create\+New\+Test@{test\+Shuffle\+Does\+Not\+Create\+New\+Test}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Does\+Not\+Create\+New\+Test(self)}{testShuffleDoesNotCreateNewTest(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Does\+Not\+Create\+New\+Test (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_aeea745f7ce2ab19a067c5cde6e083ba7}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_aeea745f7ce2ab19a067c5cde6e083ba7}
+
+\begin{DoxyCode}
+216   \textcolor{keyword}{def }testShuffleDoesNotCreateNewTest(self):
+217     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHUFFLED\_ALL\_TESTS:
+218       self.assert\_(test \textcolor{keywordflow}{in} ALL\_TESTS, \textcolor{stringliteral}{'%s is an invalid test'} % (test,))
+219     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHUFFLED\_ACTIVE\_TESTS:
+220       self.assert\_(test \textcolor{keywordflow}{in} ACTIVE\_TESTS, \textcolor{stringliteral}{'%s is an invalid test'} % (test,))
+221     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHUFFLED\_FILTERED\_TESTS:
+222       self.assert\_(test \textcolor{keywordflow}{in} FILTERED\_TESTS, \textcolor{stringliteral}{'%s is an invalid test'} % (test,))
+223     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHUFFLED\_SHARDED\_TESTS:
+224       self.assert\_(test \textcolor{keywordflow}{in} SHARDED\_TESTS, \textcolor{stringliteral}{'%s is an invalid test'} % (test,))
+225 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Does\+Not\+Interleave\+Test\+Cases@{test\+Shuffle\+Does\+Not\+Interleave\+Test\+Cases}}
+\index{test\+Shuffle\+Does\+Not\+Interleave\+Test\+Cases@{test\+Shuffle\+Does\+Not\+Interleave\+Test\+Cases}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Does\+Not\+Interleave\+Test\+Cases(self)}{testShuffleDoesNotInterleaveTestCases(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Does\+Not\+Interleave\+Test\+Cases (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a34bfc9696191f4c2782327e1e35ae902}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a34bfc9696191f4c2782327e1e35ae902}
+
+\begin{DoxyCode}
+255   \textcolor{keyword}{def }testShuffleDoesNotInterleaveTestCases(self):
+256     self.\_VerifyTestCasesDoNotInterleave(SHUFFLED\_ALL\_TESTS)
+257     self.\_VerifyTestCasesDoNotInterleave(SHUFFLED\_ACTIVE\_TESTS)
+258     self.\_VerifyTestCasesDoNotInterleave(SHUFFLED\_FILTERED\_TESTS)
+259     self.\_VerifyTestCasesDoNotInterleave(SHUFFLED\_SHARDED\_TESTS)
+260 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Does\+Not\+Repeat\+Test@{test\+Shuffle\+Does\+Not\+Repeat\+Test}}
+\index{test\+Shuffle\+Does\+Not\+Repeat\+Test@{test\+Shuffle\+Does\+Not\+Repeat\+Test}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Does\+Not\+Repeat\+Test(self)}{testShuffleDoesNotRepeatTest(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Does\+Not\+Repeat\+Test (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a7537baa50e9e14b430fb80eaf4ea18f6}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a7537baa50e9e14b430fb80eaf4ea18f6}
+
+\begin{DoxyCode}
+202   \textcolor{keyword}{def }testShuffleDoesNotRepeatTest(self):
+203     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHUFFLED\_ALL\_TESTS:
+204       self.assertEqual(1, SHUFFLED\_ALL\_TESTS.count(test),
+205                        \textcolor{stringliteral}{'%s appears more than once'} % (test,))
+206     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHUFFLED\_ACTIVE\_TESTS:
+207       self.assertEqual(1, SHUFFLED\_ACTIVE\_TESTS.count(test),
+208                        \textcolor{stringliteral}{'%s appears more than once'} % (test,))
+209     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHUFFLED\_FILTERED\_TESTS:
+210       self.assertEqual(1, SHUFFLED\_FILTERED\_TESTS.count(test),
+211                        \textcolor{stringliteral}{'%s appears more than once'} % (test,))
+212     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHUFFLED\_SHARDED\_TESTS:
+213       self.assertEqual(1, SHUFFLED\_SHARDED\_TESTS.count(test),
+214                        \textcolor{stringliteral}{'%s appears more than once'} % (test,))
+215 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Generates\+New\+Order\+In\+Each\+Iteration@{test\+Shuffle\+Generates\+New\+Order\+In\+Each\+Iteration}}
+\index{test\+Shuffle\+Generates\+New\+Order\+In\+Each\+Iteration@{test\+Shuffle\+Generates\+New\+Order\+In\+Each\+Iteration}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Generates\+New\+Order\+In\+Each\+Iteration(self)}{testShuffleGeneratesNewOrderInEachIteration(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Generates\+New\+Order\+In\+Each\+Iteration (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_ada78bae27e0d82d07bd663d53a36552b}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_ada78bae27e0d82d07bd663d53a36552b}
+
+\begin{DoxyCode}
+293   \textcolor{keyword}{def }testShuffleGeneratesNewOrderInEachIteration(self):
+294     [tests\_in\_iteration1, tests\_in\_iteration2, tests\_in\_iteration3] = (
+295         \hyperlink{namespacegtest__shuffle__test_a18c7606bf0d41acb73a4a6a2994d36fc}{GetTestsForAllIterations}(
+296             \{\}, [\hyperlink{namespacegtest__shuffle__test_ab593e060bf2a9b2f0cb0dc8e18eb2088}{ShuffleFlag}(), \hyperlink{namespacegtest__shuffle__test_aaf2a94c748f266c4267ac7e7bb3451fd}{RandomSeedFlag}(1), 
+      \hyperlink{namespacegtest__shuffle__test_a193f6cd2eeb35e7925dca6d8f72f75d3}{RepeatFlag}(3)]))
+297 
+298     self.assert\_(tests\_in\_iteration1 != tests\_in\_iteration2,
+299                  tests\_in\_iteration1)
+300     self.assert\_(tests\_in\_iteration1 != tests\_in\_iteration3,
+301                  tests\_in\_iteration1)
+302     self.assert\_(tests\_in\_iteration2 != tests\_in\_iteration3,
+303                  tests\_in\_iteration2)
+304 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Includes\+All\+Tests@{test\+Shuffle\+Includes\+All\+Tests}}
+\index{test\+Shuffle\+Includes\+All\+Tests@{test\+Shuffle\+Includes\+All\+Tests}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Includes\+All\+Tests(self)}{testShuffleIncludesAllTests(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Includes\+All\+Tests (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_ab9e25e62817f7cdbd32833f9b2be5794}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_ab9e25e62817f7cdbd32833f9b2be5794}
+
+\begin{DoxyCode}
+226   \textcolor{keyword}{def }testShuffleIncludesAllTests(self):
+227     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} ALL\_TESTS:
+228       self.assert\_(test \textcolor{keywordflow}{in} SHUFFLED\_ALL\_TESTS, \textcolor{stringliteral}{'%s is missing'} % (test,))
+229     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} ACTIVE\_TESTS:
+230       self.assert\_(test \textcolor{keywordflow}{in} SHUFFLED\_ACTIVE\_TESTS, \textcolor{stringliteral}{'%s is missing'} % (test,))
+231     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} FILTERED\_TESTS:
+232       self.assert\_(test \textcolor{keywordflow}{in} SHUFFLED\_FILTERED\_TESTS, \textcolor{stringliteral}{'%s is missing'} % (test,))
+233     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHARDED\_TESTS:
+234       self.assert\_(test \textcolor{keywordflow}{in} SHUFFLED\_SHARDED\_TESTS, \textcolor{stringliteral}{'%s is missing'} % (test,))
+235 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Leaves\+Death\+Tests\+At\+Front@{test\+Shuffle\+Leaves\+Death\+Tests\+At\+Front}}
+\index{test\+Shuffle\+Leaves\+Death\+Tests\+At\+Front@{test\+Shuffle\+Leaves\+Death\+Tests\+At\+Front}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Leaves\+Death\+Tests\+At\+Front(self)}{testShuffleLeavesDeathTestsAtFront(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Leaves\+Death\+Tests\+At\+Front (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a6fa91b262595e35bd3e9b52e188dc634}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a6fa91b262595e35bd3e9b52e188dc634}
+
+\begin{DoxyCode}
+236   \textcolor{keyword}{def }testShuffleLeavesDeathTestsAtFront(self):
+237     non\_death\_test\_found = \textcolor{keyword}{False}
+238     \textcolor{keywordflow}{for} test \textcolor{keywordflow}{in} SHUFFLED\_ACTIVE\_TESTS:
+239       \textcolor{keywordflow}{if} \textcolor{stringliteral}{'DeathTest.'} \textcolor{keywordflow}{in} test:
+240         self.assert\_(\textcolor{keywordflow}{not} non\_death\_test\_found,
+241                      \textcolor{stringliteral}{'%s appears after a non-death test'} % (test,))
+242       \textcolor{keywordflow}{else}:
+243         non\_death\_test\_found = \textcolor{keyword}{True}
+244 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Preserves\+Number\+Of\+Tests@{test\+Shuffle\+Preserves\+Number\+Of\+Tests}}
+\index{test\+Shuffle\+Preserves\+Number\+Of\+Tests@{test\+Shuffle\+Preserves\+Number\+Of\+Tests}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Preserves\+Number\+Of\+Tests(self)}{testShufflePreservesNumberOfTests(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Preserves\+Number\+Of\+Tests (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_aafc33d6129c37043ef5c95dbe766a8db}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_aafc33d6129c37043ef5c95dbe766a8db}
+
+\begin{DoxyCode}
+175   \textcolor{keyword}{def }testShufflePreservesNumberOfTests(self):
+176     self.assertEqual(len(ALL\_TESTS), len(SHUFFLED\_ALL\_TESTS))
+177     self.assertEqual(len(ACTIVE\_TESTS), len(SHUFFLED\_ACTIVE\_TESTS))
+178     self.assertEqual(len(FILTERED\_TESTS), len(SHUFFLED\_FILTERED\_TESTS))
+179     self.assertEqual(len(SHARDED\_TESTS), len(SHUFFLED\_SHARDED\_TESTS))
+180 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Restores\+Order\+After\+Each\+Iteration@{test\+Shuffle\+Restores\+Order\+After\+Each\+Iteration}}
+\index{test\+Shuffle\+Restores\+Order\+After\+Each\+Iteration@{test\+Shuffle\+Restores\+Order\+After\+Each\+Iteration}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Restores\+Order\+After\+Each\+Iteration(self)}{testShuffleRestoresOrderAfterEachIteration(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Restores\+Order\+After\+Each\+Iteration (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a77b83a9870ad8d68524e1177f5320fb0}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_a77b83a9870ad8d68524e1177f5320fb0}
+
+\begin{DoxyCode}
+261   \textcolor{keyword}{def }testShuffleRestoresOrderAfterEachIteration(self):
+262     \textcolor{comment}{# Get the test lists in all 3 iterations, using random seed 1, 2,}
+263     \textcolor{comment}{# and 3 respectively.  Google Test picks a different seed in each}
+264     \textcolor{comment}{# iteration, and this test depends on the current implementation}
+265     \textcolor{comment}{# picking successive numbers.  This dependency is not ideal, but}
+266     \textcolor{comment}{# makes the test much easier to write.}
+267     [tests\_in\_iteration1, tests\_in\_iteration2, tests\_in\_iteration3] = (
+268         \hyperlink{namespacegtest__shuffle__test_a18c7606bf0d41acb73a4a6a2994d36fc}{GetTestsForAllIterations}(
+269             \{\}, [\hyperlink{namespacegtest__shuffle__test_ab593e060bf2a9b2f0cb0dc8e18eb2088}{ShuffleFlag}(), \hyperlink{namespacegtest__shuffle__test_aaf2a94c748f266c4267ac7e7bb3451fd}{RandomSeedFlag}(1), 
+      \hyperlink{namespacegtest__shuffle__test_a193f6cd2eeb35e7925dca6d8f72f75d3}{RepeatFlag}(3)]))
+270 
+271     \textcolor{comment}{# Make sure running the tests with random seed 1 gets the same}
+272     \textcolor{comment}{# order as in iteration 1 above.}
+273     [tests\_with\_seed1] = \hyperlink{namespacegtest__shuffle__test_a18c7606bf0d41acb73a4a6a2994d36fc}{GetTestsForAllIterations}(
+274         \{\}, [\hyperlink{namespacegtest__shuffle__test_ab593e060bf2a9b2f0cb0dc8e18eb2088}{ShuffleFlag}(), \hyperlink{namespacegtest__shuffle__test_aaf2a94c748f266c4267ac7e7bb3451fd}{RandomSeedFlag}(1)])
+275     self.assertEqual(tests\_in\_iteration1, tests\_with\_seed1)
+276 
+277     \textcolor{comment}{# Make sure running the tests with random seed 2 gets the same}
+278     \textcolor{comment}{# order as in iteration 2 above.  Success means that Google Test}
+279     \textcolor{comment}{# correctly restores the test order before re-shuffling at the}
+280     \textcolor{comment}{# beginning of iteration 2.}
+281     [tests\_with\_seed2] = \hyperlink{namespacegtest__shuffle__test_a18c7606bf0d41acb73a4a6a2994d36fc}{GetTestsForAllIterations}(
+282         \{\}, [\hyperlink{namespacegtest__shuffle__test_ab593e060bf2a9b2f0cb0dc8e18eb2088}{ShuffleFlag}(), \hyperlink{namespacegtest__shuffle__test_aaf2a94c748f266c4267ac7e7bb3451fd}{RandomSeedFlag}(2)])
+283     self.assertEqual(tests\_in\_iteration2, tests\_with\_seed2)
+284 
+285     \textcolor{comment}{# Make sure running the tests with random seed 3 gets the same}
+286     \textcolor{comment}{# order as in iteration 3 above.  Success means that Google Test}
+287     \textcolor{comment}{# correctly restores the test order before re-shuffling at the}
+288     \textcolor{comment}{# beginning of iteration 3.}
+289     [tests\_with\_seed3] = \hyperlink{namespacegtest__shuffle__test_a18c7606bf0d41acb73a4a6a2994d36fc}{GetTestsForAllIterations}(
+290         \{\}, [\hyperlink{namespacegtest__shuffle__test_ab593e060bf2a9b2f0cb0dc8e18eb2088}{ShuffleFlag}(), \hyperlink{namespacegtest__shuffle__test_aaf2a94c748f266c4267ac7e7bb3451fd}{RandomSeedFlag}(3)])
+291     self.assertEqual(tests\_in\_iteration3, tests\_with\_seed3)
+292 
+\end{DoxyCode}
+\index{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}!test\+Shuffle\+Sharded\+Tests\+Preserves\+Partition@{test\+Shuffle\+Sharded\+Tests\+Preserves\+Partition}}
+\index{test\+Shuffle\+Sharded\+Tests\+Preserves\+Partition@{test\+Shuffle\+Sharded\+Tests\+Preserves\+Partition}!gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test@{gtest\+\_\+shuffle\+\_\+test\+::\+G\+Test\+Shuffle\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Shuffle\+Sharded\+Tests\+Preserves\+Partition(self)}{testShuffleShardedTestsPreservesPartition(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+shuffle\+\_\+test.\+G\+Test\+Shuffle\+Unit\+Test.\+test\+Shuffle\+Sharded\+Tests\+Preserves\+Partition (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__shuffle__test_1_1GTestShuffleUnitTest_abd33c5ef01ce6d1d025ebcc816d47c19}{}\label{classgtest__shuffle__test_1_1GTestShuffleUnitTest_abd33c5ef01ce6d1d025ebcc816d47c19}
+
+\begin{DoxyCode}
+305   \textcolor{keyword}{def }testShuffleShardedTestsPreservesPartition(self):
+306     \textcolor{comment}{# If we run M tests on N shards, the same M tests should be run in}
+307     \textcolor{comment}{# total, regardless of the random seeds used by the shards.}
+308     [tests1] = \hyperlink{namespacegtest__shuffle__test_a18c7606bf0d41acb73a4a6a2994d36fc}{GetTestsForAllIterations}(\{TOTAL\_SHARDS\_ENV\_VAR: \textcolor{stringliteral}{'3'},
+309                                          SHARD\_INDEX\_ENV\_VAR: \textcolor{stringliteral}{'0'}\},
+310                                         [\hyperlink{namespacegtest__shuffle__test_ab593e060bf2a9b2f0cb0dc8e18eb2088}{ShuffleFlag}(), 
+      \hyperlink{namespacegtest__shuffle__test_aaf2a94c748f266c4267ac7e7bb3451fd}{RandomSeedFlag}(1)])
+311     [tests2] = \hyperlink{namespacegtest__shuffle__test_a18c7606bf0d41acb73a4a6a2994d36fc}{GetTestsForAllIterations}(\{TOTAL\_SHARDS\_ENV\_VAR: \textcolor{stringliteral}{'3'},
+312                                          SHARD\_INDEX\_ENV\_VAR: \textcolor{stringliteral}{'1'}\},
+313                                         [\hyperlink{namespacegtest__shuffle__test_ab593e060bf2a9b2f0cb0dc8e18eb2088}{ShuffleFlag}(), 
+      \hyperlink{namespacegtest__shuffle__test_aaf2a94c748f266c4267ac7e7bb3451fd}{RandomSeedFlag}(20)])
+314     [tests3] = \hyperlink{namespacegtest__shuffle__test_a18c7606bf0d41acb73a4a6a2994d36fc}{GetTestsForAllIterations}(\{TOTAL\_SHARDS\_ENV\_VAR: \textcolor{stringliteral}{'3'},
+315                                          SHARD\_INDEX\_ENV\_VAR: \textcolor{stringliteral}{'2'}\},
+316                                         [\hyperlink{namespacegtest__shuffle__test_ab593e060bf2a9b2f0cb0dc8e18eb2088}{ShuffleFlag}(), 
+      \hyperlink{namespacegtest__shuffle__test_aaf2a94c748f266c4267ac7e7bb3451fd}{RandomSeedFlag}(25)])
+317     sorted\_sharded\_tests = tests1 + tests2 + tests3
+318     sorted\_sharded\_tests.sort()
+319     sorted\_active\_tests = []
+320     sorted\_active\_tests.extend(ACTIVE\_TESTS)
+321     sorted\_active\_tests.sort()
+322     self.assertEqual(sorted\_active\_tests, sorted\_sharded\_tests)
+323 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__shuffle__test_8py}{gtest\+\_\+shuffle\+\_\+test.\+py}\end{DoxyCompactItemize}

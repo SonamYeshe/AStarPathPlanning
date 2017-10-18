@@ -1,0 +1,70 @@
+\hypertarget{sample1_8h}{}\section{vendor/googletest/googletest/samples/sample1.h File Reference}
+\label{sample1_8h}\index{vendor/googletest/googletest/samples/sample1.\+h@{vendor/googletest/googletest/samples/sample1.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sample1_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sample1_8h_a0e7da4d7a69c5b5afb707807aa177017}{Factorial} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\item 
+bool \hyperlink{sample1_8h_a7093217f5edc11fe277d03bd064e5f11}{Is\+Prime} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sample1.\+h@{sample1.\+h}!Factorial@{Factorial}}
+\index{Factorial@{Factorial}!sample1.\+h@{sample1.\+h}}
+\subsubsection[{\texorpdfstring{Factorial(int n)}{Factorial(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}int Factorial (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{sample1_8h_a0e7da4d7a69c5b5afb707807aa177017}{}\label{sample1_8h_a0e7da4d7a69c5b5afb707807aa177017}
+
+\begin{DoxyCode}
+37                      \{
+38   \textcolor{keywordtype}{int} result = 1;
+39   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 1; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} <= \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}++) \{
+40     result *= \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i};
+41   \}
+42 
+43   \textcolor{keywordflow}{return} result;
+44 \}
+\end{DoxyCode}
+\index{sample1.\+h@{sample1.\+h}!Is\+Prime@{Is\+Prime}}
+\index{Is\+Prime@{Is\+Prime}!sample1.\+h@{sample1.\+h}}
+\subsubsection[{\texorpdfstring{Is\+Prime(int n)}{IsPrime(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Is\+Prime (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{sample1_8h_a7093217f5edc11fe277d03bd064e5f11}{}\label{sample1_8h_a7093217f5edc11fe277d03bd064e5f11}
+
+\begin{DoxyCode}
+47                     \{
+48   \textcolor{comment}{// Trivial case 1: small numbers}
+49   \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} <= 1) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+50 
+51   \textcolor{comment}{// Trivial case 2: even numbers}
+52   \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} % 2 == 0) \textcolor{keywordflow}{return} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} == 2;
+53 
+54   \textcolor{comment}{// Now, we have that n is odd and n >= 3.}
+55 
+56   \textcolor{comment}{// Try to divide n by every odd number i, starting from 3}
+57   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 3; ; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} += 2) \{
+58     \textcolor{comment}{// We only have to try i up to the squre root of n}
+59     \textcolor{keywordflow}{if} (\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} > \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}/\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \textcolor{keywordflow}{break};
+60 
+61     \textcolor{comment}{// Now, we have i <= n/i < n.}
+62     \textcolor{comment}{// If n is divisible by i, n is not prime.}
+63     \textcolor{keywordflow}{if} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} % \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} == 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+64   \}
+65 
+66   \textcolor{comment}{// n has no integer factor in the range (1, n), and thus is prime.}
+67   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+68 \}
+\end{DoxyCode}

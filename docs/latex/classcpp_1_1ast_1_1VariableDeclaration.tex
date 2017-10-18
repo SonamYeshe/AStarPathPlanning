@@ -1,0 +1,128 @@
+\hypertarget{classcpp_1_1ast_1_1VariableDeclaration}{}\section{cpp.\+ast.\+Variable\+Declaration Class Reference}
+\label{classcpp_1_1ast_1_1VariableDeclaration}\index{cpp.\+ast.\+Variable\+Declaration@{cpp.\+ast.\+Variable\+Declaration}}
+
+
+Inheritance diagram for cpp.\+ast.\+Variable\+Declaration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classcpp_1_1ast_1_1VariableDeclaration__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cpp.\+ast.\+Variable\+Declaration\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classcpp_1_1ast_1_1VariableDeclaration__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classcpp_1_1ast_1_1VariableDeclaration_adc19909b6a3b2c2978b02044634fc13f}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classcpp_1_1ast_1_1Node_a7b2aa97e6a049bb1a93aea48c48f1f44}{start}, \hyperlink{classcpp_1_1ast_1_1Node_a3c5e5246ccf619df28eca02e29d69647}{end}, \hyperlink{classcpp_1_1ast_1_1__GenericDeclaration_af774f4729dfd78d0538a6782fe8514c1}{name}, var\+\_\+type, \hyperlink{classcpp_1_1ast_1_1VariableDeclaration_a7c259ca42a06e264679e8ab66e7ea374}{initial\+\_\+value}, \hyperlink{classcpp_1_1ast_1_1__GenericDeclaration_a8aee3f11b37449d54b42a78e0a689f46}{namespace})
+\item 
+def \hyperlink{classcpp_1_1ast_1_1VariableDeclaration_aaa1cae7cf191e6d561d861cd053a0bf4}{Requires} (self, \hyperlink{classnode}{node})
+\item 
+def \hyperlink{classcpp_1_1ast_1_1VariableDeclaration_a047aa4afddf7b7823a4095cea9477a21}{To\+String} (self)
+\item 
+def \hyperlink{classcpp_1_1ast_1_1VariableDeclaration_a9f5c15731d1bdd8fe14c2a575e2f4fe6}{\+\_\+\+\_\+str\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcpp_1_1ast_1_1VariableDeclaration_a8c7cc8578ea12f93c6e1c5c6ef4ddf99}{type}
+\item 
+\hyperlink{classcpp_1_1ast_1_1VariableDeclaration_a7c259ca42a06e264679e8ab66e7ea374}{initial\+\_\+value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, start, end, name, var\+\_\+type, initial\+\_\+value, namespace)}{__init__(self, start, end, name, var_type, initial_value, namespace)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+ast.\+Variable\+Declaration.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{start, }
+\item[{}]{end, }
+\item[{}]{name, }
+\item[{}]{var\+\_\+type, }
+\item[{}]{initial\+\_\+value, }
+\item[{}]{namespace}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1ast_1_1VariableDeclaration_adc19909b6a3b2c2978b02044634fc13f}{}\label{classcpp_1_1ast_1_1VariableDeclaration_adc19909b6a3b2c2978b02044634fc13f}
+
+\begin{DoxyCode}
+253     \textcolor{keyword}{def }\_\_init\_\_(self, start, end, name, var\_type, initial\_value, namespace):
+254         \_GenericDeclaration.\_\_init\_\_(self, start, end, name, namespace)
+255         self.type = var\_type
+256         self.initial\_value = initial\_value
+257 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}!\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+str\+\_\+\+\_\+@{\+\_\+\+\_\+str\+\_\+\+\_\+}!cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+str\+\_\+\+\_\+(self)}{__str__(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+ast.\+Variable\+Declaration.\+\_\+\+\_\+str\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1ast_1_1VariableDeclaration_a9f5c15731d1bdd8fe14c2a575e2f4fe6}{}\label{classcpp_1_1ast_1_1VariableDeclaration_a9f5c15731d1bdd8fe14c2a575e2f4fe6}
+
+\begin{DoxyCode}
+269     \textcolor{keyword}{def }\_\_str\_\_(self):
+270         \textcolor{keywordflow}{return} self.\_StringHelper(self.\_\_class\_\_.\_\_name\_\_, self.ToString())
+271 
+272 
+\end{DoxyCode}
+\index{cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}!Requires@{Requires}}
+\index{Requires@{Requires}!cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}}
+\subsubsection[{\texorpdfstring{Requires(self, node)}{Requires(self, node)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+ast.\+Variable\+Declaration.\+Requires (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1ast_1_1VariableDeclaration_aaa1cae7cf191e6d561d861cd053a0bf4}{}\label{classcpp_1_1ast_1_1VariableDeclaration_aaa1cae7cf191e6d561d861cd053a0bf4}
+
+\begin{DoxyCode}
+258     \textcolor{keyword}{def }Requires(self, node):
+259         \textcolor{comment}{# TODO(nnorwitz): handle namespaces, etc.}
+260         \textcolor{keywordflow}{return} self.type.name == node.name
+261 
+\end{DoxyCode}
+\index{cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}}
+\subsubsection[{\texorpdfstring{To\+String(self)}{ToString(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+ast.\+Variable\+Declaration.\+To\+String (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1ast_1_1VariableDeclaration_a047aa4afddf7b7823a4095cea9477a21}{}\label{classcpp_1_1ast_1_1VariableDeclaration_a047aa4afddf7b7823a4095cea9477a21}
+\begin{DoxyVerb}Return a string that tries to reconstitute the variable decl.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+262     \textcolor{keyword}{def }ToString(self):
+263         \textcolor{stringliteral}{"""Return a string that tries to reconstitute the variable decl."""}
+264         suffix = \textcolor{stringliteral}{'%s %s'} % (self.type, self.name)
+265         \textcolor{keywordflow}{if} self.initial\_value:
+266             suffix += \textcolor{stringliteral}{' = '} + self.initial\_value
+267         \textcolor{keywordflow}{return} suffix
+268 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}!initial\+\_\+value@{initial\+\_\+value}}
+\index{initial\+\_\+value@{initial\+\_\+value}!cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}}
+\subsubsection[{\texorpdfstring{initial\+\_\+value}{initial_value}}]{\setlength{\rightskip}{0pt plus 5cm}cpp.\+ast.\+Variable\+Declaration.\+initial\+\_\+value}\hypertarget{classcpp_1_1ast_1_1VariableDeclaration_a7c259ca42a06e264679e8ab66e7ea374}{}\label{classcpp_1_1ast_1_1VariableDeclaration_a7c259ca42a06e264679e8ab66e7ea374}
+\index{cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}!type@{type}}
+\index{type@{type}!cpp\+::ast\+::\+Variable\+Declaration@{cpp\+::ast\+::\+Variable\+Declaration}}
+\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}cpp.\+ast.\+Variable\+Declaration.\+type}\hypertarget{classcpp_1_1ast_1_1VariableDeclaration_a8c7cc8578ea12f93c6e1c5c6ef4ddf99}{}\label{classcpp_1_1ast_1_1VariableDeclaration_a8c7cc8578ea12f93c6e1c5c6ef4ddf99}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/scripts/generator/cpp/\hyperlink{ast_8py}{ast.\+py}\end{DoxyCompactItemize}

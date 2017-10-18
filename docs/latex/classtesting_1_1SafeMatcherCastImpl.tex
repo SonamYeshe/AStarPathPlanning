@@ -1,0 +1,69 @@
+\hypertarget{classtesting_1_1SafeMatcherCastImpl}{}\section{testing\+:\+:Safe\+Matcher\+Cast\+Impl$<$ T $>$ Class Template Reference}
+\label{classtesting_1_1SafeMatcherCastImpl}\index{testing\+::\+Safe\+Matcher\+Cast\+Impl$<$ T $>$@{testing\+::\+Safe\+Matcher\+Cast\+Impl$<$ T $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename M $>$ }\\static \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ T $>$ \hyperlink{classtesting_1_1SafeMatcherCastImpl_a6ceab2bd71bff1677ed184eb2afa8653}{Cast} (const M \&polymorphic\+\_\+matcher\+\_\+or\+\_\+value)
+\item 
+{\footnotesize template$<$typename U $>$ }\\static \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ T $>$ \hyperlink{classtesting_1_1SafeMatcherCastImpl_a034691f9eab929b8b25c33f13937ab95}{Cast} (const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ U $>$ \&matcher)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::\+Safe\+Matcher\+Cast\+Impl@{testing\+::\+Safe\+Matcher\+Cast\+Impl}!Cast@{Cast}}
+\index{Cast@{Cast}!testing\+::\+Safe\+Matcher\+Cast\+Impl@{testing\+::\+Safe\+Matcher\+Cast\+Impl}}
+\subsubsection[{\texorpdfstring{Cast(const M \&polymorphic\+\_\+matcher\+\_\+or\+\_\+value)}{Cast(const M &polymorphic_matcher_or_value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename M $>$ static {\bf Matcher}$<$T$>$ {\bf testing\+::\+Safe\+Matcher\+Cast\+Impl}$<$ T $>$\+::Cast (
+\begin{DoxyParamCaption}
+\item[{const M \&}]{polymorphic\+\_\+matcher\+\_\+or\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1SafeMatcherCastImpl_a6ceab2bd71bff1677ed184eb2afa8653}{}\label{classtesting_1_1SafeMatcherCastImpl_a6ceab2bd71bff1677ed184eb2afa8653}
+
+\begin{DoxyCode}
+627                                                                        \{
+628     \textcolor{keywordflow}{return} \hyperlink{classtesting_1_1internal_1_1MatcherCastImpl_a488bb69a7845f9198bbb198d8dbe41a8}{internal::MatcherCastImpl<T, M>::Cast}(
+      polymorphic\_matcher\_or\_value);
+629   \}
+\end{DoxyCode}
+\index{testing\+::\+Safe\+Matcher\+Cast\+Impl@{testing\+::\+Safe\+Matcher\+Cast\+Impl}!Cast@{Cast}}
+\index{Cast@{Cast}!testing\+::\+Safe\+Matcher\+Cast\+Impl@{testing\+::\+Safe\+Matcher\+Cast\+Impl}}
+\subsubsection[{\texorpdfstring{Cast(const Matcher$<$ U $>$ \&matcher)}{Cast(const Matcher< U > &matcher)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ template$<$typename U $>$ static {\bf Matcher}$<$T$>$ {\bf testing\+::\+Safe\+Matcher\+Cast\+Impl}$<$ T $>$\+::Cast (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matcher}$<$ U $>$ \&}]{matcher}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1SafeMatcherCastImpl_a034691f9eab929b8b25c33f13937ab95}{}\label{classtesting_1_1SafeMatcherCastImpl_a034691f9eab929b8b25c33f13937ab95}
+
+\begin{DoxyCode}
+641                                                            \{
+642     \textcolor{comment}{// Enforce that T can be implicitly converted to U.}
+643     \hyperlink{gtest-port_8h_ae1f37dc71d5daa6fb49ca1b6047d4a8c}{GTEST\_COMPILE\_ASSERT\_}((
+      \hyperlink{classtesting_1_1internal_1_1ImplicitlyConvertible_aea51cecabca681fb75659e224771b7b7}{internal::ImplicitlyConvertible<T, U>::value}),
+644                           T\_must\_be\_implicitly\_convertible\_to\_U);
+645     \textcolor{comment}{// Enforce that we are not converting a non-reference type T to a reference}
+646     \textcolor{comment}{// type U.}
+647     \hyperlink{gtest-port_8h_ae1f37dc71d5daa6fb49ca1b6047d4a8c}{GTEST\_COMPILE\_ASSERT\_}(
+648         \hyperlink{structtesting_1_1internal_1_1bool__constant_a499fba6576296b04d99690a486424b32}{internal::is\_reference<T>::value} || !
+      \hyperlink{structtesting_1_1internal_1_1bool__constant_a499fba6576296b04d99690a486424b32}{internal::is\_reference<U>::value},
+649         cannot\_convert\_non\_referentce\_arg\_to\_reference);
+650     \textcolor{comment}{// In case both T and U are arithmetic types, enforce that the}
+651     \textcolor{comment}{// conversion is not lossy.}
+652     \textcolor{keyword}{typedef} \hyperlink{gtest-internal_8h_a874567b176266188fabfffb8393267ce}{GTEST\_REMOVE\_REFERENCE\_AND\_CONST\_}(T) RawT;
+653     typedef \hyperlink{gtest-internal_8h_a874567b176266188fabfffb8393267ce}{GTEST\_REMOVE\_REFERENCE\_AND\_CONST\_}(U) RawU;
+654     \hyperlink{namespaceupload_a985aa9a71de3eb507344df65700c696d}{const} \textcolor{keywordtype}{bool} kTIsOther = \hyperlink{gmock-internal-utils_8h_a72b01bdd08b78e927270885ca880ead4}{GMOCK\_KIND\_OF\_}(RawT) == internal::
+      \hyperlink{namespacetesting_1_1internal_aa8747bda20137c9aa7f846dee830e686ad47f29150ab7a9ec8ce2491f44537347}{kOther};
+655     \hyperlink{namespaceupload_a985aa9a71de3eb507344df65700c696d}{const} \textcolor{keywordtype}{bool} kUIsOther = \hyperlink{gmock-internal-utils_8h_a72b01bdd08b78e927270885ca880ead4}{GMOCK\_KIND\_OF\_}(RawU) == internal::kOther;
+656     \hyperlink{gtest-port_8h_ae1f37dc71d5daa6fb49ca1b6047d4a8c}{GTEST\_COMPILE\_ASSERT\_}(
+657         kTIsOther || kUIsOther ||
+658         (internal::LosslessArithmeticConvertible<RawT, RawU>::value),
+659         conversion\_of\_arithmetic\_types\_must\_be\_lossless);
+660     return \hyperlink{namespacetesting_a8234d15eee99b135a7fdf2141a2ebe1f}{MatcherCast}<T>(matcher);
+661   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

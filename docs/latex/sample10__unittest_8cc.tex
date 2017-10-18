@@ -1,0 +1,65 @@
+\hypertarget{sample10__unittest_8cc}{}\section{vendor/googletest/googletest/samples/sample10\+\_\+unittest.cc File Reference}
+\label{sample10__unittest_8cc}\index{vendor/googletest/googletest/samples/sample10\+\_\+unittest.\+cc@{vendor/googletest/googletest/samples/sample10\+\_\+unittest.\+cc}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for sample10\+\_\+unittest.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sample10__unittest_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sample10__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sample10\+\_\+unittest.\+cc@{sample10\+\_\+unittest.\+cc}!main@{main}}
+\index{main@{main}!sample10\+\_\+unittest.\+cc@{sample10\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{sample10__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{sample10__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+112                                 \{
+113   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{InitGoogleTest}(&argc, argv);
+114 
+115   \textcolor{keywordtype}{bool} check\_for\_leaks = \textcolor{keyword}{false};
+116   \textcolor{keywordflow}{if} (argc > 1 && strcmp(argv[1], \textcolor{stringliteral}{"--check\_for\_leaks"}) == 0 )
+117     check\_for\_leaks = \textcolor{keyword}{true};
+118   \textcolor{keywordflow}{else}
+119     printf(\textcolor{stringliteral}{"%s\(\backslash\)n"}, \textcolor{stringliteral}{"Run this program with --check\_for\_leaks to enable "}
+120            \textcolor{stringliteral}{"custom leak checking in the tests."});
+121 
+122   \textcolor{comment}{// If we are given the --check\_for\_leaks command line flag, installs the}
+123   \textcolor{comment}{// leak checker.}
+124   \textcolor{keywordflow}{if} (check\_for\_leaks) \{
+125     TestEventListeners& listeners = UnitTest::GetInstance()->listeners();
+126 
+127     \textcolor{comment}{// Adds the leak checker to the end of the test event listener list,}
+128     \textcolor{comment}{// after the default text output printer and the default XML report}
+129     \textcolor{comment}{// generator.}
+130     \textcolor{comment}{//}
+131     \textcolor{comment}{// The order is important - it ensures that failures generated in the}
+132     \textcolor{comment}{// leak checker's OnTestEnd() method are processed by the text and XML}
+133     \textcolor{comment}{// printers *before* their OnTestEnd() methods are called, such that}
+134     \textcolor{comment}{// they are attributed to the right test. Remember that a listener}
+135     \textcolor{comment}{// receives an OnXyzStart event *after* listeners preceding it in the}
+136     \textcolor{comment}{// list received that event, and receives an OnXyzEnd event *before*}
+137     \textcolor{comment}{// listeners preceding it.}
+138     \textcolor{comment}{//}
+139     \textcolor{comment}{// We don't need to worry about deleting the new listener later, as}
+140     \textcolor{comment}{// Google Test will do it.}
+141     listeners.Append(\textcolor{keyword}{new} LeakChecker);
+142   \}
+143   \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+144 \}
+\end{DoxyCode}

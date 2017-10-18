@@ -1,0 +1,75 @@
+\hypertarget{classtesting_1_1internal_1_1GTestLog}{}\section{testing\+:\+:internal\+:\+:G\+Test\+Log Class Reference}
+\label{classtesting_1_1internal_1_1GTestLog}\index{testing\+::internal\+::\+G\+Test\+Log@{testing\+::internal\+::\+G\+Test\+Log}}
+
+
+{\ttfamily \#include $<$gtest-\/port.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1GTestLog_a364691bf972983a59cfa2891062a64af}{G\+Test\+Log} (\hyperlink{namespacetesting_1_1internal_aa6255ef3b023c5b4e1a2198d887fb977}{G\+Test\+Log\+Severity} severity, const char $\ast$file, int line)
+\item 
+\hyperlink{classtesting_1_1internal_1_1GTestLog_a978a099703bbaa0f380216e8d7ee03d3}{$\sim$\+G\+Test\+Log} ()
+\item 
+\+::std\+::ostream \& \hyperlink{classtesting_1_1internal_1_1GTestLog_aebb92e67d98eca69f0347d5121dab27a}{Get\+Stream} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+G\+Test\+Log@{testing\+::internal\+::\+G\+Test\+Log}!G\+Test\+Log@{G\+Test\+Log}}
+\index{G\+Test\+Log@{G\+Test\+Log}!testing\+::internal\+::\+G\+Test\+Log@{testing\+::internal\+::\+G\+Test\+Log}}
+\subsubsection[{\texorpdfstring{G\+Test\+Log(\+G\+Test\+Log\+Severity severity, const char $\ast$file, int line)}{GTestLog(GTestLogSeverity severity, const char *file, int line)}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::internal\+::\+G\+Test\+Log\+::\+G\+Test\+Log (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Test\+Log\+Severity}}]{severity, }
+\item[{const char $\ast$}]{file, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1internal_1_1GTestLog_a364691bf972983a59cfa2891062a64af}{}\label{classtesting_1_1internal_1_1GTestLog_a364691bf972983a59cfa2891062a64af}
+
+\begin{DoxyCode}
+909     : severity\_(severity) \{
+910   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} marker =
+911       severity == \hyperlink{namespacetesting_1_1internal_aa6255ef3b023c5b4e1a2198d887fb977aff315e0913fcda86fe4de882bf5e33e9}{GTEST\_INFO} ?    \textcolor{stringliteral}{"[  INFO ]"} :
+912       severity == \hyperlink{namespacetesting_1_1internal_aa6255ef3b023c5b4e1a2198d887fb977a7a051bc2794f15a4bf0eab40562a304c}{GTEST\_WARNING} ? \textcolor{stringliteral}{"[WARNING]"} :
+913       severity == \hyperlink{namespacetesting_1_1internal_aa6255ef3b023c5b4e1a2198d887fb977a651e9cd2a904e0c8210536271b875f75}{GTEST\_ERROR} ?   \textcolor{stringliteral}{"[ ERROR ]"} : \textcolor{stringliteral}{"[ FATAL ]"};
+914   \hyperlink{classtesting_1_1internal_1_1GTestLog_aebb92e67d98eca69f0347d5121dab27a}{GetStream}() << ::std::endl << marker << \textcolor{stringliteral}{" "}
+915               << \hyperlink{namespacetesting_1_1internal_a31b7c3abed4a7c395f42c61e993989f4}{FormatFileLocation}(file, line).c\_str() << \textcolor{stringliteral}{": "};
+916 \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+G\+Test\+Log@{testing\+::internal\+::\+G\+Test\+Log}!````~G\+Test\+Log@{$\sim$\+G\+Test\+Log}}
+\index{````~G\+Test\+Log@{$\sim$\+G\+Test\+Log}!testing\+::internal\+::\+G\+Test\+Log@{testing\+::internal\+::\+G\+Test\+Log}}
+\subsubsection[{\texorpdfstring{$\sim$\+G\+Test\+Log()}{~GTestLog()}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::internal\+::\+G\+Test\+Log\+::$\sim$\+G\+Test\+Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1internal_1_1GTestLog_a978a099703bbaa0f380216e8d7ee03d3}{}\label{classtesting_1_1internal_1_1GTestLog_a978a099703bbaa0f380216e8d7ee03d3}
+
+\begin{DoxyCode}
+919                     \{
+920   \hyperlink{classtesting_1_1internal_1_1GTestLog_aebb92e67d98eca69f0347d5121dab27a}{GetStream}() << ::std::endl;
+921   \textcolor{keywordflow}{if} (severity\_ == \hyperlink{namespacetesting_1_1internal_aa6255ef3b023c5b4e1a2198d887fb977a75063567740f6bf7da419b1b9197b12e}{GTEST\_FATAL}) \{
+922     fflush(stderr);
+923     \hyperlink{namespacetesting_1_1internal_1_1posix_a69b8278c59359dd6a6f941b4643db9fb}{posix::Abort}();
+924   \}
+925 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+G\+Test\+Log@{testing\+::internal\+::\+G\+Test\+Log}!Get\+Stream@{Get\+Stream}}
+\index{Get\+Stream@{Get\+Stream}!testing\+::internal\+::\+G\+Test\+Log@{testing\+::internal\+::\+G\+Test\+Log}}
+\subsubsection[{\texorpdfstring{Get\+Stream()}{GetStream()}}]{\setlength{\rightskip}{0pt plus 5cm}\+::std\+::ostream\& testing\+::internal\+::\+G\+Test\+Log\+::\+Get\+Stream (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1GTestLog_aebb92e67d98eca69f0347d5121dab27a}{}\label{classtesting_1_1internal_1_1GTestLog_aebb92e67d98eca69f0347d5121dab27a}
+
+\begin{DoxyCode}
+1267 \{ return ::std::cerr; \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/include/gtest/internal/\hyperlink{gtest-port_8h}{gtest-\/port.\+h}\item 
+vendor/googletest/googletest/src/\hyperlink{gtest-port_8cc}{gtest-\/port.\+cc}\end{DoxyCompactItemize}

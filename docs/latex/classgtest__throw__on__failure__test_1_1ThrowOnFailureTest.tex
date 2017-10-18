@@ -1,0 +1,201 @@
+\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest}{}\section{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test Class Reference}
+\label{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest}\index{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test}}
+
+
+Inheritance diagram for gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a29114050e4e9163d8b046451a9850839}{Run\+And\+Verify} (self, env\+\_\+var\+\_\+value, flag\+\_\+value, should\+\_\+fail)
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a596d5e2dbeb51751a6fb6d3852fdd54a}{test\+Default\+Behavior} (self)
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_af1cecdf19bf8ff7261e9f832c4d1b3ad}{test\+Throw\+On\+Failure\+Env\+Var} (self)
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_ae1383974161c2d1dc8b5e74ebc12db38}{test\+Throw\+On\+Failure\+Flag} (self)
+\item 
+def \hyperlink{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_ab63f8f491aeaaa04ba3fc7ae3bca6de8}{test\+Throw\+On\+Failure\+Flag\+Overrides\+Env\+Var} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Tests the throw-on-failure mode.\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}!Run\+And\+Verify@{Run\+And\+Verify}}
+\index{Run\+And\+Verify@{Run\+And\+Verify}!gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}}
+\subsubsection[{\texorpdfstring{Run\+And\+Verify(self, env\+\_\+var\+\_\+value, flag\+\_\+value, should\+\_\+fail)}{RunAndVerify(self, env_var_value, flag_value, should_fail)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test.\+Run\+And\+Verify (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{env\+\_\+var\+\_\+value, }
+\item[{}]{flag\+\_\+value, }
+\item[{}]{should\+\_\+fail}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a29114050e4e9163d8b046451a9850839}{}\label{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a29114050e4e9163d8b046451a9850839}
+\begin{DoxyVerb}Runs gtest_throw_on_failure_test_ and verifies that it does
+(or does not) exit with a non-zero code.
+
+Args:
+  env_var_value:    value of the GTEST_BREAK_ON_FAILURE environment
+                variable; None if the variable should be unset.
+  flag_value:       value of the --gtest_break_on_failure flag;
+                None if the flag should not be present.
+  should_fail:      True iff the program is expected to fail.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+83   \textcolor{keyword}{def }RunAndVerify(self, env\_var\_value, flag\_value, should\_fail):
+84     \textcolor{stringliteral}{"""Runs gtest\_throw\_on\_failure\_test\_ and verifies that it does}
+85 \textcolor{stringliteral}{    (or does not) exit with a non-zero code.}
+86 \textcolor{stringliteral}{}
+87 \textcolor{stringliteral}{    Args:}
+88 \textcolor{stringliteral}{      env\_var\_value:    value of the GTEST\_BREAK\_ON\_FAILURE environment}
+89 \textcolor{stringliteral}{                        variable; None if the variable should be unset.}
+90 \textcolor{stringliteral}{      flag\_value:       value of the --gtest\_break\_on\_failure flag;}
+91 \textcolor{stringliteral}{                        None if the flag should not be present.}
+92 \textcolor{stringliteral}{      should\_fail:      True iff the program is expected to fail.}
+93 \textcolor{stringliteral}{    """}
+94 
+95     \hyperlink{namespacegtest__throw__on__failure__test_a79d85cfffbf8e8381ba32483ddc305c0}{SetEnvVar}(THROW\_ON\_FAILURE, env\_var\_value)
+96 
+97     \textcolor{keywordflow}{if} env\_var\_value \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+98       env\_var\_value\_msg = \textcolor{stringliteral}{' is not set'}
+99     \textcolor{keywordflow}{else}:
+100       env\_var\_value\_msg = \textcolor{stringliteral}{'='} + env\_var\_value
+101 
+102     \textcolor{keywordflow}{if} flag\_value \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+103       flag = \textcolor{stringliteral}{''}
+104     \textcolor{keywordflow}{elif} flag\_value == \textcolor{stringliteral}{'0'}:
+105       flag = \textcolor{stringliteral}{'--%s=0'} % THROW\_ON\_FAILURE
+106     \textcolor{keywordflow}{else}:
+107       flag = \textcolor{stringliteral}{'--%s'} % THROW\_ON\_FAILURE
+108 
+109     command = [EXE\_PATH]
+110     \textcolor{keywordflow}{if} flag:
+111       command.append(flag)
+112 
+113     \textcolor{keywordflow}{if} should\_fail:
+114       should\_or\_not = \textcolor{stringliteral}{'should'}
+115     \textcolor{keywordflow}{else}:
+116       should\_or\_not = \textcolor{stringliteral}{'should not'}
+117 
+118     failed = \textcolor{keywordflow}{not} \hyperlink{namespacegtest__throw__on__failure__test_a8ffdd989cd023f53d37f4f7993c017fe}{Run}(command)
+119 
+120     \hyperlink{namespacegtest__throw__on__failure__test_a79d85cfffbf8e8381ba32483ddc305c0}{SetEnvVar}(THROW\_ON\_FAILURE, \textcolor{keywordtype}{None})
+121 
+122     msg = (\textcolor{stringliteral}{'when %s%s, an assertion failure in "%s" %s cause a non-zero '}
+123            \textcolor{stringliteral}{'exit code.'} %
+124            (THROW\_ON\_FAILURE, env\_var\_value\_msg, \textcolor{stringliteral}{' '}.join(command),
+125             should\_or\_not))
+126     self.assert\_(failed == should\_fail, msg)
+127 
+\end{DoxyCode}
+\index{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}!test\+Default\+Behavior@{test\+Default\+Behavior}}
+\index{test\+Default\+Behavior@{test\+Default\+Behavior}!gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}}
+\subsubsection[{\texorpdfstring{test\+Default\+Behavior(self)}{testDefaultBehavior(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test.\+test\+Default\+Behavior (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a596d5e2dbeb51751a6fb6d3852fdd54a}{}\label{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_a596d5e2dbeb51751a6fb6d3852fdd54a}
+\begin{DoxyVerb}Tests the behavior of the default mode.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+128   \textcolor{keyword}{def }testDefaultBehavior(self):
+129     \textcolor{stringliteral}{"""Tests the behavior of the default mode."""}
+130 
+131     self.RunAndVerify(env\_var\_value=\textcolor{keywordtype}{None}, flag\_value=\textcolor{keywordtype}{None}, should\_fail=\textcolor{keyword}{False})
+132 
+\end{DoxyCode}
+\index{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}!test\+Throw\+On\+Failure\+Env\+Var@{test\+Throw\+On\+Failure\+Env\+Var}}
+\index{test\+Throw\+On\+Failure\+Env\+Var@{test\+Throw\+On\+Failure\+Env\+Var}!gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}}
+\subsubsection[{\texorpdfstring{test\+Throw\+On\+Failure\+Env\+Var(self)}{testThrowOnFailureEnvVar(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test.\+test\+Throw\+On\+Failure\+Env\+Var (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_af1cecdf19bf8ff7261e9f832c4d1b3ad}{}\label{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_af1cecdf19bf8ff7261e9f832c4d1b3ad}
+\begin{DoxyVerb}Tests using the GTEST_THROW_ON_FAILURE environment variable.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+133   \textcolor{keyword}{def }testThrowOnFailureEnvVar(self):
+134     \textcolor{stringliteral}{"""Tests using the GTEST\_THROW\_ON\_FAILURE environment variable."""}
+135 
+136     self.RunAndVerify(env\_var\_value=\textcolor{stringliteral}{'0'},
+137                       flag\_value=\textcolor{keywordtype}{None},
+138                       should\_fail=\textcolor{keyword}{False})
+139     self.RunAndVerify(env\_var\_value=\textcolor{stringliteral}{'1'},
+140                       flag\_value=\textcolor{keywordtype}{None},
+141                       should\_fail=\textcolor{keyword}{True})
+142 
+\end{DoxyCode}
+\index{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}!test\+Throw\+On\+Failure\+Flag@{test\+Throw\+On\+Failure\+Flag}}
+\index{test\+Throw\+On\+Failure\+Flag@{test\+Throw\+On\+Failure\+Flag}!gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}}
+\subsubsection[{\texorpdfstring{test\+Throw\+On\+Failure\+Flag(self)}{testThrowOnFailureFlag(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test.\+test\+Throw\+On\+Failure\+Flag (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_ae1383974161c2d1dc8b5e74ebc12db38}{}\label{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_ae1383974161c2d1dc8b5e74ebc12db38}
+\begin{DoxyVerb}Tests using the --gtest_throw_on_failure flag.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+143   \textcolor{keyword}{def }testThrowOnFailureFlag(self):
+144     \textcolor{stringliteral}{"""Tests using the --gtest\_throw\_on\_failure flag."""}
+145 
+146     self.RunAndVerify(env\_var\_value=\textcolor{keywordtype}{None},
+147                       flag\_value=\textcolor{stringliteral}{'0'},
+148                       should\_fail=\textcolor{keyword}{False})
+149     self.RunAndVerify(env\_var\_value=\textcolor{keywordtype}{None},
+150                       flag\_value=\textcolor{stringliteral}{'1'},
+151                       should\_fail=\textcolor{keyword}{True})
+152 
+\end{DoxyCode}
+\index{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}!test\+Throw\+On\+Failure\+Flag\+Overrides\+Env\+Var@{test\+Throw\+On\+Failure\+Flag\+Overrides\+Env\+Var}}
+\index{test\+Throw\+On\+Failure\+Flag\+Overrides\+Env\+Var@{test\+Throw\+On\+Failure\+Flag\+Overrides\+Env\+Var}!gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test\+::\+Throw\+On\+Failure\+Test}}
+\subsubsection[{\texorpdfstring{test\+Throw\+On\+Failure\+Flag\+Overrides\+Env\+Var(self)}{testThrowOnFailureFlagOverridesEnvVar(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+Throw\+On\+Failure\+Test.\+test\+Throw\+On\+Failure\+Flag\+Overrides\+Env\+Var (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_ab63f8f491aeaaa04ba3fc7ae3bca6de8}{}\label{classgtest__throw__on__failure__test_1_1ThrowOnFailureTest_ab63f8f491aeaaa04ba3fc7ae3bca6de8}
+\begin{DoxyVerb}Tests that --gtest_throw_on_failure overrides GTEST_THROW_ON_FAILURE.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+153   \textcolor{keyword}{def }testThrowOnFailureFlagOverridesEnvVar(self):
+154     \textcolor{stringliteral}{"""Tests that --gtest\_throw\_on\_failure overrides GTEST\_THROW\_ON\_FAILURE."""}
+155 
+156     self.RunAndVerify(env\_var\_value=\textcolor{stringliteral}{'0'},
+157                       flag\_value=\textcolor{stringliteral}{'0'},
+158                       should\_fail=\textcolor{keyword}{False})
+159     self.RunAndVerify(env\_var\_value=\textcolor{stringliteral}{'0'},
+160                       flag\_value=\textcolor{stringliteral}{'1'},
+161                       should\_fail=\textcolor{keyword}{True})
+162     self.RunAndVerify(env\_var\_value=\textcolor{stringliteral}{'1'},
+163                       flag\_value=\textcolor{stringliteral}{'0'},
+164                       should\_fail=\textcolor{keyword}{False})
+165     self.RunAndVerify(env\_var\_value=\textcolor{stringliteral}{'1'},
+166                       flag\_value=\textcolor{stringliteral}{'1'},
+167                       should\_fail=\textcolor{keyword}{True})
+168 
+169 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__throw__on__failure__test_8py}{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+test.\+py}\end{DoxyCompactItemize}

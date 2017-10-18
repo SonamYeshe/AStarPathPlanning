@@ -1,0 +1,62 @@
+\hypertarget{classtesting_1_1internal_1_1MatcherAsPredicate}{}\section{testing\+:\+:internal\+:\+:Matcher\+As\+Predicate$<$ M $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1MatcherAsPredicate}\index{testing\+::internal\+::\+Matcher\+As\+Predicate$<$ M $>$@{testing\+::internal\+::\+Matcher\+As\+Predicate$<$ M $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1MatcherAsPredicate_a2d8ad258929496dd3dea00fdb8ce3c8a}{Matcher\+As\+Predicate} (M matcher)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classtesting_1_1internal_1_1MatcherAsPredicate_ac6347406b1d2cc241a7f1b86e2bfc922}{operator()} (const T \&x) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Matcher\+As\+Predicate@{testing\+::internal\+::\+Matcher\+As\+Predicate}!Matcher\+As\+Predicate@{Matcher\+As\+Predicate}}
+\index{Matcher\+As\+Predicate@{Matcher\+As\+Predicate}!testing\+::internal\+::\+Matcher\+As\+Predicate@{testing\+::internal\+::\+Matcher\+As\+Predicate}}
+\subsubsection[{\texorpdfstring{Matcher\+As\+Predicate(\+M matcher)}{MatcherAsPredicate(M matcher)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf testing\+::internal\+::\+Matcher\+As\+Predicate}$<$ M $>$\+::{\bf Matcher\+As\+Predicate} (
+\begin{DoxyParamCaption}
+\item[{M}]{matcher}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1MatcherAsPredicate_a2d8ad258929496dd3dea00fdb8ce3c8a}{}\label{classtesting_1_1internal_1_1MatcherAsPredicate_a2d8ad258929496dd3dea00fdb8ce3c8a}
+
+\begin{DoxyCode}
+1798 : matcher\_(matcher) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Matcher\+As\+Predicate@{testing\+::internal\+::\+Matcher\+As\+Predicate}!operator()@{operator()}}
+\index{operator()@{operator()}!testing\+::internal\+::\+Matcher\+As\+Predicate@{testing\+::internal\+::\+Matcher\+As\+Predicate}}
+\subsubsection[{\texorpdfstring{operator()(const T \&x) const }{operator()(const T &x) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ template$<$typename T $>$ bool {\bf testing\+::internal\+::\+Matcher\+As\+Predicate}$<$ M $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1MatcherAsPredicate_ac6347406b1d2cc241a7f1b86e2bfc922}{}\label{classtesting_1_1internal_1_1MatcherAsPredicate_ac6347406b1d2cc241a7f1b86e2bfc922}
+
+\begin{DoxyCode}
+1807                                     \{
+1808     \textcolor{comment}{// We let matcher\_ commit to a particular type here instead of}
+1809     \textcolor{comment}{// when the MatcherAsPredicate object was constructed.  This}
+1810     \textcolor{comment}{// allows us to write Matches(m) where m is a polymorphic matcher}
+1811     \textcolor{comment}{// (e.g. Eq(5)).}
+1812     \textcolor{comment}{//}
+1813     \textcolor{comment}{// If we write Matcher<T>(matcher\_).Matches(x) here, it won't}
+1814     \textcolor{comment}{// compile when matcher\_ has type Matcher<const T&>; if we write}
+1815     \textcolor{comment}{// Matcher<const T&>(matcher\_).Matches(x) here, it won't compile}
+1816     \textcolor{comment}{// when matcher\_ has type Matcher<T>; if we just write}
+1817     \textcolor{comment}{// matcher\_.Matches(x), it won't compile when matcher\_ is}
+1818     \textcolor{comment}{// polymorphic, e.g. Eq(5).}
+1819     \textcolor{comment}{//}
+1820     \textcolor{comment}{// MatcherCast<const T&>() is necessary for making the code work}
+1821     \textcolor{comment}{// in all of the above situations.}
+1822     \textcolor{keywordflow}{return} MatcherCast<const T&>(matcher\_).\hyperlink{namespacetesting_ad53b509ae9cd51040d67f668f99702ae}{Matches}(x);
+1823   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

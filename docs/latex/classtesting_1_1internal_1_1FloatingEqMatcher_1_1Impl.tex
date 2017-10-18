@@ -1,0 +1,178 @@
+\hypertarget{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl}{}\section{testing\+:\+:internal\+:\+:Floating\+Eq\+Matcher$<$ Float\+Type $>$\+:\+:Impl$<$ T $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl}\index{testing\+::internal\+::\+Floating\+Eq\+Matcher$<$ Float\+Type $>$\+::\+Impl$<$ T $>$@{testing\+::internal\+::\+Floating\+Eq\+Matcher$<$ Float\+Type $>$\+::\+Impl$<$ T $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+
+
+Inheritance diagram for testing\+:\+:internal\+:\+:Floating\+Eq\+Matcher$<$ Float\+Type $>$\+:\+:Impl$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:internal\+:\+:Floating\+Eq\+Matcher$<$ Float\+Type $>$\+:\+:Impl$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_a314057e171f872ad478b3e143121aecd}{Impl} (Float\+Type expected, bool nan\+\_\+eq\+\_\+nan, Float\+Type max\+\_\+abs\+\_\+error)
+\item 
+virtual bool \hyperlink{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_af44c07dae0a5ccf6d9d7cfef077ad678}{Match\+And\+Explain} (T value, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_a9cbacc70992f4776a9785716546f13a2}{Describe\+To} (\+::std\+::ostream $\ast$os) const 
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_ab8799175394f311082142850717dabd0}{Describe\+Negation\+To} (\+::std\+::ostream $\ast$os) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl@{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl}!Impl@{Impl}}
+\index{Impl@{Impl}!testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl@{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl}}
+\subsubsection[{\texorpdfstring{Impl(\+Float\+Type expected, bool nan\+\_\+eq\+\_\+nan, Float\+Type max\+\_\+abs\+\_\+error)}{Impl(FloatType expected, bool nan_eq_nan, FloatType max_abs_error)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Float\+Type$>$ template$<$typename T $>$ {\bf testing\+::internal\+::\+Floating\+Eq\+Matcher}$<$ Float\+Type $>$\+::{\bf Impl}$<$ T $>$\+::{\bf Impl} (
+\begin{DoxyParamCaption}
+\item[{Float\+Type}]{expected, }
+\item[{bool}]{nan\+\_\+eq\+\_\+nan, }
+\item[{Float\+Type}]{max\+\_\+abs\+\_\+error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_a314057e171f872ad478b3e143121aecd}{}\label{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_a314057e171f872ad478b3e143121aecd}
+
+\begin{DoxyCode}
+1917         : expected\_(expected),
+1918           nan\_eq\_nan\_(nan\_eq\_nan),
+1919           max\_abs\_error\_(max\_abs\_error) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl@{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl}!Describe\+Negation\+To@{Describe\+Negation\+To}}
+\index{Describe\+Negation\+To@{Describe\+Negation\+To}!testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl@{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl}}
+\subsubsection[{\texorpdfstring{Describe\+Negation\+To(\+::std\+::ostream $\ast$os) const }{DescribeNegationTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Float\+Type$>$ template$<$typename T $>$ virtual void {\bf testing\+::internal\+::\+Floating\+Eq\+Matcher}$<$ Float\+Type $>$\+::{\bf Impl}$<$ T $>$\+::Describe\+Negation\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_ab8799175394f311082142850717dabd0}{}\label{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_ab8799175394f311082142850717dabd0}
+
+
+Reimplemented from \hyperlink{classtesting_1_1MatcherDescriberInterface_a35b9dc2f3e25ca4b903f282feaaf9f8c}{testing\+::\+Matcher\+Describer\+Interface}.
+
+
+\begin{DoxyCode}
+1977                                                           \{
+1978       \textcolor{comment}{// As before, get original precision.}
+1979       const ::std::streamsize old\_precision = os->precision(
+1980           ::std::numeric\_limits<FloatType>::digits10 + 2);
+1981       \textcolor{keywordflow}{if} (FloatingPoint<FloatType>(expected\_).is\_nan()) \{
+1982         \textcolor{keywordflow}{if} (nan\_eq\_nan\_) \{
+1983           *os << \textcolor{stringliteral}{"isn't NaN"};
+1984         \} \textcolor{keywordflow}{else} \{
+1985           *os << \textcolor{stringliteral}{"is anything"};
+1986         \}
+1987       \} \textcolor{keywordflow}{else} \{
+1988         *os << \textcolor{stringliteral}{"isn't approximately "} << expected\_;
+1989         \textcolor{keywordflow}{if} (HasMaxAbsError()) \{
+1990           *os << \textcolor{stringliteral}{" (absolute error > "} << max\_abs\_error\_ << \textcolor{stringliteral}{")"};
+1991         \}
+1992       \}
+1993       \textcolor{comment}{// Restore original precision.}
+1994       os->precision(old\_precision);
+1995     \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl@{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl}!Describe\+To@{Describe\+To}}
+\index{Describe\+To@{Describe\+To}!testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl@{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl}}
+\subsubsection[{\texorpdfstring{Describe\+To(\+::std\+::ostream $\ast$os) const }{DescribeTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Float\+Type$>$ template$<$typename T $>$ virtual void {\bf testing\+::internal\+::\+Floating\+Eq\+Matcher}$<$ Float\+Type $>$\+::{\bf Impl}$<$ T $>$\+::Describe\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_a9cbacc70992f4776a9785716546f13a2}{}\label{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_a9cbacc70992f4776a9785716546f13a2}
+
+
+Implements \hyperlink{classtesting_1_1MatcherDescriberInterface_ad9f861588bd969b6e3e717f13bb94e7b}{testing\+::\+Matcher\+Describer\+Interface}.
+
+
+\begin{DoxyCode}
+1956                                                   \{
+1957       \textcolor{comment}{// os->precision() returns the previously set precision, which we}
+1958       \textcolor{comment}{// store to restore the ostream to its original configuration}
+1959       \textcolor{comment}{// after outputting.}
+1960       const ::std::streamsize old\_precision = os->precision(
+1961           ::std::numeric\_limits<FloatType>::digits10 + 2);
+1962       \textcolor{keywordflow}{if} (FloatingPoint<FloatType>(expected\_).is\_nan()) \{
+1963         \textcolor{keywordflow}{if} (nan\_eq\_nan\_) \{
+1964           *os << \textcolor{stringliteral}{"is NaN"};
+1965         \} \textcolor{keywordflow}{else} \{
+1966           *os << \textcolor{stringliteral}{"never matches"};
+1967         \}
+1968       \} \textcolor{keywordflow}{else} \{
+1969         *os << \textcolor{stringliteral}{"is approximately "} << expected\_;
+1970         \textcolor{keywordflow}{if} (HasMaxAbsError()) \{
+1971           *os << \textcolor{stringliteral}{" (absolute error <= "} << max\_abs\_error\_ << \textcolor{stringliteral}{")"};
+1972         \}
+1973       \}
+1974       os->precision(old\_precision);
+1975     \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl@{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl}!Match\+And\+Explain@{Match\+And\+Explain}}
+\index{Match\+And\+Explain@{Match\+And\+Explain}!testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl@{testing\+::internal\+::\+Floating\+Eq\+Matcher\+::\+Impl}}
+\subsubsection[{\texorpdfstring{Match\+And\+Explain(\+T value, Match\+Result\+Listener $\ast$listener) const }{MatchAndExplain(T value, MatchResultListener *listener) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Float\+Type$>$ template$<$typename T $>$ virtual bool {\bf testing\+::internal\+::\+Floating\+Eq\+Matcher}$<$ Float\+Type $>$\+::{\bf Impl}$<$ T $>$\+::Match\+And\+Explain (
+\begin{DoxyParamCaption}
+\item[{T}]{value, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_af44c07dae0a5ccf6d9d7cfef077ad678}{}\label{classtesting_1_1internal_1_1FloatingEqMatcher_1_1Impl_af44c07dae0a5ccf6d9d7cfef077ad678}
+
+
+Implements \hyperlink{classtesting_1_1MatcherInterface_a296b43607cd99d60365f0e6a762777cf}{testing\+::\+Matcher\+Interface$<$ T $>$}.
+
+
+\begin{DoxyCode}
+1922                                                                       \{
+1923       \textcolor{keyword}{const} FloatingPoint<FloatType> actual(value), expected(expected\_);
+1924 
+1925       \textcolor{comment}{// Compares NaNs first, if nan\_eq\_nan\_ is true.}
+1926       \textcolor{keywordflow}{if} (actual.is\_nan() || expected.is\_nan()) \{
+1927         \textcolor{keywordflow}{if} (actual.is\_nan() && expected.is\_nan()) \{
+1928           \textcolor{keywordflow}{return} nan\_eq\_nan\_;
+1929         \}
+1930         \textcolor{comment}{// One is nan; the other is not nan.}
+1931         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+1932       \}
+1933       \textcolor{keywordflow}{if} (HasMaxAbsError()) \{
+1934         \textcolor{comment}{// We perform an equality check so that inf will match inf, regardless}
+1935         \textcolor{comment}{// of error bounds.  If the result of value - expected\_ would result in}
+1936         \textcolor{comment}{// overflow or if either value is inf, the default result is infinity,}
+1937         \textcolor{comment}{// which should only match if max\_abs\_error\_ is also infinity.}
+1938         \textcolor{keywordflow}{if} (value == expected\_) \{
+1939           \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+1940         \}
+1941 
+1942         \textcolor{keyword}{const} FloatType diff = value - expected\_;
+1943         \textcolor{keywordflow}{if} (fabs(diff) <= max\_abs\_error\_) \{
+1944           \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+1945         \}
+1946 
+1947         \textcolor{keywordflow}{if} (listener->IsInterested()) \{
+1948           *listener << \textcolor{stringliteral}{"which is "} << diff << \textcolor{stringliteral}{" from "} << expected\_;
+1949         \}
+1950         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+1951       \} \textcolor{keywordflow}{else} \{
+1952         \textcolor{keywordflow}{return} actual.AlmostEquals(expected);
+1953       \}
+1954     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

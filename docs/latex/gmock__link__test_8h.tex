@@ -1,0 +1,944 @@
+\hypertarget{gmock__link__test_8h}{}\section{vendor/googletest/googlemock/test/gmock\+\_\+link\+\_\+test.h File Reference}
+\label{gmock__link__test_8h}\index{vendor/googletest/googlemock/test/gmock\+\_\+link\+\_\+test.\+h@{vendor/googletest/googlemock/test/gmock\+\_\+link\+\_\+test.\+h}}
+{\ttfamily \#include \char`\"{}gmock/gmock.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}gmock/internal/gmock-\/port.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for gmock\+\_\+link\+\_\+test.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gmock__link__test_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gmock__link__test_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classInterface}{Interface}
+\item 
+class \hyperlink{classMock}{Mock}
+\item 
+class \hyperlink{classInvokeHelper}{Invoke\+Helper}
+\item 
+class \hyperlink{classFieldHelper}{Field\+Helper}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gmock__link__test_8h_a2a241b93f4367065a763c7df5133e5b6}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Return\+Void)
+\item 
+\hyperlink{gmock__link__test_8h_a7fc9e5ba927fb0b787c401830d96e845}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Return)
+\item 
+\hyperlink{gmock__link__test_8h_adac5a0d25e665298c61d73103f6b4ef6}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Return\+Null)
+\item 
+\hyperlink{gmock__link__test_8h_a305fc67126afc2ce2a398af8ac95f911}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Return\+Ref)
+\item 
+\hyperlink{gmock__link__test_8h_a84f858c615e1a833900ba5cb6fd6035d}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Assign)
+\item 
+\hyperlink{gmock__link__test_8h_a186ca1714643654a35d0daadde7cfccd}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Set\+Arg\+Pointee)
+\item 
+\hyperlink{gmock__link__test_8h_ac6a135440a78f13e4a16d1731bf80991}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Set\+Array\+Argument)
+\item 
+\hyperlink{gmock__link__test_8h_aef5c583c3e024858d646fd49cb26d38b}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Set\+Errno\+And\+Return)
+\item 
+\hyperlink{gmock__link__test_8h_a632cd5bfa5abc4dca05bca7e32c3117c}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Invoke)
+\item 
+\hyperlink{gmock__link__test_8h_a8677237cca1dcb672f230ba196bf46c9}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Invoke\+Without\+Args)
+\item 
+\hyperlink{gmock__link__test_8h_a16605ff63dee99b3858ff175f3165a8b}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Invoke\+Argument)
+\item 
+\hyperlink{gmock__link__test_8h_a443d44d009c84175febff2fc677517b4}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+With\+Arg)
+\item 
+\hyperlink{gmock__link__test_8h_a3f39bdcd5e11abe967d40fa209a5fbfc}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+With\+Args)
+\item 
+\hyperlink{gmock__link__test_8h_ad60d270605d53ff00c73efcfc0353771}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Without\+Args)
+\item 
+\hyperlink{gmock__link__test_8h_a152c90c6b50fe035d27c83aa6c0f9793}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Do\+All)
+\item 
+\hyperlink{gmock__link__test_8h_a2918d5abf4d84037728f3c1bbc5c4fca}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Do\+Default)
+\item 
+\hyperlink{gmock__link__test_8h_aaaae4940e8dd1c9ba7342163248ff86f}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Ignore\+Result)
+\item 
+\hyperlink{gmock__link__test_8h_a3f3f7a915ecbf4ed9480e7689ac3be1e}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Action\+Macro)
+\item 
+\hyperlink{gmock__link__test_8h_a8e87d7c7853fa49506556f9e05487021}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Action\+P\+Macro)
+\item 
+\hyperlink{gmock__link__test_8h_ac6156044ada7f26a08d97b6abb8e5160}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Action\+P2\+Macro)
+\item 
+\hyperlink{gmock__link__test_8h_a56eb072fc6793f17991c4b9453cb57f9}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Anything)
+\item 
+\hyperlink{gmock__link__test_8h_a0e54493b534daa8c40db27f11c1fa47c}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+MatcherA)
+\item 
+\hyperlink{gmock__link__test_8h_a9ac86d1d3b037000c95d84125b493aa2}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matchers\+Eq)
+\item 
+\hyperlink{gmock__link__test_8h_a180ffdf57248ab9b453f3edcd93755ef}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matchers\+Relations)
+\item 
+\hyperlink{gmock__link__test_8h_a88c24d00f8d1ef0bc424e44ef0d02c47}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Not\+Null)
+\item 
+\hyperlink{gmock__link__test_8h_a9c49e996772a00f039252ed51b929c07}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Is\+Null)
+\item 
+\hyperlink{gmock__link__test_8h_a97addba006a789710b9142e173d1f6aa}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Ref)
+\item 
+\hyperlink{gmock__link__test_8h_a7b2cbe54d3e02b9b9e9ac11fe2e4277a}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Typed\+Eq)
+\item 
+\hyperlink{gmock__link__test_8h_a407dfcf377f8201153cb0141eb4e50d0}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matchers\+Floating\+Point)
+\item 
+\hyperlink{gmock__link__test_8h_a77a83a48b183a392eddae15de6162950}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Contains\+Regex)
+\item 
+\hyperlink{gmock__link__test_8h_a2703b6bda7d6a9fe9ca0c3a545cb0794}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Matches\+Regex)
+\item 
+\hyperlink{gmock__link__test_8h_a0e620555ef048587252b680112dca0a1}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matchers\+Substrings)
+\item 
+\hyperlink{gmock__link__test_8h_acd4cefd0a0c481117e8450bb3e26995a}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matchers\+String\+Equality)
+\item 
+\hyperlink{gmock__link__test_8h_adccb056e47ae0c111fdb5c8718aa1237}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Elements\+Are)
+\item 
+\hyperlink{gmock__link__test_8h_a75e1edbf10c6912cb689a744897c7cfd}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Elements\+Are\+Array)
+\item 
+\hyperlink{gmock__link__test_8h_a16f49ffd8b6c3926dd3be08475a84cea}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Container\+Eq)
+\item 
+\hyperlink{gmock__link__test_8h_afd9457843e9d37ad61805fe4e346230a}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Field)
+\item 
+\hyperlink{gmock__link__test_8h_a4f1efb4c1404ef1987ead7fbcda62f97}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Property)
+\item 
+\hyperlink{gmock__link__test_8h_aa76ccb0b23625c6e67224dc93775c260}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Result\+Of)
+\item 
+\hyperlink{gmock__link__test_8h_a87dc8bf67fbb09f4887bd73c4c3d4cc1}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Pointee)
+\item 
+\hyperlink{gmock__link__test_8h_a371f2d2cb3d6de8d92bcdc7880c396e9}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Truly)
+\item 
+\hyperlink{gmock__link__test_8h_a2f67e08eb609d505e32d1ea9c5ea4934}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+All\+Of)
+\item 
+\hyperlink{gmock__link__test_8h_a44f6ef7c07900d4b35ecf9dd5fb3d199}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Any\+Of)
+\item 
+\hyperlink{gmock__link__test_8h_a5ffe71be3f23caa89c945a8f91f37c61}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Not)
+\item 
+\hyperlink{gmock__link__test_8h_af0e170be9fd6cff187a448aa8be13996}{T\+E\+ST} (\hyperlink{gmock__link__test_8cc_afb3d3e7fd53242710a55460595d750bb}{Link\+Test}, Test\+Matcher\+Cast)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Return\+Void)}{TEST(LinkTest, TestReturnVoid)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Return\+Void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a2a241b93f4367065a763c7df5133e5b6}{}\label{gmock__link__test_8h_a2a241b93f4367065a763c7df5133e5b6}
+
+\begin{DoxyCode}
+242                                \{
+243   \hyperlink{classMock}{Mock} mock;
+244 
+245   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+246   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+247 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Return)}{TEST(LinkTest, TestReturn)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Return}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a7fc9e5ba927fb0b787c401830d96e845}{}\label{gmock__link__test_8h_a7fc9e5ba927fb0b787c401830d96e845}
+
+\begin{DoxyCode}
+250                            \{
+251   \hyperlink{classMock}{Mock} mock;
+252   \textcolor{keywordtype}{char} ch = \textcolor{charliteral}{'x'};
+253 
+254   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, StringFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(&ch));
+255   mock.\hyperlink{classInterface_a756b1d22c12aa3f14a5083f90043fbf0}{StringFromString}(NULL);
+256 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Return\+Null)}{TEST(LinkTest, TestReturnNull)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Return\+Null}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_adac5a0d25e665298c61d73103f6b4ef6}{}\label{gmock__link__test_8h_adac5a0d25e665298c61d73103f6b4ef6}
+
+\begin{DoxyCode}
+259                                \{
+260   \hyperlink{classMock}{Mock} mock;
+261 
+262   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+263   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+264 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Return\+Ref)}{TEST(LinkTest, TestReturnRef)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Return\+Ref}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a305fc67126afc2ce2a398af8ac95f911}{}\label{gmock__link__test_8h_a305fc67126afc2ce2a398af8ac95f911}
+
+\begin{DoxyCode}
+267                               \{
+268   \hyperlink{classMock}{Mock} mock;
+269   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 42;
+270 
+271   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, IntRefFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(\hyperlink{namespacetesting_a18eda8fe9c89ee856c199a2e04ca1641}{ReturnRef}(n));
+272   mock.\hyperlink{classInterface_ab93276de67e60c44fd775d4c139aa8e1}{IntRefFromString}(NULL);
+273 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Assign)}{TEST(LinkTest, TestAssign)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Assign}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a84f858c615e1a833900ba5cb6fd6035d}{}\label{gmock__link__test_8h_a84f858c615e1a833900ba5cb6fd6035d}
+
+\begin{DoxyCode}
+276                            \{
+277   \hyperlink{classMock}{Mock} mock;
+278   \textcolor{keywordtype}{char} ch = \textcolor{charliteral}{'x'};
+279 
+280   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(\hyperlink{namespacetesting_abfc4121b8708e8b22a096ff8be88a9d0}{Assign}(&ch, \textcolor{charliteral}{'y'}));
+281   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+282 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Set\+Arg\+Pointee)}{TEST(LinkTest, TestSetArgPointee)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Set\+Arg\+Pointee}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a186ca1714643654a35d0daadde7cfccd}{}\label{gmock__link__test_8h_a186ca1714643654a35d0daadde7cfccd}
+
+\begin{DoxyCode}
+285                                   \{
+286   \hyperlink{classMock}{Mock} mock;
+287   \textcolor{keywordtype}{char} ch = \textcolor{charliteral}{'x'};
+288 
+289   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(SetArgPointee<0>(\textcolor{charliteral}{'y'}));
+290   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(&ch);
+291 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Set\+Array\+Argument)}{TEST(LinkTest, TestSetArrayArgument)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Set\+Array\+Argument}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_ac6a135440a78f13e4a16d1731bf80991}{}\label{gmock__link__test_8h_ac6a135440a78f13e4a16d1731bf80991}
+
+\begin{DoxyCode}
+294                                      \{
+295   \hyperlink{classMock}{Mock} mock;
+296   \textcolor{keywordtype}{char} ch = \textcolor{charliteral}{'x'};
+297   \textcolor{keywordtype}{char} ch2 = \textcolor{charliteral}{'y'};
+298 
+299   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(SetArrayArgument<0>(&ch2,
+300                                                                     &ch2 + 1));
+301   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(&ch);
+302 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Set\+Errno\+And\+Return)}{TEST(LinkTest, TestSetErrnoAndReturn)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Set\+Errno\+And\+Return}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_aef5c583c3e024858d646fd49cb26d38b}{}\label{gmock__link__test_8h_aef5c583c3e024858d646fd49cb26d38b}
+
+\begin{DoxyCode}
+307                                       \{
+308   \hyperlink{classMock}{Mock} mock;
+309 
+310   \textcolor{keywordtype}{int} saved\_errno = errno;
+311   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, IntFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(\hyperlink{namespacetesting_a31095e421f167fade2e6d4d60df1f4da}{SetErrnoAndReturn}(1, -1));
+312   mock.\hyperlink{classInterface_ab34c8a5fd2236a6b009f86a4e5851b61}{IntFromString}(NULL);
+313   errno = saved\_errno;
+314 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Invoke)}{TEST(LinkTest, TestInvoke)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Invoke}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a632cd5bfa5abc4dca05bca7e32c3117c}{}\label{gmock__link__test_8h_a632cd5bfa5abc4dca05bca7e32c3117c}
+
+\begin{DoxyCode}
+319                            \{
+320   \hyperlink{classMock}{Mock} mock;
+321   \hyperlink{classInvokeHelper}{InvokeHelper} test\_invoke\_helper;
+322 
+323   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+324       .WillOnce(\hyperlink{namespacetesting_a12aebaf8363d49a383047529f798b694}{Invoke}(&\hyperlink{classInvokeHelper_a5e95ce4214e89b180da9953d94396536}{InvokeHelper::StaticVoidFromString}))
+325       .WillOnce(\hyperlink{namespacetesting_a12aebaf8363d49a383047529f798b694}{Invoke}(&test\_invoke\_helper, &\hyperlink{classInvokeHelper_a89f02dc384e6b5a7d935b7ea0a81cc9e}{InvokeHelper::VoidFromString}
+      ));
+326   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+327   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+328 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Invoke\+Without\+Args)}{TEST(LinkTest, TestInvokeWithoutArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Invoke\+Without\+Args}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a8677237cca1dcb672f230ba196bf46c9}{}\label{gmock__link__test_8h_a8677237cca1dcb672f230ba196bf46c9}
+
+\begin{DoxyCode}
+331                                       \{
+332   \hyperlink{classMock}{Mock} mock;
+333   \hyperlink{classInvokeHelper}{InvokeHelper} test\_invoke\_helper;
+334 
+335   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+336       .WillOnce(\hyperlink{namespacetesting_a88cc1999296bc630f6a49cdf66bb21f9}{InvokeWithoutArgs}(&
+      \hyperlink{classInvokeHelper_ae96b5bd7c4fa328d0a87bc986f135fe8}{InvokeHelper::StaticVoidFromVoid}))
+337       .WillOnce(\hyperlink{namespacetesting_a88cc1999296bc630f6a49cdf66bb21f9}{InvokeWithoutArgs}(&test\_invoke\_helper,
+338                                   &\hyperlink{classInvokeHelper_a6371bcb64a8f01093f6fdef60776a031}{InvokeHelper::VoidFromVoid}));
+339   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+340   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+341 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Invoke\+Argument)}{TEST(LinkTest, TestInvokeArgument)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Invoke\+Argument}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a16605ff63dee99b3858ff175f3165a8b}{}\label{gmock__link__test_8h_a16605ff63dee99b3858ff175f3165a8b}
+
+\begin{DoxyCode}
+344                                    \{
+345   \hyperlink{classMock}{Mock} mock;
+346   \textcolor{keywordtype}{char} ch = \textcolor{charliteral}{'x'};
+347 
+348   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromFunc(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(InvokeArgument<0>(&ch));
+349   mock.\hyperlink{classInterface_a7dab3c82b857a9a5f52b3ce6f7df547f}{VoidFromFunc}(\hyperlink{classInvokeHelper_a5e95ce4214e89b180da9953d94396536}{InvokeHelper::StaticVoidFromString});
+350 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+With\+Arg)}{TEST(LinkTest, TestWithArg)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+With\+Arg}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a443d44d009c84175febff2fc677517b4}{}\label{gmock__link__test_8h_a443d44d009c84175febff2fc677517b4}
+
+\begin{DoxyCode}
+353                             \{
+354   \hyperlink{classMock}{Mock} mock;
+355 
+356   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+357       .WillOnce(WithArg<0>(\hyperlink{namespacetesting_a12aebaf8363d49a383047529f798b694}{Invoke}(&\hyperlink{classInvokeHelper_a5e95ce4214e89b180da9953d94396536}{InvokeHelper::StaticVoidFromString}
+      )));
+358   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+359 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+With\+Args)}{TEST(LinkTest, TestWithArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+With\+Args}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a3f39bdcd5e11abe967d40fa209a5fbfc}{}\label{gmock__link__test_8h_a3f39bdcd5e11abe967d40fa209a5fbfc}
+
+\begin{DoxyCode}
+362                              \{
+363   \hyperlink{classMock}{Mock} mock;
+364 
+365   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+366       .WillOnce(WithArgs<0>(\hyperlink{namespacetesting_a12aebaf8363d49a383047529f798b694}{Invoke}(&\hyperlink{classInvokeHelper_a5e95ce4214e89b180da9953d94396536}{InvokeHelper::StaticVoidFromString}
+      )));
+367   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+368 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Without\+Args)}{TEST(LinkTest, TestWithoutArgs)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Without\+Args}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_ad60d270605d53ff00c73efcfc0353771}{}\label{gmock__link__test_8h_ad60d270605d53ff00c73efcfc0353771}
+
+\begin{DoxyCode}
+371                                 \{
+372   \hyperlink{classMock}{Mock} mock;
+373 
+374   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(\hyperlink{namespacetesting_aeac85f74bd11112f69142e92e3a50780}{WithoutArgs}(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}()));
+375   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+376 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Do\+All)}{TEST(LinkTest, TestDoAll)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Do\+All}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a152c90c6b50fe035d27c83aa6c0f9793}{}\label{gmock__link__test_8h_a152c90c6b50fe035d27c83aa6c0f9793}
+
+\begin{DoxyCode}
+379                           \{
+380   \hyperlink{classMock}{Mock} mock;
+381   \textcolor{keywordtype}{char} ch = \textcolor{charliteral}{'x'};
+382 
+383   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+384       .WillOnce(\hyperlink{namespacetesting_a5f533932753d2af95000e96c4a3042e3}{DoAll}(SetArgPointee<0>(\textcolor{charliteral}{'y'}), \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}()));
+385   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(&ch);
+386 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Do\+Default)}{TEST(LinkTest, TestDoDefault)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Do\+Default}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a2918d5abf4d84037728f3c1bbc5c4fca}{}\label{gmock__link__test_8h_a2918d5abf4d84037728f3c1bbc5c4fca}
+
+\begin{DoxyCode}
+389                               \{
+390   \hyperlink{classMock}{Mock} mock;
+391   \textcolor{keywordtype}{char} ch = \textcolor{charliteral}{'x'};
+392 
+393   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+394   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(\hyperlink{namespacetesting_ae041df61ff61ccb9753ba15b4309e1a6}{DoDefault}());
+395   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(&ch);
+396 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Ignore\+Result)}{TEST(LinkTest, TestIgnoreResult)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Ignore\+Result}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_aaaae4940e8dd1c9ba7342163248ff86f}{}\label{gmock__link__test_8h_aaaae4940e8dd1c9ba7342163248ff86f}
+
+\begin{DoxyCode}
+399                                  \{
+400   \hyperlink{classMock}{Mock} mock;
+401 
+402   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(\hyperlink{namespacetesting_a50ae42540a31047c7fddd32df8d835f5}{IgnoreResult}(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(42)));
+403   mock.\hyperlink{classInterface_a65d6ae604e7e9a513aec72c9c94e0b97}{VoidFromString}(NULL);
+404 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Action\+Macro)}{TEST(LinkTest, TestActionMacro)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Action\+Macro}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a3f3f7a915ecbf4ed9480e7689ac3be1e}{}\label{gmock__link__test_8h_a3f3f7a915ecbf4ed9480e7689ac3be1e}
+
+\begin{DoxyCode}
+431                                 \{
+432   \hyperlink{classMock}{Mock} mock;
+433 
+434   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, IntFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(Return1());
+435   mock.\hyperlink{classInterface_ab34c8a5fd2236a6b009f86a4e5851b61}{IntFromString}(NULL);
+436 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Action\+P\+Macro)}{TEST(LinkTest, TestActionPMacro)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Action\+P\+Macro}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a8e87d7c7853fa49506556f9e05487021}{}\label{gmock__link__test_8h_a8e87d7c7853fa49506556f9e05487021}
+
+\begin{DoxyCode}
+443                                  \{
+444   \hyperlink{classMock}{Mock} mock;
+445 
+446   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, IntFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillOnce(ReturnArgument(42));
+447   mock.\hyperlink{classInterface_ab34c8a5fd2236a6b009f86a4e5851b61}{IntFromString}(NULL);
+448 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Action\+P2\+Macro)}{TEST(LinkTest, TestActionP2Macro)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Action\+P2\+Macro}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_ac6156044ada7f26a08d97b6abb8e5160}{}\label{gmock__link__test_8h_ac6156044ada7f26a08d97b6abb8e5160}
+
+\begin{DoxyCode}
+461                                   \{
+462   \hyperlink{classMock}{Mock} mock;
+463   \textcolor{keywordtype}{char} ch = \textcolor{charliteral}{'x'};
+464 
+465   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(mock, IntFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+466       .WillOnce(ReturnEqualsEitherOf(\textcolor{stringliteral}{"one"}, \textcolor{stringliteral}{"two"}));
+467   mock.\hyperlink{classInterface_ab34c8a5fd2236a6b009f86a4e5851b61}{IntFromString}(&ch);
+468 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Anything)}{TEST(LinkTest, TestMatcherAnything)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Anything}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a56eb072fc6793f17991c4b9453cb57f9}{}\label{gmock__link__test_8h_a56eb072fc6793f17991c4b9453cb57f9}
+
+\begin{DoxyCode}
+471                                     \{
+472   \hyperlink{classMock}{Mock} mock;
+473 
+474   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+475 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+A)}{TEST(LinkTest, TestMatcherA)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+MatcherA}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a0e54493b534daa8c40db27f11c1fa47c}{}\label{gmock__link__test_8h_a0e54493b534daa8c40db27f11c1fa47c}
+
+\begin{DoxyCode}
+478                              \{
+479   \hyperlink{classMock}{Mock} mock;
+480 
+481   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(A<char*>())).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+482 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matchers\+Eq)}{TEST(LinkTest, TestMatchersEq)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matchers\+Eq}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a9ac86d1d3b037000c95d84125b493aa2}{}\label{gmock__link__test_8h_a9ac86d1d3b037000c95d84125b493aa2}
+
+\begin{DoxyCode}
+485                                \{
+486   \hyperlink{classMock}{Mock} mock;
+487   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* p = \textcolor{stringliteral}{"x"};
+488 
+489   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(p))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+490   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(const\_cast<char*>(\textcolor{stringliteral}{"y"})))
+491       .WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+492 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matchers\+Relations)}{TEST(LinkTest, TestMatchersRelations)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matchers\+Relations}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a180ffdf57248ab9b453f3edcd93755ef}{}\label{gmock__link__test_8h_a180ffdf57248ab9b453f3edcd93755ef}
+
+\begin{DoxyCode}
+495                                       \{
+496   \hyperlink{classMock}{Mock} mock;
+497 
+498   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromFloat(\hyperlink{namespacetesting_ad621459957a8bcdd3c256b7940ecbf99}{Lt}(1.0f))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+499   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromFloat(\hyperlink{namespacetesting_a493fc1bafd7b3945ba06ace80e74b0d5}{Gt}(1.0f))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+500   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromFloat(\hyperlink{namespacetesting_a2e33596921b80a7fdaff3f62bf18a478}{Le}(1.0f))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+501   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromFloat(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(1.0f))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+502   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromFloat(\hyperlink{namespacetesting_afe42d41d5171234cb9da5da27faeb7e8}{Ne}(1.0f))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+503 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Not\+Null)}{TEST(LinkTest, TestMatcherNotNull)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Not\+Null}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a88c24d00f8d1ef0bc424e44ef0d02c47}{}\label{gmock__link__test_8h_a88c24d00f8d1ef0bc424e44ef0d02c47}
+
+\begin{DoxyCode}
+506                                    \{
+507   \hyperlink{classMock}{Mock} mock;
+508 
+509   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a39d1f92b53b8b2a0b6db6a22ac146416}{NotNull}())).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+510 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Is\+Null)}{TEST(LinkTest, TestMatcherIsNull)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Is\+Null}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a9c49e996772a00f039252ed51b929c07}{}\label{gmock__link__test_8h_a9c49e996772a00f039252ed51b929c07}
+
+\begin{DoxyCode}
+513                                   \{
+514   \hyperlink{classMock}{Mock} mock;
+515 
+516   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a56ffb1a169c14ce585fc5bed32add2db}{IsNull}())).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+517 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Ref)}{TEST(LinkTest, TestMatcherRef)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Ref}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a97addba006a789710b9142e173d1f6aa}{}\label{gmock__link__test_8h_a97addba006a789710b9142e173d1f6aa}
+
+\begin{DoxyCode}
+520                                \{
+521   \hyperlink{classMock}{Mock} mock;
+522   \textcolor{keywordtype}{int} a = 0;
+523 
+524   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromIntRef(\hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(a))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+525 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Typed\+Eq)}{TEST(LinkTest, TestMatcherTypedEq)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Typed\+Eq}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a7b2cbe54d3e02b9b9e9ac11fe2e4277a}{}\label{gmock__link__test_8h_a7b2cbe54d3e02b9b9e9ac11fe2e4277a}
+
+\begin{DoxyCode}
+528                                    \{
+529   \hyperlink{classMock}{Mock} mock;
+530   \textcolor{keywordtype}{long} a = 0;
+531 
+532   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromIntRef(TypedEq<int&>(a))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+533 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matchers\+Floating\+Point)}{TEST(LinkTest, TestMatchersFloatingPoint)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matchers\+Floating\+Point}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a407dfcf377f8201153cb0141eb4e50d0}{}\label{gmock__link__test_8h_a407dfcf377f8201153cb0141eb4e50d0}
+
+\begin{DoxyCode}
+537                                           \{
+538   \hyperlink{classMock}{Mock} mock;
+539   \textcolor{keywordtype}{float} a = 0;
+540 
+541   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromFloat(\hyperlink{namespacetesting_ac75507edb7998957b48fb17a9b8a020b}{FloatEq}(a))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+542   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromDouble(\hyperlink{namespacetesting_a1f49f9d97f03bfa4db26888f03486a9f}{DoubleEq}(a))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+543   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromFloat(\hyperlink{namespacetesting_ab3653439a654b85bdccff46d1436670d}{NanSensitiveFloatEq}(a))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+544   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromDouble(\hyperlink{namespacetesting_aa83ee35256fd90033f615ef640245525}{NanSensitiveDoubleEq}(a)))
+545       .WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+546 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Contains\+Regex)}{TEST(LinkTest, TestMatcherContainsRegex)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Contains\+Regex}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a77a83a48b183a392eddae15de6162950}{}\label{gmock__link__test_8h_a77a83a48b183a392eddae15de6162950}
+
+\begin{DoxyCode}
+549                                          \{
+550   \hyperlink{classMock}{Mock} mock;
+551 
+552   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a899838630a71376aa071dfd7c500f2ca}{ContainsRegex}(\textcolor{stringliteral}{".*"}))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+553 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Matches\+Regex)}{TEST(LinkTest, TestMatcherMatchesRegex)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Matches\+Regex}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a2703b6bda7d6a9fe9ca0c3a545cb0794}{}\label{gmock__link__test_8h_a2703b6bda7d6a9fe9ca0c3a545cb0794}
+
+\begin{DoxyCode}
+556                                         \{
+557   \hyperlink{classMock}{Mock} mock;
+558 
+559   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a4dac232f315edc259b62ce88e413b107}{MatchesRegex}(\textcolor{stringliteral}{".*"}))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+560 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matchers\+Substrings)}{TEST(LinkTest, TestMatchersSubstrings)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matchers\+Substrings}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a0e620555ef048587252b680112dca0a1}{}\label{gmock__link__test_8h_a0e620555ef048587252b680112dca0a1}
+
+\begin{DoxyCode}
+563                                        \{
+564   \hyperlink{classMock}{Mock} mock;
+565 
+566   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_ae0502232432b1fe8361d296c6de6beda}{StartsWith}(\textcolor{stringliteral}{"a"}))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+567   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_aec11c4e418a835ca2c0c3cbdb29b28ba}{EndsWith}(\textcolor{stringliteral}{"c"}))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+568   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a7d27682e38d57eea81ba145a2772e1c7}{HasSubstr}(\textcolor{stringliteral}{"b"}))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+569 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matchers\+String\+Equality)}{TEST(LinkTest, TestMatchersStringEquality)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matchers\+String\+Equality}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_acd4cefd0a0c481117e8450bb3e26995a}{}\label{gmock__link__test_8h_acd4cefd0a0c481117e8450bb3e26995a}
+
+\begin{DoxyCode}
+572                                            \{
+573   \hyperlink{classMock}{Mock} mock;
+574   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a154de81376ae7d584c6e5a619b45fb09}{StrEq}(\textcolor{stringliteral}{"a"}))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+575   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a6f6b8af3d19cb969df0eb995c47a14d2}{StrNe}(\textcolor{stringliteral}{"a"}))).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+576   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_addbdb8c0902ab09cade24fa6db7c0073}{StrCaseEq}(\textcolor{stringliteral}{"a"}))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+577   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromString(\hyperlink{namespacetesting_a9596fd67bdd5df195bc54382f91a1906}{StrCaseNe}(\textcolor{stringliteral}{"a"}))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+578 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Elements\+Are)}{TEST(LinkTest, TestMatcherElementsAre)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Elements\+Are}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_adccb056e47ae0c111fdb5c8718aa1237}{}\label{gmock__link__test_8h_adccb056e47ae0c111fdb5c8718aa1237}
+
+\begin{DoxyCode}
+581                                        \{
+582   \hyperlink{classMock}{Mock} mock;
+583 
+584   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromVector(\hyperlink{namespacetesting_a79cf4ae694bf8231dcf283b325405f27}{ElementsAre}(\textcolor{charliteral}{'a'}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+585 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Elements\+Are\+Array)}{TEST(LinkTest, TestMatcherElementsAreArray)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Elements\+Are\+Array}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a75e1edbf10c6912cb689a744897c7cfd}{}\label{gmock__link__test_8h_a75e1edbf10c6912cb689a744897c7cfd}
+
+\begin{DoxyCode}
+588                                             \{
+589   \hyperlink{classMock}{Mock} mock;
+590   \textcolor{keywordtype}{char} arr[] = \{ \textcolor{charliteral}{'a'}, \textcolor{charliteral}{'b'} \};
+591 
+592   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromVector(\hyperlink{namespacetesting_ae2eee06e7ddbf5f5372fd24372e9703f}{ElementsAreArray}(arr))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+593 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Container\+Eq)}{TEST(LinkTest, TestMatcherContainerEq)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Container\+Eq}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a16f49ffd8b6c3926dd3be08475a84cea}{}\label{gmock__link__test_8h_a16f49ffd8b6c3926dd3be08475a84cea}
+
+\begin{DoxyCode}
+596                                        \{
+597   \hyperlink{classMock}{Mock} mock;
+598   std::vector<int> v;
+599 
+600   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(mock, VoidFromVector(\hyperlink{namespacetesting_a5928ffc4e976a4da981512c422792840}{ContainerEq}(v))).WillByDefault(
+      \hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}());
+601 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Field)}{TEST(LinkTest, TestMatcherField)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Field}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_afd9457843e9d37ad61805fe4e346230a}{}\label{gmock__link__test_8h_afd9457843e9d37ad61805fe4e346230a}
+
+\begin{DoxyCode}
+604                                  \{
+605   \hyperlink{classFieldHelper}{FieldHelper} helper(0);
+606 
+607   \hyperlink{classtesting_1_1Matcher}{Matcher<const FieldHelper&>} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&
+      \hyperlink{classFieldHelper_a50a7ec9efc60377363d5ce8bea1708ac}{FieldHelper::field\_}, \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(0));
+608   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(helper));
+609 
+610   \hyperlink{classtesting_1_1Matcher}{Matcher<const FieldHelper*>} m2 = \hyperlink{namespacetesting_a4df3849391696aa93ac3a7703a717c2a}{Field}(&
+      \hyperlink{classFieldHelper_a50a7ec9efc60377363d5ce8bea1708ac}{FieldHelper::field\_}, \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(0));
+611   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m2.Matches(&helper));
+612 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Property)}{TEST(LinkTest, TestMatcherProperty)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Property}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a4f1efb4c1404ef1987ead7fbcda62f97}{}\label{gmock__link__test_8h_a4f1efb4c1404ef1987ead7fbcda62f97}
+
+\begin{DoxyCode}
+615                                     \{
+616   \hyperlink{classFieldHelper}{FieldHelper} helper(0);
+617 
+618   \hyperlink{classtesting_1_1Matcher}{Matcher<const FieldHelper&>} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&
+      \hyperlink{classFieldHelper_a69f50394c04733e6dc854f5186b10fd5}{FieldHelper::field}, \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(0));
+619   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(helper));
+620 
+621   \hyperlink{classtesting_1_1Matcher}{Matcher<const FieldHelper*>} m2 = \hyperlink{namespacetesting_a0fad10571e23f7bc0d5c83d4c31ba740}{Property}(&
+      \hyperlink{classFieldHelper_a69f50394c04733e6dc854f5186b10fd5}{FieldHelper::field}, \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(0));
+622   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m2.Matches(&helper));
+623 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Result\+Of)}{TEST(LinkTest, TestMatcherResultOf)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Result\+Of}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_aa76ccb0b23625c6e67224dc93775c260}{}\label{gmock__link__test_8h_aa76ccb0b23625c6e67224dc93775c260}
+
+\begin{DoxyCode}
+626                                     \{
+627   \hyperlink{classtesting_1_1Matcher}{Matcher<char*>} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_aaadb51dd383baa95f123ab891d4f8a5f}{ResultOf}(&
+      \hyperlink{classInvokeHelper_a5cfb11cca70ec5a9f59e8b7a4d4c2f85}{InvokeHelper::StaticIntFromString}, \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(1));
+628   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(NULL));
+629 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Pointee)}{TEST(LinkTest, TestMatcherPointee)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Pointee}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a87dc8bf67fbb09f4887bd73c4c3d4cc1}{}\label{gmock__link__test_8h_a87dc8bf67fbb09f4887bd73c4c3d4cc1}
+
+\begin{DoxyCode}
+632                                    \{
+633   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = 1;
+634 
+635   \hyperlink{classtesting_1_1Matcher}{Matcher<int*>} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5122ca3533f3a00f67e146dd81f3b68c}{Pointee}(\hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(1));
+636   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(&n));
+637 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Truly)}{TEST(LinkTest, TestMatcherTruly)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Truly}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a371f2d2cb3d6de8d92bcdc7880c396e9}{}\label{gmock__link__test_8h_a371f2d2cb3d6de8d92bcdc7880c396e9}
+
+\begin{DoxyCode}
+640                                  \{
+641   \hyperlink{classtesting_1_1Matcher}{Matcher<const char*>} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a5faf05cfaae6074439960048e478b1c8}{Truly}(&
+      \hyperlink{classInvokeHelper_aef16e38107cd8ddc0a52d7d0ab153211}{InvokeHelper::StaticBoolFromString});
+642   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(NULL));
+643 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+All\+Of)}{TEST(LinkTest, TestMatcherAllOf)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+All\+Of}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a2f67e08eb609d505e32d1ea9c5ea4934}{}\label{gmock__link__test_8h_a2f67e08eb609d505e32d1ea9c5ea4934}
+
+\begin{DoxyCode}
+646                                  \{
+647   \hyperlink{classtesting_1_1Matcher}{Matcher<int>} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_af7618e8606c1cb45738163688944e2b7}{AllOf}(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(1));
+648   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(1));
+649 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Any\+Of)}{TEST(LinkTest, TestMatcherAnyOf)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Any\+Of}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a44f6ef7c07900d4b35ecf9dd5fb3d199}{}\label{gmock__link__test_8h_a44f6ef7c07900d4b35ecf9dd5fb3d199}
+
+\begin{DoxyCode}
+652                                  \{
+653   \hyperlink{classtesting_1_1Matcher}{Matcher<int>} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a81cfefd9f75cdce827d5bc873cf73aac}{AnyOf}(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a0cb8ba7eae844c871eccb29e7c81635f}{Eq}(1));
+654   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(1));
+655 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Not)}{TEST(LinkTest, TestMatcherNot)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Not}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_a5ffe71be3f23caa89c945a8f91f37c61}{}\label{gmock__link__test_8h_a5ffe71be3f23caa89c945a8f91f37c61}
+
+\begin{DoxyCode}
+658                                \{
+659   \hyperlink{classtesting_1_1Matcher}{Matcher<int>} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = \hyperlink{namespacetesting_a3d7d0dda7e51b13fe2f5aa28e23ed6b6}{Not}(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_});
+660   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(m.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(1));
+661 \}
+\end{DoxyCode}
+\index{gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+link\+\_\+test.\+h@{gmock\+\_\+link\+\_\+test.\+h}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Link\+Test, Test\+Matcher\+Cast)}{TEST(LinkTest, TestMatcherCast)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Test}}]{, }
+\item[{Test\+Matcher\+Cast}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__link__test_8h_af0e170be9fd6cff187a448aa8be13996}{}\label{gmock__link__test_8h_af0e170be9fd6cff187a448aa8be13996}
+
+\begin{DoxyCode}
+664                                 \{
+665   \hyperlink{classtesting_1_1Matcher}{Matcher<const char*>} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = MatcherCast<const char*>(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_});
+666   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(m.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a105a9dae7afecee8898db8ad1887b0db}{Matches}(NULL));
+667 \}
+\end{DoxyCode}

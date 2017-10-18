@@ -1,0 +1,190 @@
+\hypertarget{_8ycm__extra__conf_8py}{}\section{.ycm\+\_\+extra\+\_\+conf.\+py File Reference}
+\label{_8ycm__extra__conf_8py}\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{_8ycm__extra__conf_8py_aab283cdb607efa6a1a7aaa3f089c63f1}{Directory\+Of\+This\+Script} ()
+\item 
+def \hyperlink{_8ycm__extra__conf_8py_aa20d30f8cc08fc0ab076b4cf458e0d3d}{Make\+Relative\+Paths\+In\+Flags\+Absolute} (\hyperlink{_8ycm__extra__conf_8py_abd73d8e4551f1a637280b3876d1ae2e3}{flags}, working\+\_\+directory)
+\item 
+def \hyperlink{_8ycm__extra__conf_8py_a6bb59f541be0dcbde53eba606d48ddf8}{Is\+Header\+File} (filename)
+\item 
+def \hyperlink{_8ycm__extra__conf_8py_a42a14573593ce75cd6e385a85326111f}{Get\+Compilation\+Info\+For\+File} (filename)
+\item 
+def \hyperlink{_8ycm__extra__conf_8py_a51f8bcdc9a3b791e6a88d798e6c786b3}{Flags\+For\+File} (filename, kwargs)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \hyperlink{_8ycm__extra__conf_8py_abd73d8e4551f1a637280b3876d1ae2e3}{flags}
+\item 
+string \hyperlink{_8ycm__extra__conf_8py_a6a4d7e96c7bc9093b406af626b7936a2}{compilation\+\_\+database\+\_\+folder} = \textquotesingle{}\textquotesingle{}
+\item 
+\hyperlink{_8ycm__extra__conf_8py_a64dbaa3229ec575b68ec333442e10cee}{database} = ycm\+\_\+core.\+Compilation\+Database( \hyperlink{_8ycm__extra__conf_8py_a6a4d7e96c7bc9093b406af626b7936a2}{compilation\+\_\+database\+\_\+folder} )
+\item 
+list \hyperlink{_8ycm__extra__conf_8py_a47014996e1e517071cd0412a22adb123}{S\+O\+U\+R\+C\+E\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS} = \mbox{[} \textquotesingle{}.C\textquotesingle{}, \textquotesingle{}.cpp\textquotesingle{}, \textquotesingle{}.cxx\textquotesingle{}, \textquotesingle{}.\hyperlink{gtest__output__test__golden__lin_8txt_a36ebfe06d2a8523cebd158fbc62be565}{cc}\textquotesingle{}, \textquotesingle{}.c\textquotesingle{}, \textquotesingle{}.\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m}\textquotesingle{}, \textquotesingle{}.mm\textquotesingle{} \mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}!Directory\+Of\+This\+Script@{Directory\+Of\+This\+Script}}
+\index{Directory\+Of\+This\+Script@{Directory\+Of\+This\+Script}!.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsubsection[{\texorpdfstring{Directory\+Of\+This\+Script()}{DirectoryOfThisScript()}}]{\setlength{\rightskip}{0pt plus 5cm}def Directory\+Of\+This\+Script (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_8ycm__extra__conf_8py_aab283cdb607efa6a1a7aaa3f089c63f1}{}\label{_8ycm__extra__conf_8py_aab283cdb607efa6a1a7aaa3f089c63f1}
+
+\begin{DoxyCode}
+71 \textcolor{keyword}{def }\hyperlink{_8ycm__extra__conf_8py_aab283cdb607efa6a1a7aaa3f089c63f1}{DirectoryOfThisScript}():
+72   \textcolor{keywordflow}{return} os.path.dirname( os.path.abspath( \_\_file\_\_ ) )
+73 
+74 
+\end{DoxyCode}
+\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}!Flags\+For\+File@{Flags\+For\+File}}
+\index{Flags\+For\+File@{Flags\+For\+File}!.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsubsection[{\texorpdfstring{Flags\+For\+File(filename, kwargs)}{FlagsForFile(filename, kwargs)}}]{\setlength{\rightskip}{0pt plus 5cm}def Flags\+For\+File (
+\begin{DoxyParamCaption}
+\item[{}]{filename, }
+\item[{}]{kwargs}
+\end{DoxyParamCaption}
+)}\hypertarget{_8ycm__extra__conf_8py_a51f8bcdc9a3b791e6a88d798e6c786b3}{}\label{_8ycm__extra__conf_8py_a51f8bcdc9a3b791e6a88d798e6c786b3}
+
+\begin{DoxyCode}
+127 \textcolor{keyword}{def }\hyperlink{_8ycm__extra__conf_8py_a51f8bcdc9a3b791e6a88d798e6c786b3}{FlagsForFile}( filename, **kwargs ):
+128   \textcolor{keywordflow}{if} database:
+129     \textcolor{comment}{# Bear in mind that compilation\_info.compiler\_flags\_ does NOT return a}
+130     \textcolor{comment}{# python list, but a "list-like" StringVec object}
+131     compilation\_info = \hyperlink{_8ycm__extra__conf_8py_a42a14573593ce75cd6e385a85326111f}{GetCompilationInfoForFile}( filename )
+132     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} compilation\_info:
+133       \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+134 
+135     final\_flags = \hyperlink{_8ycm__extra__conf_8py_aa20d30f8cc08fc0ab076b4cf458e0d3d}{MakeRelativePathsInFlagsAbsolute}(
+136       compilation\_info.compiler\_flags\_,
+137       compilation\_info.compiler\_working\_dir\_ )
+138 
+139   \textcolor{keywordflow}{else}:
+140     relative\_to = \hyperlink{_8ycm__extra__conf_8py_aab283cdb607efa6a1a7aaa3f089c63f1}{DirectoryOfThisScript}()
+141     final\_flags = \hyperlink{_8ycm__extra__conf_8py_aa20d30f8cc08fc0ab076b4cf458e0d3d}{MakeRelativePathsInFlagsAbsolute}( flags, relative\_to )
+142 
+143   \textcolor{keywordflow}{return} \{
+144     \textcolor{stringliteral}{'flags'}: final\_flags,
+145     \textcolor{stringliteral}{'do\_cache'}: \textcolor{keyword}{True}
+146   \}
+147 
+148 \end{DoxyCode}
+\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}!Get\+Compilation\+Info\+For\+File@{Get\+Compilation\+Info\+For\+File}}
+\index{Get\+Compilation\+Info\+For\+File@{Get\+Compilation\+Info\+For\+File}!.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsubsection[{\texorpdfstring{Get\+Compilation\+Info\+For\+File(filename)}{GetCompilationInfoForFile(filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def Get\+Compilation\+Info\+For\+File (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{_8ycm__extra__conf_8py_a42a14573593ce75cd6e385a85326111f}{}\label{_8ycm__extra__conf_8py_a42a14573593ce75cd6e385a85326111f}
+
+\begin{DoxyCode}
+109 \textcolor{keyword}{def }\hyperlink{_8ycm__extra__conf_8py_a42a14573593ce75cd6e385a85326111f}{GetCompilationInfoForFile}( filename ):
+110   \textcolor{comment}{# The compilation\_commands.json file generated by CMake does not have entries}
+111   \textcolor{comment}{# for header files. So we do our best by asking the db for flags for a}
+112   \textcolor{comment}{# corresponding source file, if any. If one exists, the flags for that file}
+113   \textcolor{comment}{# should be good enough.}
+114   \textcolor{keywordflow}{if} \hyperlink{_8ycm__extra__conf_8py_a6bb59f541be0dcbde53eba606d48ddf8}{IsHeaderFile}( filename ):
+115     basename = os.path.splitext( filename )[ 0 ]
+116     \textcolor{keywordflow}{for} extension \textcolor{keywordflow}{in} SOURCE\_EXTENSIONS:
+117       replacement\_file = basename + extension
+118       \textcolor{keywordflow}{if} os.path.exists( replacement\_file ):
+119         compilation\_info = database.GetCompilationInfoForFile(
+120           replacement\_file )
+121         \textcolor{keywordflow}{if} compilation\_info.compiler\_flags\_:
+122           \textcolor{keywordflow}{return} compilation\_info
+123     \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+124   \textcolor{keywordflow}{return} database.GetCompilationInfoForFile( filename )
+125 
+126 
+\end{DoxyCode}
+\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}!Is\+Header\+File@{Is\+Header\+File}}
+\index{Is\+Header\+File@{Is\+Header\+File}!.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsubsection[{\texorpdfstring{Is\+Header\+File(filename)}{IsHeaderFile(filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def Is\+Header\+File (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{_8ycm__extra__conf_8py_a6bb59f541be0dcbde53eba606d48ddf8}{}\label{_8ycm__extra__conf_8py_a6bb59f541be0dcbde53eba606d48ddf8}
+
+\begin{DoxyCode}
+104 \textcolor{keyword}{def }\hyperlink{_8ycm__extra__conf_8py_a6bb59f541be0dcbde53eba606d48ddf8}{IsHeaderFile}( filename ):
+105   extension = os.path.splitext( filename )[ 1 ]
+106   \textcolor{keywordflow}{return} extension \textcolor{keywordflow}{in} [ \textcolor{stringliteral}{'.H'}, \textcolor{stringliteral}{'.h'}, \textcolor{stringliteral}{'.hxx'}, \textcolor{stringliteral}{'.hpp'}, \textcolor{stringliteral}{'.hh'} ]
+107 
+108 
+\end{DoxyCode}
+\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}!Make\+Relative\+Paths\+In\+Flags\+Absolute@{Make\+Relative\+Paths\+In\+Flags\+Absolute}}
+\index{Make\+Relative\+Paths\+In\+Flags\+Absolute@{Make\+Relative\+Paths\+In\+Flags\+Absolute}!.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsubsection[{\texorpdfstring{Make\+Relative\+Paths\+In\+Flags\+Absolute(flags, working\+\_\+directory)}{MakeRelativePathsInFlagsAbsolute(flags, working_directory)}}]{\setlength{\rightskip}{0pt plus 5cm}def Make\+Relative\+Paths\+In\+Flags\+Absolute (
+\begin{DoxyParamCaption}
+\item[{}]{flags, }
+\item[{}]{working\+\_\+directory}
+\end{DoxyParamCaption}
+)}\hypertarget{_8ycm__extra__conf_8py_aa20d30f8cc08fc0ab076b4cf458e0d3d}{}\label{_8ycm__extra__conf_8py_aa20d30f8cc08fc0ab076b4cf458e0d3d}
+
+\begin{DoxyCode}
+75 \textcolor{keyword}{def }\hyperlink{_8ycm__extra__conf_8py_aa20d30f8cc08fc0ab076b4cf458e0d3d}{MakeRelativePathsInFlagsAbsolute}( flags, working\_directory ):
+76   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} working\_directory:
+77     \textcolor{keywordflow}{return} list( flags )
+78   new\_flags = []
+79   make\_next\_absolute = \textcolor{keyword}{False}
+80   path\_flags = [ \textcolor{stringliteral}{'-isystem'}, \textcolor{stringliteral}{'-I'}, \textcolor{stringliteral}{'-iquote'}, \textcolor{stringliteral}{'--sysroot='} ]
+81   \textcolor{keywordflow}{for} flag \textcolor{keywordflow}{in} flags:
+82     new\_flag = flag
+83 
+84     \textcolor{keywordflow}{if} make\_next\_absolute:
+85       make\_next\_absolute = \textcolor{keyword}{False}
+86       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} flag.startswith( \textcolor{stringliteral}{'/'} ):
+87         new\_flag = os.path.join( working\_directory, flag )
+88 
+89     \textcolor{keywordflow}{for} path\_flag \textcolor{keywordflow}{in} path\_flags:
+90       \textcolor{keywordflow}{if} flag == path\_flag:
+91         make\_next\_absolute = \textcolor{keyword}{True}
+92         \textcolor{keywordflow}{break}
+93 
+94       \textcolor{keywordflow}{if} flag.startswith( path\_flag ):
+95         path = flag[ len( path\_flag ): ]
+96         new\_flag = path\_flag + os.path.join( working\_directory, path )
+97         \textcolor{keywordflow}{break}
+98 
+99     \textcolor{keywordflow}{if} new\_flag:
+100       new\_flags.append( new\_flag )
+101   \textcolor{keywordflow}{return} new\_flags
+102 
+103 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}!compilation\+\_\+database\+\_\+folder@{compilation\+\_\+database\+\_\+folder}}
+\index{compilation\+\_\+database\+\_\+folder@{compilation\+\_\+database\+\_\+folder}!.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsubsection[{\texorpdfstring{compilation\+\_\+database\+\_\+folder}{compilation_database_folder}}]{\setlength{\rightskip}{0pt plus 5cm}string compilation\+\_\+database\+\_\+folder = \textquotesingle{}\textquotesingle{}}\hypertarget{_8ycm__extra__conf_8py_a6a4d7e96c7bc9093b406af626b7936a2}{}\label{_8ycm__extra__conf_8py_a6a4d7e96c7bc9093b406af626b7936a2}
+\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}!database@{database}}
+\index{database@{database}!.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsubsection[{\texorpdfstring{database}{database}}]{\setlength{\rightskip}{0pt plus 5cm}database = ycm\+\_\+core.\+Compilation\+Database( {\bf compilation\+\_\+database\+\_\+folder} )}\hypertarget{_8ycm__extra__conf_8py_a64dbaa3229ec575b68ec333442e10cee}{}\label{_8ycm__extra__conf_8py_a64dbaa3229ec575b68ec333442e10cee}
+\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}!flags@{flags}}
+\index{flags@{flags}!.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsubsection[{\texorpdfstring{flags}{flags}}]{\setlength{\rightskip}{0pt plus 5cm}list flags}\hypertarget{_8ycm__extra__conf_8py_abd73d8e4551f1a637280b3876d1ae2e3}{}\label{_8ycm__extra__conf_8py_abd73d8e4551f1a637280b3876d1ae2e3}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = [
+2     \textcolor{stringliteral}{'-x'},
+3     \textcolor{stringliteral}{'c++'},
+4     \textcolor{stringliteral}{'-DGTEST\_HAS\_PTHREAD=1'},
+5     \textcolor{stringliteral}{'-I/Users/david/code/scratch/cpp/include'},
+6     \textcolor{stringliteral}{'-I/Users/david/code/scratch/cpp/test/../vendor/googletest/googletest/include'},
+7     \textcolor{stringliteral}{'-I/Users/david/code/scratch/cpp/vendor/boost'},
+8     \textcolor{stringliteral}{'-I/Users/david/code/scratch/cpp/vendor/googletest/googletest'},
+9     \textcolor{stringliteral}{'-I/Users/david/code/scratch/cpp/vendor/googletest/googletest/include'},
+10     \textcolor{stringliteral}{'-Wall'},
+11     \textcolor{stringliteral}{'-Wextra'},
+12     \textcolor{stringliteral}{'-Wpedantic'},
+13     \textcolor{stringliteral}{'-std=c++14'},
+14 ]
+\end{DoxyCode}
+\index{.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}!S\+O\+U\+R\+C\+E\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS@{S\+O\+U\+R\+C\+E\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS}}
+\index{S\+O\+U\+R\+C\+E\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS@{S\+O\+U\+R\+C\+E\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS}!.\+ycm\+\_\+extra\+\_\+conf.\+py@{.\+ycm\+\_\+extra\+\_\+conf.\+py}}
+\subsubsection[{\texorpdfstring{S\+O\+U\+R\+C\+E\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS}{SOURCE_EXTENSIONS}}]{\setlength{\rightskip}{0pt plus 5cm}list S\+O\+U\+R\+C\+E\+\_\+\+E\+X\+T\+E\+N\+S\+I\+O\+NS = \mbox{[} \textquotesingle{}.C\textquotesingle{}, \textquotesingle{}.cpp\textquotesingle{}, \textquotesingle{}.cxx\textquotesingle{}, \textquotesingle{}.{\bf cc}\textquotesingle{}, \textquotesingle{}.c\textquotesingle{}, \textquotesingle{}.{\bf m}\textquotesingle{}, \textquotesingle{}.mm\textquotesingle{} \mbox{]}}\hypertarget{_8ycm__extra__conf_8py_a47014996e1e517071cd0412a22adb123}{}\label{_8ycm__extra__conf_8py_a47014996e1e517071cd0412a22adb123}

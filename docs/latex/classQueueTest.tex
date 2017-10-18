@@ -1,0 +1,149 @@
+\hypertarget{classQueueTest}{}\section{Queue\+Test Class Reference}
+\label{classQueueTest}\index{Queue\+Test@{Queue\+Test}}
+
+
+Inheritance diagram for Queue\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{classQueueTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Queue\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classQueueTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classQueueTest_a91e69958f086239a523864d6b94ab174}{Set\+Up} ()
+\item 
+void \hyperlink{classQueueTest_a7f1661cd16c428a130d6ac1e4246eaab}{Map\+Tester} (const \hyperlink{classQueue}{Queue}$<$ int $>$ $\ast$q)
+\item 
+virtual void \hyperlink{classQueueTest_a91e69958f086239a523864d6b94ab174}{Set\+Up} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classQueueTest_a2c7e0d1edb558dbbc4c085316d3d1ee6}{Double} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classQueue}{Queue}$<$ int $>$ \hyperlink{classQueueTest_a0eba1fe2b31d75abd2df688ca5245e22}{q0\+\_\+}
+\item 
+\hyperlink{classQueue}{Queue}$<$ int $>$ \hyperlink{classQueueTest_a1e55594e71820ba0f1b09591fb328c30}{q1\+\_\+}
+\item 
+\hyperlink{classQueue}{Queue}$<$ int $>$ \hyperlink{classQueueTest_aeb7a2e3f6ce2d97d84eb1e01468adc2f}{q2\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Queue\+Test@{Queue\+Test}!Double@{Double}}
+\index{Double@{Double}!Queue\+Test@{Queue\+Test}}
+\subsubsection[{\texorpdfstring{Double(int n)}{Double(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}static int Queue\+Test\+::\+Double (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classQueueTest_a2c7e0d1edb558dbbc4c085316d3d1ee6}{}\label{classQueueTest_a2c7e0d1edb558dbbc4c085316d3d1ee6}
+
+\begin{DoxyCode}
+91                            \{
+92     \textcolor{keywordflow}{return} 2*\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+93   \}
+\end{DoxyCode}
+\index{Queue\+Test@{Queue\+Test}!Map\+Tester@{Map\+Tester}}
+\index{Map\+Tester@{Map\+Tester}!Queue\+Test@{Queue\+Test}}
+\subsubsection[{\texorpdfstring{Map\+Tester(const Queue$<$ int $>$ $\ast$q)}{MapTester(const Queue< int > *q)}}]{\setlength{\rightskip}{0pt plus 5cm}void Queue\+Test\+::\+Map\+Tester (
+\begin{DoxyParamCaption}
+\item[{const {\bf Queue}$<$ int $>$ $\ast$}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classQueueTest_a7f1661cd16c428a130d6ac1e4246eaab}{}\label{classQueueTest_a7f1661cd16c428a130d6ac1e4246eaab}
+
+\begin{DoxyCode}
+96                                        \{
+97     \textcolor{comment}{// Creates a new queue, where each element is twice as big as the}
+98     \textcolor{comment}{// corresponding one in q.}
+99     \textcolor{keyword}{const} \hyperlink{classQueue}{Queue<int>} * \textcolor{keyword}{const} new\_q = q->\hyperlink{classQueue_a7cb2f6585319ba1fd19d2347d95e71c1}{Map}(\hyperlink{classQueueTest_a2c7e0d1edb558dbbc4c085316d3d1ee6}{Double});
+100 
+101     \textcolor{comment}{// Verifies that the new queue has the same size as q.}
+102     \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(q->\hyperlink{classQueue_a8d69a34b2dfccbf1343b7fc4ba35da90}{Size}(), new\_q->\hyperlink{classQueue_a8d69a34b2dfccbf1343b7fc4ba35da90}{Size}());
+103 
+104     \textcolor{comment}{// Verifies the relationship between the elements of the two queues.}
+105     \textcolor{keywordflow}{for} ( \textcolor{keyword}{const} \hyperlink{classQueueNode}{QueueNode<int>} * n1 = q->\hyperlink{classQueue_a71aa0154ef75bb87a53b6af1829fcd5e}{Head}(), * n2 = new\_q->
+      \hyperlink{classQueue_a71aa0154ef75bb87a53b6af1829fcd5e}{Head}();
+106           n1 != NULL; n1 = n1->\hyperlink{classQueueNode_a8a9fdf488da06533360999ef85db56ea}{next}(), n2 = n2->\hyperlink{classQueueNode_a8a9fdf488da06533360999ef85db56ea}{next}() ) \{
+107       \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(2 * n1->element(), n2->element());
+108     \}
+109 
+110     \textcolor{keyword}{delete} new\_q;
+111   \}
+\end{DoxyCode}
+\index{Queue\+Test@{Queue\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Queue\+Test@{Queue\+Test}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Queue\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classQueueTest_a91e69958f086239a523864d6b94ab174}{}\label{classQueueTest_a91e69958f086239a523864d6b94ab174}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a190315150c303ddf801313fd1a777733}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+77                        \{
+78     \hyperlink{classQueueTest_a1e55594e71820ba0f1b09591fb328c30}{q1\_}.\hyperlink{classQueue_abaa2e7175457307bca74f5562cbdaaa9}{Enqueue}(1);
+79     \hyperlink{classQueueTest_aeb7a2e3f6ce2d97d84eb1e01468adc2f}{q2\_}.\hyperlink{classQueue_abaa2e7175457307bca74f5562cbdaaa9}{Enqueue}(2);
+80     \hyperlink{classQueueTest_aeb7a2e3f6ce2d97d84eb1e01468adc2f}{q2\_}.\hyperlink{classQueue_abaa2e7175457307bca74f5562cbdaaa9}{Enqueue}(3);
+81   \}
+\end{DoxyCode}
+\index{Queue\+Test@{Queue\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Queue\+Test@{Queue\+Test}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Queue\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classQueueTest_a91e69958f086239a523864d6b94ab174}{}\label{classQueueTest_a91e69958f086239a523864d6b94ab174}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a190315150c303ddf801313fd1a777733}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+146                        \{
+147     \textcolor{comment}{// First, we need to set up the super fixture (QuickTest).}
+148     \hyperlink{classQuickTest_ae52ad082887512b92240ce40a1a05650}{QuickTest::SetUp}();
+149 
+150     \textcolor{comment}{// Second, some additional setup for this fixture.}
+151     \hyperlink{classQueueTest_a1e55594e71820ba0f1b09591fb328c30}{q1\_}.\hyperlink{classQueue_abaa2e7175457307bca74f5562cbdaaa9}{Enqueue}(1);
+152     \hyperlink{classQueueTest_aeb7a2e3f6ce2d97d84eb1e01468adc2f}{q2\_}.\hyperlink{classQueue_abaa2e7175457307bca74f5562cbdaaa9}{Enqueue}(2);
+153     \hyperlink{classQueueTest_aeb7a2e3f6ce2d97d84eb1e01468adc2f}{q2\_}.\hyperlink{classQueue_abaa2e7175457307bca74f5562cbdaaa9}{Enqueue}(3);
+154   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Queue\+Test@{Queue\+Test}!q0\+\_\+@{q0\+\_\+}}
+\index{q0\+\_\+@{q0\+\_\+}!Queue\+Test@{Queue\+Test}}
+\subsubsection[{\texorpdfstring{q0\+\_\+}{q0_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Queue}$<$ int $>$ Queue\+Test\+::q0\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classQueueTest_a0eba1fe2b31d75abd2df688ca5245e22}{}\label{classQueueTest_a0eba1fe2b31d75abd2df688ca5245e22}
+\index{Queue\+Test@{Queue\+Test}!q1\+\_\+@{q1\+\_\+}}
+\index{q1\+\_\+@{q1\+\_\+}!Queue\+Test@{Queue\+Test}}
+\subsubsection[{\texorpdfstring{q1\+\_\+}{q1_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Queue}$<$ int $>$ Queue\+Test\+::q1\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classQueueTest_a1e55594e71820ba0f1b09591fb328c30}{}\label{classQueueTest_a1e55594e71820ba0f1b09591fb328c30}
+\index{Queue\+Test@{Queue\+Test}!q2\+\_\+@{q2\+\_\+}}
+\index{q2\+\_\+@{q2\+\_\+}!Queue\+Test@{Queue\+Test}}
+\subsubsection[{\texorpdfstring{q2\+\_\+}{q2_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Queue}$<$ int $>$ Queue\+Test\+::q2\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classQueueTest_aeb7a2e3f6ce2d97d84eb1e01468adc2f}{}\label{classQueueTest_aeb7a2e3f6ce2d97d84eb1e01468adc2f}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/samples/\hyperlink{sample3__unittest_8cc}{sample3\+\_\+unittest.\+cc}\item 
+vendor/googletest/googletest/samples/\hyperlink{sample5__unittest_8cc}{sample5\+\_\+unittest.\+cc}\end{DoxyCompactItemize}

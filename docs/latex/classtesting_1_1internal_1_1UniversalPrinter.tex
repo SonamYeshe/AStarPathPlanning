@@ -1,0 +1,41 @@
+\hypertarget{classtesting_1_1internal_1_1UniversalPrinter}{}\section{testing\+:\+:internal\+:\+:Universal\+Printer$<$ T $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1UniversalPrinter}\index{testing\+::internal\+::\+Universal\+Printer$<$ T $>$@{testing\+::internal\+::\+Universal\+Printer$<$ T $>$}}
+
+
+{\ttfamily \#include $<$gtest-\/printers.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1UniversalPrinter_a6a7d29444412467c14931bc55a046138}{Print} (const T \&value,\+::std\+::ostream $\ast$os)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Universal\+Printer@{testing\+::internal\+::\+Universal\+Printer}!Print@{Print}}
+\index{Print@{Print}!testing\+::internal\+::\+Universal\+Printer@{testing\+::internal\+::\+Universal\+Printer}}
+\subsubsection[{\texorpdfstring{Print(const T \&value,\+::std\+::ostream $\ast$os)}{Print(const T &value,::std::ostream *os)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static void {\bf testing\+::internal\+::\+Universal\+Printer}$<$ T $>$\+::Print (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value, }
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UniversalPrinter_a6a7d29444412467c14931bc55a046138}{}\label{classtesting_1_1internal_1_1UniversalPrinter_a6a7d29444412467c14931bc55a046138}
+
+\begin{DoxyCode}
+698                                                     \{
+699     \textcolor{comment}{// By default, ::testing::internal::PrintTo() is used for printing}
+700     \textcolor{comment}{// the value.}
+701     \textcolor{comment}{//}
+702     \textcolor{comment}{// Thanks to Koenig look-up, if T is a class and has its own}
+703     \textcolor{comment}{// PrintTo() function defined in its namespace, that function will}
+704     \textcolor{comment}{// be visible here.  Since it is more specific than the generic ones}
+705     \textcolor{comment}{// in ::testing::internal, it will be picked by the compiler in the}
+706     \textcolor{comment}{// following statement - exactly what we want.}
+707     \hyperlink{namespacetesting_1_1internal_a880d891d434f918b29a382f90e47cecb}{PrintTo}(value, os);
+708   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/include/gtest/\hyperlink{gtest-printers_8h}{gtest-\/printers.\+h}\end{DoxyCompactItemize}

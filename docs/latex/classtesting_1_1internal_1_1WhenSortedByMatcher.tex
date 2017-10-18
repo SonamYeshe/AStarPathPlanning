@@ -1,0 +1,54 @@
+\hypertarget{classtesting_1_1internal_1_1WhenSortedByMatcher}{}\section{testing\+:\+:internal\+:\+:When\+Sorted\+By\+Matcher$<$ Comparator, Container\+Matcher $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1WhenSortedByMatcher}\index{testing\+::internal\+::\+When\+Sorted\+By\+Matcher$<$ Comparator, Container\+Matcher $>$@{testing\+::internal\+::\+When\+Sorted\+By\+Matcher$<$ Comparator, Container\+Matcher $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1WhenSortedByMatcher_1_1Impl}{Impl}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1WhenSortedByMatcher_a5c5e625b3f0be9f7380f5be744f61b1c}{When\+Sorted\+By\+Matcher} (const Comparator \&comparator, const Container\+Matcher \&matcher)
+\item 
+{\footnotesize template$<$typename Lhs\+Container $>$ }\\\hyperlink{classtesting_1_1internal_1_1WhenSortedByMatcher_aad52930727946a3ed55c8bea900b30c5}{operator Matcher$<$ Lhs\+Container $>$} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+When\+Sorted\+By\+Matcher@{testing\+::internal\+::\+When\+Sorted\+By\+Matcher}!When\+Sorted\+By\+Matcher@{When\+Sorted\+By\+Matcher}}
+\index{When\+Sorted\+By\+Matcher@{When\+Sorted\+By\+Matcher}!testing\+::internal\+::\+When\+Sorted\+By\+Matcher@{testing\+::internal\+::\+When\+Sorted\+By\+Matcher}}
+\subsubsection[{\texorpdfstring{When\+Sorted\+By\+Matcher(const Comparator \&comparator, const Container\+Matcher \&matcher)}{WhenSortedByMatcher(const Comparator &comparator, const ContainerMatcher &matcher)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Comparator, typename Container\+Matcher$>$ {\bf testing\+::internal\+::\+When\+Sorted\+By\+Matcher}$<$ Comparator, Container\+Matcher $>$\+::{\bf When\+Sorted\+By\+Matcher} (
+\begin{DoxyParamCaption}
+\item[{const Comparator \&}]{comparator, }
+\item[{const Container\+Matcher \&}]{matcher}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1WhenSortedByMatcher_a5c5e625b3f0be9f7380f5be744f61b1c}{}\label{classtesting_1_1internal_1_1WhenSortedByMatcher_a5c5e625b3f0be9f7380f5be744f61b1c}
+
+\begin{DoxyCode}
+2617       : comparator\_(comparator), matcher\_(matcher) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+When\+Sorted\+By\+Matcher@{testing\+::internal\+::\+When\+Sorted\+By\+Matcher}!operator Matcher$<$ Lhs\+Container $>$@{operator Matcher$<$ Lhs\+Container $>$}}
+\index{operator Matcher$<$ Lhs\+Container $>$@{operator Matcher$<$ Lhs\+Container $>$}!testing\+::internal\+::\+When\+Sorted\+By\+Matcher@{testing\+::internal\+::\+When\+Sorted\+By\+Matcher}}
+\subsubsection[{\texorpdfstring{operator Matcher$<$ Lhs\+Container $>$() const }{operator Matcher< LhsContainer >() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Comparator, typename Container\+Matcher$>$ template$<$typename Lhs\+Container $>$ {\bf testing\+::internal\+::\+When\+Sorted\+By\+Matcher}$<$ Comparator, Container\+Matcher $>$\+::operator {\bf Matcher}$<$ Lhs\+Container $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1WhenSortedByMatcher_aad52930727946a3ed55c8bea900b30c5}{}\label{classtesting_1_1internal_1_1WhenSortedByMatcher_aad52930727946a3ed55c8bea900b30c5}
+
+\begin{DoxyCode}
+2620                                          \{
+2621     \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a37fd8029ac00e60952440a3d9cca8166}{MakeMatcher}(\textcolor{keyword}{new} Impl<LhsContainer>(comparator\_, matcher\_));
+2622   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

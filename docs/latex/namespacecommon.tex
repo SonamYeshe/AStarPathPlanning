@@ -1,0 +1,109 @@
+\hypertarget{namespacecommon}{}\section{common Namespace Reference}
+\label{namespacecommon}\index{common@{common}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacecommon_ac1337758ae23f6a91b44de07408791da}{Get\+Command\+Output} (command)
+\item 
+def \hyperlink{namespacecommon_a312d07161b76d965fee6a61e464e283f}{Get\+Svn\+Info} ()
+\item 
+def \hyperlink{namespacecommon_a9e6483972a8dc0a6a274cbcee69564b0}{Get\+Svn\+Trunk} ()
+\item 
+def \hyperlink{namespacecommon_af29dcab2d7b4a9dd846446a0987ab387}{Is\+In\+G\+Test\+Svn} ()
+\item 
+def \hyperlink{namespacecommon_a8219bb529336fc3f0ef8222a5ed48222}{Is\+In\+G\+Mock\+Svn} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{common@{common}!Get\+Command\+Output@{Get\+Command\+Output}}
+\index{Get\+Command\+Output@{Get\+Command\+Output}!common@{common}}
+\subsubsection[{\texorpdfstring{Get\+Command\+Output(command)}{GetCommandOutput(command)}}]{\setlength{\rightskip}{0pt plus 5cm}def common.\+Get\+Command\+Output (
+\begin{DoxyParamCaption}
+\item[{}]{command}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecommon_ac1337758ae23f6a91b44de07408791da}{}\label{namespacecommon_ac1337758ae23f6a91b44de07408791da}
+\begin{DoxyVerb}Runs the shell command and returns its stdout as a list of lines.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+46 \textcolor{keyword}{def }\hyperlink{namespacecommon_ac1337758ae23f6a91b44de07408791da}{GetCommandOutput}(command):
+47   \textcolor{stringliteral}{"""Runs the shell command and returns its stdout as a list of lines."""}
+48 
+49   f = os.popen(command, \textcolor{stringliteral}{'r')}
+50 \textcolor{stringliteral}{  lines = [line.strip() }\textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} f.readlines()]
+51   f.close()
+52   \textcolor{keywordflow}{return} lines
+53 
+54 
+\end{DoxyCode}
+\index{common@{common}!Get\+Svn\+Info@{Get\+Svn\+Info}}
+\index{Get\+Svn\+Info@{Get\+Svn\+Info}!common@{common}}
+\subsubsection[{\texorpdfstring{Get\+Svn\+Info()}{GetSvnInfo()}}]{\setlength{\rightskip}{0pt plus 5cm}def common.\+Get\+Svn\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecommon_a312d07161b76d965fee6a61e464e283f}{}\label{namespacecommon_a312d07161b76d965fee6a61e464e283f}
+\begin{DoxyVerb}Returns the project name and the current SVN workspace's root path.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+55 \textcolor{keyword}{def }\hyperlink{namespacecommon_a312d07161b76d965fee6a61e464e283f}{GetSvnInfo}():
+56   \textcolor{stringliteral}{"""Returns the project name and the current SVN workspace's root path."""}
+57 
+58   \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} \hyperlink{namespacecommon_ac1337758ae23f6a91b44de07408791da}{GetCommandOutput}(\textcolor{stringliteral}{'svn info .'}):
+59     m = \_SVN\_INFO\_URL\_RE.match(line)
+60     \textcolor{keywordflow}{if} m:
+61       project = m.group(1)  \textcolor{comment}{# googletest or googlemock}
+62       rel\_path = m.group(2)
+63       root = os.path.realpath(rel\_path.count(\textcolor{stringliteral}{'/'}) * \textcolor{stringliteral}{'../'})
+64       \textcolor{keywordflow}{return} project, root
+65 
+66   \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}, \textcolor{keywordtype}{None}
+67 
+68 
+\end{DoxyCode}
+\index{common@{common}!Get\+Svn\+Trunk@{Get\+Svn\+Trunk}}
+\index{Get\+Svn\+Trunk@{Get\+Svn\+Trunk}!common@{common}}
+\subsubsection[{\texorpdfstring{Get\+Svn\+Trunk()}{GetSvnTrunk()}}]{\setlength{\rightskip}{0pt plus 5cm}def common.\+Get\+Svn\+Trunk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecommon_a9e6483972a8dc0a6a274cbcee69564b0}{}\label{namespacecommon_a9e6483972a8dc0a6a274cbcee69564b0}
+\begin{DoxyVerb}Returns the current SVN workspace's trunk root path.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+69 \textcolor{keyword}{def }\hyperlink{namespacecommon_a9e6483972a8dc0a6a274cbcee69564b0}{GetSvnTrunk}():
+70   \textcolor{stringliteral}{"""Returns the current SVN workspace's trunk root path."""}
+71 
+72   \_, root = \hyperlink{namespacecommon_a312d07161b76d965fee6a61e464e283f}{GetSvnInfo}()
+73   \textcolor{keywordflow}{return} root + \textcolor{stringliteral}{'/trunk'} \textcolor{keywordflow}{if} root \textcolor{keywordflow}{else} \textcolor{keywordtype}{None}
+74 
+75 
+\end{DoxyCode}
+\index{common@{common}!Is\+In\+G\+Mock\+Svn@{Is\+In\+G\+Mock\+Svn}}
+\index{Is\+In\+G\+Mock\+Svn@{Is\+In\+G\+Mock\+Svn}!common@{common}}
+\subsubsection[{\texorpdfstring{Is\+In\+G\+Mock\+Svn()}{IsInGMockSvn()}}]{\setlength{\rightskip}{0pt plus 5cm}def common.\+Is\+In\+G\+Mock\+Svn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecommon_a8219bb529336fc3f0ef8222a5ed48222}{}\label{namespacecommon_a8219bb529336fc3f0ef8222a5ed48222}
+
+\begin{DoxyCode}
+81 \textcolor{keyword}{def }\hyperlink{namespacecommon_a8219bb529336fc3f0ef8222a5ed48222}{IsInGMockSvn}():
+82   project, \_ = \hyperlink{namespacecommon_a312d07161b76d965fee6a61e464e283f}{GetSvnInfo}()
+83   \textcolor{keywordflow}{return} project == \textcolor{stringliteral}{'googlemock'}
+84 \end{DoxyCode}
+\index{common@{common}!Is\+In\+G\+Test\+Svn@{Is\+In\+G\+Test\+Svn}}
+\index{Is\+In\+G\+Test\+Svn@{Is\+In\+G\+Test\+Svn}!common@{common}}
+\subsubsection[{\texorpdfstring{Is\+In\+G\+Test\+Svn()}{IsInGTestSvn()}}]{\setlength{\rightskip}{0pt plus 5cm}def common.\+Is\+In\+G\+Test\+Svn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecommon_af29dcab2d7b4a9dd846446a0987ab387}{}\label{namespacecommon_af29dcab2d7b4a9dd846446a0987ab387}
+
+\begin{DoxyCode}
+76 \textcolor{keyword}{def }\hyperlink{namespacecommon_af29dcab2d7b4a9dd846446a0987ab387}{IsInGTestSvn}():
+77   project, \_ = \hyperlink{namespacecommon_a312d07161b76d965fee6a61e464e283f}{GetSvnInfo}()
+78   \textcolor{keywordflow}{return} project == \textcolor{stringliteral}{'googletest'}
+79 
+80 
+\end{DoxyCode}

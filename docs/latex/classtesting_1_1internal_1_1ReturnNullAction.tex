@@ -1,0 +1,39 @@
+\hypertarget{classtesting_1_1internal_1_1ReturnNullAction}{}\section{testing\+:\+:internal\+:\+:Return\+Null\+Action Class Reference}
+\label{classtesting_1_1internal_1_1ReturnNullAction}\index{testing\+::internal\+::\+Return\+Null\+Action@{testing\+::internal\+::\+Return\+Null\+Action}}
+
+
+{\ttfamily \#include $<$gmock-\/actions.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Result , typename Argument\+Tuple $>$ }\\static Result \hyperlink{classtesting_1_1internal_1_1ReturnNullAction_a6ce1fba236686df93070320b399e4f32}{Perform} (const Argument\+Tuple \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Return\+Null\+Action@{testing\+::internal\+::\+Return\+Null\+Action}!Perform@{Perform}}
+\index{Perform@{Perform}!testing\+::internal\+::\+Return\+Null\+Action@{testing\+::internal\+::\+Return\+Null\+Action}}
+\subsubsection[{\texorpdfstring{Perform(const Argument\+Tuple \&)}{Perform(const ArgumentTuple &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Result , typename Argument\+Tuple $>$ static Result testing\+::internal\+::\+Return\+Null\+Action\+::\+Perform (
+\begin{DoxyParamCaption}
+\item[{const Argument\+Tuple \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1ReturnNullAction_a6ce1fba236686df93070320b399e4f32}{}\label{classtesting_1_1internal_1_1ReturnNullAction_a6ce1fba236686df93070320b399e4f32}
+
+\begin{DoxyCode}
+629                                               \{
+630 \textcolor{preprocessor}{#if GTEST\_LANG\_CXX11}
+631     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+632 \textcolor{preprocessor}{#else}
+633     \hyperlink{gtest-port_8h_ae1f37dc71d5daa6fb49ca1b6047d4a8c}{GTEST\_COMPILE\_ASSERT\_}(
+      \hyperlink{structtesting_1_1internal_1_1bool__constant_a499fba6576296b04d99690a486424b32}{internal::is\_pointer<Result>::value},
+634                           ReturnNull\_can\_be\_used\_to\_return\_a\_pointer\_only);
+635     \textcolor{keywordflow}{return} NULL;
+636 \textcolor{preprocessor}{#endif  // GTEST\_LANG\_CXX11}
+637   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-actions_8h}{gmock-\/actions.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{classtesting_1_1internal_1_1NeMatcher}{}\section{testing\+:\+:internal\+:\+:Ne\+Matcher$<$ Rhs $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1NeMatcher}\index{testing\+::internal\+::\+Ne\+Matcher$<$ Rhs $>$@{testing\+::internal\+::\+Ne\+Matcher$<$ Rhs $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+
+
+Inheritance diagram for testing\+:\+:internal\+:\+:Ne\+Matcher$<$ Rhs $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classtesting_1_1internal_1_1NeMatcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:internal\+:\+:Ne\+Matcher$<$ Rhs $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classtesting_1_1internal_1_1NeMatcher__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1NeMatcher_a64842882811cc96624c87119c51edd3e}{Ne\+Matcher} (const Rhs \&rhs)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{classtesting_1_1internal_1_1NeMatcher_a2ec33febe5471f9d435b4dc9f5cda564}{Desc} ()
+\item 
+static const char $\ast$ \hyperlink{classtesting_1_1internal_1_1NeMatcher_a9ea152391b69d422ba2a88c3d2d2dae5}{Negated\+Desc} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Ne\+Matcher@{testing\+::internal\+::\+Ne\+Matcher}!Ne\+Matcher@{Ne\+Matcher}}
+\index{Ne\+Matcher@{Ne\+Matcher}!testing\+::internal\+::\+Ne\+Matcher@{testing\+::internal\+::\+Ne\+Matcher}}
+\subsubsection[{\texorpdfstring{Ne\+Matcher(const Rhs \&rhs)}{NeMatcher(const Rhs &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Rhs $>$ {\bf testing\+::internal\+::\+Ne\+Matcher}$<$ Rhs $>$\+::{\bf Ne\+Matcher} (
+\begin{DoxyParamCaption}
+\item[{const Rhs \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1NeMatcher_a64842882811cc96624c87119c51edd3e}{}\label{classtesting_1_1internal_1_1NeMatcher_a64842882811cc96624c87119c51edd3e}
+
+\begin{DoxyCode}
+938       : ComparisonBase<NeMatcher<Rhs>, Rhs, AnyNe>(rhs) \{ \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Ne\+Matcher@{testing\+::internal\+::\+Ne\+Matcher}!Desc@{Desc}}
+\index{Desc@{Desc}!testing\+::internal\+::\+Ne\+Matcher@{testing\+::internal\+::\+Ne\+Matcher}}
+\subsubsection[{\texorpdfstring{Desc()}{Desc()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Rhs $>$ static const char$\ast$ {\bf testing\+::internal\+::\+Ne\+Matcher}$<$ Rhs $>$\+::Desc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1NeMatcher_a2ec33febe5471f9d435b4dc9f5cda564}{}\label{classtesting_1_1internal_1_1NeMatcher_a2ec33febe5471f9d435b4dc9f5cda564}
+
+\begin{DoxyCode}
+939 \{ \textcolor{keywordflow}{return} \textcolor{stringliteral}{"isn't equal to"}; \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Ne\+Matcher@{testing\+::internal\+::\+Ne\+Matcher}!Negated\+Desc@{Negated\+Desc}}
+\index{Negated\+Desc@{Negated\+Desc}!testing\+::internal\+::\+Ne\+Matcher@{testing\+::internal\+::\+Ne\+Matcher}}
+\subsubsection[{\texorpdfstring{Negated\+Desc()}{NegatedDesc()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Rhs $>$ static const char$\ast$ {\bf testing\+::internal\+::\+Ne\+Matcher}$<$ Rhs $>$\+::Negated\+Desc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1NeMatcher_a9ea152391b69d422ba2a88c3d2d2dae5}{}\label{classtesting_1_1internal_1_1NeMatcher_a9ea152391b69d422ba2a88c3d2d2dae5}
+
+\begin{DoxyCode}
+940 \{ \textcolor{keywordflow}{return} \textcolor{stringliteral}{"is equal to"}; \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

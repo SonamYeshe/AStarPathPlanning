@@ -1,0 +1,180 @@
+\hypertarget{classgtest__test__utils_1_1Subprocess}{}\section{gtest\+\_\+test\+\_\+utils.\+Subprocess Class Reference}
+\label{classgtest__test__utils_1_1Subprocess}\index{gtest\+\_\+test\+\_\+utils.\+Subprocess@{gtest\+\_\+test\+\_\+utils.\+Subprocess}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__test__utils_1_1Subprocess_a452a9e7d9988cc96e71b6fa09bbaddca}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, command, working\+\_\+dir=None, capture\+\_\+stderr=True, env=None)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_a170f722b867e51f3e97b5b60399988cf}{output}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_a9654b9eddd43c93acf66d5c7b0026fca}{terminated\+\_\+by\+\_\+signal}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_a020b5fa8268b9eaf1c4a57cbd53c104d}{exited}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_af083cd9621a5d5346ffe800191678ea3}{signal}
+\item 
+\hyperlink{classgtest__test__utils_1_1Subprocess_a01acee4476fd01ccf017d1351cf46c08}{exit\+\_\+code}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, command, working\+\_\+dir=\+None, capture\+\_\+stderr=\+True, env=\+None)}{__init__(self, command, working_dir=None, capture_stderr=True, env=None)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+test\+\_\+utils.\+Subprocess.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{command, }
+\item[{}]{working\+\_\+dir = {\ttfamily None}, }
+\item[{}]{capture\+\_\+stderr = {\ttfamily True}, }
+\item[{}]{env = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__test__utils_1_1Subprocess_a452a9e7d9988cc96e71b6fa09bbaddca}{}\label{classgtest__test__utils_1_1Subprocess_a452a9e7d9988cc96e71b6fa09bbaddca}
+\begin{DoxyVerb}Changes into a specified directory, if provided, and executes a command.
+
+Restores the old directory afterwards.
+
+Args:
+  command:        The command to run, in the form of sys.argv.
+  working_dir:    The directory to change into.
+  capture_stderr: Determines whether to capture stderr in the output member
+              or to discard it.
+  env:            Dictionary with environment to pass to the subprocess.
+
+Returns:
+  An object that represents outcome of the executed process. It has the
+  following attributes:
+terminated_by_signal   True iff the child process has been terminated
+                       by a signal.
+signal                 Sygnal that terminated the child process.
+exited                 True iff the child process exited normally.
+exit_code              The code with which the child process exited.
+output                 Child process's stdout and stderr output
+                       combined in a string.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+208   \textcolor{keyword}{def }\_\_init\_\_(self, command, working\_dir=None, capture\_stderr=True, env=None):
+209     \textcolor{stringliteral}{"""Changes into a specified directory, if provided, and executes a command.}
+210 \textcolor{stringliteral}{}
+211 \textcolor{stringliteral}{    Restores the old directory afterwards.}
+212 \textcolor{stringliteral}{}
+213 \textcolor{stringliteral}{    Args:}
+214 \textcolor{stringliteral}{      command:        The command to run, in the form of sys.argv.}
+215 \textcolor{stringliteral}{      working\_dir:    The directory to change into.}
+216 \textcolor{stringliteral}{      capture\_stderr: Determines whether to capture stderr in the output member}
+217 \textcolor{stringliteral}{                      or to discard it.}
+218 \textcolor{stringliteral}{      env:            Dictionary with environment to pass to the subprocess.}
+219 \textcolor{stringliteral}{}
+220 \textcolor{stringliteral}{    Returns:}
+221 \textcolor{stringliteral}{      An object that represents outcome of the executed process. It has the}
+222 \textcolor{stringliteral}{      following attributes:}
+223 \textcolor{stringliteral}{        terminated\_by\_signal   True iff the child process has been terminated}
+224 \textcolor{stringliteral}{                               by a signal.}
+225 \textcolor{stringliteral}{        signal                 Sygnal that terminated the child process.}
+226 \textcolor{stringliteral}{        exited                 True iff the child process exited normally.}
+227 \textcolor{stringliteral}{        exit\_code              The code with which the child process exited.}
+228 \textcolor{stringliteral}{        output                 Child process's stdout and stderr output}
+229 \textcolor{stringliteral}{                               combined in a string.}
+230 \textcolor{stringliteral}{    """}
+231 
+232     \textcolor{comment}{# The subprocess module is the preferrable way of running programs}
+233     \textcolor{comment}{# since it is available and behaves consistently on all platforms,}
+234     \textcolor{comment}{# including Windows. But it is only available starting in python 2.4.}
+235     \textcolor{comment}{# In earlier python versions, we revert to the popen2 module, which is}
+236     \textcolor{comment}{# available in python 2.0 and later but doesn't provide required}
+237     \textcolor{comment}{# functionality (Popen4) under Windows. This allows us to support Mac}
+238     \textcolor{comment}{# OS X 10.4 Tiger, which has python 2.3 installed.}
+239     \textcolor{keywordflow}{if} \_SUBPROCESS\_MODULE\_AVAILABLE:
+240       \textcolor{keywordflow}{if} capture\_stderr:
+241         stderr = subprocess.STDOUT
+242       \textcolor{keywordflow}{else}:
+243         stderr = subprocess.PIPE
+244 
+245       p = subprocess.Popen(command,
+246                            stdout=subprocess.PIPE, stderr=stderr,
+247                            cwd=working\_dir, universal\_newlines=\textcolor{keyword}{True}, env=env)
+248       \textcolor{comment}{# communicate returns a tuple with the file obect for the child's}
+249       \textcolor{comment}{# output.}
+250       self.output = p.communicate()[0]
+251       self.\_return\_code = p.returncode
+252     \textcolor{keywordflow}{else}:
+253       old\_dir = os.getcwd()
+254 
+255       \textcolor{keyword}{def }\_ReplaceEnvDict(dest, src):
+256         \textcolor{comment}{# Changes made by os.environ.clear are not inheritable by child}
+257         \textcolor{comment}{# processes until Python 2.6. To produce inheritable changes we have}
+258         \textcolor{comment}{# to delete environment items with the del statement.}
+259         \textcolor{keywordflow}{for} key \textcolor{keywordflow}{in} dest.keys():
+260           del dest[key]
+261         dest.update(src)
+262 
+263       \textcolor{comment}{# When 'env' is not None, backup the environment variables and replace}
+264       \textcolor{comment}{# them with the passed 'env'. When 'env' is None, we simply use the}
+265       \textcolor{comment}{# current 'os.environ' for compatibility with the subprocess.Popen}
+266       \textcolor{comment}{# semantics used above.}
+267       \textcolor{keywordflow}{if} env \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+268         old\_environ = os.environ.copy()
+269         \_ReplaceEnvDict(os.environ, env)
+270 
+271       \textcolor{keywordflow}{try}:
+272         \textcolor{keywordflow}{if} working\_dir \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+273           os.chdir(working\_dir)
+274         \textcolor{keywordflow}{if} capture\_stderr:
+275           p = popen2.Popen4(command)
+276         \textcolor{keywordflow}{else}:
+277           p = popen2.Popen3(command)
+278         p.tochild.close()
+279         self.output = p.fromchild.read()
+280         ret\_code = p.wait()
+281       \textcolor{keywordflow}{finally}:
+282         os.chdir(old\_dir)
+283 
+284         \textcolor{comment}{# Restore the old environment variables}
+285         \textcolor{comment}{# if they were replaced.}
+286         \textcolor{keywordflow}{if} env \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+287           \_ReplaceEnvDict(os.environ, old\_environ)
+288 
+289       \textcolor{comment}{# Converts ret\_code to match the semantics of}
+290       \textcolor{comment}{# subprocess.Popen.returncode.}
+291       \textcolor{keywordflow}{if} os.WIFSIGNALED(ret\_code):
+292         self.\_return\_code = -os.WTERMSIG(ret\_code)
+293       \textcolor{keywordflow}{else}:  \textcolor{comment}{# os.WIFEXITED(ret\_code) should return True here.}
+294         self.\_return\_code = os.WEXITSTATUS(ret\_code)
+295 
+296     \textcolor{keywordflow}{if} self.\_return\_code < 0:
+297       self.terminated\_by\_signal = \textcolor{keyword}{True}
+298       self.exited = \textcolor{keyword}{False}
+299       self.signal = -self.\_return\_code
+300     \textcolor{keywordflow}{else}:
+301       self.terminated\_by\_signal = \textcolor{keyword}{False}
+302       self.exited = \textcolor{keyword}{True}
+303       self.exit\_code = self.\_return\_code
+304 
+305 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}!exit\+\_\+code@{exit\+\_\+code}}
+\index{exit\+\_\+code@{exit\+\_\+code}!gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}}
+\subsubsection[{\texorpdfstring{exit\+\_\+code}{exit_code}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+test\+\_\+utils.\+Subprocess.\+exit\+\_\+code}\hypertarget{classgtest__test__utils_1_1Subprocess_a01acee4476fd01ccf017d1351cf46c08}{}\label{classgtest__test__utils_1_1Subprocess_a01acee4476fd01ccf017d1351cf46c08}
+\index{gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}!exited@{exited}}
+\index{exited@{exited}!gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}}
+\subsubsection[{\texorpdfstring{exited}{exited}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+test\+\_\+utils.\+Subprocess.\+exited}\hypertarget{classgtest__test__utils_1_1Subprocess_a020b5fa8268b9eaf1c4a57cbd53c104d}{}\label{classgtest__test__utils_1_1Subprocess_a020b5fa8268b9eaf1c4a57cbd53c104d}
+\index{gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}!output@{output}}
+\index{output@{output}!gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}}
+\subsubsection[{\texorpdfstring{output}{output}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+test\+\_\+utils.\+Subprocess.\+output}\hypertarget{classgtest__test__utils_1_1Subprocess_a170f722b867e51f3e97b5b60399988cf}{}\label{classgtest__test__utils_1_1Subprocess_a170f722b867e51f3e97b5b60399988cf}
+\index{gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}!signal@{signal}}
+\index{signal@{signal}!gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}}
+\subsubsection[{\texorpdfstring{signal}{signal}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+test\+\_\+utils.\+Subprocess.\+signal}\hypertarget{classgtest__test__utils_1_1Subprocess_af083cd9621a5d5346ffe800191678ea3}{}\label{classgtest__test__utils_1_1Subprocess_af083cd9621a5d5346ffe800191678ea3}
+\index{gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}!terminated\+\_\+by\+\_\+signal@{terminated\+\_\+by\+\_\+signal}}
+\index{terminated\+\_\+by\+\_\+signal@{terminated\+\_\+by\+\_\+signal}!gtest\+\_\+test\+\_\+utils\+::\+Subprocess@{gtest\+\_\+test\+\_\+utils\+::\+Subprocess}}
+\subsubsection[{\texorpdfstring{terminated\+\_\+by\+\_\+signal}{terminated_by_signal}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+test\+\_\+utils.\+Subprocess.\+terminated\+\_\+by\+\_\+signal}\hypertarget{classgtest__test__utils_1_1Subprocess_a9654b9eddd43c93acf66d5c7b0026fca}{}\label{classgtest__test__utils_1_1Subprocess_a9654b9eddd43c93acf66d5c7b0026fca}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__test__utils_8py}{gtest\+\_\+test\+\_\+utils.\+py}\end{DoxyCompactItemize}

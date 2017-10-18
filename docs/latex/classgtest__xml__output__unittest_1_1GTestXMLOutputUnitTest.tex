@@ -1,0 +1,238 @@
+\hypertarget{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest}{}\section{gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test Class Reference}
+\label{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest}\index{gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}}
+
+
+Inheritance diagram for gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a310c136c1eb2b421f57651a7d358b17a}{test\+Non\+Empty\+Xml\+Output} (self)
+\item 
+def \hyperlink{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a9602f91fe2e9d1e09171a032e94a5619}{test\+Empty\+Xml\+Output} (self)
+\item 
+def \hyperlink{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a828521a7ae57f650e1e9ca4beb34336a}{test\+Timestamp\+Value} (self)
+\item 
+def \hyperlink{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a01ca66e14468028e5c4eb809987113cf}{test\+Default\+Output\+File} (self)
+\item 
+def \hyperlink{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_ac6df46d6831892e4c14dbdfae0049618}{test\+Suppressed\+Xml\+Output} (self)
+\item 
+def \hyperlink{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a572b6d49e8f4d646ebdadcced3d260ef}{test\+Filtered\+Test\+Xml\+Output} (self)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Unit test for Google Test's XML output functionality.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}!test\+Default\+Output\+File@{test\+Default\+Output\+File}}
+\index{test\+Default\+Output\+File@{test\+Default\+Output\+File}!gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Default\+Output\+File(self)}{testDefaultOutputFile(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test.\+test\+Default\+Output\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a01ca66e14468028e5c4eb809987113cf}{}\label{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a01ca66e14468028e5c4eb809987113cf}
+\begin{DoxyVerb}Confirms that Google Test produces an XML output file with the expected
+default name if no name is explicitly specified.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+201   \textcolor{keyword}{def }testDefaultOutputFile(self):
+202     \textcolor{stringliteral}{"""}
+203 \textcolor{stringliteral}{    Confirms that Google Test produces an XML output file with the expected}
+204 \textcolor{stringliteral}{    default name if no name is explicitly specified.}
+205 \textcolor{stringliteral}{    """}
+206     output\_file = os.path.join(\hyperlink{namespacegtest__test__utils_a25987e1cd76e93068b2afe6bac909d12}{gtest\_test\_utils.GetTempDir}(),
+207                                GTEST\_DEFAULT\_OUTPUT\_FILE)
+208     gtest\_prog\_path = \hyperlink{namespacegtest__test__utils_a89ed3717984a80ffbb7a9c92f71b86a2}{gtest\_test\_utils.GetTestExecutablePath}(
+209         \textcolor{stringliteral}{'gtest\_no\_test\_unittest'})
+210     \textcolor{keywordflow}{try}:
+211       os.remove(output\_file)
+212     \textcolor{keywordflow}{except} OSError:
+213       e = sys.exc\_info()[1]
+214       \textcolor{keywordflow}{if} e.errno != errno.ENOENT:
+215         \textcolor{keywordflow}{raise}
+216 
+217     p = \hyperlink{classgtest__test__utils_1_1Subprocess}{gtest\_test\_utils.Subprocess}(
+218         [gtest\_prog\_path, \textcolor{stringliteral}{'%s=xml'} % GTEST\_OUTPUT\_FLAG],
+219         working\_dir=\hyperlink{namespacegtest__test__utils_a25987e1cd76e93068b2afe6bac909d12}{gtest\_test\_utils.GetTempDir}())
+220     self.assert\_(p.exited)
+221     self.assertEquals(0, p.exit\_code)
+222     self.assert\_(os.path.isfile(output\_file))
+223 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}!test\+Empty\+Xml\+Output@{test\+Empty\+Xml\+Output}}
+\index{test\+Empty\+Xml\+Output@{test\+Empty\+Xml\+Output}!gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Empty\+Xml\+Output(self)}{testEmptyXmlOutput(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test.\+test\+Empty\+Xml\+Output (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a9602f91fe2e9d1e09171a032e94a5619}{}\label{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a9602f91fe2e9d1e09171a032e94a5619}
+\begin{DoxyVerb}Verifies XML output for a Google Test binary without actual tests.
+
+Runs a test program that generates an empty XML output, and
+tests that the XML output is expected.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+167   \textcolor{keyword}{def }testEmptyXmlOutput(self):
+168     \textcolor{stringliteral}{"""Verifies XML output for a Google Test binary without actual tests.}
+169 \textcolor{stringliteral}{}
+170 \textcolor{stringliteral}{    Runs a test program that generates an empty XML output, and}
+171 \textcolor{stringliteral}{    tests that the XML output is expected.}
+172 \textcolor{stringliteral}{    """}
+173 
+174     self.\_TestXmlOutput(\textcolor{stringliteral}{'gtest\_no\_test\_unittest'}, EXPECTED\_EMPTY\_XML, 0)
+175 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}!test\+Filtered\+Test\+Xml\+Output@{test\+Filtered\+Test\+Xml\+Output}}
+\index{test\+Filtered\+Test\+Xml\+Output@{test\+Filtered\+Test\+Xml\+Output}!gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Filtered\+Test\+Xml\+Output(self)}{testFilteredTestXmlOutput(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test.\+test\+Filtered\+Test\+Xml\+Output (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a572b6d49e8f4d646ebdadcced3d260ef}{}\label{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a572b6d49e8f4d646ebdadcced3d260ef}
+\begin{DoxyVerb}Verifies XML output when a filter is applied.
+
+Runs a test program that executes only some tests and verifies that
+non-selected tests do not show up in the XML output.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+253   \textcolor{keyword}{def }testFilteredTestXmlOutput(self):
+254     \textcolor{stringliteral}{"""Verifies XML output when a filter is applied.}
+255 \textcolor{stringliteral}{}
+256 \textcolor{stringliteral}{    Runs a test program that executes only some tests and verifies that}
+257 \textcolor{stringliteral}{    non-selected tests do not show up in the XML output.}
+258 \textcolor{stringliteral}{    """}
+259 
+260     self.\_TestXmlOutput(GTEST\_PROGRAM\_NAME, EXPECTED\_FILTERED\_TEST\_XML, 0,
+261                         extra\_args=[\textcolor{stringliteral}{'%s=SuccessfulTest.*'} % GTEST\_FILTER\_FLAG])
+262 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}!test\+Non\+Empty\+Xml\+Output@{test\+Non\+Empty\+Xml\+Output}}
+\index{test\+Non\+Empty\+Xml\+Output@{test\+Non\+Empty\+Xml\+Output}!gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Non\+Empty\+Xml\+Output(self)}{testNonEmptyXmlOutput(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test.\+test\+Non\+Empty\+Xml\+Output (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a310c136c1eb2b421f57651a7d358b17a}{}\label{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a310c136c1eb2b421f57651a7d358b17a}
+\begin{DoxyVerb}Runs a test program that generates a non-empty XML output, and
+tests that the XML output is expected.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+160     \textcolor{keyword}{def }testNonEmptyXmlOutput(self):
+161       \textcolor{stringliteral}{"""}
+162 \textcolor{stringliteral}{      Runs a test program that generates a non-empty XML output, and}
+163 \textcolor{stringliteral}{      tests that the XML output is expected.}
+164 \textcolor{stringliteral}{      """}
+165       self.\_TestXmlOutput(GTEST\_PROGRAM\_NAME, EXPECTED\_NON\_EMPTY\_XML, 1)
+166 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}!test\+Suppressed\+Xml\+Output@{test\+Suppressed\+Xml\+Output}}
+\index{test\+Suppressed\+Xml\+Output@{test\+Suppressed\+Xml\+Output}!gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Suppressed\+Xml\+Output(self)}{testSuppressedXmlOutput(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test.\+test\+Suppressed\+Xml\+Output (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_ac6df46d6831892e4c14dbdfae0049618}{}\label{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_ac6df46d6831892e4c14dbdfae0049618}
+\begin{DoxyVerb}Tests that no XML file is generated if the default XML listener is
+shut down before RUN_ALL_TESTS is invoked.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+224   \textcolor{keyword}{def }testSuppressedXmlOutput(self):
+225     \textcolor{stringliteral}{"""}
+226 \textcolor{stringliteral}{    Tests that no XML file is generated if the default XML listener is}
+227 \textcolor{stringliteral}{    shut down before RUN\_ALL\_TESTS is invoked.}
+228 \textcolor{stringliteral}{    """}
+229 
+230     xml\_path = os.path.join(\hyperlink{namespacegtest__test__utils_a25987e1cd76e93068b2afe6bac909d12}{gtest\_test\_utils.GetTempDir}(),
+231                             GTEST\_PROGRAM\_NAME + \textcolor{stringliteral}{'out.xml'})
+232     \textcolor{keywordflow}{if} os.path.isfile(xml\_path):
+233       os.remove(xml\_path)
+234 
+235     command = [GTEST\_PROGRAM\_PATH,
+236                \textcolor{stringliteral}{'%s=xml:%s'} % (GTEST\_OUTPUT\_FLAG, xml\_path),
+237                \textcolor{stringliteral}{'--shut\_down\_xml'}]
+238     p = \hyperlink{classgtest__test__utils_1_1Subprocess}{gtest\_test\_utils.Subprocess}(command)
+239     \textcolor{keywordflow}{if} p.terminated\_by\_signal:
+240       \textcolor{comment}{# p.signal is avalable only if p.terminated\_by\_signal is True.}
+241       self.assertFalse(
+242           p.terminated\_by\_signal,
+243           \textcolor{stringliteral}{'%s was killed by signal %d'} % (GTEST\_PROGRAM\_NAME, p.signal))
+244     \textcolor{keywordflow}{else}:
+245       self.assert\_(p.exited)
+246       self.assertEquals(1, p.exit\_code,
+247                         \textcolor{stringliteral}{"'%s' exited with code %s, which doesn't match "}
+248                         \textcolor{stringliteral}{'the expected exit code %s.'}
+249                         % (command, p.exit\_code, 1))
+250 
+251     self.assert\_(\textcolor{keywordflow}{not} os.path.isfile(xml\_path))
+252 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}!test\+Timestamp\+Value@{test\+Timestamp\+Value}}
+\index{test\+Timestamp\+Value@{test\+Timestamp\+Value}!gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test@{gtest\+\_\+xml\+\_\+output\+\_\+unittest\+::\+G\+Test\+X\+M\+L\+Output\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Timestamp\+Value(self)}{testTimestampValue(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+G\+Test\+X\+M\+L\+Output\+Unit\+Test.\+test\+Timestamp\+Value (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a828521a7ae57f650e1e9ca4beb34336a}{}\label{classgtest__xml__output__unittest_1_1GTestXMLOutputUnitTest_a828521a7ae57f650e1e9ca4beb34336a}
+\begin{DoxyVerb}Checks whether the timestamp attribute in the XML output is valid.
+
+Runs a test program that generates an empty XML output, and checks if
+the timestamp attribute in the testsuites tag is valid.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+176   \textcolor{keyword}{def }testTimestampValue(self):
+177     \textcolor{stringliteral}{"""Checks whether the timestamp attribute in the XML output is valid.}
+178 \textcolor{stringliteral}{}
+179 \textcolor{stringliteral}{    Runs a test program that generates an empty XML output, and checks if}
+180 \textcolor{stringliteral}{    the timestamp attribute in the testsuites tag is valid.}
+181 \textcolor{stringliteral}{    """}
+182     actual = self.\_GetXmlOutput(\textcolor{stringliteral}{'gtest\_no\_test\_unittest'}, [], 0)
+183     date\_time\_str = actual.documentElement.getAttributeNode(\textcolor{stringliteral}{'timestamp'}).value
+184     \textcolor{comment}{# datetime.strptime() is only available in Python 2.5+ so we have to}
+185     \textcolor{comment}{# parse the expected datetime manually.}
+186     match = re.match(\textcolor{stringliteral}{r'(\(\backslash\)d+)-(\(\backslash\)d\(\backslash\)d)-(\(\backslash\)d\(\backslash\)d)T(\(\backslash\)d\(\backslash\)d):(\(\backslash\)d\(\backslash\)d):(\(\backslash\)d\(\backslash\)d)'}, date\_time\_str)
+187     self.assertTrue(
+188         re.match,
+189         \textcolor{stringliteral}{'XML datettime string %s has incorrect format'} % date\_time\_str)
+190     date\_time\_from\_xml = datetime.datetime(
+191         year=int(match.group(1)), month=int(match.group(2)),
+192         day=int(match.group(3)), hour=int(match.group(4)),
+193         minute=int(match.group(5)), second=int(match.group(6)))
+194 
+195     time\_delta = abs(datetime.datetime.now() - date\_time\_from\_xml)
+196     \textcolor{comment}{# timestamp value should be near the current local time}
+197     self.assertTrue(time\_delta < datetime.timedelta(seconds=600),
+198                     \textcolor{stringliteral}{'time\_delta is %s'} % time\_delta)
+199     actual.unlink()
+200 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__xml__output__unittest_8py}{gtest\+\_\+xml\+\_\+output\+\_\+unittest.\+py}\end{DoxyCompactItemize}

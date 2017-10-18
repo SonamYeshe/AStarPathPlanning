@@ -1,0 +1,41 @@
+\hypertarget{sample4__unittest_8cc}{}\section{vendor/googletest/googletest/samples/sample4\+\_\+unittest.cc File Reference}
+\label{sample4__unittest_8cc}\index{vendor/googletest/googletest/samples/sample4\+\_\+unittest.\+cc@{vendor/googletest/googletest/samples/sample4\+\_\+unittest.\+cc}}
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sample4.\+h\char`\"{}}\\*
+Include dependency graph for sample4\+\_\+unittest.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sample4__unittest_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sample4__unittest_8cc_a182daca2355c55b3b85d8263bd522ed2}{T\+E\+ST} (\hyperlink{classCounter}{Counter}, Increment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sample4\+\_\+unittest.\+cc@{sample4\+\_\+unittest.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!sample4\+\_\+unittest.\+cc@{sample4\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Counter, Increment)}{TEST(Counter, Increment)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf Counter}}]{, }
+\item[{Increment}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample4__unittest_8cc_a182daca2355c55b3b85d8263bd522ed2}{}\label{sample4__unittest_8cc_a182daca2355c55b3b85d8263bd522ed2}
+
+\begin{DoxyCode}
+36                          \{
+37   \hyperlink{classCounter}{Counter} c;
+38 
+39   \textcolor{comment}{// EXPECT\_EQ() evaluates its arguments exactly once, so they}
+40   \textcolor{comment}{// can have side effects.}
+41 
+42   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, c.\hyperlink{classCounter_a0a0ca9fdb580a2aec9a5a62ebed2b5ab}{Increment}());
+43   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, c.\hyperlink{classCounter_a0a0ca9fdb580a2aec9a5a62ebed2b5ab}{Increment}());
+44   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(2, c.\hyperlink{classCounter_a0a0ca9fdb580a2aec9a5a62ebed2b5ab}{Increment}());
+45 \}
+\end{DoxyCode}

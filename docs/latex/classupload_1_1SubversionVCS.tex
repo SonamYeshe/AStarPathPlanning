@@ -1,0 +1,624 @@
+\hypertarget{classupload_1_1SubversionVCS}{}\section{upload.\+Subversion\+V\+CS Class Reference}
+\label{classupload_1_1SubversionVCS}\index{upload.\+Subversion\+V\+CS@{upload.\+Subversion\+V\+CS}}
+
+
+Inheritance diagram for upload.\+Subversion\+V\+CS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classupload_1_1SubversionVCS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for upload.\+Subversion\+V\+CS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classupload_1_1SubversionVCS__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a8333f94e27335ce83eed0cc3f5a1eeb0}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options})
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a7d22d459469a757270502ce0dccacbd2}{Guess\+Base} (self, required)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a07c2d341f2c7df2772dd7f85e89b0212}{Generate\+Diff} (self, args)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a494ba1010992d83cac015bc396ab693a}{Get\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a340d269b74386ac863636f6b0683d9f4}{Read\+File} (self, filename)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_ac3785eb1fa561088206d01570f9fe982}{Get\+Status} (self, filename)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a29dec4941de0824734d6842a2f33ffc3}{Get\+Base\+File} (self, filename)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a8333f94e27335ce83eed0cc3f5a1eeb0}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options})
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a7d22d459469a757270502ce0dccacbd2}{Guess\+Base} (self, required)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a07c2d341f2c7df2772dd7f85e89b0212}{Generate\+Diff} (self, args)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a494ba1010992d83cac015bc396ab693a}{Get\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a340d269b74386ac863636f6b0683d9f4}{Read\+File} (self, filename)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_ac3785eb1fa561088206d01570f9fe982}{Get\+Status} (self, filename)
+\item 
+def \hyperlink{classupload_1_1SubversionVCS_a29dec4941de0824734d6842a2f33ffc3}{Get\+Base\+File} (self, filename)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classupload_1_1SubversionVCS_ad1553a69f4a790309273dbdeb9077732}{rev\+\_\+start}
+\item 
+\hyperlink{classupload_1_1SubversionVCS_ac0bb07a099c722b7f8622de4b225904f}{rev\+\_\+end}
+\item 
+\hyperlink{classupload_1_1SubversionVCS_aa801782f807674b06f491df5d7ca9942}{svnls\+\_\+cache}
+\item 
+\hyperlink{classupload_1_1SubversionVCS_a60645c40d2fea4cd52881576bd13341f}{svn\+\_\+base}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Implementation of the VersionControlSystem interface for Subversion.\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, options)}{__init__(self, options)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a8333f94e27335ce83eed0cc3f5a1eeb0}{}\label{classupload_1_1SubversionVCS_a8333f94e27335ce83eed0cc3f5a1eeb0}
+
+\begin{DoxyCode}
+724   \textcolor{keyword}{def }\_\_init\_\_(self, options):
+725     super(SubversionVCS, self).\_\_init\_\_(options)
+726     \textcolor{keywordflow}{if} self.options.revision:
+727       match = re.match(\textcolor{stringliteral}{r"(\(\backslash\)d+)(:(\(\backslash\)d+))?"}, self.options.revision)
+728       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} match:
+729         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Invalid Subversion revision %s."} % self.options.revision)
+730       self.rev\_start = match.group(1)
+731       self.rev\_end = match.group(3)
+732     \textcolor{keywordflow}{else}:
+733       self.rev\_start = self.rev\_end = \textcolor{keywordtype}{None}
+734     \textcolor{comment}{# Cache output from "svn list -r REVNO dirname".}
+735     \textcolor{comment}{# Keys: dirname, Values: 2-tuple (ouput for start rev and end rev).}
+736     self.svnls\_cache = \{\}
+737     \textcolor{comment}{# SVN base URL is required to fetch files deleted in an older revision.}
+738     \textcolor{comment}{# Result is cached to not guess it over and over again in GetBaseFile().}
+739     required = self.options.download\_base \textcolor{keywordflow}{or} self.options.revision \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}
+740     self.svn\_base = self.\_GuessBase(required)
+741 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, options)}{__init__(self, options)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a8333f94e27335ce83eed0cc3f5a1eeb0}{}\label{classupload_1_1SubversionVCS_a8333f94e27335ce83eed0cc3f5a1eeb0}
+
+\begin{DoxyCode}
+724   \textcolor{keyword}{def }\_\_init\_\_(self, options):
+725     super(SubversionVCS, self).\_\_init\_\_(options)
+726     \textcolor{keywordflow}{if} self.options.revision:
+727       match = re.match(\textcolor{stringliteral}{r"(\(\backslash\)d+)(:(\(\backslash\)d+))?"}, self.options.revision)
+728       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} match:
+729         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Invalid Subversion revision %s."} % self.options.revision)
+730       self.rev\_start = match.group(1)
+731       self.rev\_end = match.group(3)
+732     \textcolor{keywordflow}{else}:
+733       self.rev\_start = self.rev\_end = \textcolor{keywordtype}{None}
+734     \textcolor{comment}{# Cache output from "svn list -r REVNO dirname".}
+735     \textcolor{comment}{# Keys: dirname, Values: 2-tuple (ouput for start rev and end rev).}
+736     self.svnls\_cache = \{\}
+737     \textcolor{comment}{# SVN base URL is required to fetch files deleted in an older revision.}
+738     \textcolor{comment}{# Result is cached to not guess it over and over again in GetBaseFile().}
+739     required = self.options.download\_base \textcolor{keywordflow}{or} self.options.revision \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}
+740     self.svn\_base = self.\_GuessBase(required)
+741 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Generate\+Diff@{Generate\+Diff}}
+\index{Generate\+Diff@{Generate\+Diff}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Generate\+Diff(self, args)}{GenerateDiff(self, args)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Generate\+Diff (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a07c2d341f2c7df2772dd7f85e89b0212}{}\label{classupload_1_1SubversionVCS_a07c2d341f2c7df2772dd7f85e89b0212}
+
+\begin{DoxyCode}
+790   \textcolor{keyword}{def }GenerateDiff(self, args):
+791     cmd = [\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"diff"}]
+792     \textcolor{keywordflow}{if} self.options.revision:
+793       cmd += [\textcolor{stringliteral}{"-r"}, self.options.revision]
+794     cmd.extend(args)
+795     data = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}(cmd)
+796     count = 0
+797     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} data.splitlines():
+798       \textcolor{keywordflow}{if} line.startswith(\textcolor{stringliteral}{"Index:"}) \textcolor{keywordflow}{or} line.startswith(\textcolor{stringliteral}{"Property changes on:"}):
+799         count += 1
+800         logging.info(line)
+801     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} count:
+802       \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"No valid patches found in output from svn diff"})
+803     \textcolor{keywordflow}{return} data
+804 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Generate\+Diff@{Generate\+Diff}}
+\index{Generate\+Diff@{Generate\+Diff}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Generate\+Diff(self, args)}{GenerateDiff(self, args)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Generate\+Diff (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a07c2d341f2c7df2772dd7f85e89b0212}{}\label{classupload_1_1SubversionVCS_a07c2d341f2c7df2772dd7f85e89b0212}
+
+\begin{DoxyCode}
+790   \textcolor{keyword}{def }GenerateDiff(self, args):
+791     cmd = [\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"diff"}]
+792     \textcolor{keywordflow}{if} self.options.revision:
+793       cmd += [\textcolor{stringliteral}{"-r"}, self.options.revision]
+794     cmd.extend(args)
+795     data = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}(cmd)
+796     count = 0
+797     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} data.splitlines():
+798       \textcolor{keywordflow}{if} line.startswith(\textcolor{stringliteral}{"Index:"}) \textcolor{keywordflow}{or} line.startswith(\textcolor{stringliteral}{"Property changes on:"}):
+799         count += 1
+800         logging.info(line)
+801     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} count:
+802       \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"No valid patches found in output from svn diff"})
+803     \textcolor{keywordflow}{return} data
+804 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Get\+Base\+File@{Get\+Base\+File}}
+\index{Get\+Base\+File@{Get\+Base\+File}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Base\+File(self, filename)}{GetBaseFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Get\+Base\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a29dec4941de0824734d6842a2f33ffc3}{}\label{classupload_1_1SubversionVCS_a29dec4941de0824734d6842a2f33ffc3}
+
+\begin{DoxyCode}
+898   \textcolor{keyword}{def }GetBaseFile(self, filename):
+899     status = self.GetStatus(filename)
+900     base\_content = \textcolor{keywordtype}{None}
+901     new\_content = \textcolor{keywordtype}{None}
+902 
+903     \textcolor{comment}{# If a file is copied its status will be "A  +", which signifies}
+904     \textcolor{comment}{# "addition-with-history".  See "svn st" for more information.  We need to}
+905     \textcolor{comment}{# upload the original file or else diff parsing will fail if the file was}
+906     \textcolor{comment}{# edited.}
+907     \textcolor{keywordflow}{if} status[0] == \textcolor{stringliteral}{"A"} \textcolor{keywordflow}{and} status[3] != \textcolor{stringliteral}{"+"}:
+908       \textcolor{comment}{# We'll need to upload the new content if we're adding a binary file}
+909       \textcolor{comment}{# since diff's output won't contain it.}
+910       mimetype = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"propget"}, \textcolor{stringliteral}{"svn:mime-type"}, filename],
+911                           silent\_ok=\textcolor{keyword}{True})
+912       base\_content = \textcolor{stringliteral}{""}
+913       is\_binary = mimetype \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} mimetype.startswith(\textcolor{stringliteral}{"text/"})
+914       \textcolor{keywordflow}{if} is\_binary \textcolor{keywordflow}{and} self.IsImage(filename):
+915         new\_content = self.ReadFile(filename)
+916     \textcolor{keywordflow}{elif} (status[0] \textcolor{keywordflow}{in} (\textcolor{stringliteral}{"M"}, \textcolor{stringliteral}{"D"}, \textcolor{stringliteral}{"R") or}
+917 \textcolor{stringliteral}{          (status[0] == "A"} \textcolor{keywordflow}{and} status[3] == \textcolor{stringliteral}{"+"}) \textcolor{keywordflow}{or}  \textcolor{comment}{# Copied file.}
+918           (status[0] == \textcolor{stringliteral}{" "} \textcolor{keywordflow}{and} status[1] == \textcolor{stringliteral}{"M"})):  \textcolor{comment}{# Property change.}
+919       args = []
+920       \textcolor{keywordflow}{if} self.options.revision:
+921         url = \textcolor{stringliteral}{"%s/%s@%s"} % (self.svn\_base, filename, self.rev\_start)
+922       \textcolor{keywordflow}{else}:
+923         \textcolor{comment}{# Don't change filename, it's needed later.}
+924         url = filename
+925         args += [\textcolor{stringliteral}{"-r"}, \textcolor{stringliteral}{"BASE"}]
+926       cmd = [\textcolor{stringliteral}{"svn"}] + args + [\textcolor{stringliteral}{"propget"}, \textcolor{stringliteral}{"svn:mime-type"}, url]
+927       mimetype, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}(cmd)
+928       \textcolor{keywordflow}{if} returncode:
+929         \textcolor{comment}{# File does not exist in the requested revision.}
+930         \textcolor{comment}{# Reset mimetype, it contains an error message.}
+931         mimetype = \textcolor{stringliteral}{""}
+932       get\_base = \textcolor{keyword}{False}
+933       is\_binary = mimetype \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} mimetype.startswith(\textcolor{stringliteral}{"text/"})
+934       \textcolor{keywordflow}{if} status[0] == \textcolor{stringliteral}{" "}:
+935         \textcolor{comment}{# Empty base content just to force an upload.}
+936         base\_content = \textcolor{stringliteral}{""}
+937       \textcolor{keywordflow}{elif} is\_binary:
+938         \textcolor{keywordflow}{if} self.IsImage(filename):
+939           get\_base = \textcolor{keyword}{True}
+940           \textcolor{keywordflow}{if} status[0] == \textcolor{stringliteral}{"M"}:
+941             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.rev\_end:
+942               new\_content = self.ReadFile(filename)
+943             \textcolor{keywordflow}{else}:
+944               url = \textcolor{stringliteral}{"%s/%s@%s"} % (self.svn\_base, filename, self.rev\_end)
+945               new\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"cat"}, url],
+946                                      universal\_newlines=\textcolor{keyword}{True}, silent\_ok=\textcolor{keyword}{True})
+947         \textcolor{keywordflow}{else}:
+948           base\_content = \textcolor{stringliteral}{""}
+949       \textcolor{keywordflow}{else}:
+950         get\_base = \textcolor{keyword}{True}
+951 
+952       \textcolor{keywordflow}{if} get\_base:
+953         \textcolor{keywordflow}{if} is\_binary:
+954           universal\_newlines = \textcolor{keyword}{False}
+955         \textcolor{keywordflow}{else}:
+956           universal\_newlines = \textcolor{keyword}{True}
+957         \textcolor{keywordflow}{if} self.rev\_start:
+958           \textcolor{comment}{# "svn cat -r REV delete\_file.txt" doesn't work. cat requires}
+959           \textcolor{comment}{# the full URL with "@REV" appended instead of using "-r" option.}
+960           url = \textcolor{stringliteral}{"%s/%s@%s"} % (self.svn\_base, filename, self.rev\_start)
+961           base\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"cat"}, url],
+962                                   universal\_newlines=universal\_newlines,
+963                                   silent\_ok=\textcolor{keyword}{True})
+964         \textcolor{keywordflow}{else}:
+965           base\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"cat"}, filename],
+966                                   universal\_newlines=universal\_newlines,
+967                                   silent\_ok=\textcolor{keyword}{True})
+968         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} is\_binary:
+969           args = []
+970           \textcolor{keywordflow}{if} self.rev\_start:
+971             url = \textcolor{stringliteral}{"%s/%s@%s"} % (self.svn\_base, filename, self.rev\_start)
+972           \textcolor{keywordflow}{else}:
+973             url = filename
+974             args += [\textcolor{stringliteral}{"-r"}, \textcolor{stringliteral}{"BASE"}]
+975           cmd = [\textcolor{stringliteral}{"svn"}] + args + [\textcolor{stringliteral}{"propget"}, \textcolor{stringliteral}{"svn:keywords"}, url]
+976           keywords, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}(cmd)
+977           \textcolor{keywordflow}{if} keywords \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} returncode:
+978             base\_content = self.\_CollapseKeywords(base\_content, keywords)
+979     \textcolor{keywordflow}{else}:
+980       \hyperlink{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{StatusUpdate}(\textcolor{stringliteral}{"svn status returned unexpected output: %s"} % status)
+981       sys.exit(1)
+982     \textcolor{keywordflow}{return} base\_content, new\_content, is\_binary, status[0:5]
+983 
+984 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Get\+Base\+File@{Get\+Base\+File}}
+\index{Get\+Base\+File@{Get\+Base\+File}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Base\+File(self, filename)}{GetBaseFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Get\+Base\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a29dec4941de0824734d6842a2f33ffc3}{}\label{classupload_1_1SubversionVCS_a29dec4941de0824734d6842a2f33ffc3}
+
+\begin{DoxyCode}
+898   \textcolor{keyword}{def }GetBaseFile(self, filename):
+899     status = self.GetStatus(filename)
+900     base\_content = \textcolor{keywordtype}{None}
+901     new\_content = \textcolor{keywordtype}{None}
+902 
+903     \textcolor{comment}{# If a file is copied its status will be "A  +", which signifies}
+904     \textcolor{comment}{# "addition-with-history".  See "svn st" for more information.  We need to}
+905     \textcolor{comment}{# upload the original file or else diff parsing will fail if the file was}
+906     \textcolor{comment}{# edited.}
+907     \textcolor{keywordflow}{if} status[0] == \textcolor{stringliteral}{"A"} \textcolor{keywordflow}{and} status[3] != \textcolor{stringliteral}{"+"}:
+908       \textcolor{comment}{# We'll need to upload the new content if we're adding a binary file}
+909       \textcolor{comment}{# since diff's output won't contain it.}
+910       mimetype = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"propget"}, \textcolor{stringliteral}{"svn:mime-type"}, filename],
+911                           silent\_ok=\textcolor{keyword}{True})
+912       base\_content = \textcolor{stringliteral}{""}
+913       is\_binary = mimetype \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} mimetype.startswith(\textcolor{stringliteral}{"text/"})
+914       \textcolor{keywordflow}{if} is\_binary \textcolor{keywordflow}{and} self.IsImage(filename):
+915         new\_content = self.ReadFile(filename)
+916     \textcolor{keywordflow}{elif} (status[0] \textcolor{keywordflow}{in} (\textcolor{stringliteral}{"M"}, \textcolor{stringliteral}{"D"}, \textcolor{stringliteral}{"R") or}
+917 \textcolor{stringliteral}{          (status[0] == "A"} \textcolor{keywordflow}{and} status[3] == \textcolor{stringliteral}{"+"}) \textcolor{keywordflow}{or}  \textcolor{comment}{# Copied file.}
+918           (status[0] == \textcolor{stringliteral}{" "} \textcolor{keywordflow}{and} status[1] == \textcolor{stringliteral}{"M"})):  \textcolor{comment}{# Property change.}
+919       args = []
+920       \textcolor{keywordflow}{if} self.options.revision:
+921         url = \textcolor{stringliteral}{"%s/%s@%s"} % (self.svn\_base, filename, self.rev\_start)
+922       \textcolor{keywordflow}{else}:
+923         \textcolor{comment}{# Don't change filename, it's needed later.}
+924         url = filename
+925         args += [\textcolor{stringliteral}{"-r"}, \textcolor{stringliteral}{"BASE"}]
+926       cmd = [\textcolor{stringliteral}{"svn"}] + args + [\textcolor{stringliteral}{"propget"}, \textcolor{stringliteral}{"svn:mime-type"}, url]
+927       mimetype, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}(cmd)
+928       \textcolor{keywordflow}{if} returncode:
+929         \textcolor{comment}{# File does not exist in the requested revision.}
+930         \textcolor{comment}{# Reset mimetype, it contains an error message.}
+931         mimetype = \textcolor{stringliteral}{""}
+932       get\_base = \textcolor{keyword}{False}
+933       is\_binary = mimetype \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} mimetype.startswith(\textcolor{stringliteral}{"text/"})
+934       \textcolor{keywordflow}{if} status[0] == \textcolor{stringliteral}{" "}:
+935         \textcolor{comment}{# Empty base content just to force an upload.}
+936         base\_content = \textcolor{stringliteral}{""}
+937       \textcolor{keywordflow}{elif} is\_binary:
+938         \textcolor{keywordflow}{if} self.IsImage(filename):
+939           get\_base = \textcolor{keyword}{True}
+940           \textcolor{keywordflow}{if} status[0] == \textcolor{stringliteral}{"M"}:
+941             \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.rev\_end:
+942               new\_content = self.ReadFile(filename)
+943             \textcolor{keywordflow}{else}:
+944               url = \textcolor{stringliteral}{"%s/%s@%s"} % (self.svn\_base, filename, self.rev\_end)
+945               new\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"cat"}, url],
+946                                      universal\_newlines=\textcolor{keyword}{True}, silent\_ok=\textcolor{keyword}{True})
+947         \textcolor{keywordflow}{else}:
+948           base\_content = \textcolor{stringliteral}{""}
+949       \textcolor{keywordflow}{else}:
+950         get\_base = \textcolor{keyword}{True}
+951 
+952       \textcolor{keywordflow}{if} get\_base:
+953         \textcolor{keywordflow}{if} is\_binary:
+954           universal\_newlines = \textcolor{keyword}{False}
+955         \textcolor{keywordflow}{else}:
+956           universal\_newlines = \textcolor{keyword}{True}
+957         \textcolor{keywordflow}{if} self.rev\_start:
+958           \textcolor{comment}{# "svn cat -r REV delete\_file.txt" doesn't work. cat requires}
+959           \textcolor{comment}{# the full URL with "@REV" appended instead of using "-r" option.}
+960           url = \textcolor{stringliteral}{"%s/%s@%s"} % (self.svn\_base, filename, self.rev\_start)
+961           base\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"cat"}, url],
+962                                   universal\_newlines=universal\_newlines,
+963                                   silent\_ok=\textcolor{keyword}{True})
+964         \textcolor{keywordflow}{else}:
+965           base\_content = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"cat"}, filename],
+966                                   universal\_newlines=universal\_newlines,
+967                                   silent\_ok=\textcolor{keyword}{True})
+968         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} is\_binary:
+969           args = []
+970           \textcolor{keywordflow}{if} self.rev\_start:
+971             url = \textcolor{stringliteral}{"%s/%s@%s"} % (self.svn\_base, filename, self.rev\_start)
+972           \textcolor{keywordflow}{else}:
+973             url = filename
+974             args += [\textcolor{stringliteral}{"-r"}, \textcolor{stringliteral}{"BASE"}]
+975           cmd = [\textcolor{stringliteral}{"svn"}] + args + [\textcolor{stringliteral}{"propget"}, \textcolor{stringliteral}{"svn:keywords"}, url]
+976           keywords, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}(cmd)
+977           \textcolor{keywordflow}{if} keywords \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} returncode:
+978             base\_content = self.\_CollapseKeywords(base\_content, keywords)
+979     \textcolor{keywordflow}{else}:
+980       \hyperlink{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{StatusUpdate}(\textcolor{stringliteral}{"svn status returned unexpected output: %s"} % status)
+981       sys.exit(1)
+982     \textcolor{keywordflow}{return} base\_content, new\_content, is\_binary, status[0:5]
+983 
+984 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Get\+Status@{Get\+Status}}
+\index{Get\+Status@{Get\+Status}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Status(self, filename)}{GetStatus(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Get\+Status (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_ac3785eb1fa561088206d01570f9fe982}{}\label{classupload_1_1SubversionVCS_ac3785eb1fa561088206d01570f9fe982}
+\begin{DoxyVerb}Returns the status of a file.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+854   \textcolor{keyword}{def }GetStatus(self, filename):
+855     \textcolor{stringliteral}{"""Returns the status of a file."""}
+856     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.options.revision:
+857       status = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"status"}, \textcolor{stringliteral}{"--ignore-externals"}, filename])
+858       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} status:
+859         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"svn status returned no output for %s"} % filename)
+860       status\_lines = status.splitlines()
+861       \textcolor{comment}{# If file is in a cl, the output will begin with}
+862       \textcolor{comment}{# "\(\backslash\)n--- Changelist 'cl\_name':\(\backslash\)n".  See}
+863       \textcolor{comment}{# http://svn.collab.net/repos/svn/trunk/notes/changelist-design.txt}
+864       \textcolor{keywordflow}{if} (len(status\_lines) == 3 \textcolor{keywordflow}{and}
+865           \textcolor{keywordflow}{not} status\_lines[0] \textcolor{keywordflow}{and}
+866           status\_lines[1].startswith(\textcolor{stringliteral}{"--- Changelist"})):
+867         status = status\_lines[2]
+868       \textcolor{keywordflow}{else}:
+869         status = status\_lines[0]
+870     \textcolor{comment}{# If we have a revision to diff against we need to run "svn list"}
+871     \textcolor{comment}{# for the old and the new revision and compare the results to get}
+872     \textcolor{comment}{# the correct status for a file.}
+873     \textcolor{keywordflow}{else}:
+874       dirname, relfilename = os.path.split(filename)
+875       \textcolor{keywordflow}{if} dirname \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.svnls\_cache:
+876         cmd = [\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"list"}, \textcolor{stringliteral}{"-r"}, self.rev\_start, dirname \textcolor{keywordflow}{or} \textcolor{stringliteral}{"."}]
+877         out, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}(cmd)
+878         \textcolor{keywordflow}{if} returncode:
+879           \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Failed to get status for %s."} % filename)
+880         old\_files = out.splitlines()
+881         args = [\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"list"}]
+882         \textcolor{keywordflow}{if} self.rev\_end:
+883           args += [\textcolor{stringliteral}{"-r"}, self.rev\_end]
+884         cmd = args + [dirname \textcolor{keywordflow}{or} \textcolor{stringliteral}{"."}]
+885         out, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}(cmd)
+886         \textcolor{keywordflow}{if} returncode:
+887           \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Failed to run command %s"} % cmd)
+888         self.svnls\_cache[dirname] = (old\_files, out.splitlines())
+889       old\_files, new\_files = self.svnls\_cache[dirname]
+890       \textcolor{keywordflow}{if} relfilename \textcolor{keywordflow}{in} old\_files \textcolor{keywordflow}{and} relfilename \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} new\_files:
+891         status = \textcolor{stringliteral}{"D   "}
+892       \textcolor{keywordflow}{elif} relfilename \textcolor{keywordflow}{in} old\_files \textcolor{keywordflow}{and} relfilename \textcolor{keywordflow}{in} new\_files:
+893         status = \textcolor{stringliteral}{"M   "}
+894       \textcolor{keywordflow}{else}:
+895         status = \textcolor{stringliteral}{"A   "}
+896     \textcolor{keywordflow}{return} status
+897 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Get\+Status@{Get\+Status}}
+\index{Get\+Status@{Get\+Status}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Status(self, filename)}{GetStatus(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Get\+Status (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_ac3785eb1fa561088206d01570f9fe982}{}\label{classupload_1_1SubversionVCS_ac3785eb1fa561088206d01570f9fe982}
+\begin{DoxyVerb}Returns the status of a file.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+854   \textcolor{keyword}{def }GetStatus(self, filename):
+855     \textcolor{stringliteral}{"""Returns the status of a file."""}
+856     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.options.revision:
+857       status = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"status"}, \textcolor{stringliteral}{"--ignore-externals"}, filename])
+858       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} status:
+859         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"svn status returned no output for %s"} % filename)
+860       status\_lines = status.splitlines()
+861       \textcolor{comment}{# If file is in a cl, the output will begin with}
+862       \textcolor{comment}{# "\(\backslash\)n--- Changelist 'cl\_name':\(\backslash\)n".  See}
+863       \textcolor{comment}{# http://svn.collab.net/repos/svn/trunk/notes/changelist-design.txt}
+864       \textcolor{keywordflow}{if} (len(status\_lines) == 3 \textcolor{keywordflow}{and}
+865           \textcolor{keywordflow}{not} status\_lines[0] \textcolor{keywordflow}{and}
+866           status\_lines[1].startswith(\textcolor{stringliteral}{"--- Changelist"})):
+867         status = status\_lines[2]
+868       \textcolor{keywordflow}{else}:
+869         status = status\_lines[0]
+870     \textcolor{comment}{# If we have a revision to diff against we need to run "svn list"}
+871     \textcolor{comment}{# for the old and the new revision and compare the results to get}
+872     \textcolor{comment}{# the correct status for a file.}
+873     \textcolor{keywordflow}{else}:
+874       dirname, relfilename = os.path.split(filename)
+875       \textcolor{keywordflow}{if} dirname \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} self.svnls\_cache:
+876         cmd = [\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"list"}, \textcolor{stringliteral}{"-r"}, self.rev\_start, dirname \textcolor{keywordflow}{or} \textcolor{stringliteral}{"."}]
+877         out, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}(cmd)
+878         \textcolor{keywordflow}{if} returncode:
+879           \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Failed to get status for %s."} % filename)
+880         old\_files = out.splitlines()
+881         args = [\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"list"}]
+882         \textcolor{keywordflow}{if} self.rev\_end:
+883           args += [\textcolor{stringliteral}{"-r"}, self.rev\_end]
+884         cmd = args + [dirname \textcolor{keywordflow}{or} \textcolor{stringliteral}{"."}]
+885         out, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}(cmd)
+886         \textcolor{keywordflow}{if} returncode:
+887           \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Failed to run command %s"} % cmd)
+888         self.svnls\_cache[dirname] = (old\_files, out.splitlines())
+889       old\_files, new\_files = self.svnls\_cache[dirname]
+890       \textcolor{keywordflow}{if} relfilename \textcolor{keywordflow}{in} old\_files \textcolor{keywordflow}{and} relfilename \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} new\_files:
+891         status = \textcolor{stringliteral}{"D   "}
+892       \textcolor{keywordflow}{elif} relfilename \textcolor{keywordflow}{in} old\_files \textcolor{keywordflow}{and} relfilename \textcolor{keywordflow}{in} new\_files:
+893         status = \textcolor{stringliteral}{"M   "}
+894       \textcolor{keywordflow}{else}:
+895         status = \textcolor{stringliteral}{"A   "}
+896     \textcolor{keywordflow}{return} status
+897 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Get\+Unknown\+Files@{Get\+Unknown\+Files}}
+\index{Get\+Unknown\+Files@{Get\+Unknown\+Files}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Unknown\+Files(self)}{GetUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Get\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a494ba1010992d83cac015bc396ab693a}{}\label{classupload_1_1SubversionVCS_a494ba1010992d83cac015bc396ab693a}
+
+\begin{DoxyCode}
+836   \textcolor{keyword}{def }GetUnknownFiles(self):
+837     status = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"status"}, \textcolor{stringliteral}{"--ignore-externals"}], silent\_ok=\textcolor{keyword}{True})
+838     unknown\_files = []
+839     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} status.split(\textcolor{stringliteral}{"\(\backslash\)n"}):
+840       \textcolor{keywordflow}{if} line \textcolor{keywordflow}{and} line[0] == \textcolor{stringliteral}{"?"}:
+841         unknown\_files.append(line)
+842     \textcolor{keywordflow}{return} unknown\_files
+843 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Get\+Unknown\+Files@{Get\+Unknown\+Files}}
+\index{Get\+Unknown\+Files@{Get\+Unknown\+Files}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Unknown\+Files(self)}{GetUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Get\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a494ba1010992d83cac015bc396ab693a}{}\label{classupload_1_1SubversionVCS_a494ba1010992d83cac015bc396ab693a}
+
+\begin{DoxyCode}
+836   \textcolor{keyword}{def }GetUnknownFiles(self):
+837     status = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"svn"}, \textcolor{stringliteral}{"status"}, \textcolor{stringliteral}{"--ignore-externals"}], silent\_ok=\textcolor{keyword}{True})
+838     unknown\_files = []
+839     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} status.split(\textcolor{stringliteral}{"\(\backslash\)n"}):
+840       \textcolor{keywordflow}{if} line \textcolor{keywordflow}{and} line[0] == \textcolor{stringliteral}{"?"}:
+841         unknown\_files.append(line)
+842     \textcolor{keywordflow}{return} unknown\_files
+843 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Guess\+Base@{Guess\+Base}}
+\index{Guess\+Base@{Guess\+Base}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Guess\+Base(self, required)}{GuessBase(self, required)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Guess\+Base (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{required}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a7d22d459469a757270502ce0dccacbd2}{}\label{classupload_1_1SubversionVCS_a7d22d459469a757270502ce0dccacbd2}
+\begin{DoxyVerb}Wrapper for _GuessBase.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+742   \textcolor{keyword}{def }GuessBase(self, required):
+743     \textcolor{stringliteral}{"""Wrapper for \_GuessBase."""}
+744     \textcolor{keywordflow}{return} self.svn\_base
+745 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Guess\+Base@{Guess\+Base}}
+\index{Guess\+Base@{Guess\+Base}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Guess\+Base(self, required)}{GuessBase(self, required)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Guess\+Base (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{required}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a7d22d459469a757270502ce0dccacbd2}{}\label{classupload_1_1SubversionVCS_a7d22d459469a757270502ce0dccacbd2}
+\begin{DoxyVerb}Wrapper for _GuessBase.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+742   \textcolor{keyword}{def }GuessBase(self, required):
+743     \textcolor{stringliteral}{"""Wrapper for \_GuessBase."""}
+744     \textcolor{keywordflow}{return} self.svn\_base
+745 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Read\+File@{Read\+File}}
+\index{Read\+File@{Read\+File}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Read\+File(self, filename)}{ReadFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Read\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a340d269b74386ac863636f6b0683d9f4}{}\label{classupload_1_1SubversionVCS_a340d269b74386ac863636f6b0683d9f4}
+\begin{DoxyVerb}Returns the contents of a file.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+844   \textcolor{keyword}{def }\hyperlink{namespacecpp_1_1utils_a4258aa53673d101d6f57320ec9a3c3a2}{ReadFile}(self, filename):
+845     \textcolor{stringliteral}{"""Returns the contents of a file."""}
+846     file = open(filename, \textcolor{stringliteral}{'rb'})
+847     result = \textcolor{stringliteral}{""}
+848     \textcolor{keywordflow}{try}:
+849       result = file.read()
+850     \textcolor{keywordflow}{finally}:
+851       file.close()
+852     \textcolor{keywordflow}{return} result
+853 
+\end{DoxyCode}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!Read\+File@{Read\+File}}
+\index{Read\+File@{Read\+File}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{Read\+File(self, filename)}{ReadFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Subversion\+V\+C\+S.\+Read\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1SubversionVCS_a340d269b74386ac863636f6b0683d9f4}{}\label{classupload_1_1SubversionVCS_a340d269b74386ac863636f6b0683d9f4}
+\begin{DoxyVerb}Returns the contents of a file.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+844   \textcolor{keyword}{def }\hyperlink{namespacecpp_1_1utils_a4258aa53673d101d6f57320ec9a3c3a2}{ReadFile}(self, filename):
+845     \textcolor{stringliteral}{"""Returns the contents of a file."""}
+846     file = open(filename, \textcolor{stringliteral}{'rb'})
+847     result = \textcolor{stringliteral}{""}
+848     \textcolor{keywordflow}{try}:
+849       result = file.read()
+850     \textcolor{keywordflow}{finally}:
+851       file.close()
+852     \textcolor{keywordflow}{return} result
+853 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!rev\+\_\+end@{rev\+\_\+end}}
+\index{rev\+\_\+end@{rev\+\_\+end}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{rev\+\_\+end}{rev_end}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+Subversion\+V\+C\+S.\+rev\+\_\+end}\hypertarget{classupload_1_1SubversionVCS_ac0bb07a099c722b7f8622de4b225904f}{}\label{classupload_1_1SubversionVCS_ac0bb07a099c722b7f8622de4b225904f}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!rev\+\_\+start@{rev\+\_\+start}}
+\index{rev\+\_\+start@{rev\+\_\+start}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{rev\+\_\+start}{rev_start}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+Subversion\+V\+C\+S.\+rev\+\_\+start}\hypertarget{classupload_1_1SubversionVCS_ad1553a69f4a790309273dbdeb9077732}{}\label{classupload_1_1SubversionVCS_ad1553a69f4a790309273dbdeb9077732}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!svn\+\_\+base@{svn\+\_\+base}}
+\index{svn\+\_\+base@{svn\+\_\+base}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{svn\+\_\+base}{svn_base}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+Subversion\+V\+C\+S.\+svn\+\_\+base}\hypertarget{classupload_1_1SubversionVCS_a60645c40d2fea4cd52881576bd13341f}{}\label{classupload_1_1SubversionVCS_a60645c40d2fea4cd52881576bd13341f}
+\index{upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}!svnls\+\_\+cache@{svnls\+\_\+cache}}
+\index{svnls\+\_\+cache@{svnls\+\_\+cache}!upload\+::\+Subversion\+V\+CS@{upload\+::\+Subversion\+V\+CS}}
+\subsubsection[{\texorpdfstring{svnls\+\_\+cache}{svnls_cache}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+Subversion\+V\+C\+S.\+svnls\+\_\+cache}\hypertarget{classupload_1_1SubversionVCS_aa801782f807674b06f491df5d7ca9942}{}\label{classupload_1_1SubversionVCS_aa801782f807674b06f491df5d7ca9942}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/scripts/\hyperlink{googlemock_2scripts_2upload_8py}{upload.\+py}\end{DoxyCompactItemize}

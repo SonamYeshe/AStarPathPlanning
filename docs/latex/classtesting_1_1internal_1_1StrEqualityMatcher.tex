@@ -1,0 +1,103 @@
+\hypertarget{classtesting_1_1internal_1_1StrEqualityMatcher}{}\section{testing\+:\+:internal\+:\+:Str\+Equality\+Matcher$<$ String\+Type $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1StrEqualityMatcher}\index{testing\+::internal\+::\+Str\+Equality\+Matcher$<$ String\+Type $>$@{testing\+::internal\+::\+Str\+Equality\+Matcher$<$ String\+Type $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1StrEqualityMatcher_a613006d82018b18ef8fded721f70f860}{Str\+Equality\+Matcher} (const String\+Type \&str, bool expect\+\_\+eq, bool case\+\_\+sensitive)
+\item 
+{\footnotesize template$<$typename Char\+Type $>$ }\\bool \hyperlink{classtesting_1_1internal_1_1StrEqualityMatcher_a5c696e2d4a9d554b310f35aa98ca0abe}{Match\+And\+Explain} (Char\+Type $\ast$s, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
+\item 
+{\footnotesize template$<$typename Matchee\+String\+Type $>$ }\\bool \hyperlink{classtesting_1_1internal_1_1StrEqualityMatcher_a7505a569f02ea659e9fb25f79adab002}{Match\+And\+Explain} (const Matchee\+String\+Type \&s, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$) const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1StrEqualityMatcher_a6e4b5d5158b93de3b76ef96ce31bd517}{Describe\+To} (\+::std\+::ostream $\ast$os) const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1StrEqualityMatcher_af3babfa0467bfda0040855c4e1bb6ac6}{Describe\+Negation\+To} (\+::std\+::ostream $\ast$os) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}!Str\+Equality\+Matcher@{Str\+Equality\+Matcher}}
+\index{Str\+Equality\+Matcher@{Str\+Equality\+Matcher}!testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}}
+\subsubsection[{\texorpdfstring{Str\+Equality\+Matcher(const String\+Type \&str, bool expect\+\_\+eq, bool case\+\_\+sensitive)}{StrEqualityMatcher(const StringType &str, bool expect_eq, bool case_sensitive)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename String\+Type $>$ {\bf testing\+::internal\+::\+Str\+Equality\+Matcher}$<$ String\+Type $>$\+::{\bf Str\+Equality\+Matcher} (
+\begin{DoxyParamCaption}
+\item[{const String\+Type \&}]{str, }
+\item[{bool}]{expect\+\_\+eq, }
+\item[{bool}]{case\+\_\+sensitive}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1StrEqualityMatcher_a613006d82018b18ef8fded721f70f860}{}\label{classtesting_1_1internal_1_1StrEqualityMatcher_a613006d82018b18ef8fded721f70f860}
+
+\begin{DoxyCode}
+1130       : string\_(str), expect\_eq\_(expect\_eq), case\_sensitive\_(case\_sensitive) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}!Describe\+Negation\+To@{Describe\+Negation\+To}}
+\index{Describe\+Negation\+To@{Describe\+Negation\+To}!testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}}
+\subsubsection[{\texorpdfstring{Describe\+Negation\+To(\+::std\+::ostream $\ast$os) const }{DescribeNegationTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename String\+Type $>$ void {\bf testing\+::internal\+::\+Str\+Equality\+Matcher}$<$ String\+Type $>$\+::Describe\+Negation\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1StrEqualityMatcher_af3babfa0467bfda0040855c4e1bb6ac6}{}\label{classtesting_1_1internal_1_1StrEqualityMatcher_af3babfa0467bfda0040855c4e1bb6ac6}
+
+\begin{DoxyCode}
+1162                                                 \{
+1163     DescribeToHelper(!expect\_eq\_, os);
+1164   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}!Describe\+To@{Describe\+To}}
+\index{Describe\+To@{Describe\+To}!testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}}
+\subsubsection[{\texorpdfstring{Describe\+To(\+::std\+::ostream $\ast$os) const }{DescribeTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename String\+Type $>$ void {\bf testing\+::internal\+::\+Str\+Equality\+Matcher}$<$ String\+Type $>$\+::Describe\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1StrEqualityMatcher_a6e4b5d5158b93de3b76ef96ce31bd517}{}\label{classtesting_1_1internal_1_1StrEqualityMatcher_a6e4b5d5158b93de3b76ef96ce31bd517}
+
+\begin{DoxyCode}
+1158                                         \{
+1159     DescribeToHelper(expect\_eq\_, os);
+1160   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}!Match\+And\+Explain@{Match\+And\+Explain}}
+\index{Match\+And\+Explain@{Match\+And\+Explain}!testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}}
+\subsubsection[{\texorpdfstring{Match\+And\+Explain(\+Char\+Type $\ast$s, Match\+Result\+Listener $\ast$listener) const }{MatchAndExplain(CharType *s, MatchResultListener *listener) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename String\+Type $>$ template$<$typename Char\+Type $>$ bool {\bf testing\+::internal\+::\+Str\+Equality\+Matcher}$<$ String\+Type $>$\+::Match\+And\+Explain (
+\begin{DoxyParamCaption}
+\item[{Char\+Type $\ast$}]{s, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1StrEqualityMatcher_a5c696e2d4a9d554b310f35aa98ca0abe}{}\label{classtesting_1_1internal_1_1StrEqualityMatcher_a5c696e2d4a9d554b310f35aa98ca0abe}
+
+\begin{DoxyCode}
+1138                                                                          \{
+1139     \textcolor{keywordflow}{if} (s == NULL) \{
+1140       \textcolor{keywordflow}{return} !expect\_eq\_;
+1141     \}
+1142     \textcolor{keywordflow}{return} \hyperlink{classtesting_1_1internal_1_1StrEqualityMatcher_a5c696e2d4a9d554b310f35aa98ca0abe}{MatchAndExplain}(StringType(s), listener);
+1143   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}!Match\+And\+Explain@{Match\+And\+Explain}}
+\index{Match\+And\+Explain@{Match\+And\+Explain}!testing\+::internal\+::\+Str\+Equality\+Matcher@{testing\+::internal\+::\+Str\+Equality\+Matcher}}
+\subsubsection[{\texorpdfstring{Match\+And\+Explain(const Matchee\+String\+Type \&s, Match\+Result\+Listener $\ast$) const }{MatchAndExplain(const MatcheeStringType &s, MatchResultListener *) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename String\+Type $>$ template$<$typename Matchee\+String\+Type $>$ bool {\bf testing\+::internal\+::\+Str\+Equality\+Matcher}$<$ String\+Type $>$\+::Match\+And\+Explain (
+\begin{DoxyParamCaption}
+\item[{const Matchee\+String\+Type \&}]{s, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1StrEqualityMatcher_a7505a569f02ea659e9fb25f79adab002}{}\label{classtesting_1_1internal_1_1StrEqualityMatcher_a7505a569f02ea659e9fb25f79adab002}
+
+\begin{DoxyCode}
+1151                                                      \{
+1152     \textcolor{keyword}{const} StringType& s2(s);
+1153     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} eq = case\_sensitive\_ ? s2 == string\_ :
+1154         \hyperlink{namespacetesting_1_1internal_a383de24b1cca6648c14b03964c0ed843}{CaseInsensitiveStringEquals}(s2, string\_);
+1155     \textcolor{keywordflow}{return} expect\_eq\_ == eq;
+1156   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

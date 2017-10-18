@@ -1,0 +1,70 @@
+\hypertarget{classtesting_1_1internal_1_1PredicateFormatterFromMatcher}{}\section{testing\+:\+:internal\+:\+:Predicate\+Formatter\+From\+Matcher$<$ M $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1PredicateFormatterFromMatcher}\index{testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher$<$ M $>$@{testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher$<$ M $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1PredicateFormatterFromMatcher_aa0c40eca009c31e25738520dea0bc98c}{Predicate\+Formatter\+From\+Matcher} (M \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m})
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classtesting_1_1AssertionResult}{Assertion\+Result} \hyperlink{classtesting_1_1internal_1_1PredicateFormatterFromMatcher_a9b2ba1b95b3037e6f566062ae4ea4484}{operator()} (const char $\ast$value\+\_\+text, const T \&x) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher@{testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher}!Predicate\+Formatter\+From\+Matcher@{Predicate\+Formatter\+From\+Matcher}}
+\index{Predicate\+Formatter\+From\+Matcher@{Predicate\+Formatter\+From\+Matcher}!testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher@{testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher}}
+\subsubsection[{\texorpdfstring{Predicate\+Formatter\+From\+Matcher(\+M m)}{PredicateFormatterFromMatcher(M m)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ {\bf testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher}$<$ M $>$\+::{\bf Predicate\+Formatter\+From\+Matcher} (
+\begin{DoxyParamCaption}
+\item[{M}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1PredicateFormatterFromMatcher_aa0c40eca009c31e25738520dea0bc98c}{}\label{classtesting_1_1internal_1_1PredicateFormatterFromMatcher_aa0c40eca009c31e25738520dea0bc98c}
+
+\begin{DoxyCode}
+1836 : matcher\_(\hyperlink{namespacetesting_1_1internal_a0f6d06bf8c3093b9c22bb08723db201e}{internal::move}(\hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m})) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher@{testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher}!operator()@{operator()}}
+\index{operator()@{operator()}!testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher@{testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher}}
+\subsubsection[{\texorpdfstring{operator()(const char $\ast$value\+\_\+text, const T \&x) const }{operator()(const char *value_text, const T &x) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename M $>$ template$<$typename T $>$ {\bf Assertion\+Result} {\bf testing\+::internal\+::\+Predicate\+Formatter\+From\+Matcher}$<$ M $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value\+\_\+text, }
+\item[{const T \&}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1PredicateFormatterFromMatcher_a9b2ba1b95b3037e6f566062ae4ea4484}{}\label{classtesting_1_1internal_1_1PredicateFormatterFromMatcher_a9b2ba1b95b3037e6f566062ae4ea4484}
+
+\begin{DoxyCode}
+1842                                                                        \{
+1843     \textcolor{comment}{// We convert matcher\_ to a Matcher<const T&> *now* instead of}
+1844     \textcolor{comment}{// when the PredicateFormatterFromMatcher object was constructed,}
+1845     \textcolor{comment}{// as matcher\_ may be polymorphic (e.g. NotNull()) and we won't}
+1846     \textcolor{comment}{// know which type to instantiate it to until we actually see the}
+1847     \textcolor{comment}{// type of x here.}
+1848     \textcolor{comment}{//}
+1849     \textcolor{comment}{// We write SafeMatcherCast<const T&>(matcher\_) instead of}
+1850     \textcolor{comment}{// Matcher<const T&>(matcher\_), as the latter won't compile when}
+1851     \textcolor{comment}{// matcher\_ has type Matcher<T> (e.g. An<int>()).}
+1852     \textcolor{comment}{// We don't write MatcherCast<const T&> either, as that allows}
+1853     \textcolor{comment}{// potentially unsafe downcasting of the matcher argument.}
+1854     \textcolor{keyword}{const} Matcher<const T&> matcher = SafeMatcherCast<const T&>(matcher\_);
+1855     StringMatchResultListener listener;
+1856     \textcolor{keywordflow}{if} (\hyperlink{namespacetesting_1_1internal_a0821df2611d54c79bac990719ad8a2dd}{MatchPrintAndExplain}(x, matcher, &listener))
+1857       \textcolor{keywordflow}{return} \hyperlink{namespacetesting_ac1d0baedb17286c5c6c87bd1a45da8ac}{AssertionSuccess}();
+1858 
+1859     ::std::stringstream ss;
+1860     ss << \textcolor{stringliteral}{"Value of: "} << value\_text << \textcolor{stringliteral}{"\(\backslash\)n"}
+1861        << \textcolor{stringliteral}{"Expected: "};
+1862     matcher.DescribeTo(&ss);
+1863     ss << \textcolor{stringliteral}{"\(\backslash\)n  Actual: "} << listener.str();
+1864     \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a75cb789614cb1c28c34627a4a3c053df}{AssertionFailure}() << ss.str();
+1865   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

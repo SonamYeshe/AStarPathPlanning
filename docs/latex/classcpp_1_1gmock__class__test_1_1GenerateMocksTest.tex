@@ -1,0 +1,249 @@
+\hypertarget{classcpp_1_1gmock__class__test_1_1GenerateMocksTest}{}\section{cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test Class Reference}
+\label{classcpp_1_1gmock__class__test_1_1GenerateMocksTest}\index{cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test@{cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test}}
+
+
+Inheritance diagram for cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classcpp_1_1gmock__class__test_1_1GenerateMocksTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classcpp_1_1gmock__class__test_1_1GenerateMocksTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_afdce6749dca14c1aa90762d389d92c87}{Generate\+Mocks} (self, cpp\+\_\+source)
+\item 
+def \hyperlink{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a706812da9e8f79a689c707b4032db2d2}{test\+Namespaces} (self)
+\item 
+def \hyperlink{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_aba1ab8ae8a897ea9c22a47bcd1524254}{test\+Class\+With\+Storage\+Specifier\+Macro} (self)
+\item 
+def \hyperlink{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a18cb0f03ecd4e54d0f787694c1513731}{test\+Templated\+Forward\+Declaration} (self)
+\item 
+def \hyperlink{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a4098c99b66f0cbea7be9e66352a20f4d}{test\+Templated\+Class} (self)
+\item 
+def \hyperlink{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a32a2840352d970c631d7be1b6d1970e6}{test\+Template\+In\+A\+Template\+Typedef} (self)
+\item 
+def \hyperlink{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a67d1336b8782257fcfcdbda8c8d4f794}{test\+Template\+In\+A\+Template\+Typedef\+With\+Comma} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}!Generate\+Mocks@{Generate\+Mocks}}
+\index{Generate\+Mocks@{Generate\+Mocks}!cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}}
+\subsubsection[{\texorpdfstring{Generate\+Mocks(self, cpp\+\_\+source)}{GenerateMocks(self, cpp_source)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test.\+Generate\+Mocks (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{cpp\+\_\+source}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_afdce6749dca14c1aa90762d389d92c87}{}\label{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_afdce6749dca14c1aa90762d389d92c87}
+\begin{DoxyVerb}Convert C++ source to complete Google Mock output source.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+317   \textcolor{keyword}{def }GenerateMocks(self, cpp\_source):
+318     \textcolor{stringliteral}{"""Convert C++ source to complete Google Mock output source."""}
+319     \textcolor{comment}{# <test> is a pseudo-filename, it is not read or written.}
+320     filename = \textcolor{stringliteral}{'<test>'}
+321     builder = ast.BuilderFromSource(cpp\_source, filename)
+322     ast\_list = list(builder.Generate())
+323     lines = gmock\_class.\_GenerateMocks(filename, cpp\_source, ast\_list, \textcolor{keywordtype}{None})
+324     \textcolor{keywordflow}{return} \textcolor{stringliteral}{'\(\backslash\)n'}.join(lines)
+325 
+\end{DoxyCode}
+\index{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}!test\+Class\+With\+Storage\+Specifier\+Macro@{test\+Class\+With\+Storage\+Specifier\+Macro}}
+\index{test\+Class\+With\+Storage\+Specifier\+Macro@{test\+Class\+With\+Storage\+Specifier\+Macro}!cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}}
+\subsubsection[{\texorpdfstring{test\+Class\+With\+Storage\+Specifier\+Macro(self)}{testClassWithStorageSpecifierMacro(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test.\+test\+Class\+With\+Storage\+Specifier\+Macro (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_aba1ab8ae8a897ea9c22a47bcd1524254}{}\label{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_aba1ab8ae8a897ea9c22a47bcd1524254}
+
+\begin{DoxyCode}
+356   \textcolor{keyword}{def }testClassWithStorageSpecifierMacro(self):
+357     source = \textcolor{stringliteral}{"""}
+358 \textcolor{stringliteral}{class STORAGE\_SPECIFIER Test \{}
+359 \textcolor{stringliteral}{ public:}
+360 \textcolor{stringliteral}{  virtual void Foo();}
+361 \textcolor{stringliteral}{\};}
+362 \textcolor{stringliteral}{"""}
+363     expected = \textcolor{stringliteral}{"""\(\backslash\)}
+364 \textcolor{stringliteral}{class MockTest : public Test \{}
+365 \textcolor{stringliteral}{public:}
+366 \textcolor{stringliteral}{MOCK\_METHOD0(Foo,}
+367 \textcolor{stringliteral}{void());}
+368 \textcolor{stringliteral}{\};}
+369 \textcolor{stringliteral}{"""}
+370     self.assertEqualIgnoreLeadingWhitespace(
+371         expected, self.GenerateMocks(source))
+372 
+\end{DoxyCode}
+\index{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}!test\+Namespaces@{test\+Namespaces}}
+\index{test\+Namespaces@{test\+Namespaces}!cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}}
+\subsubsection[{\texorpdfstring{test\+Namespaces(self)}{testNamespaces(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test.\+test\+Namespaces (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a706812da9e8f79a689c707b4032db2d2}{}\label{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a706812da9e8f79a689c707b4032db2d2}
+
+\begin{DoxyCode}
+326   \textcolor{keyword}{def }testNamespaces(self):
+327     source = \textcolor{stringliteral}{"""}
+328 \textcolor{stringliteral}{namespace Foo \{}
+329 \textcolor{stringliteral}{namespace Bar \{ class Forward; \}}
+330 \textcolor{stringliteral}{namespace Baz \{}
+331 \textcolor{stringliteral}{}
+332 \textcolor{stringliteral}{class Test \{}
+333 \textcolor{stringliteral}{ public:}
+334 \textcolor{stringliteral}{  virtual void Foo();}
+335 \textcolor{stringliteral}{\};}
+336 \textcolor{stringliteral}{}
+337 \textcolor{stringliteral}{\}  // namespace Baz}
+338 \textcolor{stringliteral}{\}  // namespace Foo}
+339 \textcolor{stringliteral}{"""}
+340     expected = \textcolor{stringliteral}{"""\(\backslash\)}
+341 \textcolor{stringliteral}{namespace Foo \{}
+342 \textcolor{stringliteral}{namespace Baz \{}
+343 \textcolor{stringliteral}{}
+344 \textcolor{stringliteral}{class MockTest : public Test \{}
+345 \textcolor{stringliteral}{public:}
+346 \textcolor{stringliteral}{MOCK\_METHOD0(Foo,}
+347 \textcolor{stringliteral}{void());}
+348 \textcolor{stringliteral}{\};}
+349 \textcolor{stringliteral}{}
+350 \textcolor{stringliteral}{\}  // namespace Baz}
+351 \textcolor{stringliteral}{\}  // namespace Foo}
+352 \textcolor{stringliteral}{"""}
+353     self.assertEqualIgnoreLeadingWhitespace(
+354         expected, self.GenerateMocks(source))
+355 
+\end{DoxyCode}
+\index{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}!test\+Templated\+Class@{test\+Templated\+Class}}
+\index{test\+Templated\+Class@{test\+Templated\+Class}!cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}}
+\subsubsection[{\texorpdfstring{test\+Templated\+Class(self)}{testTemplatedClass(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test.\+test\+Templated\+Class (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a4098c99b66f0cbea7be9e66352a20f4d}{}\label{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a4098c99b66f0cbea7be9e66352a20f4d}
+
+\begin{DoxyCode}
+391   \textcolor{keyword}{def }testTemplatedClass(self):
+392     source = \textcolor{stringliteral}{"""}
+393 \textcolor{stringliteral}{template <typename S, typename T>}
+394 \textcolor{stringliteral}{class Test \{}
+395 \textcolor{stringliteral}{ public:}
+396 \textcolor{stringliteral}{  virtual void Foo();}
+397 \textcolor{stringliteral}{\};}
+398 \textcolor{stringliteral}{"""}
+399     expected = \textcolor{stringliteral}{"""\(\backslash\)}
+400 \textcolor{stringliteral}{template <typename T0, typename T1>}
+401 \textcolor{stringliteral}{class MockTest : public Test<T0, T1> \{}
+402 \textcolor{stringliteral}{public:}
+403 \textcolor{stringliteral}{MOCK\_METHOD0\_T(Foo,}
+404 \textcolor{stringliteral}{void());}
+405 \textcolor{stringliteral}{\};}
+406 \textcolor{stringliteral}{"""}
+407     self.assertEqualIgnoreLeadingWhitespace(
+408         expected, self.GenerateMocks(source))
+409 
+\end{DoxyCode}
+\index{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}!test\+Templated\+Forward\+Declaration@{test\+Templated\+Forward\+Declaration}}
+\index{test\+Templated\+Forward\+Declaration@{test\+Templated\+Forward\+Declaration}!cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}}
+\subsubsection[{\texorpdfstring{test\+Templated\+Forward\+Declaration(self)}{testTemplatedForwardDeclaration(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test.\+test\+Templated\+Forward\+Declaration (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a18cb0f03ecd4e54d0f787694c1513731}{}\label{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a18cb0f03ecd4e54d0f787694c1513731}
+
+\begin{DoxyCode}
+373   \textcolor{keyword}{def }testTemplatedForwardDeclaration(self):
+374     source = \textcolor{stringliteral}{"""}
+375 \textcolor{stringliteral}{template <class T> class Forward;  // Forward declaration should be ignored.}
+376 \textcolor{stringliteral}{class Test \{}
+377 \textcolor{stringliteral}{ public:}
+378 \textcolor{stringliteral}{  virtual void Foo();}
+379 \textcolor{stringliteral}{\};}
+380 \textcolor{stringliteral}{"""}
+381     expected = \textcolor{stringliteral}{"""\(\backslash\)}
+382 \textcolor{stringliteral}{class MockTest : public Test \{}
+383 \textcolor{stringliteral}{public:}
+384 \textcolor{stringliteral}{MOCK\_METHOD0(Foo,}
+385 \textcolor{stringliteral}{void());}
+386 \textcolor{stringliteral}{\};}
+387 \textcolor{stringliteral}{"""}
+388     self.assertEqualIgnoreLeadingWhitespace(
+389         expected, self.GenerateMocks(source))
+390 
+\end{DoxyCode}
+\index{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}!test\+Template\+In\+A\+Template\+Typedef@{test\+Template\+In\+A\+Template\+Typedef}}
+\index{test\+Template\+In\+A\+Template\+Typedef@{test\+Template\+In\+A\+Template\+Typedef}!cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}}
+\subsubsection[{\texorpdfstring{test\+Template\+In\+A\+Template\+Typedef(self)}{testTemplateInATemplateTypedef(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test.\+test\+Template\+In\+A\+Template\+Typedef (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a32a2840352d970c631d7be1b6d1970e6}{}\label{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a32a2840352d970c631d7be1b6d1970e6}
+
+\begin{DoxyCode}
+410   \textcolor{keyword}{def }testTemplateInATemplateTypedef(self):
+411     source = \textcolor{stringliteral}{"""}
+412 \textcolor{stringliteral}{class Test \{}
+413 \textcolor{stringliteral}{ public:}
+414 \textcolor{stringliteral}{  typedef std::vector<std::list<int>> FooType;}
+415 \textcolor{stringliteral}{  virtual void Bar(const FooType& test\_arg);}
+416 \textcolor{stringliteral}{\};}
+417 \textcolor{stringliteral}{"""}
+418     expected = \textcolor{stringliteral}{"""\(\backslash\)}
+419 \textcolor{stringliteral}{class MockTest : public Test \{}
+420 \textcolor{stringliteral}{public:}
+421 \textcolor{stringliteral}{MOCK\_METHOD1(Bar,}
+422 \textcolor{stringliteral}{void(const FooType& test\_arg));}
+423 \textcolor{stringliteral}{\};}
+424 \textcolor{stringliteral}{"""}
+425     self.assertEqualIgnoreLeadingWhitespace(
+426         expected, self.GenerateMocks(source))
+427 
+\end{DoxyCode}
+\index{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}!test\+Template\+In\+A\+Template\+Typedef\+With\+Comma@{test\+Template\+In\+A\+Template\+Typedef\+With\+Comma}}
+\index{test\+Template\+In\+A\+Template\+Typedef\+With\+Comma@{test\+Template\+In\+A\+Template\+Typedef\+With\+Comma}!cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test@{cpp\+::gmock\+\_\+class\+\_\+test\+::\+Generate\+Mocks\+Test}}
+\subsubsection[{\texorpdfstring{test\+Template\+In\+A\+Template\+Typedef\+With\+Comma(self)}{testTemplateInATemplateTypedefWithComma(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+gmock\+\_\+class\+\_\+test.\+Generate\+Mocks\+Test.\+test\+Template\+In\+A\+Template\+Typedef\+With\+Comma (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a67d1336b8782257fcfcdbda8c8d4f794}{}\label{classcpp_1_1gmock__class__test_1_1GenerateMocksTest_a67d1336b8782257fcfcdbda8c8d4f794}
+
+\begin{DoxyCode}
+428   \textcolor{keyword}{def }testTemplateInATemplateTypedefWithComma(self):
+429     source = \textcolor{stringliteral}{"""}
+430 \textcolor{stringliteral}{class Test \{}
+431 \textcolor{stringliteral}{ public:}
+432 \textcolor{stringliteral}{  typedef std::function<void(}
+433 \textcolor{stringliteral}{      const vector<std::list<int>>&, int> FooType;}
+434 \textcolor{stringliteral}{  virtual void Bar(const FooType& test\_arg);}
+435 \textcolor{stringliteral}{\};}
+436 \textcolor{stringliteral}{"""}
+437     expected = \textcolor{stringliteral}{"""\(\backslash\)}
+438 \textcolor{stringliteral}{class MockTest : public Test \{}
+439 \textcolor{stringliteral}{public:}
+440 \textcolor{stringliteral}{MOCK\_METHOD1(Bar,}
+441 \textcolor{stringliteral}{void(const FooType& test\_arg));}
+442 \textcolor{stringliteral}{\};}
+443 \textcolor{stringliteral}{"""}
+444     self.assertEqualIgnoreLeadingWhitespace(
+445         expected, self.GenerateMocks(source))
+446 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/scripts/generator/cpp/\hyperlink{gmock__class__test_8py}{gmock\+\_\+class\+\_\+test.\+py}\end{DoxyCompactItemize}

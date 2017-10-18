@@ -1,0 +1,194 @@
+\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest}{}\section{gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test Class Reference}
+\label{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest}\index{gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test}}
+
+
+Inheritance diagram for gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a965601cd1882fdeca94d2461bd033c40}{Run\+And\+Verify} (self, flag\+\_\+value, expected\+\_\+output\+\_\+re, other\+\_\+flag)
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a4168d086b7ec31f86ab548b6fd79b27e}{test\+Default\+Behavior} (self)
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a6d3e8738bd4b7494867cac464d342944}{test\+Flag} (self)
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_ae1ccba3f21c8e25968834607f7db2b10}{test\+Override\+Non\+Filter\+Flags} (self)
+\item 
+def \hyperlink{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_ac5bef6c9fb78b8eef84427de811fd70f}{test\+With\+Filter\+Flags} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Tests using the --gtest_list_tests flag to list all tests.\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}!Run\+And\+Verify@{Run\+And\+Verify}}
+\index{Run\+And\+Verify@{Run\+And\+Verify}!gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{Run\+And\+Verify(self, flag\+\_\+value, expected\+\_\+output\+\_\+re, other\+\_\+flag)}{RunAndVerify(self, flag_value, expected_output_re, other_flag)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test.\+Run\+And\+Verify (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{flag\+\_\+value, }
+\item[{}]{expected\+\_\+output\+\_\+re, }
+\item[{}]{other\+\_\+flag}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a965601cd1882fdeca94d2461bd033c40}{}\label{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a965601cd1882fdeca94d2461bd033c40}
+\begin{DoxyVerb}Runs gtest_list_tests_unittest_ and verifies that it prints
+the correct tests.
+
+Args:
+  flag_value:         value of the --gtest_list_tests flag;
+                  None if the flag should not be present.
+  expected_output_re: regular expression that matches the expected
+                  output after running command;
+  other_flag:         a different flag to be passed to command
+                  along with gtest_list_tests;
+                  None if the flag should not be present.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+129   \textcolor{keyword}{def }RunAndVerify(self, flag\_value, expected\_output\_re, other\_flag):
+130     \textcolor{stringliteral}{"""Runs gtest\_list\_tests\_unittest\_ and verifies that it prints}
+131 \textcolor{stringliteral}{    the correct tests.}
+132 \textcolor{stringliteral}{}
+133 \textcolor{stringliteral}{    Args:}
+134 \textcolor{stringliteral}{      flag\_value:         value of the --gtest\_list\_tests flag;}
+135 \textcolor{stringliteral}{                          None if the flag should not be present.}
+136 \textcolor{stringliteral}{      expected\_output\_re: regular expression that matches the expected}
+137 \textcolor{stringliteral}{                          output after running command;}
+138 \textcolor{stringliteral}{      other\_flag:         a different flag to be passed to command}
+139 \textcolor{stringliteral}{                          along with gtest\_list\_tests;}
+140 \textcolor{stringliteral}{                          None if the flag should not be present.}
+141 \textcolor{stringliteral}{    """}
+142 
+143     \textcolor{keywordflow}{if} flag\_value \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+144       flag = \textcolor{stringliteral}{''}
+145       flag\_expression = \textcolor{stringliteral}{'not set'}
+146     \textcolor{keywordflow}{elif} flag\_value == \textcolor{stringliteral}{'0'}:
+147       flag = \textcolor{stringliteral}{'--%s=0'} % LIST\_TESTS\_FLAG
+148       flag\_expression = \textcolor{stringliteral}{'0'}
+149     \textcolor{keywordflow}{else}:
+150       flag = \textcolor{stringliteral}{'--%s'} % LIST\_TESTS\_FLAG
+151       flag\_expression = \textcolor{stringliteral}{'1'}
+152 
+153     args = [flag]
+154 
+155     \textcolor{keywordflow}{if} other\_flag \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+156       args += [other\_flag]
+157 
+158     output = \hyperlink{namespacegtest__list__tests__unittest_ae820a362ba09ad61331e3f0c2a9f9cb6}{Run}(args)
+159 
+160     \textcolor{keywordflow}{if} expected\_output\_re:
+161       self.assert\_(
+162           expected\_output\_re.match(output),
+163           (\textcolor{stringliteral}{'when %s is %s, the output of "%s" is "%s",\(\backslash\)n'}
+164            \textcolor{stringliteral}{'which does not match regex "%s"'} %
+165            (LIST\_TESTS\_FLAG, flag\_expression, \textcolor{stringliteral}{' '}.join(args), output,
+166             expected\_output\_re.pattern)))
+167     \textcolor{keywordflow}{else}:
+168       self.assert\_(
+169           \textcolor{keywordflow}{not} EXPECTED\_OUTPUT\_NO\_FILTER\_RE.match(output),
+170           (\textcolor{stringliteral}{'when %s is %s, the output of "%s" is "%s"'}%
+171            (LIST\_TESTS\_FLAG, flag\_expression, \textcolor{stringliteral}{' '}.join(args), output)))
+172 
+\end{DoxyCode}
+\index{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}!test\+Default\+Behavior@{test\+Default\+Behavior}}
+\index{test\+Default\+Behavior@{test\+Default\+Behavior}!gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Default\+Behavior(self)}{testDefaultBehavior(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test.\+test\+Default\+Behavior (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a4168d086b7ec31f86ab548b6fd79b27e}{}\label{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a4168d086b7ec31f86ab548b6fd79b27e}
+\begin{DoxyVerb}Tests the behavior of the default mode.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+173   \textcolor{keyword}{def }testDefaultBehavior(self):
+174     \textcolor{stringliteral}{"""Tests the behavior of the default mode."""}
+175 
+176     self.RunAndVerify(flag\_value=\textcolor{keywordtype}{None},
+177                       expected\_output\_re=\textcolor{keywordtype}{None},
+178                       other\_flag=\textcolor{keywordtype}{None})
+179 
+\end{DoxyCode}
+\index{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}!test\+Flag@{test\+Flag}}
+\index{test\+Flag@{test\+Flag}!gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Flag(self)}{testFlag(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test.\+test\+Flag (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a6d3e8738bd4b7494867cac464d342944}{}\label{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_a6d3e8738bd4b7494867cac464d342944}
+\begin{DoxyVerb}Tests using the --gtest_list_tests flag.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+180   \textcolor{keyword}{def }testFlag(self):
+181     \textcolor{stringliteral}{"""Tests using the --gtest\_list\_tests flag."""}
+182 
+183     self.RunAndVerify(flag\_value=\textcolor{stringliteral}{'0'},
+184                       expected\_output\_re=\textcolor{keywordtype}{None},
+185                       other\_flag=\textcolor{keywordtype}{None})
+186     self.RunAndVerify(flag\_value=\textcolor{stringliteral}{'1'},
+187                       expected\_output\_re=EXPECTED\_OUTPUT\_NO\_FILTER\_RE,
+188                       other\_flag=\textcolor{keywordtype}{None})
+189 
+\end{DoxyCode}
+\index{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}!test\+Override\+Non\+Filter\+Flags@{test\+Override\+Non\+Filter\+Flags}}
+\index{test\+Override\+Non\+Filter\+Flags@{test\+Override\+Non\+Filter\+Flags}!gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+Override\+Non\+Filter\+Flags(self)}{testOverrideNonFilterFlags(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test.\+test\+Override\+Non\+Filter\+Flags (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_ae1ccba3f21c8e25968834607f7db2b10}{}\label{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_ae1ccba3f21c8e25968834607f7db2b10}
+\begin{DoxyVerb}Tests that --gtest_list_tests overrides the non-filter flags.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+190   \textcolor{keyword}{def }testOverrideNonFilterFlags(self):
+191     \textcolor{stringliteral}{"""Tests that --gtest\_list\_tests overrides the non-filter flags."""}
+192 
+193     self.RunAndVerify(flag\_value=\textcolor{stringliteral}{'1'},
+194                       expected\_output\_re=EXPECTED\_OUTPUT\_NO\_FILTER\_RE,
+195                       other\_flag=\textcolor{stringliteral}{'--gtest\_break\_on\_failure'})
+196 
+\end{DoxyCode}
+\index{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}!test\+With\+Filter\+Flags@{test\+With\+Filter\+Flags}}
+\index{test\+With\+Filter\+Flags@{test\+With\+Filter\+Flags}!gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test@{gtest\+\_\+list\+\_\+tests\+\_\+unittest\+::\+G\+Test\+List\+Tests\+Unit\+Test}}
+\subsubsection[{\texorpdfstring{test\+With\+Filter\+Flags(self)}{testWithFilterFlags(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+G\+Test\+List\+Tests\+Unit\+Test.\+test\+With\+Filter\+Flags (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_ac5bef6c9fb78b8eef84427de811fd70f}{}\label{classgtest__list__tests__unittest_1_1GTestListTestsUnitTest_ac5bef6c9fb78b8eef84427de811fd70f}
+\begin{DoxyVerb}Tests that --gtest_list_tests takes into account the
+--gtest_filter flag.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+197   \textcolor{keyword}{def }testWithFilterFlags(self):
+198     \textcolor{stringliteral}{"""Tests that --gtest\_list\_tests takes into account the}
+199 \textcolor{stringliteral}{    --gtest\_filter flag."""}
+200 
+201     self.RunAndVerify(flag\_value=\textcolor{stringliteral}{'1'},
+202                       expected\_output\_re=EXPECTED\_OUTPUT\_FILTER\_FOO\_RE,
+203                       other\_flag=\textcolor{stringliteral}{'--gtest\_filter=Foo*'})
+204 
+205 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__list__tests__unittest_8py}{gtest\+\_\+list\+\_\+tests\+\_\+unittest.\+py}\end{DoxyCompactItemize}

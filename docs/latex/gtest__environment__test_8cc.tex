@@ -1,0 +1,124 @@
+\hypertarget{gtest__environment__test_8cc}{}\section{vendor/googletest/googletest/test/gtest\+\_\+environment\+\_\+test.cc File Reference}
+\label{gtest__environment__test_8cc}\index{vendor/googletest/googletest/test/gtest\+\_\+environment\+\_\+test.\+cc@{vendor/googletest/googletest/test/gtest\+\_\+environment\+\_\+test.\+cc}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/gtest-\/internal-\/inl.\+h\char`\"{}}\\*
+Include dependency graph for gtest\+\_\+environment\+\_\+test.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest__environment__test_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacetesting}{testing}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gtest__environment__test_8cc_a83bd232fd1077579fada92c31bb7469f}{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+}~1
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{gtest__environment__test_8cc_aa43ad7e2c1c5c5150ba8d95607a96263}{Failure\+Type} 
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetesting_a20d69860ce843142c7f740262e6b0c9a}{testing\+::\+G\+T\+E\+S\+T\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+string\+\_\+} (filter)
+\item 
+int \hyperlink{gtest__environment__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{gtest\+\_\+environment\+\_\+test.\+cc@{gtest\+\_\+environment\+\_\+test.\+cc}!G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+@{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+}}
+\index{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+@{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+}!gtest\+\_\+environment\+\_\+test.\+cc@{gtest\+\_\+environment\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+}{GTEST_IMPLEMENTATION_}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+~1}\hypertarget{gtest__environment__test_8cc_a83bd232fd1077579fada92c31bb7469f}{}\label{gtest__environment__test_8cc_a83bd232fd1077579fada92c31bb7469f}
+
+
+\subsection{Enumeration Type Documentation}
+\index{gtest\+\_\+environment\+\_\+test.\+cc@{gtest\+\_\+environment\+\_\+test.\+cc}!Failure\+Type@{Failure\+Type}}
+\index{Failure\+Type@{Failure\+Type}!gtest\+\_\+environment\+\_\+test.\+cc@{gtest\+\_\+environment\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{Failure\+Type}{FailureType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Failure\+Type}}\hypertarget{gtest__environment__test_8cc_aa43ad7e2c1c5c5150ba8d95607a96263}{}\label{gtest__environment__test_8cc_aa43ad7e2c1c5c5150ba8d95607a96263}
+
+\begin{DoxyCode}
+48                  \{
+49   NO\_FAILURE, NON\_FATAL\_FAILURE, FATAL\_FAILURE
+50 \};
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\index{gtest\+\_\+environment\+\_\+test.\+cc@{gtest\+\_\+environment\+\_\+test.\+cc}!main@{main}}
+\index{main@{main}!gtest\+\_\+environment\+\_\+test.\+cc@{gtest\+\_\+environment\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__environment__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gtest__environment__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+137                                 \{
+138   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{testing::InitGoogleTest}(&argc, argv);
+139 
+140   \textcolor{comment}{// Registers a global test environment, and verifies that the}
+141   \textcolor{comment}{// registration function returns its argument.}
+142   MyEnvironment* \textcolor{keyword}{const} env = \textcolor{keyword}{new} MyEnvironment;
+143   Check(\hyperlink{namespacetesting_a460d7b998622e332392c1e00be3a60d5}{testing::AddGlobalTestEnvironment}(env) == env,
+144         \textcolor{stringliteral}{"AddGlobalTestEnvironment() should return its argument."});
+145 
+146   \textcolor{comment}{// Verifies that RUN\_ALL\_TESTS() runs the tests when the global}
+147   \textcolor{comment}{// set-up is successful.}
+148   Check(\hyperlink{gtest__output__test___8cc_ae0ca194f6b730e168850ce3179ad4f63}{RunAllTests}(env, NO\_FAILURE) != 0,
+149         \textcolor{stringliteral}{"RUN\_ALL\_TESTS() should return non-zero, as the global tear-down "}
+150         \textcolor{stringliteral}{"should generate a failure."});
+151   Check(test\_was\_run,
+152         \textcolor{stringliteral}{"The tests should run, as the global set-up should generate no "}
+153         \textcolor{stringliteral}{"failure"});
+154   Check(env->tear\_down\_was\_run(),
+155         \textcolor{stringliteral}{"The global tear-down should run, as the global set-up was run."});
+156 
+157   \textcolor{comment}{// Verifies that RUN\_ALL\_TESTS() runs the tests when the global}
+158   \textcolor{comment}{// set-up generates no fatal failure.}
+159   Check(\hyperlink{gtest__output__test___8cc_ae0ca194f6b730e168850ce3179ad4f63}{RunAllTests}(env, NON\_FATAL\_FAILURE) != 0,
+160         \textcolor{stringliteral}{"RUN\_ALL\_TESTS() should return non-zero, as both the global set-up "}
+161         \textcolor{stringliteral}{"and the global tear-down should generate a non-fatal failure."});
+162   Check(test\_was\_run,
+163         \textcolor{stringliteral}{"The tests should run, as the global set-up should generate no "}
+164         \textcolor{stringliteral}{"fatal failure."});
+165   Check(env->tear\_down\_was\_run(),
+166         \textcolor{stringliteral}{"The global tear-down should run, as the global set-up was run."});
+167 
+168   \textcolor{comment}{// Verifies that RUN\_ALL\_TESTS() runs no test when the global set-up}
+169   \textcolor{comment}{// generates a fatal failure.}
+170   Check(\hyperlink{gtest__output__test___8cc_ae0ca194f6b730e168850ce3179ad4f63}{RunAllTests}(env, FATAL\_FAILURE) != 0,
+171         \textcolor{stringliteral}{"RUN\_ALL\_TESTS() should return non-zero, as the global set-up "}
+172         \textcolor{stringliteral}{"should generate a fatal failure."});
+173   Check(!test\_was\_run,
+174         \textcolor{stringliteral}{"The tests should not run, as the global set-up should generate "}
+175         \textcolor{stringliteral}{"a fatal failure."});
+176   Check(env->tear\_down\_was\_run(),
+177         \textcolor{stringliteral}{"The global tear-down should run, as the global set-up was run."});
+178 
+179   \textcolor{comment}{// Verifies that RUN\_ALL\_TESTS() doesn't do global set-up or}
+180   \textcolor{comment}{// tear-down when there is no test to run.}
+181   \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{testing::GTEST\_FLAG}(filter) = \textcolor{stringliteral}{"-*"};
+182   Check(\hyperlink{gtest__output__test___8cc_ae0ca194f6b730e168850ce3179ad4f63}{RunAllTests}(env, NO\_FAILURE) == 0,
+183         \textcolor{stringliteral}{"RUN\_ALL\_TESTS() should return zero, as there is no test to run."});
+184   Check(!env->set\_up\_was\_run(),
+185         \textcolor{stringliteral}{"The global set-up should not run, as there is no test to run."});
+186   Check(!env->tear\_down\_was\_run(),
+187         \textcolor{stringliteral}{"The global tear-down should not run, "}
+188         \textcolor{stringliteral}{"as the global set-up was not run."});
+189 
+190   printf(\textcolor{stringliteral}{"PASS\(\backslash\)n"});
+191   \textcolor{keywordflow}{return} 0;
+192 \}
+\end{DoxyCode}

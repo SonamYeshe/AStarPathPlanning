@@ -1,0 +1,71 @@
+\hypertarget{classtesting_1_1CurrentTestInfoTest}{}\section{testing\+:\+:Current\+Test\+Info\+Test Class Reference}
+\label{classtesting_1_1CurrentTestInfoTest}\index{testing\+::\+Current\+Test\+Info\+Test@{testing\+::\+Current\+Test\+Info\+Test}}
+
+
+Inheritance diagram for testing\+:\+:Current\+Test\+Info\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classtesting_1_1CurrentTestInfoTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:Current\+Test\+Info\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classtesting_1_1CurrentTestInfoTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1CurrentTestInfoTest_a61bad7ce29923afd464daf9684b6269e}{Set\+Up\+Test\+Case} ()
+\item 
+static void \hyperlink{classtesting_1_1CurrentTestInfoTest_a9a80a5a3e6e70c619870c2ae9df892a6}{Tear\+Down\+Test\+Case} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::\+Current\+Test\+Info\+Test@{testing\+::\+Current\+Test\+Info\+Test}!Set\+Up\+Test\+Case@{Set\+Up\+Test\+Case}}
+\index{Set\+Up\+Test\+Case@{Set\+Up\+Test\+Case}!testing\+::\+Current\+Test\+Info\+Test@{testing\+::\+Current\+Test\+Info\+Test}}
+\subsubsection[{\texorpdfstring{Set\+Up\+Test\+Case()}{SetUpTestCase()}}]{\setlength{\rightskip}{0pt plus 5cm}static void testing\+::\+Current\+Test\+Info\+Test\+::\+Set\+Up\+Test\+Case (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1CurrentTestInfoTest_a61bad7ce29923afd464daf9684b6269e}{}\label{classtesting_1_1CurrentTestInfoTest_a61bad7ce29923afd464daf9684b6269e}
+
+\begin{DoxyCode}
+6513                               \{
+6514     \textcolor{comment}{// There should be no tests running at this point.}
+6515     \textcolor{keyword}{const} \hyperlink{classtesting_1_1TestInfo}{TestInfo}* test\_info =
+6516       \hyperlink{classtesting_1_1UnitTest_a24192400b70b3b946746954e9574fb8e}{UnitTest::GetInstance}()->\hyperlink{classtesting_1_1UnitTest_a088eaf814a33085ace3d881d22e6bdea}{current\_test\_info}();
+6517     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(test\_info == NULL)
+6518         << \textcolor{stringliteral}{"There should be no tests running at this point."};
+6519   \}
+\end{DoxyCode}
+\index{testing\+::\+Current\+Test\+Info\+Test@{testing\+::\+Current\+Test\+Info\+Test}!Tear\+Down\+Test\+Case@{Tear\+Down\+Test\+Case}}
+\index{Tear\+Down\+Test\+Case@{Tear\+Down\+Test\+Case}!testing\+::\+Current\+Test\+Info\+Test@{testing\+::\+Current\+Test\+Info\+Test}}
+\subsubsection[{\texorpdfstring{Tear\+Down\+Test\+Case()}{TearDownTestCase()}}]{\setlength{\rightskip}{0pt plus 5cm}static void testing\+::\+Current\+Test\+Info\+Test\+::\+Tear\+Down\+Test\+Case (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1CurrentTestInfoTest_a9a80a5a3e6e70c619870c2ae9df892a6}{}\label{classtesting_1_1CurrentTestInfoTest_a9a80a5a3e6e70c619870c2ae9df892a6}
+
+\begin{DoxyCode}
+6523                                  \{
+6524     \textcolor{keyword}{const} \hyperlink{classtesting_1_1TestInfo}{TestInfo}* test\_info =
+6525       \hyperlink{classtesting_1_1UnitTest_a24192400b70b3b946746954e9574fb8e}{UnitTest::GetInstance}()->\hyperlink{classtesting_1_1UnitTest_a088eaf814a33085ace3d881d22e6bdea}{current\_test\_info}();
+6526     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(test\_info == NULL)
+6527         << \textcolor{stringliteral}{"There should be no tests running at this point."};
+6528   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__unittest_8cc}{gtest\+\_\+unittest.\+cc}\end{DoxyCompactItemize}

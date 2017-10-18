@@ -1,0 +1,73 @@
+\hypertarget{classtesting_1_1TestInfoTest}{}\section{testing\+:\+:Test\+Info\+Test Class Reference}
+\label{classtesting_1_1TestInfoTest}\index{testing\+::\+Test\+Info\+Test@{testing\+::\+Test\+Info\+Test}}
+
+
+Inheritance diagram for testing\+:\+:Test\+Info\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classtesting_1_1TestInfoTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:Test\+Info\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classtesting_1_1TestInfoTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classtesting_1_1TestInfo}{Test\+Info} $\ast$ \hyperlink{classtesting_1_1TestInfoTest_a4140c1302bf53c7f1375a23923624f04}{Get\+Test\+Info} (const char $\ast$test\+\_\+name)
+\item 
+static const \hyperlink{classtesting_1_1TestResult}{Test\+Result} $\ast$ \hyperlink{classtesting_1_1TestInfoTest_a154b3679b1aa00ad037ce46eb60d18c3}{Get\+Test\+Result} (const \hyperlink{classtesting_1_1TestInfo}{Test\+Info} $\ast$test\+\_\+info)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::\+Test\+Info\+Test@{testing\+::\+Test\+Info\+Test}!Get\+Test\+Info@{Get\+Test\+Info}}
+\index{Get\+Test\+Info@{Get\+Test\+Info}!testing\+::\+Test\+Info\+Test@{testing\+::\+Test\+Info\+Test}}
+\subsubsection[{\texorpdfstring{Get\+Test\+Info(const char $\ast$test\+\_\+name)}{GetTestInfo(const char *test_name)}}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Test\+Info}$\ast$ testing\+::\+Test\+Info\+Test\+::\+Get\+Test\+Info (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{test\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1TestInfoTest_a4140c1302bf53c7f1375a23923624f04}{}\label{classtesting_1_1TestInfoTest_a4140c1302bf53c7f1375a23923624f04}
+
+\begin{DoxyCode}
+5300                                                             \{
+5301     \textcolor{keyword}{const} \hyperlink{classtesting_1_1TestCase}{TestCase}* \textcolor{keyword}{const} test\_case = \hyperlink{namespacetesting_1_1internal_a9bd0caf5d16512de38b39599c13ee634}{GetUnitTestImpl}()->
+5302         GetTestCase(\textcolor{stringliteral}{"TestInfoTest"}, \textcolor{stringliteral}{""}, NULL, NULL);
+5303 
+5304     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} < test\_case->\hyperlink{classtesting_1_1TestCase_ac7b2ed22822735b7b9ae2740162332c9}{total\_test\_count}(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+5305       \textcolor{keyword}{const} \hyperlink{classtesting_1_1TestInfo}{TestInfo}* \textcolor{keyword}{const} test\_info = test\_case->\hyperlink{classtesting_1_1TestCase_a9a7d5757d4b352cda2dddd0fda714a88}{GetTestInfo}(
+      \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+5306       \textcolor{keywordflow}{if} (strcmp(test\_name, test\_info->\hyperlink{classtesting_1_1TestInfo_ab3d24cad310f0cde29a80b9a83949ff5}{name}()) == 0)
+5307         \textcolor{keywordflow}{return} test\_info;
+5308     \}
+5309     \textcolor{keywordflow}{return} NULL;
+5310   \}
+\end{DoxyCode}
+\index{testing\+::\+Test\+Info\+Test@{testing\+::\+Test\+Info\+Test}!Get\+Test\+Result@{Get\+Test\+Result}}
+\index{Get\+Test\+Result@{Get\+Test\+Result}!testing\+::\+Test\+Info\+Test@{testing\+::\+Test\+Info\+Test}}
+\subsubsection[{\texorpdfstring{Get\+Test\+Result(const Test\+Info $\ast$test\+\_\+info)}{GetTestResult(const TestInfo *test_info)}}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Test\+Result}$\ast$ testing\+::\+Test\+Info\+Test\+::\+Get\+Test\+Result (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\+Info} $\ast$}]{test\+\_\+info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1TestInfoTest_a154b3679b1aa00ad037ce46eb60d18c3}{}\label{classtesting_1_1TestInfoTest_a154b3679b1aa00ad037ce46eb60d18c3}
+
+\begin{DoxyCode}
+5313                                  \{
+5314     \textcolor{keywordflow}{return} test\_info->\hyperlink{classtesting_1_1TestInfo_addea8766df3b8abe4cc4103218a49a65}{result}();
+5315   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__unittest_8cc}{gtest\+\_\+unittest.\+cc}\end{DoxyCompactItemize}

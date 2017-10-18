@@ -1,0 +1,281 @@
+\hypertarget{namespacegtest__test__utils}{}\section{gtest\+\_\+test\+\_\+utils Namespace Reference}
+\label{namespacegtest__test__utils}\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classgtest__test__utils_1_1Subprocess}{Subprocess}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegtest__test__utils_a616ee0f04e98e54b128cbe492def9bb1}{Set\+Env\+Var} (env\+\_\+var, value)
+\item 
+def \hyperlink{namespacegtest__test__utils_a052da74a5e39162480daf3a4d8eff9a6}{Get\+Flag} (flag)
+\item 
+def \hyperlink{namespacegtest__test__utils_aaff66cb0980804d8bd57dc719d4b5518}{Get\+Source\+Dir} ()
+\item 
+def \hyperlink{namespacegtest__test__utils_a1eacd9a471dfa6133028923ea755d22c}{Get\+Build\+Dir} ()
+\item 
+def \hyperlink{namespacegtest__test__utils_a25987e1cd76e93068b2afe6bac909d12}{Get\+Temp\+Dir} ()
+\item 
+def \hyperlink{namespacegtest__test__utils_a89ed3717984a80ffbb7a9c92f71b86a2}{Get\+Test\+Executable\+Path} (executable\+\_\+name, build\+\_\+dir=None)
+\item 
+def \hyperlink{namespacegtest__test__utils_acf8280de4dc027a28ffc9de43f245b50}{Get\+Exit\+Status} (exit\+\_\+code)
+\item 
+def \hyperlink{namespacegtest__test__utils_a5361b42d9c6843b5b117ead4d1c58cc5}{Main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacegtest__test__utils_aeb3755b4dd33aabe1baee781fecc1e66}{G\+T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+R\+\_\+\+N\+A\+ME} = \textquotesingle{}G\+T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+UT\textquotesingle{}
+\item 
+string \hyperlink{namespacegtest__test__utils_a7555b17006f1c078cda336750b8613e0}{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS} = \textquotesingle{}nt\textquotesingle{}
+\item 
+string \hyperlink{namespacegtest__test__utils_a6a936096debb3c2e807d000f76245740}{I\+S\+\_\+\+C\+Y\+G\+W\+IN} = \textquotesingle{}posix\textquotesingle{}
+\item 
+string \hyperlink{namespacegtest__test__utils_aa961c38a16224b2e7fd8c93fc1d2a90f}{P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+X\+I\+T\+\_\+\+F\+I\+L\+E\+\_\+\+E\+N\+V\+\_\+\+V\+AR} = \textquotesingle{}T\+E\+S\+T\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+X\+I\+T\+\_\+\+F\+I\+LE\textquotesingle{}
+\item 
+\hyperlink{namespacegtest__test__utils_ab0f2d4a3e90400abb93fd0808047a0a4}{environ} = os.\+environ.\+copy()
+\item 
+\hyperlink{namespacegtest__test__utils_acb97a85206c09d233db6c7f2362e5428}{Test\+Case} = \+\_\+test\+\_\+module.\+Test\+Case
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!Get\+Build\+Dir@{Get\+Build\+Dir}}
+\index{Get\+Build\+Dir@{Get\+Build\+Dir}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{Get\+Build\+Dir()}{GetBuildDir()}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+test\+\_\+utils.\+Get\+Build\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__test__utils_a1eacd9a471dfa6133028923ea755d22c}{}\label{namespacegtest__test__utils_a1eacd9a471dfa6133028923ea755d22c}
+\begin{DoxyVerb}Returns the absolute path of the directory where the test binaries are.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+132 \textcolor{keyword}{def }\hyperlink{namespacegtest__test__utils_a1eacd9a471dfa6133028923ea755d22c}{GetBuildDir}():
+133   \textcolor{stringliteral}{"""Returns the absolute path of the directory where the test binaries are."""}
+134 
+135   \textcolor{keywordflow}{return} os.path.abspath(\hyperlink{namespacegtest__test__utils_a052da74a5e39162480daf3a4d8eff9a6}{GetFlag}(\textcolor{stringliteral}{'build\_dir'}))
+136 
+137 
+\end{DoxyCode}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!Get\+Exit\+Status@{Get\+Exit\+Status}}
+\index{Get\+Exit\+Status@{Get\+Exit\+Status}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{Get\+Exit\+Status(exit\+\_\+code)}{GetExitStatus(exit_code)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+test\+\_\+utils.\+Get\+Exit\+Status (
+\begin{DoxyParamCaption}
+\item[{}]{exit\+\_\+code}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__test__utils_acf8280de4dc027a28ffc9de43f245b50}{}\label{namespacegtest__test__utils_acf8280de4dc027a28ffc9de43f245b50}
+\begin{DoxyVerb}Returns the argument to exit(), or -1 if exit() wasn't called.
+
+Args:
+  exit_code: the result value of os.system(command).
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+187 \textcolor{keyword}{def }\hyperlink{namespacegtest__test__utils_acf8280de4dc027a28ffc9de43f245b50}{GetExitStatus}(exit\_code):
+188   \textcolor{stringliteral}{"""Returns the argument to exit(), or -1 if exit() wasn't called.}
+189 \textcolor{stringliteral}{}
+190 \textcolor{stringliteral}{  Args:}
+191 \textcolor{stringliteral}{    exit\_code: the result value of os.system(command).}
+192 \textcolor{stringliteral}{  """}
+193 
+194   \textcolor{keywordflow}{if} os.name == \textcolor{stringliteral}{'nt'}:
+195     \textcolor{comment}{# On Windows, os.WEXITSTATUS() doesn't work and os.system() returns}
+196     \textcolor{comment}{# the argument to exit() directly.}
+197     \textcolor{keywordflow}{return} exit\_code
+198   \textcolor{keywordflow}{else}:
+199     \textcolor{comment}{# On Unix, os.WEXITSTATUS() must be used to extract the exit status}
+200     \textcolor{comment}{# from the result of os.system().}
+201     \textcolor{keywordflow}{if} os.WIFEXITED(exit\_code):
+202       \textcolor{keywordflow}{return} os.WEXITSTATUS(exit\_code)
+203     \textcolor{keywordflow}{else}:
+204       \textcolor{keywordflow}{return} -1
+205 
+206 
+\end{DoxyCode}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!Get\+Flag@{Get\+Flag}}
+\index{Get\+Flag@{Get\+Flag}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{Get\+Flag(flag)}{GetFlag(flag)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+test\+\_\+utils.\+Get\+Flag (
+\begin{DoxyParamCaption}
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__test__utils_a052da74a5e39162480daf3a4d8eff9a6}{}\label{namespacegtest__test__utils_a052da74a5e39162480daf3a4d8eff9a6}
+\begin{DoxyVerb}Returns the value of the given flag.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+115 \textcolor{keyword}{def }\hyperlink{namespacegtest__test__utils_a052da74a5e39162480daf3a4d8eff9a6}{GetFlag}(flag):
+116   \textcolor{stringliteral}{"""Returns the value of the given flag."""}
+117 
+118   \textcolor{comment}{# In case GetFlag() is called before Main(), we always call}
+119   \textcolor{comment}{# \_ParseAndStripGTestFlags() here to make sure the --gtest\_* flags}
+120   \textcolor{comment}{# are parsed.}
+121   \_ParseAndStripGTestFlags(sys.argv)
+122 
+123   \textcolor{keywordflow}{return} \_flag\_map[flag]
+124 
+125 
+\end{DoxyCode}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!Get\+Source\+Dir@{Get\+Source\+Dir}}
+\index{Get\+Source\+Dir@{Get\+Source\+Dir}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{Get\+Source\+Dir()}{GetSourceDir()}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+test\+\_\+utils.\+Get\+Source\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__test__utils_aaff66cb0980804d8bd57dc719d4b5518}{}\label{namespacegtest__test__utils_aaff66cb0980804d8bd57dc719d4b5518}
+\begin{DoxyVerb}Returns the absolute path of the directory where the .py files are.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+126 \textcolor{keyword}{def }\hyperlink{namespacegtest__test__utils_aaff66cb0980804d8bd57dc719d4b5518}{GetSourceDir}():
+127   \textcolor{stringliteral}{"""Returns the absolute path of the directory where the .py files are."""}
+128 
+129   \textcolor{keywordflow}{return} os.path.abspath(\hyperlink{namespacegtest__test__utils_a052da74a5e39162480daf3a4d8eff9a6}{GetFlag}(\textcolor{stringliteral}{'source\_dir'}))
+130 
+131 
+\end{DoxyCode}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!Get\+Temp\+Dir@{Get\+Temp\+Dir}}
+\index{Get\+Temp\+Dir@{Get\+Temp\+Dir}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{Get\+Temp\+Dir()}{GetTempDir()}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+test\+\_\+utils.\+Get\+Temp\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__test__utils_a25987e1cd76e93068b2afe6bac909d12}{}\label{namespacegtest__test__utils_a25987e1cd76e93068b2afe6bac909d12}
+\begin{DoxyVerb}Returns a directory for temporary files.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+147 \textcolor{keyword}{def }\hyperlink{namespacegtest__test__utils_a25987e1cd76e93068b2afe6bac909d12}{GetTempDir}():
+148   \textcolor{stringliteral}{"""Returns a directory for temporary files."""}
+149 
+150   \textcolor{keyword}{global} \_temp\_dir
+151   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} \_temp\_dir:
+152     \_temp\_dir = tempfile.mkdtemp()
+153   \textcolor{keywordflow}{return} \_temp\_dir
+154 
+155 
+\end{DoxyCode}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!Get\+Test\+Executable\+Path@{Get\+Test\+Executable\+Path}}
+\index{Get\+Test\+Executable\+Path@{Get\+Test\+Executable\+Path}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{Get\+Test\+Executable\+Path(executable\+\_\+name, build\+\_\+dir=\+None)}{GetTestExecutablePath(executable_name, build_dir=None)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+test\+\_\+utils.\+Get\+Test\+Executable\+Path (
+\begin{DoxyParamCaption}
+\item[{}]{executable\+\_\+name, }
+\item[{}]{build\+\_\+dir = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__test__utils_a89ed3717984a80ffbb7a9c92f71b86a2}{}\label{namespacegtest__test__utils_a89ed3717984a80ffbb7a9c92f71b86a2}
+\begin{DoxyVerb}Returns the absolute path of the test binary given its name.
+
+The function will print a message and abort the program if the resulting file
+doesn't exist.
+
+Args:
+  executable_name: name of the test binary that the test script runs.
+  build_dir:       directory where to look for executables, by default
+                   the result of GetBuildDir().
+
+Returns:
+  The absolute path of the test binary.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+156 \textcolor{keyword}{def }\hyperlink{namespacegtest__test__utils_a89ed3717984a80ffbb7a9c92f71b86a2}{GetTestExecutablePath}(executable\_name, build\_dir=None):
+157   \textcolor{stringliteral}{"""Returns the absolute path of the test binary given its name.}
+158 \textcolor{stringliteral}{}
+159 \textcolor{stringliteral}{  The function will print a message and abort the program if the resulting file}
+160 \textcolor{stringliteral}{  doesn't exist.}
+161 \textcolor{stringliteral}{}
+162 \textcolor{stringliteral}{  Args:}
+163 \textcolor{stringliteral}{    executable\_name: name of the test binary that the test script runs.}
+164 \textcolor{stringliteral}{    build\_dir:       directory where to look for executables, by default}
+165 \textcolor{stringliteral}{                     the result of GetBuildDir().}
+166 \textcolor{stringliteral}{}
+167 \textcolor{stringliteral}{  Returns:}
+168 \textcolor{stringliteral}{    The absolute path of the test binary.}
+169 \textcolor{stringliteral}{  """}
+170 
+171   path = os.path.abspath(os.path.join(build\_dir \textcolor{keywordflow}{or} \hyperlink{namespacegtest__test__utils_a1eacd9a471dfa6133028923ea755d22c}{GetBuildDir}(),
+172                                       executable\_name))
+173   \textcolor{keywordflow}{if} (IS\_WINDOWS \textcolor{keywordflow}{or} IS\_CYGWIN) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} path.endswith(\textcolor{stringliteral}{'.exe'}):
+174     path += \textcolor{stringliteral}{'.exe'}
+175 
+176   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} os.path.exists(path):
+177     message = (
+178         \textcolor{stringliteral}{'Unable to find the test binary "%s". Please make sure to provide\(\backslash\)n'}
+179         \textcolor{stringliteral}{'a path to the binary via the --build\_dir flag or the BUILD\_DIR\(\backslash\)n'}
+180         \textcolor{stringliteral}{'environment variable.'} % path)
+181     sys.stdout.write(message)
+182     sys.exit(1)
+183 
+184   \textcolor{keywordflow}{return} path
+185 
+186 
+\end{DoxyCode}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!Main@{Main}}
+\index{Main@{Main}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{Main()}{Main()}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+test\+\_\+utils.\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__test__utils_a5361b42d9c6843b5b117ead4d1c58cc5}{}\label{namespacegtest__test__utils_a5361b42d9c6843b5b117ead4d1c58cc5}
+\begin{DoxyVerb}Runs the unit test.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+306 \textcolor{keyword}{def }\hyperlink{namespacegtest__test__utils_a5361b42d9c6843b5b117ead4d1c58cc5}{Main}():
+307   \textcolor{stringliteral}{"""Runs the unit test."""}
+308 
+309   \textcolor{comment}{# We must call \_ParseAndStripGTestFlags() before calling}
+310   \textcolor{comment}{# unittest.main().  Otherwise the latter will be confused by the}
+311   \textcolor{comment}{# --gtest\_* flags.}
+312   \_ParseAndStripGTestFlags(sys.argv)
+313   \textcolor{comment}{# The tested binaries should not be writing XML output files unless the}
+314   \textcolor{comment}{# script explicitly instructs them to.}
+315   \textcolor{comment}{# TODO(vladl@google.com): Move this into Subprocess when we implement}
+316   \textcolor{comment}{# passing environment into it as a parameter.}
+317   \textcolor{keywordflow}{if} GTEST\_OUTPUT\_VAR\_NAME \textcolor{keywordflow}{in} os.environ:
+318     del os.environ[GTEST\_OUTPUT\_VAR\_NAME]
+319 
+320   \_test\_module.main()
+321 \end{DoxyCode}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!Set\+Env\+Var@{Set\+Env\+Var}}
+\index{Set\+Env\+Var@{Set\+Env\+Var}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{Set\+Env\+Var(env\+\_\+var, value)}{SetEnvVar(env_var, value)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+test\+\_\+utils.\+Set\+Env\+Var (
+\begin{DoxyParamCaption}
+\item[{}]{env\+\_\+var, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__test__utils_a616ee0f04e98e54b128cbe492def9bb1}{}\label{namespacegtest__test__utils_a616ee0f04e98e54b128cbe492def9bb1}
+\begin{DoxyVerb}Sets/unsets an environment variable to a given value.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+65 \textcolor{keyword}{def }\hyperlink{namespacegtest__test__utils_a616ee0f04e98e54b128cbe492def9bb1}{SetEnvVar}(env\_var, value):
+66   \textcolor{stringliteral}{"""Sets/unsets an environment variable to a given value."""}
+67 
+68   \textcolor{keywordflow}{if} value \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+69     environ[env\_var] = value
+70   \textcolor{keywordflow}{elif} env\_var \textcolor{keywordflow}{in} environ:
+71     del environ[env\_var]
+72 
+73 
+74 \textcolor{comment}{# Here we expose a class from a particular module, depending on the}
+75 \textcolor{comment}{# environment. The comment suppresses the 'Invalid variable name' lint}
+76 \textcolor{comment}{# complaint.}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!environ@{environ}}
+\index{environ@{environ}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{environ}{environ}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+test\+\_\+utils.\+environ = os.\+environ.\+copy()}\hypertarget{namespacegtest__test__utils_ab0f2d4a3e90400abb93fd0808047a0a4}{}\label{namespacegtest__test__utils_ab0f2d4a3e90400abb93fd0808047a0a4}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!G\+T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+R\+\_\+\+N\+A\+ME@{G\+T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+R\+\_\+\+N\+A\+ME}}
+\index{G\+T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+R\+\_\+\+N\+A\+ME@{G\+T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+R\+\_\+\+N\+A\+ME}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{G\+T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+R\+\_\+\+N\+A\+ME}{GTEST_OUTPUT_VAR_NAME}}]{\setlength{\rightskip}{0pt plus 5cm}string gtest\+\_\+test\+\_\+utils.\+G\+T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+V\+A\+R\+\_\+\+N\+A\+ME = \textquotesingle{}G\+T\+E\+S\+T\+\_\+\+O\+U\+T\+P\+UT\textquotesingle{}}\hypertarget{namespacegtest__test__utils_aeb3755b4dd33aabe1baee781fecc1e66}{}\label{namespacegtest__test__utils_aeb3755b4dd33aabe1baee781fecc1e66}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!I\+S\+\_\+\+C\+Y\+G\+W\+IN@{I\+S\+\_\+\+C\+Y\+G\+W\+IN}}
+\index{I\+S\+\_\+\+C\+Y\+G\+W\+IN@{I\+S\+\_\+\+C\+Y\+G\+W\+IN}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{I\+S\+\_\+\+C\+Y\+G\+W\+IN}{IS_CYGWIN}}]{\setlength{\rightskip}{0pt plus 5cm}string gtest\+\_\+test\+\_\+utils.\+I\+S\+\_\+\+C\+Y\+G\+W\+IN = \textquotesingle{}posix\textquotesingle{}}\hypertarget{namespacegtest__test__utils_a6a936096debb3c2e807d000f76245740}{}\label{namespacegtest__test__utils_a6a936096debb3c2e807d000f76245740}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!I\+S\+\_\+\+W\+I\+N\+D\+O\+WS@{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS}}
+\index{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS@{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS}{IS_WINDOWS}}]{\setlength{\rightskip}{0pt plus 5cm}string gtest\+\_\+test\+\_\+utils.\+I\+S\+\_\+\+W\+I\+N\+D\+O\+WS = \textquotesingle{}nt\textquotesingle{}}\hypertarget{namespacegtest__test__utils_a7555b17006f1c078cda336750b8613e0}{}\label{namespacegtest__test__utils_a7555b17006f1c078cda336750b8613e0}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+X\+I\+T\+\_\+\+F\+I\+L\+E\+\_\+\+E\+N\+V\+\_\+\+V\+AR@{P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+X\+I\+T\+\_\+\+F\+I\+L\+E\+\_\+\+E\+N\+V\+\_\+\+V\+AR}}
+\index{P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+X\+I\+T\+\_\+\+F\+I\+L\+E\+\_\+\+E\+N\+V\+\_\+\+V\+AR@{P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+X\+I\+T\+\_\+\+F\+I\+L\+E\+\_\+\+E\+N\+V\+\_\+\+V\+AR}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+X\+I\+T\+\_\+\+F\+I\+L\+E\+\_\+\+E\+N\+V\+\_\+\+V\+AR}{PREMATURE_EXIT_FILE_ENV_VAR}}]{\setlength{\rightskip}{0pt plus 5cm}string gtest\+\_\+test\+\_\+utils.\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+X\+I\+T\+\_\+\+F\+I\+L\+E\+\_\+\+E\+N\+V\+\_\+\+V\+AR = \textquotesingle{}T\+E\+S\+T\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+X\+I\+T\+\_\+\+F\+I\+LE\textquotesingle{}}\hypertarget{namespacegtest__test__utils_aa961c38a16224b2e7fd8c93fc1d2a90f}{}\label{namespacegtest__test__utils_aa961c38a16224b2e7fd8c93fc1d2a90f}
+\index{gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}!Test\+Case@{Test\+Case}}
+\index{Test\+Case@{Test\+Case}!gtest\+\_\+test\+\_\+utils@{gtest\+\_\+test\+\_\+utils}}
+\subsubsection[{\texorpdfstring{Test\+Case}{TestCase}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+test\+\_\+utils.\+Test\+Case = \+\_\+test\+\_\+module.\+Test\+Case}\hypertarget{namespacegtest__test__utils_acb97a85206c09d233db6c7f2362e5428}{}\label{namespacegtest__test__utils_acb97a85206c09d233db6c7f2362e5428}

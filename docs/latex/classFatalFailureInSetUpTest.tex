@@ -1,0 +1,91 @@
+\hypertarget{classFatalFailureInSetUpTest}{}\section{Fatal\+Failure\+In\+Set\+Up\+Test Class Reference}
+\label{classFatalFailureInSetUpTest}\index{Fatal\+Failure\+In\+Set\+Up\+Test@{Fatal\+Failure\+In\+Set\+Up\+Test}}
+
+
+Inheritance diagram for Fatal\+Failure\+In\+Set\+Up\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classFatalFailureInSetUpTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Fatal\+Failure\+In\+Set\+Up\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classFatalFailureInSetUpTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classFatalFailureInSetUpTest_a915ca362b046259c3586c1ab72bb0a93}{$\sim$\+Fatal\+Failure\+In\+Set\+Up\+Test} ()
+\item 
+virtual void \hyperlink{classFatalFailureInSetUpTest_a455696f86fb5f5393624221ccb79b373}{Set\+Up} ()
+\item 
+virtual void \hyperlink{classFatalFailureInSetUpTest_a457707161063e08f7b6600ec5db449e4}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Fatal\+Failure\+In\+Set\+Up\+Test@{Fatal\+Failure\+In\+Set\+Up\+Test}!````~Fatal\+Failure\+In\+Set\+Up\+Test@{$\sim$\+Fatal\+Failure\+In\+Set\+Up\+Test}}
+\index{````~Fatal\+Failure\+In\+Set\+Up\+Test@{$\sim$\+Fatal\+Failure\+In\+Set\+Up\+Test}!Fatal\+Failure\+In\+Set\+Up\+Test@{Fatal\+Failure\+In\+Set\+Up\+Test}}
+\subsubsection[{\texorpdfstring{$\sim$\+Fatal\+Failure\+In\+Set\+Up\+Test()}{~FatalFailureInSetUpTest()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Fatal\+Failure\+In\+Set\+Up\+Test\+::$\sim$\+Fatal\+Failure\+In\+Set\+Up\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classFatalFailureInSetUpTest_a915ca362b046259c3586c1ab72bb0a93}{}\label{classFatalFailureInSetUpTest_a915ca362b046259c3586c1ab72bb0a93}
+
+\begin{DoxyCode}
+438                                      \{
+439     Deinit();
+440   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Fatal\+Failure\+In\+Set\+Up\+Test@{Fatal\+Failure\+In\+Set\+Up\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Fatal\+Failure\+In\+Set\+Up\+Test@{Fatal\+Failure\+In\+Set\+Up\+Test}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Fatal\+Failure\+In\+Set\+Up\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classFatalFailureInSetUpTest_a455696f86fb5f5393624221ccb79b373}{}\label{classFatalFailureInSetUpTest_a455696f86fb5f5393624221ccb79b373}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a190315150c303ddf801313fd1a777733}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+442                        \{
+443     printf(\textcolor{stringliteral}{"(expecting 3 failures)\(\backslash\)n"});
+444     \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"Expected failure #1, in SetUp()."};
+445   \}
+\end{DoxyCode}
+\index{Fatal\+Failure\+In\+Set\+Up\+Test@{Fatal\+Failure\+In\+Set\+Up\+Test}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!Fatal\+Failure\+In\+Set\+Up\+Test@{Fatal\+Failure\+In\+Set\+Up\+Test}}
+\subsubsection[{\texorpdfstring{Tear\+Down()}{TearDown()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Fatal\+Failure\+In\+Set\+Up\+Test\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classFatalFailureInSetUpTest_a457707161063e08f7b6600ec5db449e4}{}\label{classFatalFailureInSetUpTest_a457707161063e08f7b6600ec5db449e4}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a5f0ab439802cbe0ef7552f1a9f791923}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+447                           \{
+448     \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"Expected failure #2, in TearDown()."};
+449   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__output__test___8cc}{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}\end{DoxyCompactItemize}

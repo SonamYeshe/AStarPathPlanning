@@ -1,0 +1,124 @@
+\hypertarget{classtesting_1_1SetUpTestCaseTest}{}\section{testing\+:\+:Set\+Up\+Test\+Case\+Test Class Reference}
+\label{classtesting_1_1SetUpTestCaseTest}\index{testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}}
+
+
+Inheritance diagram for testing\+:\+:Set\+Up\+Test\+Case\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classtesting_1_1SetUpTestCaseTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:Set\+Up\+Test\+Case\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classtesting_1_1SetUpTestCaseTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtesting_1_1SetUpTestCaseTest_a4b44551ccf73e66de7ec95b2ab3b2085}{Set\+Up} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1SetUpTestCaseTest_a50732abc0bcb3725e6dfd6a2d487e944}{Set\+Up\+Test\+Case} ()
+\item 
+static void \hyperlink{classtesting_1_1SetUpTestCaseTest_abdc133cd161ff2fa317f489da9bdccf3}{Tear\+Down\+Test\+Case} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{classtesting_1_1SetUpTestCaseTest_a5b6e811128d35389be49f6569bf93817}{counter\+\_\+} = 0
+\item 
+static const char $\ast$ \hyperlink{classtesting_1_1SetUpTestCaseTest_a904e77fd9a628b6a9aca0280665fd040}{shared\+\_\+resource\+\_\+} = N\+U\+LL
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void testing\+::\+Set\+Up\+Test\+Case\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1SetUpTestCaseTest_a4b44551ccf73e66de7ec95b2ab3b2085}{}\label{classtesting_1_1SetUpTestCaseTest_a4b44551ccf73e66de7ec95b2ab3b2085}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a190315150c303ddf801313fd1a777733}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+5427                        \{
+5428     \textcolor{comment}{// SetUpTestCase() should be called only once, so counter\_ should}
+5429     \textcolor{comment}{// always be 1.}
+5430     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{classtesting_1_1SetUpTestCaseTest_a5b6e811128d35389be49f6569bf93817}{counter\_});
+5431   \}
+\end{DoxyCode}
+\index{testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}!Set\+Up\+Test\+Case@{Set\+Up\+Test\+Case}}
+\index{Set\+Up\+Test\+Case@{Set\+Up\+Test\+Case}!testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}}
+\subsubsection[{\texorpdfstring{Set\+Up\+Test\+Case()}{SetUpTestCase()}}]{\setlength{\rightskip}{0pt plus 5cm}static void testing\+::\+Set\+Up\+Test\+Case\+Test\+::\+Set\+Up\+Test\+Case (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1SetUpTestCaseTest_a50732abc0bcb3725e6dfd6a2d487e944}{}\label{classtesting_1_1SetUpTestCaseTest_a50732abc0bcb3725e6dfd6a2d487e944}
+
+\begin{DoxyCode}
+5396                               \{
+5397     printf(\textcolor{stringliteral}{"Setting up the test case . . .\(\backslash\)n"});
+5398 
+5399     \textcolor{comment}{// Initializes some shared resource.  In this simple example, we}
+5400     \textcolor{comment}{// just create a C string.  More complex stuff can be done if}
+5401     \textcolor{comment}{// desired.}
+5402     \hyperlink{classtesting_1_1SetUpTestCaseTest_a904e77fd9a628b6a9aca0280665fd040}{shared\_resource\_} = \textcolor{stringliteral}{"123"};
+5403 
+5404     \textcolor{comment}{// Increments the number of test cases that have been set up.}
+5405     \hyperlink{classtesting_1_1SetUpTestCaseTest_a5b6e811128d35389be49f6569bf93817}{counter\_}++;
+5406 
+5407     \textcolor{comment}{// SetUpTestCase() should be called only once.}
+5408     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{classtesting_1_1SetUpTestCaseTest_a5b6e811128d35389be49f6569bf93817}{counter\_});
+5409   \}
+\end{DoxyCode}
+\index{testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}!Tear\+Down\+Test\+Case@{Tear\+Down\+Test\+Case}}
+\index{Tear\+Down\+Test\+Case@{Tear\+Down\+Test\+Case}!testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}}
+\subsubsection[{\texorpdfstring{Tear\+Down\+Test\+Case()}{TearDownTestCase()}}]{\setlength{\rightskip}{0pt plus 5cm}static void testing\+::\+Set\+Up\+Test\+Case\+Test\+::\+Tear\+Down\+Test\+Case (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1SetUpTestCaseTest_abdc133cd161ff2fa317f489da9bdccf3}{}\label{classtesting_1_1SetUpTestCaseTest_abdc133cd161ff2fa317f489da9bdccf3}
+
+\begin{DoxyCode}
+5413                                  \{
+5414     printf(\textcolor{stringliteral}{"Tearing down the test case . . .\(\backslash\)n"});
+5415 
+5416     \textcolor{comment}{// Decrements the number of test cases that have been set up.}
+5417     \hyperlink{classtesting_1_1SetUpTestCaseTest_a5b6e811128d35389be49f6569bf93817}{counter\_}--;
+5418 
+5419     \textcolor{comment}{// TearDownTestCase() should be called only once.}
+5420     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, \hyperlink{classtesting_1_1SetUpTestCaseTest_a5b6e811128d35389be49f6569bf93817}{counter\_});
+5421 
+5422     \textcolor{comment}{// Cleans up the shared resource.}
+5423     \hyperlink{classtesting_1_1SetUpTestCaseTest_a904e77fd9a628b6a9aca0280665fd040}{shared\_resource\_} = NULL;
+5424   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}!counter\+\_\+@{counter\+\_\+}}
+\index{counter\+\_\+@{counter\+\_\+}!testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}}
+\subsubsection[{\texorpdfstring{counter\+\_\+}{counter_}}]{\setlength{\rightskip}{0pt plus 5cm}int testing\+::\+Set\+Up\+Test\+Case\+Test\+::counter\+\_\+ = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1SetUpTestCaseTest_a5b6e811128d35389be49f6569bf93817}{}\label{classtesting_1_1SetUpTestCaseTest_a5b6e811128d35389be49f6569bf93817}
+\index{testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}!shared\+\_\+resource\+\_\+@{shared\+\_\+resource\+\_\+}}
+\index{shared\+\_\+resource\+\_\+@{shared\+\_\+resource\+\_\+}!testing\+::\+Set\+Up\+Test\+Case\+Test@{testing\+::\+Set\+Up\+Test\+Case\+Test}}
+\subsubsection[{\texorpdfstring{shared\+\_\+resource\+\_\+}{shared_resource_}}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ testing\+::\+Set\+Up\+Test\+Case\+Test\+::shared\+\_\+resource\+\_\+ = N\+U\+LL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1SetUpTestCaseTest_a904e77fd9a628b6a9aca0280665fd040}{}\label{classtesting_1_1SetUpTestCaseTest_a904e77fd9a628b6a9aca0280665fd040}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__unittest_8cc}{gtest\+\_\+unittest.\+cc}\end{DoxyCompactItemize}

@@ -1,0 +1,195 @@
+\hypertarget{classtesting_1_1Message}{}\section{testing\+:\+:Message Class Reference}
+\label{classtesting_1_1Message}\index{testing\+::\+Message@{testing\+::\+Message}}
+
+
+{\ttfamily \#include $<$gtest-\/message.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1Message_af5ba7216630df9845f18feb64b1a5383}{Message} ()
+\item 
+\hyperlink{classtesting_1_1Message_ac126e24804817a053bebba0920d94a11}{Message} (const \hyperlink{classtesting_1_1Message}{Message} \&msg)
+\item 
+\hyperlink{classtesting_1_1Message_a9de694ca239486809fc99fbbea8ac21d}{Message} (const char $\ast$str)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classtesting_1_1Message}{Message} \& \hyperlink{classtesting_1_1Message_a2e0e71be52d54c20a75a55fca812721f}{operator$<$$<$} (const T \&val)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classtesting_1_1Message}{Message} \& \hyperlink{classtesting_1_1Message_aa3ab685879958f90d2d8cd5b68d10c34}{operator$<$$<$} (T $\ast$const \&pointer)
+\item 
+\hyperlink{classtesting_1_1Message}{Message} \& \hyperlink{classtesting_1_1Message_a3a71a1c1c8ea52de5852d75483d41453}{operator$<$$<$} (Basic\+Narrow\+Io\+Manip val)
+\item 
+\hyperlink{classtesting_1_1Message}{Message} \& \hyperlink{classtesting_1_1Message_a3e1e04f23b1bdfe18adfd59928296346}{operator$<$$<$} (bool b)
+\item 
+\hyperlink{classtesting_1_1Message}{Message} \& \hyperlink{classtesting_1_1Message_ac0db9c22535b28bc863bfd0a1fdf7e14}{operator$<$$<$} (const wchar\+\_\+t $\ast$wide\+\_\+c\+\_\+str)
+\item 
+\hyperlink{classtesting_1_1Message}{Message} \& \hyperlink{classtesting_1_1Message_ac1d3a041ac4bb9c929ee746b31a13d6a}{operator$<$$<$} (wchar\+\_\+t $\ast$wide\+\_\+c\+\_\+str)
+\item 
+std\+::string \hyperlink{classtesting_1_1Message_abe8c1b7584aa670dd0e2413e8317a937}{Get\+String} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::\+Message@{testing\+::\+Message}!Message@{Message}}
+\index{Message@{Message}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{Message()}{Message()}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::\+Message\+::\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1Message_af5ba7216630df9845f18feb64b1a5383}{}\label{classtesting_1_1Message_af5ba7216630df9845f18feb64b1a5383}
+
+\begin{DoxyCode}
+946                  : ss\_(new ::std::stringstream) \{
+947   \textcolor{comment}{// By default, we want there to be enough precision when printing}
+948   \textcolor{comment}{// a double to a Message.}
+949   *ss\_ << std::setprecision(std::numeric\_limits<double>::digits10 + 2);
+950 \}
+\end{DoxyCode}
+\index{testing\+::\+Message@{testing\+::\+Message}!Message@{Message}}
+\index{Message@{Message}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{Message(const Message \&msg)}{Message(const Message &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::\+Message\+::\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1Message_ac126e24804817a053bebba0920d94a11}{}\label{classtesting_1_1Message_ac126e24804817a053bebba0920d94a11}
+
+\begin{DoxyCode}
+96                               : ss\_(new ::std::stringstream) \{  \textcolor{comment}{// NOLINT}
+97     *ss\_ << msg.GetString();
+98   \}
+\end{DoxyCode}
+\index{testing\+::\+Message@{testing\+::\+Message}!Message@{Message}}
+\index{Message@{Message}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{Message(const char $\ast$str)}{Message(const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::\+Message\+::\+Message (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1Message_a9de694ca239486809fc99fbbea8ac21d}{}\label{classtesting_1_1Message_a9de694ca239486809fc99fbbea8ac21d}
+
+\begin{DoxyCode}
+101                                     : ss\_(new ::std::stringstream) \{
+102     *ss\_ << str;
+103   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::\+Message@{testing\+::\+Message}!Get\+String@{Get\+String}}
+\index{Get\+String@{Get\+String}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{Get\+String() const }{GetString() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string testing\+::\+Message\+::\+Get\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classtesting_1_1Message_abe8c1b7584aa670dd0e2413e8317a937}{}\label{classtesting_1_1Message_abe8c1b7584aa670dd0e2413e8317a937}
+
+\begin{DoxyCode}
+981                                    \{
+982   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_1_1internal_ac0a2b7f69fc829d80a39e925b6417e39}{internal::StringStreamToString}(ss\_.\hyperlink{classtesting_1_1internal_1_1scoped__ptr_adc8f8fcb63ce69f80f011456e6d2f08d}{get}());
+983 \}
+\end{DoxyCode}
+\index{testing\+::\+Message@{testing\+::\+Message}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(const T \&val)}{operator<<(const T &val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Message}\& testing\+::\+Message\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1Message_a2e0e71be52d54c20a75a55fca812721f}{}\label{classtesting_1_1Message_a2e0e71be52d54c20a75a55fca812721f}
+
+\begin{DoxyCode}
+115                                             \{
+116     \textcolor{comment}{// Some libraries overload << for STL containers.  These}
+117     \textcolor{comment}{// overloads are defined in the global namespace instead of ::std.}
+118     \textcolor{comment}{//}
+119     \textcolor{comment}{// C++'s symbol lookup rule (i.e. Koenig lookup) says that these}
+120     \textcolor{comment}{// overloads are visible in either the std namespace or the global}
+121     \textcolor{comment}{// namespace, but not other namespaces, including the testing}
+122     \textcolor{comment}{// namespace which Google Test's Message class is in.}
+123     \textcolor{comment}{//}
+124     \textcolor{comment}{// To allow STL containers (and other types that has a << operator}
+125     \textcolor{comment}{// defined in the global namespace) to be used in Google Test}
+126     \textcolor{comment}{// assertions, testing::Message must access the custom << operator}
+127     \textcolor{comment}{// from the global namespace.  With this using declaration,}
+128     \textcolor{comment}{// overloads of << defined in the global namespace and those}
+129     \textcolor{comment}{// visible via Koenig lookup are both exposed in this function.}
+130     using ::operator <<;
+131     *ss\_ << val;
+132     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+133   \}
+\end{DoxyCode}
+\index{testing\+::\+Message@{testing\+::\+Message}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+T $\ast$const \&pointer)}{operator<<(T *const &pointer)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Message}\& testing\+::\+Message\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{T $\ast$const \&}]{pointer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1Message_aa3ab685879958f90d2d8cd5b68d10c34}{}\label{classtesting_1_1Message_aa3ab685879958f90d2d8cd5b68d10c34}
+
+\begin{DoxyCode}
+149                                                  \{  \textcolor{comment}{// NOLINT}
+150     \textcolor{keywordflow}{if} (pointer == NULL) \{
+151       *ss\_ << \textcolor{stringliteral}{"(null)"};
+152     \} \textcolor{keywordflow}{else} \{
+153       *ss\_ << pointer;
+154     \}
+155     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+156   \}
+\end{DoxyCode}
+\index{testing\+::\+Message@{testing\+::\+Message}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(\+Basic\+Narrow\+Io\+Manip val)}{operator<<(BasicNarrowIoManip val)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message}\& testing\+::\+Message\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{Basic\+Narrow\+Io\+Manip}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1Message_a3a71a1c1c8ea52de5852d75483d41453}{}\label{classtesting_1_1Message_a3a71a1c1c8ea52de5852d75483d41453}
+
+\begin{DoxyCode}
+165                                                \{
+166     *ss\_ << val;
+167     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+168   \}
+\end{DoxyCode}
+\index{testing\+::\+Message@{testing\+::\+Message}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(bool b)}{operator<<(bool b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message}\& testing\+::\+Message\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1Message_a3e1e04f23b1bdfe18adfd59928296346}{}\label{classtesting_1_1Message_a3e1e04f23b1bdfe18adfd59928296346}
+
+\begin{DoxyCode}
+171                                \{
+172     \textcolor{keywordflow}{return} *\textcolor{keyword}{this} << (b ? \textcolor{stringliteral}{"true"} : \textcolor{stringliteral}{"false"});
+173   \}
+\end{DoxyCode}
+\index{testing\+::\+Message@{testing\+::\+Message}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(const wchar\+\_\+t $\ast$wide\+\_\+c\+\_\+str)}{operator<<(const wchar_t *wide_c_str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} \& testing\+::\+Message\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{const wchar\+\_\+t $\ast$}]{wide\+\_\+c\+\_\+str}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1Message_ac0db9c22535b28bc863bfd0a1fdf7e14}{}\label{classtesting_1_1Message_ac0db9c22535b28bc863bfd0a1fdf7e14}
+
+\begin{DoxyCode}
+954                                                        \{
+955   \textcolor{keywordflow}{return} *\textcolor{keyword}{this} << \hyperlink{classtesting_1_1internal_1_1String_aaf7e376ff580677ea4954d5913d5b917}{internal::String::ShowWideCString}(wide\_c\_str);
+956 \}
+\end{DoxyCode}
+\index{testing\+::\+Message@{testing\+::\+Message}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!testing\+::\+Message@{testing\+::\+Message}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(wchar\+\_\+t $\ast$wide\+\_\+c\+\_\+str)}{operator<<(wchar_t *wide_c_str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message} \& testing\+::\+Message\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{wchar\+\_\+t $\ast$}]{wide\+\_\+c\+\_\+str}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1Message_ac1d3a041ac4bb9c929ee746b31a13d6a}{}\label{classtesting_1_1Message_ac1d3a041ac4bb9c929ee746b31a13d6a}
+
+\begin{DoxyCode}
+957                                                  \{
+958   \textcolor{keywordflow}{return} *\textcolor{keyword}{this} << \hyperlink{classtesting_1_1internal_1_1String_aaf7e376ff580677ea4954d5913d5b917}{internal::String::ShowWideCString}(wide\_c\_str);
+959 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/include/gtest/\hyperlink{gtest-message_8h}{gtest-\/message.\+h}\item 
+vendor/googletest/googletest/src/\hyperlink{gtest_8cc}{gtest.\+cc}\end{DoxyCompactItemize}

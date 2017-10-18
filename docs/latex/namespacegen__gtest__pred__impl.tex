@@ -1,0 +1,868 @@
+\hypertarget{namespacegen__gtest__pred__impl}{}\section{gen\+\_\+gtest\+\_\+pred\+\_\+impl Namespace Reference}
+\label{namespacegen__gtest__pred__impl}\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a0b99cadcffab4bf161654a382163bac8}{Header\+Preamble} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a5bbb7272f3588b969ab3ded6f49836a1}{Arity} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_ae49dd9bd9152dbcb3ca7994ce04c37ba}{Title} (word)
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a7920598d51c9dded76a4ef9ffde339e4}{One\+To} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}, format, sep=\textquotesingle{}\textquotesingle{})
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a8c53b141b89f9c05d0131d9756dfeab0}{Implementation\+For\+Arity} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a3d40c7ef70cf4d46e56c9612f34027bf}{Header\+Postamble} ()
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a16210fe365dfd176e04aa2578ac5a8d9}{Generate\+File} (path, content)
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a6f3039a82a5283846fb272f8a3af6743}{Generate\+Header} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_ae52dc86461d1b666c7b658a8c27c69f9}{Unit\+Test\+Preamble} ()
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_ab0da913fa15e5695d5bb2dd1de5dec57}{Tests\+For\+Arity} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_a57b922f50d0807896496dcd883c1f098}{Unit\+Test\+Postamble} ()
+\item 
+def \hyperlink{namespacegen__gtest__pred__impl_acbd42b5b7fb7ddbb06a4dd58fc37e9ed}{Generate\+Unit\+Test} (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacegen__gtest__pred__impl_aed087c7fc787a064f0a9fd5f5f9f6487}{S\+C\+R\+I\+P\+T\+\_\+\+D\+IR} = os.\+path.\+dirname(sys.\+argv\mbox{[}0\mbox{]})
+\item 
+\hyperlink{namespacegen__gtest__pred__impl_ab96c63705e2cb7619876ba592dab4c8e}{H\+E\+A\+D\+ER} = os.\+path.\+join(\hyperlink{namespacegen__gtest__pred__impl_aed087c7fc787a064f0a9fd5f5f9f6487}{S\+C\+R\+I\+P\+T\+\_\+\+D\+IR}, \textquotesingle{}../include/gtest/gtest\+\_\+pred\+\_\+impl.\+h\textquotesingle{})
+\item 
+\hyperlink{namespacegen__gtest__pred__impl_a8c1cb8e87c4bd84edbb958f73b7df200}{U\+N\+I\+T\+\_\+\+T\+E\+ST} = os.\+path.\+join(\hyperlink{namespacegen__gtest__pred__impl_aed087c7fc787a064f0a9fd5f5f9f6487}{S\+C\+R\+I\+P\+T\+\_\+\+D\+IR}, \textquotesingle{}../test/\hyperlink{gtest__output__test__golden__lin_8txt_a36ebfe06d2a8523cebd158fbc62be565}{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Arity@{Arity}}
+\index{Arity@{Arity}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Arity(n)}{Arity(n)}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Arity (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_a5bbb7272f3588b969ab3ded6f49836a1}{}\label{namespacegen__gtest__pred__impl_a5bbb7272f3588b969ab3ded6f49836a1}
+\begin{DoxyVerb}Returns the English name of the given arity.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+164 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_a5bbb7272f3588b969ab3ded6f49836a1}{Arity}(n):
+165   \textcolor{stringliteral}{"""Returns the English name of the given arity."""}
+166 
+167   \textcolor{keywordflow}{if} n < 0:
+168     \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+169   \textcolor{keywordflow}{elif} n <= 3:
+170     \textcolor{keywordflow}{return} [\textcolor{stringliteral}{'nullary'}, \textcolor{stringliteral}{'unary'}, \textcolor{stringliteral}{'binary'}, \textcolor{stringliteral}{'ternary'}][n]
+171   \textcolor{keywordflow}{else}:
+172     \textcolor{keywordflow}{return} \textcolor{stringliteral}{'%s-ary'} % n
+173 
+174 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Generate\+File@{Generate\+File}}
+\index{Generate\+File@{Generate\+File}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Generate\+File(path, content)}{GenerateFile(path, content)}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Generate\+File (
+\begin{DoxyParamCaption}
+\item[{}]{path, }
+\item[{}]{content}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_a16210fe365dfd176e04aa2578ac5a8d9}{}\label{namespacegen__gtest__pred__impl_a16210fe365dfd176e04aa2578ac5a8d9}
+\begin{DoxyVerb}Given a file path and a content string, overwrites it with the
+given content.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+302 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_a16210fe365dfd176e04aa2578ac5a8d9}{GenerateFile}(path, content):
+303   \textcolor{stringliteral}{"""Given a file path and a content string, overwrites it with the}
+304 \textcolor{stringliteral}{  given content."""}
+305 
+306   \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Updating file %s . . .'} % path
+307 
+308   f = file(path, \textcolor{stringliteral}{'w+'})
+309   \textcolor{keywordflow}{print} >>f, content,
+310   f.close()
+311 
+312   \textcolor{keywordflow}{print} \textcolor{stringliteral}{'File %s has been updated.'} % path
+313 
+314 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Generate\+Header@{Generate\+Header}}
+\index{Generate\+Header@{Generate\+Header}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Generate\+Header(n)}{GenerateHeader(n)}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Generate\+Header (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_a6f3039a82a5283846fb272f8a3af6743}{}\label{namespacegen__gtest__pred__impl_a6f3039a82a5283846fb272f8a3af6743}
+\begin{DoxyVerb}Given the maximum arity n, updates the header file that implements
+the predicate assertions.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+315 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_a6f3039a82a5283846fb272f8a3af6743}{GenerateHeader}(n):
+316   \textcolor{stringliteral}{"""Given the maximum arity n, updates the header file that implements}
+317 \textcolor{stringliteral}{  the predicate assertions."""}
+318 
+319   \hyperlink{namespacegen__gtest__pred__impl_a16210fe365dfd176e04aa2578ac5a8d9}{GenerateFile}(HEADER,
+320                \hyperlink{namespacegen__gtest__pred__impl_a0b99cadcffab4bf161654a382163bac8}{HeaderPreamble}(n)
+321                + \textcolor{stringliteral}{''}.join([\hyperlink{namespacegen__gtest__pred__impl_a8c53b141b89f9c05d0131d9756dfeab0}{ImplementationForArity}(i) \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} 
+      \hyperlink{namespacegen__gtest__pred__impl_a7920598d51c9dded76a4ef9ffde339e4}{OneTo}(n)])
+322                + \hyperlink{namespacegen__gtest__pred__impl_a3d40c7ef70cf4d46e56c9612f34027bf}{HeaderPostamble}())
+323 
+324 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Generate\+Unit\+Test@{Generate\+Unit\+Test}}
+\index{Generate\+Unit\+Test@{Generate\+Unit\+Test}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Generate\+Unit\+Test(n)}{GenerateUnitTest(n)}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Generate\+Unit\+Test (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_acbd42b5b7fb7ddbb06a4dd58fc37e9ed}{}\label{namespacegen__gtest__pred__impl_acbd42b5b7fb7ddbb06a4dd58fc37e9ed}
+\begin{DoxyVerb}Returns the tests for up-to n-ary predicate assertions.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+706 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_acbd42b5b7fb7ddbb06a4dd58fc37e9ed}{GenerateUnitTest}(n):
+707   \textcolor{stringliteral}{"""Returns the tests for up-to n-ary predicate assertions."""}
+708 
+709   \hyperlink{namespacegen__gtest__pred__impl_a16210fe365dfd176e04aa2578ac5a8d9}{GenerateFile}(UNIT\_TEST,
+710                \hyperlink{namespacegen__gtest__pred__impl_ae52dc86461d1b666c7b658a8c27c69f9}{UnitTestPreamble}()
+711                + \textcolor{stringliteral}{''}.join([\hyperlink{namespacegen__gtest__pred__impl_ab0da913fa15e5695d5bb2dd1de5dec57}{TestsForArity}(i) \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} \hyperlink{namespacegen__gtest__pred__impl_a7920598d51c9dded76a4ef9ffde339e4}{OneTo}(n)])
+712                + \hyperlink{namespacegen__gtest__pred__impl_a57b922f50d0807896496dcd883c1f098}{UnitTestPostamble}())
+713 
+714 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Header\+Postamble@{Header\+Postamble}}
+\index{Header\+Postamble@{Header\+Postamble}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Header\+Postamble()}{HeaderPostamble()}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Header\+Postamble (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_a3d40c7ef70cf4d46e56c9612f34027bf}{}\label{namespacegen__gtest__pred__impl_a3d40c7ef70cf4d46e56c9612f34027bf}
+\begin{DoxyVerb}Returns the postamble for the header file.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+293 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_a3d40c7ef70cf4d46e56c9612f34027bf}{HeaderPostamble}():
+294   \textcolor{stringliteral}{"""Returns the postamble for the header file."""}
+295 
+296   \textcolor{keywordflow}{return} \textcolor{stringliteral}{"""}
+297 \textcolor{stringliteral}{}
+298 \textcolor{stringliteral}{#endif  // GTEST\_INCLUDE\_GTEST\_GTEST\_PRED\_IMPL\_H\_}
+299 \textcolor{stringliteral}{"""}
+300 
+301 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Header\+Preamble@{Header\+Preamble}}
+\index{Header\+Preamble@{Header\+Preamble}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Header\+Preamble(n)}{HeaderPreamble(n)}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Header\+Preamble (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_a0b99cadcffab4bf161654a382163bac8}{}\label{namespacegen__gtest__pred__impl_a0b99cadcffab4bf161654a382163bac8}
+\begin{DoxyVerb}Returns the preamble for the header file.
+
+Args:
+  n:  the maximum arity of the predicate macros to be generated.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+65 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_a0b99cadcffab4bf161654a382163bac8}{HeaderPreamble}(n):
+66   \textcolor{stringliteral}{"""Returns the preamble for the header file.}
+67 \textcolor{stringliteral}{}
+68 \textcolor{stringliteral}{  Args:}
+69 \textcolor{stringliteral}{    n:  the maximum arity of the predicate macros to be generated.}
+70 \textcolor{stringliteral}{  """}
+71 
+72   \textcolor{comment}{# A map that defines the values used in the preamble template.}
+73   DEFS = \{
+74     \textcolor{stringliteral}{'today'} : time.strftime(\textcolor{stringliteral}{'%m/%d/%Y'}),
+75     \textcolor{stringliteral}{'year'} : time.strftime(\textcolor{stringliteral}{'%Y'}),
+76     \textcolor{stringliteral}{'command'} : \textcolor{stringliteral}{'%s %s'} % (os.path.basename(sys.argv[0]), n),
+77     \textcolor{stringliteral}{'n'} : n
+78     \}
+79 
+80   \textcolor{keywordflow}{return} (
+81 \textcolor{stringliteral}{"""// Copyright 2006, Google Inc.}
+82 \textcolor{stringliteral}{// All rights reserved.}
+83 \textcolor{stringliteral}{//}
+84 \textcolor{stringliteral}{// Redistribution and use in source and binary forms, with or without}
+85 \textcolor{stringliteral}{// modification, are permitted provided that the following conditions are}
+86 \textcolor{stringliteral}{// met:}
+87 \textcolor{stringliteral}{//}
+88 \textcolor{stringliteral}{//     * Redistributions of source code must retain the above copyright}
+89 \textcolor{stringliteral}{// notice, this list of conditions and the following disclaimer.}
+90 \textcolor{stringliteral}{//     * Redistributions in binary form must reproduce the above}
+91 \textcolor{stringliteral}{// copyright notice, this list of conditions and the following disclaimer}
+92 \textcolor{stringliteral}{// in the documentation and/or other materials provided with the}
+93 \textcolor{stringliteral}{// distribution.}
+94 \textcolor{stringliteral}{//     * Neither the name of Google Inc. nor the names of its}
+95 \textcolor{stringliteral}{// contributors may be used to endorse or promote products derived from}
+96 \textcolor{stringliteral}{// this software without specific prior written permission.}
+97 \textcolor{stringliteral}{//}
+98 \textcolor{stringliteral}{// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}
+99 \textcolor{stringliteral}{// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}
+100 \textcolor{stringliteral}{// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}
+101 \textcolor{stringliteral}{// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}
+102 \textcolor{stringliteral}{// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}
+103 \textcolor{stringliteral}{// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}
+104 \textcolor{stringliteral}{// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}
+105 \textcolor{stringliteral}{// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}
+106 \textcolor{stringliteral}{// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}
+107 \textcolor{stringliteral}{// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}
+108 \textcolor{stringliteral}{// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}
+109 \textcolor{stringliteral}{}
+110 \textcolor{stringliteral}{// This file is AUTOMATICALLY GENERATED on %(today)s by command}
+111 \textcolor{stringliteral}{// '%(command)s'.  DO NOT EDIT BY HAND!}
+112 \textcolor{stringliteral}{//}
+113 \textcolor{stringliteral}{// Implements a family of generic predicate assertion macros.}
+114 \textcolor{stringliteral}{}
+115 \textcolor{stringliteral}{#ifndef GTEST\_INCLUDE\_GTEST\_GTEST\_PRED\_IMPL\_H\_}
+116 \textcolor{stringliteral}{#define GTEST\_INCLUDE\_GTEST\_GTEST\_PRED\_IMPL\_H\_}
+117 \textcolor{stringliteral}{}
+118 \textcolor{stringliteral}{// Makes sure this header is not included before gtest.h.}
+119 \textcolor{stringliteral}{#ifndef GTEST\_INCLUDE\_GTEST\_GTEST\_H\_}
+120 \textcolor{stringliteral}{# error Do not include gtest\_pred\_impl.h directly.  Include gtest.h instead.}
+121 \textcolor{stringliteral}{#endif  // GTEST\_INCLUDE\_GTEST\_GTEST\_H\_}
+122 \textcolor{stringliteral}{}
+123 \textcolor{stringliteral}{// This header implements a family of generic predicate assertion}
+124 \textcolor{stringliteral}{// macros:}
+125 \textcolor{stringliteral}{//}
+126 \textcolor{stringliteral}{//   ASSERT\_PRED\_FORMAT1(pred\_format, v1)}
+127 \textcolor{stringliteral}{//   ASSERT\_PRED\_FORMAT2(pred\_format, v1, v2)}
+128 \textcolor{stringliteral}{//   ...}
+129 \textcolor{stringliteral}{//}
+130 \textcolor{stringliteral}{// where pred\_format is a function or functor that takes n (in the}
+131 \textcolor{stringliteral}{// case of ASSERT\_PRED\_FORMATn) values and their source expression}
+132 \textcolor{stringliteral}{// text, and returns a testing::AssertionResult.  See the definition}
+133 \textcolor{stringliteral}{// of ASSERT\_EQ in gtest.h for an example.}
+134 \textcolor{stringliteral}{//}
+135 \textcolor{stringliteral}{// If you don't care about formatting, you can use the more}
+136 \textcolor{stringliteral}{// restrictive version:}
+137 \textcolor{stringliteral}{//}
+138 \textcolor{stringliteral}{//   ASSERT\_PRED1(pred, v1)}
+139 \textcolor{stringliteral}{//   ASSERT\_PRED2(pred, v1, v2)}
+140 \textcolor{stringliteral}{//   ...}
+141 \textcolor{stringliteral}{//}
+142 \textcolor{stringliteral}{// where pred is an n-ary function or functor that returns bool,}
+143 \textcolor{stringliteral}{// and the values v1, v2, ..., must support the << operator for}
+144 \textcolor{stringliteral}{// streaming to std::ostream.}
+145 \textcolor{stringliteral}{//}
+146 \textcolor{stringliteral}{// We also define the EXPECT\_* variations.}
+147 \textcolor{stringliteral}{//}
+148 \textcolor{stringliteral}{// For now we only support predicates whose arity is at most %(n)s.}
+149 \textcolor{stringliteral}{// Please email googletestframework@googlegroups.com if you need}
+150 \textcolor{stringliteral}{// support for higher arities.}
+151 \textcolor{stringliteral}{}
+152 \textcolor{stringliteral}{// GTEST\_ASSERT\_ is the basic statement to which all of the assertions}
+153 \textcolor{stringliteral}{// in this file reduce.  Don't use this in your code.}
+154 \textcolor{stringliteral}{}
+155 \textcolor{stringliteral}{#define GTEST\_ASSERT\_(expression, on\_failure) \(\backslash\)\(\backslash\)}
+156 \textcolor{stringliteral}{  GTEST\_AMBIGUOUS\_ELSE\_BLOCKER\_ \(\backslash\)\(\backslash\)}
+157 \textcolor{stringliteral}{  if (const ::testing::AssertionResult gtest\_ar = (expression)) \(\backslash\)\(\backslash\)}
+158 \textcolor{stringliteral}{    ; \(\backslash\)\(\backslash\)}
+159 \textcolor{stringliteral}{  else \(\backslash\)\(\backslash\)}
+160 \textcolor{stringliteral}{    on\_failure(gtest\_ar.failure\_message())}
+161 \textcolor{stringliteral}{"""} % DEFS)
+162 
+163 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Implementation\+For\+Arity@{Implementation\+For\+Arity}}
+\index{Implementation\+For\+Arity@{Implementation\+For\+Arity}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Implementation\+For\+Arity(n)}{ImplementationForArity(n)}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Implementation\+For\+Arity (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_a8c53b141b89f9c05d0131d9756dfeab0}{}\label{namespacegen__gtest__pred__impl_a8c53b141b89f9c05d0131d9756dfeab0}
+\begin{DoxyVerb}Returns the implementation of n-ary predicate assertions.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+205 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_a8c53b141b89f9c05d0131d9756dfeab0}{ImplementationForArity}(n):
+206   \textcolor{stringliteral}{"""Returns the implementation of n-ary predicate assertions."""}
+207 
+208   \textcolor{comment}{# A map the defines the values used in the implementation template.}
+209   DEFS = \{
+210     \textcolor{stringliteral}{'n'} : str(n),
+211     \textcolor{stringliteral}{'vs'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'v%s'}, sep=\textcolor{stringliteral}{', '}),
+212     \textcolor{stringliteral}{'vts'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'#v%s'}, sep=\textcolor{stringliteral}{', '}),
+213     \textcolor{stringliteral}{'arity'} : \hyperlink{namespacegen__gtest__pred__impl_a5bbb7272f3588b969ab3ded6f49836a1}{Arity}(n),
+214     \textcolor{stringliteral}{'Arity'} : \hyperlink{namespacegen__gtest__pred__impl_ae49dd9bd9152dbcb3ca7994ce04c37ba}{Title}(\hyperlink{namespacegen__gtest__pred__impl_a5bbb7272f3588b969ab3ded6f49836a1}{Arity}(n))
+215     \}
+216 
+217   impl = \textcolor{stringliteral}{"""}
+218 \textcolor{stringliteral}{}
+219 \textcolor{stringliteral}{// Helper function for implementing \{EXPECT|ASSERT\}\_PRED%(n)s.  Don't use}
+220 \textcolor{stringliteral}{// this in your code.}
+221 \textcolor{stringliteral}{template <typename Pred"""} % DEFS
+222 
+223   impl += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{""",}
+224 \textcolor{stringliteral}{          typename T%s"""})
+225 
+226   impl += \textcolor{stringliteral}{""">}
+227 \textcolor{stringliteral}{AssertionResult AssertPred%(n)sHelper(const char* pred\_text"""} % DEFS
+228 
+229   impl += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{""",}
+230 \textcolor{stringliteral}{                                  const char* e%s"""})
+231 
+232   impl += \textcolor{stringliteral}{""",}
+233 \textcolor{stringliteral}{                                  Pred pred"""}
+234 
+235   impl += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{""",}
+236 \textcolor{stringliteral}{                                  const T%s& v%s"""})
+237 
+238   impl += \textcolor{stringliteral}{""") \{}
+239 \textcolor{stringliteral}{  if (pred(%(vs)s)) return AssertionSuccess();}
+240 \textcolor{stringliteral}{}
+241 \textcolor{stringliteral}{"""} % DEFS
+242 
+243   impl += \textcolor{stringliteral}{'  return AssertionFailure() << pred\_text << "("'}
+244 
+245   impl += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{"""}
+246 \textcolor{stringliteral}{                            << e%s"""}, sep=\textcolor{stringliteral}{' << ", "'})
+247 
+248   impl += \textcolor{stringliteral}{' << ") evaluates to false, where"'}
+249 
+250   impl += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{"""}
+251 \textcolor{stringliteral}{                            << "\(\backslash\)\(\backslash\)n" << e%s << " evaluates to " << v%s"""})
+252 
+253   impl += \textcolor{stringliteral}{""";}
+254 \textcolor{stringliteral}{\}}
+255 \textcolor{stringliteral}{}
+256 \textcolor{stringliteral}{// Internal macro for implementing \{EXPECT|ASSERT\}\_PRED\_FORMAT%(n)s.}
+257 \textcolor{stringliteral}{// Don't use this in your code.}
+258 \textcolor{stringliteral}{#define GTEST\_PRED\_FORMAT%(n)s\_(pred\_format, %(vs)s, on\_failure)\(\backslash\)\(\backslash\)}
+259 \textcolor{stringliteral}{  GTEST\_ASSERT\_(pred\_format(%(vts)s, %(vs)s), \(\backslash\)\(\backslash\)}
+260 \textcolor{stringliteral}{                on\_failure)}
+261 \textcolor{stringliteral}{}
+262 \textcolor{stringliteral}{// Internal macro for implementing \{EXPECT|ASSERT\}\_PRED%(n)s.  Don't use}
+263 \textcolor{stringliteral}{// this in your code.}
+264 \textcolor{stringliteral}{#define GTEST\_PRED%(n)s\_(pred, %(vs)s, on\_failure)\(\backslash\)\(\backslash\)}
+265 \textcolor{stringliteral}{  GTEST\_ASSERT\_(::testing::AssertPred%(n)sHelper(#pred"""} % DEFS
+266 
+267   impl += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{""", \(\backslash\)\(\backslash\)}
+268 \textcolor{stringliteral}{                                             #v%s"""})
+269 
+270   impl += \textcolor{stringliteral}{""", \(\backslash\)\(\backslash\)}
+271 \textcolor{stringliteral}{                                             pred"""}
+272 
+273   impl += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{""", \(\backslash\)\(\backslash\)}
+274 \textcolor{stringliteral}{                                             v%s"""})
+275 
+276   impl += \textcolor{stringliteral}{"""), on\_failure)}
+277 \textcolor{stringliteral}{}
+278 \textcolor{stringliteral}{// %(Arity)s predicate assertion macros.}
+279 \textcolor{stringliteral}{#define EXPECT\_PRED\_FORMAT%(n)s(pred\_format, %(vs)s) \(\backslash\)\(\backslash\)}
+280 \textcolor{stringliteral}{  GTEST\_PRED\_FORMAT%(n)s\_(pred\_format, %(vs)s, GTEST\_NONFATAL\_FAILURE\_)}
+281 \textcolor{stringliteral}{#define EXPECT\_PRED%(n)s(pred, %(vs)s) \(\backslash\)\(\backslash\)}
+282 \textcolor{stringliteral}{  GTEST\_PRED%(n)s\_(pred, %(vs)s, GTEST\_NONFATAL\_FAILURE\_)}
+283 \textcolor{stringliteral}{#define ASSERT\_PRED\_FORMAT%(n)s(pred\_format, %(vs)s) \(\backslash\)\(\backslash\)}
+284 \textcolor{stringliteral}{  GTEST\_PRED\_FORMAT%(n)s\_(pred\_format, %(vs)s, GTEST\_FATAL\_FAILURE\_)}
+285 \textcolor{stringliteral}{#define ASSERT\_PRED%(n)s(pred, %(vs)s) \(\backslash\)\(\backslash\)}
+286 \textcolor{stringliteral}{  GTEST\_PRED%(n)s\_(pred, %(vs)s, GTEST\_FATAL\_FAILURE\_)}
+287 \textcolor{stringliteral}{}
+288 \textcolor{stringliteral}{"""} % DEFS
+289 
+290   \textcolor{keywordflow}{return} impl
+291 
+292 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Iter@{Iter}}
+\index{Iter@{Iter}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Iter(n, format, sep=\textquotesingle{}\textquotesingle{})}{Iter(n, format, sep='')}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Iter (
+\begin{DoxyParamCaption}
+\item[{}]{n, }
+\item[{}]{format, }
+\item[{}]{sep = {\ttfamily \textquotesingle{}\textquotesingle{}}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{}\label{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}
+\begin{DoxyVerb}Given a positive integer n, a format string that contains 0 or
+more '%s' format specs, and optionally a separator string, returns
+the join of n strings, each formatted with the format string on an
+iterator ranged from 1 to n.
+
+Example:
+
+Iter(3, 'v%s', sep=', ') returns 'v1, v2, v3'.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+189 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, format, sep=''):
+190   \textcolor{stringliteral}{"""Given a positive integer n, a format string that contains 0 or}
+191 \textcolor{stringliteral}{  more '%s' format specs, and optionally a separator string, returns}
+192 \textcolor{stringliteral}{  the join of n strings, each formatted with the format string on an}
+193 \textcolor{stringliteral}{  iterator ranged from 1 to n.}
+194 \textcolor{stringliteral}{}
+195 \textcolor{stringliteral}{  Example:}
+196 \textcolor{stringliteral}{}
+197 \textcolor{stringliteral}{  Iter(3, 'v%s', sep=', ') returns 'v1, v2, v3'.}
+198 \textcolor{stringliteral}{  """}
+199 
+200   \textcolor{comment}{# How many '%s' specs are in format?}
+201   spec\_count = len(format.split(\textcolor{stringliteral}{'%s'})) - 1
+202   \textcolor{keywordflow}{return} sep.join([format % (spec\_count * (i,)) \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} \hyperlink{namespacegen__gtest__pred__impl_a7920598d51c9dded76a4ef9ffde339e4}{OneTo}(n)])
+203 
+204 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!One\+To@{One\+To}}
+\index{One\+To@{One\+To}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{One\+To(n)}{OneTo(n)}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+One\+To (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_a7920598d51c9dded76a4ef9ffde339e4}{}\label{namespacegen__gtest__pred__impl_a7920598d51c9dded76a4ef9ffde339e4}
+\begin{DoxyVerb}Returns the list [1, 2, 3, ..., n].\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+183 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_a7920598d51c9dded76a4ef9ffde339e4}{OneTo}(n):
+184   \textcolor{stringliteral}{"""Returns the list [1, 2, 3, ..., n]."""}
+185 
+186   \textcolor{keywordflow}{return} range(1, n + 1)
+187 
+188 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Tests\+For\+Arity@{Tests\+For\+Arity}}
+\index{Tests\+For\+Arity@{Tests\+For\+Arity}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Tests\+For\+Arity(n)}{TestsForArity(n)}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Tests\+For\+Arity (
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_ab0da913fa15e5695d5bb2dd1de5dec57}{}\label{namespacegen__gtest__pred__impl_ab0da913fa15e5695d5bb2dd1de5dec57}
+\begin{DoxyVerb}Returns the tests for n-ary predicate assertions.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+411 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_ab0da913fa15e5695d5bb2dd1de5dec57}{TestsForArity}(n):
+412   \textcolor{stringliteral}{"""Returns the tests for n-ary predicate assertions."""}
+413 
+414   \textcolor{comment}{# A map that defines the values used in the template for the tests.}
+415   DEFS = \{
+416     \textcolor{stringliteral}{'n'} : n,
+417     \textcolor{stringliteral}{'es'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'e%s'}, sep=\textcolor{stringliteral}{', '}),
+418     \textcolor{stringliteral}{'vs'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'v%s'}, sep=\textcolor{stringliteral}{', '}),
+419     \textcolor{stringliteral}{'vts'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'#v%s'}, sep=\textcolor{stringliteral}{', '}),
+420     \textcolor{stringliteral}{'tvs'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'T%s v%s'}, sep=\textcolor{stringliteral}{', '}),
+421     \textcolor{stringliteral}{'int\_vs'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'int v%s'}, sep=\textcolor{stringliteral}{', '}),
+422     \textcolor{stringliteral}{'Bool\_vs'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'Bool v%s'}, sep=\textcolor{stringliteral}{', '}),
+423     \textcolor{stringliteral}{'types'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'typename T%s'}, sep=\textcolor{stringliteral}{', '}),
+424     \textcolor{stringliteral}{'v\_sum'} : \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'v%s'}, sep=\textcolor{stringliteral}{' + '}),
+425     \textcolor{stringliteral}{'arity'} : \hyperlink{namespacegen__gtest__pred__impl_a5bbb7272f3588b969ab3ded6f49836a1}{Arity}(n),
+426     \textcolor{stringliteral}{'Arity'} : \hyperlink{namespacegen__gtest__pred__impl_ae49dd9bd9152dbcb3ca7994ce04c37ba}{Title}(\hyperlink{namespacegen__gtest__pred__impl_a5bbb7272f3588b969ab3ded6f49836a1}{Arity}(n)),
+427     \}
+428 
+429   tests = (
+430 \textcolor{stringliteral}{"""// Sample functions/functors for testing %(arity)s predicate assertions.}
+431 \textcolor{stringliteral}{}
+432 \textcolor{stringliteral}{// A %(arity)s predicate function.}
+433 \textcolor{stringliteral}{template <%(types)s>}
+434 \textcolor{stringliteral}{bool PredFunction%(n)s(%(tvs)s) \{}
+435 \textcolor{stringliteral}{  return %(v\_sum)s > 0;}
+436 \textcolor{stringliteral}{\}}
+437 \textcolor{stringliteral}{}
+438 \textcolor{stringliteral}{// The following two functions are needed to circumvent a bug in}
+439 \textcolor{stringliteral}{// gcc 2.95.3, which sometimes has problem with the above template}
+440 \textcolor{stringliteral}{// function.}
+441 \textcolor{stringliteral}{bool PredFunction%(n)sInt(%(int\_vs)s) \{}
+442 \textcolor{stringliteral}{  return %(v\_sum)s > 0;}
+443 \textcolor{stringliteral}{\}}
+444 \textcolor{stringliteral}{bool PredFunction%(n)sBool(%(Bool\_vs)s) \{}
+445 \textcolor{stringliteral}{  return %(v\_sum)s > 0;}
+446 \textcolor{stringliteral}{\}}
+447 \textcolor{stringliteral}{"""} % DEFS)
+448 
+449   tests += \textcolor{stringliteral}{"""}
+450 \textcolor{stringliteral}{// A %(arity)s predicate functor.}
+451 \textcolor{stringliteral}{struct PredFunctor%(n)s \{}
+452 \textcolor{stringliteral}{  template <%(types)s>}
+453 \textcolor{stringliteral}{  bool operator()("""} % DEFS
+454 
+455   tests += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'const T%s& v%s'}, sep=\textcolor{stringliteral}{""",}
+456 \textcolor{stringliteral}{                  """})
+457 
+458   tests += \textcolor{stringliteral}{""") \{}
+459 \textcolor{stringliteral}{    return %(v\_sum)s > 0;}
+460 \textcolor{stringliteral}{  \}}
+461 \textcolor{stringliteral}{\};}
+462 \textcolor{stringliteral}{"""} % DEFS
+463 
+464   tests += \textcolor{stringliteral}{"""}
+465 \textcolor{stringliteral}{// A %(arity)s predicate-formatter function.}
+466 \textcolor{stringliteral}{template <%(types)s>}
+467 \textcolor{stringliteral}{testing::AssertionResult PredFormatFunction%(n)s("""} % DEFS
+468 
+469   tests += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'const char* e%s'}, sep=\textcolor{stringliteral}{""",}
+470 \textcolor{stringliteral}{                                             """})
+471 
+472   tests += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{""",}
+473 \textcolor{stringliteral}{                                             const T%s& v%s"""})
+474 
+475   tests += \textcolor{stringliteral}{""") \{}
+476 \textcolor{stringliteral}{  if (PredFunction%(n)s(%(vs)s))}
+477 \textcolor{stringliteral}{    return testing::AssertionSuccess();}
+478 \textcolor{stringliteral}{}
+479 \textcolor{stringliteral}{  return testing::AssertionFailure()}
+480 \textcolor{stringliteral}{      << """} % DEFS
+481 
+482   tests += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'e%s'}, sep=\textcolor{stringliteral}{' << " + " << '})
+483 
+484   tests += \textcolor{stringliteral}{"""}
+485 \textcolor{stringliteral}{      << " is expected to be positive, but evaluates to "}
+486 \textcolor{stringliteral}{      << %(v\_sum)s << ".";}
+487 \textcolor{stringliteral}{\}}
+488 \textcolor{stringliteral}{"""} % DEFS
+489 
+490   tests += \textcolor{stringliteral}{"""}
+491 \textcolor{stringliteral}{// A %(arity)s predicate-formatter functor.}
+492 \textcolor{stringliteral}{struct PredFormatFunctor%(n)s \{}
+493 \textcolor{stringliteral}{  template <%(types)s>}
+494 \textcolor{stringliteral}{  testing::AssertionResult operator()("""} % DEFS
+495 
+496   tests += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'const char* e%s'}, sep=\textcolor{stringliteral}{""",}
+497 \textcolor{stringliteral}{                                      """})
+498 
+499   tests += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{""",}
+500 \textcolor{stringliteral}{                                      const T%s& v%s"""})
+501 
+502   tests += \textcolor{stringliteral}{""") const \{}
+503 \textcolor{stringliteral}{    return PredFormatFunction%(n)s(%(es)s, %(vs)s);}
+504 \textcolor{stringliteral}{  \}}
+505 \textcolor{stringliteral}{\};}
+506 \textcolor{stringliteral}{"""} % DEFS
+507 
+508   tests += \textcolor{stringliteral}{"""}
+509 \textcolor{stringliteral}{// Tests for \{EXPECT|ASSERT\}\_PRED\_FORMAT%(n)s.}
+510 \textcolor{stringliteral}{}
+511 \textcolor{stringliteral}{class Predicate%(n)sTest : public testing::Test \{}
+512 \textcolor{stringliteral}{ protected:}
+513 \textcolor{stringliteral}{  virtual void SetUp() \{}
+514 \textcolor{stringliteral}{    expected\_to\_finish\_ = true;}
+515 \textcolor{stringliteral}{    finished\_ = false;"""} % DEFS
+516 
+517   tests += \textcolor{stringliteral}{"""}
+518 \textcolor{stringliteral}{    """} + \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{'n%s\_ = '}) + \textcolor{stringliteral}{"""0;}
+519 \textcolor{stringliteral}{  \}}
+520 \textcolor{stringliteral}{"""}
+521 
+522   tests += \textcolor{stringliteral}{"""}
+523 \textcolor{stringliteral}{  virtual void TearDown() \{}
+524 \textcolor{stringliteral}{    // Verifies that each of the predicate's arguments was evaluated}
+525 \textcolor{stringliteral}{    // exactly once."""}
+526 
+527   tests += \textcolor{stringliteral}{''}.join([\textcolor{stringliteral}{"""}
+528 \textcolor{stringliteral}{    EXPECT\_EQ(1, n%s\_) <<}
+529 \textcolor{stringliteral}{        "The predicate assertion didn't evaluate argument %s "}
+530 \textcolor{stringliteral}{        "exactly once.";"""} % (i, i + 1) \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} \hyperlink{namespacegen__gtest__pred__impl_a7920598d51c9dded76a4ef9ffde339e4}{OneTo}(n)])
+531 
+532   tests += \textcolor{stringliteral}{"""}
+533 \textcolor{stringliteral}{}
+534 \textcolor{stringliteral}{    // Verifies that the control flow in the test function is expected.}
+535 \textcolor{stringliteral}{    if (expected\_to\_finish\_ && !finished\_) \{}
+536 \textcolor{stringliteral}{      FAIL() << "The predicate assertion unexpactedly aborted the test.";}
+537 \textcolor{stringliteral}{    \} else if (!expected\_to\_finish\_ && finished\_) \{}
+538 \textcolor{stringliteral}{      FAIL() << "The failed predicate assertion didn't abort the test "}
+539 \textcolor{stringliteral}{                "as expected.";}
+540 \textcolor{stringliteral}{    \}}
+541 \textcolor{stringliteral}{  \}}
+542 \textcolor{stringliteral}{}
+543 \textcolor{stringliteral}{  // true iff the test function is expected to run to finish.}
+544 \textcolor{stringliteral}{  static bool expected\_to\_finish\_;}
+545 \textcolor{stringliteral}{}
+546 \textcolor{stringliteral}{  // true iff the test function did run to finish.}
+547 \textcolor{stringliteral}{  static bool finished\_;}
+548 \textcolor{stringliteral}{"""} % DEFS
+549 
+550   tests += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{"""}
+551 \textcolor{stringliteral}{  static int n%s\_;"""})
+552 
+553   tests += \textcolor{stringliteral}{"""}
+554 \textcolor{stringliteral}{\};}
+555 \textcolor{stringliteral}{}
+556 \textcolor{stringliteral}{bool Predicate%(n)sTest::expected\_to\_finish\_;}
+557 \textcolor{stringliteral}{bool Predicate%(n)sTest::finished\_;}
+558 \textcolor{stringliteral}{"""} % DEFS
+559 
+560   tests += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{"""int Predicate%%(n)sTest::n%s\_;}
+561 \textcolor{stringliteral}{"""}) % DEFS
+562 
+563   tests += \textcolor{stringliteral}{"""}
+564 \textcolor{stringliteral}{typedef Predicate%(n)sTest EXPECT\_PRED\_FORMAT%(n)sTest;}
+565 \textcolor{stringliteral}{typedef Predicate%(n)sTest ASSERT\_PRED\_FORMAT%(n)sTest;}
+566 \textcolor{stringliteral}{typedef Predicate%(n)sTest EXPECT\_PRED%(n)sTest;}
+567 \textcolor{stringliteral}{typedef Predicate%(n)sTest ASSERT\_PRED%(n)sTest;}
+568 \textcolor{stringliteral}{"""} % DEFS
+569 
+570   \textcolor{keyword}{def }GenTest(use\_format, use\_assert, expect\_failure,
+571               use\_functor, use\_user\_type):
+572     \textcolor{stringliteral}{"""Returns the test for a predicate assertion macro.}
+573 \textcolor{stringliteral}{}
+574 \textcolor{stringliteral}{    Args:}
+575 \textcolor{stringliteral}{      use\_format:     true iff the assertion is a *\_PRED\_FORMAT*.}
+576 \textcolor{stringliteral}{      use\_assert:     true iff the assertion is a ASSERT\_*.}
+577 \textcolor{stringliteral}{      expect\_failure: true iff the assertion is expected to fail.}
+578 \textcolor{stringliteral}{      use\_functor:    true iff the first argument of the assertion is}
+579 \textcolor{stringliteral}{                      a functor (as opposed to a function)}
+580 \textcolor{stringliteral}{      use\_user\_type:  true iff the predicate functor/function takes}
+581 \textcolor{stringliteral}{                      argument(s) of a user-defined type.}
+582 \textcolor{stringliteral}{}
+583 \textcolor{stringliteral}{    Example:}
+584 \textcolor{stringliteral}{}
+585 \textcolor{stringliteral}{      GenTest(1, 0, 0, 1, 0) returns a test that tests the behavior}
+586 \textcolor{stringliteral}{      of a successful EXPECT\_PRED\_FORMATn() that takes a functor}
+587 \textcolor{stringliteral}{      whose arguments have built-in types."""}
+588 
+589     \textcolor{keywordflow}{if} use\_assert:
+590       assrt = \textcolor{stringliteral}{'ASSERT'}  \textcolor{comment}{# 'assert' is reserved, so we cannot use}
+591                         \textcolor{comment}{# that identifier here.}
+592     \textcolor{keywordflow}{else}:
+593       assrt = \textcolor{stringliteral}{'EXPECT'}
+594 
+595     assertion = assrt + \textcolor{stringliteral}{'\_PRED'}
+596 
+597     \textcolor{keywordflow}{if} use\_format:
+598       pred\_format = \textcolor{stringliteral}{'PredFormat'}
+599       assertion += \textcolor{stringliteral}{'\_FORMAT'}
+600     \textcolor{keywordflow}{else}:
+601       pred\_format = \textcolor{stringliteral}{'Pred'}
+602 
+603     assertion += \textcolor{stringliteral}{'%(n)s'} % DEFS
+604 
+605     \textcolor{keywordflow}{if} use\_functor:
+606       pred\_format\_type = \textcolor{stringliteral}{'functor'}
+607       pred\_format += \textcolor{stringliteral}{'Functor%(n)s()'}
+608     \textcolor{keywordflow}{else}:
+609       pred\_format\_type = \textcolor{stringliteral}{'function'}
+610       pred\_format += \textcolor{stringliteral}{'Function%(n)s'}
+611       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} use\_format:
+612         \textcolor{keywordflow}{if} use\_user\_type:
+613           pred\_format += \textcolor{stringliteral}{'Bool'}
+614         \textcolor{keywordflow}{else}:
+615           pred\_format += \textcolor{stringliteral}{'Int'}
+616 
+617     test\_name = pred\_format\_type.title()
+618 
+619     \textcolor{keywordflow}{if} use\_user\_type:
+620       arg\_type = \textcolor{stringliteral}{'user-defined type (Bool)'}
+621       test\_name += \textcolor{stringliteral}{'OnUserType'}
+622       \textcolor{keywordflow}{if} expect\_failure:
+623         arg = \textcolor{stringliteral}{'Bool(n%s\_++)'}
+624       \textcolor{keywordflow}{else}:
+625         arg = \textcolor{stringliteral}{'Bool(++n%s\_)'}
+626     \textcolor{keywordflow}{else}:
+627       arg\_type = \textcolor{stringliteral}{'built-in type (int)'}
+628       test\_name += \textcolor{stringliteral}{'OnBuiltInType'}
+629       \textcolor{keywordflow}{if} expect\_failure:
+630         arg = \textcolor{stringliteral}{'n%s\_++'}
+631       \textcolor{keywordflow}{else}:
+632         arg = \textcolor{stringliteral}{'++n%s\_'}
+633 
+634     \textcolor{keywordflow}{if} expect\_failure:
+635       successful\_or\_failed = \textcolor{stringliteral}{'failed'}
+636       expected\_or\_not = \textcolor{stringliteral}{'expected.'}
+637       test\_name +=  \textcolor{stringliteral}{'Failure'}
+638     \textcolor{keywordflow}{else}:
+639       successful\_or\_failed = \textcolor{stringliteral}{'successful'}
+640       expected\_or\_not = \textcolor{stringliteral}{'UNEXPECTED!'}
+641       test\_name +=  \textcolor{stringliteral}{'Success'}
+642 
+643     \textcolor{comment}{# A map that defines the values used in the test template.}
+644     defs = DEFS.copy()
+645     defs.update(\{
+646       \textcolor{stringliteral}{'assert'} : assrt,
+647       \textcolor{stringliteral}{'assertion'} : assertion,
+648       \textcolor{stringliteral}{'test\_name'} : test\_name,
+649       \textcolor{stringliteral}{'pf\_type'} : pred\_format\_type,
+650       \textcolor{stringliteral}{'pf'} : pred\_format,
+651       \textcolor{stringliteral}{'arg\_type'} : arg\_type,
+652       \textcolor{stringliteral}{'arg'} : arg,
+653       \textcolor{stringliteral}{'successful'} : successful\_or\_failed,
+654       \textcolor{stringliteral}{'expected'} : expected\_or\_not,
+655       \})
+656 
+657     test = \textcolor{stringliteral}{"""}
+658 \textcolor{stringliteral}{// Tests a %(successful)s %(assertion)s where the}
+659 \textcolor{stringliteral}{// predicate-formatter is a %(pf\_type)s on a %(arg\_type)s.}
+660 \textcolor{stringliteral}{TEST\_F(%(assertion)sTest, %(test\_name)s) \{"""} % defs
+661 
+662     indent = (len(assertion) + 3)*\textcolor{stringliteral}{' '}
+663     extra\_indent = \textcolor{stringliteral}{''}
+664 
+665     \textcolor{keywordflow}{if} expect\_failure:
+666       extra\_indent = \textcolor{stringliteral}{'  '}
+667       \textcolor{keywordflow}{if} use\_assert:
+668         test += \textcolor{stringliteral}{"""}
+669 \textcolor{stringliteral}{  expected\_to\_finish\_ = false;}
+670 \textcolor{stringliteral}{  EXPECT\_FATAL\_FAILURE(\{  // NOLINT"""}
+671       \textcolor{keywordflow}{else}:
+672         test += \textcolor{stringliteral}{"""}
+673 \textcolor{stringliteral}{  EXPECT\_NONFATAL\_FAILURE(\{  // NOLINT"""}
+674 
+675     test += \textcolor{stringliteral}{'\(\backslash\)n'} + extra\_indent + \textcolor{stringliteral}{"""  %(assertion)s(%(pf)s"""} % defs
+676 
+677     test = test % defs
+678     test += \hyperlink{namespacegen__gtest__pred__impl_ac016218b7c9437d1d5ac85c574c83069}{Iter}(n, \textcolor{stringliteral}{',\(\backslash\)n'} + indent + extra\_indent + \textcolor{stringliteral}{'%(arg)s'} % defs)
+679     test += \textcolor{stringliteral}{');\(\backslash\)n'} + extra\_indent + \textcolor{stringliteral}{'  finished\_ = true;\(\backslash\)n'}
+680 
+681     \textcolor{keywordflow}{if} expect\_failure:
+682       test += \textcolor{stringliteral}{'  \}, "");\(\backslash\)n'}
+683 
+684     test += \textcolor{stringliteral}{'\}\(\backslash\)n'}
+685     \textcolor{keywordflow}{return} test
+686 
+687   \textcolor{comment}{# Generates tests for all 2**6 = 64 combinations.}
+688   tests += \textcolor{stringliteral}{''}.join([GenTest(use\_format, use\_assert, expect\_failure,
+689                             use\_functor, use\_user\_type)
+690                     \textcolor{keywordflow}{for} use\_format \textcolor{keywordflow}{in} [0, 1]
+691                     \textcolor{keywordflow}{for} use\_assert \textcolor{keywordflow}{in} [0, 1]
+692                     \textcolor{keywordflow}{for} expect\_failure \textcolor{keywordflow}{in} [0, 1]
+693                     \textcolor{keywordflow}{for} use\_functor \textcolor{keywordflow}{in} [0, 1]
+694                     \textcolor{keywordflow}{for} use\_user\_type \textcolor{keywordflow}{in} [0, 1]
+695                     ])
+696 
+697   \textcolor{keywordflow}{return} tests
+698 
+699 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Title@{Title}}
+\index{Title@{Title}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Title(word)}{Title(word)}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Title (
+\begin{DoxyParamCaption}
+\item[{}]{word}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_ae49dd9bd9152dbcb3ca7994ce04c37ba}{}\label{namespacegen__gtest__pred__impl_ae49dd9bd9152dbcb3ca7994ce04c37ba}
+\begin{DoxyVerb}Returns the given word in title case.  The difference between
+this and string's title() method is that Title('4-ary') is '4-ary'
+while '4-ary'.title() is '4-Ary'.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+175 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_ae49dd9bd9152dbcb3ca7994ce04c37ba}{Title}(word):
+176   \textcolor{stringliteral}{"""Returns the given word in title case.  The difference between}
+177 \textcolor{stringliteral}{  this and string's title() method is that Title('4-ary') is '4-ary'}
+178 \textcolor{stringliteral}{  while '4-ary'.title() is '4-Ary'."""}
+179 
+180   \textcolor{keywordflow}{return} word[0].upper() + word[1:]
+181 
+182 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Unit\+Test\+Postamble@{Unit\+Test\+Postamble}}
+\index{Unit\+Test\+Postamble@{Unit\+Test\+Postamble}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Unit\+Test\+Postamble()}{UnitTestPostamble()}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Unit\+Test\+Postamble (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_a57b922f50d0807896496dcd883c1f098}{}\label{namespacegen__gtest__pred__impl_a57b922f50d0807896496dcd883c1f098}
+\begin{DoxyVerb}Returns the postamble for the tests.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+700 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_a57b922f50d0807896496dcd883c1f098}{UnitTestPostamble}():
+701   \textcolor{stringliteral}{"""Returns the postamble for the tests."""}
+702 
+703   \textcolor{keywordflow}{return} \textcolor{stringliteral}{''}
+704 
+705 
+\end{DoxyCode}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!Unit\+Test\+Preamble@{Unit\+Test\+Preamble}}
+\index{Unit\+Test\+Preamble@{Unit\+Test\+Preamble}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{Unit\+Test\+Preamble()}{UnitTestPreamble()}}]{\setlength{\rightskip}{0pt plus 5cm}def gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+Unit\+Test\+Preamble (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegen__gtest__pred__impl_ae52dc86461d1b666c7b658a8c27c69f9}{}\label{namespacegen__gtest__pred__impl_ae52dc86461d1b666c7b658a8c27c69f9}
+\begin{DoxyVerb}Returns the preamble for the unit test file.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+325 \textcolor{keyword}{def }\hyperlink{namespacegen__gtest__pred__impl_ae52dc86461d1b666c7b658a8c27c69f9}{UnitTestPreamble}():
+326   \textcolor{stringliteral}{"""Returns the preamble for the unit test file."""}
+327 
+328   \textcolor{comment}{# A map that defines the values used in the preamble template.}
+329   DEFS = \{
+330     \textcolor{stringliteral}{'today'} : time.strftime(\textcolor{stringliteral}{'%m/%d/%Y'}),
+331     \textcolor{stringliteral}{'year'} : time.strftime(\textcolor{stringliteral}{'%Y'}),
+332     \textcolor{stringliteral}{'command'} : \textcolor{stringliteral}{'%s %s'} % (os.path.basename(sys.argv[0]), sys.argv[1]),
+333     \}
+334 
+335   \textcolor{keywordflow}{return} (
+336 \textcolor{stringliteral}{"""// Copyright 2006, Google Inc.}
+337 \textcolor{stringliteral}{// All rights reserved.}
+338 \textcolor{stringliteral}{//}
+339 \textcolor{stringliteral}{// Redistribution and use in source and binary forms, with or without}
+340 \textcolor{stringliteral}{// modification, are permitted provided that the following conditions are}
+341 \textcolor{stringliteral}{// met:}
+342 \textcolor{stringliteral}{//}
+343 \textcolor{stringliteral}{//     * Redistributions of source code must retain the above copyright}
+344 \textcolor{stringliteral}{// notice, this list of conditions and the following disclaimer.}
+345 \textcolor{stringliteral}{//     * Redistributions in binary form must reproduce the above}
+346 \textcolor{stringliteral}{// copyright notice, this list of conditions and the following disclaimer}
+347 \textcolor{stringliteral}{// in the documentation and/or other materials provided with the}
+348 \textcolor{stringliteral}{// distribution.}
+349 \textcolor{stringliteral}{//     * Neither the name of Google Inc. nor the names of its}
+350 \textcolor{stringliteral}{// contributors may be used to endorse or promote products derived from}
+351 \textcolor{stringliteral}{// this software without specific prior written permission.}
+352 \textcolor{stringliteral}{//}
+353 \textcolor{stringliteral}{// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS}
+354 \textcolor{stringliteral}{// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT}
+355 \textcolor{stringliteral}{// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR}
+356 \textcolor{stringliteral}{// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT}
+357 \textcolor{stringliteral}{// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,}
+358 \textcolor{stringliteral}{// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT}
+359 \textcolor{stringliteral}{// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,}
+360 \textcolor{stringliteral}{// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY}
+361 \textcolor{stringliteral}{// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT}
+362 \textcolor{stringliteral}{// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE}
+363 \textcolor{stringliteral}{// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}
+364 \textcolor{stringliteral}{}
+365 \textcolor{stringliteral}{// This file is AUTOMATICALLY GENERATED on %(today)s by command}
+366 \textcolor{stringliteral}{// '%(command)s'.  DO NOT EDIT BY HAND!}
+367 \textcolor{stringliteral}{}
+368 \textcolor{stringliteral}{// Regression test for gtest\_pred\_impl.h}
+369 \textcolor{stringliteral}{//}
+370 \textcolor{stringliteral}{// This file is generated by a script and quite long.  If you intend to}
+371 \textcolor{stringliteral}{// learn how Google Test works by reading its unit tests, read}
+372 \textcolor{stringliteral}{// gtest\_unittest.cc instead.}
+373 \textcolor{stringliteral}{//}
+374 \textcolor{stringliteral}{// This is intended as a regression test for the Google Test predicate}
+375 \textcolor{stringliteral}{// assertions.  We compile it as part of the gtest\_unittest target}
+376 \textcolor{stringliteral}{// only to keep the implementation tidy and compact, as it is quite}
+377 \textcolor{stringliteral}{// involved to set up the stage for testing Google Test using Google}
+378 \textcolor{stringliteral}{// Test itself.}
+379 \textcolor{stringliteral}{//}
+380 \textcolor{stringliteral}{// Currently, gtest\_unittest takes ~11 seconds to run in the testing}
+381 \textcolor{stringliteral}{// daemon.  In the future, if it grows too large and needs much more}
+382 \textcolor{stringliteral}{// time to finish, we should consider separating this file into a}
+383 \textcolor{stringliteral}{// stand-alone regression test.}
+384 \textcolor{stringliteral}{}
+385 \textcolor{stringliteral}{#include <iostream>}
+386 \textcolor{stringliteral}{}
+387 \textcolor{stringliteral}{#include "gtest/gtest.h"}
+388 \textcolor{stringliteral}{#include "gtest/gtest-spi.h"}
+389 \textcolor{stringliteral}{}
+390 \textcolor{stringliteral}{// A user-defined data type.}
+391 \textcolor{stringliteral}{struct Bool \{}
+392 \textcolor{stringliteral}{  explicit Bool(int val) : value(val != 0) \{\}}
+393 \textcolor{stringliteral}{}
+394 \textcolor{stringliteral}{  bool operator>(int n) const \{ return value > Bool(n).value; \}}
+395 \textcolor{stringliteral}{}
+396 \textcolor{stringliteral}{  Bool operator+(const Bool& rhs) const \{ return Bool(value + rhs.value); \}}
+397 \textcolor{stringliteral}{}
+398 \textcolor{stringliteral}{  bool operator==(const Bool& rhs) const \{ return value == rhs.value; \}}
+399 \textcolor{stringliteral}{}
+400 \textcolor{stringliteral}{  bool value;}
+401 \textcolor{stringliteral}{\};}
+402 \textcolor{stringliteral}{}
+403 \textcolor{stringliteral}{// Enables Bool to be used in assertions.}
+404 \textcolor{stringliteral}{std::ostream& operator<<(std::ostream& os, const Bool& x) \{}
+405 \textcolor{stringliteral}{  return os << (x.value ? "true" : "false");}
+406 \textcolor{stringliteral}{\}}
+407 \textcolor{stringliteral}{}
+408 \textcolor{stringliteral}{"""} % DEFS)
+409 
+410 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!H\+E\+A\+D\+ER@{H\+E\+A\+D\+ER}}
+\index{H\+E\+A\+D\+ER@{H\+E\+A\+D\+ER}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{H\+E\+A\+D\+ER}{HEADER}}]{\setlength{\rightskip}{0pt plus 5cm}gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+H\+E\+A\+D\+ER = os.\+path.\+join({\bf S\+C\+R\+I\+P\+T\+\_\+\+D\+IR}, \textquotesingle{}../include/gtest/gtest\+\_\+pred\+\_\+impl.\+h\textquotesingle{})}\hypertarget{namespacegen__gtest__pred__impl_ab96c63705e2cb7619876ba592dab4c8e}{}\label{namespacegen__gtest__pred__impl_ab96c63705e2cb7619876ba592dab4c8e}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!S\+C\+R\+I\+P\+T\+\_\+\+D\+IR@{S\+C\+R\+I\+P\+T\+\_\+\+D\+IR}}
+\index{S\+C\+R\+I\+P\+T\+\_\+\+D\+IR@{S\+C\+R\+I\+P\+T\+\_\+\+D\+IR}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{S\+C\+R\+I\+P\+T\+\_\+\+D\+IR}{SCRIPT_DIR}}]{\setlength{\rightskip}{0pt plus 5cm}gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+S\+C\+R\+I\+P\+T\+\_\+\+D\+IR = os.\+path.\+dirname(sys.\+argv\mbox{[}0\mbox{]})}\hypertarget{namespacegen__gtest__pred__impl_aed087c7fc787a064f0a9fd5f5f9f6487}{}\label{namespacegen__gtest__pred__impl_aed087c7fc787a064f0a9fd5f5f9f6487}
+\index{gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}!U\+N\+I\+T\+\_\+\+T\+E\+ST@{U\+N\+I\+T\+\_\+\+T\+E\+ST}}
+\index{U\+N\+I\+T\+\_\+\+T\+E\+ST@{U\+N\+I\+T\+\_\+\+T\+E\+ST}!gen\+\_\+gtest\+\_\+pred\+\_\+impl@{gen\+\_\+gtest\+\_\+pred\+\_\+impl}}
+\subsubsection[{\texorpdfstring{U\+N\+I\+T\+\_\+\+T\+E\+ST}{UNIT_TEST}}]{\setlength{\rightskip}{0pt plus 5cm}gen\+\_\+gtest\+\_\+pred\+\_\+impl.\+U\+N\+I\+T\+\_\+\+T\+E\+ST = os.\+path.\+join({\bf S\+C\+R\+I\+P\+T\+\_\+\+D\+IR}, \textquotesingle{}../test/{\bf gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}\textquotesingle{})}\hypertarget{namespacegen__gtest__pred__impl_a8c1cb8e87c4bd84edbb958f73b7df200}{}\label{namespacegen__gtest__pred__impl_a8c1cb8e87c4bd84edbb958f73b7df200}

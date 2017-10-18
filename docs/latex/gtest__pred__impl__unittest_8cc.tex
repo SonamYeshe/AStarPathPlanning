@@ -1,0 +1,1409 @@
+\hypertarget{gtest__pred__impl__unittest_8cc}{}\section{vendor/googletest/googletest/test/gtest\+\_\+pred\+\_\+impl\+\_\+unittest.cc File Reference}
+\label{gtest__pred__impl__unittest_8cc}\index{vendor/googletest/googletest/test/gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{vendor/googletest/googletest/test/gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest-\/spi.\+h\char`\"{}}\\*
+Include dependency graph for gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest__pred__impl__unittest_8cc__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{gtest__pred__impl__unittest_8cc__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structBool}{Bool}
+\item 
+struct \hyperlink{structPredFunctor1}{Pred\+Functor1}
+\item 
+struct \hyperlink{structPredFormatFunctor1}{Pred\+Format\+Functor1}
+\item 
+class \hyperlink{classPredicate1Test}{Predicate1\+Test}
+\item 
+struct \hyperlink{structPredFunctor2}{Pred\+Functor2}
+\item 
+struct \hyperlink{structPredFormatFunctor2}{Pred\+Format\+Functor2}
+\item 
+class \hyperlink{classPredicate2Test}{Predicate2\+Test}
+\item 
+struct \hyperlink{structPredFunctor3}{Pred\+Functor3}
+\item 
+struct \hyperlink{structPredFormatFunctor3}{Pred\+Format\+Functor3}
+\item 
+class \hyperlink{classPredicate3Test}{Predicate3\+Test}
+\item 
+struct \hyperlink{structPredFunctor4}{Pred\+Functor4}
+\item 
+struct \hyperlink{structPredFormatFunctor4}{Pred\+Format\+Functor4}
+\item 
+class \hyperlink{classPredicate4Test}{Predicate4\+Test}
+\item 
+struct \hyperlink{structPredFunctor5}{Pred\+Functor5}
+\item 
+struct \hyperlink{structPredFormatFunctor5}{Pred\+Format\+Functor5}
+\item 
+class \hyperlink{classPredicate5Test}{Predicate5\+Test}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classPredicate1Test}{Predicate1\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a35f3fc7e63ce8c37737b59138d45b871}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}
+\item 
+typedef \hyperlink{classPredicate1Test}{Predicate1\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a74baa3f09c1626584580dd9595545a9a}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}
+\item 
+typedef \hyperlink{classPredicate1Test}{Predicate1\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}
+\item 
+typedef \hyperlink{classPredicate1Test}{Predicate1\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a14984d780d451975d1895e5de7c9dbca}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D1\+Test}
+\item 
+typedef \hyperlink{classPredicate2Test}{Predicate2\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a87f67a2091d35818da5a6ed7551b457e}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}
+\item 
+typedef \hyperlink{classPredicate2Test}{Predicate2\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a9cc3995c305c9ec8ea5884ed6fd98911}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}
+\item 
+typedef \hyperlink{classPredicate2Test}{Predicate2\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}
+\item 
+typedef \hyperlink{classPredicate2Test}{Predicate2\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a1b78024909002227ea625b831d27ea8b}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D2\+Test}
+\item 
+typedef \hyperlink{classPredicate3Test}{Predicate3\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a338bfbaa3935e8ed55c11195e5b53c20}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}
+\item 
+typedef \hyperlink{classPredicate3Test}{Predicate3\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_ac2bfdb213c3119d730d1aa3fcc4daa56}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}
+\item 
+typedef \hyperlink{classPredicate3Test}{Predicate3\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}
+\item 
+typedef \hyperlink{classPredicate3Test}{Predicate3\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a631dbdd4bb24b4cf62268ea432a2719e}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D3\+Test}
+\item 
+typedef \hyperlink{classPredicate4Test}{Predicate4\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a259c13bd25f54a4f79b72de17fd86caa}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}
+\item 
+typedef \hyperlink{classPredicate4Test}{Predicate4\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_abea1e8f7f9efe2e944f9e90056d2d805}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}
+\item 
+typedef \hyperlink{classPredicate4Test}{Predicate4\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}
+\item 
+typedef \hyperlink{classPredicate4Test}{Predicate4\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a0467f5052687e11dccf9f45db63e9941}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D4\+Test}
+\item 
+typedef \hyperlink{classPredicate5Test}{Predicate5\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_aedface39db3a4a232e856e9e5b0d93b4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}
+\item 
+typedef \hyperlink{classPredicate5Test}{Predicate5\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_acd5253924c1b0c73917bb9b180805798}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}
+\item 
+typedef \hyperlink{classPredicate5Test}{Predicate5\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}
+\item 
+typedef \hyperlink{classPredicate5Test}{Predicate5\+Test} \hyperlink{gtest__pred__impl__unittest_8cc_a93627727c60bdb52cadef77d479bf1da}{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D5\+Test}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{gtest__pred__impl__unittest_8cc_a0bf98bd8ef2c5ea5ea36ff15c1248b8a}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{structBool}{Bool} \&x)
+\item 
+{\footnotesize template$<$typename T1 $>$ }\\bool \hyperlink{gtest__pred__impl__unittest_8cc_aa8827b7fab495de26f406affdf47a697}{Pred\+Function1} (T1 v1)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_a0cfa23f9b62be9c5bf65d0971510bac5}{Pred\+Function1\+Int} (int v1)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_a1c12be7e61ecd333d5c9d5f251d3809f}{Pred\+Function1\+Bool} (\hyperlink{structBool}{Bool} v1)
+\item 
+{\footnotesize template$<$typename T1 $>$ }\\\hyperlink{classtesting_1_1AssertionResult}{testing\+::\+Assertion\+Result} \hyperlink{gtest__pred__impl__unittest_8cc_af5b63802199e417c73c46cbacc73f4ed}{Pred\+Format\+Function1} (const char $\ast$e1, const T1 \&v1)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_acf6422eca13944f695085fc6c7527748}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}, Function\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a7ae9f4aac70507b021c7f828ba06c600}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}, Function\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_ac6309545f87fbb12ae87710af1dddf0a}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}, Functor\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_acaedb8d892427455232522cca9d0ce36}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}, Functor\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a33183522648e7235772c7ae107918e2d}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}, Function\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a6c7394c22028809dd2a31ec37021957d}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}, Function\+On\+User\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a3a672df7ea6af2695c3f1a97c7b32714}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}, Functor\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a00575e7356ae80bbd71ab684ccd65ac3}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}, Functor\+On\+User\+Type\+Failure)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \hyperlink{gtest__pred__impl__unittest_8cc_a6af405b7411fcd37c51a5fc96a869eef}{Pred\+Function2} (T1 v1, T2 v2)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_a7a3b834b08a5176afbd4bfc97d06bedd}{Pred\+Function2\+Int} (int v1, int v2)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_ab00487cdc08174c122cfaccc6abf221d}{Pred\+Function2\+Bool} (\hyperlink{structBool}{Bool} v1, \hyperlink{structBool}{Bool} v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\\hyperlink{classtesting_1_1AssertionResult}{testing\+::\+Assertion\+Result} \hyperlink{gtest__pred__impl__unittest_8cc_ac47f2d44062a47c907d113375ec47d47}{Pred\+Format\+Function2} (const char $\ast$e1, const char $\ast$e2, const T1 \&v1, const T2 \&v2)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_aba0b6cfb33acecfb0ab3092f2194f958}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}, Function\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a6c5a246f545dedba3863fc60fdcec435}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}, Function\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a512e6b394b152d77349f5b884043710c}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}, Functor\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a4ce1ae190c7b5477db170623d18ea48f}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}, Functor\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_ae8492c15e79d2d012460a71eb08483ed}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}, Function\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a590341b72b346a170ff6d8c73bf559b8}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}, Function\+On\+User\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_abf5bb7d7ccccca88e88947d21091caf5}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}, Functor\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_aab4f3bf01d55a7228147db3c959fd830}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}, Functor\+On\+User\+Type\+Failure)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 $>$ }\\bool \hyperlink{gtest__pred__impl__unittest_8cc_a78a1ff258fe5a85da5b2645983311a70}{Pred\+Function3} (T1 v1, T2 v2, T3 v3)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_a31b4c93e469feb1523b6073634c1ca4c}{Pred\+Function3\+Int} (int v1, int v2, int v3)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_afa4ce2143c2ffedb2fa5d5f8cff6f6e6}{Pred\+Function3\+Bool} (\hyperlink{structBool}{Bool} v1, \hyperlink{structBool}{Bool} v2, \hyperlink{structBool}{Bool} v3)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 $>$ }\\\hyperlink{classtesting_1_1AssertionResult}{testing\+::\+Assertion\+Result} \hyperlink{gtest__pred__impl__unittest_8cc_abddc62e1faf4d19992a0acb69577e0f3}{Pred\+Format\+Function3} (const char $\ast$e1, const char $\ast$e2, const char $\ast$e3, const T1 \&v1, const T2 \&v2, const T3 \&v3)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a6f0143d40175fd8e84aba9b52e16f3fc}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}, Function\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a509632492410e91aa0d85ff1cdeaf1cc}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}, Function\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_af0ec20ab73360a222fe9303586d05411}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}, Functor\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a199c9d914ca008105f5521d245e7c1d9}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}, Functor\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a7de002e386b26ebf47a90ca9b10c7323}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}, Function\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a106aff3a64136441885a6948e79a35fd}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}, Function\+On\+User\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_abc0b1019edf3bdd56ee46e82ece4cff8}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}, Functor\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a1d3e62b254c408b35bf05205699dca87}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}, Functor\+On\+User\+Type\+Failure)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename T4 $>$ }\\bool \hyperlink{gtest__pred__impl__unittest_8cc_a69db8bec40f25365dbd42dbe6c3319fe}{Pred\+Function4} (T1 v1, T2 v2, T3 v3, T4 v4)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_a105a045112a34fb2b65360c0d5daf81e}{Pred\+Function4\+Int} (int v1, int v2, int v3, int v4)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_a5d842d3bce2d16793299e77d1cb5c980}{Pred\+Function4\+Bool} (\hyperlink{structBool}{Bool} v1, \hyperlink{structBool}{Bool} v2, \hyperlink{structBool}{Bool} v3, \hyperlink{structBool}{Bool} v4)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename T4 $>$ }\\\hyperlink{classtesting_1_1AssertionResult}{testing\+::\+Assertion\+Result} \hyperlink{gtest__pred__impl__unittest_8cc_a9fbd4c3333dcc98c0cfee19ce28bc2b1}{Pred\+Format\+Function4} (const char $\ast$e1, const char $\ast$e2, const char $\ast$e3, const char $\ast$e4, const T1 \&v1, const T2 \&v2, const T3 \&v3, const T4 \&v4)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a15e705507c885f4d89c6f9d9d1601c96}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}, Function\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a666c4a544439533ef0fbac4fad0b3cf4}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}, Function\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a49b56c08cb83d1e00a1768dd9f6b8d95}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}, Functor\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_ac6b2261e169a9c32d631ac71909a0458}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}, Functor\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a036a7d32fdb4da1b6db4966f4b8fa711}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}, Function\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a952a5460f9f761948d852ce164241e0f}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}, Function\+On\+User\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a971a33d3e9ef7ab80cca352c1ffb9259}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}, Functor\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a1a34c19097ac1b8c806460f6bbaad59a}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}, Functor\+On\+User\+Type\+Failure)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename T4 , typename T5 $>$ }\\bool \hyperlink{gtest__pred__impl__unittest_8cc_aacb9302c548682f154ddf1a02a23a99f}{Pred\+Function5} (T1 v1, T2 v2, T3 v3, T4 v4, T5 v5)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_ac2bb9ad4db9fc578bd739bbba5aa374f}{Pred\+Function5\+Int} (int v1, int v2, int v3, int v4, int v5)
+\item 
+bool \hyperlink{gtest__pred__impl__unittest_8cc_a6e081dd19571256aef33154ce936563f}{Pred\+Function5\+Bool} (\hyperlink{structBool}{Bool} v1, \hyperlink{structBool}{Bool} v2, \hyperlink{structBool}{Bool} v3, \hyperlink{structBool}{Bool} v4, \hyperlink{structBool}{Bool} v5)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename T4 , typename T5 $>$ }\\\hyperlink{classtesting_1_1AssertionResult}{testing\+::\+Assertion\+Result} \hyperlink{gtest__pred__impl__unittest_8cc_a09cbd3b6651151c3b97a890d28bdb75f}{Pred\+Format\+Function5} (const char $\ast$e1, const char $\ast$e2, const char $\ast$e3, const char $\ast$e4, const char $\ast$e5, const T1 \&v1, const T2 \&v2, const T3 \&v3, const T4 \&v4, const T5 \&v5)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a1b36f70a595ae4a209741df2a62002c3}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}, Function\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a2d0901e19bffadc3482d9116cd590eb0}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}, Function\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a1b7aaebfa64a21ec7a7cdd0a4258108d}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}, Functor\+On\+Built\+In\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a4afff8ae16f447497e2d682ab8835470}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}, Functor\+On\+User\+Type\+Success)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a9f91ab913ee8017bc5e837cc34e30ae8}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}, Function\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a6188c218f102846ec55e25fcd29c1e8e}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}, Function\+On\+User\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_a7c8988c2d19eb5ed71e3bd4a0f69f96d}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}, Functor\+On\+Built\+In\+Type\+Failure)
+\item 
+\hyperlink{gtest__pred__impl__unittest_8cc_ada0ed61c55660de8027dfe787136c0d8}{T\+E\+S\+T\+\_\+F} (\hyperlink{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}, Functor\+On\+User\+Type\+Failure)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D1\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D1\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D1\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D1\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D1\+Test}{ASSERT_PRED1Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate1\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D1\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a14984d780d451975d1895e5de7c9dbca}{}\label{gtest__pred__impl__unittest_8cc_a14984d780d451975d1895e5de7c9dbca}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D2\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D2\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D2\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D2\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D2\+Test}{ASSERT_PRED2Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate2\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D2\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a1b78024909002227ea625b831d27ea8b}{}\label{gtest__pred__impl__unittest_8cc_a1b78024909002227ea625b831d27ea8b}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D3\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D3\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D3\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D3\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D3\+Test}{ASSERT_PRED3Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate3\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D3\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a631dbdd4bb24b4cf62268ea432a2719e}{}\label{gtest__pred__impl__unittest_8cc_a631dbdd4bb24b4cf62268ea432a2719e}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D4\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D4\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D4\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D4\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D4\+Test}{ASSERT_PRED4Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate4\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D4\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a0467f5052687e11dccf9f45db63e9941}{}\label{gtest__pred__impl__unittest_8cc_a0467f5052687e11dccf9f45db63e9941}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D5\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D5\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D5\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D5\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D5\+Test}{ASSERT_PRED5Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate5\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D5\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a93627727c60bdb52cadef77d479bf1da}{}\label{gtest__pred__impl__unittest_8cc_a93627727c60bdb52cadef77d479bf1da}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}{ASSERT_PRED_FORMAT1Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate1\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a74baa3f09c1626584580dd9595545a9a}{}\label{gtest__pred__impl__unittest_8cc_a74baa3f09c1626584580dd9595545a9a}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}{ASSERT_PRED_FORMAT2Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate2\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a9cc3995c305c9ec8ea5884ed6fd98911}{}\label{gtest__pred__impl__unittest_8cc_a9cc3995c305c9ec8ea5884ed6fd98911}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}{ASSERT_PRED_FORMAT3Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate3\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_ac2bfdb213c3119d730d1aa3fcc4daa56}{}\label{gtest__pred__impl__unittest_8cc_ac2bfdb213c3119d730d1aa3fcc4daa56}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}{ASSERT_PRED_FORMAT4Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate4\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_abea1e8f7f9efe2e944f9e90056d2d805}{}\label{gtest__pred__impl__unittest_8cc_abea1e8f7f9efe2e944f9e90056d2d805}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test@{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}{ASSERT_PRED_FORMAT5Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate5\+Test} {\bf A\+S\+S\+E\+R\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_acd5253924c1b0c73917bb9b180805798}{}\label{gtest__pred__impl__unittest_8cc_acd5253924c1b0c73917bb9b180805798}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}{EXPECT_PRED1Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate1\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}{}\label{gtest__pred__impl__unittest_8cc_ad745775376a8f891faadd4d168798bab}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}{EXPECT_PRED2Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate2\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}{}\label{gtest__pred__impl__unittest_8cc_a232826190f0ba7ce5dffa1ced1219acc}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}{EXPECT_PRED3Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate3\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}{}\label{gtest__pred__impl__unittest_8cc_a15eb53ab3f302d7bfffe1352f3902eb4}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}{EXPECT_PRED4Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate4\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}{}\label{gtest__pred__impl__unittest_8cc_abbf7ac63ea663c0dec815df5770cd2a8}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}{EXPECT_PRED5Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate5\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}{}\label{gtest__pred__impl__unittest_8cc_a9e7ab56ee0997fdc5c9f7318d0f1094c}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}{EXPECT_PRED_FORMAT1Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate1\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T1\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a35f3fc7e63ce8c37737b59138d45b871}{}\label{gtest__pred__impl__unittest_8cc_a35f3fc7e63ce8c37737b59138d45b871}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}{EXPECT_PRED_FORMAT2Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate2\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T2\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a87f67a2091d35818da5a6ed7551b457e}{}\label{gtest__pred__impl__unittest_8cc_a87f67a2091d35818da5a6ed7551b457e}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}{EXPECT_PRED_FORMAT3Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate3\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T3\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a338bfbaa3935e8ed55c11195e5b53c20}{}\label{gtest__pred__impl__unittest_8cc_a338bfbaa3935e8ed55c11195e5b53c20}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}{EXPECT_PRED_FORMAT4Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate4\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T4\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_a259c13bd25f54a4f79b72de17fd86caa}{}\label{gtest__pred__impl__unittest_8cc_a259c13bd25f54a4f79b72de17fd86caa}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}}
+\index{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test@{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}{EXPECT_PRED_FORMAT5Test}}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Predicate5\+Test} {\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D\+\_\+\+F\+O\+R\+M\+A\+T5\+Test}}\hypertarget{gtest__pred__impl__unittest_8cc_aedface39db3a4a232e856e9e5b0d93b4}{}\label{gtest__pred__impl__unittest_8cc_aedface39db3a4a232e856e9e5b0d93b4}
+
+
+\subsection{Function Documentation}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&os, const Bool \&x)}{operator<<(std::ostream &os, const Bool &x)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Bool} \&}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a0bf98bd8ef2c5ea5ea36ff15c1248b8a}{}\label{gtest__pred__impl__unittest_8cc_a0bf98bd8ef2c5ea5ea36ff15c1248b8a}
+
+\begin{DoxyCode}
+69                                                       \{
+70   \textcolor{keywordflow}{return} os << (x.\hyperlink{structBool_a16be863c269f988cdcbe59f9d846a141}{value} ? \textcolor{stringliteral}{"true"} : \textcolor{stringliteral}{"false"});
+71 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Format\+Function1@{Pred\+Format\+Function1}}
+\index{Pred\+Format\+Function1@{Pred\+Format\+Function1}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Format\+Function1(const char $\ast$e1, const T1 \&v1)}{PredFormatFunction1(const char *e1, const T1 &v1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 $>$ {\bf testing\+::\+Assertion\+Result} Pred\+Format\+Function1 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{e1, }
+\item[{const T1 \&}]{v1}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_af5b63802199e417c73c46cbacc73f4ed}{}\label{gtest__pred__impl__unittest_8cc_af5b63802199e417c73c46cbacc73f4ed}
+
+\begin{DoxyCode}
+102                                                            \{
+103   \textcolor{keywordflow}{if} (\hyperlink{gtest__pred__impl__unittest_8cc_aa8827b7fab495de26f406affdf47a697}{PredFunction1}(v1))
+104     \textcolor{keywordflow}{return} \hyperlink{namespacetesting_ac1d0baedb17286c5c6c87bd1a45da8ac}{testing::AssertionSuccess}();
+105 
+106   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a75cb789614cb1c28c34627a4a3c053df}{testing::AssertionFailure}()
+107       << e1
+108       << \textcolor{stringliteral}{" is expected to be positive, but evaluates to "}
+109       << v1 << \textcolor{stringliteral}{"."};
+110 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Format\+Function2@{Pred\+Format\+Function2}}
+\index{Pred\+Format\+Function2@{Pred\+Format\+Function2}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Format\+Function2(const char $\ast$e1, const char $\ast$e2, const T1 \&v1, const T2 \&v2)}{PredFormatFunction2(const char *e1, const char *e2, const T1 &v1, const T2 &v2)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 $>$ {\bf testing\+::\+Assertion\+Result} Pred\+Format\+Function2 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{e1, }
+\item[{const char $\ast$}]{e2, }
+\item[{const T1 \&}]{v1, }
+\item[{const T2 \&}]{v2}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_ac47f2d44062a47c907d113375ec47d47}{}\label{gtest__pred__impl__unittest_8cc_ac47f2d44062a47c907d113375ec47d47}
+
+\begin{DoxyCode}
+492                                                            \{
+493   \textcolor{keywordflow}{if} (\hyperlink{gtest__pred__impl__unittest_8cc_a6af405b7411fcd37c51a5fc96a869eef}{PredFunction2}(v1, v2))
+494     \textcolor{keywordflow}{return} \hyperlink{namespacetesting_ac1d0baedb17286c5c6c87bd1a45da8ac}{testing::AssertionSuccess}();
+495 
+496   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a75cb789614cb1c28c34627a4a3c053df}{testing::AssertionFailure}()
+497       << e1 << \textcolor{stringliteral}{" + "} << e2
+498       << \textcolor{stringliteral}{" is expected to be positive, but evaluates to "}
+499       << v1 + v2 << \textcolor{stringliteral}{"."};
+500 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Format\+Function3@{Pred\+Format\+Function3}}
+\index{Pred\+Format\+Function3@{Pred\+Format\+Function3}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Format\+Function3(const char $\ast$e1, const char $\ast$e2, const char $\ast$e3, const T1 \&v1, const T2 \&v2, const T3 \&v3)}{PredFormatFunction3(const char *e1, const char *e2, const char *e3, const T1 &v1, const T2 &v2, const T3 &v3)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 $>$ {\bf testing\+::\+Assertion\+Result} Pred\+Format\+Function3 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{e1, }
+\item[{const char $\ast$}]{e2, }
+\item[{const char $\ast$}]{e3, }
+\item[{const T1 \&}]{v1, }
+\item[{const T2 \&}]{v2, }
+\item[{const T3 \&}]{v3}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_abddc62e1faf4d19992a0acb69577e0f3}{}\label{gtest__pred__impl__unittest_8cc_abddc62e1faf4d19992a0acb69577e0f3}
+
+\begin{DoxyCode}
+924                                                            \{
+925   \textcolor{keywordflow}{if} (\hyperlink{gtest__pred__impl__unittest_8cc_a78a1ff258fe5a85da5b2645983311a70}{PredFunction3}(v1, v2, v3))
+926     \textcolor{keywordflow}{return} \hyperlink{namespacetesting_ac1d0baedb17286c5c6c87bd1a45da8ac}{testing::AssertionSuccess}();
+927 
+928   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a75cb789614cb1c28c34627a4a3c053df}{testing::AssertionFailure}()
+929       << e1 << \textcolor{stringliteral}{" + "} << e2 << \textcolor{stringliteral}{" + "} << e3
+930       << \textcolor{stringliteral}{" is expected to be positive, but evaluates to "}
+931       << v1 + v2 + v3 << \textcolor{stringliteral}{"."};
+932 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Format\+Function4@{Pred\+Format\+Function4}}
+\index{Pred\+Format\+Function4@{Pred\+Format\+Function4}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Format\+Function4(const char $\ast$e1, const char $\ast$e2, const char $\ast$e3, const char $\ast$e4, const T1 \&v1, const T2 \&v2, const T3 \&v3, const T4 \&v4)}{PredFormatFunction4(const char *e1, const char *e2, const char *e3, const char *e4, const T1 &v1, const T2 &v2, const T3 &v3, const T4 &v4)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 , typename T4 $>$ {\bf testing\+::\+Assertion\+Result} Pred\+Format\+Function4 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{e1, }
+\item[{const char $\ast$}]{e2, }
+\item[{const char $\ast$}]{e3, }
+\item[{const char $\ast$}]{e4, }
+\item[{const T1 \&}]{v1, }
+\item[{const T2 \&}]{v2, }
+\item[{const T3 \&}]{v3, }
+\item[{const T4 \&}]{v4}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a9fbd4c3333dcc98c0cfee19ce28bc2b1}{}\label{gtest__pred__impl__unittest_8cc_a9fbd4c3333dcc98c0cfee19ce28bc2b1}
+
+\begin{DoxyCode}
+1398                                                            \{
+1399   \textcolor{keywordflow}{if} (\hyperlink{gtest__pred__impl__unittest_8cc_a69db8bec40f25365dbd42dbe6c3319fe}{PredFunction4}(v1, v2, v3, v4))
+1400     \textcolor{keywordflow}{return} \hyperlink{namespacetesting_ac1d0baedb17286c5c6c87bd1a45da8ac}{testing::AssertionSuccess}();
+1401 
+1402   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a75cb789614cb1c28c34627a4a3c053df}{testing::AssertionFailure}()
+1403       << e1 << \textcolor{stringliteral}{" + "} << e2 << \textcolor{stringliteral}{" + "} << e3 << \textcolor{stringliteral}{" + "} << e4
+1404       << \textcolor{stringliteral}{" is expected to be positive, but evaluates to "}
+1405       << v1 + v2 + v3 + v4 << \textcolor{stringliteral}{"."};
+1406 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Format\+Function5@{Pred\+Format\+Function5}}
+\index{Pred\+Format\+Function5@{Pred\+Format\+Function5}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Format\+Function5(const char $\ast$e1, const char $\ast$e2, const char $\ast$e3, const char $\ast$e4, const char $\ast$e5, const T1 \&v1, const T2 \&v2, const T3 \&v3, const T4 \&v4, const T5 \&v5)}{PredFormatFunction5(const char *e1, const char *e2, const char *e3, const char *e4, const char *e5, const T1 &v1, const T2 &v2, const T3 &v3, const T4 &v4, const T5 &v5)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 , typename T4 , typename T5 $>$ {\bf testing\+::\+Assertion\+Result} Pred\+Format\+Function5 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{e1, }
+\item[{const char $\ast$}]{e2, }
+\item[{const char $\ast$}]{e3, }
+\item[{const char $\ast$}]{e4, }
+\item[{const char $\ast$}]{e5, }
+\item[{const T1 \&}]{v1, }
+\item[{const T2 \&}]{v2, }
+\item[{const T3 \&}]{v3, }
+\item[{const T4 \&}]{v4, }
+\item[{const T5 \&}]{v5}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a09cbd3b6651151c3b97a890d28bdb75f}{}\label{gtest__pred__impl__unittest_8cc_a09cbd3b6651151c3b97a890d28bdb75f}
+
+\begin{DoxyCode}
+1914                                                            \{
+1915   \textcolor{keywordflow}{if} (\hyperlink{gtest__pred__impl__unittest_8cc_aacb9302c548682f154ddf1a02a23a99f}{PredFunction5}(v1, v2, v3, v4, v5))
+1916     \textcolor{keywordflow}{return} \hyperlink{namespacetesting_ac1d0baedb17286c5c6c87bd1a45da8ac}{testing::AssertionSuccess}();
+1917 
+1918   \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a75cb789614cb1c28c34627a4a3c053df}{testing::AssertionFailure}()
+1919       << e1 << \textcolor{stringliteral}{" + "} << e2 << \textcolor{stringliteral}{" + "} << e3 << \textcolor{stringliteral}{" + "} << e4 << \textcolor{stringliteral}{" + "} << e5
+1920       << \textcolor{stringliteral}{" is expected to be positive, but evaluates to "}
+1921       << v1 + v2 + v3 + v4 + v5 << \textcolor{stringliteral}{"."};
+1922 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function1@{Pred\+Function1}}
+\index{Pred\+Function1@{Pred\+Function1}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function1(\+T1 v1)}{PredFunction1(T1 v1)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 $>$ bool Pred\+Function1 (
+\begin{DoxyParamCaption}
+\item[{T1}]{v1}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_aa8827b7fab495de26f406affdf47a697}{}\label{gtest__pred__impl__unittest_8cc_aa8827b7fab495de26f406affdf47a697}
+
+\begin{DoxyCode}
+77                           \{
+78   \textcolor{keywordflow}{return} v1 > 0;
+79 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function1\+Bool@{Pred\+Function1\+Bool}}
+\index{Pred\+Function1\+Bool@{Pred\+Function1\+Bool}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function1\+Bool(\+Bool v1)}{PredFunction1Bool(Bool v1)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function1\+Bool (
+\begin{DoxyParamCaption}
+\item[{{\bf Bool}}]{v1}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a1c12be7e61ecd333d5c9d5f251d3809f}{}\label{gtest__pred__impl__unittest_8cc_a1c12be7e61ecd333d5c9d5f251d3809f}
+
+\begin{DoxyCode}
+87                                 \{
+88   \textcolor{keywordflow}{return} v1 > 0;
+89 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function1\+Int@{Pred\+Function1\+Int}}
+\index{Pred\+Function1\+Int@{Pred\+Function1\+Int}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function1\+Int(int v1)}{PredFunction1Int(int v1)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function1\+Int (
+\begin{DoxyParamCaption}
+\item[{int}]{v1}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a0cfa23f9b62be9c5bf65d0971510bac5}{}\label{gtest__pred__impl__unittest_8cc_a0cfa23f9b62be9c5bf65d0971510bac5}
+
+\begin{DoxyCode}
+84                               \{
+85   \textcolor{keywordflow}{return} v1 > 0;
+86 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function2@{Pred\+Function2}}
+\index{Pred\+Function2@{Pred\+Function2}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function2(\+T1 v1, T2 v2)}{PredFunction2(T1 v1, T2 v2)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 $>$ bool Pred\+Function2 (
+\begin{DoxyParamCaption}
+\item[{T1}]{v1, }
+\item[{T2}]{v2}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a6af405b7411fcd37c51a5fc96a869eef}{}\label{gtest__pred__impl__unittest_8cc_a6af405b7411fcd37c51a5fc96a869eef}
+
+\begin{DoxyCode}
+464                                  \{
+465   \textcolor{keywordflow}{return} v1 + v2 > 0;
+466 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function2\+Bool@{Pred\+Function2\+Bool}}
+\index{Pred\+Function2\+Bool@{Pred\+Function2\+Bool}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function2\+Bool(\+Bool v1, Bool v2)}{PredFunction2Bool(Bool v1, Bool v2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function2\+Bool (
+\begin{DoxyParamCaption}
+\item[{{\bf Bool}}]{v1, }
+\item[{{\bf Bool}}]{v2}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_ab00487cdc08174c122cfaccc6abf221d}{}\label{gtest__pred__impl__unittest_8cc_ab00487cdc08174c122cfaccc6abf221d}
+
+\begin{DoxyCode}
+474                                          \{
+475   \textcolor{keywordflow}{return} v1 + v2 > 0;
+476 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function2\+Int@{Pred\+Function2\+Int}}
+\index{Pred\+Function2\+Int@{Pred\+Function2\+Int}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function2\+Int(int v1, int v2)}{PredFunction2Int(int v1, int v2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function2\+Int (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a7a3b834b08a5176afbd4bfc97d06bedd}{}\label{gtest__pred__impl__unittest_8cc_a7a3b834b08a5176afbd4bfc97d06bedd}
+
+\begin{DoxyCode}
+471                                       \{
+472   \textcolor{keywordflow}{return} v1 + v2 > 0;
+473 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function3@{Pred\+Function3}}
+\index{Pred\+Function3@{Pred\+Function3}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function3(\+T1 v1, T2 v2, T3 v3)}{PredFunction3(T1 v1, T2 v2, T3 v3)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 $>$ bool Pred\+Function3 (
+\begin{DoxyParamCaption}
+\item[{T1}]{v1, }
+\item[{T2}]{v2, }
+\item[{T3}]{v3}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a78a1ff258fe5a85da5b2645983311a70}{}\label{gtest__pred__impl__unittest_8cc_a78a1ff258fe5a85da5b2645983311a70}
+
+\begin{DoxyCode}
+893                                         \{
+894   \textcolor{keywordflow}{return} v1 + v2 + v3 > 0;
+895 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function3\+Bool@{Pred\+Function3\+Bool}}
+\index{Pred\+Function3\+Bool@{Pred\+Function3\+Bool}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function3\+Bool(\+Bool v1, Bool v2, Bool v3)}{PredFunction3Bool(Bool v1, Bool v2, Bool v3)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function3\+Bool (
+\begin{DoxyParamCaption}
+\item[{{\bf Bool}}]{v1, }
+\item[{{\bf Bool}}]{v2, }
+\item[{{\bf Bool}}]{v3}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_afa4ce2143c2ffedb2fa5d5f8cff6f6e6}{}\label{gtest__pred__impl__unittest_8cc_afa4ce2143c2ffedb2fa5d5f8cff6f6e6}
+
+\begin{DoxyCode}
+903                                                   \{
+904   \textcolor{keywordflow}{return} v1 + v2 + v3 > 0;
+905 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function3\+Int@{Pred\+Function3\+Int}}
+\index{Pred\+Function3\+Int@{Pred\+Function3\+Int}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function3\+Int(int v1, int v2, int v3)}{PredFunction3Int(int v1, int v2, int v3)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function3\+Int (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2, }
+\item[{int}]{v3}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a31b4c93e469feb1523b6073634c1ca4c}{}\label{gtest__pred__impl__unittest_8cc_a31b4c93e469feb1523b6073634c1ca4c}
+
+\begin{DoxyCode}
+900                                               \{
+901   \textcolor{keywordflow}{return} v1 + v2 + v3 > 0;
+902 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function4@{Pred\+Function4}}
+\index{Pred\+Function4@{Pred\+Function4}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function4(\+T1 v1, T2 v2, T3 v3, T4 v4)}{PredFunction4(T1 v1, T2 v2, T3 v3, T4 v4)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 , typename T4 $>$ bool Pred\+Function4 (
+\begin{DoxyParamCaption}
+\item[{T1}]{v1, }
+\item[{T2}]{v2, }
+\item[{T3}]{v3, }
+\item[{T4}]{v4}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a69db8bec40f25365dbd42dbe6c3319fe}{}\label{gtest__pred__impl__unittest_8cc_a69db8bec40f25365dbd42dbe6c3319fe}
+
+\begin{DoxyCode}
+1364                                                \{
+1365   \textcolor{keywordflow}{return} v1 + v2 + v3 + v4 > 0;
+1366 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function4\+Bool@{Pred\+Function4\+Bool}}
+\index{Pred\+Function4\+Bool@{Pred\+Function4\+Bool}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function4\+Bool(\+Bool v1, Bool v2, Bool v3, Bool v4)}{PredFunction4Bool(Bool v1, Bool v2, Bool v3, Bool v4)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function4\+Bool (
+\begin{DoxyParamCaption}
+\item[{{\bf Bool}}]{v1, }
+\item[{{\bf Bool}}]{v2, }
+\item[{{\bf Bool}}]{v3, }
+\item[{{\bf Bool}}]{v4}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a5d842d3bce2d16793299e77d1cb5c980}{}\label{gtest__pred__impl__unittest_8cc_a5d842d3bce2d16793299e77d1cb5c980}
+
+\begin{DoxyCode}
+1374                                                            \{
+1375   \textcolor{keywordflow}{return} v1 + v2 + v3 + v4 > 0;
+1376 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function4\+Int@{Pred\+Function4\+Int}}
+\index{Pred\+Function4\+Int@{Pred\+Function4\+Int}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function4\+Int(int v1, int v2, int v3, int v4)}{PredFunction4Int(int v1, int v2, int v3, int v4)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function4\+Int (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2, }
+\item[{int}]{v3, }
+\item[{int}]{v4}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a105a045112a34fb2b65360c0d5daf81e}{}\label{gtest__pred__impl__unittest_8cc_a105a045112a34fb2b65360c0d5daf81e}
+
+\begin{DoxyCode}
+1371                                                       \{
+1372   \textcolor{keywordflow}{return} v1 + v2 + v3 + v4 > 0;
+1373 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function5@{Pred\+Function5}}
+\index{Pred\+Function5@{Pred\+Function5}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function5(\+T1 v1, T2 v2, T3 v3, T4 v4, T5 v5)}{PredFunction5(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 , typename T4 , typename T5 $>$ bool Pred\+Function5 (
+\begin{DoxyParamCaption}
+\item[{T1}]{v1, }
+\item[{T2}]{v2, }
+\item[{T3}]{v3, }
+\item[{T4}]{v4, }
+\item[{T5}]{v5}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_aacb9302c548682f154ddf1a02a23a99f}{}\label{gtest__pred__impl__unittest_8cc_aacb9302c548682f154ddf1a02a23a99f}
+
+\begin{DoxyCode}
+1877                                                       \{
+1878   \textcolor{keywordflow}{return} v1 + v2 + v3 + v4 + v5 > 0;
+1879 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function5\+Bool@{Pred\+Function5\+Bool}}
+\index{Pred\+Function5\+Bool@{Pred\+Function5\+Bool}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function5\+Bool(\+Bool v1, Bool v2, Bool v3, Bool v4, Bool v5)}{PredFunction5Bool(Bool v1, Bool v2, Bool v3, Bool v4, Bool v5)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function5\+Bool (
+\begin{DoxyParamCaption}
+\item[{{\bf Bool}}]{v1, }
+\item[{{\bf Bool}}]{v2, }
+\item[{{\bf Bool}}]{v3, }
+\item[{{\bf Bool}}]{v4, }
+\item[{{\bf Bool}}]{v5}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a6e081dd19571256aef33154ce936563f}{}\label{gtest__pred__impl__unittest_8cc_a6e081dd19571256aef33154ce936563f}
+
+\begin{DoxyCode}
+1887                                                                     \{
+1888   \textcolor{keywordflow}{return} v1 + v2 + v3 + v4 + v5 > 0;
+1889 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!Pred\+Function5\+Int@{Pred\+Function5\+Int}}
+\index{Pred\+Function5\+Int@{Pred\+Function5\+Int}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{Pred\+Function5\+Int(int v1, int v2, int v3, int v4, int v5)}{PredFunction5Int(int v1, int v2, int v3, int v4, int v5)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Pred\+Function5\+Int (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2, }
+\item[{int}]{v3, }
+\item[{int}]{v4, }
+\item[{int}]{v5}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_ac2bb9ad4db9fc578bd739bbba5aa374f}{}\label{gtest__pred__impl__unittest_8cc_ac2bb9ad4db9fc578bd739bbba5aa374f}
+
+\begin{DoxyCode}
+1884                                                               \{
+1885   \textcolor{keywordflow}{return} v1 + v2 + v3 + v4 + v5 > 0;
+1886 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test, Function\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED1Test, FunctionOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_acf6422eca13944f695085fc6c7527748}{}\label{gtest__pred__impl__unittest_8cc_acf6422eca13944f695085fc6c7527748}
+
+\begin{DoxyCode}
+167                                                        \{
+168   \hyperlink{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{EXPECT\_PRED1}(\hyperlink{gtest__pred__impl__unittest_8cc_a0cfa23f9b62be9c5bf65d0971510bac5}{PredFunction1Int},
+169                ++n1\_);
+170   finished\_ = \textcolor{keyword}{true};
+171 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test, Function\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED1Test, FunctionOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a7ae9f4aac70507b021c7f828ba06c600}{}\label{gtest__pred__impl__unittest_8cc_a7ae9f4aac70507b021c7f828ba06c600}
+
+\begin{DoxyCode}
+175                                                     \{
+176   \hyperlink{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{EXPECT\_PRED1}(\hyperlink{gtest__pred__impl__unittest_8cc_a1c12be7e61ecd333d5c9d5f251d3809f}{PredFunction1Bool},
+177                \hyperlink{structBool}{Bool}(++n1\_));
+178   finished\_ = \textcolor{keyword}{true};
+179 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test, Functor\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED1Test, FunctorOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_ac6309545f87fbb12ae87710af1dddf0a}{}\label{gtest__pred__impl__unittest_8cc_ac6309545f87fbb12ae87710af1dddf0a}
+
+\begin{DoxyCode}
+183                                                       \{
+184   \hyperlink{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{EXPECT\_PRED1}(\hyperlink{structPredFunctor1}{PredFunctor1}(),
+185                ++n1\_);
+186   finished\_ = \textcolor{keyword}{true};
+187 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test, Functor\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED1Test, FunctorOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_acaedb8d892427455232522cca9d0ce36}{}\label{gtest__pred__impl__unittest_8cc_acaedb8d892427455232522cca9d0ce36}
+
+\begin{DoxyCode}
+191                                                    \{
+192   \hyperlink{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{EXPECT\_PRED1}(\hyperlink{structPredFunctor1}{PredFunctor1}(),
+193                \hyperlink{structBool}{Bool}(++n1\_));
+194   finished\_ = \textcolor{keyword}{true};
+195 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test, Function\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED1Test, FunctionOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a33183522648e7235772c7ae107918e2d}{}\label{gtest__pred__impl__unittest_8cc_a33183522648e7235772c7ae107918e2d}
+
+\begin{DoxyCode}
+199                                                        \{
+200   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+201     \hyperlink{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{EXPECT\_PRED1}(\hyperlink{gtest__pred__impl__unittest_8cc_a0cfa23f9b62be9c5bf65d0971510bac5}{PredFunction1Int},
+202                  n1\_++);
+203     finished\_ = \textcolor{keyword}{true};
+204   \}, \textcolor{stringliteral}{""});
+205 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test, Function\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED1Test, FunctionOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a6c7394c22028809dd2a31ec37021957d}{}\label{gtest__pred__impl__unittest_8cc_a6c7394c22028809dd2a31ec37021957d}
+
+\begin{DoxyCode}
+209                                                     \{
+210   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+211     \hyperlink{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{EXPECT\_PRED1}(\hyperlink{gtest__pred__impl__unittest_8cc_a1c12be7e61ecd333d5c9d5f251d3809f}{PredFunction1Bool},
+212                  \hyperlink{structBool}{Bool}(n1\_++));
+213     finished\_ = \textcolor{keyword}{true};
+214   \}, \textcolor{stringliteral}{""});
+215 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test, Functor\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED1Test, FunctorOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a3a672df7ea6af2695c3f1a97c7b32714}{}\label{gtest__pred__impl__unittest_8cc_a3a672df7ea6af2695c3f1a97c7b32714}
+
+\begin{DoxyCode}
+219                                                       \{
+220   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+221     \hyperlink{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{EXPECT\_PRED1}(\hyperlink{structPredFunctor1}{PredFunctor1}(),
+222                  n1\_++);
+223     finished\_ = \textcolor{keyword}{true};
+224   \}, \textcolor{stringliteral}{""});
+225 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test, Functor\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED1Test, FunctorOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D1\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a00575e7356ae80bbd71ab684ccd65ac3}{}\label{gtest__pred__impl__unittest_8cc_a00575e7356ae80bbd71ab684ccd65ac3}
+
+\begin{DoxyCode}
+229                                                    \{
+230   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+231     \hyperlink{gtest__pred__impl_8h_a6d09aa83f8d297481380c7c073c9f070}{EXPECT\_PRED1}(\hyperlink{structPredFunctor1}{PredFunctor1}(),
+232                  \hyperlink{structBool}{Bool}(n1\_++));
+233     finished\_ = \textcolor{keyword}{true};
+234   \}, \textcolor{stringliteral}{""});
+235 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test, Function\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED2Test, FunctionOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_aba0b6cfb33acecfb0ab3092f2194f958}{}\label{gtest__pred__impl__unittest_8cc_aba0b6cfb33acecfb0ab3092f2194f958}
+
+\begin{DoxyCode}
+564                                                        \{
+565   \hyperlink{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{EXPECT\_PRED2}(\hyperlink{gtest__pred__impl__unittest_8cc_a7a3b834b08a5176afbd4bfc97d06bedd}{PredFunction2Int},
+566                ++n1\_,
+567                ++n2\_);
+568   finished\_ = \textcolor{keyword}{true};
+569 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test, Function\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED2Test, FunctionOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a6c5a246f545dedba3863fc60fdcec435}{}\label{gtest__pred__impl__unittest_8cc_a6c5a246f545dedba3863fc60fdcec435}
+
+\begin{DoxyCode}
+573                                                     \{
+574   \hyperlink{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{EXPECT\_PRED2}(\hyperlink{gtest__pred__impl__unittest_8cc_ab00487cdc08174c122cfaccc6abf221d}{PredFunction2Bool},
+575                \hyperlink{structBool}{Bool}(++n1\_),
+576                \hyperlink{structBool}{Bool}(++n2\_));
+577   finished\_ = \textcolor{keyword}{true};
+578 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test, Functor\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED2Test, FunctorOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a512e6b394b152d77349f5b884043710c}{}\label{gtest__pred__impl__unittest_8cc_a512e6b394b152d77349f5b884043710c}
+
+\begin{DoxyCode}
+582                                                       \{
+583   \hyperlink{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{EXPECT\_PRED2}(\hyperlink{structPredFunctor2}{PredFunctor2}(),
+584                ++n1\_,
+585                ++n2\_);
+586   finished\_ = \textcolor{keyword}{true};
+587 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test, Functor\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED2Test, FunctorOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a4ce1ae190c7b5477db170623d18ea48f}{}\label{gtest__pred__impl__unittest_8cc_a4ce1ae190c7b5477db170623d18ea48f}
+
+\begin{DoxyCode}
+591                                                    \{
+592   \hyperlink{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{EXPECT\_PRED2}(\hyperlink{structPredFunctor2}{PredFunctor2}(),
+593                \hyperlink{structBool}{Bool}(++n1\_),
+594                \hyperlink{structBool}{Bool}(++n2\_));
+595   finished\_ = \textcolor{keyword}{true};
+596 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test, Function\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED2Test, FunctionOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_ae8492c15e79d2d012460a71eb08483ed}{}\label{gtest__pred__impl__unittest_8cc_ae8492c15e79d2d012460a71eb08483ed}
+
+\begin{DoxyCode}
+600                                                        \{
+601   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+602     \hyperlink{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{EXPECT\_PRED2}(\hyperlink{gtest__pred__impl__unittest_8cc_a7a3b834b08a5176afbd4bfc97d06bedd}{PredFunction2Int},
+603                  n1\_++,
+604                  n2\_++);
+605     finished\_ = \textcolor{keyword}{true};
+606   \}, \textcolor{stringliteral}{""});
+607 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test, Function\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED2Test, FunctionOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a590341b72b346a170ff6d8c73bf559b8}{}\label{gtest__pred__impl__unittest_8cc_a590341b72b346a170ff6d8c73bf559b8}
+
+\begin{DoxyCode}
+611                                                     \{
+612   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+613     \hyperlink{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{EXPECT\_PRED2}(\hyperlink{gtest__pred__impl__unittest_8cc_ab00487cdc08174c122cfaccc6abf221d}{PredFunction2Bool},
+614                  \hyperlink{structBool}{Bool}(n1\_++),
+615                  \hyperlink{structBool}{Bool}(n2\_++));
+616     finished\_ = \textcolor{keyword}{true};
+617   \}, \textcolor{stringliteral}{""});
+618 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test, Functor\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED2Test, FunctorOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_abf5bb7d7ccccca88e88947d21091caf5}{}\label{gtest__pred__impl__unittest_8cc_abf5bb7d7ccccca88e88947d21091caf5}
+
+\begin{DoxyCode}
+622                                                       \{
+623   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+624     \hyperlink{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{EXPECT\_PRED2}(\hyperlink{structPredFunctor2}{PredFunctor2}(),
+625                  n1\_++,
+626                  n2\_++);
+627     finished\_ = \textcolor{keyword}{true};
+628   \}, \textcolor{stringliteral}{""});
+629 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test, Functor\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED2Test, FunctorOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D2\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_aab4f3bf01d55a7228147db3c959fd830}{}\label{gtest__pred__impl__unittest_8cc_aab4f3bf01d55a7228147db3c959fd830}
+
+\begin{DoxyCode}
+633                                                    \{
+634   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+635     \hyperlink{gtest__pred__impl_8h_a14e74e655e502914d3d07e083145ac91}{EXPECT\_PRED2}(\hyperlink{structPredFunctor2}{PredFunctor2}(),
+636                  \hyperlink{structBool}{Bool}(n1\_++),
+637                  \hyperlink{structBool}{Bool}(n2\_++));
+638     finished\_ = \textcolor{keyword}{true};
+639   \}, \textcolor{stringliteral}{""});
+640 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test, Function\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED3Test, FunctionOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a6f0143d40175fd8e84aba9b52e16f3fc}{}\label{gtest__pred__impl__unittest_8cc_a6f0143d40175fd8e84aba9b52e16f3fc}
+
+\begin{DoxyCode}
+1003                                                        \{
+1004   \hyperlink{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{EXPECT\_PRED3}(\hyperlink{gtest__pred__impl__unittest_8cc_a31b4c93e469feb1523b6073634c1ca4c}{PredFunction3Int},
+1005                ++n1\_,
+1006                ++n2\_,
+1007                ++n3\_);
+1008   finished\_ = \textcolor{keyword}{true};
+1009 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test, Function\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED3Test, FunctionOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a509632492410e91aa0d85ff1cdeaf1cc}{}\label{gtest__pred__impl__unittest_8cc_a509632492410e91aa0d85ff1cdeaf1cc}
+
+\begin{DoxyCode}
+1013                                                     \{
+1014   \hyperlink{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{EXPECT\_PRED3}(\hyperlink{gtest__pred__impl__unittest_8cc_afa4ce2143c2ffedb2fa5d5f8cff6f6e6}{PredFunction3Bool},
+1015                \hyperlink{structBool}{Bool}(++n1\_),
+1016                \hyperlink{structBool}{Bool}(++n2\_),
+1017                \hyperlink{structBool}{Bool}(++n3\_));
+1018   finished\_ = \textcolor{keyword}{true};
+1019 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test, Functor\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED3Test, FunctorOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_af0ec20ab73360a222fe9303586d05411}{}\label{gtest__pred__impl__unittest_8cc_af0ec20ab73360a222fe9303586d05411}
+
+\begin{DoxyCode}
+1023                                                       \{
+1024   \hyperlink{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{EXPECT\_PRED3}(\hyperlink{structPredFunctor3}{PredFunctor3}(),
+1025                ++n1\_,
+1026                ++n2\_,
+1027                ++n3\_);
+1028   finished\_ = \textcolor{keyword}{true};
+1029 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test, Functor\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED3Test, FunctorOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a199c9d914ca008105f5521d245e7c1d9}{}\label{gtest__pred__impl__unittest_8cc_a199c9d914ca008105f5521d245e7c1d9}
+
+\begin{DoxyCode}
+1033                                                    \{
+1034   \hyperlink{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{EXPECT\_PRED3}(\hyperlink{structPredFunctor3}{PredFunctor3}(),
+1035                \hyperlink{structBool}{Bool}(++n1\_),
+1036                \hyperlink{structBool}{Bool}(++n2\_),
+1037                \hyperlink{structBool}{Bool}(++n3\_));
+1038   finished\_ = \textcolor{keyword}{true};
+1039 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test, Function\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED3Test, FunctionOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a7de002e386b26ebf47a90ca9b10c7323}{}\label{gtest__pred__impl__unittest_8cc_a7de002e386b26ebf47a90ca9b10c7323}
+
+\begin{DoxyCode}
+1043                                                        \{
+1044   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+1045     \hyperlink{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{EXPECT\_PRED3}(\hyperlink{gtest__pred__impl__unittest_8cc_a31b4c93e469feb1523b6073634c1ca4c}{PredFunction3Int},
+1046                  n1\_++,
+1047                  n2\_++,
+1048                  n3\_++);
+1049     finished\_ = \textcolor{keyword}{true};
+1050   \}, \textcolor{stringliteral}{""});
+1051 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test, Function\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED3Test, FunctionOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a106aff3a64136441885a6948e79a35fd}{}\label{gtest__pred__impl__unittest_8cc_a106aff3a64136441885a6948e79a35fd}
+
+\begin{DoxyCode}
+1055                                                     \{
+1056   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+1057     \hyperlink{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{EXPECT\_PRED3}(\hyperlink{gtest__pred__impl__unittest_8cc_afa4ce2143c2ffedb2fa5d5f8cff6f6e6}{PredFunction3Bool},
+1058                  \hyperlink{structBool}{Bool}(n1\_++),
+1059                  \hyperlink{structBool}{Bool}(n2\_++),
+1060                  \hyperlink{structBool}{Bool}(n3\_++));
+1061     finished\_ = \textcolor{keyword}{true};
+1062   \}, \textcolor{stringliteral}{""});
+1063 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test, Functor\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED3Test, FunctorOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_abc0b1019edf3bdd56ee46e82ece4cff8}{}\label{gtest__pred__impl__unittest_8cc_abc0b1019edf3bdd56ee46e82ece4cff8}
+
+\begin{DoxyCode}
+1067                                                       \{
+1068   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+1069     \hyperlink{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{EXPECT\_PRED3}(\hyperlink{structPredFunctor3}{PredFunctor3}(),
+1070                  n1\_++,
+1071                  n2\_++,
+1072                  n3\_++);
+1073     finished\_ = \textcolor{keyword}{true};
+1074   \}, \textcolor{stringliteral}{""});
+1075 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test, Functor\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED3Test, FunctorOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D3\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a1d3e62b254c408b35bf05205699dca87}{}\label{gtest__pred__impl__unittest_8cc_a1d3e62b254c408b35bf05205699dca87}
+
+\begin{DoxyCode}
+1079                                                    \{
+1080   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+1081     \hyperlink{gtest__pred__impl_8h_a0a0aff2564ea84c7eb3517ac8eda04da}{EXPECT\_PRED3}(\hyperlink{structPredFunctor3}{PredFunctor3}(),
+1082                  \hyperlink{structBool}{Bool}(n1\_++),
+1083                  \hyperlink{structBool}{Bool}(n2\_++),
+1084                  \hyperlink{structBool}{Bool}(n3\_++));
+1085     finished\_ = \textcolor{keyword}{true};
+1086   \}, \textcolor{stringliteral}{""});
+1087 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test, Function\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED4Test, FunctionOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a15e705507c885f4d89c6f9d9d1601c96}{}\label{gtest__pred__impl__unittest_8cc_a15e705507c885f4d89c6f9d9d1601c96}
+
+\begin{DoxyCode}
+1484                                                        \{
+1485   \hyperlink{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{EXPECT\_PRED4}(\hyperlink{gtest__pred__impl__unittest_8cc_a105a045112a34fb2b65360c0d5daf81e}{PredFunction4Int},
+1486                ++n1\_,
+1487                ++n2\_,
+1488                ++n3\_,
+1489                ++n4\_);
+1490   finished\_ = \textcolor{keyword}{true};
+1491 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test, Function\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED4Test, FunctionOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a666c4a544439533ef0fbac4fad0b3cf4}{}\label{gtest__pred__impl__unittest_8cc_a666c4a544439533ef0fbac4fad0b3cf4}
+
+\begin{DoxyCode}
+1495                                                     \{
+1496   \hyperlink{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{EXPECT\_PRED4}(\hyperlink{gtest__pred__impl__unittest_8cc_a5d842d3bce2d16793299e77d1cb5c980}{PredFunction4Bool},
+1497                \hyperlink{structBool}{Bool}(++n1\_),
+1498                \hyperlink{structBool}{Bool}(++n2\_),
+1499                \hyperlink{structBool}{Bool}(++n3\_),
+1500                \hyperlink{structBool}{Bool}(++n4\_));
+1501   finished\_ = \textcolor{keyword}{true};
+1502 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test, Functor\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED4Test, FunctorOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a49b56c08cb83d1e00a1768dd9f6b8d95}{}\label{gtest__pred__impl__unittest_8cc_a49b56c08cb83d1e00a1768dd9f6b8d95}
+
+\begin{DoxyCode}
+1506                                                       \{
+1507   \hyperlink{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{EXPECT\_PRED4}(\hyperlink{structPredFunctor4}{PredFunctor4}(),
+1508                ++n1\_,
+1509                ++n2\_,
+1510                ++n3\_,
+1511                ++n4\_);
+1512   finished\_ = \textcolor{keyword}{true};
+1513 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test, Functor\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED4Test, FunctorOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_ac6b2261e169a9c32d631ac71909a0458}{}\label{gtest__pred__impl__unittest_8cc_ac6b2261e169a9c32d631ac71909a0458}
+
+\begin{DoxyCode}
+1517                                                    \{
+1518   \hyperlink{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{EXPECT\_PRED4}(\hyperlink{structPredFunctor4}{PredFunctor4}(),
+1519                \hyperlink{structBool}{Bool}(++n1\_),
+1520                \hyperlink{structBool}{Bool}(++n2\_),
+1521                \hyperlink{structBool}{Bool}(++n3\_),
+1522                \hyperlink{structBool}{Bool}(++n4\_));
+1523   finished\_ = \textcolor{keyword}{true};
+1524 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test, Function\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED4Test, FunctionOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a036a7d32fdb4da1b6db4966f4b8fa711}{}\label{gtest__pred__impl__unittest_8cc_a036a7d32fdb4da1b6db4966f4b8fa711}
+
+\begin{DoxyCode}
+1528                                                        \{
+1529   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+1530     \hyperlink{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{EXPECT\_PRED4}(\hyperlink{gtest__pred__impl__unittest_8cc_a105a045112a34fb2b65360c0d5daf81e}{PredFunction4Int},
+1531                  n1\_++,
+1532                  n2\_++,
+1533                  n3\_++,
+1534                  n4\_++);
+1535     finished\_ = \textcolor{keyword}{true};
+1536   \}, \textcolor{stringliteral}{""});
+1537 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test, Function\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED4Test, FunctionOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a952a5460f9f761948d852ce164241e0f}{}\label{gtest__pred__impl__unittest_8cc_a952a5460f9f761948d852ce164241e0f}
+
+\begin{DoxyCode}
+1541                                                     \{
+1542   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+1543     \hyperlink{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{EXPECT\_PRED4}(\hyperlink{gtest__pred__impl__unittest_8cc_a5d842d3bce2d16793299e77d1cb5c980}{PredFunction4Bool},
+1544                  \hyperlink{structBool}{Bool}(n1\_++),
+1545                  \hyperlink{structBool}{Bool}(n2\_++),
+1546                  \hyperlink{structBool}{Bool}(n3\_++),
+1547                  \hyperlink{structBool}{Bool}(n4\_++));
+1548     finished\_ = \textcolor{keyword}{true};
+1549   \}, \textcolor{stringliteral}{""});
+1550 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test, Functor\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED4Test, FunctorOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a971a33d3e9ef7ab80cca352c1ffb9259}{}\label{gtest__pred__impl__unittest_8cc_a971a33d3e9ef7ab80cca352c1ffb9259}
+
+\begin{DoxyCode}
+1554                                                       \{
+1555   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+1556     \hyperlink{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{EXPECT\_PRED4}(\hyperlink{structPredFunctor4}{PredFunctor4}(),
+1557                  n1\_++,
+1558                  n2\_++,
+1559                  n3\_++,
+1560                  n4\_++);
+1561     finished\_ = \textcolor{keyword}{true};
+1562   \}, \textcolor{stringliteral}{""});
+1563 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test, Functor\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED4Test, FunctorOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D4\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a1a34c19097ac1b8c806460f6bbaad59a}{}\label{gtest__pred__impl__unittest_8cc_a1a34c19097ac1b8c806460f6bbaad59a}
+
+\begin{DoxyCode}
+1567                                                    \{
+1568   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+1569     \hyperlink{gtest__pred__impl_8h_a4fd2b1bad63eb752bc2ff2b6bb3f4569}{EXPECT\_PRED4}(\hyperlink{structPredFunctor4}{PredFunctor4}(),
+1570                  \hyperlink{structBool}{Bool}(n1\_++),
+1571                  \hyperlink{structBool}{Bool}(n2\_++),
+1572                  \hyperlink{structBool}{Bool}(n3\_++),
+1573                  \hyperlink{structBool}{Bool}(n4\_++));
+1574     finished\_ = \textcolor{keyword}{true};
+1575   \}, \textcolor{stringliteral}{""});
+1576 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test, Function\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED5Test, FunctionOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a1b36f70a595ae4a209741df2a62002c3}{}\label{gtest__pred__impl__unittest_8cc_a1b36f70a595ae4a209741df2a62002c3}
+
+\begin{DoxyCode}
+2007                                                        \{
+2008   \hyperlink{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{EXPECT\_PRED5}(\hyperlink{gtest__pred__impl__unittest_8cc_ac2bb9ad4db9fc578bd739bbba5aa374f}{PredFunction5Int},
+2009                ++n1\_,
+2010                ++n2\_,
+2011                ++n3\_,
+2012                ++n4\_,
+2013                ++n5\_);
+2014   finished\_ = \textcolor{keyword}{true};
+2015 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test, Function\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED5Test, FunctionOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a2d0901e19bffadc3482d9116cd590eb0}{}\label{gtest__pred__impl__unittest_8cc_a2d0901e19bffadc3482d9116cd590eb0}
+
+\begin{DoxyCode}
+2019                                                     \{
+2020   \hyperlink{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{EXPECT\_PRED5}(\hyperlink{gtest__pred__impl__unittest_8cc_a6e081dd19571256aef33154ce936563f}{PredFunction5Bool},
+2021                \hyperlink{structBool}{Bool}(++n1\_),
+2022                \hyperlink{structBool}{Bool}(++n2\_),
+2023                \hyperlink{structBool}{Bool}(++n3\_),
+2024                \hyperlink{structBool}{Bool}(++n4\_),
+2025                \hyperlink{structBool}{Bool}(++n5\_));
+2026   finished\_ = \textcolor{keyword}{true};
+2027 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test, Functor\+On\+Built\+In\+Type\+Success)}{TEST_F(EXPECT_PRED5Test, FunctorOnBuiltInTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a1b7aaebfa64a21ec7a7cdd0a4258108d}{}\label{gtest__pred__impl__unittest_8cc_a1b7aaebfa64a21ec7a7cdd0a4258108d}
+
+\begin{DoxyCode}
+2031                                                       \{
+2032   \hyperlink{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{EXPECT\_PRED5}(\hyperlink{structPredFunctor5}{PredFunctor5}(),
+2033                ++n1\_,
+2034                ++n2\_,
+2035                ++n3\_,
+2036                ++n4\_,
+2037                ++n5\_);
+2038   finished\_ = \textcolor{keyword}{true};
+2039 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test, Functor\+On\+User\+Type\+Success)}{TEST_F(EXPECT_PRED5Test, FunctorOnUserTypeSuccess)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Success}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a4afff8ae16f447497e2d682ab8835470}{}\label{gtest__pred__impl__unittest_8cc_a4afff8ae16f447497e2d682ab8835470}
+
+\begin{DoxyCode}
+2043                                                    \{
+2044   \hyperlink{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{EXPECT\_PRED5}(\hyperlink{structPredFunctor5}{PredFunctor5}(),
+2045                \hyperlink{structBool}{Bool}(++n1\_),
+2046                \hyperlink{structBool}{Bool}(++n2\_),
+2047                \hyperlink{structBool}{Bool}(++n3\_),
+2048                \hyperlink{structBool}{Bool}(++n4\_),
+2049                \hyperlink{structBool}{Bool}(++n5\_));
+2050   finished\_ = \textcolor{keyword}{true};
+2051 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test, Function\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED5Test, FunctionOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}]{, }
+\item[{Function\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a9f91ab913ee8017bc5e837cc34e30ae8}{}\label{gtest__pred__impl__unittest_8cc_a9f91ab913ee8017bc5e837cc34e30ae8}
+
+\begin{DoxyCode}
+2055                                                        \{
+2056   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+2057     \hyperlink{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{EXPECT\_PRED5}(\hyperlink{gtest__pred__impl__unittest_8cc_ac2bb9ad4db9fc578bd739bbba5aa374f}{PredFunction5Int},
+2058                  n1\_++,
+2059                  n2\_++,
+2060                  n3\_++,
+2061                  n4\_++,
+2062                  n5\_++);
+2063     finished\_ = \textcolor{keyword}{true};
+2064   \}, \textcolor{stringliteral}{""});
+2065 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test, Function\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED5Test, FunctionOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}]{, }
+\item[{Function\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a6188c218f102846ec55e25fcd29c1e8e}{}\label{gtest__pred__impl__unittest_8cc_a6188c218f102846ec55e25fcd29c1e8e}
+
+\begin{DoxyCode}
+2069                                                     \{
+2070   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+2071     \hyperlink{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{EXPECT\_PRED5}(\hyperlink{gtest__pred__impl__unittest_8cc_a6e081dd19571256aef33154ce936563f}{PredFunction5Bool},
+2072                  \hyperlink{structBool}{Bool}(n1\_++),
+2073                  \hyperlink{structBool}{Bool}(n2\_++),
+2074                  \hyperlink{structBool}{Bool}(n3\_++),
+2075                  \hyperlink{structBool}{Bool}(n4\_++),
+2076                  \hyperlink{structBool}{Bool}(n5\_++));
+2077     finished\_ = \textcolor{keyword}{true};
+2078   \}, \textcolor{stringliteral}{""});
+2079 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test, Functor\+On\+Built\+In\+Type\+Failure)}{TEST_F(EXPECT_PRED5Test, FunctorOnBuiltInTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}]{, }
+\item[{Functor\+On\+Built\+In\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_a7c8988c2d19eb5ed71e3bd4a0f69f96d}{}\label{gtest__pred__impl__unittest_8cc_a7c8988c2d19eb5ed71e3bd4a0f69f96d}
+
+\begin{DoxyCode}
+2083                                                       \{
+2084   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+2085     \hyperlink{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{EXPECT\_PRED5}(\hyperlink{structPredFunctor5}{PredFunctor5}(),
+2086                  n1\_++,
+2087                  n2\_++,
+2088                  n3\_++,
+2089                  n4\_++,
+2090                  n5\_++);
+2091     finished\_ = \textcolor{keyword}{true};
+2092   \}, \textcolor{stringliteral}{""});
+2093 \}
+\end{DoxyCode}
+\index{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc@{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test, Functor\+On\+User\+Type\+Failure)}{TEST_F(EXPECT_PRED5Test, FunctorOnUserTypeFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+X\+P\+E\+C\+T\+\_\+\+P\+R\+E\+D5\+Test}}]{, }
+\item[{Functor\+On\+User\+Type\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__pred__impl__unittest_8cc_ada0ed61c55660de8027dfe787136c0d8}{}\label{gtest__pred__impl__unittest_8cc_ada0ed61c55660de8027dfe787136c0d8}
+
+\begin{DoxyCode}
+2097                                                    \{
+2098   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{  \textcolor{comment}{// NOLINT}
+2099     \hyperlink{gtest__pred__impl_8h_adbfcc13f3b3d14c42a7fbd41573932bf}{EXPECT\_PRED5}(\hyperlink{structPredFunctor5}{PredFunctor5}(),
+2100                  \hyperlink{structBool}{Bool}(n1\_++),
+2101                  \hyperlink{structBool}{Bool}(n2\_++),
+2102                  \hyperlink{structBool}{Bool}(n3\_++),
+2103                  \hyperlink{structBool}{Bool}(n4\_++),
+2104                  \hyperlink{structBool}{Bool}(n5\_++));
+2105     finished\_ = \textcolor{keyword}{true};
+2106   \}, \textcolor{stringliteral}{""});
+2107 \}
+\end{DoxyCode}

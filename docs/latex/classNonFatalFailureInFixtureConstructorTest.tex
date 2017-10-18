@@ -1,0 +1,106 @@
+\hypertarget{classNonFatalFailureInFixtureConstructorTest}{}\section{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test Class Reference}
+\label{classNonFatalFailureInFixtureConstructorTest}\index{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}}
+
+
+Inheritance diagram for Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classNonFatalFailureInFixtureConstructorTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classNonFatalFailureInFixtureConstructorTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNonFatalFailureInFixtureConstructorTest_a87a70e2b18b981c627c43f2af85a9345}{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test} ()
+\item 
+\hyperlink{classNonFatalFailureInFixtureConstructorTest_a732fa961c4bb68b3390e4a49a8375619}{$\sim$\+Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test} ()
+\item 
+virtual void \hyperlink{classNonFatalFailureInFixtureConstructorTest_a7d951f8fbf7b2ac5046be8d8ee7b03d3}{Set\+Up} ()
+\item 
+virtual void \hyperlink{classNonFatalFailureInFixtureConstructorTest_ab76d79c346d9a378d625fde5739e8ad6}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}!Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}}
+\index{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}!Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}}
+\subsubsection[{\texorpdfstring{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test()}{NonFatalFailureInFixtureConstructorTest()}}]{\setlength{\rightskip}{0pt plus 5cm}Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test\+::\+Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classNonFatalFailureInFixtureConstructorTest_a87a70e2b18b981c627c43f2af85a9345}{}\label{classNonFatalFailureInFixtureConstructorTest_a87a70e2b18b981c627c43f2af85a9345}
+
+\begin{DoxyCode}
+352                                             \{
+353     printf(\textcolor{stringliteral}{"(expecting 5 failures)\(\backslash\)n"});
+354     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected failure #1, in the test fixture c'tor."};
+355   \}
+\end{DoxyCode}
+\index{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}!````~Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{$\sim$\+Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}}
+\index{````~Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{$\sim$\+Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}!Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}}
+\subsubsection[{\texorpdfstring{$\sim$\+Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test()}{~NonFatalFailureInFixtureConstructorTest()}}]{\setlength{\rightskip}{0pt plus 5cm}Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test\+::$\sim$\+Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classNonFatalFailureInFixtureConstructorTest_a732fa961c4bb68b3390e4a49a8375619}{}\label{classNonFatalFailureInFixtureConstructorTest_a732fa961c4bb68b3390e4a49a8375619}
+
+\begin{DoxyCode}
+357                                              \{
+358     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected failure #5, in the test fixture d'tor."};
+359   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classNonFatalFailureInFixtureConstructorTest_a7d951f8fbf7b2ac5046be8d8ee7b03d3}{}\label{classNonFatalFailureInFixtureConstructorTest_a7d951f8fbf7b2ac5046be8d8ee7b03d3}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a190315150c303ddf801313fd1a777733}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+361                        \{
+362     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected failure #2, in SetUp()."};
+363   \}
+\end{DoxyCode}
+\index{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test@{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}}
+\subsubsection[{\texorpdfstring{Tear\+Down()}{TearDown()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classNonFatalFailureInFixtureConstructorTest_ab76d79c346d9a378d625fde5739e8ad6}{}\label{classNonFatalFailureInFixtureConstructorTest_ab76d79c346d9a378d625fde5739e8ad6}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a5f0ab439802cbe0ef7552f1a9f791923}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+365                           \{
+366     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected failure #4, in TearDown."};
+367   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__output__test___8cc}{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}\end{DoxyCompactItemize}

@@ -1,0 +1,146 @@
+\hypertarget{classtesting_1_1internal_1_1FinalSuccessChecker}{}\section{testing\+:\+:internal\+:\+:Final\+Success\+Checker Class Reference}
+\label{classtesting_1_1internal_1_1FinalSuccessChecker}\index{testing\+::internal\+::\+Final\+Success\+Checker@{testing\+::internal\+::\+Final\+Success\+Checker}}
+
+
+Inheritance diagram for testing\+:\+:internal\+:\+:Final\+Success\+Checker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classtesting_1_1internal_1_1FinalSuccessChecker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:internal\+:\+:Final\+Success\+Checker\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classtesting_1_1internal_1_1FinalSuccessChecker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1FinalSuccessChecker_a8f39d12a1f2bfe8c6c04b5c6749382c9}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Final\+Success\+Checker@{testing\+::internal\+::\+Final\+Success\+Checker}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!testing\+::internal\+::\+Final\+Success\+Checker@{testing\+::internal\+::\+Final\+Success\+Checker}}
+\subsubsection[{\texorpdfstring{Tear\+Down()}{TearDown()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void testing\+::internal\+::\+Final\+Success\+Checker\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1FinalSuccessChecker_a8f39d12a1f2bfe8c6c04b5c6749382c9}{}\label{classtesting_1_1internal_1_1FinalSuccessChecker_a8f39d12a1f2bfe8c6c04b5c6749382c9}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Environment_a039bdaa705c46b9b88234cf4d3bb6254}{testing\+::\+Environment}.
+
+
+\begin{DoxyCode}
+236                           \{
+237     UnitTest* unit\_test = \hyperlink{classtesting_1_1UnitTest_a24192400b70b3b946746954e9574fb8e}{UnitTest::GetInstance}();
+238 
+239     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1 + \hyperlink{namespacetesting_1_1internal_a685ea5332074ae63b0ded2b184ac2271}{kTypedTestCases}, unit\_test->successful\_test\_case\_count());
+240     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(3 + \hyperlink{namespacetesting_1_1internal_a53ee2d113744f9ba1d89469db4d7388b}{kTypedTests}, unit\_test->successful\_test\_count());
+241     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, unit\_test->failed\_test\_case\_count());
+242     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, unit\_test->failed\_test\_count());
+243     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(unit\_test->Passed());
+244     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(unit\_test->Failed());
+245     \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(2 + \hyperlink{namespacetesting_1_1internal_a685ea5332074ae63b0ded2b184ac2271}{kTypedTestCases}, unit\_test->total\_test\_case\_count());
+246 
+247     \textcolor{keyword}{const} \hyperlink{namespacegmock__test__utils_a959c5af591e4d49b6d35745205b64509}{TestCase}** \textcolor{keyword}{const} test\_cases = 
+      \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a9a549307062083d10358638af272cc98}{UnitTestHelper::GetSortedTestCases}();
+248 
+249     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"ApiTest"}, test\_cases[0]->name());
+250     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{IsNull}(test\_cases[0]->type\_param()));
+251     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(test\_cases[0]->should\_run());
+252     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, test\_cases[0]->disabled\_test\_count());
+253     \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(4, test\_cases[0]->total\_test\_count());
+254     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(3, test\_cases[0]->successful\_test\_count());
+255     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, test\_cases[0]->failed\_test\_count());
+256     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(test\_cases[0]->Passed());
+257     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(test\_cases[0]->Failed());
+258 
+259     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"DISABLED\_Test"}, test\_cases[1]->name());
+260     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{IsNull}(test\_cases[1]->type\_param()));
+261     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(test\_cases[1]->should\_run());
+262     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, test\_cases[1]->disabled\_test\_count());
+263     \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(1, test\_cases[1]->total\_test\_count());
+264     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, test\_cases[1]->successful\_test\_count());
+265     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, test\_cases[1]->failed\_test\_count());
+266 
+267 \textcolor{preprocessor}{#if GTEST\_HAS\_TYPED\_TEST}
+268     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"TestCaseWithCommentTest/0"}, test\_cases[2]->name());
+269     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(GetTypeName<int>().c\_str(), test\_cases[2]->type\_param());
+270     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(test\_cases[2]->should\_run());
+271     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, test\_cases[2]->disabled\_test\_count());
+272     \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(1, test\_cases[2]->total\_test\_count());
+273     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, test\_cases[2]->successful\_test\_count());
+274     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, test\_cases[2]->failed\_test\_count());
+275     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(test\_cases[2]->Passed());
+276     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(test\_cases[2]->Failed());
+277 \textcolor{preprocessor}{#endif  // GTEST\_HAS\_TYPED\_TEST}
+278 
+279     \textcolor{keyword}{const} \hyperlink{namespacegmock__test__utils_a959c5af591e4d49b6d35745205b64509}{TestCase}* test\_case = \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a46303cbb7a6abb456f7b1350542113ac}{UnitTestHelper::FindTestCase}(\textcolor{stringliteral}{"ApiTest"})
+      ;
+280     \textcolor{keyword}{const} TestInfo** tests = \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a02602d22fb74566dad78c0c9d4f24e78}{UnitTestHelper::GetSortedTests}(test\_case);
+281     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"DISABLED\_Dummy1"}, tests[0]->name());
+282     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"ApiTest"}, tests[0]->test\_case\_name());
+283     \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(tests[0]->should\_run());
+284 
+285     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"TestCaseDisabledAccessorsWork"}, tests[1]->name());
+286     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"ApiTest"}, tests[1]->test\_case\_name());
+287     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{IsNull}(tests[1]->value\_param()));
+288     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{IsNull}(tests[1]->type\_param()));
+289     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(tests[1]->should\_run());
+290     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(tests[1]->result()->Passed());
+291     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, tests[1]->result()->test\_property\_count());
+292 
+293     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"TestCaseImmutableAccessorsWork"}, tests[2]->name());
+294     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"ApiTest"}, tests[2]->test\_case\_name());
+295     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{IsNull}(tests[2]->value\_param()));
+296     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{IsNull}(tests[2]->type\_param()));
+297     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(tests[2]->should\_run());
+298     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(tests[2]->result()->Passed());
+299     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, tests[2]->result()->test\_property\_count());
+300 
+301     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"UnitTestImmutableAccessorsWork"}, tests[3]->name());
+302     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"ApiTest"}, tests[3]->test\_case\_name());
+303     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{IsNull}(tests[3]->value\_param()));
+304     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{IsNull}(tests[3]->type\_param()));
+305     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(tests[3]->should\_run());
+306     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(tests[3]->result()->Passed());
+307     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, tests[3]->result()->test\_property\_count());
+308     \textcolor{keyword}{const} TestProperty& \textcolor{keyword}{property} = tests[3]->result()->GetTestProperty(0);
+309     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"key"}, property.key());
+310     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"value"}, property.value());
+311 
+312     \textcolor{keyword}{delete}[] tests;
+313 
+314 \textcolor{preprocessor}{#if GTEST\_HAS\_TYPED\_TEST}
+315     test\_case = \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a46303cbb7a6abb456f7b1350542113ac}{UnitTestHelper::FindTestCase}(\textcolor{stringliteral}{"TestCaseWithCommentTest/0"});
+316     tests = \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a02602d22fb74566dad78c0c9d4f24e78}{UnitTestHelper::GetSortedTests}(test\_case);
+317 
+318     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"Dummy"}, tests[0]->name());
+319     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(\textcolor{stringliteral}{"TestCaseWithCommentTest/0"}, tests[0]->test\_case\_name());
+320     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{namespacetesting_1_1internal_adcfd37a66bc4cb0e8291cf46e1a6c72b}{IsNull}(tests[0]->value\_param()));
+321     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(GetTypeName<int>().c\_str(), tests[0]->type\_param());
+322     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(tests[0]->should\_run());
+323     \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(tests[0]->result()->Passed());
+324     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, tests[0]->result()->test\_property\_count());
+325 
+326     \textcolor{keyword}{delete}[] tests;
+327 \textcolor{preprocessor}{#endif  // GTEST\_HAS\_TYPED\_TEST}
+328     \textcolor{keyword}{delete}[] test\_cases;
+329   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest-unittest-api__test_8cc}{gtest-\/unittest-\/api\+\_\+test.\+cc}\end{DoxyCompactItemize}

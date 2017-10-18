@@ -1,0 +1,79 @@
+\hypertarget{structBool}{}\section{Bool Struct Reference}
+\label{structBool}\index{Bool@{Bool}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structBool_a03dfd4851b13abb29414887fcada7fca}{Bool} (int val)
+\item 
+bool \hyperlink{structBool_a812f0599da778aa0399cffa1a2687f6e}{operator$>$} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}) const 
+\item 
+\hyperlink{structBool}{Bool} \hyperlink{structBool_a5d6f8c4a1def861f9b1c24e46b1228ca}{operator+} (const \hyperlink{structBool}{Bool} \&rhs) const 
+\item 
+bool \hyperlink{structBool_a1e885f75c224ea1fba1cbce11c888716}{operator==} (const \hyperlink{structBool}{Bool} \&rhs) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structBool_a16be863c269f988cdcbe59f9d846a141}{value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Bool@{Bool}!Bool@{Bool}}
+\index{Bool@{Bool}!Bool@{Bool}}
+\subsubsection[{\texorpdfstring{Bool(int val)}{Bool(int val)}}]{\setlength{\rightskip}{0pt plus 5cm}Bool\+::\+Bool (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{structBool_a03dfd4851b13abb29414887fcada7fca}{}\label{structBool_a03dfd4851b13abb29414887fcada7fca}
+
+\begin{DoxyCode}
+57 : \hyperlink{structBool_a16be863c269f988cdcbe59f9d846a141}{value}(val != 0) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{Bool@{Bool}!operator+@{operator+}}
+\index{operator+@{operator+}!Bool@{Bool}}
+\subsubsection[{\texorpdfstring{operator+(const Bool \&rhs) const }{operator+(const Bool &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bool} Bool\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Bool} \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structBool_a5d6f8c4a1def861f9b1c24e46b1228ca}{}\label{structBool_a5d6f8c4a1def861f9b1c24e46b1228ca}
+
+\begin{DoxyCode}
+61 \{ \textcolor{keywordflow}{return} \hyperlink{structBool_a03dfd4851b13abb29414887fcada7fca}{Bool}(\hyperlink{structBool_a16be863c269f988cdcbe59f9d846a141}{value} + rhs.\hyperlink{structBool_a16be863c269f988cdcbe59f9d846a141}{value}); \}
+\end{DoxyCode}
+\index{Bool@{Bool}!operator==@{operator==}}
+\index{operator==@{operator==}!Bool@{Bool}}
+\subsubsection[{\texorpdfstring{operator==(const Bool \&rhs) const }{operator==(const Bool &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Bool\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Bool} \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structBool_a1e885f75c224ea1fba1cbce11c888716}{}\label{structBool_a1e885f75c224ea1fba1cbce11c888716}
+
+\begin{DoxyCode}
+63 \{ \textcolor{keywordflow}{return} \hyperlink{structBool_a16be863c269f988cdcbe59f9d846a141}{value} == rhs.\hyperlink{structBool_a16be863c269f988cdcbe59f9d846a141}{value}; \}
+\end{DoxyCode}
+\index{Bool@{Bool}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Bool@{Bool}}
+\subsubsection[{\texorpdfstring{operator$>$(int n) const }{operator>(int n) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Bool\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{structBool_a812f0599da778aa0399cffa1a2687f6e}{}\label{structBool_a812f0599da778aa0399cffa1a2687f6e}
+
+\begin{DoxyCode}
+59 \{ \textcolor{keywordflow}{return} \hyperlink{structBool_a16be863c269f988cdcbe59f9d846a141}{value} > \hyperlink{structBool_a03dfd4851b13abb29414887fcada7fca}{Bool}(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n}).value; \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Bool@{Bool}!value@{value}}
+\index{value@{value}!Bool@{Bool}}
+\subsubsection[{\texorpdfstring{value}{value}}]{\setlength{\rightskip}{0pt plus 5cm}bool Bool\+::value}\hypertarget{structBool_a16be863c269f988cdcbe59f9d846a141}{}\label{structBool_a16be863c269f988cdcbe59f9d846a141}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__pred__impl__unittest_8cc}{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}\end{DoxyCompactItemize}

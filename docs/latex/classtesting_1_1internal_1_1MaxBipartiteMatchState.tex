@@ -1,0 +1,76 @@
+\hypertarget{classtesting_1_1internal_1_1MaxBipartiteMatchState}{}\section{testing\+:\+:internal\+:\+:Max\+Bipartite\+Match\+State Class Reference}
+\label{classtesting_1_1internal_1_1MaxBipartiteMatchState}\index{testing\+::internal\+::\+Max\+Bipartite\+Match\+State@{testing\+::internal\+::\+Max\+Bipartite\+Match\+State}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1MaxBipartiteMatchState_a9d0166d5cc7afd1b741f6c312df72b54}{Max\+Bipartite\+Match\+State} (const \hyperlink{classtesting_1_1internal_1_1MatchMatrix}{Match\+Matrix} \&graph)
+\item 
+\hyperlink{namespacetesting_1_1internal_a0038618710c01a71150887dc7cfb0a29}{Element\+Matcher\+Pairs} \hyperlink{classtesting_1_1internal_1_1MaxBipartiteMatchState_af6efab664ee390925b24d023f1368192}{Compute} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Max\+Bipartite\+Match\+State@{testing\+::internal\+::\+Max\+Bipartite\+Match\+State}!Max\+Bipartite\+Match\+State@{Max\+Bipartite\+Match\+State}}
+\index{Max\+Bipartite\+Match\+State@{Max\+Bipartite\+Match\+State}!testing\+::internal\+::\+Max\+Bipartite\+Match\+State@{testing\+::internal\+::\+Max\+Bipartite\+Match\+State}}
+\subsubsection[{\texorpdfstring{Max\+Bipartite\+Match\+State(const Match\+Matrix \&graph)}{MaxBipartiteMatchState(const MatchMatrix &graph)}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::internal\+::\+Max\+Bipartite\+Match\+State\+::\+Max\+Bipartite\+Match\+State (
+\begin{DoxyParamCaption}
+\item[{const {\bf Match\+Matrix} \&}]{graph}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1MaxBipartiteMatchState_a9d0166d5cc7afd1b741f6c312df72b54}{}\label{classtesting_1_1internal_1_1MaxBipartiteMatchState_a9d0166d5cc7afd1b741f6c312df72b54}
+
+\begin{DoxyCode}
+201       : graph\_(&graph),
+202         left\_(graph\_->\hyperlink{classtesting_1_1internal_1_1MatchMatrix_ab98f3aa7fd9a536329e495a5016f8d63}{LhsSize}(), kUnused),
+203         right\_(graph\_->\hyperlink{classtesting_1_1internal_1_1MatchMatrix_a5292e007b3d54e2d89e38fa2a9c4e9d9}{RhsSize}(), kUnused) \{
+204   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Max\+Bipartite\+Match\+State@{testing\+::internal\+::\+Max\+Bipartite\+Match\+State}!Compute@{Compute}}
+\index{Compute@{Compute}!testing\+::internal\+::\+Max\+Bipartite\+Match\+State@{testing\+::internal\+::\+Max\+Bipartite\+Match\+State}}
+\subsubsection[{\texorpdfstring{Compute()}{Compute()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+Matcher\+Pairs} testing\+::internal\+::\+Max\+Bipartite\+Match\+State\+::\+Compute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1MaxBipartiteMatchState_af6efab664ee390925b24d023f1368192}{}\label{classtesting_1_1internal_1_1MaxBipartiteMatchState_af6efab664ee390925b24d023f1368192}
+
+\begin{DoxyCode}
+207                                 \{
+208     \textcolor{comment}{// 'seen' is used for path finding \{ 0: unseen, 1: seen \}.}
+209     ::std::vector<char> seen;
+210     \textcolor{comment}{// Searches the residual flow graph for a path from each left node to}
+211     \textcolor{comment}{// the sink in the residual flow graph, and if one is found, add flow}
+212     \textcolor{comment}{// to the graph. It's okay to search through the left nodes once. The}
+213     \textcolor{comment}{// edge from the implicit source node to each previously-visited left}
+214     \textcolor{comment}{// node will have flow if that left node has any path to the sink}
+215     \textcolor{comment}{// whatsoever. Subsequent augmentations can only add flow to the}
+216     \textcolor{comment}{// network, and cannot take away that previous flow unit from the source.}
+217     \textcolor{comment}{// Since the source-to-left edge can only carry one flow unit (or,}
+218     \textcolor{comment}{// each element can be matched to only one matcher), there is no need}
+219     \textcolor{comment}{// to visit the left nodes more than once looking for augmented paths.}
+220     \textcolor{comment}{// The flow is known to be possible or impossible by looking at the}
+221     \textcolor{comment}{// node once.}
+222     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} ilhs = 0; ilhs < graph\_->\hyperlink{classtesting_1_1internal_1_1MatchMatrix_ab98f3aa7fd9a536329e495a5016f8d63}{LhsSize}(); ++ilhs) \{
+223       \textcolor{comment}{// Reset the path-marking vector and try to find a path from}
+224       \textcolor{comment}{// source to sink starting at the left\_[ilhs] node.}
+225       \hyperlink{gtest-port_8h_ab54343f0a36dc4cb0ce8a478dd7847b8}{GTEST\_CHECK\_}(left\_[ilhs] == kUnused)
+226           << \textcolor{stringliteral}{"ilhs: "} << ilhs << \textcolor{stringliteral}{", left\_[ilhs]: "} << left\_[ilhs];
+227       \textcolor{comment}{// 'seen' initialized to 'graph\_->RhsSize()' copies of 0.}
+228       seen.assign(graph\_->\hyperlink{classtesting_1_1internal_1_1MatchMatrix_a5292e007b3d54e2d89e38fa2a9c4e9d9}{RhsSize}(), 0);
+229       TryAugment(ilhs, &seen);
+230     \}
+231     \hyperlink{namespacetesting_1_1internal_a0038618710c01a71150887dc7cfb0a29}{ElementMatcherPairs} result;
+232     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} ilhs = 0; ilhs < left\_.size(); ++ilhs) \{
+233       \textcolor{keywordtype}{size\_t} irhs = left\_[ilhs];
+234       \textcolor{keywordflow}{if} (irhs == kUnused) \textcolor{keywordflow}{continue};
+235       result.push\_back(\hyperlink{namespacetesting_1_1internal_a109863545f08651178bf0f520aebd33b}{ElementMatcherPair}(ilhs, irhs));
+236     \}
+237     \textcolor{keywordflow}{return} result;
+238   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/src/\hyperlink{gmock-matchers_8cc}{gmock-\/matchers.\+cc}\end{DoxyCompactItemize}

@@ -1,0 +1,104 @@
+\hypertarget{classgtest__env__var__test_1_1GTestEnvVarTest}{}\section{gtest\+\_\+env\+\_\+var\+\_\+test.\+G\+Test\+Env\+Var\+Test Class Reference}
+\label{classgtest__env__var__test_1_1GTestEnvVarTest}\index{gtest\+\_\+env\+\_\+var\+\_\+test.\+G\+Test\+Env\+Var\+Test@{gtest\+\_\+env\+\_\+var\+\_\+test.\+G\+Test\+Env\+Var\+Test}}
+
+
+Inheritance diagram for gtest\+\_\+env\+\_\+var\+\_\+test.\+G\+Test\+Env\+Var\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classgtest__env__var__test_1_1GTestEnvVarTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gtest\+\_\+env\+\_\+var\+\_\+test.\+G\+Test\+Env\+Var\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classgtest__env__var__test_1_1GTestEnvVarTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__env__var__test_1_1GTestEnvVarTest_ad169061caa22a6cd510535d6da94b97e}{test\+Env\+Var\+Affects\+Flag} (self)
+\item 
+def \hyperlink{classgtest__env__var__test_1_1GTestEnvVarTest_ae2f623209c115e094965e606cd34eec4}{test\+Xml\+Output\+File} (self)
+\item 
+def \hyperlink{classgtest__env__var__test_1_1GTestEnvVarTest_ae41b9b9569eb327d5886cb811c2995a7}{test\+Xml\+Output\+File\+Override} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test@{gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test}!test\+Env\+Var\+Affects\+Flag@{test\+Env\+Var\+Affects\+Flag}}
+\index{test\+Env\+Var\+Affects\+Flag@{test\+Env\+Var\+Affects\+Flag}!gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test@{gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test}}
+\subsubsection[{\texorpdfstring{test\+Env\+Var\+Affects\+Flag(self)}{testEnvVarAffectsFlag(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+env\+\_\+var\+\_\+test.\+G\+Test\+Env\+Var\+Test.\+test\+Env\+Var\+Affects\+Flag (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__env__var__test_1_1GTestEnvVarTest_ad169061caa22a6cd510535d6da94b97e}{}\label{classgtest__env__var__test_1_1GTestEnvVarTest_ad169061caa22a6cd510535d6da94b97e}
+\begin{DoxyVerb}Tests that environment variable should affect the corresponding flag.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+84   \textcolor{keyword}{def }testEnvVarAffectsFlag(self):
+85     \textcolor{stringliteral}{"""Tests that environment variable should affect the corresponding flag."""}
+86 
+87     \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'break\_on\_failure'}, \textcolor{stringliteral}{'1'}, \textcolor{stringliteral}{'0'})
+88     \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'color'}, \textcolor{stringliteral}{'yes'}, \textcolor{stringliteral}{'auto'})
+89     \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'filter'}, \textcolor{stringliteral}{'FooTest.Bar'}, \textcolor{stringliteral}{'*'})
+90     \hyperlink{namespacegtest__catch__exceptions__test_a60be14c2b88aafb689ba4d3d2578449e}{SetEnvVar}(\textcolor{stringliteral}{'XML\_OUTPUT\_FILE'}, \textcolor{keywordtype}{None}) \textcolor{comment}{# For 'output' test}
+91     \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'output'}, \textcolor{stringliteral}{'xml:tmp/foo.xml'}, \textcolor{stringliteral}{''})
+92     \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'print\_time'}, \textcolor{stringliteral}{'0'}, \textcolor{stringliteral}{'1'})
+93     \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'repeat'}, \textcolor{stringliteral}{'999'}, \textcolor{stringliteral}{'1'})
+94     \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'throw\_on\_failure'}, \textcolor{stringliteral}{'1'}, \textcolor{stringliteral}{'0'})
+95     \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'death\_test\_style'}, \textcolor{stringliteral}{'threadsafe'}, \textcolor{stringliteral}{'fast'})
+96     \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'catch\_exceptions'}, \textcolor{stringliteral}{'0'}, \textcolor{stringliteral}{'1'})
+97 
+98     \textcolor{keywordflow}{if} IS\_LINUX:
+99       \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'death\_test\_use\_fork'}, \textcolor{stringliteral}{'1'}, \textcolor{stringliteral}{'0'})
+100       \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(\textcolor{stringliteral}{'stack\_trace\_depth'}, \textcolor{stringliteral}{'0'}, \textcolor{stringliteral}{'100'})
+101 
+\end{DoxyCode}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test@{gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test}!test\+Xml\+Output\+File@{test\+Xml\+Output\+File}}
+\index{test\+Xml\+Output\+File@{test\+Xml\+Output\+File}!gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test@{gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test}}
+\subsubsection[{\texorpdfstring{test\+Xml\+Output\+File(self)}{testXmlOutputFile(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+env\+\_\+var\+\_\+test.\+G\+Test\+Env\+Var\+Test.\+test\+Xml\+Output\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__env__var__test_1_1GTestEnvVarTest_ae2f623209c115e094965e606cd34eec4}{}\label{classgtest__env__var__test_1_1GTestEnvVarTest_ae2f623209c115e094965e606cd34eec4}
+\begin{DoxyVerb}Tests that $XML_OUTPUT_FILE affects the output flag.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+102   \textcolor{keyword}{def }testXmlOutputFile(self):
+103     \textcolor{stringliteral}{"""Tests that $XML\_OUTPUT\_FILE affects the output flag."""}
+104 
+105     \hyperlink{namespacegtest__catch__exceptions__test_a60be14c2b88aafb689ba4d3d2578449e}{SetEnvVar}(\textcolor{stringliteral}{'GTEST\_OUTPUT'}, \textcolor{keywordtype}{None})
+106     \hyperlink{namespacegtest__catch__exceptions__test_a60be14c2b88aafb689ba4d3d2578449e}{SetEnvVar}(\textcolor{stringliteral}{'XML\_OUTPUT\_FILE'}, \textcolor{stringliteral}{'tmp/bar.xml'})
+107     \hyperlink{namespacegtest__env__var__test_a8c94a5abd1117cdd2b402c0059a49a3a}{AssertEq}(\textcolor{stringliteral}{'xml:tmp/bar.xml'}, \hyperlink{namespacegtest__env__var__test_a79d5f78f47c7dde37a0941d8604cf857}{GetFlag}(\textcolor{stringliteral}{'output'}))
+108 
+\end{DoxyCode}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test@{gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test}!test\+Xml\+Output\+File\+Override@{test\+Xml\+Output\+File\+Override}}
+\index{test\+Xml\+Output\+File\+Override@{test\+Xml\+Output\+File\+Override}!gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test@{gtest\+\_\+env\+\_\+var\+\_\+test\+::\+G\+Test\+Env\+Var\+Test}}
+\subsubsection[{\texorpdfstring{test\+Xml\+Output\+File\+Override(self)}{testXmlOutputFileOverride(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+env\+\_\+var\+\_\+test.\+G\+Test\+Env\+Var\+Test.\+test\+Xml\+Output\+File\+Override (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__env__var__test_1_1GTestEnvVarTest_ae41b9b9569eb327d5886cb811c2995a7}{}\label{classgtest__env__var__test_1_1GTestEnvVarTest_ae41b9b9569eb327d5886cb811c2995a7}
+\begin{DoxyVerb}Tests that $XML_OUTPUT_FILE is overridden by $GTEST_OUTPUT\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+109   \textcolor{keyword}{def }testXmlOutputFileOverride(self):
+110     \textcolor{stringliteral}{"""Tests that $XML\_OUTPUT\_FILE is overridden by $GTEST\_OUTPUT"""}
+111 
+112     \hyperlink{namespacegtest__catch__exceptions__test_a60be14c2b88aafb689ba4d3d2578449e}{SetEnvVar}(\textcolor{stringliteral}{'GTEST\_OUTPUT'}, \textcolor{stringliteral}{'xml:tmp/foo.xml'})
+113     \hyperlink{namespacegtest__catch__exceptions__test_a60be14c2b88aafb689ba4d3d2578449e}{SetEnvVar}(\textcolor{stringliteral}{'XML\_OUTPUT\_FILE'}, \textcolor{stringliteral}{'tmp/bar.xml'})
+114     \hyperlink{namespacegtest__env__var__test_a8c94a5abd1117cdd2b402c0059a49a3a}{AssertEq}(\textcolor{stringliteral}{'xml:tmp/foo.xml'}, \hyperlink{namespacegtest__env__var__test_a79d5f78f47c7dde37a0941d8604cf857}{GetFlag}(\textcolor{stringliteral}{'output'}))
+115 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__env__var__test_8py}{gtest\+\_\+env\+\_\+var\+\_\+test.\+py}\end{DoxyCompactItemize}

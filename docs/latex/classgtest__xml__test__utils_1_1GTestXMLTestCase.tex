@@ -1,0 +1,222 @@
+\hypertarget{classgtest__xml__test__utils_1_1GTestXMLTestCase}{}\section{gtest\+\_\+xml\+\_\+test\+\_\+utils.\+G\+Test\+X\+M\+L\+Test\+Case Class Reference}
+\label{classgtest__xml__test__utils_1_1GTestXMLTestCase}\index{gtest\+\_\+xml\+\_\+test\+\_\+utils.\+G\+Test\+X\+M\+L\+Test\+Case@{gtest\+\_\+xml\+\_\+test\+\_\+utils.\+G\+Test\+X\+M\+L\+Test\+Case}}
+
+
+Inheritance diagram for gtest\+\_\+xml\+\_\+test\+\_\+utils.\+G\+Test\+X\+M\+L\+Test\+Case\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgtest__xml__test__utils_1_1GTestXMLTestCase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gtest\+\_\+xml\+\_\+test\+\_\+utils.\+G\+Test\+X\+M\+L\+Test\+Case\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classgtest__xml__test__utils_1_1GTestXMLTestCase__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__xml__test__utils_1_1GTestXMLTestCase_a977273e8863f4f41d121bb5a64b08d32}{Assert\+Equivalent\+Nodes} (self, expected\+\_\+node, actual\+\_\+node)
+\item 
+def \hyperlink{classgtest__xml__test__utils_1_1GTestXMLTestCase_ac4823e96c3b5327b25a340a3605447d9}{Normalize\+Xml} (self, element)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \hyperlink{classgtest__xml__test__utils_1_1GTestXMLTestCase_a0e3a4e84e18f29d2248dcd670a0a6ae6}{identifying\+\_\+attribute}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Base class for tests of Google Test's XML output functionality.
+\end{DoxyVerb}
+ 
+
+\subsection{Member Function Documentation}
+\index{gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case@{gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case}!Assert\+Equivalent\+Nodes@{Assert\+Equivalent\+Nodes}}
+\index{Assert\+Equivalent\+Nodes@{Assert\+Equivalent\+Nodes}!gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case@{gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case}}
+\subsubsection[{\texorpdfstring{Assert\+Equivalent\+Nodes(self, expected\+\_\+node, actual\+\_\+node)}{AssertEquivalentNodes(self, expected_node, actual_node)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+test\+\_\+utils.\+G\+Test\+X\+M\+L\+Test\+Case.\+Assert\+Equivalent\+Nodes (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{expected\+\_\+node, }
+\item[{}]{actual\+\_\+node}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__test__utils_1_1GTestXMLTestCase_a977273e8863f4f41d121bb5a64b08d32}{}\label{classgtest__xml__test__utils_1_1GTestXMLTestCase_a977273e8863f4f41d121bb5a64b08d32}
+\begin{DoxyVerb}Asserts that actual_node (a DOM node object) is equivalent to
+expected_node (another DOM node object), in that either both of
+them are CDATA nodes and have the same value, or both are DOM
+elements and actual_node meets all of the following conditions:
+
+*  It has the same tag name as expected_node.
+*  It has the same set of attributes as expected_node, each with
+   the same value as the corresponding attribute of expected_node.
+   Exceptions are any attribute named "time", which needs only be
+   convertible to a floating-point number and any attribute named
+   "type_param" which only has to be non-empty.
+*  It has an equivalent set of child nodes (including elements and
+   CDATA sections) as expected_node.  Note that we ignore the
+   order of the children as they are not guaranteed to be in any
+   particular order.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+51   \textcolor{keyword}{def }AssertEquivalentNodes(self, expected\_node, actual\_node):
+52     \textcolor{stringliteral}{"""}
+53 \textcolor{stringliteral}{    Asserts that actual\_node (a DOM node object) is equivalent to}
+54 \textcolor{stringliteral}{    expected\_node (another DOM node object), in that either both of}
+55 \textcolor{stringliteral}{    them are CDATA nodes and have the same value, or both are DOM}
+56 \textcolor{stringliteral}{    elements and actual\_node meets all of the following conditions:}
+57 \textcolor{stringliteral}{}
+58 \textcolor{stringliteral}{    *  It has the same tag name as expected\_node.}
+59 \textcolor{stringliteral}{    *  It has the same set of attributes as expected\_node, each with}
+60 \textcolor{stringliteral}{       the same value as the corresponding attribute of expected\_node.}
+61 \textcolor{stringliteral}{       Exceptions are any attribute named "time", which needs only be}
+62 \textcolor{stringliteral}{       convertible to a floating-point number and any attribute named}
+63 \textcolor{stringliteral}{       "type\_param" which only has to be non-empty.}
+64 \textcolor{stringliteral}{    *  It has an equivalent set of child nodes (including elements and}
+65 \textcolor{stringliteral}{       CDATA sections) as expected\_node.  Note that we ignore the}
+66 \textcolor{stringliteral}{       order of the children as they are not guaranteed to be in any}
+67 \textcolor{stringliteral}{       particular order.}
+68 \textcolor{stringliteral}{    """}
+69 
+70     \textcolor{keywordflow}{if} expected\_node.nodeType == Node.CDATA\_SECTION\_NODE:
+71       self.assertEquals(Node.CDATA\_SECTION\_NODE, actual\_node.nodeType)
+72       self.assertEquals(expected\_node.nodeValue, actual\_node.nodeValue)
+73       \textcolor{keywordflow}{return}
+74 
+75     self.assertEquals(Node.ELEMENT\_NODE, actual\_node.nodeType)
+76     self.assertEquals(Node.ELEMENT\_NODE, expected\_node.nodeType)
+77     self.assertEquals(expected\_node.tagName, actual\_node.tagName)
+78 
+79     expected\_attributes = expected\_node.attributes
+80     actual\_attributes   = actual\_node  .attributes
+81     self.assertEquals(
+82         expected\_attributes.length, actual\_attributes.length,
+83         \textcolor{stringliteral}{'attribute numbers differ in element %s:\(\backslash\)nExpected: %r\(\backslash\)nActual: %r'} % (
+84             actual\_node.tagName, expected\_attributes.keys(),
+85             actual\_attributes.keys()))
+86     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(expected\_attributes.length):
+87       expected\_attr = expected\_attributes.item(i)
+88       actual\_attr   = actual\_attributes.get(expected\_attr.name)
+89       self.assert\_(
+90           actual\_attr \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None},
+91           \textcolor{stringliteral}{'expected attribute %s not found in element %s'} %
+92           (expected\_attr.name, actual\_node.tagName))
+93       self.assertEquals(
+94           expected\_attr.value, actual\_attr.value,
+95           \textcolor{stringliteral}{' values of attribute %s in element %s differ: %s vs %s'} %
+96           (expected\_attr.name, actual\_node.tagName,
+97            expected\_attr.value, actual\_attr.value))
+98 
+99     expected\_children = self.\_GetChildren(expected\_node)
+100     actual\_children = self.\_GetChildren(actual\_node)
+101     self.assertEquals(
+102         len(expected\_children), len(actual\_children),
+103         \textcolor{stringliteral}{'number of child elements differ in element '} + actual\_node.tagName)
+104     \textcolor{keywordflow}{for} child\_id, child \textcolor{keywordflow}{in} expected\_children.items():
+105       self.assert\_(child\_id \textcolor{keywordflow}{in} actual\_children,
+106                    \textcolor{stringliteral}{'<%s> is not in <%s> (in element %s)'} %
+107                    (child\_id, actual\_children, actual\_node.tagName))
+108       self.AssertEquivalentNodes(child, actual\_children[child\_id])
+109 
+\end{DoxyCode}
+\index{gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case@{gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case}!Normalize\+Xml@{Normalize\+Xml}}
+\index{Normalize\+Xml@{Normalize\+Xml}!gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case@{gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case}}
+\subsubsection[{\texorpdfstring{Normalize\+Xml(self, element)}{NormalizeXml(self, element)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+xml\+\_\+test\+\_\+utils.\+G\+Test\+X\+M\+L\+Test\+Case.\+Normalize\+Xml (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{element}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__xml__test__utils_1_1GTestXMLTestCase_ac4823e96c3b5327b25a340a3605447d9}{}\label{classgtest__xml__test__utils_1_1GTestXMLTestCase_ac4823e96c3b5327b25a340a3605447d9}
+\begin{DoxyVerb}Normalizes Google Test's XML output to eliminate references to transient
+information that may change from run to run.
+
+*  The "time" attribute of <testsuites>, <testsuite> and <testcase>
+   elements is replaced with a single asterisk, if it contains
+   only digit characters.
+*  The "timestamp" attribute of <testsuites> elements is replaced with a
+   single asterisk, if it contains a valid ISO8601 datetime value.
+*  The "type_param" attribute of <testcase> elements is replaced with a
+   single asterisk (if it sn non-empty) as it is the type name returned
+   by the compiler and is platform dependent.
+*  The line info reported in the first line of the "message"
+   attribute and CDATA section of <failure> elements is replaced with the
+   file's basename and a single asterisk for the line number.
+*  The directory names in file paths are removed.
+*  The stack traces are removed.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+150   \textcolor{keyword}{def }NormalizeXml(self, element):
+151     \textcolor{stringliteral}{"""}
+152 \textcolor{stringliteral}{    Normalizes Google Test's XML output to eliminate references to transient}
+153 \textcolor{stringliteral}{    information that may change from run to run.}
+154 \textcolor{stringliteral}{}
+155 \textcolor{stringliteral}{    *  The "time" attribute of <testsuites>, <testsuite> and <testcase>}
+156 \textcolor{stringliteral}{       elements is replaced with a single asterisk, if it contains}
+157 \textcolor{stringliteral}{       only digit characters.}
+158 \textcolor{stringliteral}{    *  The "timestamp" attribute of <testsuites> elements is replaced with a}
+159 \textcolor{stringliteral}{       single asterisk, if it contains a valid ISO8601 datetime value.}
+160 \textcolor{stringliteral}{    *  The "type\_param" attribute of <testcase> elements is replaced with a}
+161 \textcolor{stringliteral}{       single asterisk (if it sn non-empty) as it is the type name returned}
+162 \textcolor{stringliteral}{       by the compiler and is platform dependent.}
+163 \textcolor{stringliteral}{    *  The line info reported in the first line of the "message"}
+164 \textcolor{stringliteral}{       attribute and CDATA section of <failure> elements is replaced with the}
+165 \textcolor{stringliteral}{       file's basename and a single asterisk for the line number.}
+166 \textcolor{stringliteral}{    *  The directory names in file paths are removed.}
+167 \textcolor{stringliteral}{    *  The stack traces are removed.}
+168 \textcolor{stringliteral}{    """}
+169 
+170     \textcolor{keywordflow}{if} element.tagName == \textcolor{stringliteral}{'testsuites'}:
+171       timestamp = element.getAttributeNode(\textcolor{stringliteral}{'timestamp'})
+172       timestamp.value = re.sub(\textcolor{stringliteral}{r'^\(\backslash\)d\{4\}-\(\backslash\)d\(\backslash\)d-\(\backslash\)d\(\backslash\)dT\(\backslash\)d\(\backslash\)d:\(\backslash\)d\(\backslash\)d:\(\backslash\)d\(\backslash\)d$'},
+173                                \textcolor{stringliteral}{'*'}, timestamp.value)
+174     \textcolor{keywordflow}{if} element.tagName \textcolor{keywordflow}{in} (\textcolor{stringliteral}{'testsuites'}, \textcolor{stringliteral}{'testsuite'}, \textcolor{stringliteral}{'testcase'}):
+175       time = element.getAttributeNode(\textcolor{stringliteral}{'time'})
+176       time.value = re.sub(\textcolor{stringliteral}{r'^\(\backslash\)d+(\(\backslash\).\(\backslash\)d+)?$'}, \textcolor{stringliteral}{'*'}, time.value)
+177       type\_param = element.getAttributeNode(\textcolor{stringliteral}{'type\_param'})
+178       \textcolor{keywordflow}{if} type\_param \textcolor{keywordflow}{and} type\_param.value:
+179         type\_param.value = \textcolor{stringliteral}{'*'}
+180     \textcolor{keywordflow}{elif} element.tagName == \textcolor{stringliteral}{'failure'}:
+181       source\_line\_pat = \textcolor{stringliteral}{r'^.*[/\(\backslash\)\(\backslash\)](.*:)\(\backslash\)d+\(\backslash\)n'}
+182       \textcolor{comment}{# Replaces the source line information with a normalized form.}
+183       message = element.getAttributeNode(\textcolor{stringliteral}{'message'})
+184       message.value = re.sub(source\_line\_pat, \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)1*\(\backslash\)n'}, message.value)
+185       \textcolor{keywordflow}{for} child \textcolor{keywordflow}{in} element.childNodes:
+186         \textcolor{keywordflow}{if} child.nodeType == Node.CDATA\_SECTION\_NODE:
+187           \textcolor{comment}{# Replaces the source line information with a normalized form.}
+188           cdata = re.sub(source\_line\_pat, \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)1*\(\backslash\)n'}, child.nodeValue)
+189           \textcolor{comment}{# Removes the actual stack trace.}
+190           child.nodeValue = re.sub(\textcolor{stringliteral}{r'\(\backslash\)nStack trace:\(\backslash\)n(.|\(\backslash\)n)*'},
+191                                    \textcolor{stringliteral}{''}, cdata)
+192     \textcolor{keywordflow}{for} child \textcolor{keywordflow}{in} element.childNodes:
+193       \textcolor{keywordflow}{if} child.nodeType == Node.ELEMENT\_NODE:
+194         self.NormalizeXml(child)
+195 \end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case@{gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case}!identifying\+\_\+attribute@{identifying\+\_\+attribute}}
+\index{identifying\+\_\+attribute@{identifying\+\_\+attribute}!gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case@{gtest\+\_\+xml\+\_\+test\+\_\+utils\+::\+G\+Test\+X\+M\+L\+Test\+Case}}
+\subsubsection[{\texorpdfstring{identifying\+\_\+attribute}{identifying_attribute}}]{\setlength{\rightskip}{0pt plus 5cm}dictionary gtest\+\_\+xml\+\_\+test\+\_\+utils.\+G\+Test\+X\+M\+L\+Test\+Case.\+identifying\+\_\+attribute\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classgtest__xml__test__utils_1_1GTestXMLTestCase_a0e3a4e84e18f29d2248dcd670a0a6ae6}{}\label{classgtest__xml__test__utils_1_1GTestXMLTestCase_a0e3a4e84e18f29d2248dcd670a0a6ae6}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 = \{
+2     \textcolor{stringliteral}{'testsuites'}: \textcolor{stringliteral}{'name'},
+3     \textcolor{stringliteral}{'testsuite'}: \textcolor{stringliteral}{'name'},
+4     \textcolor{stringliteral}{'testcase'}:  \textcolor{stringliteral}{'name'},
+5     \textcolor{stringliteral}{'failure'}:   \textcolor{stringliteral}{'message'},
+6     \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__xml__test__utils_8py}{gtest\+\_\+xml\+\_\+test\+\_\+utils.\+py}\end{DoxyCompactItemize}

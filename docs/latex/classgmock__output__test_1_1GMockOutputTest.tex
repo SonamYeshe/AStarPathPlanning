@@ -1,0 +1,62 @@
+\hypertarget{classgmock__output__test_1_1GMockOutputTest}{}\section{gmock\+\_\+output\+\_\+test.\+G\+Mock\+Output\+Test Class Reference}
+\label{classgmock__output__test_1_1GMockOutputTest}\index{gmock\+\_\+output\+\_\+test.\+G\+Mock\+Output\+Test@{gmock\+\_\+output\+\_\+test.\+G\+Mock\+Output\+Test}}
+
+
+Inheritance diagram for gmock\+\_\+output\+\_\+test.\+G\+Mock\+Output\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classgmock__output__test_1_1GMockOutputTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gmock\+\_\+output\+\_\+test.\+G\+Mock\+Output\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classgmock__output__test_1_1GMockOutputTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgmock__output__test_1_1GMockOutputTest_a661e7846690f48328fd9e0834fde9980}{test\+Output} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{gmock\+\_\+output\+\_\+test\+::\+G\+Mock\+Output\+Test@{gmock\+\_\+output\+\_\+test\+::\+G\+Mock\+Output\+Test}!test\+Output@{test\+Output}}
+\index{test\+Output@{test\+Output}!gmock\+\_\+output\+\_\+test\+::\+G\+Mock\+Output\+Test@{gmock\+\_\+output\+\_\+test\+::\+G\+Mock\+Output\+Test}}
+\subsubsection[{\texorpdfstring{test\+Output(self)}{testOutput(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gmock\+\_\+output\+\_\+test.\+G\+Mock\+Output\+Test.\+test\+Output (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgmock__output__test_1_1GMockOutputTest_a661e7846690f48328fd9e0834fde9980}{}\label{classgmock__output__test_1_1GMockOutputTest_a661e7846690f48328fd9e0834fde9980}
+
+\begin{DoxyCode}
+157   \textcolor{keyword}{def }testOutput(self):
+158     (output, leaky\_tests) = \hyperlink{namespacegmock__output__test_a1796bc395fbfb8873992e3f84378e4bf}{GetNormalizedCommandOutputAndLeakyTests}(
+      COMMAND)
+159     golden\_file = open(GOLDEN\_PATH, \textcolor{stringliteral}{'rb'})
+160     golden = golden\_file.read()
+161     golden\_file.close()
+162 
+163     \textcolor{comment}{# The normalized output should match the golden file.}
+164     self.assertEquals(golden, output)
+165 
+166     \textcolor{comment}{# The raw output should contain 2 leaked mock object errors for}
+167     \textcolor{comment}{# test GMockOutputTest.CatchesLeakedMocks.}
+168     self.assertEquals([\textcolor{stringliteral}{'GMockOutputTest.CatchesLeakedMocks'},
+169                        \textcolor{stringliteral}{'GMockOutputTest.CatchesLeakedMocks'}],
+170                       leaky\_tests)
+171 
+172 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/test/\hyperlink{gmock__output__test_8py}{gmock\+\_\+output\+\_\+test.\+py}\end{DoxyCompactItemize}

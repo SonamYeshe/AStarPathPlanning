@@ -1,0 +1,129 @@
+\hypertarget{namespacegtest__env__var__test}{}\section{gtest\+\_\+env\+\_\+var\+\_\+test Namespace Reference}
+\label{namespacegtest__env__var__test}\index{gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classgtest__env__var__test_1_1GTestEnvVarTest}{G\+Test\+Env\+Var\+Test}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacegtest__env__var__test_a8c94a5abd1117cdd2b402c0059a49a3a}{Assert\+Eq} (expected, actual)
+\item 
+def \hyperlink{namespacegtest__env__var__test_a634ee0fa1ccf4713411992e7373e49e9}{Set\+Env\+Var} (env\+\_\+var, value)
+\item 
+def \hyperlink{namespacegtest__env__var__test_a79d5f78f47c7dde37a0941d8604cf857}{Get\+Flag} (flag)
+\item 
+def \hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{Test\+Flag} (flag, test\+\_\+val, default\+\_\+val)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacegtest__env__var__test_af792d1403a09d46bffcd3466821cd0fb}{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS} = \textquotesingle{}nt\textquotesingle{}
+\item 
+string \hyperlink{namespacegtest__env__var__test_a33b1e2e9afe9d59d75503de4a1297486}{I\+S\+\_\+\+L\+I\+N\+UX} = \textquotesingle{}posix\textquotesingle{}
+\item 
+\hyperlink{namespacegtest__env__var__test_a36e02e39934750d022966df31c568a53}{C\+O\+M\+M\+A\+ND} = \hyperlink{namespacegtest__test__utils_a89ed3717984a80ffbb7a9c92f71b86a2}{gtest\+\_\+test\+\_\+utils.\+Get\+Test\+Executable\+Path}(\textquotesingle{}gtest\+\_\+env\+\_\+var\+\_\+test\+\_\+\textquotesingle{})
+\item 
+\hyperlink{namespacegtest__env__var__test_ac671a59c1b805f7e9511e91380865cda}{environ} = os.\+environ.\+copy()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}!Assert\+Eq@{Assert\+Eq}}
+\index{Assert\+Eq@{Assert\+Eq}!gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}}
+\subsubsection[{\texorpdfstring{Assert\+Eq(expected, actual)}{AssertEq(expected, actual)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+env\+\_\+var\+\_\+test.\+Assert\+Eq (
+\begin{DoxyParamCaption}
+\item[{}]{expected, }
+\item[{}]{actual}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__env__var__test_a8c94a5abd1117cdd2b402c0059a49a3a}{}\label{namespacegtest__env__var__test_a8c94a5abd1117cdd2b402c0059a49a3a}
+
+\begin{DoxyCode}
+48 \textcolor{keyword}{def }\hyperlink{namespacegtest__env__var__test_a8c94a5abd1117cdd2b402c0059a49a3a}{AssertEq}(expected, actual):
+49   \textcolor{keywordflow}{if} expected != actual:
+50     print(\textcolor{stringliteral}{'Expected: %s'} % (expected,))
+51     print(\textcolor{stringliteral}{'  Actual: %s'} % (actual,))
+52     \textcolor{keywordflow}{raise} AssertionError
+53 
+54 
+\end{DoxyCode}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}!Get\+Flag@{Get\+Flag}}
+\index{Get\+Flag@{Get\+Flag}!gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}}
+\subsubsection[{\texorpdfstring{Get\+Flag(flag)}{GetFlag(flag)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+env\+\_\+var\+\_\+test.\+Get\+Flag (
+\begin{DoxyParamCaption}
+\item[{}]{flag}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__env__var__test_a79d5f78f47c7dde37a0941d8604cf857}{}\label{namespacegtest__env__var__test_a79d5f78f47c7dde37a0941d8604cf857}
+\begin{DoxyVerb}Runs gtest_env_var_test_ and returns its output.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+64 \textcolor{keyword}{def }\hyperlink{namespacegtest__env__var__test_a79d5f78f47c7dde37a0941d8604cf857}{GetFlag}(flag):
+65   \textcolor{stringliteral}{"""Runs gtest\_env\_var\_test\_ and returns its output."""}
+66 
+67   args = [COMMAND]
+68   \textcolor{keywordflow}{if} flag \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+69     args += [flag]
+70   \textcolor{keywordflow}{return} \hyperlink{classgtest__test__utils_1_1Subprocess}{gtest\_test\_utils.Subprocess}(args, env=environ).output
+71 
+72 
+\end{DoxyCode}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}!Set\+Env\+Var@{Set\+Env\+Var}}
+\index{Set\+Env\+Var@{Set\+Env\+Var}!gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}}
+\subsubsection[{\texorpdfstring{Set\+Env\+Var(env\+\_\+var, value)}{SetEnvVar(env_var, value)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+env\+\_\+var\+\_\+test.\+Set\+Env\+Var (
+\begin{DoxyParamCaption}
+\item[{}]{env\+\_\+var, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__env__var__test_a634ee0fa1ccf4713411992e7373e49e9}{}\label{namespacegtest__env__var__test_a634ee0fa1ccf4713411992e7373e49e9}
+\begin{DoxyVerb}Sets the env variable to 'value'; unsets it when 'value' is None.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+55 \textcolor{keyword}{def }\hyperlink{namespacegtest__catch__exceptions__test_a60be14c2b88aafb689ba4d3d2578449e}{SetEnvVar}(env\_var, value):
+56   \textcolor{stringliteral}{"""Sets the env variable to 'value'; unsets it when 'value' is None."""}
+57 
+58   \textcolor{keywordflow}{if} value \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+59     environ[env\_var] = value
+60   \textcolor{keywordflow}{elif} env\_var \textcolor{keywordflow}{in} environ:
+61     del environ[env\_var]
+62 
+63 
+\end{DoxyCode}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}!Test\+Flag@{Test\+Flag}}
+\index{Test\+Flag@{Test\+Flag}!gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}}
+\subsubsection[{\texorpdfstring{Test\+Flag(flag, test\+\_\+val, default\+\_\+val)}{TestFlag(flag, test_val, default_val)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+env\+\_\+var\+\_\+test.\+Test\+Flag (
+\begin{DoxyParamCaption}
+\item[{}]{flag, }
+\item[{}]{test\+\_\+val, }
+\item[{}]{default\+\_\+val}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{}\label{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}
+\begin{DoxyVerb}Verifies that the given flag is affected by the corresponding env var.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+73 \textcolor{keyword}{def }\hyperlink{namespacegtest__env__var__test_aa7bb6bbb50ba35349bbdae6d881faee8}{TestFlag}(flag, test\_val, default\_val):
+74   \textcolor{stringliteral}{"""Verifies that the given flag is affected by the corresponding env var."""}
+75 
+76   env\_var = \textcolor{stringliteral}{'GTEST\_'} + flag.upper()
+77   \hyperlink{namespacegtest__catch__exceptions__test_a60be14c2b88aafb689ba4d3d2578449e}{SetEnvVar}(env\_var, test\_val)
+78   \hyperlink{namespacegtest__env__var__test_a8c94a5abd1117cdd2b402c0059a49a3a}{AssertEq}(test\_val, \hyperlink{namespacegtest__env__var__test_a79d5f78f47c7dde37a0941d8604cf857}{GetFlag}(flag))
+79   \hyperlink{namespacegtest__catch__exceptions__test_a60be14c2b88aafb689ba4d3d2578449e}{SetEnvVar}(env\_var, \textcolor{keywordtype}{None})
+80   \hyperlink{namespacegtest__env__var__test_a8c94a5abd1117cdd2b402c0059a49a3a}{AssertEq}(default\_val, \hyperlink{namespacegtest__env__var__test_a79d5f78f47c7dde37a0941d8604cf857}{GetFlag}(flag))
+81 
+82 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}!C\+O\+M\+M\+A\+ND@{C\+O\+M\+M\+A\+ND}}
+\index{C\+O\+M\+M\+A\+ND@{C\+O\+M\+M\+A\+ND}!gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}}
+\subsubsection[{\texorpdfstring{C\+O\+M\+M\+A\+ND}{COMMAND}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+env\+\_\+var\+\_\+test.\+C\+O\+M\+M\+A\+ND = {\bf gtest\+\_\+test\+\_\+utils.\+Get\+Test\+Executable\+Path}(\textquotesingle{}gtest\+\_\+env\+\_\+var\+\_\+test\+\_\+\textquotesingle{})}\hypertarget{namespacegtest__env__var__test_a36e02e39934750d022966df31c568a53}{}\label{namespacegtest__env__var__test_a36e02e39934750d022966df31c568a53}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}!environ@{environ}}
+\index{environ@{environ}!gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}}
+\subsubsection[{\texorpdfstring{environ}{environ}}]{\setlength{\rightskip}{0pt plus 5cm}gtest\+\_\+env\+\_\+var\+\_\+test.\+environ = os.\+environ.\+copy()}\hypertarget{namespacegtest__env__var__test_ac671a59c1b805f7e9511e91380865cda}{}\label{namespacegtest__env__var__test_ac671a59c1b805f7e9511e91380865cda}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}!I\+S\+\_\+\+L\+I\+N\+UX@{I\+S\+\_\+\+L\+I\+N\+UX}}
+\index{I\+S\+\_\+\+L\+I\+N\+UX@{I\+S\+\_\+\+L\+I\+N\+UX}!gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}}
+\subsubsection[{\texorpdfstring{I\+S\+\_\+\+L\+I\+N\+UX}{IS_LINUX}}]{\setlength{\rightskip}{0pt plus 5cm}string gtest\+\_\+env\+\_\+var\+\_\+test.\+I\+S\+\_\+\+L\+I\+N\+UX = \textquotesingle{}posix\textquotesingle{}}\hypertarget{namespacegtest__env__var__test_a33b1e2e9afe9d59d75503de4a1297486}{}\label{namespacegtest__env__var__test_a33b1e2e9afe9d59d75503de4a1297486}
+\index{gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}!I\+S\+\_\+\+W\+I\+N\+D\+O\+WS@{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS}}
+\index{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS@{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS}!gtest\+\_\+env\+\_\+var\+\_\+test@{gtest\+\_\+env\+\_\+var\+\_\+test}}
+\subsubsection[{\texorpdfstring{I\+S\+\_\+\+W\+I\+N\+D\+O\+WS}{IS_WINDOWS}}]{\setlength{\rightskip}{0pt plus 5cm}string gtest\+\_\+env\+\_\+var\+\_\+test.\+I\+S\+\_\+\+W\+I\+N\+D\+O\+WS = \textquotesingle{}nt\textquotesingle{}}\hypertarget{namespacegtest__env__var__test_af792d1403a09d46bffcd3466821cd0fb}{}\label{namespacegtest__env__var__test_af792d1403a09d46bffcd3466821cd0fb}

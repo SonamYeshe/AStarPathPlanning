@@ -1,0 +1,46 @@
+\hypertarget{classtesting_1_1internal_1_1ReferenceWrapper}{}\section{testing\+:\+:internal\+:\+:Reference\+Wrapper$<$ T $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1ReferenceWrapper}\index{testing\+::internal\+::\+Reference\+Wrapper$<$ T $>$@{testing\+::internal\+::\+Reference\+Wrapper$<$ T $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/actions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ReferenceWrapper_ad33597ffc478c3af9190d1a288a76d39}{Reference\+Wrapper} (T \&l\+\_\+value)
+\item 
+\hyperlink{classtesting_1_1internal_1_1ReferenceWrapper_ac9a45f88ba592f05b0c0c90103812872}{operator T \&} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Reference\+Wrapper@{testing\+::internal\+::\+Reference\+Wrapper}!Reference\+Wrapper@{Reference\+Wrapper}}
+\index{Reference\+Wrapper@{Reference\+Wrapper}!testing\+::internal\+::\+Reference\+Wrapper@{testing\+::internal\+::\+Reference\+Wrapper}}
+\subsubsection[{\texorpdfstring{Reference\+Wrapper(\+T \&l\+\_\+value)}{ReferenceWrapper(T &l_value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf testing\+::internal\+::\+Reference\+Wrapper}$<$ T $>$\+::{\bf Reference\+Wrapper} (
+\begin{DoxyParamCaption}
+\item[{T \&}]{l\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1ReferenceWrapper_ad33597ffc478c3af9190d1a288a76d39}{}\label{classtesting_1_1internal_1_1ReferenceWrapper_ad33597ffc478c3af9190d1a288a76d39}
+
+\begin{DoxyCode}
+953 : pointer\_(&l\_value) \{\}  \textcolor{comment}{// NOLINT}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Reference\+Wrapper@{testing\+::internal\+::\+Reference\+Wrapper}!operator T \&@{operator T \&}}
+\index{operator T \&@{operator T \&}!testing\+::internal\+::\+Reference\+Wrapper@{testing\+::internal\+::\+Reference\+Wrapper}}
+\subsubsection[{\texorpdfstring{operator T \&() const }{operator T &() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf testing\+::internal\+::\+Reference\+Wrapper}$<$ T $>$\+::operator T \& (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1ReferenceWrapper_ac9a45f88ba592f05b0c0c90103812872}{}\label{classtesting_1_1internal_1_1ReferenceWrapper_ac9a45f88ba592f05b0c0c90103812872}
+
+\begin{DoxyCode}
+957 \{ \textcolor{keywordflow}{return} *pointer\_; \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-actions_8h}{gmock-\/actions.\+h}\end{DoxyCompactItemize}

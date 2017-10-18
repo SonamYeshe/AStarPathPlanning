@@ -1,0 +1,142 @@
+\hypertarget{classgmock__leak__test_1_1GMockLeakTest}{}\section{gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test Class Reference}
+\label{classgmock__leak__test_1_1GMockLeakTest}\index{gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test}}
+
+
+Inheritance diagram for gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classgmock__leak__test_1_1GMockLeakTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classgmock__leak__test_1_1GMockLeakTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgmock__leak__test_1_1GMockLeakTest_ad87d271de7b3f106e51272d6e9139c76}{test\+Catches\+Leaked\+Mock\+By\+Default} (self)
+\item 
+def \hyperlink{classgmock__leak__test_1_1GMockLeakTest_a3107bf5a603558ab2d97d88fb5589951}{test\+Does\+Not\+Catch\+Leaked\+Mock\+When\+Disabled} (self)
+\item 
+def \hyperlink{classgmock__leak__test_1_1GMockLeakTest_a78f4040a392d183597f71d92da8c1246}{test\+Catches\+Leaked\+Mock\+When\+Enabled} (self)
+\item 
+def \hyperlink{classgmock__leak__test_1_1GMockLeakTest_ab19cf302ea06e1b186bd6ab951d9161e}{test\+Catches\+Leaked\+Mock\+When\+Enabled\+With\+Explict\+Flag\+Value} (self)
+\item 
+def \hyperlink{classgmock__leak__test_1_1GMockLeakTest_a09465b2bfde98834e4bb9563c035f034}{test\+Catches\+Multiple\+Leaked\+Mocks} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}!test\+Catches\+Leaked\+Mock\+By\+Default@{test\+Catches\+Leaked\+Mock\+By\+Default}}
+\index{test\+Catches\+Leaked\+Mock\+By\+Default@{test\+Catches\+Leaked\+Mock\+By\+Default}!gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}}
+\subsubsection[{\texorpdfstring{test\+Catches\+Leaked\+Mock\+By\+Default(self)}{testCatchesLeakedMockByDefault(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test.\+test\+Catches\+Leaked\+Mock\+By\+Default (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgmock__leak__test_1_1GMockLeakTest_ad87d271de7b3f106e51272d6e9139c76}{}\label{classgmock__leak__test_1_1GMockLeakTest_ad87d271de7b3f106e51272d6e9139c76}
+
+\begin{DoxyCode}
+58   \textcolor{keyword}{def }testCatchesLeakedMockByDefault(self):
+59     self.assertNotEqual(
+60         0,
+61         \hyperlink{namespacegmock__test__utils_a31a0e33565ec805d314cb0a4eb8317e6}{gmock\_test\_utils.Subprocess}(TEST\_WITH\_EXPECT\_CALL,
+62                                     env=environ).exit\_code)
+63     self.assertNotEqual(
+64         0,
+65         \hyperlink{namespacegmock__test__utils_a31a0e33565ec805d314cb0a4eb8317e6}{gmock\_test\_utils.Subprocess}(TEST\_WITH\_ON\_CALL,
+66                                     env=environ).exit\_code)
+67 
+\end{DoxyCode}
+\index{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}!test\+Catches\+Leaked\+Mock\+When\+Enabled@{test\+Catches\+Leaked\+Mock\+When\+Enabled}}
+\index{test\+Catches\+Leaked\+Mock\+When\+Enabled@{test\+Catches\+Leaked\+Mock\+When\+Enabled}!gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}}
+\subsubsection[{\texorpdfstring{test\+Catches\+Leaked\+Mock\+When\+Enabled(self)}{testCatchesLeakedMockWhenEnabled(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test.\+test\+Catches\+Leaked\+Mock\+When\+Enabled (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgmock__leak__test_1_1GMockLeakTest_a78f4040a392d183597f71d92da8c1246}{}\label{classgmock__leak__test_1_1GMockLeakTest_a78f4040a392d183597f71d92da8c1246}
+
+\begin{DoxyCode}
+80   \textcolor{keyword}{def }testCatchesLeakedMockWhenEnabled(self):
+81     self.assertNotEqual(
+82         0,
+83         \hyperlink{namespacegmock__test__utils_a31a0e33565ec805d314cb0a4eb8317e6}{gmock\_test\_utils.Subprocess}(TEST\_WITH\_EXPECT\_CALL +
+84                                     [\textcolor{stringliteral}{'--gmock\_catch\_leaked\_mocks'}],
+85                                     env=environ).exit\_code)
+86     self.assertNotEqual(
+87         0,
+88         \hyperlink{namespacegmock__test__utils_a31a0e33565ec805d314cb0a4eb8317e6}{gmock\_test\_utils.Subprocess}(TEST\_WITH\_ON\_CALL +
+89                                     [\textcolor{stringliteral}{'--gmock\_catch\_leaked\_mocks'}],
+90                                     env=environ).exit\_code)
+91 
+\end{DoxyCode}
+\index{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}!test\+Catches\+Leaked\+Mock\+When\+Enabled\+With\+Explict\+Flag\+Value@{test\+Catches\+Leaked\+Mock\+When\+Enabled\+With\+Explict\+Flag\+Value}}
+\index{test\+Catches\+Leaked\+Mock\+When\+Enabled\+With\+Explict\+Flag\+Value@{test\+Catches\+Leaked\+Mock\+When\+Enabled\+With\+Explict\+Flag\+Value}!gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}}
+\subsubsection[{\texorpdfstring{test\+Catches\+Leaked\+Mock\+When\+Enabled\+With\+Explict\+Flag\+Value(self)}{testCatchesLeakedMockWhenEnabledWithExplictFlagValue(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test.\+test\+Catches\+Leaked\+Mock\+When\+Enabled\+With\+Explict\+Flag\+Value (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgmock__leak__test_1_1GMockLeakTest_ab19cf302ea06e1b186bd6ab951d9161e}{}\label{classgmock__leak__test_1_1GMockLeakTest_ab19cf302ea06e1b186bd6ab951d9161e}
+
+\begin{DoxyCode}
+92   \textcolor{keyword}{def }testCatchesLeakedMockWhenEnabledWithExplictFlagValue(self):
+93     self.assertNotEqual(
+94         0,
+95         \hyperlink{namespacegmock__test__utils_a31a0e33565ec805d314cb0a4eb8317e6}{gmock\_test\_utils.Subprocess}(TEST\_WITH\_EXPECT\_CALL +
+96                                     [\textcolor{stringliteral}{'--gmock\_catch\_leaked\_mocks=1'}],
+97                                     env=environ).exit\_code)
+98 
+\end{DoxyCode}
+\index{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}!test\+Catches\+Multiple\+Leaked\+Mocks@{test\+Catches\+Multiple\+Leaked\+Mocks}}
+\index{test\+Catches\+Multiple\+Leaked\+Mocks@{test\+Catches\+Multiple\+Leaked\+Mocks}!gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}}
+\subsubsection[{\texorpdfstring{test\+Catches\+Multiple\+Leaked\+Mocks(self)}{testCatchesMultipleLeakedMocks(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test.\+test\+Catches\+Multiple\+Leaked\+Mocks (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgmock__leak__test_1_1GMockLeakTest_a09465b2bfde98834e4bb9563c035f034}{}\label{classgmock__leak__test_1_1GMockLeakTest_a09465b2bfde98834e4bb9563c035f034}
+
+\begin{DoxyCode}
+99   \textcolor{keyword}{def }testCatchesMultipleLeakedMocks(self):
+100     self.assertNotEqual(
+101         0,
+102         \hyperlink{namespacegmock__test__utils_a31a0e33565ec805d314cb0a4eb8317e6}{gmock\_test\_utils.Subprocess}(TEST\_MULTIPLE\_LEAKS +
+103                                     [\textcolor{stringliteral}{'--gmock\_catch\_leaked\_mocks'}],
+104                                     env=environ).exit\_code)
+105 
+106 
+\end{DoxyCode}
+\index{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}!test\+Does\+Not\+Catch\+Leaked\+Mock\+When\+Disabled@{test\+Does\+Not\+Catch\+Leaked\+Mock\+When\+Disabled}}
+\index{test\+Does\+Not\+Catch\+Leaked\+Mock\+When\+Disabled@{test\+Does\+Not\+Catch\+Leaked\+Mock\+When\+Disabled}!gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test@{gmock\+\_\+leak\+\_\+test\+::\+G\+Mock\+Leak\+Test}}
+\subsubsection[{\texorpdfstring{test\+Does\+Not\+Catch\+Leaked\+Mock\+When\+Disabled(self)}{testDoesNotCatchLeakedMockWhenDisabled(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gmock\+\_\+leak\+\_\+test.\+G\+Mock\+Leak\+Test.\+test\+Does\+Not\+Catch\+Leaked\+Mock\+When\+Disabled (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgmock__leak__test_1_1GMockLeakTest_a3107bf5a603558ab2d97d88fb5589951}{}\label{classgmock__leak__test_1_1GMockLeakTest_a3107bf5a603558ab2d97d88fb5589951}
+
+\begin{DoxyCode}
+68   \textcolor{keyword}{def }testDoesNotCatchLeakedMockWhenDisabled(self):
+69     self.assertEquals(
+70         0,
+71         \hyperlink{namespacegmock__test__utils_a31a0e33565ec805d314cb0a4eb8317e6}{gmock\_test\_utils.Subprocess}(TEST\_WITH\_EXPECT\_CALL +
+72                                     [\textcolor{stringliteral}{'--gmock\_catch\_leaked\_mocks=0'}],
+73                                     env=environ).exit\_code)
+74     self.assertEquals(
+75         0,
+76         \hyperlink{namespacegmock__test__utils_a31a0e33565ec805d314cb0a4eb8317e6}{gmock\_test\_utils.Subprocess}(TEST\_WITH\_ON\_CALL +
+77                                     [\textcolor{stringliteral}{'--gmock\_catch\_leaked\_mocks=0'}],
+78                                     env=environ).exit\_code)
+79 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/test/\hyperlink{gmock__leak__test_8py}{gmock\+\_\+leak\+\_\+test.\+py}\end{DoxyCompactItemize}

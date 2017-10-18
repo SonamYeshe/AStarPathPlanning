@@ -1,0 +1,41 @@
+\hypertarget{gmock__main_8cc}{}\section{vendor/googletest/googlemock/src/gmock\+\_\+main.cc File Reference}
+\label{gmock__main_8cc}\index{vendor/googletest/googlemock/src/gmock\+\_\+main.\+cc@{vendor/googletest/googlemock/src/gmock\+\_\+main.\+cc}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}gmock/gmock.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for gmock\+\_\+main.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gmock__main_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+} int \hyperlink{gmock__main_8cc_a7f83bdc516d2cb86e20235d94ddf055a}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gmock\+\_\+main.\+cc@{gmock\+\_\+main.\+cc}!main@{main}}
+\index{main@{main}!gmock\+\_\+main.\+cc@{gmock\+\_\+main.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+} int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__main_8cc_a7f83bdc516d2cb86e20235d94ddf055a}{}\label{gmock__main_8cc_a7f83bdc516d2cb86e20235d94ddf055a}
+
+\begin{DoxyCode}
+46                                            \{
+47 \textcolor{preprocessor}{#endif  // GTEST\_OS\_WINDOWS\_MOBILE}
+48   std::cout << \textcolor{stringliteral}{"Running main() from gmock\_main.cc\(\backslash\)n"};
+49   \textcolor{comment}{// Since Google Mock depends on Google Test, InitGoogleMock() is}
+50   \textcolor{comment}{// also responsible for initializing Google Test.  Therefore there's}
+51   \textcolor{comment}{// no need for calling testing::InitGoogleTest() separately.}
+52   \hyperlink{namespacetesting_a32b1c6db9ba5133ccabfa67616b3c041}{testing::InitGoogleMock}(&argc, argv);
+53   \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+54 \}
+\end{DoxyCode}

@@ -1,0 +1,157 @@
+\hypertarget{classnode}{}\section{node Class Reference}
+\label{classnode}\index{node@{node}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnode_a802701cab6639590de6f16136184c2de}{node} (int xp, int yp, int d, int p)
+\item 
+int \hyperlink{classnode_a419596f9858640ee6d04b69b616b7cd2}{getx\+Pos} () const 
+\item 
+int \hyperlink{classnode_a3b5d135d5e5eac9211a9478ea9803ae7}{gety\+Pos} () const 
+\item 
+int \hyperlink{classnode_a78c66d7badca074b6b34ec7eca4ab106}{get\+Level} () const 
+\item 
+int \hyperlink{classnode_afebf5ef7f94fa7554890f03e97686de7}{get\+Priority} () const 
+\item 
+void \hyperlink{classnode_ad51b92de008bd5107a7b55cc61fc497b}{update\+Priority} (const int \&x\+Dest, const int \&y\+Dest)
+\item 
+void \hyperlink{classnode_a04a186013c42fb942b6da90d2e98d4ed}{next\+Level} (const int \&\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i})
+\item 
+const int \& \hyperlink{classnode_a137e1298b41dd5dbf6afc5015ac1b489}{estimate} (const int \&x\+Dest, const int \&y\+Dest) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{node@{node}!node@{node}}
+\index{node@{node}!node@{node}}
+\subsubsection[{\texorpdfstring{node(int xp, int yp, int d, int p)}{node(int xp, int yp, int d, int p)}}]{\setlength{\rightskip}{0pt plus 5cm}node\+::node (
+\begin{DoxyParamCaption}
+\item[{int}]{xp, }
+\item[{int}]{yp, }
+\item[{int}]{d, }
+\item[{int}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnode_a802701cab6639590de6f16136184c2de}{}\label{classnode_a802701cab6639590de6f16136184c2de}
+
+\begin{DoxyCode}
+41                                      \{
+42     xPos = xp;
+43     yPos = yp;
+44     level = d;
+45     priority = p;
+46   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{node@{node}!estimate@{estimate}}
+\index{estimate@{estimate}!node@{node}}
+\subsubsection[{\texorpdfstring{estimate(const int \&x\+Dest, const int \&y\+Dest) const }{estimate(const int &xDest, const int &yDest) const }}]{\setlength{\rightskip}{0pt plus 5cm}const int\& node\+::estimate (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{x\+Dest, }
+\item[{const int \&}]{y\+Dest}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnode_a137e1298b41dd5dbf6afc5015ac1b489}{}\label{classnode_a137e1298b41dd5dbf6afc5015ac1b489}
+
+\begin{DoxyCode}
+72                                                                    \{
+73     \textcolor{keyword}{static} \textcolor{keywordtype}{int} xd, yd, d;
+74     xd = xDest - xPos;
+75     yd = yDest - yPos;
+76 
+77     \textcolor{comment}{// Euclidian Distance}
+78     d = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(sqrt(xd * xd + yd * yd));
+79 
+80     \textcolor{comment}{// Manhattan distance}
+81     \textcolor{comment}{//d=abs(xd)+abs(yd);}
+82 
+83     \textcolor{comment}{// Chebyshev distance}
+84     \textcolor{comment}{//d=max(abs(xd), abs(yd));}
+85 
+86     \textcolor{keywordflow}{return} (d);
+87   \}
+\end{DoxyCode}
+\index{node@{node}!get\+Level@{get\+Level}}
+\index{get\+Level@{get\+Level}!node@{node}}
+\subsubsection[{\texorpdfstring{get\+Level() const }{getLevel() const }}]{\setlength{\rightskip}{0pt plus 5cm}int node\+::get\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnode_a78c66d7badca074b6b34ec7eca4ab106}{}\label{classnode_a78c66d7badca074b6b34ec7eca4ab106}
+
+\begin{DoxyCode}
+54                        \{
+55     \textcolor{keywordflow}{return} level;
+56   \}
+\end{DoxyCode}
+\index{node@{node}!get\+Priority@{get\+Priority}}
+\index{get\+Priority@{get\+Priority}!node@{node}}
+\subsubsection[{\texorpdfstring{get\+Priority() const }{getPriority() const }}]{\setlength{\rightskip}{0pt plus 5cm}int node\+::get\+Priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnode_afebf5ef7f94fa7554890f03e97686de7}{}\label{classnode_afebf5ef7f94fa7554890f03e97686de7}
+
+\begin{DoxyCode}
+57                           \{
+58     \textcolor{keywordflow}{return} priority;
+59   \}
+\end{DoxyCode}
+\index{node@{node}!getx\+Pos@{getx\+Pos}}
+\index{getx\+Pos@{getx\+Pos}!node@{node}}
+\subsubsection[{\texorpdfstring{getx\+Pos() const }{getxPos() const }}]{\setlength{\rightskip}{0pt plus 5cm}int node\+::getx\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnode_a419596f9858640ee6d04b69b616b7cd2}{}\label{classnode_a419596f9858640ee6d04b69b616b7cd2}
+
+\begin{DoxyCode}
+48                       \{
+49     \textcolor{keywordflow}{return} xPos;
+50   \}
+\end{DoxyCode}
+\index{node@{node}!gety\+Pos@{gety\+Pos}}
+\index{gety\+Pos@{gety\+Pos}!node@{node}}
+\subsubsection[{\texorpdfstring{gety\+Pos() const }{getyPos() const }}]{\setlength{\rightskip}{0pt plus 5cm}int node\+::gety\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnode_a3b5d135d5e5eac9211a9478ea9803ae7}{}\label{classnode_a3b5d135d5e5eac9211a9478ea9803ae7}
+
+\begin{DoxyCode}
+51                       \{
+52     \textcolor{keywordflow}{return} yPos;
+53   \}
+\end{DoxyCode}
+\index{node@{node}!next\+Level@{next\+Level}}
+\index{next\+Level@{next\+Level}!node@{node}}
+\subsubsection[{\texorpdfstring{next\+Level(const int \&i)}{nextLevel(const int &i)}}]{\setlength{\rightskip}{0pt plus 5cm}void node\+::next\+Level (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnode_a04a186013c42fb942b6da90d2e98d4ed}{}\label{classnode_a04a186013c42fb942b6da90d2e98d4ed}
+
+\begin{DoxyCode}
+67       \{
+68     level += (\hyperlink{app_2main_8cpp_a1029bef95cd6f5393d98c23a33550e15}{dir} == 8 ? (\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} % 2 == 0 ? 10 : 14) : 10);
+69   \}
+\end{DoxyCode}
+\index{node@{node}!update\+Priority@{update\+Priority}}
+\index{update\+Priority@{update\+Priority}!node@{node}}
+\subsubsection[{\texorpdfstring{update\+Priority(const int \&x\+Dest, const int \&y\+Dest)}{updatePriority(const int &xDest, const int &yDest)}}]{\setlength{\rightskip}{0pt plus 5cm}void node\+::update\+Priority (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{x\+Dest, }
+\item[{const int \&}]{y\+Dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classnode_ad51b92de008bd5107a7b55cc61fc497b}{}\label{classnode_ad51b92de008bd5107a7b55cc61fc497b}
+
+\begin{DoxyCode}
+61                                                             \{
+62     priority = level + \hyperlink{classnode_a137e1298b41dd5dbf6afc5015ac1b489}{estimate}(xDest, yDest) * 10;  \textcolor{comment}{//A*}
+63   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/\hyperlink{app_2main_8cpp}{main.\+cpp}\end{DoxyCompactItemize}

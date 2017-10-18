@@ -1,0 +1,134 @@
+\hypertarget{sample5__unittest_8cc}{}\section{vendor/googletest/googletest/samples/sample5\+\_\+unittest.cc File Reference}
+\label{sample5__unittest_8cc}\index{vendor/googletest/googletest/samples/sample5\+\_\+unittest.\+cc@{vendor/googletest/googletest/samples/sample5\+\_\+unittest.\+cc}}
+{\ttfamily \#include $<$limits.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}sample3-\/inl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sample1.\+h\char`\"{}}\\*
+Include dependency graph for sample5\+\_\+unittest.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sample5__unittest_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classQuickTest}{Quick\+Test}
+\item 
+class \hyperlink{classIntegerFunctionTest}{Integer\+Function\+Test}
+\item 
+class \hyperlink{classQueueTest}{Queue\+Test}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sample5__unittest_8cc_ad7679328025ef6d95ee2f45d5604aa89}{T\+E\+S\+T\+\_\+F} (\hyperlink{classIntegerFunctionTest}{Integer\+Function\+Test}, \hyperlink{sample1_8h_a0e7da4d7a69c5b5afb707807aa177017}{Factorial})
+\item 
+\hyperlink{sample5__unittest_8cc_ab941323e5a68b9aa8125cb81f5ff3d7c}{T\+E\+S\+T\+\_\+F} (\hyperlink{classIntegerFunctionTest}{Integer\+Function\+Test}, \hyperlink{sample1_8h_a7093217f5edc11fe277d03bd064e5f11}{Is\+Prime})
+\item 
+\hyperlink{sample5__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}{T\+E\+S\+T\+\_\+F} (\hyperlink{classQueueTest}{Queue\+Test}, Default\+Constructor)
+\item 
+\hyperlink{sample5__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}{T\+E\+S\+T\+\_\+F} (\hyperlink{classQueueTest}{Queue\+Test}, Dequeue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sample5\+\_\+unittest.\+cc@{sample5\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!sample5\+\_\+unittest.\+cc@{sample5\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Integer\+Function\+Test, Factorial)}{TEST_F(IntegerFunctionTest, Factorial)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer\+Function\+Test}}]{, }
+\item[{{\bf Factorial}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample5__unittest_8cc_ad7679328025ef6d95ee2f45d5604aa89}{}\label{sample5__unittest_8cc_ad7679328025ef6d95ee2f45d5604aa89}
+
+\begin{DoxyCode}
+100                                        \{
+101   \textcolor{comment}{// Tests factorial of negative numbers.}
+102   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{Factorial}(-5));
+103   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{Factorial}(-1));
+104   \hyperlink{gtest_8h_aa8bc8320813e1abb0016129b636e3b27}{EXPECT\_GT}(\hyperlink{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{Factorial}(-10), 0);
+105 
+106   \textcolor{comment}{// Tests factorial of 0.}
+107   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{Factorial}(0));
+108 
+109   \textcolor{comment}{// Tests factorial of positive numbers.}
+110   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{Factorial}(1));
+111   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(2, \hyperlink{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{Factorial}(2));
+112   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(6, \hyperlink{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{Factorial}(3));
+113   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(40320, \hyperlink{sample1_8cc_a0e7da4d7a69c5b5afb707807aa177017}{Factorial}(8));
+114 \}
+\end{DoxyCode}
+\index{sample5\+\_\+unittest.\+cc@{sample5\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!sample5\+\_\+unittest.\+cc@{sample5\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Integer\+Function\+Test, Is\+Prime)}{TEST_F(IntegerFunctionTest, IsPrime)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Integer\+Function\+Test}}]{, }
+\item[{{\bf Is\+Prime}}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample5__unittest_8cc_ab941323e5a68b9aa8125cb81f5ff3d7c}{}\label{sample5__unittest_8cc_ab941323e5a68b9aa8125cb81f5ff3d7c}
+
+\begin{DoxyCode}
+118                                      \{
+119   \textcolor{comment}{// Tests negative input.}
+120   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(-1));
+121   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(-2));
+122   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(INT\_MIN));
+123 
+124   \textcolor{comment}{// Tests some trivial cases.}
+125   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(0));
+126   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(1));
+127   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(2));
+128   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(3));
+129 
+130   \textcolor{comment}{// Tests positive input.}
+131   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(4));
+132   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(5));
+133   \hyperlink{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da}{EXPECT\_FALSE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(6));
+134   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\hyperlink{sample1_8cc_a7093217f5edc11fe277d03bd064e5f11}{IsPrime}(23));
+135 \}
+\end{DoxyCode}
+\index{sample5\+\_\+unittest.\+cc@{sample5\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!sample5\+\_\+unittest.\+cc@{sample5\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Queue\+Test, Default\+Constructor)}{TEST_F(QueueTest, DefaultConstructor)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Test}}]{, }
+\item[{Default\+Constructor}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample5__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}{}\label{sample5__unittest_8cc_ac3e547171299114162b1e8cd5946eb5c}
+
+\begin{DoxyCode}
+173                                       \{
+174   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0u, q0\_.Size());
+175 \}
+\end{DoxyCode}
+\index{sample5\+\_\+unittest.\+cc@{sample5\+\_\+unittest.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!sample5\+\_\+unittest.\+cc@{sample5\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Queue\+Test, Dequeue)}{TEST_F(QueueTest, Dequeue)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Test}}]{, }
+\item[{Dequeue}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample5__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}{}\label{sample5__unittest_8cc_a0149784588d6ea2a29e0f50a05ee198e}
+
+\begin{DoxyCode}
+178                            \{
+179   \textcolor{keywordtype}{int}* \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} = q0\_.Dequeue();
+180   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(n == NULL);
+181 
+182   n = q1\_.Dequeue();
+183   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(n != NULL);
+184   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, *n);
+185   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0u, q1\_.Size());
+186   \textcolor{keyword}{delete} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+187 
+188   n = q2\_.Dequeue();
+189   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(n != NULL);
+190   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(2, *n);
+191   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1u, q2\_.Size());
+192   \textcolor{keyword}{delete} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+193 \}
+\end{DoxyCode}

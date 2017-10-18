@@ -1,0 +1,84 @@
+\hypertarget{sample9__unittest_8cc}{}\section{vendor/googletest/googletest/samples/sample9\+\_\+unittest.cc File Reference}
+\label{sample9__unittest_8cc}\index{vendor/googletest/googletest/samples/sample9\+\_\+unittest.\+cc@{vendor/googletest/googletest/samples/sample9\+\_\+unittest.\+cc}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for sample9\+\_\+unittest.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sample9__unittest_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sample9__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sample9\+\_\+unittest.\+cc@{sample9\+\_\+unittest.\+cc}!main@{main}}
+\index{main@{main}!sample9\+\_\+unittest.\+cc@{sample9\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{sample9__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{sample9__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+108                                 \{
+109   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{InitGoogleTest}(&argc, argv);
+110 
+111   \textcolor{keywordtype}{bool} terse\_output = \textcolor{keyword}{false};
+112   \textcolor{keywordflow}{if} (argc > 1 && strcmp(argv[1], \textcolor{stringliteral}{"--terse\_output"}) == 0 )
+113     terse\_output = \textcolor{keyword}{true};
+114   \textcolor{keywordflow}{else}
+115     printf(\textcolor{stringliteral}{"%s\(\backslash\)n"}, \textcolor{stringliteral}{"Run this program with --terse\_output to change the way "}
+116            \textcolor{stringliteral}{"it prints its output."});
+117 
+118   UnitTest& unit\_test = *UnitTest::GetInstance();
+119 
+120   \textcolor{comment}{// If we are given the --terse\_output command line flag, suppresses the}
+121   \textcolor{comment}{// standard output and attaches own result printer.}
+122   \textcolor{keywordflow}{if} (terse\_output) \{
+123     TestEventListeners& listeners = unit\_test.listeners();
+124 
+125     \textcolor{comment}{// Removes the default console output listener from the list so it will}
+126     \textcolor{comment}{// not receive events from Google Test and won't print any output. Since}
+127     \textcolor{comment}{// this operation transfers ownership of the listener to the caller we}
+128     \textcolor{comment}{// have to delete it as well.}
+129     \textcolor{keyword}{delete} listeners.Release(listeners.default\_result\_printer());
+130 
+131     \textcolor{comment}{// Adds the custom output listener to the list. It will now receive}
+132     \textcolor{comment}{// events from Google Test and print the alternative output. We don't}
+133     \textcolor{comment}{// have to worry about deleting it since Google Test assumes ownership}
+134     \textcolor{comment}{// over it after adding it to the list.}
+135     listeners.Append(\textcolor{keyword}{new} TersePrinter);
+136   \}
+137   \textcolor{keywordtype}{int} ret\_val = \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+138 
+139   \textcolor{comment}{// This is an example of using the UnitTest reflection API to inspect test}
+140   \textcolor{comment}{// results. Here we discount failures from the tests we expected to fail.}
+141   \textcolor{keywordtype}{int} unexpectedly\_failed\_tests = 0;
+142   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} < unit\_test.total\_test\_case\_count(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+143     \textcolor{keyword}{const} \hyperlink{namespacegmock__test__utils_a959c5af591e4d49b6d35745205b64509}{TestCase}& test\_case = *unit\_test.GetTestCase(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+144     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < test\_case.total\_test\_count(); ++j) \{
+145       \textcolor{keyword}{const} TestInfo& test\_info = *test\_case.GetTestInfo(j);
+146       \textcolor{comment}{// Counts failed tests that were not meant to fail (those without}
+147       \textcolor{comment}{// 'Fails' in the name).}
+148       \textcolor{keywordflow}{if} (test\_info.result()->Failed() &&
+149           strcmp(test\_info.name(), \textcolor{stringliteral}{"Fails"}) != 0) \{
+150         unexpectedly\_failed\_tests++;
+151       \}
+152     \}
+153   \}
+154 
+155   \textcolor{comment}{// Test that were meant to fail should not affect the test program outcome.}
+156   \textcolor{keywordflow}{if} (unexpectedly\_failed\_tests == 0)
+157     ret\_val = 0;
+158 
+159   \textcolor{keywordflow}{return} ret\_val;
+160 \}
+\end{DoxyCode}

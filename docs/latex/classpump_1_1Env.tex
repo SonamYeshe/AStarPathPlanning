@@ -1,0 +1,204 @@
+\hypertarget{classpump_1_1Env}{}\section{pump.\+Env Class Reference}
+\label{classpump_1_1Env}\index{pump.\+Env@{pump.\+Env}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classpump_1_1Env_a803732618a49ab4a2edf098b78081611}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classpump_1_1Env_a4c1b156cfa4aec708746bbe07dae5f1a}{Clone} (self)
+\item 
+def \hyperlink{classpump_1_1Env_ae0abc25733c61a8cc010cc5d76dd0dd8}{Push\+Variable} (self, var, value)
+\item 
+def \hyperlink{classpump_1_1Env_abf35f8b971acedb275bb92bb29fcd587}{Pop\+Variable} (self)
+\item 
+def \hyperlink{classpump_1_1Env_a600c34cac1e4ba75406efeadb2d7dd95}{Push\+Range} (self, var, lower, upper)
+\item 
+def \hyperlink{classpump_1_1Env_a45474355fc03b69e7449199cc8012ba9}{Pop\+Range} (self)
+\item 
+def \hyperlink{classpump_1_1Env_a43c3609179d5e458266731199e35313b}{Get\+Value} (self, identifier)
+\item 
+def \hyperlink{classpump_1_1Env_a29fa1ceb1f7c22e8e982133f4808317f}{Eval\+Exp} (self, exp)
+\item 
+def \hyperlink{classpump_1_1Env_a1df05a550bdcfe4bb8c5b1608484a6dc}{Get\+Range} (self, identifier)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpump_1_1Env_aba6456f3d0d23ac92bc9508c1b966bcd}{variables}
+\item 
+\hyperlink{classpump_1_1Env_a8d5fec087c1a9108de9b105922b34309}{ranges}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pump\+::\+Env@{pump\+::\+Env}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}{__init__(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Env.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Env_a803732618a49ab4a2edf098b78081611}{}\label{classpump_1_1Env_a803732618a49ab4a2edf098b78081611}
+
+\begin{DoxyCode}
+585   \textcolor{keyword}{def }\_\_init\_\_(self):
+586     self.variables = []
+587     self.ranges = []
+588 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{pump\+::\+Env@{pump\+::\+Env}!Clone@{Clone}}
+\index{Clone@{Clone}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{Clone(self)}{Clone(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Env.\+Clone (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Env_a4c1b156cfa4aec708746bbe07dae5f1a}{}\label{classpump_1_1Env_a4c1b156cfa4aec708746bbe07dae5f1a}
+
+\begin{DoxyCode}
+589   \textcolor{keyword}{def }Clone(self):
+590     clone = Env()
+591     clone.variables = self.variables[:]
+592     clone.ranges = self.ranges[:]
+593     \textcolor{keywordflow}{return} clone
+594 
+\end{DoxyCode}
+\index{pump\+::\+Env@{pump\+::\+Env}!Eval\+Exp@{Eval\+Exp}}
+\index{Eval\+Exp@{Eval\+Exp}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{Eval\+Exp(self, exp)}{EvalExp(self, exp)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Env.\+Eval\+Exp (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{exp}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Env_a29fa1ceb1f7c22e8e982133f4808317f}{}\label{classpump_1_1Env_a29fa1ceb1f7c22e8e982133f4808317f}
+
+\begin{DoxyCode}
+622   \textcolor{keyword}{def }EvalExp(self, exp):
+623     \textcolor{keywordflow}{try}:
+624       result = eval(exp.python\_exp)
+625     \textcolor{keywordflow}{except} Exception, e:
+626       \textcolor{keywordflow}{print} \textcolor{stringliteral}{'ERROR: caught exception %s: %s'} % (e.\_\_class\_\_.\_\_name\_\_, e)
+627       \textcolor{keywordflow}{print} (\textcolor{stringliteral}{'ERROR: failed to evaluate meta expression %s at %s'} %
+628              (exp.python\_exp, exp.token.start))
+629       sys.exit(1)
+630     \textcolor{keywordflow}{return} result
+631 
+\end{DoxyCode}
+\index{pump\+::\+Env@{pump\+::\+Env}!Get\+Range@{Get\+Range}}
+\index{Get\+Range@{Get\+Range}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{Get\+Range(self, identifier)}{GetRange(self, identifier)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Env.\+Get\+Range (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Env_a1df05a550bdcfe4bb8c5b1608484a6dc}{}\label{classpump_1_1Env_a1df05a550bdcfe4bb8c5b1608484a6dc}
+
+\begin{DoxyCode}
+632   \textcolor{keyword}{def }GetRange(self, identifier):
+633     \textcolor{keywordflow}{for} (var, lower, upper) \textcolor{keywordflow}{in} self.ranges:
+634       \textcolor{keywordflow}{if} identifier == var:
+635         \textcolor{keywordflow}{return} (lower, upper)
+636 
+637     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'ERROR: range %s is undefined.'} % (identifier,)
+638     sys.exit(1)
+639 
+640 
+\end{DoxyCode}
+\index{pump\+::\+Env@{pump\+::\+Env}!Get\+Value@{Get\+Value}}
+\index{Get\+Value@{Get\+Value}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{Get\+Value(self, identifier)}{GetValue(self, identifier)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Env.\+Get\+Value (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Env_a43c3609179d5e458266731199e35313b}{}\label{classpump_1_1Env_a43c3609179d5e458266731199e35313b}
+
+\begin{DoxyCode}
+614   \textcolor{keyword}{def }GetValue(self, identifier):
+615     \textcolor{keywordflow}{for} (var, value) \textcolor{keywordflow}{in} self.variables:
+616       \textcolor{keywordflow}{if} identifier == var:
+617         \textcolor{keywordflow}{return} value
+618 
+619     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'ERROR: meta variable %s is undefined.'} % (identifier,)
+620     sys.exit(1)
+621 
+\end{DoxyCode}
+\index{pump\+::\+Env@{pump\+::\+Env}!Pop\+Range@{Pop\+Range}}
+\index{Pop\+Range@{Pop\+Range}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{Pop\+Range(self)}{PopRange(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Env.\+Pop\+Range (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Env_a45474355fc03b69e7449199cc8012ba9}{}\label{classpump_1_1Env_a45474355fc03b69e7449199cc8012ba9}
+
+\begin{DoxyCode}
+611   \textcolor{keyword}{def }PopRange(self):
+612     self.ranges[:1] = []
+613 
+\end{DoxyCode}
+\index{pump\+::\+Env@{pump\+::\+Env}!Pop\+Variable@{Pop\+Variable}}
+\index{Pop\+Variable@{Pop\+Variable}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{Pop\+Variable(self)}{PopVariable(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Env.\+Pop\+Variable (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Env_abf35f8b971acedb275bb92bb29fcd587}{}\label{classpump_1_1Env_abf35f8b971acedb275bb92bb29fcd587}
+
+\begin{DoxyCode}
+605   \textcolor{keyword}{def }PopVariable(self):
+606     self.variables[:1] = []
+607 
+\end{DoxyCode}
+\index{pump\+::\+Env@{pump\+::\+Env}!Push\+Range@{Push\+Range}}
+\index{Push\+Range@{Push\+Range}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{Push\+Range(self, var, lower, upper)}{PushRange(self, var, lower, upper)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Env.\+Push\+Range (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{var, }
+\item[{}]{lower, }
+\item[{}]{upper}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Env_a600c34cac1e4ba75406efeadb2d7dd95}{}\label{classpump_1_1Env_a600c34cac1e4ba75406efeadb2d7dd95}
+
+\begin{DoxyCode}
+608   \textcolor{keyword}{def }PushRange(self, var, lower, upper):
+609     self.ranges[:0] = [(var, lower, upper)]
+610 
+\end{DoxyCode}
+\index{pump\+::\+Env@{pump\+::\+Env}!Push\+Variable@{Push\+Variable}}
+\index{Push\+Variable@{Push\+Variable}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{Push\+Variable(self, var, value)}{PushVariable(self, var, value)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Env.\+Push\+Variable (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{var, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Env_ae0abc25733c61a8cc010cc5d76dd0dd8}{}\label{classpump_1_1Env_ae0abc25733c61a8cc010cc5d76dd0dd8}
+
+\begin{DoxyCode}
+595   \textcolor{keyword}{def }PushVariable(self, var, value):
+596     \textcolor{comment}{# If value looks like an int, store it as an int.}
+597     \textcolor{keywordflow}{try}:
+598       int\_value = int(value)
+599       \textcolor{keywordflow}{if} (\textcolor{stringliteral}{'%s'} % int\_value) == value:
+600         value = int\_value
+601     \textcolor{keywordflow}{except} Exception:
+602       \textcolor{keywordflow}{pass}
+603     self.variables[:0] = [(var, value)]
+604 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{pump\+::\+Env@{pump\+::\+Env}!ranges@{ranges}}
+\index{ranges@{ranges}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{ranges}{ranges}}]{\setlength{\rightskip}{0pt plus 5cm}pump.\+Env.\+ranges}\hypertarget{classpump_1_1Env_a8d5fec087c1a9108de9b105922b34309}{}\label{classpump_1_1Env_a8d5fec087c1a9108de9b105922b34309}
+\index{pump\+::\+Env@{pump\+::\+Env}!variables@{variables}}
+\index{variables@{variables}!pump\+::\+Env@{pump\+::\+Env}}
+\subsubsection[{\texorpdfstring{variables}{variables}}]{\setlength{\rightskip}{0pt plus 5cm}pump.\+Env.\+variables}\hypertarget{classpump_1_1Env_aba6456f3d0d23ac92bc9508c1b966bcd}{}\label{classpump_1_1Env_aba6456f3d0d23ac92bc9508c1b966bcd}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/scripts/\hyperlink{pump_8py}{pump.\+py}\end{DoxyCompactItemize}

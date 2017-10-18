@@ -1,0 +1,85 @@
+\hypertarget{classtesting_1_1internal_1_1FieldMatcher}{}\section{testing\+:\+:internal\+:\+:Field\+Matcher$<$ Class, Field\+Type $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1FieldMatcher}\index{testing\+::internal\+::\+Field\+Matcher$<$ Class, Field\+Type $>$@{testing\+::internal\+::\+Field\+Matcher$<$ Class, Field\+Type $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1FieldMatcher_adf3435dcc9592b75e474cc90b1424952}{Field\+Matcher} (Field\+Type Class\+::$\ast$field, const \hyperlink{classtesting_1_1Matcher}{Matcher}$<$ const Field\+Type \& $>$ \&matcher)
+\item 
+void \hyperlink{classtesting_1_1internal_1_1FieldMatcher_ac3b02441e2254652579c6e98a25c9b5b}{Describe\+To} (\+::std\+::ostream $\ast$os) const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1FieldMatcher_aae4069f3686609c9612798e73f28ca05}{Describe\+Negation\+To} (\+::std\+::ostream $\ast$os) const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classtesting_1_1internal_1_1FieldMatcher_a68fd542e3933c11da824e5e93d3f9858}{Match\+And\+Explain} (const T \&value, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Field\+Matcher@{testing\+::internal\+::\+Field\+Matcher}!Field\+Matcher@{Field\+Matcher}}
+\index{Field\+Matcher@{Field\+Matcher}!testing\+::internal\+::\+Field\+Matcher@{testing\+::internal\+::\+Field\+Matcher}}
+\subsubsection[{\texorpdfstring{Field\+Matcher(\+Field\+Type Class\+::$\ast$field, const Matcher$<$ const Field\+Type \& $>$ \&matcher)}{FieldMatcher(FieldType Class::*field, const Matcher< const FieldType & > &matcher)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Class , typename Field\+Type $>$ {\bf testing\+::internal\+::\+Field\+Matcher}$<$ Class, Field\+Type $>$\+::{\bf Field\+Matcher} (
+\begin{DoxyParamCaption}
+\item[{Field\+Type Class\+::$\ast$}]{field, }
+\item[{const {\bf Matcher}$<$ const Field\+Type \& $>$ \&}]{matcher}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1FieldMatcher_adf3435dcc9592b75e474cc90b1424952}{}\label{classtesting_1_1internal_1_1FieldMatcher_adf3435dcc9592b75e474cc90b1424952}
+
+\begin{DoxyCode}
+2185       : field\_(field), matcher\_(matcher) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Field\+Matcher@{testing\+::internal\+::\+Field\+Matcher}!Describe\+Negation\+To@{Describe\+Negation\+To}}
+\index{Describe\+Negation\+To@{Describe\+Negation\+To}!testing\+::internal\+::\+Field\+Matcher@{testing\+::internal\+::\+Field\+Matcher}}
+\subsubsection[{\texorpdfstring{Describe\+Negation\+To(\+::std\+::ostream $\ast$os) const }{DescribeNegationTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Class , typename Field\+Type $>$ void {\bf testing\+::internal\+::\+Field\+Matcher}$<$ Class, Field\+Type $>$\+::Describe\+Negation\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1FieldMatcher_aae4069f3686609c9612798e73f28ca05}{}\label{classtesting_1_1internal_1_1FieldMatcher_aae4069f3686609c9612798e73f28ca05}
+
+\begin{DoxyCode}
+2192                                                 \{
+2193     *os << \textcolor{stringliteral}{"is an object whose given field "};
+2194     matcher\_.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a47cc840bc783fc0ceafbfb68d0ea5758}{DescribeNegationTo}(os);
+2195   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Field\+Matcher@{testing\+::internal\+::\+Field\+Matcher}!Describe\+To@{Describe\+To}}
+\index{Describe\+To@{Describe\+To}!testing\+::internal\+::\+Field\+Matcher@{testing\+::internal\+::\+Field\+Matcher}}
+\subsubsection[{\texorpdfstring{Describe\+To(\+::std\+::ostream $\ast$os) const }{DescribeTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Class , typename Field\+Type $>$ void {\bf testing\+::internal\+::\+Field\+Matcher}$<$ Class, Field\+Type $>$\+::Describe\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1FieldMatcher_ac3b02441e2254652579c6e98a25c9b5b}{}\label{classtesting_1_1internal_1_1FieldMatcher_ac3b02441e2254652579c6e98a25c9b5b}
+
+\begin{DoxyCode}
+2187                                         \{
+2188     *os << \textcolor{stringliteral}{"is an object whose given field "};
+2189     matcher\_.\hyperlink{classtesting_1_1internal_1_1MatcherBase_afcb24e7d1ff27e147e0e607d2a122467}{DescribeTo}(os);
+2190   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Field\+Matcher@{testing\+::internal\+::\+Field\+Matcher}!Match\+And\+Explain@{Match\+And\+Explain}}
+\index{Match\+And\+Explain@{Match\+And\+Explain}!testing\+::internal\+::\+Field\+Matcher@{testing\+::internal\+::\+Field\+Matcher}}
+\subsubsection[{\texorpdfstring{Match\+And\+Explain(const T \&value, Match\+Result\+Listener $\ast$listener) const }{MatchAndExplain(const T &value, MatchResultListener *listener) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Class , typename Field\+Type $>$ template$<$typename T $>$ bool {\bf testing\+::internal\+::\+Field\+Matcher}$<$ Class, Field\+Type $>$\+::Match\+And\+Explain (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1FieldMatcher_a68fd542e3933c11da824e5e93d3f9858}{}\label{classtesting_1_1internal_1_1FieldMatcher_a68fd542e3933c11da824e5e93d3f9858}
+
+\begin{DoxyCode}
+2198                                                                             \{
+2199     \textcolor{keywordflow}{return} MatchAndExplainImpl(
+2200         typename ::testing::internal::
+2201             is\_pointer<\hyperlink{gtest-internal_8h_a2ffec8c60510eb130af387f5ce9a756a}{GTEST\_REMOVE\_CONST\_}(T)>::\hyperlink{namespaceupload_a4fc56f0dd6613be15c3c4dc3af3619ce}{type}(),
+2202         value, listener);
+2203   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{gmock-spec-builders__test_8cc}{}\section{vendor/googletest/googlemock/test/gmock-\/spec-\/builders\+\_\+test.cc File Reference}
+\label{gmock-spec-builders__test_8cc}\index{vendor/googletest/googlemock/test/gmock-\/spec-\/builders\+\_\+test.\+cc@{vendor/googletest/googlemock/test/gmock-\/spec-\/builders\+\_\+test.\+cc}}
+{\ttfamily \#include \char`\"{}gmock/gmock-\/spec-\/builders.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}gmock/gmock.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gmock/internal/gmock-\/port.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest-\/spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/internal/gtest-\/port.\+h\char`\"{}}\\*
+Include dependency graph for gmock-\/spec-\/builders\+\_\+test.cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gmock-spec-builders__test_8cc__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{gmock-spec-builders__test_8cc__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1ExpectationTester}{testing\+::internal\+::\+Expectation\+Tester}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacetesting}{testing}
+\item 
+ \hyperlink{namespacetesting_1_1internal}{testing\+::internal}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gmock-spec-builders__test_8cc_a95606368148f3e5aab5db46c32466afd}{Method}~MethodW
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gmock-spec-builders__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{gmock-\/spec-\/builders\+\_\+test.\+cc@{gmock-\/spec-\/builders\+\_\+test.\+cc}!Method@{Method}}
+\index{Method@{Method}!gmock-\/spec-\/builders\+\_\+test.\+cc@{gmock-\/spec-\/builders\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{Method}{Method}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Method~MethodW}\hypertarget{gmock-spec-builders__test_8cc_a95606368148f3e5aab5db46c32466afd}{}\label{gmock-spec-builders__test_8cc_a95606368148f3e5aab5db46c32466afd}
+
+
+\subsection{Function Documentation}
+\index{gmock-\/spec-\/builders\+\_\+test.\+cc@{gmock-\/spec-\/builders\+\_\+test.\+cc}!main@{main}}
+\index{main@{main}!gmock-\/spec-\/builders\+\_\+test.\+cc@{gmock-\/spec-\/builders\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock-spec-builders__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gmock-spec-builders__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+2634                                 \{
+2635 \textcolor{preprocessor}{#endif  // GMOCK\_RENAME\_MAIN}
+2636   \hyperlink{namespacetesting_a32b1c6db9ba5133ccabfa67616b3c041}{testing::InitGoogleMock}(&argc, argv);
+2637 
+2638   \textcolor{comment}{// Ensures that the tests pass no matter what value of}
+2639   \textcolor{comment}{// --gmock\_catch\_leaked\_mocks and --gmock\_verbose the user specifies.}
+2640   \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(catch\_leaked\_mocks) = \textcolor{keyword}{true};
+2641   \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(verbose) = 
+      \hyperlink{namespacetesting_1_1internal_ad9386ccda6b6deac2f7b84784d3088c0}{testing::internal::kWarningVerbosity};
+2642 
+2643   \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+2644 \}
+\end{DoxyCode}

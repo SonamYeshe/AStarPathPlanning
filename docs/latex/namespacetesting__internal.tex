@@ -1,0 +1,50 @@
+\hypertarget{namespacetesting__internal}{}\section{testing\+\_\+internal Namespace Reference}
+\label{namespacetesting__internal}\index{testing\+\_\+internal@{testing\+\_\+internal}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespacetesting__internal_ad4e5852805f397248a0867c0c4265ea5}{Default\+Print\+Non\+Container\+To} (const T \&value,\+::std\+::ostream $\ast$os)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{testing\+\_\+internal@{testing\+\_\+internal}!Default\+Print\+Non\+Container\+To@{Default\+Print\+Non\+Container\+To}}
+\index{Default\+Print\+Non\+Container\+To@{Default\+Print\+Non\+Container\+To}!testing\+\_\+internal@{testing\+\_\+internal}}
+\subsubsection[{\texorpdfstring{Default\+Print\+Non\+Container\+To(const T \&value,\+::std\+::ostream $\ast$os)}{DefaultPrintNonContainerTo(const T &value,::std::ostream *os)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void testing\+\_\+internal\+::\+Default\+Print\+Non\+Container\+To (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value, }
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacetesting__internal_ad4e5852805f397248a0867c0c4265ea5}{}\label{namespacetesting__internal_ad4e5852805f397248a0867c0c4265ea5}
+
+\begin{DoxyCode}
+222                                                                 \{
+223   \textcolor{comment}{// With the following statement, during unqualified name lookup,}
+224   \textcolor{comment}{// testing::internal2::operator<< appears as if it was declared in}
+225   \textcolor{comment}{// the nearest enclosing namespace that contains both}
+226   \textcolor{comment}{// ::testing\_internal and ::testing::internal2, i.e. the global}
+227   \textcolor{comment}{// namespace.  For more details, refer to the C++ Standard section}
+228   \textcolor{comment}{// 7.3.4-1 [namespace.udir].  This allows us to fall back onto}
+229   \textcolor{comment}{// testing::internal2::operator<< in case T doesn't come with a <<}
+230   \textcolor{comment}{// operator.}
+231   \textcolor{comment}{//}
+232   \textcolor{comment}{// We cannot write 'using ::testing::internal2::operator<<;', which}
+233   \textcolor{comment}{// gcc 3.3 fails to compile due to a compiler bug.}
+234   \textcolor{keyword}{using namespace }::\hyperlink{namespacetesting_1_1internal2}{testing::internal2};  \textcolor{comment}{// NOLINT}
+235 
+236   \textcolor{comment}{// Assuming T is defined in namespace foo, in the next statement,}
+237   \textcolor{comment}{// the compiler will consider all of:}
+238   \textcolor{comment}{//}
+239   \textcolor{comment}{//   1. foo::operator<< (thanks to Koenig look-up),}
+240   \textcolor{comment}{//   2. ::operator<< (as the current namespace is enclosed in ::),}
+241   \textcolor{comment}{//   3. testing::internal2::operator<< (thanks to the using statement above).}
+242   \textcolor{comment}{//}
+243   \textcolor{comment}{// The operator<< whose type matches T best will be picked.}
+244   \textcolor{comment}{//}
+245   \textcolor{comment}{// We deliberately allow #2 to be a candidate, as sometimes it's}
+246   \textcolor{comment}{// impossible to define #1 (e.g. when foo is ::std, defining}
+247   \textcolor{comment}{// anything in it is undefined behavior unless you are a compiler}
+248   \textcolor{comment}{// vendor.).}
+249   *os << value;
+250 \}
+\end{DoxyCode}

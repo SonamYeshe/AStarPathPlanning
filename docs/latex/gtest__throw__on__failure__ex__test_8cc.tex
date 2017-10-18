@@ -1,0 +1,102 @@
+\hypertarget{gtest__throw__on__failure__ex__test_8cc}{}\section{vendor/googletest/googletest/test/gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.cc File Reference}
+\label{gtest__throw__on__failure__ex__test_8cc}\index{vendor/googletest/googletest/test/gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc@{vendor/googletest/googletest/test/gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc}}
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+Include dependency graph for gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest__throw__on__failure__ex__test_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}{Fail} (const char $\ast$msg)
+\item 
+void \hyperlink{gtest__throw__on__failure__ex__test_8cc_a3ddff869a4b3365dd7a9c3727b996a1d}{Test\+Failure\+Throws\+Runtime\+Error} ()
+\item 
+int \hyperlink{gtest__throw__on__failure__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc}!Fail@{Fail}}
+\index{Fail@{Fail}!gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{Fail(const char $\ast$msg)}{Fail(const char *msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Fail (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}{}\label{gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}
+
+\begin{DoxyCode}
+45                            \{
+46   printf(\textcolor{stringliteral}{"FAILURE: %s\(\backslash\)n"}, msg);
+47   fflush(stdout);
+48   exit(1);
+49 \}
+\end{DoxyCode}
+\index{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc}!main@{main}}
+\index{main@{main}!gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__throw__on__failure__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gtest__throw__on__failure__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+81                                 \{
+82   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{testing::InitGoogleTest}(&argc, argv);
+83 
+84   \textcolor{comment}{// We want to ensure that people can use Google Test assertions in}
+85   \textcolor{comment}{// other testing frameworks, as long as they initialize Google Test}
+86   \textcolor{comment}{// properly and set the thrown-on-failure mode.  Therefore, we don't}
+87   \textcolor{comment}{// use Google Test's constructs for defining and running tests}
+88   \textcolor{comment}{// (e.g. TEST and RUN\_ALL\_TESTS) here.}
+89 
+90   \hyperlink{gtest__throw__on__failure__ex__test_8cc_a3ddff869a4b3365dd7a9c3727b996a1d}{TestFailureThrowsRuntimeError}();
+91   \textcolor{keywordflow}{return} 0;
+92 \}
+\end{DoxyCode}
+\index{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc}!Test\+Failure\+Throws\+Runtime\+Error@{Test\+Failure\+Throws\+Runtime\+Error}}
+\index{Test\+Failure\+Throws\+Runtime\+Error@{Test\+Failure\+Throws\+Runtime\+Error}!gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc@{gtest\+\_\+throw\+\_\+on\+\_\+failure\+\_\+ex\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{Test\+Failure\+Throws\+Runtime\+Error()}{TestFailureThrowsRuntimeError()}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Failure\+Throws\+Runtime\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__throw__on__failure__ex__test_8cc_a3ddff869a4b3365dd7a9c3727b996a1d}{}\label{gtest__throw__on__failure__ex__test_8cc_a3ddff869a4b3365dd7a9c3727b996a1d}
+
+\begin{DoxyCode}
+53                                      \{
+54   \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{testing::GTEST\_FLAG}(throw\_on\_failure) = \textcolor{keyword}{true};
+55 
+56   \textcolor{comment}{// A successful assertion shouldn't throw.}
+57   \textcolor{keywordflow}{try} \{
+58     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(3, 3);
+59   \} \textcolor{keywordflow}{catch}(...) \{
+60     \hyperlink{gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}{Fail}(\textcolor{stringliteral}{"A successful assertion wrongfully threw."});
+61   \}
+62 
+63   \textcolor{comment}{// A failed assertion should throw a subclass of std::runtime\_error.}
+64   \textcolor{keywordflow}{try} \{
+65     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(2, 3) << \textcolor{stringliteral}{"Expected failure"};
+66   \} \textcolor{keywordflow}{catch}(\textcolor{keyword}{const} std::runtime\_error& e) \{
+67     \textcolor{keywordflow}{if} (strstr(e.what(), \textcolor{stringliteral}{"Expected failure"}) != NULL)
+68       \textcolor{keywordflow}{return};
+69 
+70     printf(\textcolor{stringliteral}{"%s"},
+71            \textcolor{stringliteral}{"A failed assertion did throw an exception of the right type, "}
+72            \textcolor{stringliteral}{"but the message is incorrect.  Instead of containing \(\backslash\)"Expected "}
+73            \textcolor{stringliteral}{"failure\(\backslash\)", it is:\(\backslash\)n"});
+74     \hyperlink{gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}{Fail}(e.what());
+75   \} \textcolor{keywordflow}{catch}(...) \{
+76     \hyperlink{gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}{Fail}(\textcolor{stringliteral}{"A failed assertion threw the wrong type of exception."});
+77   \}
+78   \hyperlink{gtest__throw__on__failure__ex__test_8cc_a78ecbe7682643ac0413d57d0b9f27fa6}{Fail}(\textcolor{stringliteral}{"A failed assertion should've thrown but didn't."});
+79 \}
+\end{DoxyCode}

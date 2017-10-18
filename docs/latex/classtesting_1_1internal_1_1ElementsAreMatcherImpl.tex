@@ -1,0 +1,253 @@
+\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl}{}\section{testing\+:\+:internal\+:\+:Elements\+Are\+Matcher\+Impl$<$ Container $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl}\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl$<$ Container $>$@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl$<$ Container $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+
+
+Inheritance diagram for testing\+:\+:internal\+:\+:Elements\+Are\+Matcher\+Impl$<$ Container $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classtesting_1_1internal_1_1ElementsAreMatcherImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:internal\+:\+:Elements\+Are\+Matcher\+Impl$<$ Container $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classtesting_1_1internal_1_1ElementsAreMatcherImpl__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classtesting_1_1internal_1_1StlContainerView}{internal\+::\+Stl\+Container\+View}$<$ Raw\+Container $>$ \hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a68c37c6cc56c047323543044445a5022}{View}
+\item 
+typedef \hyperlink{classtesting_1_1internal_1_1StlContainerView_a2b2c63a6dcdbfe63fb0ee121ebf463ba}{View\+::type} \hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a5897abb9a1dcf88afe04e14986ebe46f}{Stl\+Container}
+\item 
+typedef \hyperlink{classtesting_1_1internal_1_1StlContainerView_a9cd4f6ed689b3938cdb7b3c4cbf1b36b}{View\+::const\+\_\+reference} \hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_ad5d20c1aa6e8c06c82fe3ac4d68c2278}{Stl\+Container\+Reference}
+\item 
+typedef Stl\+Container\+::value\+\_\+type \hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_ab2ae88256ac950b69cd2af67b9820c87}{Element}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a9492f6be7fe09e26eb7c5c00ff18062b}{G\+T\+E\+S\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+S\+T\+\_\+} (Container) Raw\+Container
+\item 
+{\footnotesize template$<$typename Input\+Iter $>$ }\\\hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_abfe21bd90e0c085d4a171e22f1e2cc09}{Elements\+Are\+Matcher\+Impl} (Input\+Iter first, Input\+Iter last)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a1c5086b897fb07cf3f2a922048faef28}{Describe\+To} (\+::std\+::ostream $\ast$os) const 
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a444dc46c3c78f6c4c9e45544c6dee95d}{Describe\+Negation\+To} (\+::std\+::ostream $\ast$os) const 
+\item 
+virtual bool \hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a1d6060dd6c8e9ce40ebb9b1825902292}{Match\+And\+Explain} (Container container, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}!Element@{Element}}
+\index{Element@{Element}!testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Element}{Element}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ typedef Stl\+Container\+::value\+\_\+type {\bf testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}$<$ Container $>$\+::{\bf Element}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl_ab2ae88256ac950b69cd2af67b9820c87}{}\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl_ab2ae88256ac950b69cd2af67b9820c87}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}!Stl\+Container@{Stl\+Container}}
+\index{Stl\+Container@{Stl\+Container}!testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Stl\+Container}{StlContainer}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ typedef {\bf View\+::type} {\bf testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}$<$ Container $>$\+::{\bf Stl\+Container}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a5897abb9a1dcf88afe04e14986ebe46f}{}\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a5897abb9a1dcf88afe04e14986ebe46f}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}!Stl\+Container\+Reference@{Stl\+Container\+Reference}}
+\index{Stl\+Container\+Reference@{Stl\+Container\+Reference}!testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Stl\+Container\+Reference}{StlContainerReference}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ typedef {\bf View\+::const\+\_\+reference} {\bf testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}$<$ Container $>$\+::{\bf Stl\+Container\+Reference}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl_ad5d20c1aa6e8c06c82fe3ac4d68c2278}{}\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl_ad5d20c1aa6e8c06c82fe3ac4d68c2278}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}!View@{View}}
+\index{View@{View}!testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{View}{View}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ typedef {\bf internal\+::\+Stl\+Container\+View}$<$Raw\+Container$>$ {\bf testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}$<$ Container $>$\+::{\bf View}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a68c37c6cc56c047323543044445a5022}{}\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a68c37c6cc56c047323543044445a5022}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}!Elements\+Are\+Matcher\+Impl@{Elements\+Are\+Matcher\+Impl}}
+\index{Elements\+Are\+Matcher\+Impl@{Elements\+Are\+Matcher\+Impl}!testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Elements\+Are\+Matcher\+Impl(\+Input\+Iter first, Input\+Iter last)}{ElementsAreMatcherImpl(InputIter first, InputIter last)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ template$<$typename Input\+Iter $>$ {\bf testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}$<$ Container $>$\+::{\bf Elements\+Are\+Matcher\+Impl} (
+\begin{DoxyParamCaption}
+\item[{Input\+Iter}]{first, }
+\item[{Input\+Iter}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl_abfe21bd90e0c085d4a171e22f1e2cc09}{}\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl_abfe21bd90e0c085d4a171e22f1e2cc09}
+
+\begin{DoxyCode}
+3119                                                           \{
+3120     \textcolor{keywordflow}{while} (first != last) \{
+3121       matchers\_.push\_back(MatcherCast<const Element&>(*first++));
+3122     \}
+3123   \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}!Describe\+Negation\+To@{Describe\+Negation\+To}}
+\index{Describe\+Negation\+To@{Describe\+Negation\+To}!testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Describe\+Negation\+To(\+::std\+::ostream $\ast$os) const }{DescribeNegationTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ virtual void {\bf testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}$<$ Container $>$\+::Describe\+Negation\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a444dc46c3c78f6c4c9e45544c6dee95d}{}\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a444dc46c3c78f6c4c9e45544c6dee95d}
+
+
+Reimplemented from \hyperlink{classtesting_1_1MatcherDescriberInterface_a35b9dc2f3e25ca4b903f282feaaf9f8c}{testing\+::\+Matcher\+Describer\+Interface}.
+
+
+\begin{DoxyCode}
+3145                                                         \{
+3146     \textcolor{keywordflow}{if} (\hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}() == 0) \{
+3147       *os << \textcolor{stringliteral}{"isn't empty"};
+3148       \textcolor{keywordflow}{return};
+3149     \}
+3150 
+3151     *os << \textcolor{stringliteral}{"doesn't have "} << Elements(\hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}()) << \textcolor{stringliteral}{", or\(\backslash\)n"};
+3152     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} != \hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+3153       *os << \textcolor{stringliteral}{"element #"} << \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} << \textcolor{stringliteral}{" "};
+3154       matchers\_[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}].DescribeNegationTo(os);
+3155       \textcolor{keywordflow}{if} (i + 1 < \hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}()) \{
+3156         *os << \textcolor{stringliteral}{", or\(\backslash\)n"};
+3157       \}
+3158     \}
+3159   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}!Describe\+To@{Describe\+To}}
+\index{Describe\+To@{Describe\+To}!testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Describe\+To(\+::std\+::ostream $\ast$os) const }{DescribeTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ virtual void {\bf testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}$<$ Container $>$\+::Describe\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a1c5086b897fb07cf3f2a922048faef28}{}\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a1c5086b897fb07cf3f2a922048faef28}
+
+
+Implements \hyperlink{classtesting_1_1MatcherDescriberInterface_ad9f861588bd969b6e3e717f13bb94e7b}{testing\+::\+Matcher\+Describer\+Interface}.
+
+
+\begin{DoxyCode}
+3126                                                 \{
+3127     \textcolor{keywordflow}{if} (\hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}() == 0) \{
+3128       *os << \textcolor{stringliteral}{"is empty"};
+3129     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}() == 1) \{
+3130       *os << \textcolor{stringliteral}{"has 1 element that "};
+3131       matchers\_[0].DescribeTo(os);
+3132     \} \textcolor{keywordflow}{else} \{
+3133       *os << \textcolor{stringliteral}{"has "} << Elements(\hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}()) << \textcolor{stringliteral}{" where\(\backslash\)n"};
+3134       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} != \hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+3135         *os << \textcolor{stringliteral}{"element #"} << \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} << \textcolor{stringliteral}{" "};
+3136         matchers\_[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}].DescribeTo(os);
+3137         \textcolor{keywordflow}{if} (i + 1 < \hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}()) \{
+3138           *os << \textcolor{stringliteral}{",\(\backslash\)n"};
+3139         \}
+3140       \}
+3141     \}
+3142   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}!G\+T\+E\+S\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+S\+T\+\_\+@{G\+T\+E\+S\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+S\+T\+\_\+}}
+\index{G\+T\+E\+S\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+S\+T\+\_\+@{G\+T\+E\+S\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+S\+T\+\_\+}!testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{G\+T\+E\+S\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+S\+T\+\_\+(\+Container) Raw\+Container}{GTEST_REMOVE_REFERENCE_AND_CONST_(Container) RawContainer}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ typedef {\bf testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}$<$ Container $>$\+::G\+T\+E\+S\+T\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+F\+E\+R\+E\+N\+C\+E\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+S\+T\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{Container}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a9492f6be7fe09e26eb7c5c00ff18062b}{}\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a9492f6be7fe09e26eb7c5c00ff18062b}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}!Match\+And\+Explain@{Match\+And\+Explain}}
+\index{Match\+And\+Explain@{Match\+And\+Explain}!testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl@{testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Match\+And\+Explain(\+Container container, Match\+Result\+Listener $\ast$listener) const }{MatchAndExplain(Container container, MatchResultListener *listener) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ virtual bool {\bf testing\+::internal\+::\+Elements\+Are\+Matcher\+Impl}$<$ Container $>$\+::Match\+And\+Explain (
+\begin{DoxyParamCaption}
+\item[{Container}]{container, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a1d6060dd6c8e9ce40ebb9b1825902292}{}\label{classtesting_1_1internal_1_1ElementsAreMatcherImpl_a1d6060dd6c8e9ce40ebb9b1825902292}
+
+
+Implements \hyperlink{classtesting_1_1MatcherInterface_a296b43607cd99d60365f0e6a762777cf}{testing\+::\+Matcher\+Interface$<$ Container $>$}.
+
+
+\begin{DoxyCode}
+3162                                                                     \{
+3163     \textcolor{comment}{// To work with stream-like "containers", we must only walk}
+3164     \textcolor{comment}{// through the elements in one pass.}
+3165 
+3166     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} listener\_interested = listener->IsInterested();
+3167 
+3168     \textcolor{comment}{// explanations[i] is the explanation of the element at index i.}
+3169     ::std::vector<internal::string> explanations(\hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}());
+3170     \hyperlink{classtesting_1_1internal_1_1ElementsAreMatcherImpl_ad5d20c1aa6e8c06c82fe3ac4d68c2278}{StlContainerReference} stl\_container = 
+      \hyperlink{classtesting_1_1internal_1_1StlContainerView_a36eccf53329730f6e55c12002128bf25}{View::ConstReference}(container);
+3171     \textcolor{keyword}{typename} StlContainer::const\_iterator it = stl\_container.begin();
+3172     \textcolor{keywordtype}{size\_t} exam\_pos = 0;
+3173     \textcolor{keywordtype}{bool} mismatch\_found = \textcolor{keyword}{false};  \textcolor{comment}{// Have we found a mismatched element yet?}
+3174 
+3175     \textcolor{comment}{// Go through the elements and matchers in pairs, until we reach}
+3176     \textcolor{comment}{// the end of either the elements or the matchers, or until we find a}
+3177     \textcolor{comment}{// mismatch.}
+3178     \textcolor{keywordflow}{for} (; it != stl\_container.end() && exam\_pos != \hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}(); ++it, ++exam\_pos) \{
+3179       \textcolor{keywordtype}{bool} match;  \textcolor{comment}{// Does the current element match the current matcher?}
+3180       \textcolor{keywordflow}{if} (listener\_interested) \{
+3181         StringMatchResultListener s;
+3182         match = matchers\_[exam\_pos].MatchAndExplain(*it, &s);
+3183         explanations[exam\_pos] = s.str();
+3184       \} \textcolor{keywordflow}{else} \{
+3185         match = matchers\_[exam\_pos].Matches(*it);
+3186       \}
+3187 
+3188       \textcolor{keywordflow}{if} (!match) \{
+3189         mismatch\_found = \textcolor{keyword}{true};
+3190         \textcolor{keywordflow}{break};
+3191       \}
+3192     \}
+3193     \textcolor{comment}{// If mismatch\_found is true, 'exam\_pos' is the index of the mismatch.}
+3194 
+3195     \textcolor{comment}{// Find how many elements the actual container has.  We avoid}
+3196     \textcolor{comment}{// calling size() s.t. this code works for stream-like "containers"}
+3197     \textcolor{comment}{// that don't define size().}
+3198     \textcolor{keywordtype}{size\_t} actual\_count = exam\_pos;
+3199     \textcolor{keywordflow}{for} (; it != stl\_container.end(); ++it) \{
+3200       ++actual\_count;
+3201     \}
+3202 
+3203     \textcolor{keywordflow}{if} (actual\_count != \hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}()) \{
+3204       \textcolor{comment}{// The element count doesn't match.  If the container is empty,}
+3205       \textcolor{comment}{// there's no need to explain anything as Google Mock already}
+3206       \textcolor{comment}{// prints the empty container.  Otherwise we just need to show}
+3207       \textcolor{comment}{// how many elements there actually are.}
+3208       \textcolor{keywordflow}{if} (listener\_interested && (actual\_count != 0)) \{
+3209         *listener << \textcolor{stringliteral}{"which has "} << Elements(actual\_count);
+3210       \}
+3211       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+3212     \}
+3213 
+3214     \textcolor{keywordflow}{if} (mismatch\_found) \{
+3215       \textcolor{comment}{// The element count matches, but the exam\_pos-th element doesn't match.}
+3216       \textcolor{keywordflow}{if} (listener\_interested) \{
+3217         *listener << \textcolor{stringliteral}{"whose element #"} << exam\_pos << \textcolor{stringliteral}{" doesn't match"};
+3218         \hyperlink{namespacetesting_1_1internal_a77c9e2b66d2b2414db4763971180d53c}{PrintIfNotEmpty}(explanations[exam\_pos], listener->stream());
+3219       \}
+3220       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+3221     \}
+3222 
+3223     \textcolor{comment}{// Every element matches its expectation.  We need to explain why}
+3224     \textcolor{comment}{// (the obvious ones can be skipped).}
+3225     \textcolor{keywordflow}{if} (listener\_interested) \{
+3226       \textcolor{keywordtype}{bool} reason\_printed = \textcolor{keyword}{false};
+3227       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} != \hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+3228         \textcolor{keyword}{const} \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{internal::string}& s = explanations[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}];
+3229         \textcolor{keywordflow}{if} (!s.empty()) \{
+3230           \textcolor{keywordflow}{if} (reason\_printed) \{
+3231             *listener << \textcolor{stringliteral}{",\(\backslash\)nand "};
+3232           \}
+3233           *listener << \textcolor{stringliteral}{"whose element #"} << \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} << \textcolor{stringliteral}{" matches, "} << s;
+3234           reason\_printed = \textcolor{keyword}{true};
+3235         \}
+3236       \}
+3237     \}
+3238     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+3239   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

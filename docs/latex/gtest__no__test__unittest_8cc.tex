@@ -1,0 +1,50 @@
+\hypertarget{gtest__no__test__unittest_8cc}{}\section{vendor/googletest/googletest/test/gtest\+\_\+no\+\_\+test\+\_\+unittest.cc File Reference}
+\label{gtest__no__test__unittest_8cc}\index{vendor/googletest/googletest/test/gtest\+\_\+no\+\_\+test\+\_\+unittest.\+cc@{vendor/googletest/googletest/test/gtest\+\_\+no\+\_\+test\+\_\+unittest.\+cc}}
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for gtest\+\_\+no\+\_\+test\+\_\+unittest.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest__no__test__unittest_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gtest__no__test__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gtest\+\_\+no\+\_\+test\+\_\+unittest.\+cc@{gtest\+\_\+no\+\_\+test\+\_\+unittest.\+cc}!main@{main}}
+\index{main@{main}!gtest\+\_\+no\+\_\+test\+\_\+unittest.\+cc@{gtest\+\_\+no\+\_\+test\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__no__test__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gtest__no__test__unittest_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+37                                 \{
+38   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{testing::InitGoogleTest}(&argc, argv);
+39 
+40   \textcolor{comment}{// An ad-hoc assertion outside of all tests.}
+41   \textcolor{comment}{//}
+42   \textcolor{comment}{// This serves three purposes:}
+43   \textcolor{comment}{//}
+44   \textcolor{comment}{// 1. It verifies that an ad-hoc assertion can be executed even if}
+45   \textcolor{comment}{//    no test is defined.}
+46   \textcolor{comment}{// 2. It verifies that a failed ad-hoc assertion causes the test}
+47   \textcolor{comment}{//    program to fail.}
+48   \textcolor{comment}{// 3. We had a bug where the XML output won't be generated if an}
+49   \textcolor{comment}{//    assertion is executed before RUN\_ALL\_TESTS() is called, even}
+50   \textcolor{comment}{//    though --gtest\_output=xml is specified.  This makes sure the}
+51   \textcolor{comment}{//    bug is fixed and doesn't regress.}
+52   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, 2);
+53 
+54   \textcolor{comment}{// The above EXPECT\_EQ() should cause RUN\_ALL\_TESTS() to return non-zero.}
+55   \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}() ? 0 : 1;
+56 \}
+\end{DoxyCode}

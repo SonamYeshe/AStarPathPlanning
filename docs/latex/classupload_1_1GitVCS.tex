@@ -1,0 +1,261 @@
+\hypertarget{classupload_1_1GitVCS}{}\section{upload.\+Git\+V\+CS Class Reference}
+\label{classupload_1_1GitVCS}\index{upload.\+Git\+V\+CS@{upload.\+Git\+V\+CS}}
+
+
+Inheritance diagram for upload.\+Git\+V\+CS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classupload_1_1GitVCS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for upload.\+Git\+V\+CS\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classupload_1_1GitVCS__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classupload_1_1GitVCS_aba4e1dca1c4b3e5db7ba07f6bce3c839}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options})
+\item 
+def \hyperlink{classupload_1_1GitVCS_a3ebfc01cebc9b585706ad3f4389a8833}{Generate\+Diff} (self, extra\+\_\+args)
+\item 
+def \hyperlink{classupload_1_1GitVCS_ae4e8c0e9fa01619c6a5c76d1ab84b995}{Get\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1GitVCS_a70ddb65a6b512b8cb8cc4affa37ff9b4}{Get\+Base\+File} (self, filename)
+\item 
+def \hyperlink{classupload_1_1GitVCS_aba4e1dca1c4b3e5db7ba07f6bce3c839}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classupload_1_1VersionControlSystem_a4d57d043bc408887b94269fe4cea9556}{options})
+\item 
+def \hyperlink{classupload_1_1GitVCS_a3ebfc01cebc9b585706ad3f4389a8833}{Generate\+Diff} (self, extra\+\_\+args)
+\item 
+def \hyperlink{classupload_1_1GitVCS_ae4e8c0e9fa01619c6a5c76d1ab84b995}{Get\+Unknown\+Files} (self)
+\item 
+def \hyperlink{classupload_1_1GitVCS_a70ddb65a6b512b8cb8cc4affa37ff9b4}{Get\+Base\+File} (self, filename)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classupload_1_1GitVCS_a07e9469050a157f34fe804cdf6ecddac}{base\+\_\+hashes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Implementation of the VersionControlSystem interface for Git.\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, options)}{__init__(self, options)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Git\+V\+C\+S.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1GitVCS_aba4e1dca1c4b3e5db7ba07f6bce3c839}{}\label{classupload_1_1GitVCS_aba4e1dca1c4b3e5db7ba07f6bce3c839}
+
+\begin{DoxyCode}
+988   \textcolor{keyword}{def }\_\_init\_\_(self, options):
+989     super(GitVCS, self).\_\_init\_\_(options)
+990     \textcolor{comment}{# Map of filename -> hash of base file.}
+991     self.base\_hashes = \{\}
+992 
+\end{DoxyCode}
+\index{upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, options)}{__init__(self, options)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Git\+V\+C\+S.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1GitVCS_aba4e1dca1c4b3e5db7ba07f6bce3c839}{}\label{classupload_1_1GitVCS_aba4e1dca1c4b3e5db7ba07f6bce3c839}
+
+\begin{DoxyCode}
+988   \textcolor{keyword}{def }\_\_init\_\_(self, options):
+989     super(GitVCS, self).\_\_init\_\_(options)
+990     \textcolor{comment}{# Map of filename -> hash of base file.}
+991     self.base\_hashes = \{\}
+992 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}!Generate\+Diff@{Generate\+Diff}}
+\index{Generate\+Diff@{Generate\+Diff}!upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}}
+\subsubsection[{\texorpdfstring{Generate\+Diff(self, extra\+\_\+args)}{GenerateDiff(self, extra_args)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Git\+V\+C\+S.\+Generate\+Diff (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{extra\+\_\+args}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1GitVCS_a3ebfc01cebc9b585706ad3f4389a8833}{}\label{classupload_1_1GitVCS_a3ebfc01cebc9b585706ad3f4389a8833}
+
+\begin{DoxyCode}
+993   \textcolor{keyword}{def }GenerateDiff(self, extra\_args):
+994     \textcolor{comment}{# This is more complicated than svn's GenerateDiff because we must convert}
+995     \textcolor{comment}{# the diff output to include an svn-style "Index:" line as well as record}
+996     \textcolor{comment}{# the hashes of the base files, so we can upload them along with our diff.}
+997     \textcolor{keywordflow}{if} self.options.revision:
+998       extra\_args = [self.options.revision] + extra\_args
+999     gitdiff = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"git"}, \textcolor{stringliteral}{"diff"}, \textcolor{stringliteral}{"--full-index"}] + extra\_args)
+1000     svndiff = []
+1001     filecount = 0
+1002     filename = \textcolor{keywordtype}{None}
+1003     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} gitdiff.splitlines():
+1004       match = re.match(\textcolor{stringliteral}{r"diff --git a/(.*) b/.*$"}, line)
+1005       \textcolor{keywordflow}{if} match:
+1006         filecount += 1
+1007         filename = match.group(1)
+1008         svndiff.append(\textcolor{stringliteral}{"Index: %s\(\backslash\)n"} % filename)
+1009       \textcolor{keywordflow}{else}:
+1010         \textcolor{comment}{# The "index" line in a git diff looks like this (long hashes elided):}
+1011         \textcolor{comment}{#   index 82c0d44..b2cee3f 100755}
+1012         \textcolor{comment}{# We want to save the left hash, as that identifies the base file.}
+1013         match = re.match(\textcolor{stringliteral}{r"index (\(\backslash\)w+)\(\backslash\).\(\backslash\)."}, line)
+1014         \textcolor{keywordflow}{if} match:
+1015           self.base\_hashes[filename] = match.group(1)
+1016       svndiff.append(line + \textcolor{stringliteral}{"\(\backslash\)n"})
+1017     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} filecount:
+1018       \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"No valid patches found in output from git diff"})
+1019     \textcolor{keywordflow}{return} \textcolor{stringliteral}{""}.join(svndiff)
+1020 
+\end{DoxyCode}
+\index{upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}!Generate\+Diff@{Generate\+Diff}}
+\index{Generate\+Diff@{Generate\+Diff}!upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}}
+\subsubsection[{\texorpdfstring{Generate\+Diff(self, extra\+\_\+args)}{GenerateDiff(self, extra_args)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Git\+V\+C\+S.\+Generate\+Diff (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{extra\+\_\+args}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1GitVCS_a3ebfc01cebc9b585706ad3f4389a8833}{}\label{classupload_1_1GitVCS_a3ebfc01cebc9b585706ad3f4389a8833}
+
+\begin{DoxyCode}
+993   \textcolor{keyword}{def }GenerateDiff(self, extra\_args):
+994     \textcolor{comment}{# This is more complicated than svn's GenerateDiff because we must convert}
+995     \textcolor{comment}{# the diff output to include an svn-style "Index:" line as well as record}
+996     \textcolor{comment}{# the hashes of the base files, so we can upload them along with our diff.}
+997     \textcolor{keywordflow}{if} self.options.revision:
+998       extra\_args = [self.options.revision] + extra\_args
+999     gitdiff = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"git"}, \textcolor{stringliteral}{"diff"}, \textcolor{stringliteral}{"--full-index"}] + extra\_args)
+1000     svndiff = []
+1001     filecount = 0
+1002     filename = \textcolor{keywordtype}{None}
+1003     \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} gitdiff.splitlines():
+1004       match = re.match(\textcolor{stringliteral}{r"diff --git a/(.*) b/.*$"}, line)
+1005       \textcolor{keywordflow}{if} match:
+1006         filecount += 1
+1007         filename = match.group(1)
+1008         svndiff.append(\textcolor{stringliteral}{"Index: %s\(\backslash\)n"} % filename)
+1009       \textcolor{keywordflow}{else}:
+1010         \textcolor{comment}{# The "index" line in a git diff looks like this (long hashes elided):}
+1011         \textcolor{comment}{#   index 82c0d44..b2cee3f 100755}
+1012         \textcolor{comment}{# We want to save the left hash, as that identifies the base file.}
+1013         match = re.match(\textcolor{stringliteral}{r"index (\(\backslash\)w+)\(\backslash\).\(\backslash\)."}, line)
+1014         \textcolor{keywordflow}{if} match:
+1015           self.base\_hashes[filename] = match.group(1)
+1016       svndiff.append(line + \textcolor{stringliteral}{"\(\backslash\)n"})
+1017     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} filecount:
+1018       \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"No valid patches found in output from git diff"})
+1019     \textcolor{keywordflow}{return} \textcolor{stringliteral}{""}.join(svndiff)
+1020 
+\end{DoxyCode}
+\index{upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}!Get\+Base\+File@{Get\+Base\+File}}
+\index{Get\+Base\+File@{Get\+Base\+File}!upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Base\+File(self, filename)}{GetBaseFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Git\+V\+C\+S.\+Get\+Base\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1GitVCS_a70ddb65a6b512b8cb8cc4affa37ff9b4}{}\label{classupload_1_1GitVCS_a70ddb65a6b512b8cb8cc4affa37ff9b4}
+
+\begin{DoxyCode}
+1026   \textcolor{keyword}{def }GetBaseFile(self, filename):
+1027     hash = self.base\_hashes[filename]
+1028     base\_content = \textcolor{keywordtype}{None}
+1029     new\_content = \textcolor{keywordtype}{None}
+1030     is\_binary = \textcolor{keyword}{False}
+1031     \textcolor{keywordflow}{if} hash == \textcolor{stringliteral}{"0"} * 40:  \textcolor{comment}{# All-zero hash indicates no base file.}
+1032       status = \textcolor{stringliteral}{"A"}
+1033       base\_content = \textcolor{stringliteral}{""}
+1034     \textcolor{keywordflow}{else}:
+1035       status = \textcolor{stringliteral}{"M"}
+1036       base\_content, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}([\textcolor{stringliteral}{"git"}, \textcolor{stringliteral}{"show"}, hash])
+1037       \textcolor{keywordflow}{if} returncode:
+1038         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Got error status from 'git show %s'"} % hash)
+1039     \textcolor{keywordflow}{return} (base\_content, new\_content, is\_binary, status)
+1040 
+1041 
+\end{DoxyCode}
+\index{upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}!Get\+Base\+File@{Get\+Base\+File}}
+\index{Get\+Base\+File@{Get\+Base\+File}!upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Base\+File(self, filename)}{GetBaseFile(self, filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Git\+V\+C\+S.\+Get\+Base\+File (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1GitVCS_a70ddb65a6b512b8cb8cc4affa37ff9b4}{}\label{classupload_1_1GitVCS_a70ddb65a6b512b8cb8cc4affa37ff9b4}
+
+\begin{DoxyCode}
+1026   \textcolor{keyword}{def }GetBaseFile(self, filename):
+1027     hash = self.base\_hashes[filename]
+1028     base\_content = \textcolor{keywordtype}{None}
+1029     new\_content = \textcolor{keywordtype}{None}
+1030     is\_binary = \textcolor{keyword}{False}
+1031     \textcolor{keywordflow}{if} hash == \textcolor{stringliteral}{"0"} * 40:  \textcolor{comment}{# All-zero hash indicates no base file.}
+1032       status = \textcolor{stringliteral}{"A"}
+1033       base\_content = \textcolor{stringliteral}{""}
+1034     \textcolor{keywordflow}{else}:
+1035       status = \textcolor{stringliteral}{"M"}
+1036       base\_content, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}([\textcolor{stringliteral}{"git"}, \textcolor{stringliteral}{"show"}, hash])
+1037       \textcolor{keywordflow}{if} returncode:
+1038         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Got error status from 'git show %s'"} % hash)
+1039     \textcolor{keywordflow}{return} (base\_content, new\_content, is\_binary, status)
+1040 
+1041 
+\end{DoxyCode}
+\index{upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}!Get\+Unknown\+Files@{Get\+Unknown\+Files}}
+\index{Get\+Unknown\+Files@{Get\+Unknown\+Files}!upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Unknown\+Files(self)}{GetUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Git\+V\+C\+S.\+Get\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1GitVCS_ae4e8c0e9fa01619c6a5c76d1ab84b995}{}\label{classupload_1_1GitVCS_ae4e8c0e9fa01619c6a5c76d1ab84b995}
+
+\begin{DoxyCode}
+1021   \textcolor{keyword}{def }GetUnknownFiles(self):
+1022     status = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"git"}, \textcolor{stringliteral}{"ls-files"}, \textcolor{stringliteral}{"--exclude-standard"}, \textcolor{stringliteral}{"--others"}],
+1023                       silent\_ok=\textcolor{keyword}{True})
+1024     \textcolor{keywordflow}{return} status.splitlines()
+1025 
+\end{DoxyCode}
+\index{upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}!Get\+Unknown\+Files@{Get\+Unknown\+Files}}
+\index{Get\+Unknown\+Files@{Get\+Unknown\+Files}!upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}}
+\subsubsection[{\texorpdfstring{Get\+Unknown\+Files(self)}{GetUnknownFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Git\+V\+C\+S.\+Get\+Unknown\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classupload_1_1GitVCS_ae4e8c0e9fa01619c6a5c76d1ab84b995}{}\label{classupload_1_1GitVCS_ae4e8c0e9fa01619c6a5c76d1ab84b995}
+
+\begin{DoxyCode}
+1021   \textcolor{keyword}{def }GetUnknownFiles(self):
+1022     status = \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{RunShell}([\textcolor{stringliteral}{"git"}, \textcolor{stringliteral}{"ls-files"}, \textcolor{stringliteral}{"--exclude-standard"}, \textcolor{stringliteral}{"--others"}],
+1023                       silent\_ok=\textcolor{keyword}{True})
+1024     \textcolor{keywordflow}{return} status.splitlines()
+1025 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}!base\+\_\+hashes@{base\+\_\+hashes}}
+\index{base\+\_\+hashes@{base\+\_\+hashes}!upload\+::\+Git\+V\+CS@{upload\+::\+Git\+V\+CS}}
+\subsubsection[{\texorpdfstring{base\+\_\+hashes}{base_hashes}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+Git\+V\+C\+S.\+base\+\_\+hashes}\hypertarget{classupload_1_1GitVCS_a07e9469050a157f34fe804cdf6ecddac}{}\label{classupload_1_1GitVCS_a07e9469050a157f34fe804cdf6ecddac}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/scripts/\hyperlink{googlemock_2scripts_2upload_8py}{upload.\+py}\end{DoxyCompactItemize}

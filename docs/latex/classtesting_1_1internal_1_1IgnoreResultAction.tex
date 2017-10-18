@@ -1,0 +1,61 @@
+\hypertarget{classtesting_1_1internal_1_1IgnoreResultAction}{}\section{testing\+:\+:internal\+:\+:Ignore\+Result\+Action$<$ A $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1IgnoreResultAction}\index{testing\+::internal\+::\+Ignore\+Result\+Action$<$ A $>$@{testing\+::internal\+::\+Ignore\+Result\+Action$<$ A $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/actions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1IgnoreResultAction_a9199f7b1b7771b2e2a5fd28caf624623}{Ignore\+Result\+Action} (const \hyperlink{namespacetesting_a5e9134d655d2fc9323902348083282e7}{A} \&action)
+\item 
+{\footnotesize template$<$typename F $>$ }\\\hyperlink{classtesting_1_1internal_1_1IgnoreResultAction_a95b6a067a3b2fa43ab229b695f5cb4d2}{operator Action$<$ F $>$} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Ignore\+Result\+Action@{testing\+::internal\+::\+Ignore\+Result\+Action}!Ignore\+Result\+Action@{Ignore\+Result\+Action}}
+\index{Ignore\+Result\+Action@{Ignore\+Result\+Action}!testing\+::internal\+::\+Ignore\+Result\+Action@{testing\+::internal\+::\+Ignore\+Result\+Action}}
+\subsubsection[{\texorpdfstring{Ignore\+Result\+Action(const A \&action)}{IgnoreResultAction(const A &action)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A $>$ {\bf testing\+::internal\+::\+Ignore\+Result\+Action}$<$ {\bf A} $>$\+::{\bf Ignore\+Result\+Action} (
+\begin{DoxyParamCaption}
+\item[{const {\bf A} \&}]{action}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1IgnoreResultAction_a9199f7b1b7771b2e2a5fd28caf624623}{}\label{classtesting_1_1internal_1_1IgnoreResultAction_a9199f7b1b7771b2e2a5fd28caf624623}
+
+\begin{DoxyCode}
+892 : action\_(\hyperlink{namespaceupload_a675d13c979f1c720866d22ed1736f580}{action}) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Ignore\+Result\+Action@{testing\+::internal\+::\+Ignore\+Result\+Action}!operator Action$<$ F $>$@{operator Action$<$ F $>$}}
+\index{operator Action$<$ F $>$@{operator Action$<$ F $>$}!testing\+::internal\+::\+Ignore\+Result\+Action@{testing\+::internal\+::\+Ignore\+Result\+Action}}
+\subsubsection[{\texorpdfstring{operator Action$<$ F $>$() const }{operator Action< F >() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename A $>$ template$<$typename F $>$ {\bf testing\+::internal\+::\+Ignore\+Result\+Action}$<$ {\bf A} $>$\+::operator {\bf Action}$<$ F $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1IgnoreResultAction_a95b6a067a3b2fa43ab229b695f5cb4d2}{}\label{classtesting_1_1internal_1_1IgnoreResultAction_a95b6a067a3b2fa43ab229b695f5cb4d2}
+
+\begin{DoxyCode}
+895                              \{
+896     \textcolor{comment}{// Assert statement belongs here because this is the best place to verify}
+897     \textcolor{comment}{// conditions on F. It produces the clearest error messages}
+898     \textcolor{comment}{// in most compilers.}
+899     \textcolor{comment}{// Impl really belongs in this scope as a local class but can't}
+900     \textcolor{comment}{// because MSVC produces duplicate symbols in different translation units}
+901     \textcolor{comment}{// in this case. Until MS fixes that bug we put Impl into the class scope}
+902     \textcolor{comment}{// and put the typedef both here (for use in assert statement) and}
+903     \textcolor{comment}{// in the Impl class. But both definitions must be the same.}
+904     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} internal::Function<F>::Result Result;
+905 
+906     \textcolor{comment}{// Asserts at compile time that F returns void.}
+907     CompileAssertTypesEqual<void, Result>();
+908 
+909     \textcolor{keywordflow}{return} Action<F>(\textcolor{keyword}{new} Impl<F>(action\_));
+910   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-actions_8h}{gmock-\/actions.\+h}\end{DoxyCompactItemize}

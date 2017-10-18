@@ -1,0 +1,121 @@
+\hypertarget{classgtest__output__test_1_1GTestOutputTest}{}\section{gtest\+\_\+output\+\_\+test.\+G\+Test\+Output\+Test Class Reference}
+\label{classgtest__output__test_1_1GTestOutputTest}\index{gtest\+\_\+output\+\_\+test.\+G\+Test\+Output\+Test@{gtest\+\_\+output\+\_\+test.\+G\+Test\+Output\+Test}}
+
+
+Inheritance diagram for gtest\+\_\+output\+\_\+test.\+G\+Test\+Output\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classgtest__output__test_1_1GTestOutputTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for gtest\+\_\+output\+\_\+test.\+G\+Test\+Output\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classgtest__output__test_1_1GTestOutputTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classgtest__output__test_1_1GTestOutputTest_a63f62268f795adfc5ca91514dbec2873}{Remove\+Unsupported\+Tests} (self, test\+\_\+output)
+\item 
+def \hyperlink{classgtest__output__test_1_1GTestOutputTest_a1e6b96f68c5bcb8271de3208fa7f9f64}{test\+Output} (self)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{gtest\+\_\+output\+\_\+test\+::\+G\+Test\+Output\+Test@{gtest\+\_\+output\+\_\+test\+::\+G\+Test\+Output\+Test}!Remove\+Unsupported\+Tests@{Remove\+Unsupported\+Tests}}
+\index{Remove\+Unsupported\+Tests@{Remove\+Unsupported\+Tests}!gtest\+\_\+output\+\_\+test\+::\+G\+Test\+Output\+Test@{gtest\+\_\+output\+\_\+test\+::\+G\+Test\+Output\+Test}}
+\subsubsection[{\texorpdfstring{Remove\+Unsupported\+Tests(self, test\+\_\+output)}{RemoveUnsupportedTests(self, test_output)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+output\+\_\+test.\+G\+Test\+Output\+Test.\+Remove\+Unsupported\+Tests (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{test\+\_\+output}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__output__test_1_1GTestOutputTest_a63f62268f795adfc5ca91514dbec2873}{}\label{classgtest__output__test_1_1GTestOutputTest_a63f62268f795adfc5ca91514dbec2873}
+
+\begin{DoxyCode}
+260   \textcolor{keyword}{def }RemoveUnsupportedTests(self, test\_output):
+261     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} SUPPORTS\_DEATH\_TESTS:
+262       test\_output = \hyperlink{namespacegtest__output__test_ad1c5969bc410dc44be069ab453ce8840}{RemoveMatchingTests}(test\_output, \textcolor{stringliteral}{'DeathTest'})
+263     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} SUPPORTS\_TYPED\_TESTS:
+264       test\_output = \hyperlink{namespacegtest__output__test_ad1c5969bc410dc44be069ab453ce8840}{RemoveMatchingTests}(test\_output, \textcolor{stringliteral}{'TypedTest'})
+265       test\_output = \hyperlink{namespacegtest__output__test_ad1c5969bc410dc44be069ab453ce8840}{RemoveMatchingTests}(test\_output, \textcolor{stringliteral}{'TypedDeathTest'})
+266       test\_output = \hyperlink{namespacegtest__output__test_ad1c5969bc410dc44be069ab453ce8840}{RemoveMatchingTests}(test\_output, \textcolor{stringliteral}{'TypeParamDeathTest'})
+267     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} SUPPORTS\_THREADS:
+268       test\_output = \hyperlink{namespacegtest__output__test_ad1c5969bc410dc44be069ab453ce8840}{RemoveMatchingTests}(test\_output,
+269                                         \textcolor{stringliteral}{'ExpectFailureWithThreadsTest'})
+270       test\_output = \hyperlink{namespacegtest__output__test_ad1c5969bc410dc44be069ab453ce8840}{RemoveMatchingTests}(test\_output,
+271                                         \textcolor{stringliteral}{'ScopedFakeTestPartResultReporterTest'})
+272       test\_output = \hyperlink{namespacegtest__output__test_ad1c5969bc410dc44be069ab453ce8840}{RemoveMatchingTests}(test\_output,
+273                                         \textcolor{stringliteral}{'WorksConcurrently'})
+274     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} SUPPORTS\_STACK\_TRACES:
+275       test\_output = \hyperlink{namespacegtest__output__test_a5fa2201583a11780279aa720dea5dd4e}{RemoveStackTraces}(test\_output)
+276 
+277     \textcolor{keywordflow}{return} test\_output
+278 
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+::\+G\+Test\+Output\+Test@{gtest\+\_\+output\+\_\+test\+::\+G\+Test\+Output\+Test}!test\+Output@{test\+Output}}
+\index{test\+Output@{test\+Output}!gtest\+\_\+output\+\_\+test\+::\+G\+Test\+Output\+Test@{gtest\+\_\+output\+\_\+test\+::\+G\+Test\+Output\+Test}}
+\subsubsection[{\texorpdfstring{test\+Output(self)}{testOutput(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def gtest\+\_\+output\+\_\+test.\+G\+Test\+Output\+Test.\+test\+Output (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classgtest__output__test_1_1GTestOutputTest_a1e6b96f68c5bcb8271de3208fa7f9f64}{}\label{classgtest__output__test_1_1GTestOutputTest_a1e6b96f68c5bcb8271de3208fa7f9f64}
+
+\begin{DoxyCode}
+279   \textcolor{keyword}{def }testOutput(self):
+280     output = \hyperlink{namespacegtest__output__test_a9d88a4a9a91b97a369abac2170a23ebe}{GetOutputOfAllCommands}()
+281 
+282     golden\_file = open(GOLDEN\_PATH, \textcolor{stringliteral}{'r')}
+283 \textcolor{stringliteral}{    }\textcolor{comment}{# A mis-configured source control system can cause \(\backslash\)r appear in EOL}
+284     \textcolor{comment}{# sequences when we read the golden file irrespective of an operating}
+285     \textcolor{comment}{# system used. Therefore, we need to strip those \(\backslash\)r's from newlines}
+286     \textcolor{comment}{# unconditionally.}
+287     golden = \hyperlink{namespacegtest__output__test_aa9ee981e855b986a7fc513a4ab68dd3e}{ToUnixLineEnding}(golden\_file.read())
+288     golden\_file.close()
+289 
+290     \textcolor{comment}{# We want the test to pass regardless of certain features being}
+291     \textcolor{comment}{# supported or not.}
+292 
+293     \textcolor{comment}{# We still have to remove type name specifics in all cases.}
+294     normalized\_actual = \hyperlink{namespacegtest__output__test_addbdacea2fbdaacb3a0328425b3218c9}{RemoveTypeInfoDetails}(output)
+295     normalized\_golden = \hyperlink{namespacegtest__output__test_addbdacea2fbdaacb3a0328425b3218c9}{RemoveTypeInfoDetails}(golden)
+296 
+297     \textcolor{keywordflow}{if} CAN\_GENERATE\_GOLDEN\_FILE:
+298       self.assertEqual(normalized\_golden, normalized\_actual,
+299                        \textcolor{stringliteral}{'\(\backslash\)n'}.join(difflib.unified\_diff(
+300                            normalized\_golden.split(\textcolor{stringliteral}{'\(\backslash\)n'}),
+301                            normalized\_actual.split(\textcolor{stringliteral}{'\(\backslash\)n'}),
+302                            \textcolor{stringliteral}{'golden'}, \textcolor{stringliteral}{'actual'})))
+303     \textcolor{keywordflow}{else}:
+304       normalized\_actual = \hyperlink{namespacegtest__output__test_a597325056856f8805a518c2952a3233e}{NormalizeToCurrentPlatform}(
+305           \hyperlink{namespacegtest__output__test_a74ae74aaa09cc2651aabbec468a878d9}{RemoveTestCounts}(normalized\_actual))
+306       normalized\_golden = \hyperlink{namespacegtest__output__test_a597325056856f8805a518c2952a3233e}{NormalizeToCurrentPlatform}(
+307           \hyperlink{namespacegtest__output__test_a74ae74aaa09cc2651aabbec468a878d9}{RemoveTestCounts}(self.RemoveUnsupportedTests(normalized\_golden)))
+308 
+309       \textcolor{comment}{# This code is very handy when debugging golden file differences:}
+310       \textcolor{keywordflow}{if} os.getenv(\textcolor{stringliteral}{'DEBUG\_GTEST\_OUTPUT\_TEST'}):
+311         open(os.path.join(
+312             \hyperlink{namespacegtest__test__utils_aaff66cb0980804d8bd57dc719d4b5518}{gtest\_test\_utils.GetSourceDir}(),
+313             \textcolor{stringliteral}{'\_gtest\_output\_test\_normalized\_actual.txt'}), \textcolor{stringliteral}{'wb'}).write(
+314                 normalized\_actual)
+315         open(os.path.join(
+316             \hyperlink{namespacegtest__test__utils_aaff66cb0980804d8bd57dc719d4b5518}{gtest\_test\_utils.GetSourceDir}(),
+317             \textcolor{stringliteral}{'\_gtest\_output\_test\_normalized\_golden.txt'}), \textcolor{stringliteral}{'wb'}).write(
+318                 normalized\_golden)
+319 
+320       self.assertEqual(normalized\_golden, normalized\_actual)
+321 
+322 
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__output__test_8py}{gtest\+\_\+output\+\_\+test.\+py}\end{DoxyCompactItemize}

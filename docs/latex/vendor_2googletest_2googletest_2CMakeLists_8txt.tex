@@ -1,0 +1,43 @@
+\hypertarget{vendor_2googletest_2googletest_2CMakeLists_8txt}{}\section{vendor/googletest/googletest/\+C\+Make\+Lists.txt File Reference}
+\label{vendor_2googletest_2googletest_2CMakeLists_8txt}\index{vendor/googletest/googletest/\+C\+Make\+Lists.\+txt@{vendor/googletest/googletest/\+C\+Make\+Lists.\+txt}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vendor_2googletest_2googletest_2CMakeLists_8txt_ae5f6f0871fc02d53560c2acb7b4ab27c}{option} (B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS\char`\"{}Build shared libraries (D\+L\+Ls).\char`\"{}O\+FF) option(gtest\+\_\+force\+\_\+shared\+\_\+crt\char`\"{}Use shared (D\+LL) run-\/time lib even when Google Test is built as static lib.\char`\"{}O\+FF) option(gtest\+\_\+build\+\_\+tests\char`\"{}Build all of gtest\textquotesingle{}s own tests.\char`\"{}O\+FF) option(gtest\+\_\+build\+\_\+samples\char`\"{}Build gtest\textquotesingle{}s sample programs.\char`\"{}O\+FF) option(gtest\+\_\+disable\+\_\+pthreads\char`\"{}Disable uses of pthreads in gtest.\char`\"{}O\+FF) option(gtest\+\_\+hide\+\_\+internal\+\_\+symbols\char`\"{}Build gtest with internal symbols hidden in shared libraries.\char`\"{}O\+FF) include(cmake/hermetic\+\_\+build.\+cmake O\+P\+T\+I\+O\+N\+AL) if(C\+O\+M\+M\+A\+ND pre\+\_\+project\+\_\+set\+\_\+up\+\_\+hermetic\+\_\+build) pre\+\_\+project\+\_\+set\+\_\+up\+\_\+hermetic\+\_\+build() endif() project(gtest C\+XX C) \hyperlink{CMakeLists_8txt_a5813863403b16ee62a7ad3383c05d50f}{cmake\+\_\+minimum\+\_\+required}(V\+E\+R\+S\+I\+ON 2.\+6.\+2) if(C\+O\+M\+M\+A\+ND set\+\_\+up\+\_\+hermetic\+\_\+build) set\+\_\+up\+\_\+hermetic\+\_\+build() endif() if(gtest\+\_\+hide\+\_\+internal\+\_\+symbols) \hyperlink{vendor_2googletest_2googlemock_2CMakeLists_8txt_aa99cc432a5064db15e7653de9d85d2d2}{set}(C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+E\+S\+ET hidden) \hyperlink{vendor_2googletest_2googlemock_2CMakeLists_8txt_aa99cc432a5064db15e7653de9d85d2d2}{set}(C\+M\+A\+K\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+I\+N\+L\+I\+N\+E\+S\+\_\+\+H\+I\+D\+D\+EN 1) endif() include(cmake/internal\+\_\+utils.\+cmake) config\+\_\+compiler\+\_\+and\+\_\+linker() include\+\_\+directories(\$
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{vendor/googletest/googletest/\+C\+Make\+Lists.\+txt@{vendor/googletest/googletest/\+C\+Make\+Lists.\+txt}!option@{option}}
+\index{option@{option}!vendor/googletest/googletest/\+C\+Make\+Lists.\+txt@{vendor/googletest/googletest/\+C\+Make\+Lists.\+txt}}
+\subsubsection[{\texorpdfstring{option(\+B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS""Build shared libraries (\+D\+L\+Ls).""O\+F\+F) option(gtest\+\_\+force\+\_\+shared\+\_\+crt""Use shared (\+D\+L\+L) run-\/time lib even when Google Test is built as static lib.""O\+F\+F) option(gtest\+\_\+build\+\_\+tests""Build all of gtest\textquotesingle{}s own tests.""O\+F\+F) option(gtest\+\_\+build\+\_\+samples""Build gtest\textquotesingle{}s sample programs.""O\+F\+F) option(gtest\+\_\+disable\+\_\+pthreads""Disable uses of pthreads in gtest.""O\+F\+F) option(gtest\+\_\+hide\+\_\+internal\+\_\+symbols""Build gtest with internal symbols hidden in shared libraries.""O\+F\+F) include(cmake/hermetic\+\_\+build.\+cmake O\+P\+T\+I\+O\+N\+A\+L) if(\+C\+O\+M\+M\+A\+N\+D pre\+\_\+project\+\_\+set\+\_\+up\+\_\+hermetic\+\_\+build) pre\+\_\+project\+\_\+set\+\_\+up\+\_\+hermetic\+\_\+build() endif() project(gtest C\+X\+X C) cmake\+\_\+minimum\+\_\+required(\+V\+E\+R\+S\+I\+O\+N 2.\+6.\+2) if(\+C\+O\+M\+M\+A\+N\+D set\+\_\+up\+\_\+hermetic\+\_\+build) set\+\_\+up\+\_\+hermetic\+\_\+build() endif() if(gtest\+\_\+hide\+\_\+internal\+\_\+symbols) set(\+C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+P\+R\+E\+S\+E\+T hidden) set(\+C\+M\+A\+K\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+I\+N\+L\+I\+N\+E\+S\+\_\+\+H\+I\+D\+D\+E\+N 1) endif() include(cmake/internal\+\_\+utils.\+cmake) config\+\_\+compiler\+\_\+and\+\_\+linker() include\+\_\+directories(\$}{option(BUILD_SHARED_LIBS"Build shared libraries (DLLs)."OFF) option(gtest_force_shared_crt"Use shared (DLL) run-time lib even when Google Test is built as static lib."OFF) option(gtest_build_tests"Build all of gtest's own tests."OFF) option(gtest_build_samples"Build gtest's sample programs."OFF) option(gtest_disable_pthreads"Disable uses of pthreads in gtest."OFF) option(gtest_hide_internal_symbols"Build gtest with internal symbols hidden in shared libraries."OFF) include(cmake/hermetic_build.cmake OPTIONAL) if(COMMAND pre_project_set_up_hermetic_build) pre_project_set_up_hermetic_build() endif() project(gtest CXX C) cmake_minimum_required(VERSION 2.6.2) if(COMMAND set_up_hermetic_build) set_up_hermetic_build() endif() if(gtest_hide_internal_symbols) set(CMAKE_CXX_VISIBILITY_PRESET hidden) set(CMAKE_VISIBILITY_INLINES_HIDDEN 1) endif() include(cmake/internal_utils.cmake) config_compiler_and_linker() include_directories($}}]{\setlength{\rightskip}{0pt plus 5cm}option (
+\begin{DoxyParamCaption}
+\item[{B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS\char`\"{}Build shared libraries (D\+L\+Ls).\char`\"{}}]{O\+FF}
+\end{DoxyParamCaption}
+)}\hypertarget{vendor_2googletest_2googletest_2CMakeLists_8txt_ae5f6f0871fc02d53560c2acb7b4ab27c}{}\label{vendor_2googletest_2googletest_2CMakeLists_8txt_ae5f6f0871fc02d53560c2acb7b4ab27c}
+
+\begin{DoxyCode}
+44       \{gtest\_SOURCE\_DIR\} and to the root binary directory as
+45 \textcolor{preprocessor}{# $\{gtest\_BINARY\_DIR\}.}
+46 \textcolor{preprocessor}{# Language "C" is required for find\_package(Threads).}
+47 project(\hyperlink{namespacefuse__gmock__files_a3fb36dbe8d361f9ecc54e1aa4b94b068}{gtest} CXX C)
+48 \hyperlink{CMakeLists_8txt_a5813863403b16ee62a7ad3383c05d50f}{cmake\_minimum\_required}(VERSION 2.6.2)
+49 
+50 if (\hyperlink{namespacegmock__output__test_a33f8ca97d99711e23517962ca4c729af}{COMMAND} set\_up\_hermetic\_build)
+51   set\_up\_hermetic\_build()
+52 endif()
+53 
+54 if (gtest\_hide\_internal\_symbols)
+55   \hyperlink{test_2CMakeLists_8txt_a336632f06d26bc054eeb89e4f16c1f84}{set}(CMAKE\_CXX\_VISIBILITY\_PRESET hidden)
+56   \hyperlink{test_2CMakeLists_8txt_a336632f06d26bc054eeb89e4f16c1f84}{set}(CMAKE\_VISIBILITY\_INLINES\_HIDDEN 1)
+57 endif()
+58 
+59 \textcolor{preprocessor}{# Define helper functions and macros used by Google Test.}
+60 include(cmake/internal\_utils.cmake)
+61 
+62 config\_compiler\_and\_linker()  \textcolor{preprocessor}{# Defined in internal\_utils.cmake.}
+63 
+64 \textcolor{preprocessor}{# Where Google Test's .h files can be found.}
+65 include\_directories(
+66   $\{gtest\_SOURCE\_DIR\}/include
+\end{DoxyCode}

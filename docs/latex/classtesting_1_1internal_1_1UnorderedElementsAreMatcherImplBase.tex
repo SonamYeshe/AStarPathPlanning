@@ -1,0 +1,198 @@
+\hypertarget{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase}{}\section{testing\+:\+:internal\+:\+:Unordered\+Elements\+Are\+Matcher\+Impl\+Base Class Reference}
+\label{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase}\index{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+
+
+Inheritance diagram for testing\+:\+:internal\+:\+:Unordered\+Elements\+Are\+Matcher\+Impl\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+::std\+::vector$<$ const \hyperlink{classtesting_1_1MatcherDescriberInterface}{Matcher\+Describer\+Interface} $\ast$ $>$ \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a81ca7ce793d4b25ce2a7d3e28b48cd64}{Matcher\+Describer\+Vec}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a025abc723fc4f2788c81eb1eca3838e9}{Describe\+To\+Impl} (\+::std\+::ostream $\ast$os) const 
+\item 
+void \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a40998516ce516b79f99db299c58b8231}{Describe\+Negation\+To\+Impl} (\+::std\+::ostream $\ast$os) const 
+\item 
+bool \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a0a12446ecc8fab75a551a77c322e7896}{Verify\+All\+Elements\+And\+Matchers\+Are\+Matched} (const \+::std\+::vector$<$ \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{string} $>$ \&element\+\_\+printouts, const \hyperlink{classtesting_1_1internal_1_1MatchMatrix}{Match\+Matrix} \&matrix, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
+\item 
+\hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a81ca7ce793d4b25ce2a7d3e28b48cd64}{Matcher\+Describer\+Vec} \& \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a04d4adc809d9c06331f8dbb67b879ac0}{matcher\+\_\+describers} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classtesting_1_1Message}{Message} \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_ab6d5a2342e07730b913f419cf662d16a}{Elements} (size\+\_\+t \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}!Matcher\+Describer\+Vec@{Matcher\+Describer\+Vec}}
+\index{Matcher\+Describer\+Vec@{Matcher\+Describer\+Vec}!testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}}
+\subsubsection[{\texorpdfstring{Matcher\+Describer\+Vec}{MatcherDescriberVec}}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+::std\+::vector$<$const {\bf Matcher\+Describer\+Interface}$\ast$$>$ {\bf testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base\+::\+Matcher\+Describer\+Vec}\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a81ca7ce793d4b25ce2a7d3e28b48cd64}{}\label{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a81ca7ce793d4b25ce2a7d3e28b48cd64}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}!Describe\+Negation\+To\+Impl@{Describe\+Negation\+To\+Impl}}
+\index{Describe\+Negation\+To\+Impl@{Describe\+Negation\+To\+Impl}!testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}}
+\subsubsection[{\texorpdfstring{Describe\+Negation\+To\+Impl(\+::std\+::ostream $\ast$os) const }{DescribeNegationToImpl(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}void testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base\+::\+Describe\+Negation\+To\+Impl (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a40998516ce516b79f99db299c58b8231}{}\label{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a40998516ce516b79f99db299c58b8231}
+
+\begin{DoxyCode}
+417                           \{
+418   \textcolor{keywordflow}{if} (matcher\_describers\_.empty()) \{
+419     *os << \textcolor{stringliteral}{"isn't empty"};
+420     \textcolor{keywordflow}{return};
+421   \}
+422   \textcolor{keywordflow}{if} (matcher\_describers\_.size() == 1) \{
+423     *os << \textcolor{stringliteral}{"doesn't have "} << \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_ab6d5a2342e07730b913f419cf662d16a}{Elements}(1)
+424         << \textcolor{stringliteral}{", or has "} << \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_ab6d5a2342e07730b913f419cf662d16a}{Elements}(1) << \textcolor{stringliteral}{" that "};
+425     matcher\_describers\_[0]->DescribeNegationTo(os);
+426     \textcolor{keywordflow}{return};
+427   \}
+428   *os << \textcolor{stringliteral}{"doesn't have "} << \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_ab6d5a2342e07730b913f419cf662d16a}{Elements}(matcher\_describers\_.size())
+429       << \textcolor{stringliteral}{", or there exists no permutation of elements such that:\(\backslash\)n"};
+430   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* sep = \textcolor{stringliteral}{""};
+431   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} != matcher\_describers\_.size(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+432     *os << sep << \textcolor{stringliteral}{" - element #"} << \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} << \textcolor{stringliteral}{" "};
+433     matcher\_describers\_[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}]->DescribeTo(os);
+434     sep = \textcolor{stringliteral}{", and\(\backslash\)n"};
+435   \}
+436 \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}!Describe\+To\+Impl@{Describe\+To\+Impl}}
+\index{Describe\+To\+Impl@{Describe\+To\+Impl}!testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}}
+\subsubsection[{\texorpdfstring{Describe\+To\+Impl(\+::std\+::ostream $\ast$os) const }{DescribeToImpl(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}void testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base\+::\+Describe\+To\+Impl (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a025abc723fc4f2788c81eb1eca3838e9}{}\label{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a025abc723fc4f2788c81eb1eca3838e9}
+
+\begin{DoxyCode}
+396                           \{
+397   \textcolor{keywordflow}{if} (matcher\_describers\_.empty()) \{
+398     *os << \textcolor{stringliteral}{"is empty"};
+399     \textcolor{keywordflow}{return};
+400   \}
+401   \textcolor{keywordflow}{if} (matcher\_describers\_.size() == 1) \{
+402     *os << \textcolor{stringliteral}{"has "} << \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_ab6d5a2342e07730b913f419cf662d16a}{Elements}(1) << \textcolor{stringliteral}{" and that element "};
+403     matcher\_describers\_[0]->DescribeTo(os);
+404     \textcolor{keywordflow}{return};
+405   \}
+406   *os << \textcolor{stringliteral}{"has "} << \hyperlink{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_ab6d5a2342e07730b913f419cf662d16a}{Elements}(matcher\_describers\_.size())
+407       << \textcolor{stringliteral}{" and there exists some permutation of elements such that:\(\backslash\)n"};
+408   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* sep = \textcolor{stringliteral}{""};
+409   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} != matcher\_describers\_.size(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+410     *os << sep << \textcolor{stringliteral}{" - element #"} << \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} << \textcolor{stringliteral}{" "};
+411     matcher\_describers\_[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}]->DescribeTo(os);
+412     sep = \textcolor{stringliteral}{", and\(\backslash\)n"};
+413   \}
+414 \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}!Elements@{Elements}}
+\index{Elements@{Elements}!testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}}
+\subsubsection[{\texorpdfstring{Elements(size\+\_\+t n)}{Elements(size_t n)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Message} testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base\+::\+Elements (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_ab6d5a2342e07730b913f419cf662d16a}{}\label{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_ab6d5a2342e07730b913f419cf662d16a}
+
+\begin{DoxyCode}
+3333                                     \{
+3334     \textcolor{keywordflow}{return} Message() << \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} << \textcolor{stringliteral}{" element"} << (\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n} == 1 ? \textcolor{stringliteral}{""} : \textcolor{stringliteral}{"s"});
+3335   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}!matcher\+\_\+describers@{matcher\+\_\+describers}}
+\index{matcher\+\_\+describers@{matcher\+\_\+describers}!testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}}
+\subsubsection[{\texorpdfstring{matcher\+\_\+describers()}{matcher_describers()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matcher\+Describer\+Vec}\& testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base\+::matcher\+\_\+describers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a04d4adc809d9c06331f8dbb67b879ac0}{}\label{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a04d4adc809d9c06331f8dbb67b879ac0}
+
+\begin{DoxyCode}
+3329                                             \{
+3330     \textcolor{keywordflow}{return} matcher\_describers\_;
+3331   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}!Verify\+All\+Elements\+And\+Matchers\+Are\+Matched@{Verify\+All\+Elements\+And\+Matchers\+Are\+Matched}}
+\index{Verify\+All\+Elements\+And\+Matchers\+Are\+Matched@{Verify\+All\+Elements\+And\+Matchers\+Are\+Matched}!testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base@{testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base}}
+\subsubsection[{\texorpdfstring{Verify\+All\+Elements\+And\+Matchers\+Are\+Matched(const \+::std\+::vector$<$ string $>$ \&element\+\_\+printouts, const Match\+Matrix \&matrix, Match\+Result\+Listener $\ast$listener) const }{VerifyAllElementsAndMatchersAreMatched(const ::std::vector< string > &element_printouts, const MatchMatrix &matrix, MatchResultListener *listener) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool testing\+::internal\+::\+Unordered\+Elements\+Are\+Matcher\+Impl\+Base\+::\+Verify\+All\+Elements\+And\+Matchers\+Are\+Matched (
+\begin{DoxyParamCaption}
+\item[{const \+::std\+::vector$<$ {\bf string} $>$ \&}]{element\+\_\+printouts, }
+\item[{const {\bf Match\+Matrix} \&}]{matrix, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a0a12446ecc8fab75a551a77c322e7896}{}\label{classtesting_1_1internal_1_1UnorderedElementsAreMatcherImplBase_a0a12446ecc8fab75a551a77c322e7896}
+
+\begin{DoxyCode}
+447                                          \{
+448   \textcolor{keywordtype}{bool} result = \textcolor{keyword}{true};
+449   ::std::vector<char> element\_matched(matrix.LhsSize(), 0);
+450   ::std::vector<char> matcher\_matched(matrix.RhsSize(), 0);
+451 
+452   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} ilhs = 0; ilhs < matrix.LhsSize(); ilhs++) \{
+453     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} irhs = 0; irhs < matrix.RhsSize(); irhs++) \{
+454       \textcolor{keywordtype}{char} matched = matrix.HasEdge(ilhs, irhs);
+455       element\_matched[ilhs] |= matched;
+456       matcher\_matched[irhs] |= matched;
+457     \}
+458   \}
+459 
+460   \{
+461     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* sep =
+462         \textcolor{stringliteral}{"where the following matchers don't match any elements:\(\backslash\)n"};
+463     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} mi = 0; mi < matcher\_matched.size(); ++mi) \{
+464       \textcolor{keywordflow}{if} (matcher\_matched[mi])
+465         \textcolor{keywordflow}{continue};
+466       result = \textcolor{keyword}{false};
+467       \textcolor{keywordflow}{if} (listener->IsInterested()) \{
+468         *listener << sep << \textcolor{stringliteral}{"matcher #"} << mi << \textcolor{stringliteral}{": "};
+469         matcher\_describers\_[mi]->DescribeTo(listener->stream());
+470         sep = \textcolor{stringliteral}{",\(\backslash\)n"};
+471       \}
+472     \}
+473   \}
+474 
+475   \{
+476     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* sep =
+477         \textcolor{stringliteral}{"where the following elements don't match any matchers:\(\backslash\)n"};
+478     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* outer\_sep = \textcolor{stringliteral}{""};
+479     \textcolor{keywordflow}{if} (!result) \{
+480       outer\_sep = \textcolor{stringliteral}{"\(\backslash\)nand "};
+481     \}
+482     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} ei = 0; ei < element\_matched.size(); ++ei) \{
+483       \textcolor{keywordflow}{if} (element\_matched[ei])
+484         \textcolor{keywordflow}{continue};
+485       result = \textcolor{keyword}{false};
+486       \textcolor{keywordflow}{if} (listener->IsInterested()) \{
+487         *listener << outer\_sep << sep << \textcolor{stringliteral}{"element #"} << ei << \textcolor{stringliteral}{": "}
+488                   << element\_printouts[ei];
+489         sep = \textcolor{stringliteral}{",\(\backslash\)n"};
+490         outer\_sep = \textcolor{stringliteral}{""};
+491       \}
+492     \}
+493   \}
+494   \textcolor{keywordflow}{return} result;
+495 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\item 
+vendor/googletest/googlemock/src/\hyperlink{gmock-matchers_8cc}{gmock-\/matchers.\+cc}\end{DoxyCompactItemize}

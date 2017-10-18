@@ -1,0 +1,102 @@
+\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter}{}\section{testing\+:\+:internal\+:\+:Xml\+Unit\+Test\+Result\+Printer Class Reference}
+\label{classtesting_1_1internal_1_1XmlUnitTestResultPrinter}\index{testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer@{testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer}}
+
+
+Inheritance diagram for testing\+:\+:internal\+:\+:Xml\+Unit\+Test\+Result\+Printer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classtesting_1_1internal_1_1XmlUnitTestResultPrinter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:internal\+:\+:Xml\+Unit\+Test\+Result\+Printer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classtesting_1_1internal_1_1XmlUnitTestResultPrinter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_afdaf88e6764c18ce0dcc3733d7a06e31}{Xml\+Unit\+Test\+Result\+Printer} (const char $\ast$output\+\_\+file)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a2ae986dd2f4f2aed31cc6f3bc8c56898}{On\+Test\+Iteration\+End} (const \hyperlink{classtesting_1_1UnitTest}{Unit\+Test} \&unit\+\_\+test, int iteration)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer@{testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer}!Xml\+Unit\+Test\+Result\+Printer@{Xml\+Unit\+Test\+Result\+Printer}}
+\index{Xml\+Unit\+Test\+Result\+Printer@{Xml\+Unit\+Test\+Result\+Printer}!testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer@{testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer}}
+\subsubsection[{\texorpdfstring{Xml\+Unit\+Test\+Result\+Printer(const char $\ast$output\+\_\+file)}{XmlUnitTestResultPrinter(const char *output_file)}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer\+::\+Xml\+Unit\+Test\+Result\+Printer (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{output\+\_\+file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_afdaf88e6764c18ce0dcc3733d7a06e31}{}\label{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_afdaf88e6764c18ce0dcc3733d7a06e31}
+
+\begin{DoxyCode}
+3423     : output\_file\_(output\_file) \{
+3424   \textcolor{keywordflow}{if} (output\_file\_.c\_str() == NULL || output\_file\_.empty()) \{
+3425     fprintf(stderr, \textcolor{stringliteral}{"XML output file may not be null\(\backslash\)n"});
+3426     fflush(stderr);
+3427     exit(EXIT\_FAILURE);
+3428   \}
+3429 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer@{testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer}!On\+Test\+Iteration\+End@{On\+Test\+Iteration\+End}}
+\index{On\+Test\+Iteration\+End@{On\+Test\+Iteration\+End}!testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer@{testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer}}
+\subsubsection[{\texorpdfstring{On\+Test\+Iteration\+End(const Unit\+Test \&unit\+\_\+test, int iteration)}{OnTestIterationEnd(const UnitTest &unit_test, int iteration)}}]{\setlength{\rightskip}{0pt plus 5cm}void testing\+::internal\+::\+Xml\+Unit\+Test\+Result\+Printer\+::\+On\+Test\+Iteration\+End (
+\begin{DoxyParamCaption}
+\item[{const {\bf Unit\+Test} \&}]{unit\+\_\+test, }
+\item[{int}]{iteration}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a2ae986dd2f4f2aed31cc6f3bc8c56898}{}\label{classtesting_1_1internal_1_1XmlUnitTestResultPrinter_a2ae986dd2f4f2aed31cc6f3bc8c56898}
+
+
+Reimplemented from \hyperlink{classtesting_1_1EmptyTestEventListener_a2253e5a18b3cf7bccd349567a252209d}{testing\+::\+Empty\+Test\+Event\+Listener}.
+
+
+\begin{DoxyCode}
+3433                                                          \{
+3434   \hyperlink{gmock__output__test__golden_8txt_ab12dc6c67167ae2f0af132bdd8c2955e}{FILE}* xmlout = NULL;
+3435   FilePath output\_file(output\_file\_);
+3436   FilePath \hyperlink{namespaceversiongenerate_aab714e0aa9036025ba7c83eb7422c567}{output\_dir}(output\_file.RemoveFileName());
+3437 
+3438   \textcolor{keywordflow}{if} (\hyperlink{namespaceversiongenerate_aab714e0aa9036025ba7c83eb7422c567}{output\_dir}.CreateDirectoriesRecursively()) \{
+3439     xmlout = \hyperlink{namespacetesting_1_1internal_1_1posix_a4042201dcc4932641d484e7ddf94de7d}{posix::FOpen}(output\_file\_.c\_str(), \textcolor{stringliteral}{"w"});
+3440   \}
+3441   \textcolor{keywordflow}{if} (xmlout == NULL) \{
+3442     \textcolor{comment}{// TODO(wan): report the reason of the failure.}
+3443     \textcolor{comment}{//}
+3444     \textcolor{comment}{// We don't do it for now as:}
+3445     \textcolor{comment}{//}
+3446     \textcolor{comment}{//   1. There is no urgent need for it.}
+3447     \textcolor{comment}{//   2. It's a bit involved to make the errno variable thread-safe on}
+3448     \textcolor{comment}{//      all three operating systems (Linux, Windows, and Mac OS).}
+3449     \textcolor{comment}{//   3. To interpret the meaning of errno in a thread-safe way,}
+3450     \textcolor{comment}{//      we need the strerror\_r() function, which is not available on}
+3451     \textcolor{comment}{//      Windows.}
+3452     fprintf(stderr,
+3453             \textcolor{stringliteral}{"Unable to open file \(\backslash\)"%s\(\backslash\)"\(\backslash\)n"},
+3454             output\_file\_.c\_str());
+3455     fflush(stderr);
+3456     exit(EXIT\_FAILURE);
+3457   \}
+3458   std::stringstream stream;
+3459   PrintXmlUnitTest(&stream, unit\_test);
+3460   fprintf(xmlout, \textcolor{stringliteral}{"%s"}, \hyperlink{namespacetesting_1_1internal_ac0a2b7f69fc829d80a39e925b6417e39}{StringStreamToString}(&stream).c\_str());
+3461   fclose(xmlout);
+3462 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/src/\hyperlink{gtest_8cc}{gtest.\+cc}\end{DoxyCompactItemize}

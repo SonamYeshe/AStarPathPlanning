@@ -1,0 +1,56 @@
+\hypertarget{classtesting_1_1InSequence}{}\section{testing\+:\+:In\+Sequence Class Reference}
+\label{classtesting_1_1InSequence}\index{testing\+::\+In\+Sequence@{testing\+::\+In\+Sequence}}
+
+
+{\ttfamily \#include $<$gmock-\/spec-\/builders.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1InSequence_ac40a4ac3e4f26e088ebc09e543514b6b}{In\+Sequence} ()
+\item 
+\hyperlink{classtesting_1_1InSequence_afe11b11ccb5f55daea5f1e0a9a1af48f}{$\sim$\+In\+Sequence} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::\+In\+Sequence@{testing\+::\+In\+Sequence}!In\+Sequence@{In\+Sequence}}
+\index{In\+Sequence@{In\+Sequence}!testing\+::\+In\+Sequence@{testing\+::\+In\+Sequence}}
+\subsubsection[{\texorpdfstring{In\+Sequence()}{InSequence()}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::\+In\+Sequence\+::\+In\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1InSequence_ac40a4ac3e4f26e088ebc09e543514b6b}{}\label{classtesting_1_1InSequence_ac40a4ac3e4f26e088ebc09e543514b6b}
+
+\begin{DoxyCode}
+805                        \{
+806   \textcolor{keywordflow}{if} (\hyperlink{namespacetesting_1_1internal_af4407fe8aeb1e43b2f58940736a20590}{internal::g\_gmock\_implicit\_sequence}.\textcolor{keyword}{get}() == NULL) \{
+807     \hyperlink{namespacetesting_1_1internal_af4407fe8aeb1e43b2f58940736a20590}{internal::g\_gmock\_implicit\_sequence}.set(\textcolor{keyword}{new} Sequence);
+808     sequence\_created\_ = \textcolor{keyword}{true};
+809   \} \textcolor{keywordflow}{else} \{
+810     sequence\_created\_ = \textcolor{keyword}{false};
+811   \}
+812 \}
+\end{DoxyCode}
+\index{testing\+::\+In\+Sequence@{testing\+::\+In\+Sequence}!````~In\+Sequence@{$\sim$\+In\+Sequence}}
+\index{````~In\+Sequence@{$\sim$\+In\+Sequence}!testing\+::\+In\+Sequence@{testing\+::\+In\+Sequence}}
+\subsubsection[{\texorpdfstring{$\sim$\+In\+Sequence()}{~InSequence()}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::\+In\+Sequence\+::$\sim$\+In\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1InSequence_afe11b11ccb5f55daea5f1e0a9a1af48f}{}\label{classtesting_1_1InSequence_afe11b11ccb5f55daea5f1e0a9a1af48f}
+
+\begin{DoxyCode}
+816                         \{
+817   \textcolor{keywordflow}{if} (sequence\_created\_) \{
+818     \textcolor{keyword}{delete} \hyperlink{namespacetesting_1_1internal_af4407fe8aeb1e43b2f58940736a20590}{internal::g\_gmock\_implicit\_sequence}.get();
+819     \hyperlink{namespacetesting_1_1internal_af4407fe8aeb1e43b2f58940736a20590}{internal::g\_gmock\_implicit\_sequence}.set(NULL);
+820   \}
+821 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-spec-builders_8h}{gmock-\/spec-\/builders.\+h}\item 
+vendor/googletest/googlemock/src/\hyperlink{gmock-spec-builders_8cc}{gmock-\/spec-\/builders.\+cc}\end{DoxyCompactItemize}

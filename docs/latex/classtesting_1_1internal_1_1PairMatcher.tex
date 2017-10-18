@@ -1,0 +1,51 @@
+\hypertarget{classtesting_1_1internal_1_1PairMatcher}{}\section{testing\+:\+:internal\+:\+:Pair\+Matcher$<$ First\+Matcher, Second\+Matcher $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1PairMatcher}\index{testing\+::internal\+::\+Pair\+Matcher$<$ First\+Matcher, Second\+Matcher $>$@{testing\+::internal\+::\+Pair\+Matcher$<$ First\+Matcher, Second\+Matcher $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1PairMatcher_a84f233a7d90ba33e3f0eb7410783c43c}{Pair\+Matcher} (First\+Matcher first\+\_\+matcher, Second\+Matcher second\+\_\+matcher)
+\item 
+{\footnotesize template$<$typename Pair\+Type $>$ }\\\hyperlink{classtesting_1_1internal_1_1PairMatcher_ab8b41dddcbb254e2c8b4374da6423d42}{operator Matcher$<$ Pair\+Type $>$} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Pair\+Matcher@{testing\+::internal\+::\+Pair\+Matcher}!Pair\+Matcher@{Pair\+Matcher}}
+\index{Pair\+Matcher@{Pair\+Matcher}!testing\+::internal\+::\+Pair\+Matcher@{testing\+::internal\+::\+Pair\+Matcher}}
+\subsubsection[{\texorpdfstring{Pair\+Matcher(\+First\+Matcher first\+\_\+matcher, Second\+Matcher second\+\_\+matcher)}{PairMatcher(FirstMatcher first_matcher, SecondMatcher second_matcher)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename First\+Matcher, typename Second\+Matcher$>$ {\bf testing\+::internal\+::\+Pair\+Matcher}$<$ First\+Matcher, Second\+Matcher $>$\+::{\bf Pair\+Matcher} (
+\begin{DoxyParamCaption}
+\item[{First\+Matcher}]{first\+\_\+matcher, }
+\item[{Second\+Matcher}]{second\+\_\+matcher}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1PairMatcher_a84f233a7d90ba33e3f0eb7410783c43c}{}\label{classtesting_1_1internal_1_1PairMatcher_a84f233a7d90ba33e3f0eb7410783c43c}
+
+\begin{DoxyCode}
+3090       : first\_matcher\_(first\_matcher), second\_matcher\_(second\_matcher) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Pair\+Matcher@{testing\+::internal\+::\+Pair\+Matcher}!operator Matcher$<$ Pair\+Type $>$@{operator Matcher$<$ Pair\+Type $>$}}
+\index{operator Matcher$<$ Pair\+Type $>$@{operator Matcher$<$ Pair\+Type $>$}!testing\+::internal\+::\+Pair\+Matcher@{testing\+::internal\+::\+Pair\+Matcher}}
+\subsubsection[{\texorpdfstring{operator Matcher$<$ Pair\+Type $>$() const }{operator Matcher< PairType >() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename First\+Matcher, typename Second\+Matcher$>$ template$<$typename Pair\+Type $>$ {\bf testing\+::internal\+::\+Pair\+Matcher}$<$ First\+Matcher, Second\+Matcher $>$\+::operator {\bf Matcher}$<$ Pair\+Type $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1PairMatcher_ab8b41dddcbb254e2c8b4374da6423d42}{}\label{classtesting_1_1internal_1_1PairMatcher_ab8b41dddcbb254e2c8b4374da6423d42}
+
+\begin{DoxyCode}
+3093                                       \{
+3094     \textcolor{keywordflow}{return} \hyperlink{namespacetesting_a37fd8029ac00e60952440a3d9cca8166}{MakeMatcher}(
+3095         \textcolor{keyword}{new} PairMatcherImpl<PairType>(
+3096             first\_matcher\_, second\_matcher\_));
+3097   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

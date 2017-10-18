@@ -1,0 +1,60 @@
+\hypertarget{classtesting_1_1internal_1_1ReturnAction}{}\section{testing\+:\+:internal\+:\+:Return\+Action$<$ R $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1ReturnAction}\index{testing\+::internal\+::\+Return\+Action$<$ R $>$@{testing\+::internal\+::\+Return\+Action$<$ R $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/actions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ReturnAction_af65344e503dae3ab36b4fd6d1ede6fb7}{Return\+Action} (R value)
+\item 
+{\footnotesize template$<$typename F $>$ }\\\hyperlink{classtesting_1_1internal_1_1ReturnAction_a321155ed26bb50aea20d26f8603fb2ae}{operator Action$<$ F $>$} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Return\+Action@{testing\+::internal\+::\+Return\+Action}!Return\+Action@{Return\+Action}}
+\index{Return\+Action@{Return\+Action}!testing\+::internal\+::\+Return\+Action@{testing\+::internal\+::\+Return\+Action}}
+\subsubsection[{\texorpdfstring{Return\+Action(\+R value)}{ReturnAction(R value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R $>$ {\bf testing\+::internal\+::\+Return\+Action}$<$ R $>$\+::{\bf Return\+Action} (
+\begin{DoxyParamCaption}
+\item[{R}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1ReturnAction_af65344e503dae3ab36b4fd6d1ede6fb7}{}\label{classtesting_1_1internal_1_1ReturnAction_af65344e503dae3ab36b4fd6d1ede6fb7}
+
+\begin{DoxyCode}
+539 : value\_(\textcolor{keyword}{new} R(\hyperlink{namespacetesting_1_1internal_a0f6d06bf8c3093b9c22bb08723db201e}{internal::move}(value))) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Return\+Action@{testing\+::internal\+::\+Return\+Action}!operator Action$<$ F $>$@{operator Action$<$ F $>$}}
+\index{operator Action$<$ F $>$@{operator Action$<$ F $>$}!testing\+::internal\+::\+Return\+Action@{testing\+::internal\+::\+Return\+Action}}
+\subsubsection[{\texorpdfstring{operator Action$<$ F $>$() const }{operator Action< F >() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R $>$ template$<$typename F $>$ {\bf testing\+::internal\+::\+Return\+Action}$<$ R $>$\+::operator {\bf Action}$<$ F $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1ReturnAction_a321155ed26bb50aea20d26f8603fb2ae}{}\label{classtesting_1_1internal_1_1ReturnAction_a321155ed26bb50aea20d26f8603fb2ae}
+
+\begin{DoxyCode}
+544                              \{
+545     \textcolor{comment}{// Assert statement belongs here because this is the best place to verify}
+546     \textcolor{comment}{// conditions on F. It produces the clearest error messages}
+547     \textcolor{comment}{// in most compilers.}
+548     \textcolor{comment}{// Impl really belongs in this scope as a local class but can't}
+549     \textcolor{comment}{// because MSVC produces duplicate symbols in different translation units}
+550     \textcolor{comment}{// in this case. Until MS fixes that bug we put Impl into the class scope}
+551     \textcolor{comment}{// and put the typedef both here (for use in assert statement) and}
+552     \textcolor{comment}{// in the Impl class. But both definitions must be the same.}
+553     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} Function<F>::Result Result;
+554     \hyperlink{gtest-port_8h_ae1f37dc71d5daa6fb49ca1b6047d4a8c}{GTEST\_COMPILE\_ASSERT\_}(
+555         !\hyperlink{structtesting_1_1internal_1_1bool__constant_a499fba6576296b04d99690a486424b32}{is\_reference<Result>::value},
+556         use\_ReturnRef\_instead\_of\_Return\_to\_return\_a\_reference);
+557     \textcolor{keywordflow}{return} Action<F>(\textcolor{keyword}{new} Impl<R, F>(value\_));
+558   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-actions_8h}{gmock-\/actions.\+h}\end{DoxyCompactItemize}

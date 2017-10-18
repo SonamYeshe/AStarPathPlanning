@@ -1,0 +1,208 @@
+\hypertarget{gtest-listener__test_8cc}{}\section{vendor/googletest/googletest/test/gtest-\/listener\+\_\+test.cc File Reference}
+\label{gtest-listener__test_8cc}\index{vendor/googletest/googletest/test/gtest-\/listener\+\_\+test.\+cc@{vendor/googletest/googletest/test/gtest-\/listener\+\_\+test.\+cc}}
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for gtest-\/listener\+\_\+test.cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest-listener__test_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1EventRecordingListener}{testing\+::internal\+::\+Event\+Recording\+Listener}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1EnvironmentInvocationCatcher}{testing\+::internal\+::\+Environment\+Invocation\+Catcher}
+\item 
+class \hyperlink{classtesting_1_1internal_1_1ListenerTest}{testing\+::internal\+::\+Listener\+Test}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacetesting}{testing}
+\item 
+ \hyperlink{namespacetesting_1_1internal}{testing\+::internal}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacetesting_1_1internal_a7e113e9c70d45d89fe1703e58ff083b9}{testing\+::internal\+::\+T\+E\+S\+T\+\_\+F} (Listener\+Test, Does\+Foo)
+\item 
+\hyperlink{namespacetesting_1_1internal_a02cef32090020d164460dd3d9f8e2852}{testing\+::internal\+::\+T\+E\+S\+T\+\_\+F} (Listener\+Test, Does\+Bar)
+\item 
+void \hyperlink{gtest-listener__test_8cc_ab9d583cd17d35925ad3d12f864d57fe9}{Verify\+Results} (const std\+::vector$<$ std\+::string $>$ \&data, const char $\ast$const $\ast$expected\+\_\+data, size\+\_\+t expected\+\_\+data\+\_\+size)
+\item 
+int \hyperlink{gtest-listener__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ $\ast$ \hyperlink{gtest-listener__test_8cc_a32a264046f3603db11e6fcdaea5fb094}{g\+\_\+events} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gtest-\/listener\+\_\+test.\+cc@{gtest-\/listener\+\_\+test.\+cc}!main@{main}}
+\index{main@{main}!gtest-\/listener\+\_\+test.\+cc@{gtest-\/listener\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest-listener__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gtest-listener__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+201                                 \{
+202   std::vector<std::string> events;
+203   \hyperlink{gtest-listener__test_8cc_a32a264046f3603db11e6fcdaea5fb094}{g\_events} = &events;
+204   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{InitGoogleTest}(&argc, argv);
+205 
+206   UnitTest::GetInstance()->listeners().Append(
+207       \textcolor{keyword}{new} EventRecordingListener(\textcolor{stringliteral}{"1st"}));
+208   UnitTest::GetInstance()->listeners().Append(
+209       \textcolor{keyword}{new} EventRecordingListener(\textcolor{stringliteral}{"2nd"}));
+210 
+211   \hyperlink{namespacetesting_a460d7b998622e332392c1e00be3a60d5}{AddGlobalTestEnvironment}(\textcolor{keyword}{new} EnvironmentInvocationCatcher);
+212 
+213   \hyperlink{gtest-port_8h_ab54343f0a36dc4cb0ce8a478dd7847b8}{GTEST\_CHECK\_}(events.size() == 0)
+214       << \textcolor{stringliteral}{"AddGlobalTestEnvironment should not generate any events itself."};
+215 
+216   \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{::testing::GTEST\_FLAG}(repeat) = 2;
+217   \textcolor{keywordtype}{int} ret\_val = \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+218 
+219   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} expected\_events[] = \{
+220     \textcolor{stringliteral}{"1st.OnTestProgramStart"},
+221     \textcolor{stringliteral}{"2nd.OnTestProgramStart"},
+222     \textcolor{stringliteral}{"1st.OnTestIterationStart(0)"},
+223     \textcolor{stringliteral}{"2nd.OnTestIterationStart(0)"},
+224     \textcolor{stringliteral}{"1st.OnEnvironmentsSetUpStart"},
+225     \textcolor{stringliteral}{"2nd.OnEnvironmentsSetUpStart"},
+226     \textcolor{stringliteral}{"Environment::SetUp"},
+227     \textcolor{stringliteral}{"2nd.OnEnvironmentsSetUpEnd"},
+228     \textcolor{stringliteral}{"1st.OnEnvironmentsSetUpEnd"},
+229     \textcolor{stringliteral}{"1st.OnTestCaseStart"},
+230     \textcolor{stringliteral}{"2nd.OnTestCaseStart"},
+231     \textcolor{stringliteral}{"ListenerTest::SetUpTestCase"},
+232     \textcolor{stringliteral}{"1st.OnTestStart"},
+233     \textcolor{stringliteral}{"2nd.OnTestStart"},
+234     \textcolor{stringliteral}{"ListenerTest::SetUp"},
+235     \textcolor{stringliteral}{"ListenerTest::* Test Body"},
+236     \textcolor{stringliteral}{"1st.OnTestPartResult"},
+237     \textcolor{stringliteral}{"2nd.OnTestPartResult"},
+238     \textcolor{stringliteral}{"ListenerTest::TearDown"},
+239     \textcolor{stringliteral}{"2nd.OnTestEnd"},
+240     \textcolor{stringliteral}{"1st.OnTestEnd"},
+241     \textcolor{stringliteral}{"1st.OnTestStart"},
+242     \textcolor{stringliteral}{"2nd.OnTestStart"},
+243     \textcolor{stringliteral}{"ListenerTest::SetUp"},
+244     \textcolor{stringliteral}{"ListenerTest::* Test Body"},
+245     \textcolor{stringliteral}{"1st.OnTestPartResult"},
+246     \textcolor{stringliteral}{"2nd.OnTestPartResult"},
+247     \textcolor{stringliteral}{"ListenerTest::TearDown"},
+248     \textcolor{stringliteral}{"2nd.OnTestEnd"},
+249     \textcolor{stringliteral}{"1st.OnTestEnd"},
+250     \textcolor{stringliteral}{"ListenerTest::TearDownTestCase"},
+251     \textcolor{stringliteral}{"2nd.OnTestCaseEnd"},
+252     \textcolor{stringliteral}{"1st.OnTestCaseEnd"},
+253     \textcolor{stringliteral}{"1st.OnEnvironmentsTearDownStart"},
+254     \textcolor{stringliteral}{"2nd.OnEnvironmentsTearDownStart"},
+255     \textcolor{stringliteral}{"Environment::TearDown"},
+256     \textcolor{stringliteral}{"2nd.OnEnvironmentsTearDownEnd"},
+257     \textcolor{stringliteral}{"1st.OnEnvironmentsTearDownEnd"},
+258     \textcolor{stringliteral}{"2nd.OnTestIterationEnd(0)"},
+259     \textcolor{stringliteral}{"1st.OnTestIterationEnd(0)"},
+260     \textcolor{stringliteral}{"1st.OnTestIterationStart(1)"},
+261     \textcolor{stringliteral}{"2nd.OnTestIterationStart(1)"},
+262     \textcolor{stringliteral}{"1st.OnEnvironmentsSetUpStart"},
+263     \textcolor{stringliteral}{"2nd.OnEnvironmentsSetUpStart"},
+264     \textcolor{stringliteral}{"Environment::SetUp"},
+265     \textcolor{stringliteral}{"2nd.OnEnvironmentsSetUpEnd"},
+266     \textcolor{stringliteral}{"1st.OnEnvironmentsSetUpEnd"},
+267     \textcolor{stringliteral}{"1st.OnTestCaseStart"},
+268     \textcolor{stringliteral}{"2nd.OnTestCaseStart"},
+269     \textcolor{stringliteral}{"ListenerTest::SetUpTestCase"},
+270     \textcolor{stringliteral}{"1st.OnTestStart"},
+271     \textcolor{stringliteral}{"2nd.OnTestStart"},
+272     \textcolor{stringliteral}{"ListenerTest::SetUp"},
+273     \textcolor{stringliteral}{"ListenerTest::* Test Body"},
+274     \textcolor{stringliteral}{"1st.OnTestPartResult"},
+275     \textcolor{stringliteral}{"2nd.OnTestPartResult"},
+276     \textcolor{stringliteral}{"ListenerTest::TearDown"},
+277     \textcolor{stringliteral}{"2nd.OnTestEnd"},
+278     \textcolor{stringliteral}{"1st.OnTestEnd"},
+279     \textcolor{stringliteral}{"1st.OnTestStart"},
+280     \textcolor{stringliteral}{"2nd.OnTestStart"},
+281     \textcolor{stringliteral}{"ListenerTest::SetUp"},
+282     \textcolor{stringliteral}{"ListenerTest::* Test Body"},
+283     \textcolor{stringliteral}{"1st.OnTestPartResult"},
+284     \textcolor{stringliteral}{"2nd.OnTestPartResult"},
+285     \textcolor{stringliteral}{"ListenerTest::TearDown"},
+286     \textcolor{stringliteral}{"2nd.OnTestEnd"},
+287     \textcolor{stringliteral}{"1st.OnTestEnd"},
+288     \textcolor{stringliteral}{"ListenerTest::TearDownTestCase"},
+289     \textcolor{stringliteral}{"2nd.OnTestCaseEnd"},
+290     \textcolor{stringliteral}{"1st.OnTestCaseEnd"},
+291     \textcolor{stringliteral}{"1st.OnEnvironmentsTearDownStart"},
+292     \textcolor{stringliteral}{"2nd.OnEnvironmentsTearDownStart"},
+293     \textcolor{stringliteral}{"Environment::TearDown"},
+294     \textcolor{stringliteral}{"2nd.OnEnvironmentsTearDownEnd"},
+295     \textcolor{stringliteral}{"1st.OnEnvironmentsTearDownEnd"},
+296     \textcolor{stringliteral}{"2nd.OnTestIterationEnd(1)"},
+297     \textcolor{stringliteral}{"1st.OnTestIterationEnd(1)"},
+298     \textcolor{stringliteral}{"2nd.OnTestProgramEnd"},
+299     \textcolor{stringliteral}{"1st.OnTestProgramEnd"}
+300   \};
+301   \hyperlink{gtest-listener__test_8cc_ab9d583cd17d35925ad3d12f864d57fe9}{VerifyResults}(events,
+302                 expected\_events,
+303                 \textcolor{keyword}{sizeof}(expected\_events)/\textcolor{keyword}{sizeof}(expected\_events[0]));
+304 
+305   \textcolor{comment}{// We need to check manually for ad hoc test failures that happen after}
+306   \textcolor{comment}{// RUN\_ALL\_TESTS finishes.}
+307   \textcolor{keywordflow}{if} (UnitTest::GetInstance()->Failed())
+308     ret\_val = 1;
+309 
+310   \textcolor{keywordflow}{return} ret\_val;
+311 \}
+\end{DoxyCode}
+\index{gtest-\/listener\+\_\+test.\+cc@{gtest-\/listener\+\_\+test.\+cc}!Verify\+Results@{Verify\+Results}}
+\index{Verify\+Results@{Verify\+Results}!gtest-\/listener\+\_\+test.\+cc@{gtest-\/listener\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{Verify\+Results(const std\+::vector$<$ std\+::string $>$ \&data, const char $\ast$const $\ast$expected\+\_\+data, size\+\_\+t expected\+\_\+data\+\_\+size)}{VerifyResults(const std::vector< std::string > &data, const char *const *expected_data, size_t expected_data_size)}}]{\setlength{\rightskip}{0pt plus 5cm}void Verify\+Results (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{data, }
+\item[{const char $\ast$const $\ast$}]{expected\+\_\+data, }
+\item[{size\+\_\+t}]{expected\+\_\+data\+\_\+size}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest-listener__test_8cc_ab9d583cd17d35925ad3d12f864d57fe9}{}\label{gtest-listener__test_8cc_ab9d583cd17d35925ad3d12f864d57fe9}
+
+\begin{DoxyCode}
+179                                               \{
+180   \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} actual\_size = data.size();
+181   \textcolor{comment}{// If the following assertion fails, a new entry will be appended to}
+182   \textcolor{comment}{// data.  Hence we save data.size() first.}
+183   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected\_data\_size, actual\_size);
+184 
+185   \textcolor{comment}{// Compares the common prefix.}
+186   \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} shorter\_size = expected\_data\_size <= actual\_size ?
+187       expected\_data\_size : actual\_size;
+188   \textcolor{keywordtype}{size\_t} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0;
+189   \textcolor{keywordflow}{for} (; i < shorter\_size; ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+190     \hyperlink{gtest_8h_a74f4189ea570bab9a65d47104659ef9c}{ASSERT\_STREQ}(expected\_data[i], data[i].c\_str())
+191         << \textcolor{stringliteral}{"at position "} << \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i};
+192   \}
+193 
+194   \textcolor{comment}{// Prints extra elements in the actual data.}
+195   \textcolor{keywordflow}{for} (; i < actual\_size; ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+196     printf(\textcolor{stringliteral}{"  Actual event #%lu: %s\(\backslash\)n"},
+197         static\_cast<unsigned long>(i), data[i].c\_str());
+198   \}
+199 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{gtest-\/listener\+\_\+test.\+cc@{gtest-\/listener\+\_\+test.\+cc}!g\+\_\+events@{g\+\_\+events}}
+\index{g\+\_\+events@{g\+\_\+events}!gtest-\/listener\+\_\+test.\+cc@{gtest-\/listener\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{g\+\_\+events}{g_events}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$$\ast$ g\+\_\+events = N\+U\+LL}\hypertarget{gtest-listener__test_8cc_a32a264046f3603db11e6fcdaea5fb094}{}\label{gtest-listener__test_8cc_a32a264046f3603db11e6fcdaea5fb094}

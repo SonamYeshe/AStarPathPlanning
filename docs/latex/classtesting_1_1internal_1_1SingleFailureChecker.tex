@@ -1,0 +1,50 @@
+\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker}{}\section{testing\+:\+:internal\+:\+:Single\+Failure\+Checker Class Reference}
+\label{classtesting_1_1internal_1_1SingleFailureChecker}\index{testing\+::internal\+::\+Single\+Failure\+Checker@{testing\+::internal\+::\+Single\+Failure\+Checker}}
+
+
+{\ttfamily \#include $<$gtest-\/spi.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_a6d350d385526c97c9982e928f5f8fb56}{Single\+Failure\+Checker} (const \hyperlink{classtesting_1_1TestPartResultArray}{Test\+Part\+Result\+Array} $\ast$results, \hyperlink{classtesting_1_1TestPartResult_a65ae656b33fdfdfffaf34858778a52d5}{Test\+Part\+Result\+::\+Type} type, const \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{string} \&substr)
+\item 
+\hyperlink{classtesting_1_1internal_1_1SingleFailureChecker_a4b0a907c9c1b350c79d70af138e9f0bf}{$\sim$\+Single\+Failure\+Checker} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Single\+Failure\+Checker@{testing\+::internal\+::\+Single\+Failure\+Checker}!Single\+Failure\+Checker@{Single\+Failure\+Checker}}
+\index{Single\+Failure\+Checker@{Single\+Failure\+Checker}!testing\+::internal\+::\+Single\+Failure\+Checker@{testing\+::internal\+::\+Single\+Failure\+Checker}}
+\subsubsection[{\texorpdfstring{Single\+Failure\+Checker(const Test\+Part\+Result\+Array $\ast$results, Test\+Part\+Result\+::\+Type type, const string \&substr)}{SingleFailureChecker(const TestPartResultArray *results, TestPartResult::Type type, const string &substr)}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::internal\+::\+Single\+Failure\+Checker\+::\+Single\+Failure\+Checker (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\+Part\+Result\+Array} $\ast$}]{results, }
+\item[{{\bf Test\+Part\+Result\+::\+Type}}]{type, }
+\item[{const {\bf string} \&}]{substr}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_a6d350d385526c97c9982e928f5f8fb56}{}\label{classtesting_1_1internal_1_1SingleFailureChecker_a6d350d385526c97c9982e928f5f8fb56}
+
+\begin{DoxyCode}
+674     : results\_(results),
+675       type\_(\hyperlink{namespaceupload_a4fc56f0dd6613be15c3c4dc3af3619ce}{type}),
+676       substr\_(substr) \{\}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Single\+Failure\+Checker@{testing\+::internal\+::\+Single\+Failure\+Checker}!````~Single\+Failure\+Checker@{$\sim$\+Single\+Failure\+Checker}}
+\index{````~Single\+Failure\+Checker@{$\sim$\+Single\+Failure\+Checker}!testing\+::internal\+::\+Single\+Failure\+Checker@{testing\+::internal\+::\+Single\+Failure\+Checker}}
+\subsubsection[{\texorpdfstring{$\sim$\+Single\+Failure\+Checker()}{~SingleFailureChecker()}}]{\setlength{\rightskip}{0pt plus 5cm}testing\+::internal\+::\+Single\+Failure\+Checker\+::$\sim$\+Single\+Failure\+Checker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classtesting_1_1internal_1_1SingleFailureChecker_a4b0a907c9c1b350c79d70af138e9f0bf}{}\label{classtesting_1_1internal_1_1SingleFailureChecker_a4b0a907c9c1b350c79d70af138e9f0bf}
+
+\begin{DoxyCode}
+682                                             \{
+683   \hyperlink{gtest__pred__impl_8h_a7285708fa5d37d6d8ed5b5e59da08bae}{EXPECT\_PRED\_FORMAT3}(\hyperlink{namespacetesting_1_1internal_a14ff02e6d151f45e998657674e9af88a}{HasOneFailure}, *results\_, type\_, substr\_);
+684 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/include/gtest/\hyperlink{gtest-spi_8h}{gtest-\/spi.\+h}\item 
+vendor/googletest/googletest/src/\hyperlink{gtest_8cc}{gtest.\+cc}\end{DoxyCompactItemize}

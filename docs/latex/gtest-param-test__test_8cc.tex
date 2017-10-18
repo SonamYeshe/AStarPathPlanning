@@ -1,0 +1,68 @@
+\hypertarget{gtest-param-test__test_8cc}{}\section{vendor/googletest/googletest/test/gtest-\/param-\/test\+\_\+test.cc File Reference}
+\label{gtest-param-test__test_8cc}\index{vendor/googletest/googletest/test/gtest-\/param-\/test\+\_\+test.\+cc@{vendor/googletest/googletest/test/gtest-\/param-\/test\+\_\+test.\+cc}}
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for gtest-\/param-\/test\+\_\+test.cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest-param-test__test_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gtest-param-test__test_8cc_a1cb6d3685e954ff9880974422039b2b0}{T\+E\+ST} (Compile\+Test, Combine\+Is\+Defined\+Only\+When\+Gtest\+Has\+Param\+Test\+Is\+Defined)
+\item 
+int \hyperlink{gtest-param-test__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gtest-\/param-\/test\+\_\+test.\+cc@{gtest-\/param-\/test\+\_\+test.\+cc}!main@{main}}
+\index{main@{main}!gtest-\/param-\/test\+\_\+test.\+cc@{gtest-\/param-\/test\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest-param-test__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gtest-param-test__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+1036                                 \{
+1037 \textcolor{preprocessor}{#if GTEST\_HAS\_PARAM\_TEST}
+1038   \textcolor{comment}{// Used in TestGenerationTest test case.}
+1039   \hyperlink{namespacetesting_a460d7b998622e332392c1e00be3a60d5}{AddGlobalTestEnvironment}(TestGenerationTest::Environment::Instance());
+1040   \textcolor{comment}{// Used in GeneratorEvaluationTest test case. Tests that the updated value}
+1041   \textcolor{comment}{// will be picked up for instantiating tests in GeneratorEvaluationTest.}
+1042   GeneratorEvaluationTest::set\_param\_value(1);
+1043 \textcolor{preprocessor}{#endif  // GTEST\_HAS\_PARAM\_TEST}
+1044 
+1045   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{::testing::InitGoogleTest}(&argc, argv);
+1046 
+1047 \textcolor{preprocessor}{#if GTEST\_HAS\_PARAM\_TEST}
+1048   \textcolor{comment}{// Used in GeneratorEvaluationTest test case. Tests that value updated}
+1049   \textcolor{comment}{// here will NOT be used for instantiating tests in}
+1050   \textcolor{comment}{// GeneratorEvaluationTest.}
+1051   GeneratorEvaluationTest::set\_param\_value(2);
+1052 \textcolor{preprocessor}{#endif  // GTEST\_HAS\_PARAM\_TEST}
+1053 
+1054   \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+1055 \}
+\end{DoxyCode}
+\index{gtest-\/param-\/test\+\_\+test.\+cc@{gtest-\/param-\/test\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest-\/param-\/test\+\_\+test.\+cc@{gtest-\/param-\/test\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Compile\+Test, Combine\+Is\+Defined\+Only\+When\+Gtest\+Has\+Param\+Test\+Is\+Defined)}{TEST(CompileTest, CombineIsDefinedOnlyWhenGtestHasParamTestIsDefined)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Compile\+Test}]{, }
+\item[{Combine\+Is\+Defined\+Only\+When\+Gtest\+Has\+Param\+Test\+Is\+Defined}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest-param-test__test_8cc_a1cb6d3685e954ff9880974422039b2b0}{}\label{gtest-param-test__test_8cc_a1cb6d3685e954ff9880974422039b2b0}
+
+\begin{DoxyCode}
+1030                                                                       \{
+1031 \textcolor{preprocessor}{#if GTEST\_HAS\_COMBINE && !GTEST\_HAS\_PARAM\_TEST}
+1032   \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"GTEST\_HAS\_COMBINE is defined while GTEST\_HAS\_PARAM\_TEST is not\(\backslash\)n"}
+1033 \textcolor{preprocessor}{#endif}
+1034 \}
+\end{DoxyCode}

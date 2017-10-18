@@ -1,0 +1,114 @@
+\hypertarget{classtesting_1_1internal_1_1EachMatcherImpl}{}\section{testing\+:\+:internal\+:\+:Each\+Matcher\+Impl$<$ Container $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1EachMatcherImpl}\index{testing\+::internal\+::\+Each\+Matcher\+Impl$<$ Container $>$@{testing\+::internal\+::\+Each\+Matcher\+Impl$<$ Container $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+
+
+Inheritance diagram for testing\+:\+:internal\+:\+:Each\+Matcher\+Impl$<$ Container $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{classtesting_1_1internal_1_1EachMatcherImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:internal\+:\+:Each\+Matcher\+Impl$<$ Container $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classtesting_1_1internal_1_1EachMatcherImpl__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Inner\+Matcher $>$ }\\\hyperlink{classtesting_1_1internal_1_1EachMatcherImpl_afe41214bf055abcdd60e475f207c7a0f}{Each\+Matcher\+Impl} (Inner\+Matcher inner\+\_\+matcher)
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EachMatcherImpl_a6a54a94c14435378e22e8b31670be0b8}{Describe\+To} (\+::std\+::ostream $\ast$os) const 
+\item 
+virtual void \hyperlink{classtesting_1_1internal_1_1EachMatcherImpl_a52941ed863914b8fd2dba5c229b57f30}{Describe\+Negation\+To} (\+::std\+::ostream $\ast$os) const 
+\item 
+virtual bool \hyperlink{classtesting_1_1internal_1_1EachMatcherImpl_a1c84c5cf88a78eed95c7bebf008f567c}{Match\+And\+Explain} (Container container, \hyperlink{classtesting_1_1MatchResultListener}{Match\+Result\+Listener} $\ast$listener) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Each\+Matcher\+Impl@{testing\+::internal\+::\+Each\+Matcher\+Impl}!Each\+Matcher\+Impl@{Each\+Matcher\+Impl}}
+\index{Each\+Matcher\+Impl@{Each\+Matcher\+Impl}!testing\+::internal\+::\+Each\+Matcher\+Impl@{testing\+::internal\+::\+Each\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Each\+Matcher\+Impl(\+Inner\+Matcher inner\+\_\+matcher)}{EachMatcherImpl(InnerMatcher inner_matcher)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ template$<$typename Inner\+Matcher $>$ {\bf testing\+::internal\+::\+Each\+Matcher\+Impl}$<$ Container $>$\+::{\bf Each\+Matcher\+Impl} (
+\begin{DoxyParamCaption}
+\item[{Inner\+Matcher}]{inner\+\_\+matcher}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1EachMatcherImpl_afe41214bf055abcdd60e475f207c7a0f}{}\label{classtesting_1_1internal_1_1EachMatcherImpl_afe41214bf055abcdd60e475f207c7a0f}
+
+\begin{DoxyCode}
+2878       : QuantifierMatcherImpl<Container>(inner\_matcher) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Each\+Matcher\+Impl@{testing\+::internal\+::\+Each\+Matcher\+Impl}!Describe\+Negation\+To@{Describe\+Negation\+To}}
+\index{Describe\+Negation\+To@{Describe\+Negation\+To}!testing\+::internal\+::\+Each\+Matcher\+Impl@{testing\+::internal\+::\+Each\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Describe\+Negation\+To(\+::std\+::ostream $\ast$os) const }{DescribeNegationTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ virtual void {\bf testing\+::internal\+::\+Each\+Matcher\+Impl}$<$ Container $>$\+::Describe\+Negation\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1EachMatcherImpl_a52941ed863914b8fd2dba5c229b57f30}{}\label{classtesting_1_1internal_1_1EachMatcherImpl_a52941ed863914b8fd2dba5c229b57f30}
+
+
+Reimplemented from \hyperlink{classtesting_1_1MatcherDescriberInterface_a35b9dc2f3e25ca4b903f282feaaf9f8c}{testing\+::\+Matcher\+Describer\+Interface}.
+
+
+\begin{DoxyCode}
+2886                                                         \{
+2887     *os << \textcolor{stringliteral}{"contains some element that "};
+2888     this->\hyperlink{classtesting_1_1internal_1_1QuantifierMatcherImpl_af0ee2a4697f5cb8e937fd29dd75e2a30}{inner\_matcher\_}.\hyperlink{classtesting_1_1internal_1_1MatcherBase_a47cc840bc783fc0ceafbfb68d0ea5758}{DescribeNegationTo}(os);
+2889   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Each\+Matcher\+Impl@{testing\+::internal\+::\+Each\+Matcher\+Impl}!Describe\+To@{Describe\+To}}
+\index{Describe\+To@{Describe\+To}!testing\+::internal\+::\+Each\+Matcher\+Impl@{testing\+::internal\+::\+Each\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Describe\+To(\+::std\+::ostream $\ast$os) const }{DescribeTo(::std::ostream *os) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ virtual void {\bf testing\+::internal\+::\+Each\+Matcher\+Impl}$<$ Container $>$\+::Describe\+To (
+\begin{DoxyParamCaption}
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1EachMatcherImpl_a6a54a94c14435378e22e8b31670be0b8}{}\label{classtesting_1_1internal_1_1EachMatcherImpl_a6a54a94c14435378e22e8b31670be0b8}
+
+
+Implements \hyperlink{classtesting_1_1MatcherDescriberInterface_ad9f861588bd969b6e3e717f13bb94e7b}{testing\+::\+Matcher\+Describer\+Interface}.
+
+
+\begin{DoxyCode}
+2881                                                 \{
+2882     *os << \textcolor{stringliteral}{"only contains elements that "};
+2883     this->\hyperlink{classtesting_1_1internal_1_1QuantifierMatcherImpl_af0ee2a4697f5cb8e937fd29dd75e2a30}{inner\_matcher\_}.\hyperlink{classtesting_1_1internal_1_1MatcherBase_afcb24e7d1ff27e147e0e607d2a122467}{DescribeTo}(os);
+2884   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Each\+Matcher\+Impl@{testing\+::internal\+::\+Each\+Matcher\+Impl}!Match\+And\+Explain@{Match\+And\+Explain}}
+\index{Match\+And\+Explain@{Match\+And\+Explain}!testing\+::internal\+::\+Each\+Matcher\+Impl@{testing\+::internal\+::\+Each\+Matcher\+Impl}}
+\subsubsection[{\texorpdfstring{Match\+And\+Explain(\+Container container, Match\+Result\+Listener $\ast$listener) const }{MatchAndExplain(Container container, MatchResultListener *listener) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Container $>$ virtual bool {\bf testing\+::internal\+::\+Each\+Matcher\+Impl}$<$ Container $>$\+::Match\+And\+Explain (
+\begin{DoxyParamCaption}
+\item[{Container}]{container, }
+\item[{{\bf Match\+Result\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1internal_1_1EachMatcherImpl_a1c84c5cf88a78eed95c7bebf008f567c}{}\label{classtesting_1_1internal_1_1EachMatcherImpl_a1c84c5cf88a78eed95c7bebf008f567c}
+
+
+Implements \hyperlink{classtesting_1_1MatcherInterface_a296b43607cd99d60365f0e6a762777cf}{testing\+::\+Matcher\+Interface$<$ Container $>$}.
+
+
+\begin{DoxyCode}
+2892                                                                     \{
+2893     \textcolor{keywordflow}{return} this->\hyperlink{classtesting_1_1internal_1_1QuantifierMatcherImpl_a01384d42781094ddc5d9208b63f23b3d}{MatchAndExplainImpl}(\textcolor{keyword}{true}, container, listener);
+2894   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

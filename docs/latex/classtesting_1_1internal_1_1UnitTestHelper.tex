@@ -1,0 +1,82 @@
+\hypertarget{classtesting_1_1internal_1_1UnitTestHelper}{}\section{testing\+:\+:internal\+:\+:Unit\+Test\+Helper Class Reference}
+\label{classtesting_1_1internal_1_1UnitTestHelper}\index{testing\+::internal\+::\+Unit\+Test\+Helper@{testing\+::internal\+::\+Unit\+Test\+Helper}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classtesting_1_1TestCase}{Test\+Case} const $\ast$$\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a9a549307062083d10358638af272cc98}{Get\+Sorted\+Test\+Cases} ()
+\item 
+static const \hyperlink{classtesting_1_1TestCase}{Test\+Case} $\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a46303cbb7a6abb456f7b1350542113ac}{Find\+Test\+Case} (const char $\ast$name)
+\item 
+static \hyperlink{classtesting_1_1TestInfo}{Test\+Info} const $\ast$$\ast$ \hyperlink{classtesting_1_1internal_1_1UnitTestHelper_a02602d22fb74566dad78c0c9d4f24e78}{Get\+Sorted\+Tests} (const \hyperlink{classtesting_1_1TestCase}{Test\+Case} $\ast$test\+\_\+case)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Unit\+Test\+Helper@{testing\+::internal\+::\+Unit\+Test\+Helper}!Find\+Test\+Case@{Find\+Test\+Case}}
+\index{Find\+Test\+Case@{Find\+Test\+Case}!testing\+::internal\+::\+Unit\+Test\+Helper@{testing\+::internal\+::\+Unit\+Test\+Helper}}
+\subsubsection[{\texorpdfstring{Find\+Test\+Case(const char $\ast$name)}{FindTestCase(const char *name)}}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf Test\+Case}$\ast$ testing\+::internal\+::\+Unit\+Test\+Helper\+::\+Find\+Test\+Case (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UnitTestHelper_a46303cbb7a6abb456f7b1350542113ac}{}\label{classtesting_1_1internal_1_1UnitTestHelper_a46303cbb7a6abb456f7b1350542113ac}
+
+\begin{DoxyCode}
+73                                                         \{
+74     UnitTest& unit\_test = *\hyperlink{classtesting_1_1UnitTest_a24192400b70b3b946746954e9574fb8e}{UnitTest::GetInstance}();
+75     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} < unit\_test.total\_test\_case\_count(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}) \{
+76       \textcolor{keyword}{const} \hyperlink{namespacegmock__test__utils_a959c5af591e4d49b6d35745205b64509}{TestCase}* test\_case = unit\_test.GetTestCase(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+77       \textcolor{keywordflow}{if} (0 == strcmp(test\_case->name(), name))
+78         \textcolor{keywordflow}{return} test\_case;
+79     \}
+80     \textcolor{keywordflow}{return} NULL;
+81   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unit\+Test\+Helper@{testing\+::internal\+::\+Unit\+Test\+Helper}!Get\+Sorted\+Test\+Cases@{Get\+Sorted\+Test\+Cases}}
+\index{Get\+Sorted\+Test\+Cases@{Get\+Sorted\+Test\+Cases}!testing\+::internal\+::\+Unit\+Test\+Helper@{testing\+::internal\+::\+Unit\+Test\+Helper}}
+\subsubsection[{\texorpdfstring{Get\+Sorted\+Test\+Cases()}{GetSortedTestCases()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Test\+Case} const$\ast$$\ast$ testing\+::internal\+::\+Unit\+Test\+Helper\+::\+Get\+Sorted\+Test\+Cases (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UnitTestHelper_a9a549307062083d10358638af272cc98}{}\label{classtesting_1_1internal_1_1UnitTestHelper_a9a549307062083d10358638af272cc98}
+
+\begin{DoxyCode}
+57                                                \{
+58     UnitTest& unit\_test = *\hyperlink{classtesting_1_1UnitTest_a24192400b70b3b946746954e9574fb8e}{UnitTest::GetInstance}();
+59     \hyperlink{namespacegmock__test__utils_a959c5af591e4d49b6d35745205b64509}{TestCase} \textcolor{keyword}{const}** \textcolor{keyword}{const} test\_cases =
+60         \textcolor{keyword}{new} \textcolor{keyword}{const} \hyperlink{namespacegmock__test__utils_a959c5af591e4d49b6d35745205b64509}{TestCase}*[unit\_test.total\_test\_case\_count()];
+61 
+62     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} < unit\_test.total\_test\_case\_count(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i})
+63       test\_cases[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}] = unit\_test.GetTestCase(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+64 
+65     std::sort(test\_cases,
+66               test\_cases + unit\_test.total\_test\_case\_count(),
+67               LessByName<TestCase>());
+68     \textcolor{keywordflow}{return} test\_cases;
+69   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Unit\+Test\+Helper@{testing\+::internal\+::\+Unit\+Test\+Helper}!Get\+Sorted\+Tests@{Get\+Sorted\+Tests}}
+\index{Get\+Sorted\+Tests@{Get\+Sorted\+Tests}!testing\+::internal\+::\+Unit\+Test\+Helper@{testing\+::internal\+::\+Unit\+Test\+Helper}}
+\subsubsection[{\texorpdfstring{Get\+Sorted\+Tests(const Test\+Case $\ast$test\+\_\+case)}{GetSortedTests(const TestCase *test_case)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Test\+Info} const$\ast$$\ast$ testing\+::internal\+::\+Unit\+Test\+Helper\+::\+Get\+Sorted\+Tests (
+\begin{DoxyParamCaption}
+\item[{const {\bf Test\+Case} $\ast$}]{test\+\_\+case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UnitTestHelper_a02602d22fb74566dad78c0c9d4f24e78}{}\label{classtesting_1_1internal_1_1UnitTestHelper_a02602d22fb74566dad78c0c9d4f24e78}
+
+\begin{DoxyCode}
+86                                                                     \{
+87     TestInfo \textcolor{keyword}{const}** \textcolor{keyword}{const} tests =
+88         \textcolor{keyword}{new} \textcolor{keyword}{const} TestInfo*[test\_case->total\_test\_count()];
+89 
+90     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} < test\_case->total\_test\_count(); ++\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i})
+91       tests[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}] = test\_case->GetTestInfo(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+92 
+93     std::sort(tests, tests + test\_case->total\_test\_count(),
+94               LessByName<TestInfo>());
+95     \textcolor{keywordflow}{return} tests;
+96   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest-unittest-api__test_8cc}{gtest-\/unittest-\/api\+\_\+test.\+cc}\end{DoxyCompactItemize}

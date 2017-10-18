@@ -1,0 +1,52 @@
+\hypertarget{classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4}{}\section{testing\+:\+:internal\+:\+:Invoke\+Helper$<$ R,\+:\+:testing\+:\+:tuple$<$ A1, A2, A3, A4, A5 $>$ $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4}\index{testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$@{testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/generated-\/actions.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Function $>$ }\\static R \hyperlink{classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4_a13c0601bf3ba0c61d24aac217d9bf4c3}{Invoke} (\hyperlink{structtesting_1_1internal_1_1Function}{Function} function, const \+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ \&args)
+\item 
+{\footnotesize template$<$class Class , typename Method\+Ptr $>$ }\\static R \hyperlink{classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4_afd2808ffa9b81ebf3f1b9a6ca1657a97}{Invoke\+Method} (Class $\ast$obj\+\_\+ptr, Method\+Ptr method\+\_\+ptr, const \+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ \&args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$@{testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$}!Invoke@{Invoke}}
+\index{Invoke@{Invoke}!testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$@{testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$}}
+\subsubsection[{\texorpdfstring{Invoke(\+Function function, const \+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ \&args)}{Invoke(Function function, const ::testing::tuple< A1, A2, A3, A4, A5 > &args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename A1 , typename A2 , typename A3 , typename A4 , typename A5 $>$ template$<$typename Function $>$ static R {\bf testing\+::internal\+::\+Invoke\+Helper}$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$\+::Invoke (
+\begin{DoxyParamCaption}
+\item[{{\bf Function}}]{function, }
+\item[{const \+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ \&}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4_a13c0601bf3ba0c61d24aac217d9bf4c3}{}\label{classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4_a13c0601bf3ba0c61d24aac217d9bf4c3}
+
+\begin{DoxyCode}
+143                  \{
+144            \textcolor{keywordflow}{return} \textcolor{keyword}{function}(get<0>(args), get<1>(args), get<2>(args),
+145                get<3>(args), get<4>(args));
+146   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$@{testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$}!Invoke\+Method@{Invoke\+Method}}
+\index{Invoke\+Method@{Invoke\+Method}!testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$@{testing\+::internal\+::\+Invoke\+Helper$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$}}
+\subsubsection[{\texorpdfstring{Invoke\+Method(\+Class $\ast$obj\+\_\+ptr, Method\+Ptr method\+\_\+ptr, const \+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ \&args)}{InvokeMethod(Class *obj_ptr, MethodPtr method_ptr, const ::testing::tuple< A1, A2, A3, A4, A5 > &args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename R , typename A1 , typename A2 , typename A3 , typename A4 , typename A5 $>$ template$<$class Class , typename Method\+Ptr $>$ static R {\bf testing\+::internal\+::\+Invoke\+Helper}$<$ R,\+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ $>$\+::Invoke\+Method (
+\begin{DoxyParamCaption}
+\item[{Class $\ast$}]{obj\+\_\+ptr, }
+\item[{Method\+Ptr}]{method\+\_\+ptr, }
+\item[{const \+::testing\+::tuple$<$ A1, A2, A3, A4, A5 $>$ \&}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4_afd2808ffa9b81ebf3f1b9a6ca1657a97}{}\label{classtesting_1_1internal_1_1InvokeHelper_3_01R_00_1_1testing_1_1tuple_3_01A1_00_01A2_00_01A3_00_01A4_00_01A5_01_4_01_4_afd2808ffa9b81ebf3f1b9a6ca1657a97}
+
+\begin{DoxyCode}
+151                                                                       \{
+152            \textcolor{keywordflow}{return} (obj\_ptr->*method\_ptr)(get<0>(args), get<1>(args),
+153                get<2>(args), get<3>(args), get<4>(args));
+154   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-generated-actions_8h}{gmock-\/generated-\/actions.\+h}\end{DoxyCompactItemize}

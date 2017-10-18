@@ -1,0 +1,179 @@
+\hypertarget{classtesting_1_1InitGoogleTestTest}{}\section{testing\+:\+:Init\+Google\+Test\+Test Class Reference}
+\label{classtesting_1_1InitGoogleTestTest}\index{testing\+::\+Init\+Google\+Test\+Test@{testing\+::\+Init\+Google\+Test\+Test}}
+
+
+Inheritance diagram for testing\+:\+:Init\+Google\+Test\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classtesting_1_1InitGoogleTestTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for testing\+:\+:Init\+Google\+Test\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classtesting_1_1InitGoogleTestTest__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classtesting_1_1InitGoogleTestTest_a49de9e552ea788c4b79924ec4135ca7a}{Set\+Up} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Char\+Type $>$ }\\static void \hyperlink{classtesting_1_1InitGoogleTestTest_af32acd91b1185c6868072009dce55a7b}{Assert\+String\+Array\+Eq} (size\+\_\+t size1, Char\+Type $\ast$$\ast$array1, size\+\_\+t size2, Char\+Type $\ast$$\ast$array2)
+\item 
+static void \hyperlink{classtesting_1_1InitGoogleTestTest_aac37d5d592202bf6614b02fe0b4da9d2}{Check\+Flags} (const \hyperlink{structtesting_1_1Flags}{Flags} \&expected)
+\item 
+{\footnotesize template$<$typename Char\+Type $>$ }\\static void \hyperlink{classtesting_1_1InitGoogleTestTest_add290338cf429308d0ab275ae4c46e69}{Test\+Parsing\+Flags} (int argc1, const Char\+Type $\ast$$\ast$argv1, int argc2, const Char\+Type $\ast$$\ast$argv2, const \hyperlink{structtesting_1_1Flags}{Flags} \&expected, bool should\+\_\+print\+\_\+help)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::\+Init\+Google\+Test\+Test@{testing\+::\+Init\+Google\+Test\+Test}!Assert\+String\+Array\+Eq@{Assert\+String\+Array\+Eq}}
+\index{Assert\+String\+Array\+Eq@{Assert\+String\+Array\+Eq}!testing\+::\+Init\+Google\+Test\+Test@{testing\+::\+Init\+Google\+Test\+Test}}
+\subsubsection[{\texorpdfstring{Assert\+String\+Array\+Eq(size\+\_\+t size1, Char\+Type $\ast$$\ast$array1, size\+\_\+t size2, Char\+Type $\ast$$\ast$array2)}{AssertStringArrayEq(size_t size1, CharType **array1, size_t size2, CharType **array2)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char\+Type $>$ static void testing\+::\+Init\+Google\+Test\+Test\+::\+Assert\+String\+Array\+Eq (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size1, }
+\item[{Char\+Type $\ast$$\ast$}]{array1, }
+\item[{size\+\_\+t}]{size2, }
+\item[{Char\+Type $\ast$$\ast$}]{array2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1InitGoogleTestTest_af32acd91b1185c6868072009dce55a7b}{}\label{classtesting_1_1InitGoogleTestTest_af32acd91b1185c6868072009dce55a7b}
+
+\begin{DoxyCode}
+5628                                                                    \{
+5629     \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(size1, size2) << \textcolor{stringliteral}{" Array sizes different."};
+5630 
+5631     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} != size1; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}++) \{
+5632       \hyperlink{gtest_8h_a74f4189ea570bab9a65d47104659ef9c}{ASSERT\_STREQ}(array1[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}], array2[i]) << \textcolor{stringliteral}{" where i == "} << \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i};
+5633     \}
+5634   \}
+\end{DoxyCode}
+\index{testing\+::\+Init\+Google\+Test\+Test@{testing\+::\+Init\+Google\+Test\+Test}!Check\+Flags@{Check\+Flags}}
+\index{Check\+Flags@{Check\+Flags}!testing\+::\+Init\+Google\+Test\+Test@{testing\+::\+Init\+Google\+Test\+Test}}
+\subsubsection[{\texorpdfstring{Check\+Flags(const Flags \&expected)}{CheckFlags(const Flags &expected)}}]{\setlength{\rightskip}{0pt plus 5cm}static void testing\+::\+Init\+Google\+Test\+Test\+::\+Check\+Flags (
+\begin{DoxyParamCaption}
+\item[{const {\bf Flags} \&}]{expected}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1InitGoogleTestTest_aac37d5d592202bf6614b02fe0b4da9d2}{}\label{classtesting_1_1InitGoogleTestTest_aac37d5d592202bf6614b02fe0b4da9d2}
+
+\begin{DoxyCode}
+5637                                                 \{
+5638     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.also\_run\_disabled\_tests,
+5639               \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(also\_run\_disabled\_tests));
+5640     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.break\_on\_failure, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(break\_on\_failure));
+5641     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.catch\_exceptions, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(catch\_exceptions));
+5642     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.death\_test\_use\_fork, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(death\_test\_use\_fork));
+5643     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(expected.filter, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(filter).c\_str());
+5644     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.list\_tests, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(list\_tests));
+5645     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(expected.output, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(\hyperlink{namespacegmock__output__test_a4277f8598ba3835393fe82e82d09375d}{output}).c\_str());
+5646     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.print\_time, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(print\_time));
+5647     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.random\_seed, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(random\_seed));
+5648     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.repeat, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(repeat));
+5649     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.shuffle, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(shuffle));
+5650     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.stack\_trace\_depth, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(stack\_trace\_depth));
+5651     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(expected.stream\_result\_to,
+5652                  \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(stream\_result\_to).c\_str());
+5653     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected.throw\_on\_failure, \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(throw\_on\_failure));
+5654   \}
+\end{DoxyCode}
+\index{testing\+::\+Init\+Google\+Test\+Test@{testing\+::\+Init\+Google\+Test\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!testing\+::\+Init\+Google\+Test\+Test@{testing\+::\+Init\+Google\+Test\+Test}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void testing\+::\+Init\+Google\+Test\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classtesting_1_1InitGoogleTestTest_a49de9e552ea788c4b79924ec4135ca7a}{}\label{classtesting_1_1InitGoogleTestTest_a49de9e552ea788c4b79924ec4135ca7a}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a190315150c303ddf801313fd1a777733}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+5608                        \{
+5609     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(also\_run\_disabled\_tests) = \textcolor{keyword}{false};
+5610     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(break\_on\_failure) = \textcolor{keyword}{false};
+5611     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(catch\_exceptions) = \textcolor{keyword}{false};
+5612     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(death\_test\_use\_fork) = \textcolor{keyword}{false};
+5613     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(filter) = \textcolor{stringliteral}{""};
+5614     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(list\_tests) = \textcolor{keyword}{false};
+5615     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(\hyperlink{namespacegmock__output__test_a4277f8598ba3835393fe82e82d09375d}{output}) = \textcolor{stringliteral}{""};
+5616     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(print\_time) = \textcolor{keyword}{true};
+5617     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(random\_seed) = 0;
+5618     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(repeat) = 1;
+5619     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(shuffle) = \textcolor{keyword}{false};
+5620     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(stack\_trace\_depth) = \hyperlink{namespacetesting_ae605f2ccac04616bb7812ca72e517082}{kMaxStackTraceDepth};
+5621     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(stream\_result\_to) = \textcolor{stringliteral}{""};
+5622     \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{GTEST\_FLAG}(throw\_on\_failure) = \textcolor{keyword}{false};
+5623   \}
+\end{DoxyCode}
+\index{testing\+::\+Init\+Google\+Test\+Test@{testing\+::\+Init\+Google\+Test\+Test}!Test\+Parsing\+Flags@{Test\+Parsing\+Flags}}
+\index{Test\+Parsing\+Flags@{Test\+Parsing\+Flags}!testing\+::\+Init\+Google\+Test\+Test@{testing\+::\+Init\+Google\+Test\+Test}}
+\subsubsection[{\texorpdfstring{Test\+Parsing\+Flags(int argc1, const Char\+Type $\ast$$\ast$argv1, int argc2, const Char\+Type $\ast$$\ast$argv2, const Flags \&expected, bool should\+\_\+print\+\_\+help)}{TestParsingFlags(int argc1, const CharType **argv1, int argc2, const CharType **argv2, const Flags &expected, bool should_print_help)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char\+Type $>$ static void testing\+::\+Init\+Google\+Test\+Test\+::\+Test\+Parsing\+Flags (
+\begin{DoxyParamCaption}
+\item[{int}]{argc1, }
+\item[{const Char\+Type $\ast$$\ast$}]{argv1, }
+\item[{int}]{argc2, }
+\item[{const Char\+Type $\ast$$\ast$}]{argv2, }
+\item[{const {\bf Flags} \&}]{expected, }
+\item[{bool}]{should\+\_\+print\+\_\+help}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classtesting_1_1InitGoogleTestTest_add290338cf429308d0ab275ae4c46e69}{}\label{classtesting_1_1InitGoogleTestTest_add290338cf429308d0ab275ae4c46e69}
+
+\begin{DoxyCode}
+5662                                                                               \{
+5663     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} saved\_help\_flag = \hyperlink{namespacetesting_1_1internal_a93a772f5e51973b105d91cbb66a203f4}{::testing::internal::g\_help\_flag};
+5664     \hyperlink{namespacetesting_1_1internal_a93a772f5e51973b105d91cbb66a203f4}{::testing::internal::g\_help\_flag} = \textcolor{keyword}{false};
+5665 
+5666 \textcolor{preprocessor}{#if GTEST\_HAS\_STREAM\_REDIRECTION}
+5667     \hyperlink{namespacetesting_1_1internal_acba06d4f0343dec407738ba5544af990}{CaptureStdout}();
+5668 \textcolor{preprocessor}{#endif}
+5669 
+5670     \textcolor{comment}{// Parses the command line.}
+5671     \hyperlink{namespacetesting_1_1internal_a472880afbcc592a41e3d623e2dec8412}{internal::ParseGoogleTestFlagsOnly}(&argc1, const\_cast<CharType**>(
+      argv1));
+5672 
+5673 \textcolor{preprocessor}{#if GTEST\_HAS\_STREAM\_REDIRECTION}
+5674     \textcolor{keyword}{const} \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string} captured\_stdout = \hyperlink{namespacetesting_1_1internal_aed657219a9856a8d249a3230de0c54ce}{GetCapturedStdout}();
+5675 \textcolor{preprocessor}{#endif}
+5676 
+5677     \textcolor{comment}{// Verifies the flag values.}
+5678     \hyperlink{classtesting_1_1InitGoogleTestTest_aac37d5d592202bf6614b02fe0b4da9d2}{CheckFlags}(expected);
+5679 
+5680     \textcolor{comment}{// Verifies that the recognized flags are removed from the command}
+5681     \textcolor{comment}{// line.}
+5682     \hyperlink{classtesting_1_1InitGoogleTestTest_af32acd91b1185c6868072009dce55a7b}{AssertStringArrayEq}(argc1 + 1, argv1, argc2 + 1, argv2);
+5683 
+5684     \textcolor{comment}{// ParseGoogleTestFlagsOnly should neither set g\_help\_flag nor print the}
+5685     \textcolor{comment}{// help message for the flags it recognizes.}
+5686     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(should\_print\_help, ::\hyperlink{namespacetesting_1_1internal_a93a772f5e51973b105d91cbb66a203f4}{testing::internal::g\_help\_flag});
+5687 
+5688 \textcolor{preprocessor}{#if GTEST\_HAS\_STREAM\_REDIRECTION}
+5689     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keyword}{const} expected\_help\_fragment =
+5690         \textcolor{stringliteral}{"This program contains tests written using"};
+5691     \textcolor{keywordflow}{if} (should\_print\_help) \{
+5692       \hyperlink{gtest__pred__impl_8h_af0141918615a5e2d5247e9cda8324dae}{EXPECT\_PRED\_FORMAT2}(\hyperlink{namespacetesting_a390c4f66fe7e9098117eb77e5fffa4ad}{IsSubstring}, expected\_help\_fragment, 
+      captured\_stdout);
+5693     \} \textcolor{keywordflow}{else} \{
+5694       \hyperlink{gtest__pred__impl_8h_af0141918615a5e2d5247e9cda8324dae}{EXPECT\_PRED\_FORMAT2}(\hyperlink{namespacetesting_a2288dcf4249f88af67dcd46544dc49a6}{IsNotSubstring},
+5695                           expected\_help\_fragment, captured\_stdout);
+5696     \}
+5697 \textcolor{preprocessor}{#endif  // GTEST\_HAS\_STREAM\_REDIRECTION}
+5698 
+5699     \hyperlink{namespacetesting_1_1internal_a93a772f5e51973b105d91cbb66a203f4}{::testing::internal::g\_help\_flag} = saved\_help\_flag;
+5700   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__unittest_8cc}{gtest\+\_\+unittest.\+cc}\end{DoxyCompactItemize}

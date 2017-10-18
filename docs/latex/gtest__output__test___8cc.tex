@@ -1,0 +1,1113 @@
+\hypertarget{gtest__output__test___8cc}{}\section{vendor/googletest/googletest/test/gtest\+\_\+output\+\_\+test\+\_\+.cc File Reference}
+\label{gtest__output__test___8cc}\index{vendor/googletest/googletest/test/gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{vendor/googletest/googletest/test/gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+{\ttfamily \#include \char`\"{}gtest/gtest-\/spi.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}src/gtest-\/internal-\/inl.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+Include dependency graph for gtest\+\_\+output\+\_\+test\+\_\+.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest__output__test___8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classFailingParamTest}{Failing\+Param\+Test}
+\item 
+class \hyperlink{classNonFatalFailureInFixtureConstructorTest}{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}
+\item 
+class \hyperlink{classFatalFailureInFixtureConstructorTest}{Fatal\+Failure\+In\+Fixture\+Constructor\+Test}
+\item 
+class \hyperlink{classNonFatalFailureInSetUpTest}{Non\+Fatal\+Failure\+In\+Set\+Up\+Test}
+\item 
+class \hyperlink{classFatalFailureInSetUpTest}{Fatal\+Failure\+In\+Set\+Up\+Test}
+\item 
+class \hyperlink{classfoo_1_1MixedUpTestCaseTest}{foo\+::\+Mixed\+Up\+Test\+Case\+Test}
+\item 
+class \hyperlink{classfoo_1_1MixedUpTestCaseWithSameTestNameTest}{foo\+::\+Mixed\+Up\+Test\+Case\+With\+Same\+Test\+Name\+Test}
+\item 
+class \hyperlink{classbar_1_1MixedUpTestCaseTest}{bar\+::\+Mixed\+Up\+Test\+Case\+Test}
+\item 
+class \hyperlink{classbar_1_1MixedUpTestCaseWithSameTestNameTest}{bar\+::\+Mixed\+Up\+Test\+Case\+With\+Same\+Test\+Name\+Test}
+\item 
+class \hyperlink{classTEST__F__before__TEST__in__same__test__case}{T\+E\+S\+T\+\_\+\+F\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+in\+\_\+same\+\_\+test\+\_\+case}
+\item 
+class \hyperlink{classTEST__before__TEST__F__in__same__test__case}{T\+E\+S\+T\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+\+F\+\_\+in\+\_\+same\+\_\+test\+\_\+case}
+\item 
+class \hyperlink{classExpectFailureTest}{Expect\+Failure\+Test}
+\item 
+class \hyperlink{classFooEnvironment}{Foo\+Environment}
+\item 
+class \hyperlink{classBarEnvironment}{Bar\+Environment}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacefoo}{foo}
+\item 
+ \hyperlink{namespacebar}{bar}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gtest__output__test___8cc_a83bd232fd1077579fada92c31bb7469f}{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{gtest__output__test___8cc_a8f28d985b030c6dd2714d1e884c62c41}{Test\+Eq1} (int x)
+\item 
+void \hyperlink{gtest__output__test___8cc_a14e796981ca8d3c71dbd2b839c1ce784}{Try\+Test\+Subroutine} ()
+\item 
+\hyperlink{gtest__output__test___8cc_a62f1870b5f6ce5c731fe0606a944da39}{T\+E\+ST} (Passing\+Test, Passing\+Test1)
+\item 
+\hyperlink{gtest__output__test___8cc_aaf792b2d65c4aeb1e2f1804e2319afd2}{T\+E\+ST} (Passing\+Test, Passing\+Test2)
+\item 
+\hyperlink{gtest__output__test___8cc_a680b45844b58c5367da52c5383aea03a}{T\+E\+S\+T\+\_\+P} (\hyperlink{classFailingParamTest}{Failing\+Param\+Test}, Fails)
+\item 
+\hyperlink{gtest__output__test___8cc_a738114469b574e436c868a48d831f334}{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+P} (Printing\+Failing\+Params, \hyperlink{classFailingParamTest}{Failing\+Param\+Test}, testing\+::\+Values(2))
+\item 
+\hyperlink{gtest__output__test___8cc_a1ae5db2b27aea7d9f321f52002d4a501}{T\+E\+ST} (Nonfatal\+Failure\+Test, Escapes\+String\+Operands)
+\item 
+\hyperlink{gtest__output__test___8cc_aaa6c1704a62b7412fd5e053614f47650}{T\+E\+ST} (Nonfatal\+Failure\+Test, Diff\+For\+Long\+Strings)
+\item 
+\hyperlink{gtest__output__test___8cc_a6076f79ee5f9e8982bba181cbbebb0ed}{T\+E\+ST} (Fatal\+Failure\+Test, Fatal\+Failure\+In\+Subroutine)
+\item 
+\hyperlink{gtest__output__test___8cc_a8763e3844bd21de9bd7126658a4279c5}{T\+E\+ST} (Fatal\+Failure\+Test, Fatal\+Failure\+In\+Nested\+Subroutine)
+\item 
+\hyperlink{gtest__output__test___8cc_afe609aef34a68a2ab9809eb48112c5cc}{T\+E\+ST} (Fatal\+Failure\+Test, Nonfatal\+Failure\+In\+Subroutine)
+\item 
+\hyperlink{gtest__output__test___8cc_ad9bbf46060935b29c42d3116ddbc3566}{T\+E\+ST} (Logging\+Test, Interleaving\+Logging\+And\+Assertions)
+\item 
+void \hyperlink{gtest__output__test___8cc_a7e222b468bbde7215ce826f10993e746}{Sub\+Without\+Trace} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\item 
+void \hyperlink{gtest__output__test___8cc_a543ee38e0824e47113bb12c3277e09ae}{Sub\+With\+Trace} (int \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n})
+\item 
+\hyperlink{gtest__output__test___8cc_a82f82f6a7caa426cccf8d20113f897c0}{T\+E\+ST} (S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Obeys\+Scopes)
+\item 
+\hyperlink{gtest__output__test___8cc_a46dcedbe67765adaebc7740ee17a88de}{T\+E\+ST} (S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Works\+In\+Loop)
+\item 
+\hyperlink{gtest__output__test___8cc_a492695898501cea9f99ccd690c2b3991}{T\+E\+ST} (S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Works\+In\+Subroutine)
+\item 
+\hyperlink{gtest__output__test___8cc_ae402e91f305e54f5f14a172a0fb0831b}{T\+E\+ST} (S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Can\+Be\+Nested)
+\item 
+\hyperlink{gtest__output__test___8cc_a49c4610eeb41adaa369f9dce003d5198}{T\+E\+ST} (S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Can\+Be\+Repeated)
+\item 
+\hyperlink{gtest__output__test___8cc_a2bdac0e0076d65fa77a967c0fdb46e2a}{T\+E\+ST} (Disabled\+Tests\+Warning\+Test, D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Also\+Run\+Disabled\+Tests\+Flag\+Suppresses\+Warning)
+\item 
+void \hyperlink{gtest__output__test___8cc_a36cd4d21174efaa3066237d716028d49}{Ad\+Hoc\+Test} ()
+\item 
+int \hyperlink{gtest__output__test___8cc_ae0ca194f6b730e168850ce3179ad4f63}{Run\+All\+Tests} ()
+\item 
+\hyperlink{gtest__output__test___8cc_ad122def39d78da61690433e185611737}{T\+E\+S\+T\+\_\+F} (\hyperlink{classNonFatalFailureInFixtureConstructorTest}{Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}, Failure\+In\+Constructor)
+\item 
+\hyperlink{gtest__output__test___8cc_a858b341fa0b2298c1534b1325fedf797}{T\+E\+S\+T\+\_\+F} (\hyperlink{classFatalFailureInFixtureConstructorTest}{Fatal\+Failure\+In\+Fixture\+Constructor\+Test}, Failure\+In\+Constructor)
+\item 
+\hyperlink{gtest__output__test___8cc_aaa9d6fcc5d9910aedb42ff3db3cc313c}{T\+E\+S\+T\+\_\+F} (\hyperlink{classNonFatalFailureInSetUpTest}{Non\+Fatal\+Failure\+In\+Set\+Up\+Test}, Failure\+In\+Set\+Up)
+\item 
+\hyperlink{gtest__output__test___8cc_a52057afc95d69adbae1fbe0ef92b29d7}{T\+E\+S\+T\+\_\+F} (\hyperlink{classFatalFailureInSetUpTest}{Fatal\+Failure\+In\+Set\+Up\+Test}, Failure\+In\+Set\+Up)
+\item 
+\hyperlink{gtest__output__test___8cc_a62631ea26f8f98f3f19dc03f950dc197}{T\+E\+ST} (Add\+Failure\+At\+Test, Message\+Contains\+Specified\+File\+And\+Line\+Number)
+\item 
+\hyperlink{namespacefoo_a0d50eecc97df56ae625078848ba9c98a}{foo\+::\+T\+E\+S\+T\+\_\+F} (Mixed\+Up\+Test\+Case\+Test, First\+Test\+From\+Namespace\+Foo)
+\item 
+\hyperlink{namespacefoo_a7911fd62b6ae405016caed779b2f95dc}{foo\+::\+T\+E\+S\+T\+\_\+F} (Mixed\+Up\+Test\+Case\+Test, Second\+Test\+From\+Namespace\+Foo)
+\item 
+\hyperlink{namespacefoo_a2bc2a2547ff38da0ecf68676e75583cd}{foo\+::\+T\+E\+S\+T\+\_\+F} (Mixed\+Up\+Test\+Case\+With\+Same\+Test\+Name\+Test, The\+Second\+Test\+With\+This\+Name\+Should\+Fail)
+\item 
+\hyperlink{namespacebar_a0e342ef00f400f593f866279689c55ac}{bar\+::\+T\+E\+S\+T\+\_\+F} (Mixed\+Up\+Test\+Case\+Test, This\+Should\+Fail)
+\item 
+\hyperlink{namespacebar_adf88eb6e7ed65a5bd641aa80b237ea2c}{bar\+::\+T\+E\+S\+T\+\_\+F} (Mixed\+Up\+Test\+Case\+Test, This\+Should\+Fail\+Too)
+\item 
+\hyperlink{namespacebar_a600f9a0c34015b598089fb6b69adc63a}{bar\+::\+T\+E\+S\+T\+\_\+F} (Mixed\+Up\+Test\+Case\+With\+Same\+Test\+Name\+Test, The\+Second\+Test\+With\+This\+Name\+Should\+Fail)
+\item 
+\hyperlink{gtest__output__test___8cc_ae71a8d4934e768af615b9b09418f15c3}{T\+E\+S\+T\+\_\+F} (\hyperlink{classTEST__F__before__TEST__in__same__test__case}{T\+E\+S\+T\+\_\+\+F\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+in\+\_\+same\+\_\+test\+\_\+case}, Defined\+Using\+T\+E\+S\+T\+\_\+F)
+\item 
+\hyperlink{gtest__output__test___8cc_a4b026b84b5a6dcbfa586f406e7c6b79c}{T\+E\+ST} (\hyperlink{classTEST__F__before__TEST__in__same__test__case}{T\+E\+S\+T\+\_\+\+F\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+in\+\_\+same\+\_\+test\+\_\+case}, Defined\+Using\+T\+E\+S\+T\+And\+Should\+Fail)
+\item 
+\hyperlink{gtest__output__test___8cc_a80bcd554d66913b961ad814266a403a8}{T\+E\+ST} (\hyperlink{classTEST__before__TEST__F__in__same__test__case}{T\+E\+S\+T\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+\+F\+\_\+in\+\_\+same\+\_\+test\+\_\+case}, Defined\+Using\+T\+E\+ST)
+\item 
+\hyperlink{gtest__output__test___8cc_aa0ba9be79b1b05ddadfc8d25c099df31}{T\+E\+S\+T\+\_\+F} (\hyperlink{classTEST__before__TEST__F__in__same__test__case}{T\+E\+S\+T\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+\+F\+\_\+in\+\_\+same\+\_\+test\+\_\+case}, Defined\+Using\+T\+E\+S\+T\+\_\+\+F\+And\+Should\+Fail)
+\item 
+\hyperlink{gtest__output__test___8cc_a3dd01f9996bd85dd50bd7632f58cbf8c}{T\+E\+ST} (Expect\+Nonfatal\+Failure\+Test, Can\+Reference\+Global\+Variables)
+\item 
+\hyperlink{gtest__output__test___8cc_afe7af77e310ee1a7599e2bc1f0f14354}{T\+E\+ST} (Expect\+Nonfatal\+Failure\+Test, Can\+Reference\+Local\+Variables)
+\item 
+\hyperlink{gtest__output__test___8cc_ac144593aa4a95ae47c0bb03def354f66}{T\+E\+ST} (Expect\+Nonfatal\+Failure\+Test, Succeeds\+When\+There\+Is\+One\+Nonfatal\+Failure)
+\item 
+\hyperlink{gtest__output__test___8cc_a3984cefae98995e99cc3de7251998c34}{T\+E\+ST} (Expect\+Nonfatal\+Failure\+Test, Fails\+When\+There\+Is\+No\+Nonfatal\+Failure)
+\item 
+\hyperlink{gtest__output__test___8cc_a17f835822727dac7b75b74ed70d2fbd2}{T\+E\+ST} (Expect\+Nonfatal\+Failure\+Test, Fails\+When\+There\+Are\+Two\+Nonfatal\+Failures)
+\item 
+\hyperlink{gtest__output__test___8cc_ab9c67cf52ef031fdf619d61283da1ca7}{T\+E\+ST} (Expect\+Nonfatal\+Failure\+Test, Fails\+When\+There\+Is\+One\+Fatal\+Failure)
+\item 
+\hyperlink{gtest__output__test___8cc_aa5976cbca1620f7fea18689a3cbf5333}{T\+E\+ST} (Expect\+Nonfatal\+Failure\+Test, Fails\+When\+Statement\+Returns)
+\item 
+\hyperlink{gtest__output__test___8cc_a4b06191d54fb76270da3d3dd497e62b6}{T\+E\+ST} (Expect\+Fatal\+Failure\+Test, Can\+Reference\+Global\+Variables)
+\item 
+\hyperlink{gtest__output__test___8cc_ac6646aa5f6d4ea21c0528259118754a4}{T\+E\+ST} (Expect\+Fatal\+Failure\+Test, Can\+Reference\+Local\+Static\+Variables)
+\item 
+\hyperlink{gtest__output__test___8cc_a0d894cc9ae86412b4c156748602a23a7}{T\+E\+ST} (Expect\+Fatal\+Failure\+Test, Succeeds\+When\+There\+Is\+One\+Fatal\+Failure)
+\item 
+\hyperlink{gtest__output__test___8cc_af8e8545243605b2ba121e253ec48785e}{T\+E\+ST} (Expect\+Fatal\+Failure\+Test, Fails\+When\+There\+Is\+No\+Fatal\+Failure)
+\item 
+void \hyperlink{gtest__output__test___8cc_acdca9b16622e8a506a39240c8809af38}{Fatal\+Failure} ()
+\item 
+\hyperlink{gtest__output__test___8cc_a4fd11a245bf0e8eb46d78c8dc14c730e}{T\+E\+ST} (Expect\+Fatal\+Failure\+Test, Fails\+When\+There\+Are\+Two\+Fatal\+Failures)
+\item 
+\hyperlink{gtest__output__test___8cc_a35fafc42558ee14c42320b359c270026}{T\+E\+ST} (Expect\+Fatal\+Failure\+Test, Fails\+When\+There\+Is\+One\+Nonfatal\+Failure)
+\item 
+\hyperlink{gtest__output__test___8cc_aca5344af5eed2eefc512c555acbe5511}{T\+E\+ST} (Expect\+Fatal\+Failure\+Test, Fails\+When\+Statement\+Returns)
+\item 
+\hyperlink{gtest__output__test___8cc_ae7459e6b9516821fd0e77eb3aa9b7413}{T\+E\+S\+T\+\_\+F} (\hyperlink{classExpectFailureTest}{Expect\+Failure\+Test}, Expect\+Fatal\+Failure)
+\item 
+\hyperlink{gtest__output__test___8cc_abec150ac715359c89fde1102cfc300d2}{T\+E\+S\+T\+\_\+F} (\hyperlink{classExpectFailureTest}{Expect\+Failure\+Test}, Expect\+Non\+Fatal\+Failure)
+\item 
+\hyperlink{gtest__output__test___8cc_a1f29562e9248524dda90aa6d641d77ea}{T\+E\+S\+T\+\_\+F} (\hyperlink{classExpectFailureTest}{Expect\+Failure\+Test}, Expect\+Fatal\+Failure\+On\+All\+Threads)
+\item 
+\hyperlink{gtest__output__test___8cc_a7714d1899711a604704737897595e7c3}{T\+E\+S\+T\+\_\+F} (\hyperlink{classExpectFailureTest}{Expect\+Failure\+Test}, Expect\+Non\+Fatal\+Failure\+On\+All\+Threads)
+\item 
+int \hyperlink{gtest__output__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const char \hyperlink{gtest__output__test___8cc_a6db44d0c97a2b93be43ba6c8104b7511}{k\+Golden\+String} \mbox{[}$\,$\mbox{]} = \char`\"{}\textbackslash{}\char`\"{}Line\textbackslash{}0 1\textbackslash{}\char`\"{}\textbackslash{}n\+Line 2\char`\"{}
+\item 
+int \hyperlink{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{global\+\_\+integer} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+@{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+}}
+\index{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+@{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+}{GTEST_IMPLEMENTATION_}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+T\+E\+S\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+~1}\hypertarget{gtest__output__test___8cc_a83bd232fd1077579fada92c31bb7469f}{}\label{gtest__output__test___8cc_a83bd232fd1077579fada92c31bb7469f}
+
+
+\subsection{Function Documentation}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!Ad\+Hoc\+Test@{Ad\+Hoc\+Test}}
+\index{Ad\+Hoc\+Test@{Ad\+Hoc\+Test}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{Ad\+Hoc\+Test()}{AdHocTest()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ad\+Hoc\+Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a36cd4d21174efaa3066237d716028d49}{}\label{gtest__output__test___8cc_a36cd4d21174efaa3066237d716028d49}
+
+\begin{DoxyCode}
+337                  \{
+338   printf(\textcolor{stringliteral}{"The non-test part of the code is expected to have 2 failures.\(\backslash\)n\(\backslash\)n"});
+339   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\textcolor{keyword}{false});
+340   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(2, 3);
+341 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!Fatal\+Failure@{Fatal\+Failure}}
+\index{Fatal\+Failure@{Fatal\+Failure}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{Fatal\+Failure()}{FatalFailure()}}]{\setlength{\rightskip}{0pt plus 5cm}void Fatal\+Failure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_acdca9b16622e8a506a39240c8809af38}{}\label{gtest__output__test___8cc_acdca9b16622e8a506a39240c8809af38}
+
+\begin{DoxyCode}
+710                     \{
+711   \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"Expected fatal failure."};
+712 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+P@{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+P}}
+\index{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+P@{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+P}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+P(\+Printing\+Failing\+Params, Failing\+Param\+Test, testing\+::\+Values(2))}{INSTANTIATE_TEST_CASE_P(PrintingFailingParams, FailingParamTest, testing::Values(2))}}]{\setlength{\rightskip}{0pt plus 5cm}I\+N\+S\+T\+A\+N\+T\+I\+A\+T\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+P (
+\begin{DoxyParamCaption}
+\item[{Printing\+Failing\+Params}]{, }
+\item[{{\bf Failing\+Param\+Test}}]{, }
+\item[{testing\+::\+Values(2)}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a738114469b574e436c868a48d831f334}{}\label{gtest__output__test___8cc_a738114469b574e436c868a48d831f334}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!main@{main}}
+\index{main@{main}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gtest__output__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+1024                                 \{
+1025   \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{testing::GTEST\_FLAG}(print\_time) = \textcolor{keyword}{false};
+1026 
+1027   \textcolor{comment}{// We just run the tests, knowing some of them are intended to fail.}
+1028   \textcolor{comment}{// We will use a separate Python script to compare the output of}
+1029   \textcolor{comment}{// this program with the golden file.}
+1030 
+1031   \textcolor{comment}{// It's hard to test InitGoogleTest() directly, as it has many}
+1032   \textcolor{comment}{// global side effects.  The following line serves as a sanity test}
+1033   \textcolor{comment}{// for it.}
+1034   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{testing::InitGoogleTest}(&argc, argv);
+1035   \textcolor{keywordtype}{bool} internal\_skip\_environment\_and\_ad\_hoc\_tests =
+1036       \hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{std::count}(argv, argv + argc,
+1037                  \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string}(\textcolor{stringliteral}{"internal\_skip\_environment\_and\_ad\_hoc\_tests"})) > 0;
+1038 
+1039 \textcolor{preprocessor}{#if GTEST\_HAS\_DEATH\_TEST}
+1040   \textcolor{keywordflow}{if} (\hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{testing::internal::GTEST\_FLAG}(internal\_run\_death\_test) != \textcolor{stringliteral}{""}) \{
+1041     \textcolor{comment}{// Skip the usual output capturing if we're running as the child}
+1042     \textcolor{comment}{// process of an threadsafe-style death test.}
+1043 \textcolor{preprocessor}{# if GTEST\_OS\_WINDOWS}
+1044     \hyperlink{namespacetesting_1_1internal_1_1posix_a9ef6d089cdae03f9d9e0e6d379c40703}{posix::FReopen}(\textcolor{stringliteral}{"nul:"}, \textcolor{stringliteral}{"w"}, stdout);
+1045 \textcolor{preprocessor}{# else}
+1046     \hyperlink{namespacetesting_1_1internal_1_1posix_a9ef6d089cdae03f9d9e0e6d379c40703}{posix::FReopen}(\textcolor{stringliteral}{"/dev/null"}, \textcolor{stringliteral}{"w"}, stdout);
+1047 \textcolor{preprocessor}{# endif  // GTEST\_OS\_WINDOWS}
+1048     \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+1049   \}
+1050 \textcolor{preprocessor}{#endif  // GTEST\_HAS\_DEATH\_TEST}
+1051 
+1052   \textcolor{keywordflow}{if} (internal\_skip\_environment\_and\_ad\_hoc\_tests)
+1053     \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+1054 
+1055   \textcolor{comment}{// Registers two global test environments.}
+1056   \textcolor{comment}{// The golden file verifies that they are set up in the order they}
+1057   \textcolor{comment}{// are registered, and torn down in the reverse order.}
+1058   \hyperlink{namespacetesting_a460d7b998622e332392c1e00be3a60d5}{testing::AddGlobalTestEnvironment}(\textcolor{keyword}{new} 
+      \hyperlink{classFooEnvironment}{FooEnvironment});
+1059   \hyperlink{namespacetesting_a460d7b998622e332392c1e00be3a60d5}{testing::AddGlobalTestEnvironment}(\textcolor{keyword}{new} 
+      \hyperlink{classBarEnvironment}{BarEnvironment});
+1060 
+1061   \textcolor{keywordflow}{return} \hyperlink{gtest__output__test___8cc_ae0ca194f6b730e168850ce3179ad4f63}{RunAllTests}();
+1062 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!Run\+All\+Tests@{Run\+All\+Tests}}
+\index{Run\+All\+Tests@{Run\+All\+Tests}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{Run\+All\+Tests()}{RunAllTests()}}]{\setlength{\rightskip}{0pt plus 5cm}int Run\+All\+Tests (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_ae0ca194f6b730e168850ce3179ad4f63}{}\label{gtest__output__test___8cc_ae0ca194f6b730e168850ce3179ad4f63}
+
+\begin{DoxyCode}
+344                   \{
+345   \hyperlink{gtest__output__test___8cc_a36cd4d21174efaa3066237d716028d49}{AdHocTest}();
+346   \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+347 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!Sub\+Without\+Trace@{Sub\+Without\+Trace}}
+\index{Sub\+Without\+Trace@{Sub\+Without\+Trace}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{Sub\+Without\+Trace(int n)}{SubWithoutTrace(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sub\+Without\+Trace (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a7e222b468bbde7215ce826f10993e746}{}\label{gtest__output__test___8cc_a7e222b468bbde7215ce826f10993e746}
+
+\begin{DoxyCode}
+167                             \{
+168   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
+169   \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(2, \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
+170 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!Sub\+With\+Trace@{Sub\+With\+Trace}}
+\index{Sub\+With\+Trace@{Sub\+With\+Trace}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{Sub\+With\+Trace(int n)}{SubWithTrace(int n)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sub\+With\+Trace (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a543ee38e0824e47113bb12c3277e09ae}{}\label{gtest__output__test___8cc_a543ee38e0824e47113bb12c3277e09ae}
+
+\begin{DoxyCode}
+173                          \{
+174   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\hyperlink{classtesting_1_1Message}{testing::Message}() << \textcolor{stringliteral}{"n = "} << \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
+175 
+176   \hyperlink{gtest__output__test___8cc_a7e222b468bbde7215ce826f10993e746}{SubWithoutTrace}(\hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n});
+177 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Passing\+Test, Passing\+Test1)}{TEST(PassingTest, PassingTest1)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Passing\+Test}]{, }
+\item[{Passing\+Test1}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a62f1870b5f6ce5c731fe0606a944da39}{}\label{gtest__output__test___8cc_a62f1870b5f6ce5c731fe0606a944da39}
+
+\begin{DoxyCode}
+85                                 \{
+86 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Passing\+Test, Passing\+Test2)}{TEST(PassingTest, PassingTest2)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Passing\+Test}]{, }
+\item[{Passing\+Test2}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_aaf792b2d65c4aeb1e2f1804e2319afd2}{}\label{gtest__output__test___8cc_aaf792b2d65c4aeb1e2f1804e2319afd2}
+
+\begin{DoxyCode}
+88                                 \{
+89 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Nonfatal\+Failure\+Test, Escapes\+String\+Operands)}{TEST(NonfatalFailureTest, EscapesStringOperands)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Nonfatal\+Failure\+Test}]{, }
+\item[{Escapes\+String\+Operands}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a1ae5db2b27aea7d9f321f52002d4a501}{}\label{gtest__output__test___8cc_a1ae5db2b27aea7d9f321f52002d4a501}
+
+\begin{DoxyCode}
+107                                                  \{
+108   \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string} actual = \textcolor{stringliteral}{"actual \(\backslash\)"string\(\backslash\)""};
+109   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\hyperlink{gtest__output__test___8cc_a6db44d0c97a2b93be43ba6c8104b7511}{kGoldenString}, actual);
+110 
+111   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* golden = \hyperlink{gtest__output__test___8cc_a6db44d0c97a2b93be43ba6c8104b7511}{kGoldenString};
+112   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(golden, actual);
+113 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Nonfatal\+Failure\+Test, Diff\+For\+Long\+Strings)}{TEST(NonfatalFailureTest, DiffForLongStrings)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Nonfatal\+Failure\+Test}]{, }
+\item[{Diff\+For\+Long\+Strings}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_aaa6c1704a62b7412fd5e053614f47650}{}\label{gtest__output__test___8cc_aaa6c1704a62b7412fd5e053614f47650}
+
+\begin{DoxyCode}
+115                                               \{
+116   \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string} golden\_str(\hyperlink{gtest__output__test___8cc_a6db44d0c97a2b93be43ba6c8104b7511}{kGoldenString}, \textcolor{keyword}{sizeof}(
+      \hyperlink{gtest__output__test___8cc_a6db44d0c97a2b93be43ba6c8104b7511}{kGoldenString}) - 1);
+117   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(golden\_str, \textcolor{stringliteral}{"Line 2"});
+118 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Fatal\+Failure\+Test, Fatal\+Failure\+In\+Subroutine)}{TEST(FatalFailureTest, FatalFailureInSubroutine)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Fatal\+Failure\+Test}]{, }
+\item[{Fatal\+Failure\+In\+Subroutine}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a6076f79ee5f9e8982bba181cbbebb0ed}{}\label{gtest__output__test___8cc_a6076f79ee5f9e8982bba181cbbebb0ed}
+
+\begin{DoxyCode}
+121                                                  \{
+122   printf(\textcolor{stringliteral}{"(expecting a failure that x should be 1)\(\backslash\)n"});
+123 
+124   \hyperlink{gtest__output__test___8cc_a14e796981ca8d3c71dbd2b839c1ce784}{TryTestSubroutine}();
+125 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Fatal\+Failure\+Test, Fatal\+Failure\+In\+Nested\+Subroutine)}{TEST(FatalFailureTest, FatalFailureInNestedSubroutine)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Fatal\+Failure\+Test}]{, }
+\item[{Fatal\+Failure\+In\+Nested\+Subroutine}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a8763e3844bd21de9bd7126658a4279c5}{}\label{gtest__output__test___8cc_a8763e3844bd21de9bd7126658a4279c5}
+
+\begin{DoxyCode}
+128                                                        \{
+129   printf(\textcolor{stringliteral}{"(expecting a failure that x should be 1)\(\backslash\)n"});
+130 
+131   \textcolor{comment}{// Calls a subrountine that yields a fatal failure.}
+132   \hyperlink{gtest__output__test___8cc_a14e796981ca8d3c71dbd2b839c1ce784}{TryTestSubroutine}();
+133 
+134   \textcolor{comment}{// Catches the fatal failure and aborts the test.}
+135   \textcolor{comment}{//}
+136   \textcolor{comment}{// When calling HasFatalFailure() inside a TEST, TEST\_F, or test}
+137   \textcolor{comment}{// fixture, the testing::Test:: prefix is not needed.}
+138   \textcolor{keywordflow}{if} (HasFatalFailure()) \textcolor{keywordflow}{return};
+139 
+140   \textcolor{comment}{// If we get here, something is wrong.}
+141   \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"This should never be reached."};
+142 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Fatal\+Failure\+Test, Nonfatal\+Failure\+In\+Subroutine)}{TEST(FatalFailureTest, NonfatalFailureInSubroutine)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Fatal\+Failure\+Test}]{, }
+\item[{Nonfatal\+Failure\+In\+Subroutine}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_afe609aef34a68a2ab9809eb48112c5cc}{}\label{gtest__output__test___8cc_afe609aef34a68a2ab9809eb48112c5cc}
+
+\begin{DoxyCode}
+145                                                     \{
+146   printf(\textcolor{stringliteral}{"(expecting a failure on false)\(\backslash\)n"});
+147   \hyperlink{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a}{EXPECT\_TRUE}(\textcolor{keyword}{false});  \textcolor{comment}{// Generates a nonfatal failure}
+148   \hyperlink{gtest_8h_a8197fa52f3538588d20d8af4834c9003}{ASSERT\_FALSE}(HasFatalFailure());  \textcolor{comment}{// This should succeed.}
+149 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Logging\+Test, Interleaving\+Logging\+And\+Assertions)}{TEST(LoggingTest, InterleavingLoggingAndAssertions)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Logging\+Test}]{, }
+\item[{Interleaving\+Logging\+And\+Assertions}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_ad9bbf46060935b29c42d3116ddbc3566}{}\label{gtest__output__test___8cc_ad9bbf46060935b29c42d3116ddbc3566}
+
+\begin{DoxyCode}
+152                                                     \{
+153   \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{int} a[4] = \{
+154     3, 9, 2, 6
+155   \};
+156 
+157   printf(\textcolor{stringliteral}{"(expecting 2 failures on (3) >= (a[i]))\(\backslash\)n"});
+158   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; i < static\_cast<int>(\textcolor{keyword}{sizeof}(a)/\textcolor{keyword}{sizeof}(*a)); \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}++) \{
+159     printf(\textcolor{stringliteral}{"i == %d\(\backslash\)n"}, \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+160     \hyperlink{gtest_8h_ab7a0ff4bfa4d9b27baa118d8b0756ca0}{EXPECT\_GE}(3, a[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}]);
+161   \}
+162 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Obeys\+Scopes)}{TEST(SCOPED_TRACETest, ObeysScopes)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test}]{, }
+\item[{Obeys\+Scopes}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a82f82f6a7caa426cccf8d20113f897c0}{}\label{gtest__output__test___8cc_a82f82f6a7caa426cccf8d20113f897c0}
+
+\begin{DoxyCode}
+180                                     \{
+181   printf(\textcolor{stringliteral}{"(expected to fail)\(\backslash\)n"});
+182 
+183   \textcolor{comment}{// There should be no trace before SCOPED\_TRACE() is invoked.}
+184   \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"This failure is expected, and shouldn't have a trace."};
+185 
+186   \{
+187     \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\textcolor{stringliteral}{"Expected trace"});
+188     \textcolor{comment}{// After SCOPED\_TRACE(), a failure in the current scope should contain}
+189     \textcolor{comment}{// the trace.}
+190     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"This failure is expected, and should have a trace."};
+191   \}
+192 
+193   \textcolor{comment}{// Once the control leaves the scope of the SCOPED\_TRACE(), there}
+194   \textcolor{comment}{// should be no trace again.}
+195   \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"This failure is expected, and shouldn't have a trace."};
+196 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Works\+In\+Loop)}{TEST(SCOPED_TRACETest, WorksInLoop)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test}]{, }
+\item[{Works\+In\+Loop}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a46dcedbe67765adaebc7740ee17a88de}{}\label{gtest__output__test___8cc_a46dcedbe67765adaebc7740ee17a88de}
+
+\begin{DoxyCode}
+199                                     \{
+200   printf(\textcolor{stringliteral}{"(expected to fail)\(\backslash\)n"});
+201 
+202   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 1; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} <= 2; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}++) \{
+203     \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\hyperlink{classtesting_1_1Message}{testing::Message}() << \textcolor{stringliteral}{"i = "} << \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+204 
+205     \hyperlink{gtest__output__test___8cc_a7e222b468bbde7215ce826f10993e746}{SubWithoutTrace}(\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i});
+206   \}
+207 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Works\+In\+Subroutine)}{TEST(SCOPED_TRACETest, WorksInSubroutine)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test}]{, }
+\item[{Works\+In\+Subroutine}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a492695898501cea9f99ccd690c2b3991}{}\label{gtest__output__test___8cc_a492695898501cea9f99ccd690c2b3991}
+
+\begin{DoxyCode}
+210                                           \{
+211   printf(\textcolor{stringliteral}{"(expected to fail)\(\backslash\)n"});
+212 
+213   \hyperlink{gtest__output__test___8cc_a543ee38e0824e47113bb12c3277e09ae}{SubWithTrace}(1);
+214   \hyperlink{gtest__output__test___8cc_a543ee38e0824e47113bb12c3277e09ae}{SubWithTrace}(2);
+215 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Can\+Be\+Nested)}{TEST(SCOPED_TRACETest, CanBeNested)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test}]{, }
+\item[{Can\+Be\+Nested}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_ae402e91f305e54f5f14a172a0fb0831b}{}\label{gtest__output__test___8cc_ae402e91f305e54f5f14a172a0fb0831b}
+
+\begin{DoxyCode}
+218                                     \{
+219   printf(\textcolor{stringliteral}{"(expected to fail)\(\backslash\)n"});
+220 
+221   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\textcolor{stringliteral}{""});  \textcolor{comment}{// A trace without a message.}
+222 
+223   \hyperlink{gtest__output__test___8cc_a543ee38e0824e47113bb12c3277e09ae}{SubWithTrace}(2);
+224 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test, Can\+Be\+Repeated)}{TEST(SCOPED_TRACETest, CanBeRepeated)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{S\+C\+O\+P\+E\+D\+\_\+\+T\+R\+A\+C\+E\+Test}]{, }
+\item[{Can\+Be\+Repeated}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a49c4610eeb41adaa369f9dce003d5198}{}\label{gtest__output__test___8cc_a49c4610eeb41adaa369f9dce003d5198}
+
+\begin{DoxyCode}
+227                                       \{
+228   printf(\textcolor{stringliteral}{"(expected to fail)\(\backslash\)n"});
+229 
+230   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\textcolor{stringliteral}{"A"});
+231   \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}()
+232       << \textcolor{stringliteral}{"This failure is expected, and should contain trace point A."};
+233 
+234   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\textcolor{stringliteral}{"B"});
+235   \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}()
+236       << \textcolor{stringliteral}{"This failure is expected, and should contain trace point A and B."};
+237 
+238   \{
+239     \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\textcolor{stringliteral}{"C"});
+240     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"This failure is expected, and should "}
+241                   << \textcolor{stringliteral}{"contain trace point A, B, and C."};
+242   \}
+243 
+244   \hyperlink{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d}{SCOPED\_TRACE}(\textcolor{stringliteral}{"D"});
+245   \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"This failure is expected, and should "}
+246                 << \textcolor{stringliteral}{"contain trace point A, B, and D."};
+247 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Disabled\+Tests\+Warning\+Test, D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Also\+Run\+Disabled\+Tests\+Flag\+Suppresses\+Warning)}{TEST(DisabledTestsWarningTest, DISABLED_AlsoRunDisabledTestsFlagSuppressesWarning)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Disabled\+Tests\+Warning\+Test}]{, }
+\item[{D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Also\+Run\+Disabled\+Tests\+Flag\+Suppresses\+Warning}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a2bdac0e0076d65fa77a967c0fdb46e2a}{}\label{gtest__output__test___8cc_a2bdac0e0076d65fa77a967c0fdb46e2a}
+
+\begin{DoxyCode}
+327                                                          \{
+328   \textcolor{comment}{// This test body is intentionally empty.  Its sole purpose is for}
+329   \textcolor{comment}{// verifying that the --gtest\_also\_run\_disabled\_tests flag}
+330   \textcolor{comment}{// suppresses the "YOU HAVE 12 DISABLED TESTS" warning at the end of}
+331   \textcolor{comment}{// the test output.}
+332 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Add\+Failure\+At\+Test, Message\+Contains\+Specified\+File\+And\+Line\+Number)}{TEST(AddFailureAtTest, MessageContainsSpecifiedFileAndLineNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Add\+Failure\+At\+Test}]{, }
+\item[{Message\+Contains\+Specified\+File\+And\+Line\+Number}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a62631ea26f8f98f3f19dc03f950dc197}{}\label{gtest__output__test___8cc_a62631ea26f8f98f3f19dc03f950dc197}
+
+\begin{DoxyCode}
+461                                                                   \{
+462   \hyperlink{gtest_8h_a448d7e5105b640e892fd8153fbee0b7f}{ADD\_FAILURE\_AT}(\textcolor{stringliteral}{"foo.cc"}, 42) << \textcolor{stringliteral}{"Expected failure in foo.cc"};
+463 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+T\+E\+S\+T\+\_\+\+F\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+in\+\_\+same\+\_\+test\+\_\+case, Defined\+Using\+T\+E\+S\+T\+And\+Should\+Fail)}{TEST(TEST_F_before_TEST_in_same_test_case, DefinedUsingTESTAndShouldFail)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+S\+T\+\_\+\+F\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+in\+\_\+same\+\_\+test\+\_\+case}}]{, }
+\item[{Defined\+Using\+T\+E\+S\+T\+And\+Should\+Fail}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a4b026b84b5a6dcbfa586f406e7c6b79c}{}\label{gtest__output__test___8cc_a4b026b84b5a6dcbfa586f406e7c6b79c}
+
+\begin{DoxyCode}
+581 \{\}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+T\+E\+S\+T\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+\+F\+\_\+in\+\_\+same\+\_\+test\+\_\+case, Defined\+Using\+T\+E\+S\+T)}{TEST(TEST_before_TEST_F_in_same_test_case, DefinedUsingTEST)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+S\+T\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+\+F\+\_\+in\+\_\+same\+\_\+test\+\_\+case}}]{, }
+\item[{Defined\+Using\+T\+E\+ST}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a80bcd554d66913b961ad814266a403a8}{}\label{gtest__output__test___8cc_a80bcd554d66913b961ad814266a403a8}
+
+\begin{DoxyCode}
+586 \{\}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Nonfatal\+Failure\+Test, Can\+Reference\+Global\+Variables)}{TEST(ExpectNonfatalFailureTest, CanReferenceGlobalVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Nonfatal\+Failure\+Test}]{, }
+\item[{Can\+Reference\+Global\+Variables}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a3dd01f9996bd85dd50bd7632f58cbf8c}{}\label{gtest__output__test___8cc_a3dd01f9996bd85dd50bd7632f58cbf8c}
+
+\begin{DoxyCode}
+597                                                              \{
+598   \hyperlink{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{global\_integer} = 0;
+599   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{
+600     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{global\_integer}) << \textcolor{stringliteral}{"Expected non-fatal failure."};
+601   \}, \textcolor{stringliteral}{"Expected non-fatal failure."});
+602 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Nonfatal\+Failure\+Test, Can\+Reference\+Local\+Variables)}{TEST(ExpectNonfatalFailureTest, CanReferenceLocalVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Nonfatal\+Failure\+Test}]{, }
+\item[{Can\+Reference\+Local\+Variables}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_afe7af77e310ee1a7599e2bc1f0f14354}{}\label{gtest__output__test___8cc_afe7af77e310ee1a7599e2bc1f0f14354}
+
+\begin{DoxyCode}
+606                                                             \{
+607   \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_a0d2d8836216fc94b61aa0824eb239db2}{m} = 0;
+608   \textcolor{keyword}{static} \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+609   n = 1;
+610   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{
+611     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(m, n) << \textcolor{stringliteral}{"Expected non-fatal failure."};
+612   \}, \textcolor{stringliteral}{"Expected non-fatal failure."});
+613 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Nonfatal\+Failure\+Test, Succeeds\+When\+There\+Is\+One\+Nonfatal\+Failure)}{TEST(ExpectNonfatalFailureTest, SucceedsWhenThereIsOneNonfatalFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Nonfatal\+Failure\+Test}]{, }
+\item[{Succeeds\+When\+There\+Is\+One\+Nonfatal\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_ac144593aa4a95ae47c0bb03def354f66}{}\label{gtest__output__test___8cc_ac144593aa4a95ae47c0bb03def354f66}
+
+\begin{DoxyCode}
+617                                                                        \{
+618   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{
+619     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected non-fatal failure."};
+620   \}, \textcolor{stringliteral}{"Expected non-fatal failure."});
+621 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Nonfatal\+Failure\+Test, Fails\+When\+There\+Is\+No\+Nonfatal\+Failure)}{TEST(ExpectNonfatalFailureTest, FailsWhenThereIsNoNonfatalFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Nonfatal\+Failure\+Test}]{, }
+\item[{Fails\+When\+There\+Is\+No\+Nonfatal\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a3984cefae98995e99cc3de7251998c34}{}\label{gtest__output__test___8cc_a3984cefae98995e99cc3de7251998c34}
+
+\begin{DoxyCode}
+625                                                                    \{
+626   printf(\textcolor{stringliteral}{"(expecting a failure)\(\backslash\)n"});
+627   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{
+628   \}, \textcolor{stringliteral}{""});
+629 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Nonfatal\+Failure\+Test, Fails\+When\+There\+Are\+Two\+Nonfatal\+Failures)}{TEST(ExpectNonfatalFailureTest, FailsWhenThereAreTwoNonfatalFailures)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Nonfatal\+Failure\+Test}]{, }
+\item[{Fails\+When\+There\+Are\+Two\+Nonfatal\+Failures}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a17f835822727dac7b75b74ed70d2fbd2}{}\label{gtest__output__test___8cc_a17f835822727dac7b75b74ed70d2fbd2}
+
+\begin{DoxyCode}
+633                                                                       \{
+634   printf(\textcolor{stringliteral}{"(expecting a failure)\(\backslash\)n"});
+635   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{
+636     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected non-fatal failure 1."};
+637     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected non-fatal failure 2."};
+638   \}, \textcolor{stringliteral}{""});
+639 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Nonfatal\+Failure\+Test, Fails\+When\+There\+Is\+One\+Fatal\+Failure)}{TEST(ExpectNonfatalFailureTest, FailsWhenThereIsOneFatalFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Nonfatal\+Failure\+Test}]{, }
+\item[{Fails\+When\+There\+Is\+One\+Fatal\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_ab9c67cf52ef031fdf619d61283da1ca7}{}\label{gtest__output__test___8cc_ab9c67cf52ef031fdf619d61283da1ca7}
+
+\begin{DoxyCode}
+643                                                                  \{
+644   printf(\textcolor{stringliteral}{"(expecting a failure)\(\backslash\)n"});
+645   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{
+646     \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"Expected fatal failure."};
+647   \}, \textcolor{stringliteral}{""});
+648 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Nonfatal\+Failure\+Test, Fails\+When\+Statement\+Returns)}{TEST(ExpectNonfatalFailureTest, FailsWhenStatementReturns)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Nonfatal\+Failure\+Test}]{, }
+\item[{Fails\+When\+Statement\+Returns}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_aa5976cbca1620f7fea18689a3cbf5333}{}\label{gtest__output__test___8cc_aa5976cbca1620f7fea18689a3cbf5333}
+
+\begin{DoxyCode}
+652                                                            \{
+653   printf(\textcolor{stringliteral}{"(expecting a failure)\(\backslash\)n"});
+654   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\{
+655     \textcolor{keywordflow}{return};
+656   \}, \textcolor{stringliteral}{""});
+657 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Fatal\+Failure\+Test, Can\+Reference\+Global\+Variables)}{TEST(ExpectFatalFailureTest, CanReferenceGlobalVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Fatal\+Failure\+Test}]{, }
+\item[{Can\+Reference\+Global\+Variables}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a4b06191d54fb76270da3d3dd497e62b6}{}\label{gtest__output__test___8cc_a4b06191d54fb76270da3d3dd497e62b6}
+
+\begin{DoxyCode}
+676                                                           \{
+677   \hyperlink{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{global\_integer} = 0;
+678   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\{
+679     \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(1, \hyperlink{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{global\_integer}) << \textcolor{stringliteral}{"Expected fatal failure."};
+680   \}, \textcolor{stringliteral}{"Expected fatal failure."});
+681 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Fatal\+Failure\+Test, Can\+Reference\+Local\+Static\+Variables)}{TEST(ExpectFatalFailureTest, CanReferenceLocalStaticVariables)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Fatal\+Failure\+Test}]{, }
+\item[{Can\+Reference\+Local\+Static\+Variables}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_ac6646aa5f6d4ea21c0528259118754a4}{}\label{gtest__output__test___8cc_ac6646aa5f6d4ea21c0528259118754a4}
+
+\begin{DoxyCode}
+685                                                                \{
+686   \textcolor{keyword}{static} \textcolor{keywordtype}{int} \hyperlink{app_2main_8cpp_acfc02ec89670db29251fda6a66602ce2}{n};
+687   n = 1;
+688   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\{
+689     \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(0, n) << \textcolor{stringliteral}{"Expected fatal failure."};
+690   \}, \textcolor{stringliteral}{"Expected fatal failure."});
+691 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Fatal\+Failure\+Test, Succeeds\+When\+There\+Is\+One\+Fatal\+Failure)}{TEST(ExpectFatalFailureTest, SucceedsWhenThereIsOneFatalFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Fatal\+Failure\+Test}]{, }
+\item[{Succeeds\+When\+There\+Is\+One\+Fatal\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a0d894cc9ae86412b4c156748602a23a7}{}\label{gtest__output__test___8cc_a0d894cc9ae86412b4c156748602a23a7}
+
+\begin{DoxyCode}
+695                                                                  \{
+696   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\{
+697     \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"Expected fatal failure."};
+698   \}, \textcolor{stringliteral}{"Expected fatal failure."});
+699 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Fatal\+Failure\+Test, Fails\+When\+There\+Is\+No\+Fatal\+Failure)}{TEST(ExpectFatalFailureTest, FailsWhenThereIsNoFatalFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Fatal\+Failure\+Test}]{, }
+\item[{Fails\+When\+There\+Is\+No\+Fatal\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_af8e8545243605b2ba121e253ec48785e}{}\label{gtest__output__test___8cc_af8e8545243605b2ba121e253ec48785e}
+
+\begin{DoxyCode}
+703                                                              \{
+704   printf(\textcolor{stringliteral}{"(expecting a failure)\(\backslash\)n"});
+705   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\{
+706   \}, \textcolor{stringliteral}{""});
+707 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Fatal\+Failure\+Test, Fails\+When\+There\+Are\+Two\+Fatal\+Failures)}{TEST(ExpectFatalFailureTest, FailsWhenThereAreTwoFatalFailures)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Fatal\+Failure\+Test}]{, }
+\item[{Fails\+When\+There\+Are\+Two\+Fatal\+Failures}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a4fd11a245bf0e8eb46d78c8dc14c730e}{}\label{gtest__output__test___8cc_a4fd11a245bf0e8eb46d78c8dc14c730e}
+
+\begin{DoxyCode}
+716                                                                 \{
+717   printf(\textcolor{stringliteral}{"(expecting a failure)\(\backslash\)n"});
+718   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\{
+719     \hyperlink{gtest__output__test___8cc_acdca9b16622e8a506a39240c8809af38}{FatalFailure}();
+720     \hyperlink{gtest__output__test___8cc_acdca9b16622e8a506a39240c8809af38}{FatalFailure}();
+721   \}, \textcolor{stringliteral}{""});
+722 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Fatal\+Failure\+Test, Fails\+When\+There\+Is\+One\+Nonfatal\+Failure)}{TEST(ExpectFatalFailureTest, FailsWhenThereIsOneNonfatalFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Fatal\+Failure\+Test}]{, }
+\item[{Fails\+When\+There\+Is\+One\+Nonfatal\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a35fafc42558ee14c42320b359c270026}{}\label{gtest__output__test___8cc_a35fafc42558ee14c42320b359c270026}
+
+\begin{DoxyCode}
+726                                                                  \{
+727   printf(\textcolor{stringliteral}{"(expecting a failure)\(\backslash\)n"});
+728   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\{
+729     \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected non-fatal failure."};
+730   \}, \textcolor{stringliteral}{""});
+731 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Expect\+Fatal\+Failure\+Test, Fails\+When\+Statement\+Returns)}{TEST(ExpectFatalFailureTest, FailsWhenStatementReturns)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Expect\+Fatal\+Failure\+Test}]{, }
+\item[{Fails\+When\+Statement\+Returns}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_aca5344af5eed2eefc512c555acbe5511}{}\label{gtest__output__test___8cc_aca5344af5eed2eefc512c555acbe5511}
+
+\begin{DoxyCode}
+735                                                         \{
+736   printf(\textcolor{stringliteral}{"(expecting a failure)\(\backslash\)n"});
+737   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\{
+738     \textcolor{keywordflow}{return};
+739   \}, \textcolor{stringliteral}{""});
+740 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test, Failure\+In\+Constructor)}{TEST_F(NonFatalFailureInFixtureConstructorTest, FailureInConstructor)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Non\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test}}]{, }
+\item[{Failure\+In\+Constructor}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_ad122def39d78da61690433e185611737}{}\label{gtest__output__test___8cc_ad122def39d78da61690433e185611737}
+
+\begin{DoxyCode}
+370                                                                       \{
+371   \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"Expected failure #3, in the test body."};
+372 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Fatal\+Failure\+In\+Fixture\+Constructor\+Test, Failure\+In\+Constructor)}{TEST_F(FatalFailureInFixtureConstructorTest, FailureInConstructor)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Fatal\+Failure\+In\+Fixture\+Constructor\+Test}}]{, }
+\item[{Failure\+In\+Constructor}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a858b341fa0b2298c1534b1325fedf797}{}\label{gtest__output__test___8cc_a858b341fa0b2298c1534b1325fedf797}
+
+\begin{DoxyCode}
+404                                                                    \{
+405   \hyperlink{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\_FAILURE}() << \textcolor{stringliteral}{"UNEXPECTED failure in the test body.  "}
+406                 << \textcolor{stringliteral}{"We should never get here, as the test fixture c'tor "}
+407                 << \textcolor{stringliteral}{"had a fatal failure."};
+408 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Non\+Fatal\+Failure\+In\+Set\+Up\+Test, Failure\+In\+Set\+Up)}{TEST_F(NonFatalFailureInSetUpTest, FailureInSetUp)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Non\+Fatal\+Failure\+In\+Set\+Up\+Test}}]{, }
+\item[{Failure\+In\+Set\+Up}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_aaa9d6fcc5d9910aedb42ff3db3cc313c}{}\label{gtest__output__test___8cc_aaa9d6fcc5d9910aedb42ff3db3cc313c}
+
+\begin{DoxyCode}
+431                                                    \{
+432   \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"Expected failure #2, in the test function."};
+433 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Fatal\+Failure\+In\+Set\+Up\+Test, Failure\+In\+Set\+Up)}{TEST_F(FatalFailureInSetUpTest, FailureInSetUp)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Fatal\+Failure\+In\+Set\+Up\+Test}}]{, }
+\item[{Failure\+In\+Set\+Up}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a52057afc95d69adbae1fbe0ef92b29d7}{}\label{gtest__output__test___8cc_a52057afc95d69adbae1fbe0ef92b29d7}
+
+\begin{DoxyCode}
+456                                                 \{
+457   \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"UNEXPECTED failure in the test function.  "}
+458          << \textcolor{stringliteral}{"We should never get here, as SetUp() failed."};
+459 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+T\+E\+S\+T\+\_\+\+F\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+in\+\_\+same\+\_\+test\+\_\+case, Defined\+Using\+T\+E\+S\+T\+\_\+\+F)}{TEST_F(TEST_F_before_TEST_in_same_test_case, DefinedUsingTEST_F)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+S\+T\+\_\+\+F\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+in\+\_\+same\+\_\+test\+\_\+case}}]{, }
+\item[{Defined\+Using\+T\+E\+S\+T\+\_\+F}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_ae71a8d4934e768af615b9b09418f15c3}{}\label{gtest__output__test___8cc_ae71a8d4934e768af615b9b09418f15c3}
+
+\begin{DoxyCode}
+577 \{\}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+T\+E\+S\+T\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+\+F\+\_\+in\+\_\+same\+\_\+test\+\_\+case, Defined\+Using\+T\+E\+S\+T\+\_\+\+F\+And\+Should\+Fail)}{TEST_F(TEST_before_TEST_F_in_same_test_case, DefinedUsingTEST_FAndShouldFail)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+E\+S\+T\+\_\+before\+\_\+\+T\+E\+S\+T\+\_\+\+F\+\_\+in\+\_\+same\+\_\+test\+\_\+case}}]{, }
+\item[{Defined\+Using\+T\+E\+S\+T\+\_\+\+F\+And\+Should\+Fail}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_aa0ba9be79b1b05ddadfc8d25c099df31}{}\label{gtest__output__test___8cc_aa0ba9be79b1b05ddadfc8d25c099df31}
+
+\begin{DoxyCode}
+590                                                                               \{
+591 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Expect\+Failure\+Test, Expect\+Fatal\+Failure)}{TEST_F(ExpectFailureTest, ExpectFatalFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Expect\+Failure\+Test}}]{, }
+\item[{Expect\+Fatal\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_ae7459e6b9516821fd0e77eb3aa9b7413}{}\label{gtest__output__test___8cc_ae7459e6b9516821fd0e77eb3aa9b7413}
+
+\begin{DoxyCode}
+892                                               \{
+893   \textcolor{comment}{// Expected fatal failure, but succeeds.}
+894   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+895   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(\hyperlink{gtest_8h_a75adcdf89f69b0b615e395daafc315af}{SUCCEED}(), \textcolor{stringliteral}{"Expected fatal failure."});
+896   \textcolor{comment}{// Expected fatal failure, but got a non-fatal failure.}
+897   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+898   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(AddFailure(NONFATAL\_FAILURE), \textcolor{stringliteral}{"Expected non-fatal "}
+899                        \textcolor{stringliteral}{"failure."});
+900   \textcolor{comment}{// Wrong message.}
+901   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+902   \hyperlink{gtest-spi_8h_a819a3fd7f8b8cf24b6f1b3a26708973d}{EXPECT\_FATAL\_FAILURE}(AddFailure(FATAL\_FAILURE), \textcolor{stringliteral}{"Some other fatal failure "}
+903                        \textcolor{stringliteral}{"expected."});
+904 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Expect\+Failure\+Test, Expect\+Non\+Fatal\+Failure)}{TEST_F(ExpectFailureTest, ExpectNonFatalFailure)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Expect\+Failure\+Test}}]{, }
+\item[{Expect\+Non\+Fatal\+Failure}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_abec150ac715359c89fde1102cfc300d2}{}\label{gtest__output__test___8cc_abec150ac715359c89fde1102cfc300d2}
+
+\begin{DoxyCode}
+906                                                  \{
+907   \textcolor{comment}{// Expected non-fatal failure, but succeeds.}
+908   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+909   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(\hyperlink{gtest_8h_a75adcdf89f69b0b615e395daafc315af}{SUCCEED}(), \textcolor{stringliteral}{"Expected non-fatal failure."});
+910   \textcolor{comment}{// Expected non-fatal failure, but got a fatal failure.}
+911   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+912   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(AddFailure(FATAL\_FAILURE), \textcolor{stringliteral}{"Expected fatal failure."});
+913   \textcolor{comment}{// Wrong message.}
+914   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+915   \hyperlink{gtest-spi_8h_a8376fd6821bd88fd806697355e79e138}{EXPECT\_NONFATAL\_FAILURE}(AddFailure(NONFATAL\_FAILURE), \textcolor{stringliteral}{"Some other non-fatal "}
+916                           \textcolor{stringliteral}{"failure."});
+917 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Expect\+Failure\+Test, Expect\+Fatal\+Failure\+On\+All\+Threads)}{TEST_F(ExpectFailureTest, ExpectFatalFailureOnAllThreads)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Expect\+Failure\+Test}}]{, }
+\item[{Expect\+Fatal\+Failure\+On\+All\+Threads}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a1f29562e9248524dda90aa6d641d77ea}{}\label{gtest__output__test___8cc_a1f29562e9248524dda90aa6d641d77ea}
+
+\begin{DoxyCode}
+963                                                           \{
+964   \textcolor{comment}{// Expected fatal failure, but succeeds.}
+965   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+966   \hyperlink{gtest-spi_8h_ad8aac5bc859b2ddc07583636ae4f45cf}{EXPECT\_FATAL\_FAILURE\_ON\_ALL\_THREADS}(\hyperlink{gtest_8h_a75adcdf89f69b0b615e395daafc315af}{SUCCEED}(), \textcolor{stringliteral}{"Expected fatal
+       failure."});
+967   \textcolor{comment}{// Expected fatal failure, but got a non-fatal failure.}
+968   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+969   \hyperlink{gtest-spi_8h_ad8aac5bc859b2ddc07583636ae4f45cf}{EXPECT\_FATAL\_FAILURE\_ON\_ALL\_THREADS}(AddFailure(NONFATAL\_FAILURE),
+970                                       \textcolor{stringliteral}{"Expected non-fatal failure."});
+971   \textcolor{comment}{// Wrong message.}
+972   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+973   \hyperlink{gtest-spi_8h_ad8aac5bc859b2ddc07583636ae4f45cf}{EXPECT\_FATAL\_FAILURE\_ON\_ALL\_THREADS}(AddFailure(FATAL\_FAILURE),
+974                                       \textcolor{stringliteral}{"Some other fatal failure expected."});
+975 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+Expect\+Failure\+Test, Expect\+Non\+Fatal\+Failure\+On\+All\+Threads)}{TEST_F(ExpectFailureTest, ExpectNonFatalFailureOnAllThreads)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf Expect\+Failure\+Test}}]{, }
+\item[{Expect\+Non\+Fatal\+Failure\+On\+All\+Threads}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a7714d1899711a604704737897595e7c3}{}\label{gtest__output__test___8cc_a7714d1899711a604704737897595e7c3}
+
+\begin{DoxyCode}
+977                                                              \{
+978   \textcolor{comment}{// Expected non-fatal failure, but succeeds.}
+979   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+980   \hyperlink{gtest-spi_8h_a9f4cf1f150fe9facfc4cbf0bae646ee9}{EXPECT\_NONFATAL\_FAILURE\_ON\_ALL\_THREADS}(
+      \hyperlink{gtest_8h_a75adcdf89f69b0b615e395daafc315af}{SUCCEED}(), \textcolor{stringliteral}{"Expected non-fatal "}
+981                                          \textcolor{stringliteral}{"failure."});
+982   \textcolor{comment}{// Expected non-fatal failure, but got a fatal failure.}
+983   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+984   \hyperlink{gtest-spi_8h_a9f4cf1f150fe9facfc4cbf0bae646ee9}{EXPECT\_NONFATAL\_FAILURE\_ON\_ALL\_THREADS}(AddFailure(FATAL\_FAILURE),
+985                                          \textcolor{stringliteral}{"Expected fatal failure."});
+986   \textcolor{comment}{// Wrong message.}
+987   printf(\textcolor{stringliteral}{"(expecting 1 failure)\(\backslash\)n"});
+988   \hyperlink{gtest-spi_8h_a9f4cf1f150fe9facfc4cbf0bae646ee9}{EXPECT\_NONFATAL\_FAILURE\_ON\_ALL\_THREADS}(AddFailure(NONFATAL\_FAILURE)
+      ,
+989                                          \textcolor{stringliteral}{"Some other non-fatal failure."});
+990 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+P@{T\+E\+S\+T\+\_\+P}}
+\index{T\+E\+S\+T\+\_\+P@{T\+E\+S\+T\+\_\+P}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+P(\+Failing\+Param\+Test, Fails)}{TEST_P(FailingParamTest, Fails)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+P (
+\begin{DoxyParamCaption}
+\item[{{\bf Failing\+Param\+Test}}]{, }
+\item[{Fails}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a680b45844b58c5367da52c5383aea03a}{}\label{gtest__output__test___8cc_a680b45844b58c5367da52c5383aea03a}
+
+\begin{DoxyCode}
+95                                 \{
+96   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, GetParam());
+97 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!Test\+Eq1@{Test\+Eq1}}
+\index{Test\+Eq1@{Test\+Eq1}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{Test\+Eq1(int x)}{TestEq1(int x)}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Eq1 (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a8f28d985b030c6dd2714d1e884c62c41}{}\label{gtest__output__test___8cc_a8f28d985b030c6dd2714d1e884c62c41}
+
+\begin{DoxyCode}
+65                     \{
+66   \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(1, x);
+67 \}
+\end{DoxyCode}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!Try\+Test\+Subroutine@{Try\+Test\+Subroutine}}
+\index{Try\+Test\+Subroutine@{Try\+Test\+Subroutine}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{Try\+Test\+Subroutine()}{TryTestSubroutine()}}]{\setlength{\rightskip}{0pt plus 5cm}void Try\+Test\+Subroutine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest__output__test___8cc_a14e796981ca8d3c71dbd2b839c1ce784}{}\label{gtest__output__test___8cc_a14e796981ca8d3c71dbd2b839c1ce784}
+
+\begin{DoxyCode}
+71                          \{
+72   \textcolor{comment}{// Calls a subrountine that yields a fatal failure.}
+73   \hyperlink{gtest__output__test___8cc_a8f28d985b030c6dd2714d1e884c62c41}{TestEq1}(2);
+74 
+75   \textcolor{comment}{// Catches the fatal failure and aborts the test.}
+76   \textcolor{comment}{//}
+77   \textcolor{comment}{// The testing::Test:: prefix is necessary when calling}
+78   \textcolor{comment}{// HasFatalFailure() outside of a TEST, TEST\_F, or test fixture.}
+79   \textcolor{keywordflow}{if} (\hyperlink{classtesting_1_1Test_a5e83604628ef542af888d631566ff60c}{testing::Test::HasFatalFailure}()) \textcolor{keywordflow}{return};
+80 
+81   \textcolor{comment}{// If we get here, something is wrong.}
+82   \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"This should never be reached."};
+83 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!global\+\_\+integer@{global\+\_\+integer}}
+\index{global\+\_\+integer@{global\+\_\+integer}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{global\+\_\+integer}{global_integer}}]{\setlength{\rightskip}{0pt plus 5cm}int global\+\_\+integer = 0}\hypertarget{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}{}\label{gtest__output__test___8cc_a81be7f35ea2573ecc7ca08b26b56bccf}
+\index{gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}!k\+Golden\+String@{k\+Golden\+String}}
+\index{k\+Golden\+String@{k\+Golden\+String}!gtest\+\_\+output\+\_\+test\+\_\+.\+cc@{gtest\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{k\+Golden\+String}{kGoldenString}}]{\setlength{\rightskip}{0pt plus 5cm}const char k\+Golden\+String\mbox{[}$\,$\mbox{]} = \char`\"{}\textbackslash{}\char`\"{}Line\textbackslash{}0 1\textbackslash{}\char`\"{}\textbackslash{}n\+Line 2\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{gtest__output__test___8cc_a6db44d0c97a2b93be43ba6c8104b7511}{}\label{gtest__output__test___8cc_a6db44d0c97a2b93be43ba6c8104b7511}

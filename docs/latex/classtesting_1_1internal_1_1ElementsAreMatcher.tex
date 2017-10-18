@@ -1,0 +1,57 @@
+\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcher}{}\section{testing\+:\+:internal\+:\+:Elements\+Are\+Matcher$<$ Matcher\+Tuple $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1ElementsAreMatcher}\index{testing\+::internal\+::\+Elements\+Are\+Matcher$<$ Matcher\+Tuple $>$@{testing\+::internal\+::\+Elements\+Are\+Matcher$<$ Matcher\+Tuple $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtesting_1_1internal_1_1ElementsAreMatcher_a563d71088c4909ab46987e3cd28f2ad6}{Elements\+Are\+Matcher} (const \hyperlink{structtesting_1_1internal_1_1MatcherTuple}{Matcher\+Tuple} \&args)
+\item 
+{\footnotesize template$<$typename Container $>$ }\\\hyperlink{classtesting_1_1internal_1_1ElementsAreMatcher_ab1a065a1e66605a35035cdfc84220889}{operator Matcher$<$ Container $>$} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher@{testing\+::internal\+::\+Elements\+Are\+Matcher}!Elements\+Are\+Matcher@{Elements\+Are\+Matcher}}
+\index{Elements\+Are\+Matcher@{Elements\+Are\+Matcher}!testing\+::internal\+::\+Elements\+Are\+Matcher@{testing\+::internal\+::\+Elements\+Are\+Matcher}}
+\subsubsection[{\texorpdfstring{Elements\+Are\+Matcher(const Matcher\+Tuple \&args)}{ElementsAreMatcher(const MatcherTuple &args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matcher\+Tuple$>$ {\bf testing\+::internal\+::\+Elements\+Are\+Matcher}$<$ {\bf Matcher\+Tuple} $>$\+::{\bf Elements\+Are\+Matcher} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matcher\+Tuple} \&}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcher_a563d71088c4909ab46987e3cd28f2ad6}{}\label{classtesting_1_1internal_1_1ElementsAreMatcher_a563d71088c4909ab46987e3cd28f2ad6}
+
+\begin{DoxyCode}
+3479 : matchers\_(args) \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Elements\+Are\+Matcher@{testing\+::internal\+::\+Elements\+Are\+Matcher}!operator Matcher$<$ Container $>$@{operator Matcher$<$ Container $>$}}
+\index{operator Matcher$<$ Container $>$@{operator Matcher$<$ Container $>$}!testing\+::internal\+::\+Elements\+Are\+Matcher@{testing\+::internal\+::\+Elements\+Are\+Matcher}}
+\subsubsection[{\texorpdfstring{operator Matcher$<$ Container $>$() const }{operator Matcher< Container >() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Matcher\+Tuple$>$ template$<$typename Container $>$ {\bf testing\+::internal\+::\+Elements\+Are\+Matcher}$<$ {\bf Matcher\+Tuple} $>$\+::operator {\bf Matcher}$<$ Container $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classtesting_1_1internal_1_1ElementsAreMatcher_ab1a065a1e66605a35035cdfc84220889}{}\label{classtesting_1_1internal_1_1ElementsAreMatcher_ab1a065a1e66605a35035cdfc84220889}
+
+\begin{DoxyCode}
+3482                                       \{
+3483     \textcolor{keyword}{typedef} \hyperlink{gtest-internal_8h_a874567b176266188fabfffb8393267ce}{GTEST\_REMOVE\_REFERENCE\_AND\_CONST\_}(Container) RawContainer;
+3484     typedef typename internal::StlContainerView<RawContainer>::\hyperlink{namespaceupload_a4fc56f0dd6613be15c3c4dc3af3619ce}{type} View;
+3485     typedef typename View::value\_type Element;
+3486     typedef ::\hyperlink{namespacestd}{std}::vector<Matcher<\hyperlink{namespaceupload_a985aa9a71de3eb507344df65700c696d}{const} Element&> > MatcherVec;
+3487     MatcherVec matchers;
+3488     matchers.reserve(::\hyperlink{namespacetesting}{testing}::tuple\_size<MatcherTuple>::value);
+3489     \hyperlink{namespacetesting_1_1internal_a07ba091a64aa2ba95e41accc55dc8855}{TransformTupleValues}(CastAndAppendTransform<\hyperlink{namespaceupload_a985aa9a71de3eb507344df65700c696d}{const} Element&>(), matchers\_,
+3490                          ::\hyperlink{namespacestd}{std}::back\_inserter(matchers));
+3491     return \hyperlink{namespacetesting_a37fd8029ac00e60952440a3d9cca8166}{MakeMatcher}(new ElementsAreMatcherImpl<Container>(
+3492                            matchers.begin(), matchers.end()));
+3493   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

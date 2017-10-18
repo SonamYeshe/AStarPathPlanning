@@ -1,0 +1,269 @@
+\hypertarget{namespacecpp_1_1tokenize}{}\section{cpp.\+tokenize Namespace Reference}
+\label{namespacecpp_1_1tokenize}\index{cpp.\+tokenize@{cpp.\+tokenize}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcpp_1_1tokenize_1_1Token}{Token}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacecpp_1_1tokenize_ab78959b4d0a9c3bade98904a23129afc}{Get\+Tokens} (source)
+\item 
+def \hyperlink{namespacecpp_1_1tokenize_ae666c331b4bd7d1f3e8956c78cc6f3a4}{main} (argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacecpp_1_1tokenize_a733f1cf605b1630fb6a0a7f30aaefbec}{V\+A\+L\+I\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+C\+H\+A\+RS} = \hyperlink{vendor_2googletest_2googlemock_2CMakeLists_8txt_aa99cc432a5064db15e7653de9d85d2d2}{set}(\+\_\+letters + \+\_\+letters.\+upper() + \textquotesingle{}\+\_\+0123456789\$\textquotesingle{})
+\item 
+\hyperlink{namespacecpp_1_1tokenize_a8b45b0f0f2b504757e9ede9c342b2c36}{H\+E\+X\+\_\+\+D\+I\+G\+I\+TS} = \hyperlink{vendor_2googletest_2googlemock_2CMakeLists_8txt_aa99cc432a5064db15e7653de9d85d2d2}{set}(\textquotesingle{}0123456789abcdef\+A\+B\+C\+D\+E\+F\textquotesingle{})
+\item 
+\hyperlink{namespacecpp_1_1tokenize_ad8c6dd06d4e6ef2e24e9186acb0aff43}{I\+N\+T\+\_\+\+O\+R\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS} = \hyperlink{vendor_2googletest_2googlemock_2CMakeLists_8txt_aa99cc432a5064db15e7653de9d85d2d2}{set}(\textquotesingle{}01234567890e\+E-\/+\textquotesingle{})
+\item 
+string \hyperlink{namespacecpp_1_1tokenize_a0dfd65c08216eed29f74a64b603ac540}{U\+N\+K\+N\+O\+WN} = \textquotesingle{}U\+N\+K\+N\+O\+WN\textquotesingle{}
+\item 
+string \hyperlink{namespacecpp_1_1tokenize_a1655e62b60899059935930c81ba25c01}{S\+Y\+N\+T\+AX} = \textquotesingle{}S\+Y\+N\+T\+AX\textquotesingle{}
+\item 
+string \hyperlink{namespacecpp_1_1tokenize_a5e3bf1014a301906871113a989188a78}{C\+O\+N\+S\+T\+A\+NT} = \textquotesingle{}C\+O\+N\+S\+T\+A\+NT\textquotesingle{}
+\item 
+string \hyperlink{namespacecpp_1_1tokenize_aa14251ded979d72f93d7b234d8cfb584}{N\+A\+ME} = \textquotesingle{}N\+A\+ME\textquotesingle{}
+\item 
+string \hyperlink{namespacecpp_1_1tokenize_a3c8918ee13b9acf5ea4e70b484d67268}{P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+OR} = \textquotesingle{}P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+OR\textquotesingle{}
+\item 
+\hyperlink{namespacecpp_1_1tokenize_a8dd117207e391864f7d9cb656e826a9e}{W\+H\+E\+N\+C\+E\+\_\+\+S\+T\+R\+E\+AM}
+\item 
+\hyperlink{namespacecpp_1_1tokenize_ad02466a473c5e9c2ac256e18209f0967}{W\+H\+E\+N\+C\+E\+\_\+\+Q\+U\+E\+UE}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!Get\+Tokens@{Get\+Tokens}}
+\index{Get\+Tokens@{Get\+Tokens}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{Get\+Tokens(source)}{GetTokens(source)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+tokenize.\+Get\+Tokens (
+\begin{DoxyParamCaption}
+\item[{}]{source}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecpp_1_1tokenize_ab78959b4d0a9c3bade98904a23129afc}{}\label{namespacecpp_1_1tokenize_ab78959b4d0a9c3bade98904a23129afc}
+\begin{DoxyVerb}Returns a sequence of Tokens.
+
+Args:
+  source: string of C++ source code.
+
+Yields:
+  Token that represents the next token in the source.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+119 \textcolor{keyword}{def }\hyperlink{namespacecpp_1_1tokenize_ab78959b4d0a9c3bade98904a23129afc}{GetTokens}(source):
+120     \textcolor{stringliteral}{"""Returns a sequence of Tokens.}
+121 \textcolor{stringliteral}{}
+122 \textcolor{stringliteral}{    Args:}
+123 \textcolor{stringliteral}{      source: string of C++ source code.}
+124 \textcolor{stringliteral}{}
+125 \textcolor{stringliteral}{    Yields:}
+126 \textcolor{stringliteral}{      Token that represents the next token in the source.}
+127 \textcolor{stringliteral}{    """}
+128     \textcolor{comment}{# Cache various valid character sets for speed.}
+129     valid\_identifier\_chars = VALID\_IDENTIFIER\_CHARS
+130     hex\_digits = HEX\_DIGITS
+131     int\_or\_float\_digits = INT\_OR\_FLOAT\_DIGITS
+132     int\_or\_float\_digits2 = int\_or\_float\_digits | \hyperlink{namespacecpp_1_1gmock__class_a2157e96eee0b4bf9ca6d195ab76f59c2}{set}(\textcolor{stringliteral}{'.'})
+133 
+134     \textcolor{comment}{# Only ignore errors while in a #if 0 block.}
+135     ignore\_errors = \textcolor{keyword}{False}
+136     count\_ifs = 0
+137 
+138     i = 0
+139     end = len(source)
+140     \textcolor{keywordflow}{while} i < end:
+141         \textcolor{comment}{# Skip whitespace.}
+142         \textcolor{keywordflow}{while} i < end \textcolor{keywordflow}{and} source[i].isspace():
+143             i += 1
+144         \textcolor{keywordflow}{if} i >= end:
+145             \textcolor{keywordflow}{return}
+146 
+147         token\_type = UNKNOWN
+148         start = i
+149         c = source[i]
+150         \textcolor{keywordflow}{if} c.isalpha() \textcolor{keywordflow}{or} c == \textcolor{stringliteral}{'\_'}:              \textcolor{comment}{# Find a string token.}
+151             token\_type = NAME
+152             \textcolor{keywordflow}{while} source[i] \textcolor{keywordflow}{in} valid\_identifier\_chars:
+153                 i += 1
+154             \textcolor{comment}{# String and character constants can look like a name if}
+155             \textcolor{comment}{# they are something like L"".}
+156             \textcolor{keywordflow}{if} (source[i] == \textcolor{stringliteral}{"'"} \textcolor{keywordflow}{and} (i - start) == 1 \textcolor{keywordflow}{and}
+157                 source[start:i] \textcolor{keywordflow}{in} \textcolor{stringliteral}{'uUL'}):
+158                 \textcolor{comment}{# u, U, and L are valid C++0x character preffixes.}
+159                 token\_type = CONSTANT
+160                 i = \_GetChar(source, start, i)
+161             \textcolor{keywordflow}{elif} source[i] == \textcolor{stringliteral}{"'"} \textcolor{keywordflow}{and} source[start:i] \textcolor{keywordflow}{in} \_STR\_PREFIXES:
+162                 token\_type = CONSTANT
+163                 i = \_GetString(source, start, i)
+164         \textcolor{keywordflow}{elif} c == \textcolor{stringliteral}{'/'} \textcolor{keywordflow}{and} source[i+1] == \textcolor{stringliteral}{'/'}:    \textcolor{comment}{# Find // comments.}
+165             i = source.find(\textcolor{stringliteral}{'\(\backslash\)n'}, i)
+166             \textcolor{keywordflow}{if} i == -1:  \textcolor{comment}{# Handle EOF.}
+167                 i = end
+168             \textcolor{keywordflow}{continue}
+169         \textcolor{keywordflow}{elif} c == \textcolor{stringliteral}{'/'} \textcolor{keywordflow}{and} source[i+1] == \textcolor{stringliteral}{'*'}:    \textcolor{comment}{# Find /* comments. */}
+170             i = source.find(\textcolor{stringliteral}{'*/'}, i) + 2
+171             \textcolor{keywordflow}{continue}
+172         \textcolor{keywordflow}{elif} c \textcolor{keywordflow}{in} \textcolor{stringliteral}{':+-<>&|*='}:                   \textcolor{comment}{# : or :: (plus other chars).}
+173             token\_type = SYNTAX
+174             i += 1
+175             new\_ch = source[i]
+176             \textcolor{keywordflow}{if} new\_ch == c \textcolor{keywordflow}{and} c != \textcolor{stringliteral}{'>'}:         \textcolor{comment}{# Treat ">>" as two tokens.}
+177                 i += 1
+178             \textcolor{keywordflow}{elif} c == \textcolor{stringliteral}{'-'} \textcolor{keywordflow}{and} new\_ch == \textcolor{stringliteral}{'>'}:
+179                 i += 1
+180             \textcolor{keywordflow}{elif} new\_ch == \textcolor{stringliteral}{'='}:
+181                 i += 1
+182         \textcolor{keywordflow}{elif} c \textcolor{keywordflow}{in} \textcolor{stringliteral}{'()[]\{\}~!?^%;/.,'}:             \textcolor{comment}{# Handle single char tokens.}
+183             token\_type = SYNTAX
+184             i += 1
+185             \textcolor{keywordflow}{if} c == \textcolor{stringliteral}{'.'} \textcolor{keywordflow}{and} source[i].isdigit():
+186                 token\_type = CONSTANT
+187                 i += 1
+188                 \textcolor{keywordflow}{while} source[i] \textcolor{keywordflow}{in} int\_or\_float\_digits:
+189                     i += 1
+190                 \textcolor{comment}{# Handle float suffixes.}
+191                 \textcolor{keywordflow}{for} suffix \textcolor{keywordflow}{in} (\textcolor{stringliteral}{'l'}, \textcolor{stringliteral}{'f'}):
+192                     \textcolor{keywordflow}{if} suffix == source[i:i+1].lower():
+193                         i += 1
+194                         \textcolor{keywordflow}{break}
+195         \textcolor{keywordflow}{elif} c.isdigit():                        \textcolor{comment}{# Find integer.}
+196             token\_type = CONSTANT
+197             \textcolor{keywordflow}{if} c == \textcolor{stringliteral}{'0'} \textcolor{keywordflow}{and} source[i+1] \textcolor{keywordflow}{in} \textcolor{stringliteral}{'xX'}:
+198                 \textcolor{comment}{# Handle hex digits.}
+199                 i += 2
+200                 \textcolor{keywordflow}{while} source[i] \textcolor{keywordflow}{in} hex\_digits:
+201                     i += 1
+202             \textcolor{keywordflow}{else}:
+203                 \textcolor{keywordflow}{while} source[i] \textcolor{keywordflow}{in} int\_or\_float\_digits2:
+204                     i += 1
+205             \textcolor{comment}{# Handle integer (and float) suffixes.}
+206             \textcolor{keywordflow}{for} suffix \textcolor{keywordflow}{in} (\textcolor{stringliteral}{'ull'}, \textcolor{stringliteral}{'ll'}, \textcolor{stringliteral}{'ul'}, \textcolor{stringliteral}{'l'}, \textcolor{stringliteral}{'f'}, \textcolor{stringliteral}{'u'):}
+207 \textcolor{stringliteral}{                size = len(suffix)}
+208 \textcolor{stringliteral}{                }\textcolor{keywordflow}{if} suffix == source[i:i+size].lower():
+209                     i += size
+210                     \textcolor{keywordflow}{break}
+211         \textcolor{keywordflow}{elif} c == \textcolor{stringliteral}{'"'}:                           \textcolor{comment}{# Find string.}
+212             token\_type = CONSTANT
+213             i = \_GetString(source, start, i)
+214         \textcolor{keywordflow}{elif} c == \textcolor{stringliteral}{"'"}:                           \textcolor{comment}{# Find char.}
+215             token\_type = CONSTANT
+216             i = \_GetChar(source, start, i)
+217         \textcolor{keywordflow}{elif} c == \textcolor{stringliteral}{'#'}:                           \textcolor{comment}{# Find pre-processor command.}
+218             token\_type = PREPROCESSOR
+219             got\_if = source[i:i+3] == \textcolor{stringliteral}{'#if'} \textcolor{keywordflow}{and} source[i+3:i+4].isspace()
+220             \textcolor{keywordflow}{if} got\_if:
+221                 count\_ifs += 1
+222             \textcolor{keywordflow}{elif} source[i:i+6] == \textcolor{stringliteral}{'#endif'}:
+223                 count\_ifs -= 1
+224                 \textcolor{keywordflow}{if} count\_ifs == 0:
+225                     ignore\_errors = \textcolor{keyword}{False}
+226 
+227             \textcolor{comment}{# TODO(nnorwitz): handle preprocessor statements (\(\backslash\) continuations).}
+228             \textcolor{keywordflow}{while} 1:
+229                 i1 = source.find(\textcolor{stringliteral}{'\(\backslash\)n'}, i)
+230                 i2 = source.find(\textcolor{stringliteral}{'//'}, i)
+231                 i3 = source.find(\textcolor{stringliteral}{'/*'}, i)
+232                 i4 = source.find(\textcolor{stringliteral}{'"'}, i)
+233                 \textcolor{comment}{# NOTE(nnorwitz): doesn't handle comments in #define macros.}
+234                 \textcolor{comment}{# Get the first important symbol (newline, comment, EOF/end).}
+235                 i = min([x \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} (i1, i2, i3, i4, end) \textcolor{keywordflow}{if} x != -1])
+236 
+237                 \textcolor{comment}{# Handle #include "dir//foo.h" properly.}
+238                 \textcolor{keywordflow}{if} source[i] == \textcolor{stringliteral}{'"'}:
+239                     i = source.find(\textcolor{stringliteral}{'"'}, i+1) + 1
+240                     \textcolor{keyword}{assert} i > 0
+241                     \textcolor{keywordflow}{continue}
+242                 \textcolor{comment}{# Keep going if end of the line and the line ends with \(\backslash\).}
+243                 \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} (i == i1 \textcolor{keywordflow}{and} source[i-1] == \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'}):
+244                     \textcolor{keywordflow}{if} got\_if:
+245                         condition = source[start+4:i].lstrip()
+246                         \textcolor{keywordflow}{if} (condition.startswith(\textcolor{stringliteral}{'0'}) \textcolor{keywordflow}{or}
+247                             condition.startswith(\textcolor{stringliteral}{'(0)'})):
+248                             ignore\_errors = \textcolor{keyword}{True}
+249                     \textcolor{keywordflow}{break}
+250                 i += 1
+251         \textcolor{keywordflow}{elif} c == \textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'}:                          \textcolor{comment}{# Handle \(\backslash\) in code.}
+252             \textcolor{comment}{# This is different from the pre-processor \(\backslash\) handling.}
+253             i += 1
+254             \textcolor{keywordflow}{continue}
+255         \textcolor{keywordflow}{elif} ignore\_errors:
+256             \textcolor{comment}{# The tokenizer seems to be in pretty good shape.  This}
+257             \textcolor{comment}{# raise is conditionally disabled so that bogus code}
+258             \textcolor{comment}{# in an #if 0 block can be handled.  Since we will ignore}
+259             \textcolor{comment}{# it anyways, this is probably fine.  So disable the}
+260             \textcolor{comment}{# exception and  return the bogus char.}
+261             i += 1
+262         \textcolor{keywordflow}{else}:
+263             sys.stderr.write(\textcolor{stringliteral}{'Got invalid token in %s @ %d token:%s: %r\(\backslash\)n'} %
+264                              (\textcolor{stringliteral}{'?'}, i, c, source[i-10:i+10]))
+265             \textcolor{keywordflow}{raise} RuntimeError(\textcolor{stringliteral}{'unexpected token'})
+266 
+267         \textcolor{keywordflow}{if} i <= 0:
+268             print(\textcolor{stringliteral}{'Invalid index, exiting now.'})
+269             \textcolor{keywordflow}{return}
+270         \textcolor{keywordflow}{yield} Token(token\_type, source[start:i], start, i)
+271 
+272 
+\end{DoxyCode}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!main@{main}}
+\index{main@{main}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{main(argv)}{main(argv)}}]{\setlength{\rightskip}{0pt plus 5cm}def cpp.\+tokenize.\+main (
+\begin{DoxyParamCaption}
+\item[{}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{namespacecpp_1_1tokenize_ae666c331b4bd7d1f3e8956c78cc6f3a4}{}\label{namespacecpp_1_1tokenize_ae666c331b4bd7d1f3e8956c78cc6f3a4}
+\begin{DoxyVerb}Driver mostly for testing purposes.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+274     \textcolor{keyword}{def }\hyperlink{namespacecpp_1_1tokenize_ae666c331b4bd7d1f3e8956c78cc6f3a4}{main}(argv):
+275         \textcolor{stringliteral}{"""Driver mostly for testing purposes."""}
+276         \textcolor{keywordflow}{for} filename \textcolor{keywordflow}{in} argv[1:]:
+277             source = utils.ReadFile(filename)
+278             \textcolor{keywordflow}{if} source \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+279                 \textcolor{keywordflow}{continue}
+280 
+281             \textcolor{keywordflow}{for} token \textcolor{keywordflow}{in} \hyperlink{namespacecpp_1_1tokenize_ab78959b4d0a9c3bade98904a23129afc}{GetTokens}(source):
+282                 print(\textcolor{stringliteral}{'%-12s: %s'} % (token.token\_type, token.name))
+283                 \textcolor{comment}{# print('\(\backslash\)r%6.2f%%' % (100.0 * index / token.end),)}
+284             sys.stdout.write(\textcolor{stringliteral}{'\(\backslash\)n'})
+285 
+286 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!C\+O\+N\+S\+T\+A\+NT@{C\+O\+N\+S\+T\+A\+NT}}
+\index{C\+O\+N\+S\+T\+A\+NT@{C\+O\+N\+S\+T\+A\+NT}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+S\+T\+A\+NT}{CONSTANT}}]{\setlength{\rightskip}{0pt plus 5cm}string cpp.\+tokenize.\+C\+O\+N\+S\+T\+A\+NT = \textquotesingle{}C\+O\+N\+S\+T\+A\+NT\textquotesingle{}}\hypertarget{namespacecpp_1_1tokenize_a5e3bf1014a301906871113a989188a78}{}\label{namespacecpp_1_1tokenize_a5e3bf1014a301906871113a989188a78}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!H\+E\+X\+\_\+\+D\+I\+G\+I\+TS@{H\+E\+X\+\_\+\+D\+I\+G\+I\+TS}}
+\index{H\+E\+X\+\_\+\+D\+I\+G\+I\+TS@{H\+E\+X\+\_\+\+D\+I\+G\+I\+TS}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{H\+E\+X\+\_\+\+D\+I\+G\+I\+TS}{HEX_DIGITS}}]{\setlength{\rightskip}{0pt plus 5cm}cpp.\+tokenize.\+H\+E\+X\+\_\+\+D\+I\+G\+I\+TS = {\bf set}(\textquotesingle{}0123456789abcdef\+A\+B\+C\+D\+E\+F\textquotesingle{})}\hypertarget{namespacecpp_1_1tokenize_a8b45b0f0f2b504757e9ede9c342b2c36}{}\label{namespacecpp_1_1tokenize_a8b45b0f0f2b504757e9ede9c342b2c36}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!I\+N\+T\+\_\+\+O\+R\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS@{I\+N\+T\+\_\+\+O\+R\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS}}
+\index{I\+N\+T\+\_\+\+O\+R\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS@{I\+N\+T\+\_\+\+O\+R\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{I\+N\+T\+\_\+\+O\+R\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS}{INT_OR_FLOAT_DIGITS}}]{\setlength{\rightskip}{0pt plus 5cm}cpp.\+tokenize.\+I\+N\+T\+\_\+\+O\+R\+\_\+\+F\+L\+O\+A\+T\+\_\+\+D\+I\+G\+I\+TS = {\bf set}(\textquotesingle{}01234567890e\+E-\/+\textquotesingle{})}\hypertarget{namespacecpp_1_1tokenize_ad8c6dd06d4e6ef2e24e9186acb0aff43}{}\label{namespacecpp_1_1tokenize_ad8c6dd06d4e6ef2e24e9186acb0aff43}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!N\+A\+ME@{N\+A\+ME}}
+\index{N\+A\+ME@{N\+A\+ME}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{N\+A\+ME}{NAME}}]{\setlength{\rightskip}{0pt plus 5cm}string cpp.\+tokenize.\+N\+A\+ME = \textquotesingle{}N\+A\+ME\textquotesingle{}}\hypertarget{namespacecpp_1_1tokenize_aa14251ded979d72f93d7b234d8cfb584}{}\label{namespacecpp_1_1tokenize_aa14251ded979d72f93d7b234d8cfb584}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+OR@{P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+OR}}
+\index{P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+OR@{P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+OR}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+OR}{PREPROCESSOR}}]{\setlength{\rightskip}{0pt plus 5cm}string cpp.\+tokenize.\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+OR = \textquotesingle{}P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+OR\textquotesingle{}}\hypertarget{namespacecpp_1_1tokenize_a3c8918ee13b9acf5ea4e70b484d67268}{}\label{namespacecpp_1_1tokenize_a3c8918ee13b9acf5ea4e70b484d67268}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!S\+Y\+N\+T\+AX@{S\+Y\+N\+T\+AX}}
+\index{S\+Y\+N\+T\+AX@{S\+Y\+N\+T\+AX}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{S\+Y\+N\+T\+AX}{SYNTAX}}]{\setlength{\rightskip}{0pt plus 5cm}string cpp.\+tokenize.\+S\+Y\+N\+T\+AX = \textquotesingle{}S\+Y\+N\+T\+AX\textquotesingle{}}\hypertarget{namespacecpp_1_1tokenize_a1655e62b60899059935930c81ba25c01}{}\label{namespacecpp_1_1tokenize_a1655e62b60899059935930c81ba25c01}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}}
+\index{U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{U\+N\+K\+N\+O\+WN}{UNKNOWN}}]{\setlength{\rightskip}{0pt plus 5cm}string cpp.\+tokenize.\+U\+N\+K\+N\+O\+WN = \textquotesingle{}U\+N\+K\+N\+O\+WN\textquotesingle{}}\hypertarget{namespacecpp_1_1tokenize_a0dfd65c08216eed29f74a64b603ac540}{}\label{namespacecpp_1_1tokenize_a0dfd65c08216eed29f74a64b603ac540}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!V\+A\+L\+I\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+C\+H\+A\+RS@{V\+A\+L\+I\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+C\+H\+A\+RS}}
+\index{V\+A\+L\+I\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+C\+H\+A\+RS@{V\+A\+L\+I\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+C\+H\+A\+RS}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{V\+A\+L\+I\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+C\+H\+A\+RS}{VALID_IDENTIFIER_CHARS}}]{\setlength{\rightskip}{0pt plus 5cm}cpp.\+tokenize.\+V\+A\+L\+I\+D\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+E\+R\+\_\+\+C\+H\+A\+RS = {\bf set}(\+\_\+letters + \+\_\+letters.\+upper() + \textquotesingle{}\+\_\+0123456789\$\textquotesingle{})}\hypertarget{namespacecpp_1_1tokenize_a733f1cf605b1630fb6a0a7f30aaefbec}{}\label{namespacecpp_1_1tokenize_a733f1cf605b1630fb6a0a7f30aaefbec}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!W\+H\+E\+N\+C\+E\+\_\+\+Q\+U\+E\+UE@{W\+H\+E\+N\+C\+E\+\_\+\+Q\+U\+E\+UE}}
+\index{W\+H\+E\+N\+C\+E\+\_\+\+Q\+U\+E\+UE@{W\+H\+E\+N\+C\+E\+\_\+\+Q\+U\+E\+UE}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{W\+H\+E\+N\+C\+E\+\_\+\+Q\+U\+E\+UE}{WHENCE_QUEUE}}]{\setlength{\rightskip}{0pt plus 5cm}cpp.\+tokenize.\+W\+H\+E\+N\+C\+E\+\_\+\+Q\+U\+E\+UE}\hypertarget{namespacecpp_1_1tokenize_ad02466a473c5e9c2ac256e18209f0967}{}\label{namespacecpp_1_1tokenize_ad02466a473c5e9c2ac256e18209f0967}
+\index{cpp\+::tokenize@{cpp\+::tokenize}!W\+H\+E\+N\+C\+E\+\_\+\+S\+T\+R\+E\+AM@{W\+H\+E\+N\+C\+E\+\_\+\+S\+T\+R\+E\+AM}}
+\index{W\+H\+E\+N\+C\+E\+\_\+\+S\+T\+R\+E\+AM@{W\+H\+E\+N\+C\+E\+\_\+\+S\+T\+R\+E\+AM}!cpp\+::tokenize@{cpp\+::tokenize}}
+\subsubsection[{\texorpdfstring{W\+H\+E\+N\+C\+E\+\_\+\+S\+T\+R\+E\+AM}{WHENCE_STREAM}}]{\setlength{\rightskip}{0pt plus 5cm}cpp.\+tokenize.\+W\+H\+E\+N\+C\+E\+\_\+\+S\+T\+R\+E\+AM}\hypertarget{namespacecpp_1_1tokenize_a8dd117207e391864f7d9cb656e826a9e}{}\label{namespacecpp_1_1tokenize_a8dd117207e391864f7d9cb656e826a9e}

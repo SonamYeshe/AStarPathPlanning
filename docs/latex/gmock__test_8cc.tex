@@ -1,0 +1,341 @@
+\hypertarget{gmock__test_8cc}{}\section{vendor/googletest/googlemock/test/gmock\+\_\+test.cc File Reference}
+\label{gmock__test_8cc}\index{vendor/googletest/googlemock/test/gmock\+\_\+test.\+cc@{vendor/googletest/googlemock/test/gmock\+\_\+test.\+cc}}
+{\ttfamily \#include \char`\"{}gmock/gmock.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for gmock\+\_\+test.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gmock__test_8cc__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{gmock__test_8cc__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Char , int M, int N$>$ }\\void \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{Test\+Init\+Google\+Mock} (const Char $\ast$(\&argv)\mbox{[}M\mbox{]}, const Char $\ast$(\&new\+\_\+argv)\mbox{[}N\mbox{]}, const \+::std\+::string \&expected\+\_\+gmock\+\_\+verbose)
+\item 
+\hyperlink{gmock__test_8cc_a7c86c6c98b72e903135c1b01370a13f3}{T\+E\+ST} (Init\+Google\+Mock\+Test, Parses\+Invalid\+Command\+Line)
+\item 
+\hyperlink{gmock__test_8cc_a29b51be89eb52fa64713438ecf4ab924}{T\+E\+ST} (Init\+Google\+Mock\+Test, Parses\+Empty\+Command\+Line)
+\item 
+\hyperlink{gmock__test_8cc_ae24e1f90eac538406a16306612d7c380}{T\+E\+ST} (Init\+Google\+Mock\+Test, Parses\+Single\+Flag)
+\item 
+\hyperlink{gmock__test_8cc_ada1ddcc67dc056492a76fa398429038f}{T\+E\+ST} (Init\+Google\+Mock\+Test, Parses\+Unrecognized\+Flag)
+\item 
+\hyperlink{gmock__test_8cc_aea344ddf9b83f7912dde4f8e7adbd4e2}{T\+E\+ST} (Init\+Google\+Mock\+Test, Parses\+Google\+Mock\+Flag\+And\+Unrecognized\+Flag)
+\item 
+\hyperlink{gmock__test_8cc_ad66fde04be818693ebdcdcfc9943d57f}{T\+E\+ST} (Wide\+Init\+Google\+Mock\+Test, Parses\+Invalid\+Command\+Line)
+\item 
+\hyperlink{gmock__test_8cc_ad08ca27203202ca15cdf8eaaa7003ba7}{T\+E\+ST} (Wide\+Init\+Google\+Mock\+Test, Parses\+Empty\+Command\+Line)
+\item 
+\hyperlink{gmock__test_8cc_ab4288bcdb1b8464596f24c7384c72eb4}{T\+E\+ST} (Wide\+Init\+Google\+Mock\+Test, Parses\+Single\+Flag)
+\item 
+\hyperlink{gmock__test_8cc_a29f97c351b2c31a05b34d7c63bb06392}{T\+E\+ST} (Wide\+Init\+Google\+Mock\+Test, Parses\+Unrecognized\+Flag)
+\item 
+\hyperlink{gmock__test_8cc_a6d85c181697be8603091b049564cf5c6}{T\+E\+ST} (Wide\+Init\+Google\+Mock\+Test, Parses\+Google\+Mock\+Flag\+And\+Unrecognized\+Flag)
+\item 
+\hyperlink{gmock__test_8cc_a737c00dcd21d5b1ef3d9299cab7a51d3}{T\+E\+ST} (Flag\+Test, Is\+Accessible\+In\+Code)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Init\+Google\+Mock\+Test, Parses\+Invalid\+Command\+Line)}{TEST(InitGoogleMockTest, ParsesInvalidCommandLine)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Invalid\+Command\+Line}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_a7c86c6c98b72e903135c1b01370a13f3}{}\label{gmock__test_8cc_a7c86c6c98b72e903135c1b01370a13f3}
+
+\begin{DoxyCode}
+65                                                    \{
+66   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* argv[] = \{
+67     NULL
+68   \};
+69 
+70   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* new\_argv[] = \{
+71     NULL
+72   \};
+73 
+74   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{GMOCK\_FLAG}(verbose));
+75 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Init\+Google\+Mock\+Test, Parses\+Empty\+Command\+Line)}{TEST(InitGoogleMockTest, ParsesEmptyCommandLine)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Empty\+Command\+Line}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_a29b51be89eb52fa64713438ecf4ab924}{}\label{gmock__test_8cc_a29b51be89eb52fa64713438ecf4ab924}
+
+\begin{DoxyCode}
+77                                                  \{
+78   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* argv[] = \{
+79     \textcolor{stringliteral}{"foo.exe"},
+80     NULL
+81   \};
+82 
+83   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* new\_argv[] = \{
+84     \textcolor{stringliteral}{"foo.exe"},
+85     NULL
+86   \};
+87 
+88   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{GMOCK\_FLAG}(verbose));
+89 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Init\+Google\+Mock\+Test, Parses\+Single\+Flag)}{TEST(InitGoogleMockTest, ParsesSingleFlag)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Single\+Flag}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_ae24e1f90eac538406a16306612d7c380}{}\label{gmock__test_8cc_ae24e1f90eac538406a16306612d7c380}
+
+\begin{DoxyCode}
+91                                            \{
+92   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* argv[] = \{
+93     \textcolor{stringliteral}{"foo.exe"},
+94     \textcolor{stringliteral}{"--gmock\_verbose=info"},
+95     NULL
+96   \};
+97 
+98   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* new\_argv[] = \{
+99     \textcolor{stringliteral}{"foo.exe"},
+100     NULL
+101   \};
+102 
+103   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \textcolor{stringliteral}{"info"});
+104 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Init\+Google\+Mock\+Test, Parses\+Unrecognized\+Flag)}{TEST(InitGoogleMockTest, ParsesUnrecognizedFlag)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Unrecognized\+Flag}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_ada1ddcc67dc056492a76fa398429038f}{}\label{gmock__test_8cc_ada1ddcc67dc056492a76fa398429038f}
+
+\begin{DoxyCode}
+106                                                  \{
+107   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* argv[] = \{
+108     \textcolor{stringliteral}{"foo.exe"},
+109     \textcolor{stringliteral}{"--non\_gmock\_flag=blah"},
+110     NULL
+111   \};
+112 
+113   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* new\_argv[] = \{
+114     \textcolor{stringliteral}{"foo.exe"},
+115     \textcolor{stringliteral}{"--non\_gmock\_flag=blah"},
+116     NULL
+117   \};
+118 
+119   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{GMOCK\_FLAG}(verbose));
+120 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Init\+Google\+Mock\+Test, Parses\+Google\+Mock\+Flag\+And\+Unrecognized\+Flag)}{TEST(InitGoogleMockTest, ParsesGoogleMockFlagAndUnrecognizedFlag)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Google\+Mock\+Flag\+And\+Unrecognized\+Flag}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_aea344ddf9b83f7912dde4f8e7adbd4e2}{}\label{gmock__test_8cc_aea344ddf9b83f7912dde4f8e7adbd4e2}
+
+\begin{DoxyCode}
+122                                                                   \{
+123   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* argv[] = \{
+124     \textcolor{stringliteral}{"foo.exe"},
+125     \textcolor{stringliteral}{"--non\_gmock\_flag=blah"},
+126     \textcolor{stringliteral}{"--gmock\_verbose=error"},
+127     NULL
+128   \};
+129 
+130   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* new\_argv[] = \{
+131     \textcolor{stringliteral}{"foo.exe"},
+132     \textcolor{stringliteral}{"--non\_gmock\_flag=blah"},
+133     NULL
+134   \};
+135 
+136   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \textcolor{stringliteral}{"error"});
+137 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Wide\+Init\+Google\+Mock\+Test, Parses\+Invalid\+Command\+Line)}{TEST(WideInitGoogleMockTest, ParsesInvalidCommandLine)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Wide\+Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Invalid\+Command\+Line}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_ad66fde04be818693ebdcdcfc9943d57f}{}\label{gmock__test_8cc_ad66fde04be818693ebdcdcfc9943d57f}
+
+\begin{DoxyCode}
+139                                                        \{
+140   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* argv[] = \{
+141     NULL
+142   \};
+143 
+144   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* new\_argv[] = \{
+145     NULL
+146   \};
+147 
+148   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{GMOCK\_FLAG}(verbose));
+149 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Wide\+Init\+Google\+Mock\+Test, Parses\+Empty\+Command\+Line)}{TEST(WideInitGoogleMockTest, ParsesEmptyCommandLine)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Wide\+Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Empty\+Command\+Line}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_ad08ca27203202ca15cdf8eaaa7003ba7}{}\label{gmock__test_8cc_ad08ca27203202ca15cdf8eaaa7003ba7}
+
+\begin{DoxyCode}
+151                                                      \{
+152   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* argv[] = \{
+153     L\textcolor{stringliteral}{"foo.exe"},
+154     NULL
+155   \};
+156 
+157   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* new\_argv[] = \{
+158     L\textcolor{stringliteral}{"foo.exe"},
+159     NULL
+160   \};
+161 
+162   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{GMOCK\_FLAG}(verbose));
+163 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Wide\+Init\+Google\+Mock\+Test, Parses\+Single\+Flag)}{TEST(WideInitGoogleMockTest, ParsesSingleFlag)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Wide\+Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Single\+Flag}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_ab4288bcdb1b8464596f24c7384c72eb4}{}\label{gmock__test_8cc_ab4288bcdb1b8464596f24c7384c72eb4}
+
+\begin{DoxyCode}
+165                                                \{
+166   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* argv[] = \{
+167     L\textcolor{stringliteral}{"foo.exe"},
+168     L\textcolor{stringliteral}{"--gmock\_verbose=info"},
+169     NULL
+170   \};
+171 
+172   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* new\_argv[] = \{
+173     L\textcolor{stringliteral}{"foo.exe"},
+174     NULL
+175   \};
+176 
+177   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \textcolor{stringliteral}{"info"});
+178 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Wide\+Init\+Google\+Mock\+Test, Parses\+Unrecognized\+Flag)}{TEST(WideInitGoogleMockTest, ParsesUnrecognizedFlag)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Wide\+Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Unrecognized\+Flag}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_a29f97c351b2c31a05b34d7c63bb06392}{}\label{gmock__test_8cc_a29f97c351b2c31a05b34d7c63bb06392}
+
+\begin{DoxyCode}
+180                                                      \{
+181   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* argv[] = \{
+182     L\textcolor{stringliteral}{"foo.exe"},
+183     L\textcolor{stringliteral}{"--non\_gmock\_flag=blah"},
+184     NULL
+185   \};
+186 
+187   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* new\_argv[] = \{
+188     L\textcolor{stringliteral}{"foo.exe"},
+189     L\textcolor{stringliteral}{"--non\_gmock\_flag=blah"},
+190     NULL
+191   \};
+192 
+193   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{GMOCK\_FLAG}(verbose));
+194 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Wide\+Init\+Google\+Mock\+Test, Parses\+Google\+Mock\+Flag\+And\+Unrecognized\+Flag)}{TEST(WideInitGoogleMockTest, ParsesGoogleMockFlagAndUnrecognizedFlag)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Wide\+Init\+Google\+Mock\+Test}]{, }
+\item[{Parses\+Google\+Mock\+Flag\+And\+Unrecognized\+Flag}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_a6d85c181697be8603091b049564cf5c6}{}\label{gmock__test_8cc_a6d85c181697be8603091b049564cf5c6}
+
+\begin{DoxyCode}
+196                                                                       \{
+197   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* argv[] = \{
+198     L\textcolor{stringliteral}{"foo.exe"},
+199     L\textcolor{stringliteral}{"--non\_gmock\_flag=blah"},
+200     L\textcolor{stringliteral}{"--gmock\_verbose=error"},
+201     NULL
+202   \};
+203 
+204   \textcolor{keyword}{const} \textcolor{keywordtype}{wchar\_t}* new\_argv[] = \{
+205     L\textcolor{stringliteral}{"foo.exe"},
+206     L\textcolor{stringliteral}{"--non\_gmock\_flag=blah"},
+207     NULL
+208   \};
+209 
+210   \hyperlink{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{TestInitGoogleMock}(argv, new\_argv, \textcolor{stringliteral}{"error"});
+211 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Flag\+Test, Is\+Accessible\+In\+Code)}{TEST(FlagTest, IsAccessibleInCode)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Flag\+Test}]{, }
+\item[{Is\+Accessible\+In\+Code}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_a737c00dcd21d5b1ef3d9299cab7a51d3}{}\label{gmock__test_8cc_a737c00dcd21d5b1ef3d9299cab7a51d3}
+
+\begin{DoxyCode}
+216                                    \{
+217   \textcolor{keywordtype}{bool} \hyperlink{lib_8hpp_a100d09f9a57d44745299c28c63c98745}{dummy} = \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(catch\_leaked\_mocks) &&
+218       \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(verbose) == \textcolor{stringliteral}{""};
+219   (void)dummy;  \textcolor{comment}{// Avoids the "unused local variable" warning.}
+220 \}
+\end{DoxyCode}
+\index{gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}!Test\+Init\+Google\+Mock@{Test\+Init\+Google\+Mock}}
+\index{Test\+Init\+Google\+Mock@{Test\+Init\+Google\+Mock}!gmock\+\_\+test.\+cc@{gmock\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{Test\+Init\+Google\+Mock(const Char $\ast$(\&argv)[M], const Char $\ast$(\&new\+\_\+argv)[N], const \+::std\+::string \&expected\+\_\+gmock\+\_\+verbose)}{TestInitGoogleMock(const Char *(&argv)[M], const Char *(&new_argv)[N], const ::std::string &expected_gmock_verbose)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Char , int M, int N$>$ void Test\+Init\+Google\+Mock (
+\begin{DoxyParamCaption}
+\item[{const Char $\ast$(\&)}]{argv\mbox{[}\+M\mbox{]}, }
+\item[{const Char $\ast$(\&)}]{new\+\_\+argv\mbox{[}\+N\mbox{]}, }
+\item[{const \+::std\+::string \&}]{expected\+\_\+gmock\+\_\+verbose}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}{}\label{gmock__test_8cc_ac9c8ae8722c330d47f75dee43fb8ab78}
+
+\begin{DoxyCode}
+50                                                                  \{
+51   \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{const ::std::string} old\_verbose = \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{GMOCK\_FLAG}(verbose);
+52 
+53   \textcolor{keywordtype}{int} argc = M;
+54   \hyperlink{namespacetesting_a32b1c6db9ba5133ccabfa67616b3c041}{InitGoogleMock}(&argc, const\_cast<Char**>(argv));
+55   \hyperlink{gtest_8h_a1a6db8b1338ee7040329322b77779086}{ASSERT\_EQ}(N, argc) << \textcolor{stringliteral}{"The new argv has wrong number of elements."};
+56 
+57   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} = 0; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i} < N; \hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}++) \{
+58     \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(new\_argv[\hyperlink{gtest__output__test__golden__lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}], argv[i]);
+59   \}
+60 
+61   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(expected\_gmock\_verbose, \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{GMOCK\_FLAG}(verbose).c\_str());
+62   \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{GMOCK\_FLAG}(verbose) = old\_verbose;  \textcolor{comment}{// Restores the gmock\_verbose flag.}
+63 \}
+\end{DoxyCode}

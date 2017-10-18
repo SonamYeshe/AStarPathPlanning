@@ -1,0 +1,539 @@
+\hypertarget{gmock__output__test___8cc}{}\section{vendor/googletest/googlemock/test/gmock\+\_\+output\+\_\+test\+\_\+.cc File Reference}
+\label{gmock__output__test___8cc}\index{vendor/googletest/googlemock/test/gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{vendor/googletest/googlemock/test/gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+{\ttfamily \#include \char`\"{}gmock/gmock.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for gmock\+\_\+output\+\_\+test\+\_\+.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gmock__output__test___8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classMockFoo}{Mock\+Foo}
+\item 
+class \hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gmock__output__test___8cc_a5cae7729bb06b3064b765a06e58c2566}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Expected\+Call)
+\item 
+\hyperlink{gmock__output__test___8cc_acafecaf97c5e08925e452e670cc9c60c}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Expected\+Call\+To\+Void\+Function)
+\item 
+\hyperlink{gmock__output__test___8cc_a9ea40a88b30f8b5507efbf486ac06761}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Explicit\+Actions\+Run\+Out)
+\item 
+\hyperlink{gmock__output__test___8cc_a87e290b73a27f69e2352986b95a09fcb}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Unexpected\+Call)
+\item 
+\hyperlink{gmock__output__test___8cc_aba5c783b0346beacc83af5ced4aeb7db}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Unexpected\+Call\+To\+Void\+Function)
+\item 
+\hyperlink{gmock__output__test___8cc_afa4ca5a73e2af24d016e48ee70e10901}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Excessive\+Call)
+\item 
+\hyperlink{gmock__output__test___8cc_ad8406b814788092ad25da61038706134}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Excessive\+Call\+To\+Void\+Function)
+\item 
+\hyperlink{gmock__output__test___8cc_aa9159573c3f5f5bc7be3475e7398afc5}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Uninteresting\+Call)
+\item 
+\hyperlink{gmock__output__test___8cc_ad6bc4a5b1d635a65363653eff36f6f0c}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Uninteresting\+Call\+To\+Void\+Function)
+\item 
+\hyperlink{gmock__output__test___8cc_a887f8f9cf09ffea984dcdb87c692c745}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Retired\+Expectation)
+\item 
+\hyperlink{gmock__output__test___8cc_aab78247f3f1aa1b95feb21150d8e7643}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Unsatisfied\+Prerequisite)
+\item 
+\hyperlink{gmock__output__test___8cc_aa8df8651de0f2d9f7d1dd765eec89998}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Unsatisfied\+Prerequisites)
+\item 
+\hyperlink{gmock__output__test___8cc_a3e14c0f9607348fdca074ccc6589fbdd}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Unsatisfied\+With)
+\item 
+\hyperlink{gmock__output__test___8cc_a662a66a60e7b302feb2dfa4a6b59bf98}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Unsatisfied\+Expectation)
+\item 
+\hyperlink{gmock__output__test___8cc_a0e3e9858cc7be4771edbe0f346f304f4}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Mismatch\+Arguments)
+\item 
+\hyperlink{gmock__output__test___8cc_a6e68cce05dc47eea2b0376a1ce4baa23}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Mismatch\+With)
+\item 
+\hyperlink{gmock__output__test___8cc_a4cea140a4bc751ea563614b827496a96}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Mismatch\+Arguments\+And\+With)
+\item 
+\hyperlink{gmock__output__test___8cc_a4ac1ba04aede81f6771240e1c719a28e}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Unexpected\+Call\+With\+Default\+Action)
+\item 
+\hyperlink{gmock__output__test___8cc_a521e2dc9f8197c96e992901a5e39f5cd}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Excessive\+Call\+With\+Default\+Action)
+\item 
+\hyperlink{gmock__output__test___8cc_afcf833faaa33197a2f9815425f101d8c}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Uninteresting\+Call\+With\+Default\+Action)
+\item 
+\hyperlink{gmock__output__test___8cc_a885556bf2f15e4a3d2eddac44dd7fc2b}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Explicit\+Actions\+Run\+Out\+With\+Default\+Action)
+\item 
+\hyperlink{gmock__output__test___8cc_add20a01035182eac6e1278d06e001d04}{T\+E\+S\+T\+\_\+F} (\hyperlink{classGMockOutputTest}{G\+Mock\+Output\+Test}, Catches\+Leaked\+Mocks)
+\item 
+void \hyperlink{gmock__output__test___8cc_af634a5c16bccc1861e3fab3181bad4a0}{Test\+Catches\+Leaked\+Mocks\+In\+Ad\+Hoc\+Tests} ()
+\item 
+int \hyperlink{gmock__output__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!main@{main}}
+\index{main@{main}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gmock__output__test___8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+281                                 \{
+282   \hyperlink{namespacetesting_a32b1c6db9ba5133ccabfa67616b3c041}{testing::InitGoogleMock}(&argc, argv);
+283 
+284   \textcolor{comment}{// Ensures that the tests pass no matter what value of}
+285   \textcolor{comment}{// --gmock\_catch\_leaked\_mocks and --gmock\_verbose the user specifies.}
+286   \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(catch\_leaked\_mocks) = \textcolor{keyword}{true};
+287   \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(verbose) = \textcolor{stringliteral}{"warning"};
+288 
+289   \hyperlink{gmock__output__test___8cc_af634a5c16bccc1861e3fab3181bad4a0}{TestCatchesLeakedMocksInAdHocTests}();
+290   \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+291 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Expected\+Call)}{TEST_F(GMockOutputTest, ExpectedCall)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Expected\+Call}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a5cae7729bb06b3064b765a06e58c2566}{}\label{gmock__output__test___8cc_a5cae7729bb06b3064b765a06e58c2566}
+
+\begin{DoxyCode}
+68                                       \{
+69   \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(verbose) = \textcolor{stringliteral}{"info"};
+70 
+71   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(0, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+72   foo\_.Bar2(0, 0);  \textcolor{comment}{// Expected call}
+73 
+74   \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(verbose) = \textcolor{stringliteral}{"warning"};
+75 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Expected\+Call\+To\+Void\+Function)}{TEST_F(GMockOutputTest, ExpectedCallToVoidFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Expected\+Call\+To\+Void\+Function}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_acafecaf97c5e08925e452e670cc9c60c}{}\label{gmock__output__test___8cc_acafecaf97c5e08925e452e670cc9c60c}
+
+\begin{DoxyCode}
+77                                                     \{
+78   \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(verbose) = \textcolor{stringliteral}{"info"};
+79 
+80   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar3(0, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+81   foo\_.Bar3(0, 0);  \textcolor{comment}{// Expected call}
+82 
+83   \hyperlink{gmock-port_8h_ad7119adfef06be5e7b1551633f5a1436}{testing::GMOCK\_FLAG}(verbose) = \textcolor{stringliteral}{"warning"};
+84 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Explicit\+Actions\+Run\+Out)}{TEST_F(GMockOutputTest, ExplicitActionsRunOut)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Explicit\+Actions\+Run\+Out}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a9ea40a88b30f8b5507efbf486ac06761}{}\label{gmock__output__test___8cc_a9ea40a88b30f8b5507efbf486ac06761}
+
+\begin{DoxyCode}
+86                                                \{
+87   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+88       .Times(2)
+89       .WillOnce(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{keyword}{false}));
+90   foo\_.Bar2(2, 2);
+91   foo\_.Bar2(1, 1);  \textcolor{comment}{// Explicit actions in EXPECT\_CALL run out.}
+92 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Unexpected\+Call)}{TEST_F(GMockOutputTest, UnexpectedCall)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Unexpected\+Call}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a87e290b73a27f69e2352986b95a09fcb}{}\label{gmock__output__test___8cc_a87e290b73a27f69e2352986b95a09fcb}
+
+\begin{DoxyCode}
+94                                         \{
+95   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(0, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+96 
+97   foo\_.Bar2(1, 0);  \textcolor{comment}{// Unexpected call}
+98   foo\_.Bar2(0, 0);  \textcolor{comment}{// Expected call}
+99 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Unexpected\+Call\+To\+Void\+Function)}{TEST_F(GMockOutputTest, UnexpectedCallToVoidFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Unexpected\+Call\+To\+Void\+Function}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_aba5c783b0346beacc83af5ced4aeb7db}{}\label{gmock__output__test___8cc_aba5c783b0346beacc83af5ced4aeb7db}
+
+\begin{DoxyCode}
+101                                                       \{
+102   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar3(0, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+103 
+104   foo\_.Bar3(1, 0);  \textcolor{comment}{// Unexpected call}
+105   foo\_.Bar3(0, 0);  \textcolor{comment}{// Expected call}
+106 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Excessive\+Call)}{TEST_F(GMockOutputTest, ExcessiveCall)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Excessive\+Call}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_afa4ca5a73e2af24d016e48ee70e10901}{}\label{gmock__output__test___8cc_afa4ca5a73e2af24d016e48ee70e10901}
+
+\begin{DoxyCode}
+108                                        \{
+109   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(0, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+110 
+111   foo\_.Bar2(0, 0);  \textcolor{comment}{// Expected call}
+112   foo\_.Bar2(0, 1);  \textcolor{comment}{// Excessive call}
+113 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Excessive\+Call\+To\+Void\+Function)}{TEST_F(GMockOutputTest, ExcessiveCallToVoidFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Excessive\+Call\+To\+Void\+Function}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_ad8406b814788092ad25da61038706134}{}\label{gmock__output__test___8cc_ad8406b814788092ad25da61038706134}
+
+\begin{DoxyCode}
+115                                                      \{
+116   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar3(0, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+117 
+118   foo\_.Bar3(0, 0);  \textcolor{comment}{// Expected call}
+119   foo\_.Bar3(0, 1);  \textcolor{comment}{// Excessive call}
+120 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Uninteresting\+Call)}{TEST_F(GMockOutputTest, UninterestingCall)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Uninteresting\+Call}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_aa9159573c3f5f5bc7be3475e7398afc5}{}\label{gmock__output__test___8cc_aa9159573c3f5f5bc7be3475e7398afc5}
+
+\begin{DoxyCode}
+122                                            \{
+123   foo\_.Bar2(0, 1);  \textcolor{comment}{// Uninteresting call}
+124 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Uninteresting\+Call\+To\+Void\+Function)}{TEST_F(GMockOutputTest, UninterestingCallToVoidFunction)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Uninteresting\+Call\+To\+Void\+Function}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_ad6bc4a5b1d635a65363653eff36f6f0c}{}\label{gmock__output__test___8cc_ad6bc4a5b1d635a65363653eff36f6f0c}
+
+\begin{DoxyCode}
+126                                                          \{
+127   foo\_.Bar3(0, 1);  \textcolor{comment}{// Uninteresting call}
+128 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Retired\+Expectation)}{TEST_F(GMockOutputTest, RetiredExpectation)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Retired\+Expectation}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a887f8f9cf09ffea984dcdb87c692c745}{}\label{gmock__output__test___8cc_a887f8f9cf09ffea984dcdb87c692c745}
+
+\begin{DoxyCode}
+130                                             \{
+131   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+132       .RetiresOnSaturation();
+133   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(0, 0));
+134 
+135   foo\_.Bar2(1, 1);
+136   foo\_.Bar2(1, 1);  \textcolor{comment}{// Matches a retired expectation}
+137   foo\_.Bar2(0, 0);
+138 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Unsatisfied\+Prerequisite)}{TEST_F(GMockOutputTest, UnsatisfiedPrerequisite)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Unsatisfied\+Prerequisite}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_aab78247f3f1aa1b95feb21150d8e7643}{}\label{gmock__output__test___8cc_aab78247f3f1aa1b95feb21150d8e7643}
+
+\begin{DoxyCode}
+140                                                  \{
+141   \{
+142     \hyperlink{classtesting_1_1InSequence}{InSequence} s;
+143     \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, 0, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+144     \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(0, 0));
+145     \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(1, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+146   \}
+147 
+148   foo\_.Bar2(1, 0);  \textcolor{comment}{// Has one immediate unsatisfied pre-requisite}
+149   foo\_.Bar(\textcolor{stringliteral}{"Hi"}, 0, 0);
+150   foo\_.Bar2(0, 0);
+151   foo\_.Bar2(1, 0);
+152 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Unsatisfied\+Prerequisites)}{TEST_F(GMockOutputTest, UnsatisfiedPrerequisites)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Unsatisfied\+Prerequisites}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_aa8df8651de0f2d9f7d1dd765eec89998}{}\label{gmock__output__test___8cc_aa8df8651de0f2d9f7d1dd765eec89998}
+
+\begin{DoxyCode}
+154                                                   \{
+155   \hyperlink{classtesting_1_1Sequence}{Sequence} s1, s2;
+156 
+157   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, 0, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+158       .InSequence(s1);
+159   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(0, 0))
+160       .InSequence(s2);
+161   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(1, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+162       .InSequence(s1, s2);
+163 
+164   foo\_.Bar2(1, 0);  \textcolor{comment}{// Has two immediate unsatisfied pre-requisites}
+165   foo\_.Bar(\textcolor{stringliteral}{"Hi"}, 0, 0);
+166   foo\_.Bar2(0, 0);
+167   foo\_.Bar2(1, 0);
+168 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Unsatisfied\+With)}{TEST_F(GMockOutputTest, UnsatisfiedWith)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Unsatisfied\+With}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a3e14c0f9607348fdca074ccc6589fbdd}{}\label{gmock__output__test___8cc_a3e14c0f9607348fdca074ccc6589fbdd}
+
+\begin{DoxyCode}
+170                                          \{
+171   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).With(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}());
+172 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Unsatisfied\+Expectation)}{TEST_F(GMockOutputTest, UnsatisfiedExpectation)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Unsatisfied\+Expectation}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a662a66a60e7b302feb2dfa4a6b59bf98}{}\label{gmock__output__test___8cc_a662a66a60e7b302feb2dfa4a6b59bf98}
+
+\begin{DoxyCode}
+174                                                 \{
+175   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+176   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(0, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+177       .Times(2);
+178 
+179   foo\_.Bar2(0, 1);
+180 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Mismatch\+Arguments)}{TEST_F(GMockOutputTest, MismatchArguments)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Mismatch\+Arguments}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a0e3e9858cc7be4771edbe0f346f304f4}{}\label{gmock__output__test___8cc_a0e3e9858cc7be4771edbe0f346f304f4}
+
+\begin{DoxyCode}
+182                                            \{
+183   \textcolor{keyword}{const} \hyperlink{namespacetesting_1_1internal_a8e8ff5b11e64078831112677156cb111}{std::string} s = \textcolor{stringliteral}{"Hi"};
+184   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar(\hyperlink{namespacetesting_a0a4a364121ea3fa656a112f1c2e6b7a4}{Ref}(s), \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(0)));
+185 
+186   foo\_.Bar(\textcolor{stringliteral}{"Ho"}, 0, -0.1);  \textcolor{comment}{// Mismatch arguments}
+187   foo\_.Bar(s, 0, 0);
+188 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Mismatch\+With)}{TEST_F(GMockOutputTest, MismatchWith)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Mismatch\+With}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a6e68cce05dc47eea2b0376a1ce4baa23}{}\label{gmock__output__test___8cc_a6e68cce05dc47eea2b0376a1ce4baa23}
+
+\begin{DoxyCode}
+190                                       \{
+191   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(2), \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(1)))
+192       .With(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}());
+193 
+194   foo\_.Bar2(2, 3);  \textcolor{comment}{// Mismatch With()}
+195   foo\_.Bar2(2, 1);
+196 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Mismatch\+Arguments\+And\+With)}{TEST_F(GMockOutputTest, MismatchArgumentsAndWith)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Mismatch\+Arguments\+And\+With}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a4cea140a4bc751ea563614b827496a96}{}\label{gmock__output__test___8cc_a4cea140a4bc751ea563614b827496a96}
+
+\begin{DoxyCode}
+198                                                   \{
+199   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(2), \hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}(1)))
+200       .With(\hyperlink{namespacetesting_a42bb19b42d7830b972973a103d5e00f2}{Ge}());
+201 
+202   foo\_.Bar2(1, 3);  \textcolor{comment}{// Mismatch arguments and mismatch With()}
+203   foo\_.Bar2(2, 1);
+204 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Unexpected\+Call\+With\+Default\+Action)}{TEST_F(GMockOutputTest, UnexpectedCallWithDefaultAction)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Unexpected\+Call\+With\+Default\+Action}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a4ac1ba04aede81f6771240e1c719a28e}{}\label{gmock__output__test___8cc_a4ac1ba04aede81f6771240e1c719a28e}
+
+\begin{DoxyCode}
+206                                                          \{
+207   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+208       .WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{keyword}{true}));   \textcolor{comment}{// Default action #1}
+209   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(foo\_, Bar2(1, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+210       .WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{keyword}{false}));  \textcolor{comment}{// Default action #2}
+211 
+212   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(2, 2));
+213   foo\_.Bar2(1, 0);  \textcolor{comment}{// Unexpected call, takes default action #2.}
+214   foo\_.Bar2(0, 0);  \textcolor{comment}{// Unexpected call, takes default action #1.}
+215   foo\_.Bar2(2, 2);  \textcolor{comment}{// Expected call.}
+216 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Excessive\+Call\+With\+Default\+Action)}{TEST_F(GMockOutputTest, ExcessiveCallWithDefaultAction)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Excessive\+Call\+With\+Default\+Action}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a521e2dc9f8197c96e992901a5e39f5cd}{}\label{gmock__output__test___8cc_a521e2dc9f8197c96e992901a5e39f5cd}
+
+\begin{DoxyCode}
+218                                                         \{
+219   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+220       .WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{keyword}{true}));   \textcolor{comment}{// Default action #1}
+221   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(foo\_, Bar2(1, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+222       .WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{keyword}{false}));  \textcolor{comment}{// Default action #2}
+223 
+224   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(2, 2));
+225   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(1, 1));
+226 
+227   foo\_.Bar2(2, 2);  \textcolor{comment}{// Expected call.}
+228   foo\_.Bar2(2, 2);  \textcolor{comment}{// Excessive call, takes default action #1.}
+229   foo\_.Bar2(1, 1);  \textcolor{comment}{// Expected call.}
+230   foo\_.Bar2(1, 1);  \textcolor{comment}{// Excessive call, takes default action #2.}
+231 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Uninteresting\+Call\+With\+Default\+Action)}{TEST_F(GMockOutputTest, UninterestingCallWithDefaultAction)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Uninteresting\+Call\+With\+Default\+Action}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_afcf833faaa33197a2f9815425f101d8c}{}\label{gmock__output__test___8cc_afcf833faaa33197a2f9815425f101d8c}
+
+\begin{DoxyCode}
+233                                                             \{
+234   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+235       .WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{keyword}{true}));   \textcolor{comment}{// Default action #1}
+236   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(foo\_, Bar2(1, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+237       .WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{keyword}{false}));  \textcolor{comment}{// Default action #2}
+238 
+239   foo\_.Bar2(2, 2);  \textcolor{comment}{// Uninteresting call, takes default action #1.}
+240   foo\_.Bar2(1, 1);  \textcolor{comment}{// Uninteresting call, takes default action #2.}
+241 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Explicit\+Actions\+Run\+Out\+With\+Default\+Action)}{TEST_F(GMockOutputTest, ExplicitActionsRunOutWithDefaultAction)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Explicit\+Actions\+Run\+Out\+With\+Default\+Action}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_a885556bf2f15e4a3d2eddac44dd7fc2b}{}\label{gmock__output__test___8cc_a885556bf2f15e4a3d2eddac44dd7fc2b}
+
+\begin{DoxyCode}
+243                                                                 \{
+244   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+245       .WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{keyword}{true}));   \textcolor{comment}{// Default action #1}
+246 
+247   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(foo\_, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}))
+248       .Times(2)
+249       .WillOnce(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{keyword}{false}));
+250   foo\_.Bar2(2, 2);
+251   foo\_.Bar2(1, 1);  \textcolor{comment}{// Explicit actions in EXPECT\_CALL run out.}
+252 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}}
+\index{T\+E\+S\+T\+\_\+F@{T\+E\+S\+T\+\_\+F}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T\+\_\+\+F(\+G\+Mock\+Output\+Test, Catches\+Leaked\+Mocks)}{TEST_F(GMockOutputTest, CatchesLeakedMocks)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+F (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+Mock\+Output\+Test}}]{, }
+\item[{Catches\+Leaked\+Mocks}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_add20a01035182eac6e1278d06e001d04}{}\label{gmock__output__test___8cc_add20a01035182eac6e1278d06e001d04}
+
+\begin{DoxyCode}
+254                                             \{
+255   MockFoo* foo1 = \textcolor{keyword}{new} MockFoo;
+256   MockFoo* foo2 = \textcolor{keyword}{new} MockFoo;
+257 
+258   \textcolor{comment}{// Invokes ON\_CALL on foo1.}
+259   \hyperlink{gmock-spec-builders_8h_a5b12ae6cf84f0a544ca811b380c37334}{ON\_CALL}(*foo1, Bar(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).WillByDefault(\hyperlink{namespacetesting_af6d1c13e9376c77671e37545cd84359c}{Return}(\textcolor{charliteral}{'a'}));
+260 
+261   \textcolor{comment}{// Invokes EXPECT\_CALL on foo2.}
+262   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(*foo2, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+263   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(*foo2, Bar2(1, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+264   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(*foo2, Bar3(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_})).Times(\hyperlink{namespacetesting_aa1f8a6371097e1e9b8d6866020f35252}{AnyNumber}());
+265   foo2->Bar2(2, 1);
+266   foo2->Bar2(1, 1);
+267 
+268   \textcolor{comment}{// Both foo1 and foo2 are deliberately leaked.}
+269 \}
+\end{DoxyCode}
+\index{gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}!Test\+Catches\+Leaked\+Mocks\+In\+Ad\+Hoc\+Tests@{Test\+Catches\+Leaked\+Mocks\+In\+Ad\+Hoc\+Tests}}
+\index{Test\+Catches\+Leaked\+Mocks\+In\+Ad\+Hoc\+Tests@{Test\+Catches\+Leaked\+Mocks\+In\+Ad\+Hoc\+Tests}!gmock\+\_\+output\+\_\+test\+\_\+.\+cc@{gmock\+\_\+output\+\_\+test\+\_\+.\+cc}}
+\subsubsection[{\texorpdfstring{Test\+Catches\+Leaked\+Mocks\+In\+Ad\+Hoc\+Tests()}{TestCatchesLeakedMocksInAdHocTests()}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Catches\+Leaked\+Mocks\+In\+Ad\+Hoc\+Tests (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{gmock__output__test___8cc_af634a5c16bccc1861e3fab3181bad4a0}{}\label{gmock__output__test___8cc_af634a5c16bccc1861e3fab3181bad4a0}
+
+\begin{DoxyCode}
+271                                           \{
+272   MockFoo* \hyperlink{namespacefoo}{foo} = \textcolor{keyword}{new} MockFoo;
+273 
+274   \textcolor{comment}{// Invokes EXPECT\_CALL on foo.}
+275   \hyperlink{gmock-spec-builders_8h_a535a6156de72c1a2e25a127e38ee5232}{EXPECT\_CALL}(*foo, Bar2(\hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}, \hyperlink{namespacetesting_a4ba77a3f5b67166ff1b59d96a32346a2}{\_}));
+276   foo->Bar2(2, 1);
+277 
+278   \textcolor{comment}{// foo is deliberately leaked.}
+279 \}
+\end{DoxyCode}

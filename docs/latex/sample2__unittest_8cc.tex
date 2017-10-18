@@ -1,0 +1,134 @@
+\hypertarget{sample2__unittest_8cc}{}\section{vendor/googletest/googletest/samples/sample2\+\_\+unittest.cc File Reference}
+\label{sample2__unittest_8cc}\index{vendor/googletest/googletest/samples/sample2\+\_\+unittest.\+cc@{vendor/googletest/googletest/samples/sample2\+\_\+unittest.\+cc}}
+{\ttfamily \#include \char`\"{}sample2.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for sample2\+\_\+unittest.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sample2__unittest_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{sample2__unittest_8cc_aaf04f91c362407dc08c8bf377a77b4db}{T\+E\+ST} (\hyperlink{classMyString}{My\+String}, Default\+Constructor)
+\item 
+\hyperlink{sample2__unittest_8cc_a38e540508dce697cb50d6cd5f298d051}{T\+E\+ST} (\hyperlink{classMyString}{My\+String}, Constructor\+From\+C\+String)
+\item 
+\hyperlink{sample2__unittest_8cc_a79ed49ad165f76c183707325847043c1}{T\+E\+ST} (\hyperlink{classMyString}{My\+String}, Copy\+Constructor)
+\item 
+\hyperlink{sample2__unittest_8cc_afa5d617a125eb852624619a56cf7f89d}{T\+E\+ST} (\hyperlink{classMyString}{My\+String}, Set)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{k\+Hello\+String} \mbox{[}$\,$\mbox{]} = \char`\"{}Hello, world!\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+My\+String, Default\+Constructor)}{TEST(MyString, DefaultConstructor)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf My\+String}}]{, }
+\item[{Default\+Constructor}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample2__unittest_8cc_aaf04f91c362407dc08c8bf377a77b4db}{}\label{sample2__unittest_8cc_aaf04f91c362407dc08c8bf377a77b4db}
+
+\begin{DoxyCode}
+49                                    \{
+50   \textcolor{keyword}{const} \hyperlink{classMyString}{MyString} s;
+51 
+52   \textcolor{comment}{// Asserts that s.c\_string() returns NULL.}
+53   \textcolor{comment}{//}
+54   \textcolor{comment}{// <TechnicalDetails>}
+55   \textcolor{comment}{//}
+56   \textcolor{comment}{// If we write NULL instead of}
+57   \textcolor{comment}{//}
+58   \textcolor{comment}{//   static\_cast<const char *>(NULL)}
+59   \textcolor{comment}{//}
+60   \textcolor{comment}{// in this assertion, it will generate a warning on gcc 3.4.  The}
+61   \textcolor{comment}{// reason is that EXPECT\_EQ needs to know the types of its}
+62   \textcolor{comment}{// arguments in order to print them when it fails.  Since NULL is}
+63   \textcolor{comment}{// #defined as 0, the compiler will use the formatter function for}
+64   \textcolor{comment}{// int to print it.  However, gcc thinks that NULL should be used as}
+65   \textcolor{comment}{// a pointer, not an int, and therefore complains.}
+66   \textcolor{comment}{//}
+67   \textcolor{comment}{// The root of the problem is C++'s lack of distinction between the}
+68   \textcolor{comment}{// integer number 0 and the null pointer constant.  Unfortunately,}
+69   \textcolor{comment}{// we have to live with this fact.}
+70   \textcolor{comment}{//}
+71   \textcolor{comment}{// </TechnicalDetails>}
+72   \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(NULL, s.\hyperlink{classMyString_a0089588935fc8235124f58f514cb07a1}{c\_string}());
+73 
+74   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0u, s.\hyperlink{classMyString_a878f7e0a327814729a04a412d7b95801}{Length}());
+75 \}
+\end{DoxyCode}
+\index{sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+My\+String, Constructor\+From\+C\+String)}{TEST(MyString, ConstructorFromCString)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf My\+String}}]{, }
+\item[{Constructor\+From\+C\+String}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample2__unittest_8cc_a38e540508dce697cb50d6cd5f298d051}{}\label{sample2__unittest_8cc_a38e540508dce697cb50d6cd5f298d051}
+
+\begin{DoxyCode}
+80                                        \{
+81   \textcolor{keyword}{const} \hyperlink{classMyString}{MyString} s(\hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{kHelloString});
+82   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, strcmp(s.c\_string(), \hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{kHelloString}));
+83   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(\textcolor{keyword}{sizeof}(\hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{kHelloString})/\textcolor{keyword}{sizeof}(\hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{kHelloString}[0]) - 1,
+84             s.Length());
+85 \}
+\end{DoxyCode}
+\index{sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+My\+String, Copy\+Constructor)}{TEST(MyString, CopyConstructor)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf My\+String}}]{, }
+\item[{Copy\+Constructor}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample2__unittest_8cc_a79ed49ad165f76c183707325847043c1}{}\label{sample2__unittest_8cc_a79ed49ad165f76c183707325847043c1}
+
+\begin{DoxyCode}
+88                                 \{
+89   \textcolor{keyword}{const} \hyperlink{classMyString}{MyString} s1(\hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{kHelloString});
+90   \textcolor{keyword}{const} \hyperlink{classMyString}{MyString} s2 = s1;
+91   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, strcmp(s2.\hyperlink{classMyString_a0089588935fc8235124f58f514cb07a1}{c\_string}(), \hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{kHelloString}));
+92 \}
+\end{DoxyCode}
+\index{sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+My\+String, Set)}{TEST(MyString, Set)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{{\bf My\+String}}]{, }
+\item[{Set}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{sample2__unittest_8cc_afa5d617a125eb852624619a56cf7f89d}{}\label{sample2__unittest_8cc_afa5d617a125eb852624619a56cf7f89d}
+
+\begin{DoxyCode}
+95                     \{
+96   \hyperlink{classMyString}{MyString} s;
+97 
+98   s.\hyperlink{classMyString_a521c4cd7eccac6ce554d8a51505e4970}{Set}(\hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{kHelloString});
+99   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, strcmp(s.\hyperlink{classMyString_a0089588935fc8235124f58f514cb07a1}{c\_string}(), \hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{kHelloString}));
+100 
+101   \textcolor{comment}{// Set should work when the input pointer is the same as the one}
+102   \textcolor{comment}{// already in the MyString object.}
+103   s.\hyperlink{classMyString_a521c4cd7eccac6ce554d8a51505e4970}{Set}(s.\hyperlink{classMyString_a0089588935fc8235124f58f514cb07a1}{c\_string}());
+104   \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(0, strcmp(s.\hyperlink{classMyString_a0089588935fc8235124f58f514cb07a1}{c\_string}(), \hyperlink{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{kHelloString}));
+105 
+106   \textcolor{comment}{// Can we set the MyString to NULL?}
+107   s.\hyperlink{classMyString_a521c4cd7eccac6ce554d8a51505e4970}{Set}(NULL);
+108   \hyperlink{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6}{EXPECT\_STREQ}(NULL, s.\hyperlink{classMyString_a0089588935fc8235124f58f514cb07a1}{c\_string}());
+109 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}!k\+Hello\+String@{k\+Hello\+String}}
+\index{k\+Hello\+String@{k\+Hello\+String}!sample2\+\_\+unittest.\+cc@{sample2\+\_\+unittest.\+cc}}
+\subsubsection[{\texorpdfstring{k\+Hello\+String}{kHelloString}}]{\setlength{\rightskip}{0pt plus 5cm}const char k\+Hello\+String\mbox{[}$\,$\mbox{]} = \char`\"{}Hello, world!\char`\"{}}\hypertarget{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}{}\label{sample2__unittest_8cc_a32d059f46f7041965d44bf1c034ba26e}

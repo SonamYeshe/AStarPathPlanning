@@ -1,0 +1,36 @@
+\hypertarget{gtest-death-test__ex__test_8cc}{}\section{vendor/googletest/googletest/test/gtest-\/death-\/test\+\_\+ex\+\_\+test.cc File Reference}
+\label{gtest-death-test__ex__test_8cc}\index{vendor/googletest/googletest/test/gtest-\/death-\/test\+\_\+ex\+\_\+test.\+cc@{vendor/googletest/googletest/test/gtest-\/death-\/test\+\_\+ex\+\_\+test.\+cc}}
+{\ttfamily \#include \char`\"{}gtest/gtest-\/death-\/test.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+Include dependency graph for gtest-\/death-\/test\+\_\+ex\+\_\+test.cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest-death-test__ex__test_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{gtest-death-test__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{gtest-\/death-\/test\+\_\+ex\+\_\+test.\+cc@{gtest-\/death-\/test\+\_\+ex\+\_\+test.\+cc}!main@{main}}
+\index{main@{main}!gtest-\/death-\/test\+\_\+ex\+\_\+test.\+cc@{gtest-\/death-\/test\+\_\+ex\+\_\+test.\+cc}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{gtest-death-test__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{gtest-death-test__ex__test_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+\begin{DoxyCode}
+89                                 \{
+90   \hyperlink{namespacetesting_afd726ae08c9bd16dc52f78c822d9946b}{testing::InitGoogleTest}(&argc, argv);
+91   \hyperlink{gtest-port_8h_a828f4e34a1c4b510da50ec1563e3562a}{testing::GTEST\_FLAG}(catch\_exceptions) = GTEST\_ENABLE\_CATCH\_EXCEPTIONS\_ != 0;
+92   \textcolor{keywordflow}{return} \hyperlink{gtest_8h_a853a3792807489591d3d4a2f2ff9359f}{RUN\_ALL\_TESTS}();
+93 \}
+\end{DoxyCode}

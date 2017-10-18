@@ -1,0 +1,64 @@
+\hypertarget{namespaceupload__gtest}{}\section{upload\+\_\+gtest Namespace Reference}
+\label{namespaceupload__gtest}\index{upload\+\_\+gtest@{upload\+\_\+gtest}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceupload__gtest_ab5bef7b968c54c632a52c1b4a3d37bdd}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespaceupload__gtest_a83f0946f9ee3731253fc622acd581fc2}{C\+C\+\_\+\+F\+L\+AG} = \textquotesingle{}-\/-\/\hyperlink{gtest__output__test__golden__lin_8txt_a36ebfe06d2a8523cebd158fbc62be565}{cc}=\textquotesingle{}
+\item 
+string \hyperlink{namespaceupload__gtest_af282f4c60bf6069ed0abf4e06d9b70ab}{G\+T\+E\+S\+T\+\_\+\+G\+R\+O\+UP} = \textquotesingle{}googletestframework@googlegroups.\+com\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{upload\+\_\+gtest@{upload\+\_\+gtest}!main@{main}}
+\index{main@{main}!upload\+\_\+gtest@{upload\+\_\+gtest}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}def upload\+\_\+gtest.\+main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload__gtest_ab5bef7b968c54c632a52c1b4a3d37bdd}{}\label{namespaceupload__gtest_ab5bef7b968c54c632a52c1b4a3d37bdd}
+
+\begin{DoxyCode}
+49 \textcolor{keyword}{def }\hyperlink{namespacerelease__docs_ac4eb92814ebe701e3936d1bfdd2ecf73}{main}():
+50   \textcolor{comment}{# Finds the path to upload.py, assuming it is in the same directory}
+51   \textcolor{comment}{# as this file.}
+52   my\_dir = os.path.dirname(os.path.abspath(\_\_file\_\_))
+53   upload\_py\_path = os.path.join(my\_dir, \textcolor{stringliteral}{'upload.py'})
+54 
+55   \textcolor{comment}{# Adds Google Test discussion group to the cc line if it's not there}
+56   \textcolor{comment}{# already.}
+57   upload\_py\_argv = [upload\_py\_path]
+58   found\_cc\_flag = \textcolor{keyword}{False}
+59   \textcolor{keywordflow}{for} arg \textcolor{keywordflow}{in} sys.argv[1:]:
+60     \textcolor{keywordflow}{if} arg.startswith(CC\_FLAG):
+61       found\_cc\_flag = \textcolor{keyword}{True}
+62       cc\_line = arg[len(CC\_FLAG):]
+63       cc\_list = [addr \textcolor{keywordflow}{for} addr \textcolor{keywordflow}{in} cc\_line.split(\textcolor{stringliteral}{','}) \textcolor{keywordflow}{if} addr]
+64       \textcolor{keywordflow}{if} GTEST\_GROUP \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} cc\_list:
+65         cc\_list.append(GTEST\_GROUP)
+66       upload\_py\_argv.append(CC\_FLAG + \textcolor{stringliteral}{','}.join(cc\_list))
+67     \textcolor{keywordflow}{else}:
+68       upload\_py\_argv.append(arg)
+69 
+70   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} found\_cc\_flag:
+71     upload\_py\_argv.append(CC\_FLAG + GTEST\_GROUP)
+72 
+73   \textcolor{comment}{# Invokes upload.py with the modified command line flags.}
+74   os.execv(upload\_py\_path, upload\_py\_argv)
+75 
+76 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{upload\+\_\+gtest@{upload\+\_\+gtest}!C\+C\+\_\+\+F\+L\+AG@{C\+C\+\_\+\+F\+L\+AG}}
+\index{C\+C\+\_\+\+F\+L\+AG@{C\+C\+\_\+\+F\+L\+AG}!upload\+\_\+gtest@{upload\+\_\+gtest}}
+\subsubsection[{\texorpdfstring{C\+C\+\_\+\+F\+L\+AG}{CC_FLAG}}]{\setlength{\rightskip}{0pt plus 5cm}string upload\+\_\+gtest.\+C\+C\+\_\+\+F\+L\+AG = \textquotesingle{}-\/-\/{\bf cc}=\textquotesingle{}}\hypertarget{namespaceupload__gtest_a83f0946f9ee3731253fc622acd581fc2}{}\label{namespaceupload__gtest_a83f0946f9ee3731253fc622acd581fc2}
+\index{upload\+\_\+gtest@{upload\+\_\+gtest}!G\+T\+E\+S\+T\+\_\+\+G\+R\+O\+UP@{G\+T\+E\+S\+T\+\_\+\+G\+R\+O\+UP}}
+\index{G\+T\+E\+S\+T\+\_\+\+G\+R\+O\+UP@{G\+T\+E\+S\+T\+\_\+\+G\+R\+O\+UP}!upload\+\_\+gtest@{upload\+\_\+gtest}}
+\subsubsection[{\texorpdfstring{G\+T\+E\+S\+T\+\_\+\+G\+R\+O\+UP}{GTEST_GROUP}}]{\setlength{\rightskip}{0pt plus 5cm}string upload\+\_\+gtest.\+G\+T\+E\+S\+T\+\_\+\+G\+R\+O\+UP = \textquotesingle{}googletestframework@googlegroups.\+com\textquotesingle{}}\hypertarget{namespaceupload__gtest_af282f4c60bf6069ed0abf4e06d9b70ab}{}\label{namespaceupload__gtest_af282f4c60bf6069ed0abf4e06d9b70ab}

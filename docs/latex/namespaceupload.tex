@@ -1,0 +1,756 @@
+\hypertarget{namespaceupload}{}\section{upload Namespace Reference}
+\label{namespaceupload}\index{upload@{upload}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classupload_1_1AbstractRpcServer}{Abstract\+Rpc\+Server}
+\item 
+class \hyperlink{classupload_1_1ClientLoginError}{Client\+Login\+Error}
+\item 
+class \hyperlink{classupload_1_1GitVCS}{Git\+V\+CS}
+\item 
+class \hyperlink{classupload_1_1HttpRpcServer}{Http\+Rpc\+Server}
+\begin{DoxyCompactList}\small\item\em elif e.\+code $>$= 500 and e.\+code $<$ 600\+: \subsection*{Server Error -\/ try again.}\end{DoxyCompactList}\item 
+class \hyperlink{classupload_1_1MercurialVCS}{Mercurial\+V\+CS}
+\item 
+class \hyperlink{classupload_1_1SubversionVCS}{Subversion\+V\+CS}
+\item 
+class \hyperlink{classupload_1_1VersionControlSystem}{Version\+Control\+System}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceupload_a4f169469a6d43221ebd38cfd546484e1}{Get\+Email} (prompt)
+\item 
+def \hyperlink{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{Status\+Update} (msg)
+\item 
+def \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{Error\+Exit} (msg)
+\item 
+def \hyperlink{namespaceupload_a1dadef480a702dbc5d0fb66203b9abe7}{Get\+Rpc\+Server} (options)
+\item 
+def \hyperlink{namespaceupload_ae12985a2c860c124c502dd2099b702eb}{Encode\+Multipart\+Form\+Data} (fields, files)
+\item 
+def \hyperlink{namespaceupload_a753a004706d964335ad218628e07b063}{Get\+Content\+Type} (filename)
+\item 
+def \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{Run\+Shell\+With\+Return\+Code} (command, print\+\_\+output=False, universal\+\_\+newlines=True)
+\item 
+def \hyperlink{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{Run\+Shell} (command, silent\+\_\+ok=False, universal\+\_\+newlines=True, print\+\_\+output=False)
+\item 
+def \hyperlink{namespaceupload_a9dd260785ca4cc97e245234811ef1949}{Split\+Patch} (data)
+\item 
+def \hyperlink{namespaceupload_a7ec83cb7f7bfb9109c19b6f91552b3ee}{Upload\+Separate\+Patches} (issue, rpc\+\_\+server, patchset, data, options)
+\item 
+def \hyperlink{namespaceupload_a31390568253accd22ee51861eaeb99bd}{Guess\+V\+CS} (options)
+\item 
+def \hyperlink{namespaceupload_ad6226af96c9f1905602b8002bd5de952}{Real\+Main} (argv, data=None)
+\item 
+def \hyperlink{namespaceupload_aef3fcf7a8d77d13ba75adbf58b6c43ee}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceupload_a79aff46409a98c4e5f608c8df1fd4612}{verbosity} = 1
+\item 
+int \hyperlink{namespaceupload_aad5b1a43823e2a710a2f78e33dde8901}{M\+A\+X\+\_\+\+U\+P\+L\+O\+A\+D\+\_\+\+S\+I\+ZE} = 900
+\item 
+\hyperlink{namespaceupload_af9e508d19dc2dd9cdb7c642dde0bdd21}{parser} = optparse.\+Option\+Parser(usage=\char`\"{}\%prog \mbox{[}options\mbox{]} \mbox{[}-\/-\/ diff\+\_\+options\mbox{]}\char`\"{})
+\item 
+\hyperlink{namespaceupload_a675d13c979f1c720866d22ed1736f580}{action}
+\item 
+\hyperlink{namespaceupload_a770d9c7b49b1fede80de6078d5e49af7}{dest}
+\item 
+\hyperlink{namespaceupload_af4be925d9a50d5ad134d86400509d0f2}{default}
+\item 
+\hyperlink{namespaceupload_abfc23c9aa2d9b777678da117a85929a5}{help}
+\item 
+\hyperlink{namespaceupload_a9d33d66de17175dced88ffe95f079226}{group} = parser.\+add\+\_\+option\+\_\+group(\char`\"{}Logging options\char`\"{})
+\item 
+\hyperlink{namespaceupload_a985aa9a71de3eb507344df65700c696d}{const}
+\item 
+\hyperlink{namespaceupload_af1cea8af5389f0ab2d8b65b2c0fd2fe0}{metavar}
+\item 
+\hyperlink{namespaceupload_a4fc56f0dd6613be15c3c4dc3af3619ce}{type}
+\item 
+\hyperlink{namespaceupload_afa85ceef00a65cd276a856404eb5f310}{use\+\_\+shell} = sys.\+platform.\+startswith(\char`\"{}win\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{upload@{upload}!Encode\+Multipart\+Form\+Data@{Encode\+Multipart\+Form\+Data}}
+\index{Encode\+Multipart\+Form\+Data@{Encode\+Multipart\+Form\+Data}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Encode\+Multipart\+Form\+Data(fields, files)}{EncodeMultipartFormData(fields, files)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Encode\+Multipart\+Form\+Data (
+\begin{DoxyParamCaption}
+\item[{}]{fields, }
+\item[{}]{files}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_ae12985a2c860c124c502dd2099b702eb}{}\label{namespaceupload_ae12985a2c860c124c502dd2099b702eb}
+\begin{DoxyVerb}Encode form fields for multipart/form-data.
+
+Args:
+  fields: A sequence of (name, value) elements for regular form fields.
+  files: A sequence of (name, filename, value) elements for data to be
+         uploaded as files.
+Returns:
+  (content_type, body) ready for httplib.HTTP instance.
+
+Source:
+  http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/146306
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+498 \textcolor{keyword}{def }\hyperlink{namespaceupload_ae12985a2c860c124c502dd2099b702eb}{EncodeMultipartFormData}(fields, files):
+499   \textcolor{stringliteral}{"""Encode form fields for multipart/form-data.}
+500 \textcolor{stringliteral}{}
+501 \textcolor{stringliteral}{  Args:}
+502 \textcolor{stringliteral}{    fields: A sequence of (name, value) elements for regular form fields.}
+503 \textcolor{stringliteral}{    files: A sequence of (name, filename, value) elements for data to be}
+504 \textcolor{stringliteral}{           uploaded as files.}
+505 \textcolor{stringliteral}{  Returns:}
+506 \textcolor{stringliteral}{    (content\_type, body) ready for httplib.HTTP instance.}
+507 \textcolor{stringliteral}{}
+508 \textcolor{stringliteral}{  Source:}
+509 \textcolor{stringliteral}{    http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/146306}
+510 \textcolor{stringliteral}{  """}
+511   BOUNDARY = \textcolor{stringliteral}{'-M-A-G-I-C---B-O-U-N-D-A-R-Y-'}
+512   CRLF = \textcolor{stringliteral}{'\(\backslash\)r\(\backslash\)n'}
+513   lines = []
+514   \textcolor{keywordflow}{for} (key, value) \textcolor{keywordflow}{in} fields:
+515     lines.append(\textcolor{stringliteral}{'--'} + BOUNDARY)
+516     lines.append(\textcolor{stringliteral}{'Content-Disposition: form-data; name="%s"'} % key)
+517     lines.append(\textcolor{stringliteral}{''})
+518     lines.append(value)
+519   \textcolor{keywordflow}{for} (key, filename, value) \textcolor{keywordflow}{in} files:
+520     lines.append(\textcolor{stringliteral}{'--'} + BOUNDARY)
+521     lines.append(\textcolor{stringliteral}{'Content-Disposition: form-data; name="%s"; filename="%s"'} %
+522              (key, filename))
+523     lines.append(\textcolor{stringliteral}{'Content-Type: %s'} % \hyperlink{namespaceupload_a753a004706d964335ad218628e07b063}{GetContentType}(filename))
+524     lines.append(\textcolor{stringliteral}{''})
+525     lines.append(value)
+526   lines.append(\textcolor{stringliteral}{'--'} + BOUNDARY + \textcolor{stringliteral}{'--'})
+527   lines.append(\textcolor{stringliteral}{''})
+528   body = CRLF.join(lines)
+529   content\_type = \textcolor{stringliteral}{'multipart/form-data; boundary=%s'} % BOUNDARY
+530   \textcolor{keywordflow}{return} content\_type, body
+531 
+532 
+\end{DoxyCode}
+\index{upload@{upload}!Error\+Exit@{Error\+Exit}}
+\index{Error\+Exit@{Error\+Exit}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Error\+Exit(msg)}{ErrorExit(msg)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Error\+Exit (
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{}\label{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}
+\begin{DoxyVerb}Print an error message to stderr and exit.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+109 \textcolor{keyword}{def }\hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(msg):
+110   \textcolor{stringliteral}{"""Print an error message to stderr and exit."""}
+111   \textcolor{keywordflow}{print} >>sys.stderr, msg
+112   sys.exit(1)
+113 
+114 
+\end{DoxyCode}
+\index{upload@{upload}!Get\+Content\+Type@{Get\+Content\+Type}}
+\index{Get\+Content\+Type@{Get\+Content\+Type}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Get\+Content\+Type(filename)}{GetContentType(filename)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Get\+Content\+Type (
+\begin{DoxyParamCaption}
+\item[{}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_a753a004706d964335ad218628e07b063}{}\label{namespaceupload_a753a004706d964335ad218628e07b063}
+\begin{DoxyVerb}Helper to guess the content-type from the filename.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+533 \textcolor{keyword}{def }\hyperlink{namespaceupload_a753a004706d964335ad218628e07b063}{GetContentType}(filename):
+534   \textcolor{stringliteral}{"""Helper to guess the content-type from the filename."""}
+535   \textcolor{keywordflow}{return} mimetypes.guess\_type(filename)[0] \textcolor{keywordflow}{or} \textcolor{stringliteral}{'application/octet-stream'}
+536 
+537 
+538 \textcolor{comment}{# Use a shell for subcommands on Windows to get a PATH search.}
+\end{DoxyCode}
+\index{upload@{upload}!Get\+Email@{Get\+Email}}
+\index{Get\+Email@{Get\+Email}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Get\+Email(prompt)}{GetEmail(prompt)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Get\+Email (
+\begin{DoxyParamCaption}
+\item[{}]{prompt}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_a4f169469a6d43221ebd38cfd546484e1}{}\label{namespaceupload_a4f169469a6d43221ebd38cfd546484e1}
+\begin{DoxyVerb}Prompts the user for their email address and returns it.
+
+The last used email address is saved to a file and offered up as a suggestion
+to the user. If the user presses enter without typing in anything the last
+used email address is used. If the user enters a new address, it is saved
+for next time we prompt.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+65 \textcolor{keyword}{def }\hyperlink{namespaceupload_a4f169469a6d43221ebd38cfd546484e1}{GetEmail}(prompt):
+66   \textcolor{stringliteral}{"""Prompts the user for their email address and returns it.}
+67 \textcolor{stringliteral}{}
+68 \textcolor{stringliteral}{  The last used email address is saved to a file and offered up as a suggestion}
+69 \textcolor{stringliteral}{  to the user. If the user presses enter without typing in anything the last}
+70 \textcolor{stringliteral}{  used email address is used. If the user enters a new address, it is saved}
+71 \textcolor{stringliteral}{  for next time we prompt.}
+72 \textcolor{stringliteral}{}
+73 \textcolor{stringliteral}{  """}
+74   last\_email\_file\_name = os.path.expanduser(\textcolor{stringliteral}{"~/.last\_codereview\_email\_address"})
+75   last\_email = \textcolor{stringliteral}{""}
+76   \textcolor{keywordflow}{if} os.path.exists(last\_email\_file\_name):
+77     \textcolor{keywordflow}{try}:
+78       last\_email\_file = open(last\_email\_file\_name, \textcolor{stringliteral}{"r")}
+79 \textcolor{stringliteral}{      last\_email = last\_email\_file.readline().strip("\(\backslash\)n"})
+80       last\_email\_file.close()
+81       prompt += \textcolor{stringliteral}{" [%s]"} % last\_email
+82     \textcolor{keywordflow}{except} IOError, e:
+83       \textcolor{keywordflow}{pass}
+84   email = raw\_input(prompt + \textcolor{stringliteral}{": "}).strip()
+85   \textcolor{keywordflow}{if} email:
+86     \textcolor{keywordflow}{try}:
+87       last\_email\_file = open(last\_email\_file\_name, \textcolor{stringliteral}{"w"})
+88       last\_email\_file.write(email)
+89       last\_email\_file.close()
+90     \textcolor{keywordflow}{except} IOError, e:
+91       \textcolor{keywordflow}{pass}
+92   \textcolor{keywordflow}{else}:
+93     email = last\_email
+94   \textcolor{keywordflow}{return} email
+95 
+96 
+\end{DoxyCode}
+\index{upload@{upload}!Get\+Rpc\+Server@{Get\+Rpc\+Server}}
+\index{Get\+Rpc\+Server@{Get\+Rpc\+Server}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Get\+Rpc\+Server(options)}{GetRpcServer(options)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Get\+Rpc\+Server (
+\begin{DoxyParamCaption}
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_a1dadef480a702dbc5d0fb66203b9abe7}{}\label{namespaceupload_a1dadef480a702dbc5d0fb66203b9abe7}
+\begin{DoxyVerb}Returns an instance of an AbstractRpcServer.
+
+Returns:
+  A new AbstractRpcServer, on which RPC calls can be made.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+458 \textcolor{keyword}{def }\hyperlink{namespaceupload_a1dadef480a702dbc5d0fb66203b9abe7}{GetRpcServer}(options):
+459   \textcolor{stringliteral}{"""Returns an instance of an AbstractRpcServer.}
+460 \textcolor{stringliteral}{}
+461 \textcolor{stringliteral}{  Returns:}
+462 \textcolor{stringliteral}{    A new AbstractRpcServer, on which RPC calls can be made.}
+463 \textcolor{stringliteral}{  """}
+464 
+465   rpc\_server\_class = HttpRpcServer
+466 
+467   \textcolor{keyword}{def }GetUserCredentials():
+468     \textcolor{stringliteral}{"""Prompts the user for a username and password."""}
+469     email = options.email
+470     \textcolor{keywordflow}{if} email \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+471       email = \hyperlink{namespaceupload_a4f169469a6d43221ebd38cfd546484e1}{GetEmail}(\textcolor{stringliteral}{"Email (login for uploading to %s)"} % options.server)
+472     password = getpass.getpass(\textcolor{stringliteral}{"Password for %s: "} % email)
+473     \textcolor{keywordflow}{return} (email, password)
+474 
+475   \textcolor{comment}{# If this is the dev\_appserver, use fake authentication.}
+476   host = (options.host \textcolor{keywordflow}{or} options.server).lower()
+477   \textcolor{keywordflow}{if} host == \textcolor{stringliteral}{"localhost"} \textcolor{keywordflow}{or} host.startswith(\textcolor{stringliteral}{"localhost:"}):
+478     email = options.email
+479     \textcolor{keywordflow}{if} email \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+480       email = \textcolor{stringliteral}{"test@example.com"}
+481       logging.info(\textcolor{stringliteral}{"Using debug user %s.  Override with --email"} % email)
+482     server = rpc\_server\_class(
+483         options.server,
+484         \textcolor{keyword}{lambda}: (email, \textcolor{stringliteral}{"password"}),
+485         host\_override=options.host,
+486         extra\_headers=\{\textcolor{stringliteral}{"Cookie"}:
+487                        \textcolor{stringliteral}{'dev\_appserver\_login="%s:False"'} % email\},
+488         save\_cookies=options.save\_cookies)
+489     \textcolor{comment}{# Don't try to talk to ClientLogin.}
+490     server.authenticated = \textcolor{keyword}{True}
+491     \textcolor{keywordflow}{return} server
+492 
+493   \textcolor{keywordflow}{return} rpc\_server\_class(options.server, GetUserCredentials,
+494                           host\_override=options.host,
+495                           save\_cookies=options.save\_cookies)
+496 
+497 
+\end{DoxyCode}
+\index{upload@{upload}!Guess\+V\+CS@{Guess\+V\+CS}}
+\index{Guess\+V\+CS@{Guess\+V\+CS}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Guess\+V\+C\+S(options)}{GuessVCS(options)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Guess\+V\+CS (
+\begin{DoxyParamCaption}
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_a31390568253accd22ee51861eaeb99bd}{}\label{namespaceupload_a31390568253accd22ee51861eaeb99bd}
+\begin{DoxyVerb}Helper to guess the version control system.
+
+This examines the current directory, guesses which VersionControlSystem
+we're using, and returns an instance of the appropriate class.  Exit with an
+error if we can't figure it out.
+
+Returns:
+  A VersionControlSystem instance. Exits if the VCS can't be guessed.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+1209 \textcolor{keyword}{def }\hyperlink{namespaceupload_a31390568253accd22ee51861eaeb99bd}{GuessVCS}(options):
+1210   \textcolor{stringliteral}{"""Helper to guess the version control system.}
+1211 \textcolor{stringliteral}{}
+1212 \textcolor{stringliteral}{  This examines the current directory, guesses which VersionControlSystem}
+1213 \textcolor{stringliteral}{  we're using, and returns an instance of the appropriate class.  Exit with an}
+1214 \textcolor{stringliteral}{  error if we can't figure it out.}
+1215 \textcolor{stringliteral}{}
+1216 \textcolor{stringliteral}{  Returns:}
+1217 \textcolor{stringliteral}{    A VersionControlSystem instance. Exits if the VCS can't be guessed.}
+1218 \textcolor{stringliteral}{  """}
+1219   \textcolor{comment}{# Mercurial has a command to get the base directory of a repository}
+1220   \textcolor{comment}{# Try running it, but don't die if we don't have hg installed.}
+1221   \textcolor{comment}{# NOTE: we try Mercurial first as it can sit on top of an SVN working copy.}
+1222   \textcolor{keywordflow}{try}:
+1223     out, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}([\textcolor{stringliteral}{"hg"}, \textcolor{stringliteral}{"root"}])
+1224     \textcolor{keywordflow}{if} returncode == 0:
+1225       \textcolor{keywordflow}{return} MercurialVCS(options, out.strip())
+1226   \textcolor{keywordflow}{except} OSError, (errno, message):
+1227     \textcolor{keywordflow}{if} errno != 2:  \textcolor{comment}{# ENOENT -- they don't have hg installed.}
+1228       \textcolor{keywordflow}{raise}
+1229 
+1230   \textcolor{comment}{# Subversion has a .svn in all working directories.}
+1231   \textcolor{keywordflow}{if} os.path.isdir(\textcolor{stringliteral}{'.svn'}):
+1232     logging.info(\textcolor{stringliteral}{"Guessed VCS = Subversion"})
+1233     \textcolor{keywordflow}{return} SubversionVCS(options)
+1234 
+1235   \textcolor{comment}{# Git has a command to test if you're in a git tree.}
+1236   \textcolor{comment}{# Try running it, but don't die if we don't have git installed.}
+1237   \textcolor{keywordflow}{try}:
+1238     out, returncode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}([\textcolor{stringliteral}{"git"}, \textcolor{stringliteral}{"rev-parse"},
+1239                                               \textcolor{stringliteral}{"--is-inside-work-tree"}])
+1240     \textcolor{keywordflow}{if} returncode == 0:
+1241       \textcolor{keywordflow}{return} GitVCS(options)
+1242   \textcolor{keywordflow}{except} OSError, (errno, message):
+1243     \textcolor{keywordflow}{if} errno != 2:  \textcolor{comment}{# ENOENT -- they don't have git installed.}
+1244       \textcolor{keywordflow}{raise}
+1245 
+1246   \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}((\textcolor{stringliteral}{"Could not guess version control system. "}
+1247              \textcolor{stringliteral}{"Are you in a working copy directory?"}))
+1248 
+1249 
+\end{DoxyCode}
+\index{upload@{upload}!main@{main}}
+\index{main@{main}!upload@{upload}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_aef3fcf7a8d77d13ba75adbf58b6c43ee}{}\label{namespaceupload_aef3fcf7a8d77d13ba75adbf58b6c43ee}
+
+\begin{DoxyCode}
+1377 \textcolor{keyword}{def }\hyperlink{namespacerelease__docs_ac4eb92814ebe701e3936d1bfdd2ecf73}{main}():
+1378   \textcolor{keywordflow}{try}:
+1379     \hyperlink{namespaceupload_ad6226af96c9f1905602b8002bd5de952}{RealMain}(sys.argv)
+1380   \textcolor{keywordflow}{except} KeyboardInterrupt:
+1381     \textcolor{keywordflow}{print}
+1382     \hyperlink{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{StatusUpdate}(\textcolor{stringliteral}{"Interrupted."})
+1383     sys.exit(1)
+1384 
+1385 
+\end{DoxyCode}
+\index{upload@{upload}!Real\+Main@{Real\+Main}}
+\index{Real\+Main@{Real\+Main}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Real\+Main(argv, data=\+None)}{RealMain(argv, data=None)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Real\+Main (
+\begin{DoxyParamCaption}
+\item[{}]{argv, }
+\item[{}]{data = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_ad6226af96c9f1905602b8002bd5de952}{}\label{namespaceupload_ad6226af96c9f1905602b8002bd5de952}
+\begin{DoxyVerb}The real main function.
+
+Args:
+  argv: Command line arguments.
+  data: Diff contents. If None (default) the diff is generated by
+    the VersionControlSystem implementation returned by GuessVCS().
+
+Returns:
+  A 2-tuple (issue id, patchset id).
+  The patchset id is None if the base files are not uploaded by this
+  script (applies only to SVN checkouts).
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+1250 \textcolor{keyword}{def }\hyperlink{namespaceupload_ad6226af96c9f1905602b8002bd5de952}{RealMain}(argv, data=None):
+1251   \textcolor{stringliteral}{"""The real main function.}
+1252 \textcolor{stringliteral}{}
+1253 \textcolor{stringliteral}{  Args:}
+1254 \textcolor{stringliteral}{    argv: Command line arguments.}
+1255 \textcolor{stringliteral}{    data: Diff contents. If None (default) the diff is generated by}
+1256 \textcolor{stringliteral}{      the VersionControlSystem implementation returned by GuessVCS().}
+1257 \textcolor{stringliteral}{}
+1258 \textcolor{stringliteral}{  Returns:}
+1259 \textcolor{stringliteral}{    A 2-tuple (issue id, patchset id).}
+1260 \textcolor{stringliteral}{    The patchset id is None if the base files are not uploaded by this}
+1261 \textcolor{stringliteral}{    script (applies only to SVN checkouts).}
+1262 \textcolor{stringliteral}{  """}
+1263   logging.basicConfig(format=(\textcolor{stringliteral}{"%(asctime).19s %(levelname)s %(filename)s:"}
+1264                               \textcolor{stringliteral}{"%(lineno)s %(message)s "}))
+1265   os.environ[\textcolor{stringliteral}{'LC\_ALL'}] = \textcolor{stringliteral}{'C'}
+1266   options, args = parser.parse\_args(argv[1:])
+1267   \textcolor{keyword}{global} verbosity
+1268   verbosity = options.verbose
+1269   \textcolor{keywordflow}{if} verbosity >= 3:
+1270     logging.getLogger().setLevel(logging.DEBUG)
+1271   \textcolor{keywordflow}{elif} verbosity >= 2:
+1272     logging.getLogger().setLevel(logging.INFO)
+1273   vcs = \hyperlink{namespaceupload_a31390568253accd22ee51861eaeb99bd}{GuessVCS}(options)
+1274   \textcolor{keywordflow}{if} isinstance(vcs, SubversionVCS):
+1275     \textcolor{comment}{# base field is only allowed for Subversion.}
+1276     \textcolor{comment}{# Note: Fetching base files may become deprecated in future releases.}
+1277     base = vcs.GuessBase(options.download\_base)
+1278   \textcolor{keywordflow}{else}:
+1279     base = \textcolor{keywordtype}{None}
+1280   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} base \textcolor{keywordflow}{and} options.download\_base:
+1281     options.download\_base = \textcolor{keyword}{True}
+1282     logging.info(\textcolor{stringliteral}{"Enabled upload of base file"})
+1283   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} options.assume\_yes:
+1284     vcs.CheckForUnknownFiles()
+1285   \textcolor{keywordflow}{if} data \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+1286     data = vcs.GenerateDiff(args)
+1287   files = vcs.GetBaseFiles(data)
+1288   \textcolor{keywordflow}{if} verbosity >= 1:
+1289     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Upload server:"}, options.server, \textcolor{stringliteral}{"(change with -s/--server)"}
+1290   \textcolor{keywordflow}{if} options.issue:
+1291     prompt = \textcolor{stringliteral}{"Message describing this patch set: "}
+1292   \textcolor{keywordflow}{else}:
+1293     prompt = \textcolor{stringliteral}{"New issue subject: "}
+1294   message = options.message \textcolor{keywordflow}{or} raw\_input(prompt).strip()
+1295   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} message:
+1296     \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"A non-empty message is required"})
+1297   rpc\_server = \hyperlink{namespaceupload_a1dadef480a702dbc5d0fb66203b9abe7}{GetRpcServer}(options)
+1298   form\_fields = [(\textcolor{stringliteral}{"subject"}, message)]
+1299   \textcolor{keywordflow}{if} base:
+1300     form\_fields.append((\textcolor{stringliteral}{"base"}, base))
+1301   \textcolor{keywordflow}{if} options.issue:
+1302     form\_fields.append((\textcolor{stringliteral}{"issue"}, str(options.issue)))
+1303   \textcolor{keywordflow}{if} options.email:
+1304     form\_fields.append((\textcolor{stringliteral}{"user"}, options.email))
+1305   \textcolor{keywordflow}{if} options.reviewers:
+1306     \textcolor{keywordflow}{for} reviewer \textcolor{keywordflow}{in} options.reviewers.split(\textcolor{stringliteral}{','}):
+1307       \textcolor{keywordflow}{if} \textcolor{stringliteral}{"@"} \textcolor{keywordflow}{in} reviewer \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} reviewer.split(\textcolor{stringliteral}{"@"})[1].\hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}(\textcolor{stringliteral}{"."}) == 1:
+1308         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Invalid email address: %s"} % reviewer)
+1309     form\_fields.append((\textcolor{stringliteral}{"reviewers"}, options.reviewers))
+1310   \textcolor{keywordflow}{if} options.cc:
+1311     \textcolor{keywordflow}{for} cc \textcolor{keywordflow}{in} options.cc.split(\textcolor{stringliteral}{','}):
+1312       \textcolor{keywordflow}{if} \textcolor{stringliteral}{"@"} \textcolor{keywordflow}{in} cc \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} cc.split(\textcolor{stringliteral}{"@"})[1].\hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}(\textcolor{stringliteral}{"."}) == 1:
+1313         \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Invalid email address: %s"} % cc)
+1314     form\_fields.append((\textcolor{stringliteral}{"cc"}, options.cc))
+1315   description = options.description
+1316   \textcolor{keywordflow}{if} options.description\_file:
+1317     \textcolor{keywordflow}{if} options.description:
+1318       \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Can't specify description and description\_file"})
+1319     file = open(options.description\_file, \textcolor{stringliteral}{'r')}
+1320 \textcolor{stringliteral}{    description = file.read()}
+1321 \textcolor{stringliteral}{    file.close()}
+1322 \textcolor{stringliteral}{  }\textcolor{keywordflow}{if} description:
+1323     form\_fields.append((\textcolor{stringliteral}{"description"}, description))
+1324   \textcolor{comment}{# Send a hash of all the base file so the server can determine if a copy}
+1325   \textcolor{comment}{# already exists in an earlier patchset.}
+1326   base\_hashes = \textcolor{stringliteral}{""}
+1327   \textcolor{keywordflow}{for} file, info \textcolor{keywordflow}{in} files.iteritems():
+1328     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} info[0] \textcolor{keywordflow}{is} \textcolor{keywordtype}{None}:
+1329       checksum = md5.new(info[0]).hexdigest()
+1330       \textcolor{keywordflow}{if} base\_hashes:
+1331         base\_hashes += \textcolor{stringliteral}{"|"}
+1332       base\_hashes += checksum + \textcolor{stringliteral}{":"} + file
+1333   form\_fields.append((\textcolor{stringliteral}{"base\_hashes"}, base\_hashes))
+1334   \textcolor{comment}{# If we're uploading base files, don't send the email before the uploads, so}
+1335   \textcolor{comment}{# that it contains the file status.}
+1336   \textcolor{keywordflow}{if} options.send\_mail \textcolor{keywordflow}{and} options.download\_base:
+1337     form\_fields.append((\textcolor{stringliteral}{"send\_mail"}, \textcolor{stringliteral}{"1"}))
+1338   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} options.download\_base:
+1339     form\_fields.append((\textcolor{stringliteral}{"content\_upload"}, \textcolor{stringliteral}{"1"}))
+1340   \textcolor{keywordflow}{if} len(data) > MAX\_UPLOAD\_SIZE:
+1341     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Patch is large, so uploading file patches separately."}
+1342     uploaded\_diff\_file = []
+1343     form\_fields.append((\textcolor{stringliteral}{"separate\_patches"}, \textcolor{stringliteral}{"1"}))
+1344   \textcolor{keywordflow}{else}:
+1345     uploaded\_diff\_file = [(\textcolor{stringliteral}{"data"}, \textcolor{stringliteral}{"data.diff"}, data)]
+1346   ctype, body = \hyperlink{namespaceupload_ae12985a2c860c124c502dd2099b702eb}{EncodeMultipartFormData}(form\_fields, uploaded\_diff\_file)
+1347   response\_body = rpc\_server.Send(\textcolor{stringliteral}{"/upload"}, body, content\_type=ctype)
+1348   patchset = \textcolor{keywordtype}{None}
+1349   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} options.download\_base \textcolor{keywordflow}{or} \textcolor{keywordflow}{not} uploaded\_diff\_file:
+1350     lines = response\_body.splitlines()
+1351     \textcolor{keywordflow}{if} len(lines) >= 2:
+1352       msg = lines[0]
+1353       patchset = lines[1].strip()
+1354       patches = [x.split(\textcolor{stringliteral}{" "}, 1) \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} lines[2:]]
+1355     \textcolor{keywordflow}{else}:
+1356       msg = response\_body
+1357   \textcolor{keywordflow}{else}:
+1358     msg = response\_body
+1359   \hyperlink{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{StatusUpdate}(msg)
+1360   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} response\_body.startswith(\textcolor{stringliteral}{"Issue created."}) \textcolor{keywordflow}{and} \(\backslash\)
+1361   \textcolor{keywordflow}{not} response\_body.startswith(\textcolor{stringliteral}{"Issue updated."}):
+1362     sys.exit(0)
+1363   issue = msg[msg.rfind(\textcolor{stringliteral}{"/"})+1:]
+1364 
+1365   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} uploaded\_diff\_file:
+1366     result = \hyperlink{namespaceupload_a7ec83cb7f7bfb9109c19b6f91552b3ee}{UploadSeparatePatches}(issue, rpc\_server, patchset, data, options)
+1367     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} options.download\_base:
+1368       patches = result
+1369 
+1370   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} options.download\_base:
+1371     vcs.UploadBaseFiles(issue, rpc\_server, patches, patchset, options, files)
+1372     \textcolor{keywordflow}{if} options.send\_mail:
+1373       rpc\_server.Send(\textcolor{stringliteral}{"/"} + issue + \textcolor{stringliteral}{"/mail"}, payload=\textcolor{stringliteral}{""})
+1374   \textcolor{keywordflow}{return} issue, patchset
+1375 
+1376 
+\end{DoxyCode}
+\index{upload@{upload}!Run\+Shell@{Run\+Shell}}
+\index{Run\+Shell@{Run\+Shell}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Run\+Shell(command, silent\+\_\+ok=\+False, universal\+\_\+newlines=\+True, print\+\_\+output=\+False)}{RunShell(command, silent_ok=False, universal_newlines=True, print_output=False)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Run\+Shell (
+\begin{DoxyParamCaption}
+\item[{}]{command, }
+\item[{}]{silent\+\_\+ok = {\ttfamily False}, }
+\item[{}]{universal\+\_\+newlines = {\ttfamily True}, }
+\item[{}]{print\+\_\+output = {\ttfamily False}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}{}\label{namespaceupload_adddc423c49132e8879cbb25d6be2cf11}
+
+\begin{DoxyCode}
+578              print\_output=\textcolor{keyword}{False}):
+579   data, retcode = \hyperlink{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{RunShellWithReturnCode}(command, print\_output,
+580                                          universal\_newlines)
+581   \textcolor{keywordflow}{if} retcode:
+582     \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"Got error status from %s:\(\backslash\)n%s"} % (command, data))
+583   \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} silent\_ok \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} data:
+584     \hyperlink{namespaceupload_adea53186a1d73e92cc839b7c35c2c044}{ErrorExit}(\textcolor{stringliteral}{"No output from %s"} % command)
+585   \textcolor{keywordflow}{return} data
+586 
+587 
+\end{DoxyCode}
+\index{upload@{upload}!Run\+Shell\+With\+Return\+Code@{Run\+Shell\+With\+Return\+Code}}
+\index{Run\+Shell\+With\+Return\+Code@{Run\+Shell\+With\+Return\+Code}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Run\+Shell\+With\+Return\+Code(command, print\+\_\+output=\+False, universal\+\_\+newlines=\+True)}{RunShellWithReturnCode(command, print_output=False, universal_newlines=True)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Run\+Shell\+With\+Return\+Code (
+\begin{DoxyParamCaption}
+\item[{}]{command, }
+\item[{}]{print\+\_\+output = {\ttfamily False}, }
+\item[{}]{universal\+\_\+newlines = {\ttfamily True}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}{}\label{namespaceupload_afa542d3a5a4f4fce174a1c23644a9204}
+\begin{DoxyVerb}Executes a command and returns the output from stdout and the return code.
+
+Args:
+  command: Command to execute.
+  print_output: If True, the output is printed to stdout.
+                If False, both stdout and stderr are ignored.
+  universal_newlines: Use universal_newlines flag (default: True).
+
+Returns:
+  Tuple (output, return code)
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+542                            universal\_newlines=\textcolor{keyword}{True}):
+543   \textcolor{stringliteral}{"""Executes a command and returns the output from stdout and the return code.}
+544 \textcolor{stringliteral}{}
+545 \textcolor{stringliteral}{  Args:}
+546 \textcolor{stringliteral}{    command: Command to execute.}
+547 \textcolor{stringliteral}{    print\_output: If True, the output is printed to stdout.}
+548 \textcolor{stringliteral}{                  If False, both stdout and stderr are ignored.}
+549 \textcolor{stringliteral}{    universal\_newlines: Use universal\_newlines flag (default: True).}
+550 \textcolor{stringliteral}{}
+551 \textcolor{stringliteral}{  Returns:}
+552 \textcolor{stringliteral}{    Tuple (output, return code)}
+553 \textcolor{stringliteral}{  """}
+554   logging.info(\textcolor{stringliteral}{"Running %s"}, command)
+555   p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+556                        shell=use\_shell, universal\_newlines=universal\_newlines)
+557   \textcolor{keywordflow}{if} print\_output:
+558     output\_array = []
+559     \textcolor{keywordflow}{while} \textcolor{keyword}{True}:
+560       line = p.stdout.readline()
+561       \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} line:
+562         \textcolor{keywordflow}{break}
+563       \textcolor{keywordflow}{print} line.strip(\textcolor{stringliteral}{"\(\backslash\)n"})
+564       output\_array.append(line)
+565     output = \textcolor{stringliteral}{""}.join(output\_array)
+566   \textcolor{keywordflow}{else}:
+567     output = p.stdout.read()
+568   p.wait()
+569   errout = p.stderr.read()
+570   \textcolor{keywordflow}{if} print\_output \textcolor{keywordflow}{and} errout:
+571     \textcolor{keywordflow}{print} >>sys.stderr, errout
+572   p.stdout.close()
+573   p.stderr.close()
+574   \textcolor{keywordflow}{return} output, p.returncode
+575 
+576 
+\end{DoxyCode}
+\index{upload@{upload}!Split\+Patch@{Split\+Patch}}
+\index{Split\+Patch@{Split\+Patch}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Split\+Patch(data)}{SplitPatch(data)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Split\+Patch (
+\begin{DoxyParamCaption}
+\item[{}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_a9dd260785ca4cc97e245234811ef1949}{}\label{namespaceupload_a9dd260785ca4cc97e245234811ef1949}
+\begin{DoxyVerb}Splits a patch into separate pieces for each file.
+
+Args:
+  data: A string containing the output of svn diff.
+
+Returns:
+  A list of 2-tuple (filename, text) where text is the svn diff output
+    pertaining to filename.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+1141 \textcolor{keyword}{def }\hyperlink{namespaceupload_a9dd260785ca4cc97e245234811ef1949}{SplitPatch}(data):
+1142   \textcolor{stringliteral}{"""Splits a patch into separate pieces for each file.}
+1143 \textcolor{stringliteral}{}
+1144 \textcolor{stringliteral}{  Args:}
+1145 \textcolor{stringliteral}{    data: A string containing the output of svn diff.}
+1146 \textcolor{stringliteral}{}
+1147 \textcolor{stringliteral}{  Returns:}
+1148 \textcolor{stringliteral}{    A list of 2-tuple (filename, text) where text is the svn diff output}
+1149 \textcolor{stringliteral}{      pertaining to filename.}
+1150 \textcolor{stringliteral}{  """}
+1151   patches = []
+1152   filename = \textcolor{keywordtype}{None}
+1153   diff = []
+1154   \textcolor{keywordflow}{for} line \textcolor{keywordflow}{in} data.splitlines(\textcolor{keyword}{True}):
+1155     new\_filename = \textcolor{keywordtype}{None}
+1156     \textcolor{keywordflow}{if} line.startswith(\textcolor{stringliteral}{'Index:'}):
+1157       unused, new\_filename = line.split(\textcolor{stringliteral}{':'}, 1)
+1158       new\_filename = new\_filename.strip()
+1159     \textcolor{keywordflow}{elif} line.startswith(\textcolor{stringliteral}{'Property changes on:'}):
+1160       unused, temp\_filename = line.split(\textcolor{stringliteral}{':'}, 1)
+1161       \textcolor{comment}{# When a file is modified, paths use '/' between directories, however}
+1162       \textcolor{comment}{# when a property is modified '\(\backslash\)' is used on Windows.  Make them the same}
+1163       \textcolor{comment}{# otherwise the file shows up twice.}
+1164       temp\_filename = temp\_filename.strip().replace(\textcolor{stringliteral}{'\(\backslash\)\(\backslash\)'}, \textcolor{stringliteral}{'/'})
+1165       \textcolor{keywordflow}{if} temp\_filename != filename:
+1166         \textcolor{comment}{# File has property changes but no modifications, create a new diff.}
+1167         new\_filename = temp\_filename
+1168     \textcolor{keywordflow}{if} new\_filename:
+1169       \textcolor{keywordflow}{if} filename \textcolor{keywordflow}{and} diff:
+1170         patches.append((filename, \textcolor{stringliteral}{''}.join(diff)))
+1171       filename = new\_filename
+1172       diff = [line]
+1173       \textcolor{keywordflow}{continue}
+1174     \textcolor{keywordflow}{if} diff \textcolor{keywordflow}{is} \textcolor{keywordflow}{not} \textcolor{keywordtype}{None}:
+1175       diff.append(line)
+1176   \textcolor{keywordflow}{if} filename \textcolor{keywordflow}{and} diff:
+1177     patches.append((filename, \textcolor{stringliteral}{''}.join(diff)))
+1178   \textcolor{keywordflow}{return} patches
+1179 
+1180 
+\end{DoxyCode}
+\index{upload@{upload}!Status\+Update@{Status\+Update}}
+\index{Status\+Update@{Status\+Update}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Status\+Update(msg)}{StatusUpdate(msg)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Status\+Update (
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{}\label{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}
+\begin{DoxyVerb}Print a status message to stdout.
+
+If 'verbosity' is greater than 0, print the message.
+
+Args:
+  msg: The string to print.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+97 \textcolor{keyword}{def }\hyperlink{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{StatusUpdate}(msg):
+98   \textcolor{stringliteral}{"""Print a status message to stdout.}
+99 \textcolor{stringliteral}{}
+100 \textcolor{stringliteral}{  If 'verbosity' is greater than 0, print the message.}
+101 \textcolor{stringliteral}{}
+102 \textcolor{stringliteral}{  Args:}
+103 \textcolor{stringliteral}{    msg: The string to print.}
+104 \textcolor{stringliteral}{  """}
+105   \textcolor{keywordflow}{if} verbosity > 0:
+106     \textcolor{keywordflow}{print} msg
+107 
+108 
+\end{DoxyCode}
+\index{upload@{upload}!Upload\+Separate\+Patches@{Upload\+Separate\+Patches}}
+\index{Upload\+Separate\+Patches@{Upload\+Separate\+Patches}!upload@{upload}}
+\subsubsection[{\texorpdfstring{Upload\+Separate\+Patches(issue, rpc\+\_\+server, patchset, data, options)}{UploadSeparatePatches(issue, rpc_server, patchset, data, options)}}]{\setlength{\rightskip}{0pt plus 5cm}def upload.\+Upload\+Separate\+Patches (
+\begin{DoxyParamCaption}
+\item[{}]{issue, }
+\item[{}]{rpc\+\_\+server, }
+\item[{}]{patchset, }
+\item[{}]{data, }
+\item[{}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceupload_a7ec83cb7f7bfb9109c19b6f91552b3ee}{}\label{namespaceupload_a7ec83cb7f7bfb9109c19b6f91552b3ee}
+\begin{DoxyVerb}Uploads a separate patch for each file in the diff output.
+
+Returns a list of [patch_key, filename] for each file.
+\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+1181 \textcolor{keyword}{def }\hyperlink{namespaceupload_a7ec83cb7f7bfb9109c19b6f91552b3ee}{UploadSeparatePatches}(issue, rpc\_server, patchset, data, options):
+1182   \textcolor{stringliteral}{"""Uploads a separate patch for each file in the diff output.}
+1183 \textcolor{stringliteral}{}
+1184 \textcolor{stringliteral}{  Returns a list of [patch\_key, filename] for each file.}
+1185 \textcolor{stringliteral}{  """}
+1186   patches = \hyperlink{namespaceupload_a9dd260785ca4cc97e245234811ef1949}{SplitPatch}(data)
+1187   rv = []
+1188   \textcolor{keywordflow}{for} patch \textcolor{keywordflow}{in} patches:
+1189     \textcolor{keywordflow}{if} len(patch[1]) > MAX\_UPLOAD\_SIZE:
+1190       \textcolor{keywordflow}{print} (\textcolor{stringliteral}{"Not uploading the patch for "} + patch[0] +
+1191              \textcolor{stringliteral}{" because the file is too large."})
+1192       \textcolor{keywordflow}{continue}
+1193     form\_fields = [(\textcolor{stringliteral}{"filename"}, patch[0])]
+1194     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} options.download\_base:
+1195       form\_fields.append((\textcolor{stringliteral}{"content\_upload"}, \textcolor{stringliteral}{"1"}))
+1196     files = [(\textcolor{stringliteral}{"data"}, \textcolor{stringliteral}{"data.diff"}, patch[1])]
+1197     ctype, body = \hyperlink{namespaceupload_ae12985a2c860c124c502dd2099b702eb}{EncodeMultipartFormData}(form\_fields, files)
+1198     url = \textcolor{stringliteral}{"/%d/upload\_patch/%d"} % (int(issue), int(patchset))
+1199     \textcolor{keywordflow}{print} \textcolor{stringliteral}{"Uploading patch for "} + patch[0]
+1200     response\_body = rpc\_server.Send(url, body, content\_type=ctype)
+1201     lines = response\_body.splitlines()
+1202     \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} lines \textcolor{keywordflow}{or} lines[0] != \textcolor{stringliteral}{"OK"}:
+1203       \hyperlink{namespaceupload_a79ce84c196c018f3b0c7ff7a9b626b58}{StatusUpdate}(\textcolor{stringliteral}{"  --> %s"} % response\_body)
+1204       sys.exit(1)
+1205     rv.append([lines[1], patch[0]])
+1206   \textcolor{keywordflow}{return} rv
+1207 
+1208 
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\index{upload@{upload}!action@{action}}
+\index{action@{action}!upload@{upload}}
+\subsubsection[{\texorpdfstring{action}{action}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+action}\hypertarget{namespaceupload_a675d13c979f1c720866d22ed1736f580}{}\label{namespaceupload_a675d13c979f1c720866d22ed1736f580}
+\index{upload@{upload}!const@{const}}
+\index{const@{const}!upload@{upload}}
+\subsubsection[{\texorpdfstring{const}{const}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+const}\hypertarget{namespaceupload_a985aa9a71de3eb507344df65700c696d}{}\label{namespaceupload_a985aa9a71de3eb507344df65700c696d}
+\index{upload@{upload}!default@{default}}
+\index{default@{default}!upload@{upload}}
+\subsubsection[{\texorpdfstring{default}{default}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+default}\hypertarget{namespaceupload_af4be925d9a50d5ad134d86400509d0f2}{}\label{namespaceupload_af4be925d9a50d5ad134d86400509d0f2}
+\index{upload@{upload}!dest@{dest}}
+\index{dest@{dest}!upload@{upload}}
+\subsubsection[{\texorpdfstring{dest}{dest}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+dest}\hypertarget{namespaceupload_a770d9c7b49b1fede80de6078d5e49af7}{}\label{namespaceupload_a770d9c7b49b1fede80de6078d5e49af7}
+\index{upload@{upload}!group@{group}}
+\index{group@{group}!upload@{upload}}
+\subsubsection[{\texorpdfstring{group}{group}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+group = parser.\+add\+\_\+option\+\_\+group(\char`\"{}Logging options\char`\"{})}\hypertarget{namespaceupload_a9d33d66de17175dced88ffe95f079226}{}\label{namespaceupload_a9d33d66de17175dced88ffe95f079226}
+\index{upload@{upload}!help@{help}}
+\index{help@{help}!upload@{upload}}
+\subsubsection[{\texorpdfstring{help}{help}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+help}\hypertarget{namespaceupload_abfc23c9aa2d9b777678da117a85929a5}{}\label{namespaceupload_abfc23c9aa2d9b777678da117a85929a5}
+\index{upload@{upload}!M\+A\+X\+\_\+\+U\+P\+L\+O\+A\+D\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+U\+P\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}}
+\index{M\+A\+X\+\_\+\+U\+P\+L\+O\+A\+D\+\_\+\+S\+I\+ZE@{M\+A\+X\+\_\+\+U\+P\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}!upload@{upload}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+U\+P\+L\+O\+A\+D\+\_\+\+S\+I\+ZE}{MAX_UPLOAD_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}int upload.\+M\+A\+X\+\_\+\+U\+P\+L\+O\+A\+D\+\_\+\+S\+I\+ZE = 900}\hypertarget{namespaceupload_aad5b1a43823e2a710a2f78e33dde8901}{}\label{namespaceupload_aad5b1a43823e2a710a2f78e33dde8901}
+\index{upload@{upload}!metavar@{metavar}}
+\index{metavar@{metavar}!upload@{upload}}
+\subsubsection[{\texorpdfstring{metavar}{metavar}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+metavar}\hypertarget{namespaceupload_af1cea8af5389f0ab2d8b65b2c0fd2fe0}{}\label{namespaceupload_af1cea8af5389f0ab2d8b65b2c0fd2fe0}
+\index{upload@{upload}!parser@{parser}}
+\index{parser@{parser}!upload@{upload}}
+\subsubsection[{\texorpdfstring{parser}{parser}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+parser = optparse.\+Option\+Parser(usage=\char`\"{}\%prog \mbox{[}options\mbox{]} \mbox{[}-\/-\/ diff\+\_\+options\mbox{]}\char`\"{})}\hypertarget{namespaceupload_af9e508d19dc2dd9cdb7c642dde0bdd21}{}\label{namespaceupload_af9e508d19dc2dd9cdb7c642dde0bdd21}
+\index{upload@{upload}!type@{type}}
+\index{type@{type}!upload@{upload}}
+\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+type}\hypertarget{namespaceupload_a4fc56f0dd6613be15c3c4dc3af3619ce}{}\label{namespaceupload_a4fc56f0dd6613be15c3c4dc3af3619ce}
+\index{upload@{upload}!use\+\_\+shell@{use\+\_\+shell}}
+\index{use\+\_\+shell@{use\+\_\+shell}!upload@{upload}}
+\subsubsection[{\texorpdfstring{use\+\_\+shell}{use_shell}}]{\setlength{\rightskip}{0pt plus 5cm}upload.\+use\+\_\+shell = sys.\+platform.\+startswith(\char`\"{}win\char`\"{})}\hypertarget{namespaceupload_afa85ceef00a65cd276a856404eb5f310}{}\label{namespaceupload_afa85ceef00a65cd276a856404eb5f310}
+\index{upload@{upload}!verbosity@{verbosity}}
+\index{verbosity@{verbosity}!upload@{upload}}
+\subsubsection[{\texorpdfstring{verbosity}{verbosity}}]{\setlength{\rightskip}{0pt plus 5cm}int upload.\+verbosity = 1}\hypertarget{namespaceupload_a79aff46409a98c4e5f608c8df1fd4612}{}\label{namespaceupload_a79aff46409a98c4e5f608c8df1fd4612}

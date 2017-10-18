@@ -1,0 +1,34 @@
+\hypertarget{vendor_2googletest_2googlemock_2CMakeLists_8txt}{}\section{vendor/googletest/googlemock/\+C\+Make\+Lists.txt File Reference}
+\label{vendor_2googletest_2googlemock_2CMakeLists_8txt}\index{vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt@{vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vendor_2googletest_2googlemock_2CMakeLists_8txt_ad4a07d3dae9ba1cb4d75069658c646dc}{option} (B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS\char`\"{}Build shared libraries (D\+L\+Ls).\char`\"{}O\+FF) option(gmock\+\_\+build\+\_\+tests\char`\"{}Build all of Google \hyperlink{classMock}{Mock}\textquotesingle{}s own tests.\char`\"{}O\+FF) if(E\+X\+I\+S\+TS\char`\"{}\$
+\item 
+gtest C\+Make\+Lists txt \hyperlink{vendor_2googletest_2googlemock_2CMakeLists_8txt_aa99cc432a5064db15e7653de9d85d2d2}{set} (gtest\+\_\+dir gtest) else() set(gtest\+\_\+dir../googletest) endif() include(\char`\"{}\$
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt@{vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt}!option@{option}}
+\index{option@{option}!vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt@{vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt}}
+\subsubsection[{\texorpdfstring{option(\+B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS""Build shared libraries (\+D\+L\+Ls).""O\+F\+F) option(gmock\+\_\+build\+\_\+tests""Build all of Google Mock\textquotesingle{}s own tests.""O\+F\+F) if(\+E\+X\+I\+S\+TS""\$}{option(BUILD_SHARED_LIBS"Build shared libraries (DLLs)."OFF) option(gmock_build_tests"Build all of Google Mock's own tests."OFF) if(EXISTS"$}}]{\setlength{\rightskip}{0pt plus 5cm}option (
+\begin{DoxyParamCaption}
+\item[{B\+U\+I\+L\+D\+\_\+\+S\+H\+A\+R\+E\+D\+\_\+\+L\+I\+BS\char`\"{}Build shared libraries (D\+L\+Ls).\char`\"{}}]{O\+FF}
+\end{DoxyParamCaption}
+)}\hypertarget{vendor_2googletest_2googlemock_2CMakeLists_8txt_ad4a07d3dae9ba1cb4d75069658c646dc}{}\label{vendor_2googletest_2googlemock_2CMakeLists_8txt_ad4a07d3dae9ba1cb4d75069658c646dc}
+
+\begin{DoxyCode}
+15              \{CMAKE\_CURRENT\_SOURCE\_DIR\}/\hyperlink{namespacefuse__gmock__files_a3fb36dbe8d361f9ecc54e1aa4b94b068}{gtest}/CMakeLists.txt\textcolor{stringliteral}{")}
+\end{DoxyCode}
+\index{vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt@{vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt}!set@{set}}
+\index{set@{set}!vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt@{vendor/googletest/googlemock/\+C\+Make\+Lists.\+txt}}
+\subsubsection[{\texorpdfstring{set(gtest\+\_\+dir gtest) else() set(gtest\+\_\+dir../googletest) endif() include(""\$}{set(gtest_dir gtest) else() set(gtest_dir../googletest) endif() include("$}}]{\setlength{\rightskip}{0pt plus 5cm}gtest C\+Make\+Lists txt set (
+\begin{DoxyParamCaption}
+\item[{gtest\+\_\+dir}]{gtest}
+\end{DoxyParamCaption}
+)}\hypertarget{vendor_2googletest_2googlemock_2CMakeLists_8txt_aa99cc432a5064db15e7653de9d85d2d2}{}\label{vendor_2googletest_2googlemock_2CMakeLists_8txt_aa99cc432a5064db15e7653de9d85d2d2}
+
+\begin{DoxyCode}
+22           \{gtest\_dir\}/cmake/hermetic\_build.cmake\textcolor{stringliteral}{" OPTIONAL)}
+\end{DoxyCode}

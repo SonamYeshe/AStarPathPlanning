@@ -1,0 +1,115 @@
+\hypertarget{classPredicate2Test}{}\section{Predicate2\+Test Class Reference}
+\label{classPredicate2Test}\index{Predicate2\+Test@{Predicate2\+Test}}
+
+
+Inheritance diagram for Predicate2\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classPredicate2Test__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Predicate2\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classPredicate2Test__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classPredicate2Test_a9778563daf4846327d32061c1a8ccba0}{Set\+Up} ()
+\item 
+virtual void \hyperlink{classPredicate2Test_a7379f8f7772af6b4c76edcc90b6aaaeb}{Tear\+Down} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classPredicate2Test_a56cf1f0f556addd9a62e0644dc1a86fc}{expected\+\_\+to\+\_\+finish\+\_\+}
+\item 
+static bool \hyperlink{classPredicate2Test_a30f4ef76d3004253078e767e5c653b85}{finished\+\_\+}
+\item 
+static int \hyperlink{classPredicate2Test_ac002d8e279b24e75906fd19973fc2170}{n1\+\_\+}
+\item 
+static int \hyperlink{classPredicate2Test_a9dbe5173570b9b911af2df889c287027}{n2\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\index{Predicate2\+Test@{Predicate2\+Test}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Predicate2\+Test@{Predicate2\+Test}}
+\subsubsection[{\texorpdfstring{Set\+Up()}{SetUp()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Predicate2\+Test\+::\+Set\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classPredicate2Test_a9778563daf4846327d32061c1a8ccba0}{}\label{classPredicate2Test_a9778563daf4846327d32061c1a8ccba0}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a190315150c303ddf801313fd1a777733}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+517                        \{
+518     \hyperlink{classPredicate2Test_a56cf1f0f556addd9a62e0644dc1a86fc}{expected\_to\_finish\_} = \textcolor{keyword}{true};
+519     \hyperlink{classPredicate2Test_a30f4ef76d3004253078e767e5c653b85}{finished\_} = \textcolor{keyword}{false};
+520     \hyperlink{classPredicate2Test_ac002d8e279b24e75906fd19973fc2170}{n1\_} = \hyperlink{classPredicate2Test_a9dbe5173570b9b911af2df889c287027}{n2\_} = 0;
+521   \}
+\end{DoxyCode}
+\index{Predicate2\+Test@{Predicate2\+Test}!Tear\+Down@{Tear\+Down}}
+\index{Tear\+Down@{Tear\+Down}!Predicate2\+Test@{Predicate2\+Test}}
+\subsubsection[{\texorpdfstring{Tear\+Down()}{TearDown()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Predicate2\+Test\+::\+Tear\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classPredicate2Test_a7379f8f7772af6b4c76edcc90b6aaaeb}{}\label{classPredicate2Test_a7379f8f7772af6b4c76edcc90b6aaaeb}
+
+
+Reimplemented from \hyperlink{classtesting_1_1Test_a5f0ab439802cbe0ef7552f1a9f791923}{testing\+::\+Test}.
+
+
+\begin{DoxyCode}
+523                           \{
+524     \textcolor{comment}{// Verifies that each of the predicate's arguments was evaluated}
+525     \textcolor{comment}{// exactly once.}
+526     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{classPredicate2Test_ac002d8e279b24e75906fd19973fc2170}{n1\_}) <<
+527         \textcolor{stringliteral}{"The predicate assertion didn't evaluate argument 2 "}
+528         \textcolor{stringliteral}{"exactly once."};
+529     \hyperlink{gtest_8h_a4159019abda84f5366acdb7604ff220a}{EXPECT\_EQ}(1, \hyperlink{classPredicate2Test_a9dbe5173570b9b911af2df889c287027}{n2\_}) <<
+530         \textcolor{stringliteral}{"The predicate assertion didn't evaluate argument 3 "}
+531         \textcolor{stringliteral}{"exactly once."};
+532 
+533     \textcolor{comment}{// Verifies that the control flow in the test function is expected.}
+534     \textcolor{keywordflow}{if} (\hyperlink{classPredicate2Test_a56cf1f0f556addd9a62e0644dc1a86fc}{expected\_to\_finish\_} && !\hyperlink{classPredicate2Test_a30f4ef76d3004253078e767e5c653b85}{finished\_}) \{
+535       \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"The predicate assertion unexpactedly aborted the test."};
+536     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\hyperlink{classPredicate2Test_a56cf1f0f556addd9a62e0644dc1a86fc}{expected\_to\_finish\_} && \hyperlink{classPredicate2Test_a30f4ef76d3004253078e767e5c653b85}{finished\_}) \{
+537       \hyperlink{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}() << \textcolor{stringliteral}{"The failed predicate assertion didn't abort the test "}
+538                 \textcolor{stringliteral}{"as expected."};
+539     \}
+540   \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Predicate2\+Test@{Predicate2\+Test}!expected\+\_\+to\+\_\+finish\+\_\+@{expected\+\_\+to\+\_\+finish\+\_\+}}
+\index{expected\+\_\+to\+\_\+finish\+\_\+@{expected\+\_\+to\+\_\+finish\+\_\+}!Predicate2\+Test@{Predicate2\+Test}}
+\subsubsection[{\texorpdfstring{expected\+\_\+to\+\_\+finish\+\_\+}{expected_to_finish_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Predicate2\+Test\+::expected\+\_\+to\+\_\+finish\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classPredicate2Test_a56cf1f0f556addd9a62e0644dc1a86fc}{}\label{classPredicate2Test_a56cf1f0f556addd9a62e0644dc1a86fc}
+\index{Predicate2\+Test@{Predicate2\+Test}!finished\+\_\+@{finished\+\_\+}}
+\index{finished\+\_\+@{finished\+\_\+}!Predicate2\+Test@{Predicate2\+Test}}
+\subsubsection[{\texorpdfstring{finished\+\_\+}{finished_}}]{\setlength{\rightskip}{0pt plus 5cm}bool Predicate2\+Test\+::finished\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classPredicate2Test_a30f4ef76d3004253078e767e5c653b85}{}\label{classPredicate2Test_a30f4ef76d3004253078e767e5c653b85}
+\index{Predicate2\+Test@{Predicate2\+Test}!n1\+\_\+@{n1\+\_\+}}
+\index{n1\+\_\+@{n1\+\_\+}!Predicate2\+Test@{Predicate2\+Test}}
+\subsubsection[{\texorpdfstring{n1\+\_\+}{n1_}}]{\setlength{\rightskip}{0pt plus 5cm}int Predicate2\+Test\+::n1\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classPredicate2Test_ac002d8e279b24e75906fd19973fc2170}{}\label{classPredicate2Test_ac002d8e279b24e75906fd19973fc2170}
+\index{Predicate2\+Test@{Predicate2\+Test}!n2\+\_\+@{n2\+\_\+}}
+\index{n2\+\_\+@{n2\+\_\+}!Predicate2\+Test@{Predicate2\+Test}}
+\subsubsection[{\texorpdfstring{n2\+\_\+}{n2_}}]{\setlength{\rightskip}{0pt plus 5cm}int Predicate2\+Test\+::n2\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{classPredicate2Test_a9dbe5173570b9b911af2df889c287027}{}\label{classPredicate2Test_a9dbe5173570b9b911af2df889c287027}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/test/\hyperlink{gtest__pred__impl__unittest_8cc}{gtest\+\_\+pred\+\_\+impl\+\_\+unittest.\+cc}\end{DoxyCompactItemize}

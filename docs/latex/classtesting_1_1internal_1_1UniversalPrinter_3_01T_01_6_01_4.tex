@@ -1,0 +1,38 @@
+\hypertarget{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4}{}\section{testing\+:\+:internal\+:\+:Universal\+Printer$<$ T \& $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4}\index{testing\+::internal\+::\+Universal\+Printer$<$ T \& $>$@{testing\+::internal\+::\+Universal\+Printer$<$ T \& $>$}}
+
+
+{\ttfamily \#include $<$gtest-\/printers.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4_a2a63ddb20294c4234b7e8f3c7a56355d}{Print} (const T \&value,\+::std\+::ostream $\ast$os)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Universal\+Printer$<$ T \& $>$@{testing\+::internal\+::\+Universal\+Printer$<$ T \& $>$}!Print@{Print}}
+\index{Print@{Print}!testing\+::internal\+::\+Universal\+Printer$<$ T \& $>$@{testing\+::internal\+::\+Universal\+Printer$<$ T \& $>$}}
+\subsubsection[{\texorpdfstring{Print(const T \&value,\+::std\+::ostream $\ast$os)}{Print(const T &value,::std::ostream *os)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static void {\bf testing\+::internal\+::\+Universal\+Printer}$<$ T \& $>$\+::Print (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{value, }
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4_a2a63ddb20294c4234b7e8f3c7a56355d}{}\label{classtesting_1_1internal_1_1UniversalPrinter_3_01T_01_6_01_4_a2a63ddb20294c4234b7e8f3c7a56355d}
+
+\begin{DoxyCode}
+764                                                     \{
+765     \textcolor{comment}{// Prints the address of the value.  We use reinterpret\_cast here}
+766     \textcolor{comment}{// as static\_cast doesn't compile when T is a function type.}
+767     *os << \textcolor{stringliteral}{"@"} << \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{void}*\textcolor{keyword}{>}(&value) << \textcolor{stringliteral}{" "};
+768 
+769     \textcolor{comment}{// Then prints the value itself.}
+770     \hyperlink{namespacetesting_1_1internal_ad121a890bddf866e59605d1a0198dada}{UniversalPrint}(value, os);
+771   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/include/gtest/\hyperlink{gtest-printers_8h}{gtest-\/printers.\+h}\end{DoxyCompactItemize}

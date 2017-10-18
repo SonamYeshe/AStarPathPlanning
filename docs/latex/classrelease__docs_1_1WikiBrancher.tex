@@ -1,0 +1,183 @@
+\hypertarget{classrelease__docs_1_1WikiBrancher}{}\section{release\+\_\+docs.\+Wiki\+Brancher Class Reference}
+\label{classrelease__docs_1_1WikiBrancher}\index{release\+\_\+docs.\+Wiki\+Brancher@{release\+\_\+docs.\+Wiki\+Brancher}}
+
+
+Inheritance diagram for release\+\_\+docs.\+Wiki\+Brancher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classrelease__docs_1_1WikiBrancher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for release\+\_\+docs.\+Wiki\+Brancher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classrelease__docs_1_1WikiBrancher__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classrelease__docs_1_1WikiBrancher_a344b32e2b65f0e8bab9fbf1e670d33fd}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, dot\+\_\+version)
+\item 
+def \hyperlink{classrelease__docs_1_1WikiBrancher_a05fc4282f501fb0210ecb33fd1d209a6}{Get\+Files\+To\+Branch} (self)
+\item 
+def \hyperlink{classrelease__docs_1_1WikiBrancher_a5ef284f7e1742f465ecd0c14d2667327}{Branch\+Files} (self)
+\item 
+def \hyperlink{classrelease__docs_1_1WikiBrancher_aa0bc4b1b78426fe7a8496d570b540f1d}{Update\+Links\+In\+Branched\+Files} (self)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classrelease__docs_1_1WikiBrancher_ad86478c9538ac0bf3916f67eb5da2910}{wiki\+\_\+dir}
+\item 
+\hyperlink{classrelease__docs_1_1WikiBrancher_aae330aeef850b105795c5d75727448ba}{version\+\_\+prefix}
+\item 
+\hyperlink{classrelease__docs_1_1WikiBrancher_a938c78ba6e8adfb6af039dd500ac6466}{files\+\_\+to\+\_\+branch}
+\item 
+\hyperlink{classrelease__docs_1_1WikiBrancher_a029ce9007fefd6ac5f13bacdedb29af5}{search\+\_\+for\+\_\+re}
+\item 
+\hyperlink{classrelease__docs_1_1WikiBrancher_aa33d991e629cc94fbfefe4f8569e283e}{replace\+\_\+with}
+\item 
+\hyperlink{classrelease__docs_1_1WikiBrancher_a4ac9c796f95690cca04049b557055443}{project}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Branches ...\end{DoxyVerb}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, dot\+\_\+version)}{__init__(self, dot_version)}}]{\setlength{\rightskip}{0pt plus 5cm}def release\+\_\+docs.\+Wiki\+Brancher.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{dot\+\_\+version}
+\end{DoxyParamCaption}
+)}\hypertarget{classrelease__docs_1_1WikiBrancher_a344b32e2b65f0e8bab9fbf1e670d33fd}{}\label{classrelease__docs_1_1WikiBrancher_a344b32e2b65f0e8bab9fbf1e670d33fd}
+
+\begin{DoxyCode}
+92   \textcolor{keyword}{def }\_\_init\_\_(self, dot\_version):
+93     self.project, svn\_root\_path = \hyperlink{namespacecommon_a312d07161b76d965fee6a61e464e283f}{common.GetSvnInfo}()
+94     \textcolor{keywordflow}{if} self.project \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} (\textcolor{stringliteral}{'googletest'}, \textcolor{stringliteral}{'googlemock'}):
+95       sys.exit(\textcolor{stringliteral}{'This script must be run in a gtest or gmock SVN workspace.'})
+96     self.wiki\_dir = svn\_root\_path + \textcolor{stringliteral}{'/wiki'}
+97     \textcolor{comment}{# Turn '2.6' to 'V2\_6\_'.}
+98     self.version\_prefix = \textcolor{stringliteral}{'V'} + dot\_version.replace(\textcolor{stringliteral}{'.'}, \textcolor{stringliteral}{'\_'}) + \textcolor{stringliteral}{'\_'}
+99     self.files\_to\_branch = self.GetFilesToBranch()
+100     page\_names = [\hyperlink{namespacerelease__docs_a6ea19a5ee397ce9f0565b90943d50e7f}{DropWikiSuffix}(f) \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.files\_to\_branch]
+101     \textcolor{comment}{# A link to Foo.wiki is in one of the following forms:}
+102     \textcolor{comment}{#   [Foo words]}
+103     \textcolor{comment}{#   [Foo#Anchor words]}
+104     \textcolor{comment}{#   [http://code.google.com/.../wiki/Foo words]}
+105     \textcolor{comment}{#   [http://code.google.com/.../wiki/Foo#Anchor words]}
+106     \textcolor{comment}{# We want to replace 'Foo' with 'V2\_6\_Foo' in the above cases.}
+107     self.search\_for\_re = re.compile(
+108         \textcolor{comment}{# This regex matches either}
+109         \textcolor{comment}{#   [Foo}
+110         \textcolor{comment}{# or}
+111         \textcolor{comment}{#   /wiki/Foo}
+112         \textcolor{comment}{# followed by a space or a #, where Foo is the name of an}
+113         \textcolor{comment}{# unversioned wiki page.}
+114         \textcolor{stringliteral}{r'(\(\backslash\)[|/wiki/)(%s)([ #])'} % \textcolor{stringliteral}{'|'}.join(page\_names))
+115     self.replace\_with = \textcolor{stringliteral}{r'\(\backslash\)1%s\(\backslash\)2\(\backslash\)3'} % (self.version\_prefix,)
+116 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!Branch\+Files@{Branch\+Files}}
+\index{Branch\+Files@{Branch\+Files}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{Branch\+Files(self)}{BranchFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def release\+\_\+docs.\+Wiki\+Brancher.\+Branch\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classrelease__docs_1_1WikiBrancher_a5ef284f7e1742f465ecd0c14d2667327}{}\label{classrelease__docs_1_1WikiBrancher_a5ef284f7e1742f465ecd0c14d2667327}
+\begin{DoxyVerb}Branches the .wiki files needed to be branched.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+127   \textcolor{keyword}{def }BranchFiles(self):
+128     \textcolor{stringliteral}{"""Branches the .wiki files needed to be branched."""}
+129 
+130     \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Branching %d .wiki files:'} % (len(self.files\_to\_branch),)
+131     os.chdir(self.wiki\_dir)
+132     \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.files\_to\_branch:
+133       command = \textcolor{stringliteral}{'svn cp %s %s%s'} % (f, self.version\_prefix, f)
+134       \textcolor{keywordflow}{print} command
+135       os.system(command)
+136 
+\end{DoxyCode}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!Get\+Files\+To\+Branch@{Get\+Files\+To\+Branch}}
+\index{Get\+Files\+To\+Branch@{Get\+Files\+To\+Branch}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{Get\+Files\+To\+Branch(self)}{GetFilesToBranch(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def release\+\_\+docs.\+Wiki\+Brancher.\+Get\+Files\+To\+Branch (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classrelease__docs_1_1WikiBrancher_a05fc4282f501fb0210ecb33fd1d209a6}{}\label{classrelease__docs_1_1WikiBrancher_a05fc4282f501fb0210ecb33fd1d209a6}
+\begin{DoxyVerb}Returns a list of .wiki file names that need to be branched.\end{DoxyVerb}
+ 
+\begin{DoxyCode}
+117   \textcolor{keyword}{def }GetFilesToBranch(self):
+118     \textcolor{stringliteral}{"""Returns a list of .wiki file names that need to be branched."""}
+119 
+120     unversioned\_wikis = (GTEST\_UNVERSIONED\_WIKIS \textcolor{keywordflow}{if} self.project == \textcolor{stringliteral}{'googletest'}
+121                          \textcolor{keywordflow}{else} GMOCK\_UNVERSIONED\_WIKIS)
+122     \textcolor{keywordflow}{return} [f \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} os.listdir(self.wiki\_dir)
+123             \textcolor{keywordflow}{if} (f.endswith(\textcolor{stringliteral}{'.wiki'}) \textcolor{keywordflow}{and}
+124                 \textcolor{keywordflow}{not} re.match(\textcolor{stringliteral}{r'^V\(\backslash\)d'}, f) \textcolor{keywordflow}{and}  \textcolor{comment}{# Excluded versioned .wiki files.}
+125                 f \textcolor{keywordflow}{not} \textcolor{keywordflow}{in} unversioned\_wikis)]
+126 
+\end{DoxyCode}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!Update\+Links\+In\+Branched\+Files@{Update\+Links\+In\+Branched\+Files}}
+\index{Update\+Links\+In\+Branched\+Files@{Update\+Links\+In\+Branched\+Files}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{Update\+Links\+In\+Branched\+Files(self)}{UpdateLinksInBranchedFiles(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def release\+\_\+docs.\+Wiki\+Brancher.\+Update\+Links\+In\+Branched\+Files (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classrelease__docs_1_1WikiBrancher_aa0bc4b1b78426fe7a8496d570b540f1d}{}\label{classrelease__docs_1_1WikiBrancher_aa0bc4b1b78426fe7a8496d570b540f1d}
+
+\begin{DoxyCode}
+137   \textcolor{keyword}{def }UpdateLinksInBranchedFiles(self):
+138 
+139     \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} self.files\_to\_branch:
+140       source\_file = os.path.join(self.wiki\_dir, f)
+141       versioned\_file = os.path.join(self.wiki\_dir, self.version\_prefix + f)
+142       \textcolor{keywordflow}{print} \textcolor{stringliteral}{'Updating links in %s.'} % (versioned\_file,)
+143       text = file(source\_file, \textcolor{stringliteral}{'r').read()}
+144 \textcolor{stringliteral}{      new\_text = self.search\_for\_re.sub(self.replace\_with, text)}
+145 \textcolor{stringliteral}{      file(versioned\_file, 'w'}).write(new\_text)
+146 
+147 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!files\+\_\+to\+\_\+branch@{files\+\_\+to\+\_\+branch}}
+\index{files\+\_\+to\+\_\+branch@{files\+\_\+to\+\_\+branch}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{files\+\_\+to\+\_\+branch}{files_to_branch}}]{\setlength{\rightskip}{0pt plus 5cm}release\+\_\+docs.\+Wiki\+Brancher.\+files\+\_\+to\+\_\+branch}\hypertarget{classrelease__docs_1_1WikiBrancher_a938c78ba6e8adfb6af039dd500ac6466}{}\label{classrelease__docs_1_1WikiBrancher_a938c78ba6e8adfb6af039dd500ac6466}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!project@{project}}
+\index{project@{project}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{project}{project}}]{\setlength{\rightskip}{0pt plus 5cm}release\+\_\+docs.\+Wiki\+Brancher.\+project}\hypertarget{classrelease__docs_1_1WikiBrancher_a4ac9c796f95690cca04049b557055443}{}\label{classrelease__docs_1_1WikiBrancher_a4ac9c796f95690cca04049b557055443}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!replace\+\_\+with@{replace\+\_\+with}}
+\index{replace\+\_\+with@{replace\+\_\+with}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{replace\+\_\+with}{replace_with}}]{\setlength{\rightskip}{0pt plus 5cm}release\+\_\+docs.\+Wiki\+Brancher.\+replace\+\_\+with}\hypertarget{classrelease__docs_1_1WikiBrancher_aa33d991e629cc94fbfefe4f8569e283e}{}\label{classrelease__docs_1_1WikiBrancher_aa33d991e629cc94fbfefe4f8569e283e}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!search\+\_\+for\+\_\+re@{search\+\_\+for\+\_\+re}}
+\index{search\+\_\+for\+\_\+re@{search\+\_\+for\+\_\+re}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{search\+\_\+for\+\_\+re}{search_for_re}}]{\setlength{\rightskip}{0pt plus 5cm}release\+\_\+docs.\+Wiki\+Brancher.\+search\+\_\+for\+\_\+re}\hypertarget{classrelease__docs_1_1WikiBrancher_a029ce9007fefd6ac5f13bacdedb29af5}{}\label{classrelease__docs_1_1WikiBrancher_a029ce9007fefd6ac5f13bacdedb29af5}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!version\+\_\+prefix@{version\+\_\+prefix}}
+\index{version\+\_\+prefix@{version\+\_\+prefix}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{version\+\_\+prefix}{version_prefix}}]{\setlength{\rightskip}{0pt plus 5cm}release\+\_\+docs.\+Wiki\+Brancher.\+version\+\_\+prefix}\hypertarget{classrelease__docs_1_1WikiBrancher_aae330aeef850b105795c5d75727448ba}{}\label{classrelease__docs_1_1WikiBrancher_aae330aeef850b105795c5d75727448ba}
+\index{release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}!wiki\+\_\+dir@{wiki\+\_\+dir}}
+\index{wiki\+\_\+dir@{wiki\+\_\+dir}!release\+\_\+docs\+::\+Wiki\+Brancher@{release\+\_\+docs\+::\+Wiki\+Brancher}}
+\subsubsection[{\texorpdfstring{wiki\+\_\+dir}{wiki_dir}}]{\setlength{\rightskip}{0pt plus 5cm}release\+\_\+docs.\+Wiki\+Brancher.\+wiki\+\_\+dir}\hypertarget{classrelease__docs_1_1WikiBrancher_ad86478c9538ac0bf3916f67eb5da2910}{}\label{classrelease__docs_1_1WikiBrancher_ad86478c9538ac0bf3916f67eb5da2910}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/scripts/\hyperlink{release__docs_8py}{release\+\_\+docs.\+py}\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\hypertarget{classtesting_1_1internal_1_1TuplePrefix}{}\section{testing\+:\+:internal\+:\+:Tuple\+Prefix$<$ N $>$ Class Template Reference}
+\label{classtesting_1_1internal_1_1TuplePrefix}\index{testing\+::internal\+::\+Tuple\+Prefix$<$ N $>$@{testing\+::internal\+::\+Tuple\+Prefix$<$ N $>$}}
+
+
+{\ttfamily \#include $<$gmock-\/matchers.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Matcher\+Tuple , typename Value\+Tuple $>$ }\\static bool \hyperlink{classtesting_1_1internal_1_1TuplePrefix_ada24ceee73c02e3bb7f8264143170f7a}{Matches} (const \hyperlink{structtesting_1_1internal_1_1MatcherTuple}{Matcher\+Tuple} \&matcher\+\_\+tuple, const Value\+Tuple \&value\+\_\+tuple)
+\item 
+{\footnotesize template$<$typename Matcher\+Tuple , typename Value\+Tuple $>$ }\\static void \hyperlink{classtesting_1_1internal_1_1TuplePrefix_af983f3f9254408e6dabe67b511dd22ae}{Explain\+Match\+Failures\+To} (const \hyperlink{structtesting_1_1internal_1_1MatcherTuple}{Matcher\+Tuple} \&matchers, const Value\+Tuple \&values,\+::std\+::ostream $\ast$os)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{testing\+::internal\+::\+Tuple\+Prefix@{testing\+::internal\+::\+Tuple\+Prefix}!Explain\+Match\+Failures\+To@{Explain\+Match\+Failures\+To}}
+\index{Explain\+Match\+Failures\+To@{Explain\+Match\+Failures\+To}!testing\+::internal\+::\+Tuple\+Prefix@{testing\+::internal\+::\+Tuple\+Prefix}}
+\subsubsection[{\texorpdfstring{Explain\+Match\+Failures\+To(const Matcher\+Tuple \&matchers, const Value\+Tuple \&values,\+::std\+::ostream $\ast$os)}{ExplainMatchFailuresTo(const MatcherTuple &matchers, const ValueTuple &values,::std::ostream *os)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$size\+\_\+t N$>$ template$<$typename Matcher\+Tuple , typename Value\+Tuple $>$ static void {\bf testing\+::internal\+::\+Tuple\+Prefix}$<$ N $>$\+::Explain\+Match\+Failures\+To (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matcher\+Tuple} \&}]{matchers, }
+\item[{const Value\+Tuple \&}]{values, }
+\item[{\+::std\+::ostream $\ast$}]{os}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1TuplePrefix_af983f3f9254408e6dabe67b511dd22ae}{}\label{classtesting_1_1internal_1_1TuplePrefix_af983f3f9254408e6dabe67b511dd22ae}
+
+\begin{DoxyCode}
+745                                                      \{
+746     \textcolor{comment}{// First, describes failures in the first N - 1 fields.}
+747     \hyperlink{classtesting_1_1internal_1_1TuplePrefix_af983f3f9254408e6dabe67b511dd22ae}{TuplePrefix<N - 1>::ExplainMatchFailuresTo}(matchers, values, 
+      os);
+748 
+749     \textcolor{comment}{// Then describes the failure (if any) in the (N - 1)-th (0-based)}
+750     \textcolor{comment}{// field.}
+751     \textcolor{keyword}{typename} tuple\_element<N - 1, MatcherTuple>\hyperlink{namespaceupload_a4fc56f0dd6613be15c3c4dc3af3619ce}{::type} matcher =
+752         \textcolor{keyword}{get}<N - 1>(matchers);
+753     \textcolor{keyword}{typedef} \textcolor{keyword}{typename} tuple\_element<N - 1, ValueTuple>\hyperlink{namespaceupload_a4fc56f0dd6613be15c3c4dc3af3619ce}{::type} \hyperlink{namespacetesting_ae44c50a3a7f0a46f05c8a0b0592b4a62}{Value};
+754     Value value = \textcolor{keyword}{get}<N - 1>(values);
+755     StringMatchResultListener listener;
+756     \textcolor{keywordflow}{if} (!matcher.MatchAndExplain(value, &listener)) \{
+757       \textcolor{comment}{// TODO(wan): include in the message the name of the parameter}
+758       \textcolor{comment}{// as used in MOCK\_METHOD*() when possible.}
+759       *os << \textcolor{stringliteral}{"  Expected arg #"} << N - 1 << \textcolor{stringliteral}{": "};
+760       \textcolor{keyword}{get}<N - 1>(matchers).DescribeTo(os);
+761       *os << \textcolor{stringliteral}{"\(\backslash\)n           Actual: "};
+762       \textcolor{comment}{// We remove the reference in type Value to prevent the}
+763       \textcolor{comment}{// universal printer from printing the address of value, which}
+764       \textcolor{comment}{// isn't interesting to the user most of the time.  The}
+765       \textcolor{comment}{// matcher's MatchAndExplain() method handles the case when}
+766       \textcolor{comment}{// the address is interesting.}
+767       \hyperlink{namespacetesting_1_1internal_ad121a890bddf866e59605d1a0198dada}{internal::UniversalPrint}(value, os);
+768       \hyperlink{namespacetesting_1_1internal_a77c9e2b66d2b2414db4763971180d53c}{PrintIfNotEmpty}(listener.str(), os);
+769       *os << \textcolor{stringliteral}{"\(\backslash\)n"};
+770     \}
+771   \}
+\end{DoxyCode}
+\index{testing\+::internal\+::\+Tuple\+Prefix@{testing\+::internal\+::\+Tuple\+Prefix}!Matches@{Matches}}
+\index{Matches@{Matches}!testing\+::internal\+::\+Tuple\+Prefix@{testing\+::internal\+::\+Tuple\+Prefix}}
+\subsubsection[{\texorpdfstring{Matches(const Matcher\+Tuple \&matcher\+\_\+tuple, const Value\+Tuple \&value\+\_\+tuple)}{Matches(const MatcherTuple &matcher_tuple, const ValueTuple &value_tuple)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$size\+\_\+t N$>$ template$<$typename Matcher\+Tuple , typename Value\+Tuple $>$ static bool {\bf testing\+::internal\+::\+Tuple\+Prefix}$<$ N $>$\+::Matches (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matcher\+Tuple} \&}]{matcher\+\_\+tuple, }
+\item[{const Value\+Tuple \&}]{value\+\_\+tuple}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classtesting_1_1internal_1_1TuplePrefix_ada24ceee73c02e3bb7f8264143170f7a}{}\label{classtesting_1_1internal_1_1TuplePrefix_ada24ceee73c02e3bb7f8264143170f7a}
+
+\begin{DoxyCode}
+733                                                      \{
+734     \textcolor{keywordflow}{return} \hyperlink{classtesting_1_1internal_1_1TuplePrefix_ada24ceee73c02e3bb7f8264143170f7a}{TuplePrefix<N - 1>::Matches}(matcher\_tuple, value\_tuple)
+735         && \textcolor{keyword}{get}<N - 1>(matcher\_tuple).\hyperlink{classtesting_1_1internal_1_1TuplePrefix_ada24ceee73c02e3bb7f8264143170f7a}{Matches}(get<N - 1>(value\_tuple));
+736   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googlemock/include/gmock/\hyperlink{gmock-matchers_8h}{gmock-\/matchers.\+h}\end{DoxyCompactItemize}

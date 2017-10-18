@@ -1,0 +1,78 @@
+\hypertarget{classpump_1_1Output}{}\section{pump.\+Output Class Reference}
+\label{classpump_1_1Output}\index{pump.\+Output@{pump.\+Output}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classpump_1_1Output_a01a703055e40078561bd4a5011de4a6d}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\item 
+def \hyperlink{classpump_1_1Output_a6ece94d24be171bae2a2234c052b4c58}{Get\+Last\+Line} (self)
+\item 
+def \hyperlink{classpump_1_1Output_a6f284bb3f80e03594bc28286c695f5a7}{Append} (self, s)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpump_1_1Output_a8786848ab3d235189379c449a446f883}{string}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pump\+::\+Output@{pump\+::\+Output}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!pump\+::\+Output@{pump\+::\+Output}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}{__init__(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Output.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Output_a01a703055e40078561bd4a5011de4a6d}{}\label{classpump_1_1Output_a01a703055e40078561bd4a5011de4a6d}
+
+\begin{DoxyCode}
+642   \textcolor{keyword}{def }\_\_init\_\_(self):
+643     self.string = \textcolor{stringliteral}{''}
+644 
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\index{pump\+::\+Output@{pump\+::\+Output}!Append@{Append}}
+\index{Append@{Append}!pump\+::\+Output@{pump\+::\+Output}}
+\subsubsection[{\texorpdfstring{Append(self, s)}{Append(self, s)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Output.\+Append (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Output_a6f284bb3f80e03594bc28286c695f5a7}{}\label{classpump_1_1Output_a6f284bb3f80e03594bc28286c695f5a7}
+
+\begin{DoxyCode}
+652   \textcolor{keyword}{def }Append(self, s):
+653     self.string += s
+654 
+655 
+\end{DoxyCode}
+\index{pump\+::\+Output@{pump\+::\+Output}!Get\+Last\+Line@{Get\+Last\+Line}}
+\index{Get\+Last\+Line@{Get\+Last\+Line}!pump\+::\+Output@{pump\+::\+Output}}
+\subsubsection[{\texorpdfstring{Get\+Last\+Line(self)}{GetLastLine(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def pump.\+Output.\+Get\+Last\+Line (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classpump_1_1Output_a6ece94d24be171bae2a2234c052b4c58}{}\label{classpump_1_1Output_a6ece94d24be171bae2a2234c052b4c58}
+
+\begin{DoxyCode}
+645   \textcolor{keyword}{def }GetLastLine(self):
+646     index = self.string.rfind(\textcolor{stringliteral}{'\(\backslash\)n'})
+647     \textcolor{keywordflow}{if} index < 0:
+648       \textcolor{keywordflow}{return} \textcolor{stringliteral}{''}
+649 
+650     \textcolor{keywordflow}{return} self.string[index + 1:]
+651 
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{pump\+::\+Output@{pump\+::\+Output}!string@{string}}
+\index{string@{string}!pump\+::\+Output@{pump\+::\+Output}}
+\subsubsection[{\texorpdfstring{string}{string}}]{\setlength{\rightskip}{0pt plus 5cm}pump.\+Output.\+string}\hypertarget{classpump_1_1Output_a8786848ab3d235189379c449a446f883}{}\label{classpump_1_1Output_a8786848ab3d235189379c449a446f883}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/googletest/googletest/scripts/\hyperlink{pump_8py}{pump.\+py}\end{DoxyCompactItemize}
