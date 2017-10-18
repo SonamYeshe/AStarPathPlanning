@@ -1,0 +1,12 @@
+Done processing ./include/AStarPathFinder.h
+Done processing ./include/lib.hpp
+Done processing ./include/Node.h
+Done processing ./test/main.cpp
+Done processing ./test/test.cpp
+Done processing ./test/AStarPathPlanningTest.cpp
+./app/main.cpp:11:  Found C system header after C++ system header. Should be: main.h, c system, c++ system, other.  [build/include_order] [4]
+Done processing ./app/main.cpp
+Done processing ./app/AStarPathFinder.cpp
+Done processing ./app/Node.cpp
+Total errors found: 1
+
