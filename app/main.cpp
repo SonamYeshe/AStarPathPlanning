@@ -26,7 +26,6 @@ int main() {
                                                           goalY, map);
 
   for (auto& node : path) {
-    //  std::cout << 1 << std::endl;
     std::cout << node->getX() << "," << node->getY() << std::endl;
   }
 

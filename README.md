@@ -27,6 +27,9 @@ Permissions of this strong copyleft license are conditioned on making available 
 ## Backlog google spreadsheet
 https://docs.google.com/a/terpmail.umd.edu/spreadsheets/d/1j3ytA1mPyvJpSjNRXjjnHxmMqRgYix9c8MPspWwJh78/edit?usp=sharing
 
+## Runinng Example Demo
+The demo code is in the main.cpp file. I assume there's a given map of 3*3 checkboard, the obstacle lies in the center point. The output shows the path avoiding the obstacle. Please change the given map to see how the path will change correspondingly.
+
 ## Working with Eclipse IDE ##
 
 ## Installation
