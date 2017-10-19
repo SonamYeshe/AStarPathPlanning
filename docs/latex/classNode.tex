@@ -22,6 +22,8 @@ int \hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX} () const
 \item 
 int \hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY} () const 
 \item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classNode_a707ec5f7e95ba42c15c263adc1ee70fe}{get\+Parent} () const 
+\item 
 double \hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getf\+Score} () const 
 \item 
 double \hyperlink{classNode_a6d96ac905adeaa43c9ec4cef44f5617b}{getg\+Score} () const 
@@ -34,9 +36,7 @@ void \hyperlink{classNode_a00e41993c05f5bfc5db6d98a58680c51}{setg\+Score} (doubl
 \item 
 void \hyperlink{classNode_afc359dbe960036d705b2d68a697a416e}{seth\+Score} (double h\+Score)
 \item 
-void \hyperlink{classNode_a4c4c80be951d7b2a08b7b061cc9add13}{set\+Parent} (const \hyperlink{classNode}{Node} \&parent)
-\item 
-std\+::shared\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$ \hyperlink{classNode_a707ec5f7e95ba42c15c263adc1ee70fe}{get\+Parent} () const 
+void \hyperlink{classNode_a5889e5c01190f75a7074e00c76f6a68a}{set\+Parent} (std\+::shared\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$ parent)
 \item 
 bool \hyperlink{classNode_a33836aa8a9e679df56237e2cbff64475}{operator==} (const \hyperlink{classNode}{Node} \&that) const 
 \item 
@@ -71,12 +71,8 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 
 \begin{DoxyCode}
 13            \{
-14   this->x = -1;
-15   this->y = -1;
-16   this->fScore = std::numeric\_limits<double>::max();
-17   this->gScore = std::numeric\_limits<double>::max();
-18   this->hScore = std::numeric\_limits<double>::max();
-19 \}
+14   this->init();
+15 \}
 \end{DoxyCode}
 \index{Node@{Node}!Node@{Node}}
 \index{Node@{Node}!Node@{Node}}
@@ -88,13 +84,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 )}\hypertarget{classNode_a23a19f53dfbb18fec58cdac90de3d144}{}\label{classNode_a23a19f53dfbb18fec58cdac90de3d144}
 
 \begin{DoxyCode}
-24                        \{
-25   this->x = x;
-26   this->y = y;
-27   this->fScore = std::numeric\_limits<double>::max();
-28   this->gScore = std::numeric\_limits<double>::max();
-29   this->hScore = std::numeric\_limits<double>::max();
-30 \}
+20                        \{
+21   this->init(x, y);
+22 \}
 \end{DoxyCode}
 \index{Node@{Node}!````~Node@{$\sim$\+Node}}
 \index{````~Node@{$\sim$\+Node}!Node@{Node}}
@@ -105,8 +97,8 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 )\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classNode_aa0840c3cb5c7159be6d992adecd2097c}{}\label{classNode_aa0840c3cb5c7159be6d992adecd2097c}
 
 \begin{DoxyCode}
-21             \{
-22 \}
+17             \{
+18 \}
 \end{DoxyCode}
 
 
@@ -120,9 +112,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 ) const}\hypertarget{classNode_af2d1b4d63492be819be4566bf23c2215}{}\label{classNode_af2d1b4d63492be819be4566bf23c2215}
 
 \begin{DoxyCode}
-40                              \{
-41   \textcolor{keywordflow}{return} this->fScore;
-42 \}
+44                              \{
+45   \textcolor{keywordflow}{return} this->fScore;
+46 \}
 \end{DoxyCode}
 \index{Node@{Node}!getg\+Score@{getg\+Score}}
 \index{getg\+Score@{getg\+Score}!Node@{Node}}
@@ -133,9 +125,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 ) const}\hypertarget{classNode_a6d96ac905adeaa43c9ec4cef44f5617b}{}\label{classNode_a6d96ac905adeaa43c9ec4cef44f5617b}
 
 \begin{DoxyCode}
-44                              \{
-45   \textcolor{keywordflow}{return} this->gScore;
-46 \}
+48                              \{
+49   \textcolor{keywordflow}{return} this->gScore;
+50 \}
 \end{DoxyCode}
 \index{Node@{Node}!geth\+Score@{geth\+Score}}
 \index{geth\+Score@{geth\+Score}!Node@{Node}}
@@ -146,9 +138,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 ) const}\hypertarget{classNode_a04d718022d49c317f12ecbe2829642e7}{}\label{classNode_a04d718022d49c317f12ecbe2829642e7}
 
 \begin{DoxyCode}
-48                              \{
-49   \textcolor{keywordflow}{return} this->hScore;
-50 \}
+52                              \{
+53   \textcolor{keywordflow}{return} this->hScore;
+54 \}
 \end{DoxyCode}
 \index{Node@{Node}!get\+Parent@{get\+Parent}}
 \index{get\+Parent@{get\+Parent}!Node@{Node}}
@@ -159,9 +151,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 ) const}\hypertarget{classNode_a707ec5f7e95ba42c15c263adc1ee70fe}{}\label{classNode_a707ec5f7e95ba42c15c263adc1ee70fe}
 
 \begin{DoxyCode}
-68                                           \{
-69   \textcolor{keywordflow}{return} this->parent;
-70 \}
+40                                           \{
+41   \textcolor{keywordflow}{return} this->parent;
+42 \}
 \end{DoxyCode}
 \index{Node@{Node}!getX@{getX}}
 \index{getX@{getX}!Node@{Node}}
@@ -198,11 +190,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 ) const}\hypertarget{classNode_a960471106e7e4de5904149a9a3ada920}{}\label{classNode_a960471106e7e4de5904149a9a3ada920}
 
 \begin{DoxyCode}
-82                                              \{
-83   \textcolor{keywordflow}{if} (this->x != that.x || this->y != that.y)
-84     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-85   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-86 \}
+80                                              \{
+81   \textcolor{keywordflow}{return} this->x != that.x || this->y != that.y;
+82 \}
 \end{DoxyCode}
 \index{Node@{Node}!operator()@{operator()}}
 \index{operator()@{operator()}!Node@{Node}}
@@ -214,9 +204,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 ) const}\hypertarget{classNode_a98fe48fa4761cda6ebc90080635f66e6}{}\label{classNode_a98fe48fa4761cda6ebc90080635f66e6}
 
 \begin{DoxyCode}
-88                                                          \{
-89   \textcolor{keywordflow}{return} a.\hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getfScore}() < b.\hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getfScore}();
-90 \}
+84                                                          \{
+85   \textcolor{keywordflow}{return} a.\hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getfScore}() > b.\hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getfScore}();
+86 \}
 \end{DoxyCode}
 \index{Node@{Node}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!Node@{Node}}
@@ -227,9 +217,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 ) const}\hypertarget{classNode_a28321fd17adb733e76052d31065de894}{}\label{classNode_a28321fd17adb733e76052d31065de894}
 
 \begin{DoxyCode}
-78                                             \{
-79   \textcolor{keywordflow}{return} this->fScore < that.\hyperlink{classNode_af2d1b4d63492be819be4566bf23c2215}{getfScore}();
-80 \}
+76                                             \{
+77   \textcolor{keywordflow}{return} this->fScore < that.fScore;
+78 \}
 \end{DoxyCode}
 \index{Node@{Node}!operator==@{operator==}}
 \index{operator==@{operator==}!Node@{Node}}
@@ -241,10 +231,8 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 
 \begin{DoxyCode}
 72                                              \{
-73   \textcolor{keywordflow}{if} (this->x == that.x && this->y == that.y)
-74     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
-75   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
-76 \}
+73   \textcolor{keywordflow}{return} this->x == that.x && this->y == that.y;
+74 \}
 \end{DoxyCode}
 \index{Node@{Node}!setf\+Score@{setf\+Score}}
 \index{setf\+Score@{setf\+Score}!Node@{Node}}
@@ -255,9 +243,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 )}\hypertarget{classNode_a5c3c70e327b9e358435ef1689eeb81b0}{}\label{classNode_a5c3c70e327b9e358435ef1689eeb81b0}
 
 \begin{DoxyCode}
-52                                   \{
-53   this->fScore = fScore;
-54 \}
+56                                   \{
+57   this->fScore = fScore;
+58 \}
 \end{DoxyCode}
 \index{Node@{Node}!setg\+Score@{setg\+Score}}
 \index{setg\+Score@{setg\+Score}!Node@{Node}}
@@ -268,9 +256,9 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 )}\hypertarget{classNode_a00e41993c05f5bfc5db6d98a58680c51}{}\label{classNode_a00e41993c05f5bfc5db6d98a58680c51}
 
 \begin{DoxyCode}
-56                                   \{
-57   this->gScore = gScore;
-58 \}
+60                                   \{
+61   this->gScore = gScore;
+62 \}
 \end{DoxyCode}
 \index{Node@{Node}!seth\+Score@{seth\+Score}}
 \index{seth\+Score@{seth\+Score}!Node@{Node}}
@@ -281,22 +269,22 @@ bool \hyperlink{classNode_a98fe48fa4761cda6ebc90080635f66e6}{operator()} (const 
 )}\hypertarget{classNode_afc359dbe960036d705b2d68a697a416e}{}\label{classNode_afc359dbe960036d705b2d68a697a416e}
 
 \begin{DoxyCode}
-60                                   \{
-61   this->hScore = hScore;
-62 \}
+64                                   \{
+65   this->hScore = hScore;
+66 \}
 \end{DoxyCode}
 \index{Node@{Node}!set\+Parent@{set\+Parent}}
 \index{set\+Parent@{set\+Parent}!Node@{Node}}
-\subsubsection[{\texorpdfstring{set\+Parent(const Node \&parent)}{setParent(const Node &parent)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Parent (
+\subsubsection[{\texorpdfstring{set\+Parent(std\+::shared\+\_\+ptr$<$ Node $>$ parent)}{setParent(std::shared_ptr< Node > parent)}}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Parent (
 \begin{DoxyParamCaption}
-\item[{const {\bf Node} \&}]{parent}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Node} $>$}]{parent}
 \end{DoxyParamCaption}
-)}\hypertarget{classNode_a4c4c80be951d7b2a08b7b061cc9add13}{}\label{classNode_a4c4c80be951d7b2a08b7b061cc9add13}
+)}\hypertarget{classNode_a5889e5c01190f75a7074e00c76f6a68a}{}\label{classNode_a5889e5c01190f75a7074e00c76f6a68a}
 
 \begin{DoxyCode}
-64                                        \{
-65   this->parent = std::make\_shared<Node>(parent.\hyperlink{classNode_aa45b6294ee8c7aafdf5a1450f879c598}{getX}(), parent.\hyperlink{classNode_a81610ad138e2ac2cca79603032aaafc1}{getY}());
-66 \}
+68                                                \{
+69   this->parent = parent;
+70 \}
 \end{DoxyCode}
 
 

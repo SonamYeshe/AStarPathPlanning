@@ -53,7 +53,7 @@ var searchData=
   ['getmethod',['GetMethod',['../classcpp_1_1ast_1_1AstBuilder.html#af22fb880867876144d20818391ad267a',1,'cpp::ast::AstBuilder']]],
   ['getmutabletestcase',['GetMutableTestCase',['../classtesting_1_1internal_1_1UnitTestImpl.html#a2ca71a08060037357fc7e1a406b89add',1,'testing::internal::UnitTestImpl']]],
   ['getname',['GetName',['../classcpp_1_1ast_1_1AstBuilder.html#a327957c4228325fc5f64821b047bdc6f',1,'cpp::ast::AstBuilder']]],
-  ['getneighbornodes',['getNeighborNodes',['../classAStarPathFinder.html#a9c4397d6069006adb6218b027858859e',1,'AStarPathFinder']]],
+  ['getneighbornodes',['getNeighborNodes',['../classAStarPathFinder.html#a153563a6eb940562512a4e2aca0e958d',1,'AStarPathFinder']]],
   ['getnextprime',['GetNextPrime',['../classPrimeTable.html#ae537c939f56617d8937d57bbbae3ab30',1,'PrimeTable::GetNextPrime()'],['../classOnTheFlyPrimeTable.html#a9c5d9e00ed58d56dcf899a2f9eb0e544',1,'OnTheFlyPrimeTable::GetNextPrime()'],['../classPreCalculatedPrimeTable.html#a405c77ebe22cd11d7782ea264502ed39',1,'PreCalculatedPrimeTable::GetNextPrime()']]],
   ['getnextrandomseed',['GetNextRandomSeed',['../namespacetesting_1_1internal.html#a6e07a655cb987d131cd8fbeba9a7f1eb',1,'testing::internal']]],
   ['getnormalizedcommandoutputandleakytests',['GetNormalizedCommandOutputAndLeakyTests',['../namespacegmock__output__test.html#a1796bc395fbfb8873992e3f84378e4bf',1,'gmock_output_test']]],

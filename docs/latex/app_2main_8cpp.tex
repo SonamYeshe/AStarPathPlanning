@@ -1,11 +1,11 @@
 \hypertarget{app_2main_8cpp}{}\section{app/main.cpp File Reference}
 \label{app_2main_8cpp}\index{app/main.\+cpp@{app/main.\+cpp}}
-{\ttfamily \#include $<$A\+Star\+Path\+Finder.\+h$>$}\\*
 {\ttfamily \#include $<$iostream$>$}\\*
-{\ttfamily \#include $<$lib.\+hpp$>$}\\*
 {\ttfamily \#include $<$Node.\+h$>$}\\*
-{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$A\+Star\+Path\+Finder.\+h$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
 {\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
 Include dependency graph for main.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -32,20 +32,20 @@ int \hyperlink{app_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 
 \begin{DoxyCode}
 16            \{
-17   \hyperlink{classNode}{Node} start(0, 0);
-18   \hyperlink{classNode}{Node} goal(3, 3);
-19 
-20   \textcolor{comment}{//  std::shared\_ptr<Node> start = std::make\_shared<Node>(0,0);}
-21   \textcolor{comment}{//  std::shared\_ptr<Node> goal = std::make\_shared<Node> (3,3);}
-22 
-23   std::vector<std::vector<int>> map = \{ \{ 0, 0, 0, 0 \}, \{ 0, 0, 0, 0 \}, \{ 0, 0,
-24       0, 0 \}, \{ 0, 0, 0, 0 \} \};
-25   \hyperlink{classAStarPathFinder}{AStarPathFinder} ASPF;
-26   std::vector < Node > path = ASPF.\hyperlink{classAStarPathFinder_a04a5e2e2aae800b324607ecaa0d8248a}{findPath}(start, goal, map);
+17   std::vector<std::vector<int>> map = \{ \{ 0, 0, 0 \}, \{ 0, 1, 0 \}, \{ 0, 0, 0 \} \};
+18 
+19   \textcolor{keywordtype}{int} startX = 0;
+20   \textcolor{keywordtype}{int} startY = 0;
+21   \textcolor{keywordtype}{int} goalX = 2;
+22   \textcolor{keywordtype}{int} goalY = 2;
+23 
+24   \hyperlink{classAStarPathFinder}{AStarPathFinder} ASPF;
+25   std::vector<std::shared\_ptr<Node>> path = ASPF.\hyperlink{classAStarPathFinder_a7f2f09b49b4dbfed90cf4f2e4f5783d8}{findPath}(startX, startY, goalX,
+26                                                           goalY, map);
 27 
-28   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} node : path) \{
+28   \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& node : path) \{
 29     \textcolor{comment}{//  std::cout << 1 << std::endl;}
-30     std::cout << node.getX() << node.getY() << std::endl;
+30     std::cout << node->getX() << \textcolor{stringliteral}{","} << node->getY() << std::endl;
 31   \}
 32 
 33   \textcolor{keywordflow}{return} 0;

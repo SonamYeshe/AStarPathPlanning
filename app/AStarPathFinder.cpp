@@ -6,12 +6,14 @@
  *  @copyright  GNU Public License 2017 Jiawei Ge
  */
 
-#include <AStarPathFinder.h>
 #include <iostream>
+#include <AStarPathFinder.h>
 #include <unordered_set>
 #include <set>
 #include <cmath>
 #include <algorithm>
+#include <queue>
+#include <memory>
 #include <vector>
 
 AStarPathFinder::AStarPathFinder() {
@@ -20,69 +22,78 @@ AStarPathFinder::AStarPathFinder() {
 AStarPathFinder::~AStarPathFinder() {
 }
 
-std::vector<Node> AStarPathFinder::findPath(Node start, Node goal,
-                                            std::vector<std::vector<int>> map) {
-  int row = map.size();
-  int col = map[0].size();
-  int closedMap[row - 1][col - 1] = { { 0 } };
-  int openMap[row - 1][col - 1] = { { 0 } };
-  //  an ordered set
-  std::vector<Node> openSet;
-  openSet.push_back(start);
-  openMap[start.getX()][start.getY()] = 1;
+std::vector<std::shared_ptr<Node>> AStarPathFinder::findPath(
+    int startX, int startY, int goalX, int goalY,
+    const std::vector<std::vector<int>>& map) {
+  std::shared_ptr<Node> start = std::make_shared<Node>(startX, startY);
+
+  const int rowLength = map.size();
+  const int colLength = map[0].size();
+  int closedMap[rowLength - 1][colLength - 1] = { { 0 } };
+  int openMap[rowLength - 1][rowLength - 1] = { { 0 } };
+
+  //  an priority queue
+  std::priority_queue<std::shared_ptr<Node>> openSet;
+  openSet.push(start);
+  openMap[start->getX()][start->getY()] = 1;
+
   while (!openSet.empty()) {
-    std::sort(openSet.begin(), openSet.end());
-    Node cur = *openSet.begin();
-    //  std::cout << cur.getX() << cur.getY() <<std::endl;
-    openSet.erase(openSet.begin());
-    openMap[cur.getX()][cur.getY()] = 0;
-    if (cur == goal)
+    std::shared_ptr<Node> cur = openSet.top();
+    openSet.pop();
+
+    if (cur->getX() == goalX && cur->getY() == goalY) {
       return constructPath(start, cur);
+    }
 
-    closedMap[cur.getX()][cur.getY()] = 1;
-    std::vector<Node> neighbors = getNeighborNodes(cur);
+    closedMap[cur->getX()][cur->getY()] = 1;
+    std::vector<std::shared_ptr<Node>> neighbors = getNeighborNodes(cur);
 
-    for (auto neighbor : neighbors) {
-      //  std::cout << "neighbor: "<<neighbor.getX()
-      //  << neighbor.getY() <<std::endl;
-      const bool alreadyVisited = closedMap[neighbor.getX()][neighbor.getY()]
+    for (auto& neighbor : neighbors) {
+      const bool alreadyVisited = closedMap[neighbor->getX()][neighbor->getY()]
           == 1;
-      const bool alreadyOpen = openMap[neighbor.getX()][neighbor.getY()] == 1;
+      const bool alreadyOpen = openMap[neighbor->getX()][neighbor->getY()] == 1;
       const bool validNode = isValid(neighbor, map);
 
       if (alreadyVisited || !validNode)
         continue;
-      if (!alreadyOpen)
-        openSet.push_back(neighbor);
 
-      double gScore = cur.getgScore() + 1.0;
-      double hScore = calHeuristicCost(neighbor, goal);
+      double gScore = cur->getgScore() + 1.0;
+      double hScore = calHeuristicCost(neighbor, goalX, goalY);
       double fScore = gScore + hScore;
 
-      if (fScore < neighbor.getfScore()) {
-        neighbor.setParent(cur);
-        neighbor.setgScore(gScore);
-        neighbor.setfScore(fScore);
+      if (!alreadyOpen) {
+        neighbor->setParent(cur);
+        neighbor->setgScore(gScore);
+        neighbor->setfScore(fScore);
+        openSet.push(neighbor);
+        openMap[neighbor->getX()][neighbor->getY()] = 1;
+      }
+
+      if (fScore < neighbor->getfScore()) {
+        neighbor->setParent(cur);
+        neighbor->setgScore(gScore);
+        neighbor->setfScore(fScore);
       }
     }
   }
 
-  std::vector<Node> path;
+  std::vector<std::shared_ptr<Node>> path;
   return path;
 }
 
-std::vector<Node> AStarPathFinder::getNeighborNodes(Node cur) {
-  std::vector<Node> neighbors;
-  int x = cur.getX();
-  int y = cur.getY();
-  Node neighbor1(x - 1, y - 1);
-  Node neighbor2(x, y - 1);
-  Node neighbor3(x + 1, y - 1);
-  Node neighbor4(x - 1, y);
-  Node neighbor5(x + 1, y);
-  Node neighbor6(x - 1, y + 1);
-  Node neighbor7(x, y + 1);
-  Node neighbor8(x + 1, y + 1);
+std::vector<std::shared_ptr<Node>> AStarPathFinder::getNeighborNodes(
+    std::shared_ptr<Node> cur) {
+  std::vector<std::shared_ptr<Node>> neighbors;
+  int x = cur->getX();
+  int y = cur->getY();
+  std::shared_ptr<Node> neighbor1 = std::make_shared<Node>(x - 1, y - 1);
+  std::shared_ptr<Node> neighbor2 = std::make_shared<Node>(x, y - 1);
+  std::shared_ptr<Node> neighbor3 = std::make_shared<Node>(x + 1, y - 1);
+  std::shared_ptr<Node> neighbor4 = std::make_shared<Node>(x - 1, y);
+  std::shared_ptr<Node> neighbor5 = std::make_shared<Node>(x + 1, y);
+  std::shared_ptr<Node> neighbor6 = std::make_shared<Node>(x - 1, y + 1);
+  std::shared_ptr<Node> neighbor7 = std::make_shared<Node>(x, y + 1);
+  std::shared_ptr<Node> neighbor8 = std::make_shared<Node>(x + 1, y + 1);
   neighbors.push_back(neighbor1);
   neighbors.push_back(neighbor2);
   neighbors.push_back(neighbor3);
@@ -95,33 +106,35 @@ std::vector<Node> AStarPathFinder::getNeighborNodes(Node cur) {
   return neighbors;
 }
 
-bool AStarPathFinder::isValid(Node node, std::vector<std::vector<int>> map) {
-  int xLen = map.size();
-  int yLen = map[0].size();
-  node.getX();
-  int x = node.getX();
-  int y = node.getY();
-  if (x >= 0 && x < xLen && y >= 0 && y < yLen)
-    return map[x][y] == 0;
+bool AStarPathFinder::isValid(std::shared_ptr<Node> node,
+                              const std::vector<std::vector<int>>& map) {
+  int rowLength = map.size();
+  int colLength = map[0].size();
+  int x = node->getX();
+  int y = node->getY();
+
+  if (x >= 0 && x < rowLength && y >= 0 && y < colLength && map[x][y] == 0)
+    return true;
   return false;
 }
 
-std::vector<Node> AStarPathFinder::constructPath(Node start, Node goal) {
-  std::vector<Node> path;
-  Node cur = goal;
+std::vector<std::shared_ptr<Node>> AStarPathFinder::constructPath(
+    std::shared_ptr<Node> start, std::shared_ptr<Node> goal) {
+  std::vector<std::shared_ptr<Node>> path;
+  std::shared_ptr<Node> cur = goal;
   while (cur != start) {
     path.insert(path.begin(), cur);
-    cur = *(cur.getParent());
+    cur = cur->getParent();
   }
   path.insert(path.begin(), start);
   return path;
 }
 
-double AStarPathFinder::calHeuristicCost(Node neighbor, Node goal) {
-  int x1 = neighbor.getX();
-  int y1 = neighbor.getY();
-  int x2 = goal.getX();
-  int y2 = goal.getY();
+double AStarPathFinder::calHeuristicCost(std::shared_ptr<Node> neighbor,
+                                         int goalX, int goalY) {
+  int x = neighbor->getX();
+  int y = neighbor->getY();
 
-  return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+  return static_cast<double>(sqrt(
+      (x - goalX) * (x - goalX) + (y - goalY) * (y - goalY)));
 }

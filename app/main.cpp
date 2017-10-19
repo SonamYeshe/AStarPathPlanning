@@ -6,28 +6,28 @@
  *  @copyright  GNU Public License 2017 Jiawei Ge
  */
 
-#include <AStarPathFinder.h>
 #include <iostream>
-#include <lib.hpp>
 #include <Node.h>
-#include <memory>
+#include <AStarPathFinder.h>
+#include <algorithm>
 #include <vector>
+#include <memory>
 
 int main() {
-  Node start(0, 0);
-  Node goal(3, 3);
+  std::vector<std::vector<int>> map = { { 0, 0, 0 }, { 0, 1, 0 }, { 0, 0, 0 } };
 
-  //  std::shared_ptr<Node> start = std::make_shared<Node>(0,0);
-  //  std::shared_ptr<Node> goal = std::make_shared<Node> (3,3);
+  int startX = 0;
+  int startY = 0;
+  int goalX = 2;
+  int goalY = 2;
 
-  std::vector<std::vector<int>> map = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0,
-      0, 0 }, { 0, 0, 0, 0 } };
   AStarPathFinder ASPF;
-  std::vector < Node > path = ASPF.findPath(start, goal, map);
+  std::vector<std::shared_ptr<Node>> path = ASPF.findPath(startX, startY, goalX,
+                                                          goalY, map);
 
-  for (auto node : path) {
+  for (auto& node : path) {
     //  std::cout << 1 << std::endl;
-    std::cout << node.getX() << node.getY() << std::endl;
+    std::cout << node->getX() << "," << node->getY() << std::endl;
   }
 
   return 0;

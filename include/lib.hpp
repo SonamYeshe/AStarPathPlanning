@@ -10,6 +10,6 @@
 
 #include<iostream>
 
-void dummy() {
+void dummyy() {
   std::cout << "HI" << std::endl;
 }

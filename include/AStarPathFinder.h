@@ -11,6 +11,7 @@
 #include <Node.h>
 #include <vector>
 #include <set>
+#include <memory>
 
 /**
  *  @brief AStarPathFinder
@@ -23,12 +24,16 @@ class AStarPathFinder {
   AStarPathFinder();
   virtual ~AStarPathFinder();
 
-  std::vector<Node> findPath(Node start, Node goal,
-                             const std::vector<std::vector<int>> map);
-  std::vector<Node> getNeighborNodes(Node cur);
-  bool isValid(Node node, std::vector<std::vector<int>> map);
-  std::vector<Node> constructPath(Node start, Node goal);
-  double calHeuristicCost(Node neighbor, Node goal);
+  std::vector<std::shared_ptr<Node>> findPath(
+      int startX, int startY, int goalX, int goalY,
+      const std::vector<std::vector<int>>& Map);
+  std::vector<std::shared_ptr<Node>> getNeighborNodes(
+      std::shared_ptr<Node> cur);
+  bool isValid(std::shared_ptr<Node> node,
+               const std::vector<std::vector<int>>& map);
+  std::vector<std::shared_ptr<Node>> constructPath(std::shared_ptr<Node> start,
+                                                   std::shared_ptr<Node> goal);
+  double calHeuristicCost(std::shared_ptr<Node> neighbor, int goalX, int goalY);
 };
 
 #endif  // ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_ASTARPATHFINDER_H_"

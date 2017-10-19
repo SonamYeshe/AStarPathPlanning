@@ -11,8 +11,9 @@
 #include <memory>
 
 Node::Node() {
-  this->x = -1;
-  this->y = -1;
+  this->init();
+  this->x = x;
+  this->y = y;
   this->fScore = std::numeric_limits<double>::max();
   this->gScore = std::numeric_limits<double>::max();
   this->hScore = std::numeric_limits<double>::max();
@@ -22,6 +23,15 @@ Node::~Node() {
 }
 
 Node::Node(int x, int y) {
+  this->init(x, y);
+  this->x = x;
+  this->y = y;
+  this->fScore = std::numeric_limits<double>::max();
+  this->gScore = std::numeric_limits<double>::max();
+  this->hScore = std::numeric_limits<double>::max();
+}
+
+void Node::init(int x, int y) {
   this->x = x;
   this->y = y;
   this->fScore = std::numeric_limits<double>::max();
@@ -35,6 +45,10 @@ int Node::getX() const {
 
 int Node::getY() const {
   return this->y;
+}
+
+std::shared_ptr<Node> Node::getParent() const {
+  return this->parent;
 }
 
 double Node::getfScore() const {
@@ -61,30 +75,22 @@ void Node::sethScore(double hScore) {
   this->hScore = hScore;
 }
 
-void Node::setParent(const Node& parent) {
-  this->parent = std::make_shared<Node>(parent.getX(), parent.getY());
-}
-
-std::shared_ptr<Node> Node::getParent() const {
-  return this->parent;
+void Node::setParent(std::shared_ptr<Node> parent) {
+  this->parent = parent;
 }
 
 bool Node::operator ==(const Node& that) const {
-  if (this->x == that.x && this->y == that.y)
-    return true;
-  return false;
+  return this->x == that.x && this->y == that.y;
 }
 
 bool Node::operator <(const Node& that) const {
-  return this->fScore < that.getfScore();
+  return this->fScore < that.fScore;
 }
 
 bool Node::operator !=(const Node& that) const {
-  if (this->x != that.x || this->y != that.y)
-    return true;
-  return false;
+  return this->x != that.x || this->y != that.y;
 }
 
 bool Node::operator ()(const Node& a, const Node& b) const {
-  return a.getfScore() < b.getfScore();
+  return a.getfScore() > b.getfScore();
 }

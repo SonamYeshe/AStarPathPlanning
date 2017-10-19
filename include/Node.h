@@ -24,14 +24,15 @@ class Node {
 
   int getX() const;
   int getY() const;
+  std::shared_ptr<Node> getParent() const;
   double getfScore() const;
   double getgScore() const;
   double gethScore() const;
   void setfScore(double fScore);
   void setgScore(double gScore);
   void sethScore(double hScore);
-  void setParent(const Node& parent);
-  std::shared_ptr<Node> getParent() const;
+  void setParent(std::shared_ptr<Node> parent);
+
   bool operator ==(const Node& that) const;
   bool operator <(const Node& that) const;
   bool operator !=(const Node& that) const;
@@ -41,6 +42,8 @@ class Node {
   int x, y;
   double fScore, gScore, hScore;
   std::shared_ptr<Node> parent;
+
+  void init(int x = -1, int y = -1);
 };
 
-#endif  // ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_NODE_H_"
+#endif  //  ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_NODE_H_"
