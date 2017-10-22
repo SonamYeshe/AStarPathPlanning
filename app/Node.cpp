@@ -11,7 +11,7 @@
 #include <memory>
 
 Node::Node() {
-  this->init();
+  // TODO(Jiawei) Auto-generated constructor stub
   this->x = x;
   this->y = y;
   this->fScore = std::numeric_limits<double>::max();
@@ -20,17 +20,17 @@ Node::Node() {
 }
 
 Node::~Node() {
+  // TODO(Jiawei) Auto-generated destructor stub
 }
 
 Node::Node(int x, int y) {
-  this->init(x, y);
   this->x = x;
   this->y = y;
   this->fScore = std::numeric_limits<double>::max();
   this->gScore = std::numeric_limits<double>::max();
   this->hScore = std::numeric_limits<double>::max();
 }
-
+/*
 void Node::init(int x, int y) {
   this->x = x;
   this->y = y;
@@ -38,7 +38,7 @@ void Node::init(int x, int y) {
   this->gScore = std::numeric_limits<double>::max();
   this->hScore = std::numeric_limits<double>::max();
 }
-
+ */
 int Node::getX() const {
   return this->x;
 }
@@ -79,6 +79,12 @@ void Node::setParent(std::shared_ptr<Node> parent) {
   this->parent = parent;
 }
 
+/*
+ bool Node::viable() const {
+ return !(this->isObstacle);
+ }
+ */
+
 bool Node::operator ==(const Node& that) const {
   return this->x == that.x && this->y == that.y;
 }
@@ -86,7 +92,9 @@ bool Node::operator ==(const Node& that) const {
 bool Node::operator <(const Node& that) const {
   return this->fScore < that.fScore;
 }
-
+bool Node::operator >(const Node& that) const {
+  return this->fScore > that.fScore;
+}
 bool Node::operator !=(const Node& that) const {
   return this->x != that.x || this->y != that.y;
 }

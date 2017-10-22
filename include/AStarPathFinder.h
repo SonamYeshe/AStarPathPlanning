@@ -36,4 +36,12 @@ class AStarPathFinder {
   double calHeuristicCost(std::shared_ptr<Node> neighbor, int goalX, int goalY);
 };
 
+class SharedPtrLess {
+ public:
+  bool operator()(const std::shared_ptr<Node>& first,
+                  const std::shared_ptr<Node>& second) {
+    return *first > *second;
+  }
+};
+
 #endif  // ECLIPSE_WORKSPACE_ASTARPATHPLANNING_INCLUDE_ASTARPATHFINDER_H_"

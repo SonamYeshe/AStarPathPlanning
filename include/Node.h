@@ -35,6 +35,7 @@ class Node {
 
   bool operator ==(const Node& that) const;
   bool operator <(const Node& that) const;
+  bool operator >(const Node& that) const;
   bool operator !=(const Node& that) const;
   bool operator ()(const Node& a, const Node& b) const;
 

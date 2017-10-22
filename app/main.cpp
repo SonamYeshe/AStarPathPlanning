@@ -11,15 +11,16 @@
 #include <AStarPathFinder.h>
 #include <algorithm>
 #include <vector>
+#include <queue>
 #include <memory>
 
 int main() {
-  std::vector<std::vector<int>> map = { { 0, 0, 0 }, { 0, 1, 0 }, { 0, 0, 0 } };
-
+  std::vector<std::vector<int>> map = { { 0, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0,
+      0, 0 }, { 0, 0, 0, 0 } };
   int startX = 0;
   int startY = 0;
-  int goalX = 2;
-  int goalY = 2;
+  int goalX = 3;
+  int goalY = 3;
 
   AStarPathFinder ASPF;
   std::vector<std::shared_ptr<Node>> path = ASPF.findPath(startX, startY, goalX,
